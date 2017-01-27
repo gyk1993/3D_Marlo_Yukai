@@ -1,0 +1,21 @@
+urdf: 'res/three_link_walker.urdf'
+
+base link name: 'base'
+
+actuated joints:
+- 'qRight'
+- 'qLeft'
+
+points of interest:
+- name: 'base'
+  lambda: ['BaseRotZ']
+  offset: [0,0,0]
+- name: 'torso'
+  lambda: ['BaseRotZ']
+  offset: [0,0,0.5]
+- name: 'rightFoot'
+  lambda: ['qRight']
+  offset: [0,0,1.0]
+- name: 'leftFoot'
+  lambda: ['qLeft']
+  offset: [0,0,1.0]

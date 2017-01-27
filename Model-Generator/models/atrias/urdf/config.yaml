@@ -1,0 +1,50 @@
+model name: 'atrias'
+model type: 'spatial'
+
+urdf: '../models/atrias/urdf/atrias.urdf'
+
+ExportPath: '../models/atrias/gen/mathematica'
+
+base link name: 'torso'
+
+actuated joints:
+- joint: 'qHRight'
+  inertia: 0.4990
+  gearRatio: 26.7
+- joint: 'qARight'
+  inertia: 2.4000
+  gearRatio: 50
+- joint: 'qBRight'
+  inertia: 2.4000
+  gearRatio: 50
+- joint: 'qHLeft'
+  inertia: 0.4990
+  gearRatio: 26.7
+- joint: 'qALeft'
+  inertia: 2.4000
+  gearRatio: 50
+- joint: 'qBLeft'
+  inertia: 2.4000
+  gearRatio: 50
+
+  
+points of interest:
+- name: 'TorsoTop'
+  lambda: ['BaseRotZ']
+  offset: [0, 0, 0.58]
+- name: 'RightFoot'
+  lambda: ['fourBarBRight']
+  offset: [0, 0, 0.6]
+- name: 'LeftFoot'
+  lambda: ['fourBarBLeft']
+  offset: [0, 0, 0.6]
+- name: 'RightFourBarConnect'
+  lambda: ['fourBarARight']
+  offset: [0, 0, 0.5]
+- name: 'LeftFourBarConnect'
+  lambda: ['fourBarALeft']
+  offset: [0, 0, 0.5]
+  
+  
+  
+  

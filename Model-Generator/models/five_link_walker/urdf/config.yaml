@@ -1,0 +1,39 @@
+model name: 'five_link_walker'
+model type: 'planar'
+
+urdf: '../models/five_link_walker/urdf/five_link_walker.urdf'
+
+ExportPath: '../models/five_link_walker/gen/mathematica'
+
+base link name: 'torso'
+
+actuated joints:
+- joint: 'q1right'
+  inertia: 0.83
+  gearRatio: 50
+- joint: 'q1left'
+  inertia: 0.83
+  gearRatio: 50
+- joint: 'q2right'
+  inertia: 0.83
+  gearRatio: 50
+- joint: 'q2left'
+  inertia: 0.83
+  gearRatio: 50
+
+points of interest:
+- name: 'torso'
+  lambda: ['BaseRotY']
+  offset: [0,0,0.63]
+- name: 'rightKnee'
+  lambda: ['q1right']
+  offset: [0,0,0.4]
+- name: 'leftKnee'
+  lambda: ['q1left']
+  offset: [0,0,0.4]
+- name: 'rightFoot'
+  lambda: ['q2right']
+  offset: [0,0,0.4]
+- name: 'leftFoot'
+  lambda: ['q2left']
+  offset: [0,0,0.4]

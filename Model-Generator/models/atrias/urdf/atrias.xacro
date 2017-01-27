@@ -1,0 +1,202 @@
+<?xml version="1.0"?>
+<!-- Author: Ross Hartley
+     Date:   1/16/2016   -->
+
+
+<robot name="atrias" xmlns:xacro="http://ros.org/wiki/xacro">
+
+	<!-- Properties -->
+	<xacro:property name="black_RGB" value="0.1 0.1 0.1 1" />
+	<xacro:property name="grey_RGB" value="0.4 0.4 0.4 1" />
+	<xacro:property name="orange_RGB" value="0.9568 0.4784 0.2588 1" />
+
+	<!-- Links -->
+	<xacro:torso cname="grey" color="${grey_RGB}" />
+
+	<xacro:hip side="Right" cname="orange" color="${orange_RGB}" reflect="1"/>
+	<xacro:shin side="Right" cname="grey" color="${grey_RGB}" reflect="1"/>
+	<xacro:thigh side="Right" cname="grey" color="${grey_RGB}" reflect="1"/>
+	<xacro:fourBarLink side="Right" cname="grey" color="${grey_RGB}" reflect="1"/>
+	<xacro:lowerLeg side="Right" cname="grey" color="${grey_RGB}" reflect="1"/>
+
+	<xacro:hip side="Left" cname="orange" color="${orange_RGB}" reflect="-1"/>
+	<xacro:shin side= "Left" cname="grey" color="${grey_RGB}" reflect="-1"/>
+	<xacro:thigh side="Left" cname="grey" color="${grey_RGB}" reflect="-1"/>
+	<xacro:fourBarLink side="Left" cname="grey" color="${grey_RGB}" reflect="-1"/>
+	<xacro:lowerLeg side="Left" cname="grey" color="${grey_RGB}" reflect="-1"/>
+
+	<!-- Joints -->
+	<xacro:qH side="Right"/>
+	<xacro:qA side="Right" reflect="1"/>
+	<xacro:qB side="Right" reflect="1"/>
+	<xacro:fourBarA side="Right"/>
+	<xacro:fourBarB side="Right"/>
+
+	<xacro:qH side="Left"/>
+	<xacro:qA side="Left" reflect="-1"/>
+	<xacro:qB side="Left" reflect="-1"/>
+	<xacro:fourBarA side="Left"/>
+	<xacro:fourBarB side="Left"/>
+
+	<!-- Link Definitions-->
+	<xacro:macro name="torso" params="cname color">
+		<link name="torso">
+			<inertial>
+				<origin xyz="0 -0.0018 0.4024" rpy="0 0 0"/>
+				<mass value="21.5" />
+				<inertia ixx="2.0437"  ixy="0"  ixz="0" iyy="1.5226" iyz="0" izz="0.9154" />
+			</inertial>
+			<visual>
+				<origin xyz="0.225 0 .3" rpy="1.57079632679 0 1.57079632679" />
+				<geometry>
+					<mesh filename="package://atrias_description/meshes/torso.stl" scale="1 1 1"/>
+				</geometry>
+				<material name="${cname}">
+					<color rgba="${color}" />
+				</material>
+			</visual>
+		</link>
+	</xacro:macro>
+
+	<xacro:macro name="hip" params="side cname color reflect">
+		<link name="hip${side}">
+			<inertial>
+				<origin xyz="${reflect*0.1834} 0.00025 0.00678" rpy="0 0 0"/>
+				<mass value="12.84085" />
+				<inertia ixx="0.10791"  ixy="-0.00489"  ixz="-0.01393" iyy="0.11101" iyz="0.0030" izz="0.06896" />
+			</inertial>
+			<visual>
+				<origin xyz="0 0 0" rpy="1.57079632679 0 ${reflect*1.57079632679}" />
+				<geometry>
+					<mesh filename="package://atrias_description/meshes/hip_shaft.stl" scale="1 1 1"/>
+				</geometry>
+				<material name="${cname}">
+					<color rgba="${color}" />
+				</material>
+			</visual>
+		</link>
+	</xacro:macro>
+
+	<xacro:macro name="shin" params="side cname color reflect">
+		<link name="shin${side}">
+			<inertial>
+				<origin xyz="${reflect*-0.0045} -0.0157 0.1822" rpy="0 0 0"/>
+				<mass value="0.7555" />
+				<inertia ixx="0.0309"  ixy="0"  ixz="0.0004" iyy="0.0295" iyz="0.0006" izz="0.0024" />
+			</inertial>
+			<visual>
+				<origin xyz="0 0 0" rpy="1.57079632679 3.14159 1.57079632679" />
+				<geometry>
+					<mesh filename="package://atrias_description/meshes/shin.stl" scale="1 1 1"/>
+				</geometry>
+				<material name="${cname}">
+					<color rgba="${color}" />
+				</material>
+			</visual>
+		</link>
+	</xacro:macro>
+
+	<xacro:macro name="thigh" params="side cname color reflect">
+		<link name="thigh${side}">
+			<inertial>
+				<origin xyz="${reflect*0.0062} 0.0253 0.1435" rpy="0 0 0"/>
+				<mass value="0.7671" />
+				<inertia ixx="0.0228"  ixy="0.0001"  ixz="-0.0004" iyy="0.0210" iyz="-0.0014" izz="0.0029" />
+			</inertial>
+			<visual>
+				<origin xyz="0 0 0" rpy="1.57079632679 3.14159 1.57079632679" />
+				<geometry>
+					<mesh filename="package://atrias_description/meshes/thigh.stl" scale="1 1 1"/>
+				</geometry>
+				<material name="${cname}">
+					<color rgba="${color}" />
+				</material>
+			</visual>
+		</link>
+	</xacro:macro>
+
+	<xacro:macro name="fourBarLink" params="side cname color reflect">
+		<link name="fourBarLink${side}">
+			<inertial>
+				<origin xyz="${reflect*0.0000} 0.0014 0.1137" rpy="0 0 0"/>
+				<mass value="0.6460" />
+				<inertia ixx="0.0176"  ixy="0"  ixz="0" iyy="0.0179" iyz="-0.0001" izz="0.0005" />
+			</inertial>
+			<visual>
+				<origin xyz="0 0 0" rpy="1.57079632679 3.14159 1.57079632679" />
+				<geometry>
+					<mesh filename="package://atrias_description/meshes/lower_leg_two_point.stl" scale="1 1 1"/>
+				</geometry>
+				<material name="${cname}">
+					<color rgba="${color}" />
+				</material>
+			</visual>
+		</link>
+	</xacro:macro>
+
+	<xacro:macro name="lowerLeg" params="side cname color reflect">
+		<link name="lowerLeg${side}">
+			<inertial>
+				<origin xyz="${reflect*0.00002} 0.00017 0.15203" rpy="0 0 0"/>
+				<mass value="0.39465" />
+				<inertia ixx="0.01260"  ixy="0"  ixz="0" iyy="0.01272" iyz="0" izz="0.00019" />
+			</inertial>
+			<visual>
+				<origin xyz="0 0 0" rpy="1.57079632679 3.14159 1.57079632679" />
+				<geometry>
+					<mesh filename="package://atrias_description/meshes/lower_leg.stl" scale="1 1 1"/>
+				</geometry>
+				<material name="${cname}">
+					<color rgba="${color}" />
+				</material>
+			</visual>
+		</link>
+	</xacro:macro>
+
+	<!-- Joint Definitions -->
+	<xacro:macro name="qH" params="side">
+		<joint name="qH${side}" type="continuous">
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+		  		<axis xyz="0 1 0"/> 
+				<parent link="torso" />
+				<child link="hip${side}" /> 
+	  	</joint>
+	</xacro:macro>
+
+	<xacro:macro name="qA" params="side reflect">
+		<joint name="qA${side}" type="continuous">
+			<origin xyz="${reflect*0.1831} 0 0" rpy="0 0 0"/>
+		  		<axis xyz="1 0 0"/> 
+				<parent link="hip${side}" />
+				<child link="shin${side}" /> 
+	  	</joint>
+	</xacro:macro>
+
+	<xacro:macro name="qB" params="side reflect">
+		<joint name="qB${side}" type="continuous">
+			<origin xyz="${reflect*0.1831} 0 0" rpy="0 0 0"/>
+		  		<axis xyz="1 0 0"/> 
+				<parent link="hip${side}" />
+				<child link="thigh${side}" /> 
+	  	</joint>
+	</xacro:macro>
+
+	<xacro:macro name="fourBarA" params="side">
+		<joint name="fourBarA${side}" type="continuous">
+			<origin xyz="0 0 0.4" rpy="0 0 0"/>
+		  		<axis xyz="1 0 0"/> 
+				<parent link="shin${side}" />
+				<child link="fourBarLink${side}" /> 
+	  	</joint>
+	</xacro:macro>
+
+	<xacro:macro name="fourBarB" params="side">
+		<joint name="fourBarB${side}" type="continuous">
+			<origin xyz="0 0 0.5" rpy="0 0 0"/>
+		  		<axis xyz="1 0 0"/> 
+				<parent link="thigh${side}" />
+				<child link="lowerLeg${side}" /> 
+	  	</joint>
+	</xacro:macro>
+
+</robot>

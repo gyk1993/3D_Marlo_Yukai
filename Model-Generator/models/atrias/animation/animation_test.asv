@@ -1,0 +1,14 @@
+%% Script to test animation of robot
+
+addpath(genpath('../gen'))
+
+t = 0;
+q = zeros(1,22);
+
+q1 = outputs{1}.q(1,:);
+outputs{1}.qend(end,:);
+
+positions_function = @positions;
+
+FactorTime = 1;
+RobotAnimator(t, q, positions_function, FactorTime)

@@ -1,0 +1,90 @@
+html, body {
+   margin: 0;
+   padding: 0;
+   height: 100%;
+   width: 100%;
+   font-family: serif;
+}
+
+#title {
+   font-variant: small-caps;
+   text-transform: capitalize;
+   text-align: center;
+   height: 65px;
+   margin: auto;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+}
+
+#logo {
+   float: left;
+   height: 65px;
+}
+
+div, iframe {
+   display: block;
+   margin: 0;
+   padding: 0;
+   border: 0;
+}
+
+.container {
+   position: relative;
+   width: 100%;
+   height: 100%;
+}
+
+.iframe-container {
+   position: absolute;
+   top: 0;
+   bottom: 40px;
+   left: 180px;
+   right: 0;
+}
+
+iframe {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+}
+
+pre:first-line {
+   line-height: 0px;
+}
+
+pre.matlab-code {
+   font-family: monospace;
+   white-space: normal;
+}
+
+header {
+   height: 65px;
+   line-height: 65px;
+   border: 1px solid black;
+   border-radius: 4px;
+   padding: 10px;
+   margin: 10px;
+}
+
+footer {
+   position: absolute;
+   bottom: 0;
+   right: 10px;
+   padding: 0;
+   margin: 0;
+   line-height: 0;
+}
+
+img.float {
+   display: block;
+   padding-right: 50px;
+   padding-top: 20px;
+   margin: auto;
+   max-width: 400px;
+   max-height: 500px;
+   float: right;
+}
+
+ul {
+   list-style:none;
+}

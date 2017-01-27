@@ -1,0 +1,27 @@
+model name: 'three_link_walker'
+model type: 'planar'
+
+urdf: '../models/three_link_walker/urdf/three_link_walker.urdf'
+
+ExportPath: '../models/three_link_walker/gen/mathematica'
+
+base link name: 'torso'
+
+actuated joints:
+- joint: 'qright'
+  inertia: 0
+  gearRatio: 1
+- joint: 'qleft'
+  inertia: 0
+  gearRatio: 1
+  
+points of interest:
+- name: 'torso'
+  lambda: ['BaseRotY']
+  offset: [0,0,0.5]
+- name: 'rightFoot'
+  lambda: ['qright']
+  offset: [0,0,1.0]
+- name: 'leftFoot'
+  lambda: ['qleft']
+  offset: [0,0,1.0]

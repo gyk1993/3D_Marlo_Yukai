@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<robot name="DoublePendulum">
+  <link name="Box">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 -0.05" rpy="0 0 0"/>
+      <geometry>
+        <box size="1 1 0.1" />
+      </geometry>
+    </visual>
+  </link>
+  <link name="Link1">
+    <inertial>
+      <origin xyz="0 0 0.5" rpy="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0" ixy="0" ixz="0.0" iyy="0" iyz="0.0" izz="0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0.5" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.1" length="1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="Link2">
+    <inertial>
+      <origin xyz="0 0 0.5" rpy="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="0" ixy="0" ixz="0.0" iyy="0" iyz="0.0" izz="0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0.5" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.1" length="1"/>
+      </geometry>
+    </visual>
+  </link>
+  <joint name="BoxLink1" type="continuous">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="1.0 0.0 0.0"/>
+    <parent link="Box"/>
+    <child link="Link1"/>
+  </joint>
+  <joint name="Link1Link2" type="continuous">
+    <origin xyz="0 0 1" rpy="0 0 0"/>
+    <axis xyz="1.0 0.0 0.0"/>
+    <parent link="Link1"/>
+    <child link="Link2"/>
+  </joint>
+</robot>

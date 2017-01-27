@@ -1,0 +1,64 @@
+model name: 'cassie'
+model type: 'spatial'
+
+urdf: '../models/cassie/urdf/cassie_simple.urdf'
+
+ExportPath: '../models/cassie/gen/mathematica'
+
+base link name: 'pelvis'
+
+actuated joints:
+- joint: 'hipabductionleft'
+  inertia: 0.038125
+  gearRatio: 25
+- joint: 'hiprotationleft'
+  inertia: 0.038125
+  gearRatio: 25
+- joint: 'hipflexionleft'
+  inertia: 0.09344
+  gearRatio: 16
+- joint: 'kneejointleft'
+  inertia: 0.09344
+  gearRatio: 16
+- joint: 'toejointleft'
+  inertia: 0.01225
+  gearRatio: 50
+- joint: 'hipabductionright'
+  inertia: 0.038125
+  gearRatio: 25
+- joint: 'hiprotationright'
+  inertia: 0.038125
+  gearRatio: 25
+- joint: 'hipflexionright'
+  inertia: 0.09344
+  gearRatio: 16
+- joint: 'kneejointright'
+  inertia: 0.09344
+  gearRatio: 16
+- joint: 'toejointright'
+  inertia: 0.01225
+  gearRatio: 50
+  
+points of interest:
+- name: 'toebottomleft'
+  lambda: ['toejointleft']
+  offset: [0.0177, 0.0522, 0]
+- name: 'toebottomright'
+  lambda: ['toejointright']
+  offset: [0.0177, 0.0522, 0]
+- name: 'toebottomleftback'
+  lambda: ['toejointleft']
+  offset: [0.0798867, 0, 0] 
+- name: 'toebottomleftfront'
+  lambda: ['toejointleft']
+  offset: [0, 0.0798867, 0]
+- name: 'toebottomrightback'
+  lambda: ['toejointright']
+  offset: [0.0798867, 0, 0] 
+- name: 'toebottomrightfront'
+  lambda: ['toejointright']
+  offset: [0, 0.0798867, 0]     
+  
+  
+  
+  

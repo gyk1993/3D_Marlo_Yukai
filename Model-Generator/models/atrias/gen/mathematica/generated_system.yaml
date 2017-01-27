@@ -1,0 +1,309 @@
+type: spatial
+nDoF: 16
+nBase: 6
+name: atrias
+dofs:
+- name: [BasePosX, BasePosX]
+  axis: [0, 0, 0, 1, 0, 0]
+  type: prismatic
+  mass: 0.0
+  com: [0.0, 0.0, 0.0]
+  inertia:
+  - [0.0, 0.0, 0.0]
+  - [0.0, 0.0, 0.0]
+  - [0.0, 0.0, 0.0]
+  E:
+  - [1.0, 0.0, 0.0]
+  - [0.0, 1.0, 0.0]
+  - [0.0, 0.0, 1.0]
+  r: [0.0, 0.0, 0.0]
+  lambda: 0
+  limit:
+  - {min: -1.0, max: 1.0}
+  actuator:
+  - {inertia: 0, type: base, maxTorque: 0.0, maxVelocity: 2.0, ratio: 1}
+- name: [BasePosY, BasePosY]
+  axis: [0, 0, 0, 0, 1, 0]
+  type: prismatic
+  mass: 0.0
+  com: [0.0, 0.0, 0.0]
+  inertia:
+  - [0.0, 0.0, 0.0]
+  - [0.0, 0.0, 0.0]
+  - [0.0, 0.0, 0.0]
+  E:
+  - [1.0, 0.0, 0.0]
+  - [0.0, 1.0, 0.0]
+  - [0.0, 0.0, 1.0]
+  r: [0.0, 0.0, 0.0]
+  lambda: 1
+  limit:
+  - {min: -1.0, max: 1.0}
+  actuator:
+  - {inertia: 0, type: base, maxTorque: 0.0, maxVelocity: 2.0, ratio: 1}
+- name: [BasePosZ, BasePosZ]
+  axis: [0, 0, 0, 0, 0, 1]
+  type: prismatic
+  mass: 0.0
+  com: [0.0, 0.0, 0.0]
+  inertia:
+  - [0.0, 0.0, 0.0]
+  - [0.0, 0.0, 0.0]
+  - [0.0, 0.0, 0.0]
+  E:
+  - [1.0, 0.0, 0.0]
+  - [0.0, 1.0, 0.0]
+  - [0.0, 0.0, 1.0]
+  r: [0.0, 0.0, 0.0]
+  lambda: 2
+  limit:
+  - {min: 0.0, max: 1.5}
+  actuator:
+  - {inertia: 0, type: base, maxTorque: 0.0, maxVelocity: 2.0, ratio: 1}
+- name: [BaseRotX, BaseRotX]
+  axis: [1, 0, 0, 0, 0, 0]
+  type: revolute
+  mass: 0.0
+  com: [0.0, 0.0, 0.0]
+  inertia:
+  - [0.0, 0.0, 0.0]
+  - [0.0, 0.0, 0.0]
+  - [0.0, 0.0, 0.0]
+  E:
+  - [1.0, 0.0, 0.0]
+  - [0.0, 1.0, 0.0]
+  - [0.0, 0.0, 1.0]
+  r: [0.0, 0.0, 0.0]
+  lambda: 3
+  limit:
+  - {min: -0.7854, max: 0.7854}
+  actuator:
+  - {inertia: 0, type: base, maxTorque: 0.0, maxVelocity: 2.0, ratio: 1}
+- name: [BaseRotY, BaseRotY]
+  axis: [0, 1, 0, 0, 0, 0]
+  type: revolute
+  mass: 0.0
+  com: [0.0, 0.0, 0.0]
+  inertia:
+  - [0.0, 0.0, 0.0]
+  - [0.0, 0.0, 0.0]
+  - [0.0, 0.0, 0.0]
+  E:
+  - [1.0, 0.0, 0.0]
+  - [0.0, 1.0, 0.0]
+  - [0.0, 0.0, 1.0]
+  r: [0.0, 0.0, 0.0]
+  lambda: 4
+  limit:
+  - {min: -1.5708, max: 1.5708}
+  actuator:
+  - {inertia: 0, type: base, maxTorque: 0.0, maxVelocity: 2.0, ratio: 1}
+- name: [BaseRotZ, BaseRotZ]
+  axis: [0, 0, 1, 0, 0, 0]
+  type: revolute
+  mass: 21.5
+  com: [0.0, -0.0018, 0.4024]
+  inertia:
+  - [2.0437, 0.0, 0.0]
+  - [0.0, 1.5226, 0.0]
+  - [0.0, 0.0, 0.9154]
+  E:
+  - [1.0, 0.0, 0.0]
+  - [0.0, 1.0, 0.0]
+  - [0.0, 0.0, 1.0]
+  r: [0.0, 0.0, 0.0]
+  lambda: 5
+  limit:
+  - {min: -1.5708, max: 1.5708}
+  actuator:
+  - {inertia: 0, type: base, maxTorque: 0.0, maxVelocity: 2.0, ratio: 1}
+- name: [qHRight, qHRight]
+  axis: [0, 1, 0, 0, 0, 0]
+  type: continuous
+  mass: 12.84085
+  com: [0.1834, 2.5E-4, 0.00678]
+  inertia:
+  - [0.10791, -0.00489, -0.01393]
+  - [-0.00489, 0.11101, 0.003]
+  - [-0.01393, 0.003, 0.06896]
+  E:
+  - [1.0, 0.0, 0.0]
+  - [0.0, 1.0, 0.0]
+  - [0.0, 0.0, 1.0]
+  r: [0.0, 0.0, 0.0]
+  lambda: 6
+  limit:
+  - {}
+  actuator:
+  - {inertia: 0.499, ratio: 26.7}
+- name: [qARight, qARight]
+  axis: [1, 0, 0, 0, 0, 0]
+  type: continuous
+  mass: 0.7555
+  com: [-0.0045, -0.0157, 0.1822]
+  inertia:
+  - [0.0309, 0.0, 4.0E-4]
+  - [0.0, 0.0295, 6.0E-4]
+  - [4.0E-4, 6.0E-4, 0.0024]
+  E:
+  - [1.0, 0.0, 0.0]
+  - [0.0, 1.0, 0.0]
+  - [0.0, 0.0, 1.0]
+  r: [0.1831, 0.0, 0.0]
+  lambda: 7
+  limit:
+  - {}
+  actuator:
+  - {inertia: 2.4, ratio: 50}
+- name: [qBRight, qBRight]
+  axis: [1, 0, 0, 0, 0, 0]
+  type: continuous
+  mass: 0.7671
+  com: [0.0062, 0.0253, 0.1435]
+  inertia:
+  - [0.0228, 1.0E-4, -4.0E-4]
+  - [1.0E-4, 0.021, -0.0014]
+  - [-4.0E-4, -0.0014, 0.0029]
+  E:
+  - [1.0, 0.0, 0.0]
+  - [0.0, 1.0, 0.0]
+  - [0.0, 0.0, 1.0]
+  r: [0.1831, 0.0, 0.0]
+  lambda: 7
+  limit:
+  - {}
+  actuator:
+  - {inertia: 2.4, ratio: 50}
+- name: [fourBarARight, fourBarARight]
+  axis: [1, 0, 0, 0, 0, 0]
+  type: continuous
+  mass: 0.646
+  com: [0.0, 0.0014, 0.1137]
+  inertia:
+  - [0.0176, 0.0, 0.0]
+  - [0.0, 0.0179, -1.0E-4]
+  - [0.0, -1.0E-4, 5.0E-4]
+  E:
+  - [1.0, 0.0, 0.0]
+  - [0.0, 1.0, 0.0]
+  - [0.0, 0.0, 1.0]
+  r: [0.0, 0.0, 0.4]
+  lambda: 8
+  limit:
+  - {}
+  actuator:
+  - {inertia: 0, ratio: 1}
+- name: [fourBarBRight, fourBarBRight]
+  axis: [1, 0, 0, 0, 0, 0]
+  type: continuous
+  mass: 0.39465
+  com: [2.0E-5, 1.7E-4, 0.15203]
+  inertia:
+  - [0.0126, 0.0, 0.0]
+  - [0.0, 0.01272, 0.0]
+  - [0.0, 0.0, 1.9E-4]
+  E:
+  - [1.0, 0.0, 0.0]
+  - [0.0, 1.0, 0.0]
+  - [0.0, 0.0, 1.0]
+  r: [0.0, 0.0, 0.5]
+  lambda: 9
+  limit:
+  - {}
+  actuator:
+  - {inertia: 0, ratio: 1}
+- name: [qHLeft, qHLeft]
+  axis: [0, 1, 0, 0, 0, 0]
+  type: continuous
+  mass: 12.84085
+  com: [-0.1834, 2.5E-4, 0.00678]
+  inertia:
+  - [0.10791, -0.00489, -0.01393]
+  - [-0.00489, 0.11101, 0.003]
+  - [-0.01393, 0.003, 0.06896]
+  E:
+  - [1.0, 0.0, 0.0]
+  - [0.0, 1.0, 0.0]
+  - [0.0, 0.0, 1.0]
+  r: [0.0, 0.0, 0.0]
+  lambda: 6
+  limit:
+  - {}
+  actuator:
+  - {inertia: 0.499, ratio: 26.7}
+- name: [qALeft, qALeft]
+  axis: [1, 0, 0, 0, 0, 0]
+  type: continuous
+  mass: 0.7555
+  com: [0.0045, -0.0157, 0.1822]
+  inertia:
+  - [0.0309, 0.0, 4.0E-4]
+  - [0.0, 0.0295, 6.0E-4]
+  - [4.0E-4, 6.0E-4, 0.0024]
+  E:
+  - [1.0, 0.0, 0.0]
+  - [0.0, 1.0, 0.0]
+  - [0.0, 0.0, 1.0]
+  r: [-0.1831, 0.0, 0.0]
+  lambda: 12
+  limit:
+  - {}
+  actuator:
+  - {inertia: 2.4, ratio: 50}
+- name: [qBLeft, qBLeft]
+  axis: [1, 0, 0, 0, 0, 0]
+  type: continuous
+  mass: 0.7671
+  com: [-0.0062, 0.0253, 0.1435]
+  inertia:
+  - [0.0228, 1.0E-4, -4.0E-4]
+  - [1.0E-4, 0.021, -0.0014]
+  - [-4.0E-4, -0.0014, 0.0029]
+  E:
+  - [1.0, 0.0, 0.0]
+  - [0.0, 1.0, 0.0]
+  - [0.0, 0.0, 1.0]
+  r: [-0.1831, 0.0, 0.0]
+  lambda: 12
+  limit:
+  - {}
+  actuator:
+  - {inertia: 2.4, ratio: 50}
+- name: [fourBarALeft, fourBarALeft]
+  axis: [1, 0, 0, 0, 0, 0]
+  type: continuous
+  mass: 0.646
+  com: [0.0, 0.0014, 0.1137]
+  inertia:
+  - [0.0176, 0.0, 0.0]
+  - [0.0, 0.0179, -1.0E-4]
+  - [0.0, -1.0E-4, 5.0E-4]
+  E:
+  - [1.0, 0.0, 0.0]
+  - [0.0, 1.0, 0.0]
+  - [0.0, 0.0, 1.0]
+  r: [0.0, 0.0, 0.4]
+  lambda: 13
+  limit:
+  - {}
+  actuator:
+  - {inertia: 0, ratio: 1}
+- name: [fourBarBLeft, fourBarBLeft]
+  axis: [1, 0, 0, 0, 0, 0]
+  type: continuous
+  mass: 0.39465
+  com: [-2.0E-5, 1.7E-4, 0.15203]
+  inertia:
+  - [0.0126, 0.0, 0.0]
+  - [0.0, 0.01272, 0.0]
+  - [0.0, 0.0, 1.9E-4]
+  E:
+  - [1.0, 0.0, 0.0]
+  - [0.0, 1.0, 0.0]
+  - [0.0, 0.0, 1.0]
+  r: [0.0, 0.0, 0.5]
+  lambda: 14
+  limit:
+  - {}
+  actuator:
+  - {inertia: 0, ratio: 1}

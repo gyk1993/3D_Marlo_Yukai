@@ -1,0 +1,10 @@
+libemlrt.lib
+libcovrt.lib
+libut.lib
+libmwmathutil.lib
+/export:mexFunction
+/export:emlrtMexFcnProperties
+/export:J_kneeAngles_RightStance
+/export:J_kneeAngles_RightStance_initialize
+/export:J_kneeAngles_RightStance_terminate
+/export:J_kneeAngles_RightStance_atexit

@@ -1,0 +1,29 @@
+urdf: 'res/five_link_walker.urdf'
+
+base link name: 'base'
+
+actuated joints:
+- 'q1Right'
+- 'q2Right'
+- 'q1Left'
+- 'q2Left'
+
+points of interest:
+- name: 'base'
+  lambda: ['BaseRotZ']
+  offset: [0,0,0]
+- name: 'pT'
+  lambda: ['BaseRotZ']
+  offset: [0,0,0.5]
+- name: 'p1R'
+  lambda: ['q1Right']
+  offset: [0,0,0.5]
+- name: 'p1L'
+  lambda: ['q1Left']
+  offset: [0,0,0.5]
+- name: 'p2R'
+  lambda: ['q2Right']
+  offset: [0,0,0.5]
+- name: 'p2L'
+  lambda: ['q2Left']
+  offset: [0,0,0.5]
