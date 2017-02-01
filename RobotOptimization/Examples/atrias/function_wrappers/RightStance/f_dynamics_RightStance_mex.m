@@ -33,7 +33,6 @@ Force2 = feval(f_name,[q,Fe2]);
 
 %     NaturalDynamics    External Forces
 % (D*ddq + C*dq + G - B*u) - (J'*Fe) = 0
-% ExternalForce = Force1 + Force2;
 ExternalForce = Force1 + Force2;
 output = NaturalDynamics - ExternalForce;
 

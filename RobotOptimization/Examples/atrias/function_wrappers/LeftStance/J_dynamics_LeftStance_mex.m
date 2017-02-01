@@ -53,7 +53,7 @@ J_Force2(:,3*DOF+DOA+nFe1+1:end) = J_tmp(:,DOF+1:end);
 
 %       J_NaturalDynamics      J_ExternalForce
 % Jac(D*ddq + C*dq + G - B*u) - Jac(J'*Fe) = 0
-J_ExternalForce = J_Force1 + J_Force1 + J_Force2;
+J_ExternalForce = J_Force1 + J_Force2;
 output = J_NaturalDynamics - J_ExternalForce;
 
 end

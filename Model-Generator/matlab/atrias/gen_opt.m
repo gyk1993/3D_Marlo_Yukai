@@ -32,7 +32,7 @@ c = q([10,11,15,16]) - (q([9,8,14,13]) - q([8,9,13,14]));
 h = sym('h',[length(c),1]);
 Fe = sym('Fe',[length(c),1]);
 Fimp = sym('Fimp',[length(c),1]);
-J = jacobian(c, q);
+J = jacobian(c, q);4ew2q1q4
 dJ = jacobian(J*dq,q);
 
 constraint = c - h;
