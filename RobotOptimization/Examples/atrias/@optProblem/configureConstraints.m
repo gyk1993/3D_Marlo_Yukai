@@ -27,7 +27,7 @@ function [obj] = configureConstraints(obj, varargin)
         'yaw', 1, 1, {{'q'}},-5e-4,5e-4);
      
 %     % Average Step Velocity
-    velocity = [0,0.5];
+    velocity = [0,0];
     deps_1 = RightStance.optVarIndices.q(1,:);
     deps_2 = RightStance.optVarIndices.qend(end,:);
     deps_3 = RightStance.optVarIndices.t(end,:);
