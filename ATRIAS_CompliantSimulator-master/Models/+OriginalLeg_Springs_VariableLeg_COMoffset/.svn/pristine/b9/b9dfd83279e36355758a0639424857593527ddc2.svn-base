@@ -1,0 +1,9 @@
+#ifndef _ATRIAS3D_PositionsSpringCOM_Left_h_
+#define _ATRIAS3D_PositionsSpringCOM_Left_h_
+
+#include <math.h>
+
+void ATRIAS3D_PositionsSpringCOM_Left(const double q[13], double pcm5R[3], double pcm6R[3], double pcm5L[3], double pcm6L[3]) ;
+
+
+#endif /* _ATRIAS3D_PositionsSpringCOM_Left_h_ */

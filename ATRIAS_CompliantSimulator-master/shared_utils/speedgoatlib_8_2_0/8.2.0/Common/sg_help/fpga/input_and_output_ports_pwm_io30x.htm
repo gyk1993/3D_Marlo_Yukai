@@ -1,0 +1,259 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>IO30X, IO31X &gt; Driver configuration &gt; PWM generation driver block &gt; Input and output ports</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+     .p_Heading1{ color: #147EC2;
+    font-size: 1.455em !important;
+     border-bottom: 1px solid #E0E1E1;
+    color: #147EC2;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 20px;
+    padding-bottom: 4px;}
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "input_and_output_ports_pwm_io30x.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<div id="breadcrumbs" style="display:none"><a href="io30x.htm">IO30X, IO31X</a> &gt; <a href="driver_configuration_io30x.htm">Driver configuration</a> &gt; <a href="pwm_io30x.htm">PWM generation driver block</a></div>
+
+<div id="printheader"><h1 class="p_Heading1"><span class="f_Heading1">Input and output ports</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
+  <tr valign="bottom">
+    <td align="left" valign="bottom" class="topichead">
+   
+   <h1 class="p_Heading1"><span class="f_Heading1">Input and output ports</span></h1>
+
+    
+  </tr>  
+</table>
+<!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<p>This driver block has no output ports and a maximum of 10 input ports, depending on which input ports are enabled in the block’s dialog box (see below). The 10 possible input ports are:</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table class="tbl" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:25%; background-color:#177cbd; padding:4px;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold; color: #ffffff;">Input port</span></p>
+</td>
+<td style="vertical-align:top; width:433px; background-color:#177cbd; padding:4px;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold; color: #ffffff;">Description</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:25%; padding:4px;"><p style="margin: 8px 0px 8px 0px;">Stop/Start</p>
+</td>
+<td style="vertical-align:top; width:433px; padding:4px;"><p style="margin: 8px 0px 8px 0px;">Sets the PWM generation mode.</p>
+<p style="margin: 8px 0px 8px 0px;">An element value of 0 causes the PWM Generation to be put into Stopped mode the next time the PWM cycle completes. In addition, the A-Output and B-Output signals are set to the corresponding A-output Stop State input port element and B-output Stop State input port element values.</p>
+<p style="margin: 8px 0px 8px 0px;">An element value of 1 causes the PWM Generation to be put into Started mode. In addition, the A-Output and B-Output signals are initialized to the corresponding A-output Start State input port element and B-output Start State input port element values.</p>
+<p style="margin: 8px 0px 8px 0px;">This input port is of data type Boolean. The width of this input port must be equal to the number of PWM channels defined by the block’s 'Channel vector' parameter.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:25%; background-color:#f6f6f6; padding:4px;"><p style="margin: 8px 0px 8px 0px;">A-output Start State</p>
+</td>
+<td style="vertical-align:top; width:433px; background-color:#f6f6f6; padding:4px;"><p style="margin: 8px 0px 8px 0px;">The level to set the A-Output signal on starting PWM generation.</p>
+<p style="margin: 8px 0px 8px 0px;">An element value of 0 causes the A-Output signal of that channel to be initialized to Low the next time the PWM Generation is started. </p>
+<p style="margin: 8px 0px 8px 0px;">An element value of 1 causes the A-Output signal of that channel to be initialized to High the next time the PWM Generation is started.</p>
+<p style="margin: 8px 0px 8px 0px;">This input port is of data type Boolean. The width of this input port must be equal to the number of PWM channels defined by the block’s 'Channel vector' parameter. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:25%; padding:4px;"><p style="margin: 8px 0px 8px 0px;">A-output Stop State</p>
+</td>
+<td style="vertical-align:top; width:433px; padding:4px;"><p style="margin: 8px 0px 8px 0px;">The level to set the A-Output signal on stopping PWM generation.</p>
+<p style="margin: 8px 0px 8px 0px;">An element value of 0 causes the A-Output signal of that channel to be set to Low the next time the PWM Generation is stopped.</p>
+<p style="margin: 8px 0px 8px 0px;">An element value of 1 causes the A-Output signal of that channel to be set to High the next time the PWM Generation is stopped. </p>
+<p style="margin: 8px 0px 8px 0px;">This input port is of data type Boolean. The width of this input port must be equal to the number of PWM channels defined by the block’s 'Channel vector' parameter.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:25%; background-color:#f6f6f6; padding:4px;"><p style="margin: 8px 0px 8px 0px;">B-output Start State</p>
+</td>
+<td style="vertical-align:top; width:433px; background-color:#f6f6f6; padding:4px;"><p style="margin: 8px 0px 8px 0px;">The level to set the B-Output signal on starting PWM generation.</p>
+<p style="margin: 8px 0px 8px 0px;">An element value of 0 causes the B-Output signal of that channel to be initialized to Low the next time the PWM Generation gets started. </p>
+<p style="margin: 8px 0px 8px 0px;">An element value of 1 causes the B-Output signal of that channel to be initialized to High the next time the PWM Generation gets started. </p>
+<p style="margin: 8px 0px 8px 0px;">This input port is of data type Boolean. The width of this input port has to be equal to the number of PWM channels defined by the block’s 'Channel vector' parameter. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:25%; padding:4px;"><p style="margin: 8px 0px 8px 0px;">B-output Stop State</p>
+</td>
+<td style="vertical-align:top; width:433px; padding:4px;"><p style="margin: 8px 0px 8px 0px;">The level to set the B-Output signal on stopping PWM generation.</p>
+<p style="margin: 8px 0px 8px 0px;">An element value of 0 causes the B-Output signal of that channel to be set to Low the next time the PWM Generation is stopped. </p>
+<p style="margin: 8px 0px 8px 0px;">An element value of 1 causes the B-Output signal of that channel to be set to High the next time the PWM Generation is stopped. </p>
+<p style="margin: 8px 0px 8px 0px;">This input port is of data type Boolean. The width of this input port must be equal to the number of PWM channels defined by the block’s 'Channel vector parameter'.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:25%; background-color:#f6f6f6; padding:4px;"><p style="margin: 8px 0px 8px 0px;">A-compare Count</p>
+</td>
+<td style="vertical-align:top; width:433px; background-color:#f6f6f6; padding:4px;"><p style="margin: 8px 0px 8px 0px;">When the counter is equal to the value in this parameter the A-Output signal is toggled.</p>
+<p style="margin: 8px 0px 8px 0px;">This input port is of data type UINT32. The width of this input port must be equal to the number of PWM channels defined by the block’s 'Channel vector parameter'. </p>
+<p style="margin: 8px 0px 8px 0px;">Each element can be in the range from 1 to 2^32-1.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:25%; padding:4px;"><p style="margin: 8px 0px 8px 0px;">B-compare Count</p>
+</td>
+<td style="vertical-align:top; width:433px; padding:4px;"><p style="margin: 8px 0px 8px 0px;">When the counter is equal to the value in this parameter the B-Output signal is toggled.</p>
+<p style="margin: 8px 0px 8px 0px;">This input port is of data type UINT32. The width of this input port must be equal to the number of PWM channels defined by the block’s 'Channel vector parameter'. </p>
+<p style="margin: 8px 0px 8px 0px;">Each element can be in the range from 1 to 2^32-1.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:25%; background-color:#f6f6f6; padding:4px;"><p style="margin: 8px 0px 8px 0px;">Period-compare Count</p>
+</td>
+<td style="vertical-align:top; width:433px; background-color:#f6f6f6; padding:4px;"><p>This parameter defines half of the period for PWM generation. When the counter is equal to the value in this parameter the counting direction is changed from up to down.</p>
+<p>&nbsp;</p>
+<p>This input port is of data type UINT32. The width of this input port must be equal to the number of PWM channels defined by the block’s 'Channel vector' parameter. </p>
+<p style="margin: 8px 0px 8px 0px;">Each element can be in the range from 1 to 2^32-1.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:25%; padding:4px;"><p style="margin: 8px 0px 8px 0px;">A-action</p>
+</td>
+<td style="vertical-align:top; width:433px; padding:4px;"><p style="margin: 8px 0px 8px 0px;">This input port expects a matrix of size 4 rows x <span style="font-style: italic;">n</span> columns where <span style="font-style: italic;">n</span> equals the number of PWM channels by the block’s 'Channel vector' parameter. Each element can be in the range from 0 to 3. The element value defines the action for each event. </p>
+<p style="margin: 8px 0px 8px 0px;">The action for the Zero-Event is defined as the first element in the respective column. </p>
+<p style="margin: 8px 0px 8px 0px;">The action for the Period-Compare-Event is defined as the second element in the respective column. </p>
+<p style="margin: 8px 0px 8px 0px;">The action for the A-Up-Compare-Event is defined as the third element in the respective column. </p>
+<p style="margin: 8px 0px 8px 0px;">The action for the A-Down-Compare-Event is defined as the fourth element in the respective column. </p>
+<p style="margin: 8px 0px 8px 0px;">This input port is of data type UINT8. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:25%; background-color:#f6f6f6; padding:4px;"><p style="margin: 8px 0px 8px 0px;">B-action</p>
+</td>
+<td style="vertical-align:top; width:433px; background-color:#f6f6f6; padding:4px;"><p style="margin: 8px 0px 8px 0px;">This input port expects a matrix of size 4 rows x <span style="font-style: italic;">n</span> columns where <span style="font-style: italic;">n</span> equals the number of PWM channels by the block’s 'Channel vector' parameter. Each element can be in the range from 0 to 3. The element value defines the action for each event. </p>
+<p style="margin: 8px 0px 8px 0px;">Each element can be in the range from 0 to 3. The element value defines the action for each event. </p>
+<p style="margin: 8px 0px 8px 0px;">The action for the Zero-Event is defined as the first element in the respective column. </p>
+<p style="margin: 8px 0px 8px 0px;">The action for the Period-Compare-Event is defined as the second element in the respective column.</p>
+<p style="margin: 8px 0px 8px 0px;">The action for the B-Up-Compare-Event is defined as the third element in the respective column.</p>
+<p style="margin: 8px 0px 8px 0px;">The action for the B-Down-Compare-Event is defined as the fourth element in the respective column. </p>
+<p style="margin: 8px 0px 8px 0px;">This input port is of data type UINT8.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>Note: It is the responsibility of the user of the block to make sure that the A-compare, B-compare, and Period-compare values are in proper relation to each other. </p>
+<p style="text-indent: -38px; margin: 8px 0px 8px 38px;"><span style="color: #000000;">&nbsp;</span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+{
+ if (document.all) setTimeout(function() {nsrInit();},20); 
+    else nsrInit();
+ } 
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

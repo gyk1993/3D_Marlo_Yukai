@@ -1,0 +1,8 @@
+%implements s54_b0_8l9fi_2_PublicModuleTypes "C"
+
+%function PublicModuleTypes(block) Output
+
+
+/* Custom Type definition for MATLAB Function: '<S33>/TypecastAndCast1' */
+#include <stddef.h>
+%endfunction

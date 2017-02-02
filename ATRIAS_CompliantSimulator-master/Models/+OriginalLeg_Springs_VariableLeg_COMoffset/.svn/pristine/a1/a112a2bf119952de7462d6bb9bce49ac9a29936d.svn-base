@@ -1,0 +1,9 @@
+#ifndef _ATRIAS3D_FixedParameters_Left_h_
+#define _ATRIAS3D_FixedParameters_Left_h_
+
+#include <math.h>
+
+void ATRIAS3D_FixedParameters_Left(double* Mtotal, double* g, double* m1, double* m2, double* m3, double* m4, double* m5, double* m6, double* mT, double* mH, double* L1, double* L2, double* L3, double* L4, double* LT, double* W, double* Jrotor1, double* Jrotor2, double* Jrotor3, double* r1, double* r2, double* r3, double IcmT[3][3], double IcmH[3][3], double Icm1[3][3], double Icm2[3][3], double Icm3[3][3], double Icm4[3][3], double Icm5[3][3], double Icm6[3][3], double Igr1[3][3], double Igr2[3][3], double Igr3[3][3], double Imot1[3][3], double Imot2[3][3], double Imot3[3][3]) ;
+
+
+#endif /* _ATRIAS3D_FixedParameters_Left_h_ */

@@ -1,0 +1,507 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>IO107 &gt; I/O pin mapping</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+     .p_Heading1{ color: #147EC2;
+    font-size: 1.455em !important;
+     border-bottom: 1px solid #E0E1E1;
+    color: #147EC2;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 20px;
+    padding-bottom: 4px;}
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "i_o_pin_mapping_io107.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<div id="breadcrumbs" style="display:none"><a href="io107.htm">IO107</a></div>
+
+<div id="printheader"><h1 class="p_Heading1"><span class="f_Heading1">I/O pin mapping</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
+  <tr valign="bottom">
+    <td align="left" valign="bottom" class="topichead">
+   
+   <h1 class="p_Heading1"><span class="f_Heading1">I/O pin mapping</span></h1>
+
+    
+  </tr>  
+</table>
+<!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table style="width:100%; border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<th style="vertical-align:top; width:23px; background-color:#177cbd; padding:2px; border:solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold; color: #ffffff;">Pin</span></p>
+</th>
+<th style="vertical-align:top; width:264px; background-color:#177cbd; padding:2px; border:solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold; color: #ffffff;">Signal</span></p>
+<p><span style="font-size: 7pt; color: #ffffff;">Analog differential mode</span></p>
+</th>
+<th style="vertical-align:top; width:23px; background-color:#177cbd; padding:2px; border:solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold; color: #ffffff;">Pin</span></p>
+</th>
+<th style="vertical-align:top; width:264px; background-color:#177cbd; padding:2px; border:solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold; color: #ffffff;">Signal</span></p>
+<p><span style="font-size: 7pt; color: #ffffff;">Analog differential mode</span></p>
+</th>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">1</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Analog Output 01 (-)</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">35</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Analog Output 10 (-)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">2</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Analog Output 01 (+)</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">36</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Analog Output 10 (+)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">3</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Output Return</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">37</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Analog Output 11 (-)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">4</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Output Return</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">38</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Analog Output 11 (+)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">5</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Analog Output 02 (-)</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">39</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Output Return</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">6</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Analog Output 02 (+)</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">40</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Output Return</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">7</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Output Return</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">41</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Analog Output 12 (-)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">8</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Output Return</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">42</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Analog Output 12 (+)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">9</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Analog Output 03 (-)</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">43</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Analog Output 13 (-)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">10</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Analog Output 03 (+)</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">44</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Analog Output 13 (+)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">11</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Output Return</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">45</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Output Return</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">12</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Output Return</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">46</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Output Return</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">13</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Analog Output 04 (-)</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">47</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Analog Output 14 (-)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">14</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Analog Output 04 (+)</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">48</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Analog Output 14 (+)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">15</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Output Return</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">49</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Analog Output 15 (-)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">16</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Output Return</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">50</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Analog Output 15 (+)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">17</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Analog Output 05 (-)</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">51</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Output Return</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">18</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Analog Output 05 (+)</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">52</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Output Return</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">19</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Output Return</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">53</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Analog Output 16 (-)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">20</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Output Return</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">54</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Analog Output 16 (+)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">21</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Analog Output 06 (-)</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">55</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Output Return</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">22</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Analog Output 06 (+)</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">56</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">REM GND SENSE</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">23</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Output Return</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">57</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Output Return</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">24</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Output Return</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">58</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">VTEST OUT</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">25</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Analog Output 07 (-)</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">59</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">VTEST Return</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">26</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Analog Output 07 (+)</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">60</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Digital Return</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">27</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Output Return</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">61</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">TRIG IN (+)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">28</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Output Return</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">62</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">TRIG IN (-)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">29</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Analog Output 08 (-)</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">63</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">TRIG OUT (+)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">30</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Analog Output 08 (+)</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">64</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">TRIG OUT (-)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">31</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Output Return</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">65</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DAC CLK OUT (+)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">32</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Output Return</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">66</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DAC CLK OUT (-)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">33</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Analog Output 09 (-)</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">67</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">CLOCK I/O (+)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">34</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Analog Output 09 (+)</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">68</span></p>
+</td>
+<td style="vertical-align:middle; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">CLOCK I/O (-)</span></p>
+</td>
+</tr>
+</table>
+</div>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+{
+ if (document.all) setTimeout(function() {nsrInit();},20); 
+    else nsrInit();
+ } 
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

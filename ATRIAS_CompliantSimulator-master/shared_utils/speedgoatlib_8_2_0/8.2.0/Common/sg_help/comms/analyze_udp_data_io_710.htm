@@ -1,0 +1,280 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>IO70x, IO71x &gt; Real-time UDP &gt; Data transmission &gt; Analyze UDP data transmission</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+     .p_Heading1{ color: #147EC2;
+    font-size: 1.455em !important;
+     border-bottom: 1px solid #E0E1E1;
+    color: #147EC2;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 20px;
+    padding-bottom: 4px;}
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "analyze_udp_data_io_710.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<div id="breadcrumbs" style="display:none"><a href="io710.htm">IO70x, IO71x</a> &gt; <a href="real-time_udp_io710.htm">Real-time UDP</a> &gt; <a href="data_transmission_udp_io710.htm">Data transmission</a></div>
+
+<div id="printheader"><h1 class="p_Heading1"><span class="f_Heading1">Analyze UDP data transmission</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
+  <tr valign="bottom">
+    <td align="left" valign="bottom" class="topichead">
+   
+   <h1 class="p_Heading1"><span class="f_Heading1">Analyze UDP data transmission</span></h1>
+
+    
+  </tr>  
+</table>
+<!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<p>Save, build and run the model on the target machine.</p>
+<p>&nbsp;</p>
+<p>To confirm whether the data is being transmitted, connect an Ethernet cable from the &nbsp;IO70X/IO71X I/O module to the host (you can use the same used to load the model).</p>
+<p>&nbsp;</p>
+<p>Use Wireshark or any other network analyzer on your host computer to capture the broadcast message.</p>
+<p>The captured message must look exactly like this:</p>
+<p>&nbsp;</p>
+<p><img src="io710_udp_data_anal.png" width="594" height="55" alt="io710_udp_data_anal" style="border:none" /></p>
+<p>&nbsp;</p>
+<p>Message components:</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:144px; background-color:#4f81bd; padding:4px; border:solid 1px #4f81bd;"><p><span style="color: #ffffff;">Number of bytes</span></p>
+</td>
+<td style="vertical-align:top; width:144px; background-color:#4f81bd; padding:4px; border:solid 1px #4f81bd;"><p><span style="color: #ffffff;">Value</span></p>
+</td>
+<td style="vertical-align:top; width:301px; background-color:#4f81bd; padding:4px; border:solid 1px #4f81bd;"><p><span style="color: #ffffff;">Description</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:144px; padding:4px; border:solid 1px #4f81bd;"><p>6 bytes</p>
+</td>
+<td style="vertical-align:top; width:144px; padding:4px; border:solid 1px #4f81bd;"><p>FF FF FF FF FF FF</p>
+</td>
+<td style="vertical-align:top; width:301px; padding:4px; border:solid 1px #4f81bd;"><p>Destination address (broadcast)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:144px; padding:4px; border:solid 1px #4f81bd;"><p>6 bytes</p>
+</td>
+<td style="vertical-align:top; width:144px; padding:4px; border:solid 1px #4f81bd;"><p>00 02 B3 F0 3F 7D</p>
+</td>
+<td style="vertical-align:top; width:301px; padding:4px; border:solid 1px #4f81bd;"><p>Source address (MAC address of IO710/IO713 module)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:144px; padding:4px; border:solid 1px #4f81bd;"><p>2 bytes</p>
+</td>
+<td style="vertical-align:top; width:144px; padding:4px; border:solid 1px #4f81bd;"><p>08 00</p>
+</td>
+<td style="vertical-align:top; width:301px; padding:4px; border:solid 1px #4f81bd;"><p>Message type: 0x0800 stands for IP protocol</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:144px; padding:4px; border:solid 1px #4f81bd;"><p>2 bytes</p>
+</td>
+<td style="vertical-align:top; width:144px; padding:4px; border:solid 1px #4f81bd;"><p>45 00</p>
+</td>
+<td style="vertical-align:top; width:301px; padding:4px; border:solid 1px #4f81bd;"><p>Header length and differentiated service field</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:144px; padding:4px; border:solid 1px #4f81bd;"><p>2 bytes</p>
+</td>
+<td style="vertical-align:top; width:144px; padding:4px; border:solid 1px #4f81bd;"><p>00 2E</p>
+</td>
+<td style="vertical-align:top; width:301px; padding:4px; border:solid 1px #4f81bd;"><p>Total length (46 bytes)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:144px; padding:4px; border:solid 1px #4f81bd;"><p>5 bytes</p>
+</td>
+<td style="vertical-align:top; width:144px; padding:4px; border:solid 1px #4f81bd;"><p>27 22 00 00 01</p>
+</td>
+<td style="vertical-align:top; width:301px; padding:4px; border:solid 1px #4f81bd;"><p>Various IP protocol info</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:144px; padding:4px; border:solid 1px #4f81bd;"><p>1 byte</p>
+</td>
+<td style="vertical-align:top; width:144px; padding:4px; border:solid 1px #4f81bd;"><p>11</p>
+</td>
+<td style="vertical-align:top; width:301px; padding:4px; border:solid 1px #4f81bd;"><p>Protocol: UDP</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:144px; padding:4px; border:solid 1px #4f81bd;"><p>2 bytes</p>
+</td>
+<td style="vertical-align:top; width:144px; padding:4px; border:solid 1px #4f81bd;"><p>CA F2</p>
+</td>
+<td style="vertical-align:top; width:301px; padding:4px; border:solid 1px #4f81bd;"><p>Checksum</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:144px; padding:4px; border:solid 1px #4f81bd;"><p>4 bytes</p>
+</td>
+<td style="vertical-align:top; width:144px; padding:4px; border:solid 1px #4f81bd;"><p>C0 A8 07 03</p>
+</td>
+<td style="vertical-align:top; width:301px; padding:4px; border:solid 1px #4f81bd;"><p>Source IP address</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:144px; padding:4px; border:solid 1px #4f81bd;"><p>4 bytes</p>
+</td>
+<td style="vertical-align:top; width:144px; padding:4px; border:solid 1px #4f81bd;"><p>FF FF FF FF</p>
+</td>
+<td style="vertical-align:top; width:301px; padding:4px; border:solid 1px #4f81bd;"><p>Destination IP address (broadcast)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:144px; padding:4px; border:solid 1px #4f81bd;"><p>8 bytes</p>
+</td>
+<td style="vertical-align:top; width:144px; padding:4px; border:solid 1px #4f81bd;"><p>27 10 61 A8 00 1A</p>
+</td>
+<td style="vertical-align:top; width:301px; padding:4px; border:solid 1px #4f81bd;"><p>UDP protocol header</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:144px; padding:4px; border:solid 1px #4f81bd;"><p>11 bytes</p>
+</td>
+<td style="vertical-align:top; width:144px; padding:4px; border:solid 1px #4f81bd;"><p>48 45 4C 4C 4F 20 57 4F 52 4C 44</p>
+</td>
+<td style="vertical-align:top; width:301px; padding:4px; border:solid 1px #4f81bd;"><p>Message “HELLO WORLD”</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:144px; padding:4px; border:solid 1px #4f81bd;"><p>7 bytes</p>
+</td>
+<td style="vertical-align:top; width:144px; padding:4px; border:solid 1px #4f81bd;"><p>00 … 00</p>
+</td>
+<td style="vertical-align:top; width:301px; padding:4px; border:solid 1px #4f81bd;"><p>Empty (not used)</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+{
+ if (document.all) setTimeout(function() {nsrInit();},20); 
+    else nsrInit();
+ } 
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

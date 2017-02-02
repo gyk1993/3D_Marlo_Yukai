@@ -1,0 +1,17 @@
+#include "Walking_ATRIAS.bio"
+#include "Walking_ATRIAS.lbl"
+#include "Walking_ATRIAS.sid"
+
+
+const xpc_SigMappingInfo xpcMMI[] =
+  {
+    {
+      {Walking_ATRIAS_BIO},
+      {Walking_ATRIAS_SID},
+      {Walking_ATRIAS_LBL},
+      "",
+      "Walking_ATRIAS",
+      0,
+      1014,
+    },
+  };

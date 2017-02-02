@@ -1,0 +1,36 @@
+Firmware name		- Device 		- Protocol
+===================================================================================
+
+cifx2asm.nxf		- CIFX XX-2ASM		- 2-channel AS-Interface Master
+
+cifx2dpm.nxf		- CIFX XX-2DP		- 2 channel PROFIBUS DP Master
+
+cifx2dps.nxf		- CIFX XX-2DP		- 2 channel PROFIBUS DP Slave 
+
+cifxccs.nxf		- CIFX XX-CC		- CC-Link Slave
+
+cifxcom.nxf		- CIFX XX-CO		- CANopen Master
+cifxcos.nxf		- CIFX XX-CO		- CANopen Slave
+
+cifxcps.nxf		- CIFX XX-CP		- CompoNet Slave
+
+cifxdnm.nxf		- CIFX XX-DN		- DeviceNet Master
+cifxdns.nxf		- CIFX XX-DN		- DeviceNet Slave
+
+cifxdpm.nxf		- CIFX XX-DP		- PROFIBUS DP Master
+cifxdps.nxf		- CIFX XX-DP		- PROFIBUS DP Slave
+cifxmpi.nxf		- CIFX XX-DP		- PROFIBUS MPI Device
+
+cifxecm.nxf		- CIFX XX-RE		- EtherCAT Master
+cifxecs.nxf		- CIFX XX-RE		- EtherCAT Slave
+cifxeim.nxf		- CIFX XX-RE		- Ethernet/IP Scanner
+cifxeis.nxf		- CIFX XX-RE		- Ethernet/IP Adapter
+cifxomb.nxf		- CIFX XX-RE		- OpenModbus/TCP
+cifxpls.nxf		- CIFX XX-RE		- Powerlink Controlled Node
+cifXpnm.nxf		- CIFX XX-RE		- PROFINET I/O Controller
+cifxpns.nxf		- CIFX XX-RE		- PROFINET I/O Device V3
+cifxs3m.nxf		- CIFX XX-RE		- sercos Master
+cifxs3s.nxf		- CIFX XX-RE		- sercos Slave
+cifxvrs.nxf		- CIFX XX-RE		- VARAN Client
+
+

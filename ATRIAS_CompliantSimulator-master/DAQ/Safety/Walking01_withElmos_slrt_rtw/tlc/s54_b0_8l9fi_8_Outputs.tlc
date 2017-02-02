@@ -1,0 +1,180 @@
+%implements s54_b0_8l9fi_8_Outputs "C"
+
+%function Outputs(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign _modelSS = ""
+
+%<SLibGenerateExtModeOutput(system)>
+/* Gateway: DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/IMUFilters/CheckAndFilterIMU/AnomalyDetection */
+localDW->sfEvent = Walking01_withElmo_CALL_EVENT_e;
+if (localDW->temporalCounter_i1 < MAX_uint32_T) {
+    localDW->temporalCounter_i1++;
+}
+/* During: DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/IMUFilters/CheckAndFilterIMU/AnomalyDetection */
+if (localDW->is_active_c3_Walking01_withElmo == 0U) {
+    /* Entry: DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/IMUFilters/CheckAndFilterIMU/AnomalyDetection */
+    localDW->is_active_c3_Walking01_withElmo = 1U;
+    /* Entry Internal: DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/IMUFilters/CheckAndFilterIMU/AnomalyDetection */
+    /* Transition: '<S118>:10' */
+    localDW->is_c3_Walking01_withElmos = Walking01_withElmos_IN_Init_j;
+    localDW->temporalCounter_i1 = 0U;
+    /* Entry 'Init': '<S118>:20' */
+    localB->q_clean = rtu_q;
+    localDW->q_last = rtu_q;
+    localDW->dq_last = rtu_dq;
+    localB->ErrorCount = 0.0;
+} else if (localDW->is_c3_Walking01_withElmos == Walking01_withElmos_IN_Init_j) {
+    /* During 'Init': '<S118>:20' */
+    if ((!rtu_Reset) && (localDW->temporalCounter_i1 >= (uint32_T)%<(SLibCG_SE(SLibCGIR_PV(113, 0, 24, 1, "", -1, "", 0)))>)) {
+        /* Transition: '<S118>:21' */
+        localDW->is_c3_Walking01_withElmos = Walking01_withElmos_IN_Run_c;
+        /* Entry Internal 'Run': '<S118>:27' */
+        /* Transition: '<S118>:29' */
+        localDW->is_Run = Walking01_withElmo_IN_Nominal_c;
+        /* Entry 'Nominal': '<S118>:4' */
+        localB->q_clean = rtu_q;
+        localDW->q_last = rtu_q;
+        localDW->dq_last = rtu_dq;
+        localB->ErrorCount = 0.0;
+    } else {
+        localB->q_clean = rtu_q;
+        localDW->q_last = rtu_q;
+        localDW->dq_last = rtu_dq;
+        localB->ErrorCount = 0.0;
+    }
+} else {
+    /* During 'Run': '<S118>:27' */
+    if (rtu_Reset) {
+        /* Transition: '<S118>:28' */
+        /* Exit Internal 'Run': '<S118>:27' */
+        localDW->is_Run = Walking01__IN_NO_ACTIVE_CHILD_f;
+        localDW->is_c3_Walking01_withElmos = Walking01_withElmos_IN_Init_j;
+        localDW->temporalCounter_i1 = 0U;
+        /* Entry 'Init': '<S118>:20' */
+        localB->q_clean = rtu_q;
+        localDW->q_last = rtu_q;
+        localDW->dq_last = rtu_dq;
+        localB->ErrorCount = 0.0;
+    } else if (localDW->is_Run == Walking01_withElmos_IN_Error_e) {
+        /* During 'Error': '<S118>:5' */
+        if (localB->ErrorCount > %<(SLibCG_SE(SLibCGIR_PV(114, 0, 24, 1, "", -1, "", 0)))>) {
+            /* Transition: '<S118>:3' */
+            localDW->is_Run = Walking01__IN_NO_ACTIVE_CHILD_f;
+            localDW->is_c3_Walking01_withElmos = Walking01_withElmos_IN_Init_j;
+            localDW->temporalCounter_i1 = 0U;
+            /* Entry 'Init': '<S118>:20' */
+            localB->q_clean = rtu_q;
+            localDW->q_last = rtu_q;
+            localDW->dq_last = rtu_dq;
+            localB->ErrorCount = 0.0;
+        } else {
+%if SLibCG_FcnCallArgAccessed(8,3,1,0)
+%<SLibCG_AccessArg(8 ,3, 1)>
+%endif
+%if SLibCG_FcnCallArgAccessed(8,3,1,1)
+%<SLibCG_AccessArg(8 ,3, 3)>
+%endif
+%if SLibCG_FcnCallArgAccessed(8,3,1,2)
+%<SLibCG_AccessArg(8 ,3, 4)>
+%endif
+%if SLibCG_FcnCallArgAccessed(8,3,1,3)
+%<SLibCG_AccessArg(8 ,3, 0)>
+%endif
+%if SLibCG_FcnCallArgAccessed(8,3,1,4)
+%<SLibCG_AccessArg(8 ,3, 7)>
+%endif
+
+            if (!%<(SLibCGCallSubFcn("Walking01_withElm_check_error_g", ["rtu_q", "rtu_q_limits", "rtu_Threshold", "%<tSimStruct>", "localB"], 8, 3, 1))>) {
+                /* Transition: '<S118>:30' */
+                localDW->is_Run = Walking01_withElmo_IN_Nominal_c;
+                /* Entry 'Nominal': '<S118>:4' */
+                localB->q_clean = rtu_q;
+                localDW->q_last = rtu_q;
+                localDW->dq_last = rtu_dq;
+                localB->ErrorCount = 0.0;
+            } else {
+                /* dq is delayed to prevent algebraic loops */
+                localB->ErrorCount++;
+                localB->q_clean = localB->ErrorCount * localDW->dq_last * rtu_ANOMALY_DT + localDW->q_last;
+            }
+        }
+    } else {
+        /* During 'Nominal': '<S118>:4' */
+%if SLibCG_FcnCallArgAccessed(8,3,0,0)
+%<SLibCG_AccessArg(8 ,3, 1)>
+%endif
+%if SLibCG_FcnCallArgAccessed(8,3,0,1)
+%<SLibCG_AccessArg(8 ,3, 3)>
+%endif
+%if SLibCG_FcnCallArgAccessed(8,3,0,2)
+%<SLibCG_AccessArg(8 ,3, 4)>
+%endif
+%if SLibCG_FcnCallArgAccessed(8,3,0,3)
+%<SLibCG_AccessArg(8 ,3, 0)>
+%endif
+%if SLibCG_FcnCallArgAccessed(8,3,0,4)
+%<SLibCG_AccessArg(8 ,3, 7)>
+%endif
+
+        if (%<(SLibCGCallSubFcn("Walking01_withElm_check_error_g", ["rtu_q", "rtu_q_limits", "rtu_Threshold", "%<tSimStruct>", "localB"], 8, 3, 0))>) {
+            /* Transition: '<S118>:2' */
+            localDW->is_Run = Walking01_withElmos_IN_Error_e;
+            /* Entry 'Error': '<S118>:5' */
+            localDW->dq_last = rtu_dq;
+            /* dq is delayed to prevent algebraic loops */
+            localB->ErrorCount++;
+            localB->q_clean = localB->ErrorCount * localDW->dq_last * rtu_ANOMALY_DT + localDW->q_last;
+        } else {
+            localB->q_clean = rtu_q;
+            localDW->q_last = rtu_q;
+            localDW->dq_last = rtu_dq;
+            localB->ErrorCount = 0.0;
+        }
+    }
+}
+%closefile cfgTxt
+%<cfgTxt>
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[8].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("Output", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, SLibSystemFcnPeriodicRateGrouping(rtmArgSys, "Output"))
+%<SLibCG_AccessArg(8, 3, 0)>
+%endif
+%if SLibCG_ArgAccessed(8, 3, 0)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "Output", rtmArgSys.CurrentTID, SLibSystemFcnPeriodicRateGrouping(rtmArgSys, "Output"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface))
+%<SLibCG_UndoAccessArg(8, 3, 0)>
+%endif
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Walking01_wi_AnomalyDetection_h(\
+%assign comma = ""
+%if SLibCG_ArgAccessed(8, 3, 0)
+%<comma>%<tSimStructType> * const %<tSimStruct>\
+%assign comma = ", "
+%endif
+%<comma>real_T rtu_q\
+%assign comma = ", "
+%<comma>real_T rtu_dq\
+%assign comma = ", "
+%if SLibCG_ArgAccessed(8, 3, 3)
+%<comma>const real_T rtu_q_limits[2]\
+%assign comma = ", "
+%endif
+%if SLibCG_ArgAccessed(8, 3, 4)
+%<comma>real_T rtu_Threshold\
+%assign comma = ", "
+%endif
+%<comma>boolean_T rtu_Reset\
+%assign comma = ", "
+%<comma>real_T rtu_ANOMALY_DT\
+%assign comma = ", "
+%<comma>B_AnomalyDetection_Walking0_h_T *localB\
+%assign comma = ", "
+%<comma>DW_AnomalyDetection_Walking_m_T *localDW\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(8, 3, fcnProtoType)>
+%<LibSetSystemField(system, "CachedOutputLocalVars", localVarDecl)>
+%endfunction

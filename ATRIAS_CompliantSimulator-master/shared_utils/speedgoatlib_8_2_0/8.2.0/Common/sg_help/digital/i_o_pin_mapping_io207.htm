@@ -1,0 +1,1207 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>IO207 &gt; I/O pin mapping</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+     .p_Heading1{ color: #147EC2;
+    font-size: 1.455em !important;
+     border-bottom: 1px solid #E0E1E1;
+    color: #147EC2;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 20px;
+    padding-bottom: 4px;}
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "i_o_pin_mapping_io207.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<div id="breadcrumbs" style="display:none"><a href="io207.htm">IO207</a></div>
+
+<div id="printheader"><h1 class="p_Heading1"><span class="f_Heading1">I/O pin mapping</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
+  <tr valign="bottom">
+    <td align="left" valign="bottom" class="topichead">
+   
+   <h1 class="p_Heading1"><span class="f_Heading1">I/O pin mapping</span></h1>
+
+    
+  </tr>  
+</table>
+<!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<h2 class="p_Heading2"><span class="f_Heading2">Front channel group</span></h2>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table style="width:100%; border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:13%; background-color:#177cbd; padding:2px; border:solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold; color: #ffffff;">I/O pin line number</span></p>
+</td>
+<td style="vertical-align:top; width:11%; background-color:#177cbd; padding:2px; border:solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold; color: #ffffff;">Pin on terminal board</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:27%; background-color:#177cbd; padding:2px; border:solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold; color: #ffffff;">Signal</span></p>
+</td>
+<td style="vertical-align:top; width:13%; background-color:#177cbd; padding:2px; border:solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold; color: #ffffff;">I/O pin line number</span></p>
+</td>
+<td style="vertical-align:top; width:10%; background-color:#177cbd; padding:2px; border:solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold; color: #ffffff;">Pin on terminal board</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:23%; background-color:#177cbd; padding:2px; border:solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold; color: #ffffff;">Signal</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">01</span></p>
+</td>
+<td style="vertical-align:middle; width:11%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">01</span></p>
+</td>
+<td rowspan="8" style="vertical-align:middle; width:4%; padding:2px; border:solid 1px #000000;"><p style="text-align: center; margin: 0px 8px 0px 8px;"><span style="font-size: 9pt;">Byte 1</span></p>
+</td>
+<td style="vertical-align:middle; width:23%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO01</span></p>
+</td>
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">35</span></p>
+</td>
+<td style="vertical-align:middle; width:10%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">35</span></p>
+</td>
+<td rowspan="6" style="vertical-align:middle; width:4%; padding:2px; border:solid 1px #000000;"><p style="text-align: center; margin: 0px 8px 0px 8px;"><span style="font-size: 9pt;">Byte 5</span></p>
+</td>
+<td style="vertical-align:middle; width:19%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO35</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">02</span></p>
+</td>
+<td style="vertical-align:middle; width:11%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">02</span></p>
+</td>
+<td style="vertical-align:middle; width:23%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO02</span></p>
+</td>
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">36</span></p>
+</td>
+<td style="vertical-align:middle; width:10%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">36</span></p>
+</td>
+<td style="vertical-align:middle; width:19%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO36</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:13%; height:7px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">03</span></p>
+</td>
+<td style="vertical-align:middle; width:11%; height:7px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">03</span></p>
+</td>
+<td style="vertical-align:middle; width:23%; height:7px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO03</span></p>
+</td>
+<td style="vertical-align:middle; width:13%; height:7px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">37</span></p>
+</td>
+<td style="vertical-align:middle; width:10%; height:7px; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">37</span></p>
+</td>
+<td style="vertical-align:middle; width:19%; height:7px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO37</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">04</span></p>
+</td>
+<td style="vertical-align:middle; width:11%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">04</span></p>
+</td>
+<td style="vertical-align:middle; width:23%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO04</span></p>
+</td>
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">38</span></p>
+</td>
+<td style="vertical-align:middle; width:10%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">38</span></p>
+</td>
+<td style="vertical-align:middle; width:19%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO38</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">05</span></p>
+</td>
+<td style="vertical-align:middle; width:11%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">05</span></p>
+</td>
+<td style="vertical-align:middle; width:23%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO05</span></p>
+</td>
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">39</span></p>
+</td>
+<td style="vertical-align:middle; width:10%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">39</span></p>
+</td>
+<td style="vertical-align:middle; width:19%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO39</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">06</span></p>
+</td>
+<td style="vertical-align:middle; width:11%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">06</span></p>
+</td>
+<td style="vertical-align:middle; width:23%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO06</span></p>
+</td>
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">40</span></p>
+</td>
+<td style="vertical-align:middle; width:10%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">40</span></p>
+</td>
+<td style="vertical-align:middle; width:19%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO40</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">07</span></p>
+</td>
+<td style="vertical-align:middle; width:11%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">07</span></p>
+</td>
+<td style="vertical-align:middle; width:23%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO07</span></p>
+</td>
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">41</span></p>
+</td>
+<td style="vertical-align:middle; width:10%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">41</span></p>
+</td>
+<td rowspan="8" style="vertical-align:middle; width:4%; padding:2px; border:solid 1px #000000;"><p style="text-align: center; margin: 0px 8px 0px 8px;"><span style="font-size: 9pt;">Byte 6</span></p>
+</td>
+<td style="vertical-align:middle; width:19%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO41</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">08</span></p>
+</td>
+<td style="vertical-align:middle; width:11%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">08</span></p>
+</td>
+<td style="vertical-align:middle; width:23%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO08</span></p>
+</td>
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">42</span></p>
+</td>
+<td style="vertical-align:middle; width:10%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">42</span></p>
+</td>
+<td style="vertical-align:middle; width:19%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO42</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">09</span></p>
+</td>
+<td style="vertical-align:middle; width:11%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">09</span></p>
+</td>
+<td rowspan="8" style="vertical-align:middle; width:4%; padding:2px; border:solid 1px #000000;"><p style="text-align: center; margin: 0px 8px 0px 8px;"><span style="font-size: 9pt;">Byte 2</span></p>
+</td>
+<td style="vertical-align:middle; width:23%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO09</span></p>
+</td>
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">43</span></p>
+</td>
+<td style="vertical-align:middle; width:10%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">43</span></p>
+</td>
+<td style="vertical-align:middle; width:19%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO43</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">10</span></p>
+</td>
+<td style="vertical-align:middle; width:11%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">10</span></p>
+</td>
+<td style="vertical-align:middle; width:23%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO10</span></p>
+</td>
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">44</span></p>
+</td>
+<td style="vertical-align:middle; width:10%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">44</span></p>
+</td>
+<td style="vertical-align:middle; width:19%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO44</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">11</span></p>
+</td>
+<td style="vertical-align:middle; width:11%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">11</span></p>
+</td>
+<td style="vertical-align:middle; width:23%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO11</span></p>
+</td>
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">45</span></p>
+</td>
+<td style="vertical-align:middle; width:10%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">45</span></p>
+</td>
+<td style="vertical-align:middle; width:19%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO45</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">12</span></p>
+</td>
+<td style="vertical-align:middle; width:11%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">12</span></p>
+</td>
+<td style="vertical-align:middle; width:23%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO12</span></p>
+</td>
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">46</span></p>
+</td>
+<td style="vertical-align:middle; width:10%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">46</span></p>
+</td>
+<td style="vertical-align:middle; width:19%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO46</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">13</span></p>
+</td>
+<td style="vertical-align:middle; width:11%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">13</span></p>
+</td>
+<td style="vertical-align:middle; width:23%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO13</span></p>
+</td>
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">47</span></p>
+</td>
+<td style="vertical-align:middle; width:10%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">47</span></p>
+</td>
+<td style="vertical-align:middle; width:19%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO47</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">14</span></p>
+</td>
+<td style="vertical-align:middle; width:11%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">14</span></p>
+</td>
+<td style="vertical-align:middle; width:23%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO14</span></p>
+</td>
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">48</span></p>
+</td>
+<td style="vertical-align:middle; width:10%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">48</span></p>
+</td>
+<td style="vertical-align:middle; width:19%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO48</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">15</span></p>
+</td>
+<td style="vertical-align:middle; width:11%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">15</span></p>
+</td>
+<td style="vertical-align:middle; width:23%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO15</span></p>
+</td>
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">49</span></p>
+</td>
+<td style="vertical-align:middle; width:10%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">49</span></p>
+</td>
+<td rowspan="8" style="vertical-align:middle; width:4%; padding:2px; border:solid 1px #000000;"><p style="text-align: center; margin: 0px 8px 0px 8px;"><span style="font-size: 9pt;">Byte 7</span></p>
+</td>
+<td style="vertical-align:middle; width:19%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO49</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">16</span></p>
+</td>
+<td style="vertical-align:middle; width:11%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">16</span></p>
+</td>
+<td style="vertical-align:middle; width:23%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO16</span></p>
+</td>
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">50</span></p>
+</td>
+<td style="vertical-align:middle; width:10%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">50</span></p>
+</td>
+<td style="vertical-align:middle; width:19%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO50</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">17</span></p>
+</td>
+<td style="vertical-align:middle; width:11%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">17</span></p>
+</td>
+<td rowspan="8" style="vertical-align:middle; width:4%; padding:2px; border:solid 1px #000000;"><p style="text-align: center; margin: 0px 8px 0px 8px;"><span style="font-size: 9pt;">Byte 3</span></p>
+</td>
+<td style="vertical-align:middle; width:23%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO17</span></p>
+</td>
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">51</span></p>
+</td>
+<td style="vertical-align:middle; width:10%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">51</span></p>
+</td>
+<td style="vertical-align:middle; width:19%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO51</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">18</span></p>
+</td>
+<td style="vertical-align:middle; width:11%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">18</span></p>
+</td>
+<td style="vertical-align:middle; width:23%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO18</span></p>
+</td>
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">52</span></p>
+</td>
+<td style="vertical-align:middle; width:10%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">52</span></p>
+</td>
+<td style="vertical-align:middle; width:19%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO52</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">19</span></p>
+</td>
+<td style="vertical-align:middle; width:11%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">19</span></p>
+</td>
+<td style="vertical-align:middle; width:23%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO19</span></p>
+</td>
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">53</span></p>
+</td>
+<td style="vertical-align:middle; width:10%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">53</span></p>
+</td>
+<td style="vertical-align:middle; width:19%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO53</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">20</span></p>
+</td>
+<td style="vertical-align:middle; width:11%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">20</span></p>
+</td>
+<td style="vertical-align:middle; width:23%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO20</span></p>
+</td>
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">54</span></p>
+</td>
+<td style="vertical-align:middle; width:10%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">54</span></p>
+</td>
+<td style="vertical-align:middle; width:19%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO54</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">21</span></p>
+</td>
+<td style="vertical-align:middle; width:11%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">21</span></p>
+</td>
+<td style="vertical-align:middle; width:23%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO21</span></p>
+</td>
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">55</span></p>
+</td>
+<td style="vertical-align:middle; width:10%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">55</span></p>
+</td>
+<td style="vertical-align:middle; width:19%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO55</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">22</span></p>
+</td>
+<td style="vertical-align:middle; width:11%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">22</span></p>
+</td>
+<td style="vertical-align:middle; width:23%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO22</span></p>
+</td>
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">56</span></p>
+</td>
+<td style="vertical-align:middle; width:10%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">56</span></p>
+</td>
+<td style="vertical-align:middle; width:19%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO56</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">23</span></p>
+</td>
+<td style="vertical-align:middle; width:11%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">23</span></p>
+</td>
+<td style="vertical-align:middle; width:23%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO23</span></p>
+</td>
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">57</span></p>
+</td>
+<td style="vertical-align:middle; width:10%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">57</span></p>
+</td>
+<td rowspan="8" style="vertical-align:middle; width:4%; padding:2px; border:solid 1px #000000;"><p style="text-align: center; margin: 0px 8px 0px 8px;"><span style="font-size: 9pt;">Byte 8</span></p>
+</td>
+<td style="vertical-align:middle; width:19%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO57</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">24</span></p>
+</td>
+<td style="vertical-align:middle; width:11%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">24</span></p>
+</td>
+<td style="vertical-align:middle; width:23%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO24</span></p>
+</td>
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">58</span></p>
+</td>
+<td style="vertical-align:middle; width:10%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">58</span></p>
+</td>
+<td style="vertical-align:middle; width:19%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO58</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">25</span></p>
+</td>
+<td style="vertical-align:middle; width:11%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">25</span></p>
+</td>
+<td rowspan="8" style="vertical-align:middle; width:4%; padding:2px; border:solid 1px #000000;"><p style="text-align: center; margin: 0px 8px 0px 8px;"><span style="font-size: 9pt;">Byte 4</span></p>
+</td>
+<td style="vertical-align:middle; width:23%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO25</span></p>
+</td>
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">59</span></p>
+</td>
+<td style="vertical-align:middle; width:10%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">59</span></p>
+</td>
+<td style="vertical-align:middle; width:19%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO59</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">26</span></p>
+</td>
+<td style="vertical-align:middle; width:11%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">26</span></p>
+</td>
+<td style="vertical-align:middle; width:23%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO26</span></p>
+</td>
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">60</span></p>
+</td>
+<td style="vertical-align:middle; width:10%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">60</span></p>
+</td>
+<td style="vertical-align:middle; width:19%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO60</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">27</span></p>
+</td>
+<td style="vertical-align:middle; width:11%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">27</span></p>
+</td>
+<td style="vertical-align:middle; width:23%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO27</span></p>
+</td>
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">61</span></p>
+</td>
+<td style="vertical-align:middle; width:10%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">61</span></p>
+</td>
+<td style="vertical-align:middle; width:19%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO61</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">28</span></p>
+</td>
+<td style="vertical-align:middle; width:11%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">28</span></p>
+</td>
+<td style="vertical-align:middle; width:23%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO28</span></p>
+</td>
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">62</span></p>
+</td>
+<td style="vertical-align:middle; width:10%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">62</span></p>
+</td>
+<td style="vertical-align:middle; width:19%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO62</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">29</span></p>
+</td>
+<td style="vertical-align:middle; width:11%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">29</span></p>
+</td>
+<td style="vertical-align:middle; width:23%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO29</span></p>
+</td>
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">63</span></p>
+</td>
+<td style="vertical-align:middle; width:10%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">63</span></p>
+</td>
+<td style="vertical-align:middle; width:19%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO63</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">30</span></p>
+</td>
+<td style="vertical-align:middle; width:11%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">30</span></p>
+</td>
+<td style="vertical-align:middle; width:23%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO30</span></p>
+</td>
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">64</span></p>
+</td>
+<td style="vertical-align:middle; width:10%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">64</span></p>
+</td>
+<td style="vertical-align:middle; width:19%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO64</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">31</span></p>
+</td>
+<td style="vertical-align:middle; width:11%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">31</span></p>
+</td>
+<td style="vertical-align:middle; width:23%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO31</span></p>
+</td>
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><br />
+</td>
+<td style="vertical-align:middle; width:10%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">65</span></p>
+</td>
+<td style="vertical-align:middle; width:4%; padding:2px; border:solid 1px #000000;"><br />
+</td>
+<td style="vertical-align:middle; width:19%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Ground</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">32</span></p>
+</td>
+<td style="vertical-align:middle; width:11%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">32</span></p>
+</td>
+<td style="vertical-align:middle; width:23%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO32</span></p>
+</td>
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><br />
+</td>
+<td style="vertical-align:middle; width:10%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">66</span></p>
+</td>
+<td style="vertical-align:middle; width:4%; padding:2px; border:solid 1px #000000;"><br />
+</td>
+<td style="vertical-align:middle; width:19%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Ground</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">33</span></p>
+</td>
+<td style="vertical-align:middle; width:11%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">33</span></p>
+</td>
+<td rowspan="2" style="vertical-align:middle; width:4%; padding:2px; border:solid 1px #000000;"><br />
+</td>
+<td style="vertical-align:middle; width:23%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO33</span></p>
+</td>
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><br />
+</td>
+<td style="vertical-align:middle; width:10%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">67</span></p>
+</td>
+<td style="vertical-align:middle; width:4%; padding:2px; border:solid 1px #000000;"><br />
+</td>
+<td style="vertical-align:middle; width:19%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Ground</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">34</span></p>
+</td>
+<td style="vertical-align:middle; width:11%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">34</span></p>
+</td>
+<td style="vertical-align:middle; width:23%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO34</span></p>
+</td>
+<td style="vertical-align:middle; width:13%; padding:2px; border:solid 1px #000000;"><br />
+</td>
+<td style="vertical-align:middle; width:10%; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">68</span></p>
+</td>
+<td style="vertical-align:middle; width:4%; padding:2px; border:solid 1px #000000;"><br />
+</td>
+<td style="vertical-align:middle; width:19%; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Ground</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Rear channel group</span></h2>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table style="width:634px; border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:67px; height:60px; background-color:#177cbd; padding:2px; border:solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold; color: #ffffff;">IO line</span></p>
+</td>
+<td style="vertical-align:top; width:66px; height:60px; background-color:#177cbd; padding:2px; border:solid 1px #000000; border-left:none;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold; color: #ffffff;">Pin on terminal board</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:170px; height:60px; background-color:#177cbd; padding:2px; border:solid 1px #000000; border-left:none;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold; color: #ffffff;">Signal</span></p>
+</td>
+<td style="vertical-align:top; width:75px; height:60px; background-color:#177cbd; padding:2px; border:solid 1px #000000; border-left:none;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold; color: #ffffff;">IO line</span></p>
+</td>
+<td style="vertical-align:top; width:56px; height:60px; background-color:#177cbd; padding:2px; border:solid 1px #000000; border-left:none;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold; color: #ffffff;">Pin on terminal board</span></p>
+</td>
+<td colspan="2" style="vertical-align:top; width:141px; height:60px; background-color:#177cbd; padding:2px; border:solid 1px #000000; border-left:none;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold; color: #ffffff;">Signal</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:bottom; width:67px; height:10px; padding:2px; border:solid 1px #000000; border-top:none;"><p><span style="font-weight: bold;">65</span></p>
+</td>
+<td style="vertical-align:bottom; width:66px; height:10px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">01</span></p>
+</td>
+<td rowspan="4" style="vertical-align:bottom; width:30px; height:10px; padding:2px; border:solid 1px #000000; border-top:none; border-bottom:none; border-left:none;"><p style="text-align: center;"><span style="font-size: 9pt;">Byte 9</span></p>
+</td>
+<td style="vertical-align:bottom; width:152px; height:10px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO1</span></p>
+</td>
+<td style="vertical-align:bottom; width:75px; height:10px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">66</span></p>
+</td>
+<td style="vertical-align:bottom; width:56px; height:10px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">35</span></p>
+</td>
+<td rowspan="4" style="vertical-align:bottom; width:32px; height:10px; padding:2px; border:solid 1px #000000; border-top:none; border-bottom:none; border-left:none;"><p style="text-align: center;"><span style="font-size: 9pt;">Byte 9</span></p>
+</td>
+<td style="vertical-align:bottom; width:116px; height:10px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO2</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:bottom; width:67px; height:8px; padding:2px; border:solid 1px #000000; border-top:none;"><p><span style="font-weight: bold;">67</span></p>
+</td>
+<td style="vertical-align:bottom; width:66px; height:8px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">02</span></p>
+</td>
+<td style="vertical-align:bottom; width:152px; height:8px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO3</span></p>
+</td>
+<td style="vertical-align:bottom; width:75px; height:8px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">68</span></p>
+</td>
+<td style="vertical-align:bottom; width:56px; height:8px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">36</span></p>
+</td>
+<td style="vertical-align:bottom; width:116px; height:8px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO4</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:bottom; width:67px; height:7px; padding:2px; border:solid 1px #000000; border-top:none;"><p><span style="font-weight: bold;">69</span></p>
+</td>
+<td style="vertical-align:bottom; width:66px; height:7px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">03</span></p>
+</td>
+<td style="vertical-align:top; width:152px; height:7px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO5</span></p>
+</td>
+<td style="vertical-align:bottom; width:75px; height:7px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">70</span></p>
+</td>
+<td style="vertical-align:bottom; width:56px; height:7px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">37</span></p>
+</td>
+<td style="vertical-align:top; width:116px; height:7px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO6</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:bottom; width:67px; height:10px; padding:2px; border:solid 1px #000000; border-top:none;"><p><span style="font-weight: bold;">71</span></p>
+</td>
+<td style="vertical-align:bottom; width:66px; height:10px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">04</span></p>
+</td>
+<td style="vertical-align:top; width:152px; height:10px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO7</span></p>
+</td>
+<td style="vertical-align:bottom; width:75px; height:10px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">72</span></p>
+</td>
+<td style="vertical-align:bottom; width:56px; height:10px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">38</span></p>
+</td>
+<td style="vertical-align:top; width:116px; height:10px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO8</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:bottom; width:67px; height:13px; padding:2px; border:solid 1px #000000; border-top:none;"><p><span style="font-weight: bold;">73</span></p>
+</td>
+<td style="vertical-align:bottom; width:66px; height:13px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">05</span></p>
+</td>
+<td rowspan="4" style="vertical-align:bottom; width:30px; height:13px; padding:2px; border:solid 1px #000000; border-bottom:none; border-left:none;"><p style="text-align: center;"><span style="font-size: 9pt;">Byte 10</span></p>
+</td>
+<td style="vertical-align:top; width:152px; height:13px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO9</span></p>
+</td>
+<td style="vertical-align:bottom; width:75px; height:13px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">74</span></p>
+</td>
+<td style="vertical-align:bottom; width:56px; height:13px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">39</span></p>
+</td>
+<td rowspan="4" style="vertical-align:bottom; width:32px; height:13px; padding:2px; border:solid 1px #000000; border-bottom:none; border-left:none;"><p style="text-align: center;"><span style="font-size: 9pt;">Byte 10</span></p>
+</td>
+<td style="vertical-align:top; width:116px; height:13px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO10</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:bottom; width:67px; height:6px; padding:2px; border:solid 1px #000000; border-top:none;"><p><span style="font-weight: bold;">75</span></p>
+</td>
+<td style="vertical-align:bottom; width:66px; height:6px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">06</span></p>
+</td>
+<td style="vertical-align:top; width:152px; height:6px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO11</span></p>
+</td>
+<td style="vertical-align:bottom; width:75px; height:6px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">76</span></p>
+</td>
+<td style="vertical-align:bottom; width:56px; height:6px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">40</span></p>
+</td>
+<td style="vertical-align:top; width:116px; height:6px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO12</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:bottom; width:67px; height:9px; padding:2px; border:solid 1px #000000; border-top:none;"><p><span style="font-weight: bold;">77</span></p>
+</td>
+<td style="vertical-align:bottom; width:66px; height:9px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">07</span></p>
+</td>
+<td style="vertical-align:top; width:152px; height:9px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO13</span></p>
+</td>
+<td style="vertical-align:bottom; width:75px; height:9px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">78</span></p>
+</td>
+<td style="vertical-align:bottom; width:56px; height:9px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">41</span></p>
+</td>
+<td style="vertical-align:top; width:116px; height:9px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO14</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:bottom; width:67px; height:12px; padding:2px; border:solid 1px #000000; border-top:none;"><p><span style="font-weight: bold;">79</span></p>
+</td>
+<td style="vertical-align:bottom; width:66px; height:12px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">08</span></p>
+</td>
+<td style="vertical-align:top; width:152px; height:12px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO15</span></p>
+</td>
+<td style="vertical-align:bottom; width:75px; height:12px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">80</span></p>
+</td>
+<td style="vertical-align:bottom; width:56px; height:12px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">42</span></p>
+</td>
+<td style="vertical-align:top; width:116px; height:12px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO16</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:bottom; width:67px; height:5px; padding:2px; border:solid 1px #000000; border-top:none;"><p><span style="font-weight: bold;">81</span></p>
+</td>
+<td style="vertical-align:bottom; width:66px; height:5px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">09</span></p>
+</td>
+<td rowspan="4" style="vertical-align:bottom; width:30px; height:5px; padding:2px; border:solid 1px #000000; border-bottom:none; border-left:none;"><p style="text-align: center;"><span style="font-size: 9pt;">Byte 11</span></p>
+</td>
+<td style="vertical-align:top; width:152px; height:5px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO17</span></p>
+</td>
+<td style="vertical-align:bottom; width:75px; height:5px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">82</span></p>
+</td>
+<td style="vertical-align:bottom; width:56px; height:5px; padding:2px; border:solid 1px #000000; border-left:none;"><p><span style="font-weight: bold;">43</span></p>
+</td>
+<td rowspan="4" style="vertical-align:bottom; width:32px; height:5px; padding:2px; border:solid 1px #000000; border-bottom:none; border-left:none;"><p style="text-align: center;"><span style="font-size: 9pt;">Byte 11</span></p>
+</td>
+<td style="vertical-align:top; width:116px; height:5px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO18</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:bottom; width:67px; height:8px; padding:2px; border:solid 1px #000000; border-top:none;"><p><span style="font-weight: bold;">83</span></p>
+</td>
+<td style="vertical-align:bottom; width:66px; height:8px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">10</span></p>
+</td>
+<td style="vertical-align:top; width:152px; height:8px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO19</span></p>
+</td>
+<td style="vertical-align:bottom; width:75px; height:8px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">84</span></p>
+</td>
+<td style="vertical-align:bottom; width:56px; height:8px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">44</span></p>
+</td>
+<td style="vertical-align:top; width:116px; height:8px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO20</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:bottom; width:67px; height:10px; padding:2px; border:solid 1px #000000; border-top:none;"><p><span style="font-weight: bold;">85</span></p>
+</td>
+<td style="vertical-align:bottom; width:66px; height:10px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">11</span></p>
+</td>
+<td style="vertical-align:top; width:152px; height:10px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO21</span></p>
+</td>
+<td style="vertical-align:bottom; width:75px; height:10px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">86</span></p>
+</td>
+<td style="vertical-align:bottom; width:56px; height:10px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">45</span></p>
+</td>
+<td style="vertical-align:top; width:116px; height:10px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO22</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:bottom; width:67px; height:14px; padding:2px; border:solid 1px #000000; border-top:none;"><p><span style="font-weight: bold;">87</span></p>
+</td>
+<td style="vertical-align:bottom; width:66px; height:14px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">12</span></p>
+</td>
+<td style="vertical-align:top; width:152px; height:14px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO23</span></p>
+</td>
+<td style="vertical-align:bottom; width:75px; height:14px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">88</span></p>
+</td>
+<td style="vertical-align:bottom; width:56px; height:14px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">46</span></p>
+</td>
+<td style="vertical-align:top; width:116px; height:14px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO24</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:bottom; width:67px; height:7px; padding:2px; border:solid 1px #000000; border-top:none;"><p><span style="font-weight: bold;">89</span></p>
+</td>
+<td style="vertical-align:bottom; width:66px; height:7px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">13</span></p>
+</td>
+<td rowspan="4" style="vertical-align:bottom; width:30px; height:7px; padding:2px; border:solid 1px #000000; border-bottom:none; border-left:none;"><p style="text-align: center;"><span style="font-size: 9pt;">Byte 12</span></p>
+</td>
+<td style="vertical-align:top; width:152px; height:7px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO25</span></p>
+</td>
+<td style="vertical-align:bottom; width:75px; height:7px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">90</span></p>
+</td>
+<td style="vertical-align:bottom; width:56px; height:7px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">47</span></p>
+</td>
+<td rowspan="4" style="vertical-align:bottom; width:32px; height:7px; padding:2px; border:solid 1px #000000; border-bottom:none; border-left:none;"><p style="text-align: center;"><span style="font-size: 9pt;">Byte 12</span></p>
+</td>
+<td style="vertical-align:top; width:116px; height:7px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO26</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:bottom; width:67px; height:10px; padding:2px; border:solid 1px #000000; border-top:none;"><p><span style="font-weight: bold;">91</span></p>
+</td>
+<td style="vertical-align:bottom; width:66px; height:10px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">14</span></p>
+</td>
+<td style="vertical-align:top; width:152px; height:10px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO27</span></p>
+</td>
+<td style="vertical-align:bottom; width:75px; height:10px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">92</span></p>
+</td>
+<td style="vertical-align:bottom; width:56px; height:10px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">48</span></p>
+</td>
+<td style="vertical-align:top; width:116px; height:10px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO28</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:bottom; width:67px; height:13px; padding:2px; border:solid 1px #000000; border-top:none;"><p><span style="font-weight: bold;">93</span></p>
+</td>
+<td style="vertical-align:bottom; width:66px; height:13px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">15</span></p>
+</td>
+<td style="vertical-align:top; width:152px; height:13px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO29</span></p>
+</td>
+<td style="vertical-align:bottom; width:75px; height:13px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">94</span></p>
+</td>
+<td style="vertical-align:bottom; width:56px; height:13px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">49</span></p>
+</td>
+<td style="vertical-align:top; width:116px; height:13px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO30</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:bottom; width:67px; height:7px; padding:2px; border:solid 1px #000000; border-top:none;"><p><span style="font-weight: bold;">95</span></p>
+</td>
+<td style="vertical-align:bottom; width:66px; height:7px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">16</span></p>
+</td>
+<td style="vertical-align:top; width:152px; height:7px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO31</span></p>
+</td>
+<td style="vertical-align:bottom; width:75px; height:7px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">96</span></p>
+</td>
+<td style="vertical-align:bottom; width:56px; height:7px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">50</span></p>
+</td>
+<td style="vertical-align:top; width:116px; height:7px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO32</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:bottom; width:67px; height:9px; padding:2px; border:solid 1px #000000; border-top:none;"><p><span style="font-weight: bold;">97</span></p>
+</td>
+<td style="vertical-align:bottom; width:66px; height:9px; padding:2px; border:solid 1px #000000; border-left:none;"><p><span style="font-weight: bold;">17</span></p>
+</td>
+<td rowspan="4" style="vertical-align:bottom; width:30px; height:9px; padding:2px; border:solid 1px #000000; border-bottom:none; border-left:none;"><p style="text-align: center;"><span style="font-size: 9pt;">Byte 13</span></p>
+</td>
+<td style="vertical-align:top; width:152px; height:9px; padding:2px; border:solid 1px #000000; border-left:none;"><p><span style="font-size: 9pt;">DIO33</span></p>
+</td>
+<td style="vertical-align:bottom; width:75px; height:9px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">98</span></p>
+</td>
+<td style="vertical-align:bottom; width:56px; height:9px; padding:2px; border:solid 1px #000000; border-left:none;"><p><span style="font-weight: bold;">51</span></p>
+</td>
+<td rowspan="4" style="vertical-align:bottom; width:32px; height:9px; padding:2px; border:solid 1px #000000; border-bottom:none; border-left:none;"><p style="text-align: center;"><span style="font-size: 9pt;">Byte 13</span></p>
+</td>
+<td style="vertical-align:top; width:116px; height:9px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO34</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:bottom; width:67px; height:12px; padding:2px; border:solid 1px #000000; border-top:none;"><p><span style="font-weight: bold;">99</span></p>
+</td>
+<td style="vertical-align:bottom; width:66px; height:12px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">18</span></p>
+</td>
+<td style="vertical-align:top; width:152px; height:12px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO35</span></p>
+</td>
+<td style="vertical-align:bottom; width:75px; height:12px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">100</span></p>
+</td>
+<td style="vertical-align:bottom; width:56px; height:12px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">52</span></p>
+</td>
+<td style="vertical-align:top; width:116px; height:12px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO36</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:bottom; width:67px; height:6px; padding:2px; border:solid 1px #000000; border-top:none;"><p><span style="font-weight: bold;">101</span></p>
+</td>
+<td style="vertical-align:bottom; width:66px; height:6px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">19</span></p>
+</td>
+<td style="vertical-align:top; width:152px; height:6px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO37</span></p>
+</td>
+<td style="vertical-align:bottom; width:75px; height:6px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">102</span></p>
+</td>
+<td style="vertical-align:bottom; width:56px; height:6px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">53</span></p>
+</td>
+<td style="vertical-align:top; width:116px; height:6px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO38</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:bottom; width:67px; height:9px; padding:2px; border:solid 1px #000000; border-top:none;"><p><span style="font-weight: bold;">103</span></p>
+</td>
+<td style="vertical-align:bottom; width:66px; height:9px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">20</span></p>
+</td>
+<td style="vertical-align:top; width:152px; height:9px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO39</span></p>
+</td>
+<td style="vertical-align:bottom; width:75px; height:9px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">104</span></p>
+</td>
+<td style="vertical-align:bottom; width:56px; height:9px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">54</span></p>
+</td>
+<td style="vertical-align:top; width:116px; height:9px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO40</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:bottom; width:67px; height:12px; padding:2px; border:solid 1px #000000; border-top:none;"><p><span style="font-weight: bold;">105</span></p>
+</td>
+<td style="vertical-align:bottom; width:66px; height:12px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">21</span></p>
+</td>
+<td rowspan="4" style="vertical-align:bottom; width:30px; height:12px; padding:2px; border:solid 1px #000000; border-bottom:none; border-left:none;"><p style="text-align: center;"><span style="font-size: 9pt;">Byte 14</span></p>
+</td>
+<td style="vertical-align:top; width:152px; height:12px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO41</span></p>
+</td>
+<td style="vertical-align:bottom; width:75px; height:12px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">106</span></p>
+</td>
+<td style="vertical-align:bottom; width:56px; height:12px; padding:2px; border:solid 1px #000000; border-left:none;"><p><span style="font-weight: bold;">55</span></p>
+</td>
+<td rowspan="4" style="vertical-align:bottom; width:32px; height:12px; padding:2px; border:solid 1px #000000; border-bottom:none; border-left:none;"><p style="text-align: center;"><span style="font-size: 9pt;">Byte 14</span></p>
+</td>
+<td style="vertical-align:top; width:116px; height:12px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO42</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:bottom; width:67px; height:5px; padding:2px; border:solid 1px #000000; border-top:none;"><p><span style="font-weight: bold;">107</span></p>
+</td>
+<td style="vertical-align:bottom; width:66px; height:5px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">22</span></p>
+</td>
+<td style="vertical-align:top; width:152px; height:5px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO43</span></p>
+</td>
+<td style="vertical-align:bottom; width:75px; height:5px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">108</span></p>
+</td>
+<td style="vertical-align:bottom; width:56px; height:5px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">56</span></p>
+</td>
+<td style="vertical-align:top; width:116px; height:5px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO44</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:bottom; width:67px; height:8px; padding:2px; border:solid 1px #000000; border-top:none;"><p><span style="font-weight: bold;">109</span></p>
+</td>
+<td style="vertical-align:bottom; width:66px; height:8px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">23</span></p>
+</td>
+<td style="vertical-align:top; width:152px; height:8px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO45</span></p>
+</td>
+<td style="vertical-align:bottom; width:75px; height:8px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">110</span></p>
+</td>
+<td style="vertical-align:bottom; width:56px; height:8px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">57</span></p>
+</td>
+<td style="vertical-align:top; width:116px; height:8px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO46</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:bottom; width:67px; height:11px; padding:2px; border:solid 1px #000000; border-top:none;"><p><span style="font-weight: bold;">111</span></p>
+</td>
+<td style="vertical-align:bottom; width:66px; height:11px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">24</span></p>
+</td>
+<td style="vertical-align:top; width:152px; height:11px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO47</span></p>
+</td>
+<td style="vertical-align:bottom; width:75px; height:11px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">112</span></p>
+</td>
+<td style="vertical-align:bottom; width:56px; height:11px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">58</span></p>
+</td>
+<td style="vertical-align:top; width:116px; height:11px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO48</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:bottom; width:67px; height:5px; padding:2px; border:solid 1px #000000; border-top:none;"><p><span style="font-weight: bold;">113</span></p>
+</td>
+<td style="vertical-align:bottom; width:66px; height:5px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">25</span></p>
+</td>
+<td rowspan="4" style="vertical-align:bottom; width:30px; height:5px; padding:2px; border:solid 1px #000000; border-bottom:none; border-left:none;"><p style="text-align: center;"><span style="font-size: 9pt;">Byte 15</span></p>
+</td>
+<td style="vertical-align:top; width:152px; height:5px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO49</span></p>
+</td>
+<td style="vertical-align:bottom; width:75px; height:5px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">114</span></p>
+</td>
+<td style="vertical-align:bottom; width:56px; height:5px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">59</span></p>
+</td>
+<td rowspan="4" style="vertical-align:bottom; width:32px; height:5px; padding:2px; border:solid 1px #000000; border-bottom:none; border-left:none;"><p style="text-align: center;"><span style="font-size: 9pt;">Byte 15</span></p>
+</td>
+<td style="vertical-align:top; width:116px; height:5px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO50</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:bottom; width:67px; height:7px; padding:2px; border:solid 1px #000000; border-top:none;"><p><span style="font-weight: bold;">115</span></p>
+</td>
+<td style="vertical-align:bottom; width:66px; height:7px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">26</span></p>
+</td>
+<td style="vertical-align:top; width:152px; height:7px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO51</span></p>
+</td>
+<td style="vertical-align:bottom; width:75px; height:7px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">116</span></p>
+</td>
+<td style="vertical-align:bottom; width:56px; height:7px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">60</span></p>
+</td>
+<td style="vertical-align:top; width:116px; height:7px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO52</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:bottom; width:67px; height:10px; padding:2px; border:solid 1px #000000; border-top:none;"><p><span style="font-weight: bold;">117</span></p>
+</td>
+<td style="vertical-align:bottom; width:66px; height:10px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">27</span></p>
+</td>
+<td style="vertical-align:top; width:152px; height:10px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO53</span></p>
+</td>
+<td style="vertical-align:bottom; width:75px; height:10px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">118</span></p>
+</td>
+<td style="vertical-align:bottom; width:56px; height:10px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">61</span></p>
+</td>
+<td style="vertical-align:top; width:116px; height:10px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO54</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:bottom; width:67px; height:5px; padding:2px; border:solid 1px #000000; border-top:none;"><p><span style="font-weight: bold;">119</span></p>
+</td>
+<td style="vertical-align:bottom; width:66px; height:5px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">28</span></p>
+</td>
+<td style="vertical-align:top; width:152px; height:5px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO55</span></p>
+</td>
+<td style="vertical-align:bottom; width:75px; height:5px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">120</span></p>
+</td>
+<td style="vertical-align:bottom; width:56px; height:5px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">62</span></p>
+</td>
+<td style="vertical-align:top; width:116px; height:5px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO56</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:bottom; width:67px; height:6px; padding:2px; border:solid 1px #000000; border-top:none;"><p><span style="font-weight: bold;">121</span></p>
+</td>
+<td style="vertical-align:bottom; width:66px; height:6px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">29</span></p>
+</td>
+<td rowspan="4" style="vertical-align:bottom; width:30px; height:6px; padding:2px; border:solid 1px #000000; border-bottom:none; border-left:none;"><p style="text-align: center;"><span style="font-size: 9pt;">Byte 16</span></p>
+</td>
+<td style="vertical-align:top; width:152px; height:6px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO57</span></p>
+</td>
+<td style="vertical-align:bottom; width:75px; height:6px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">122</span></p>
+</td>
+<td style="vertical-align:bottom; width:56px; height:6px; padding:2px; border:solid 1px #000000; border-left:none;"><p><span style="font-weight: bold;">63</span></p>
+</td>
+<td rowspan="4" style="vertical-align:bottom; width:32px; height:6px; padding:2px; border:solid 1px #000000; border-bottom:none; border-left:none;"><p style="text-align: center;"><span style="font-size: 9pt;">Byte 16</span></p>
+</td>
+<td style="vertical-align:top; width:116px; height:6px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO58</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:bottom; width:67px; height:5px; padding:2px; border:solid 1px #000000; border-top:none;"><p><span style="font-weight: bold;">123</span></p>
+</td>
+<td style="vertical-align:bottom; width:66px; height:5px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">30</span></p>
+</td>
+<td style="vertical-align:top; width:152px; height:5px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO59</span></p>
+</td>
+<td style="vertical-align:bottom; width:75px; height:5px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">124</span></p>
+</td>
+<td style="vertical-align:bottom; width:56px; height:5px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">64</span></p>
+</td>
+<td style="vertical-align:top; width:116px; height:5px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO60</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:bottom; width:67px; height:5px; padding:2px; border:solid 1px #000000; border-top:none;"><p><span style="font-weight: bold;">125</span></p>
+</td>
+<td style="vertical-align:bottom; width:66px; height:5px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">31</span></p>
+</td>
+<td style="vertical-align:top; width:152px; height:5px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO61</span></p>
+</td>
+<td style="vertical-align:bottom; width:75px; height:5px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">126</span></p>
+</td>
+<td style="vertical-align:bottom; width:56px; height:5px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">65</span></p>
+</td>
+<td style="vertical-align:top; width:116px; height:5px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO62</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:bottom; width:67px; height:6px; padding:2px; border:solid 1px #000000; border-top:none;"><p><span style="font-weight: bold;">127</span></p>
+</td>
+<td style="vertical-align:bottom; width:66px; height:6px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">32</span></p>
+</td>
+<td style="vertical-align:top; width:152px; height:6px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO63</span></p>
+</td>
+<td style="vertical-align:bottom; width:75px; height:6px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">128</span></p>
+</td>
+<td style="vertical-align:bottom; width:56px; height:6px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">66</span></p>
+</td>
+<td style="vertical-align:top; width:116px; height:6px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">DIO64</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:bottom; width:67px; height:9px; padding:2px; border:solid 1px #000000; border-top:none;"><br />
+</td>
+<td style="vertical-align:bottom; width:66px; height:9px; padding:2px; border:solid 1px #000000; border-left:none;"><p><span style="font-weight: bold;">33</span></p>
+</td>
+<td rowspan="2" style="vertical-align:bottom; width:30px; height:9px; padding:2px; border:solid 1px #000000; border-bottom:none; border-left:none;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:152px; height:9px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">GND</span></p>
+</td>
+<td style="vertical-align:bottom; width:75px; height:9px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><br />
+</td>
+<td style="vertical-align:bottom; width:56px; height:9px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">67</span></p>
+</td>
+<td rowspan="2" style="vertical-align:bottom; width:32px; height:9px; padding:2px; border:solid 1px #000000; border-bottom:none; border-left:none;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:116px; height:9px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">GND</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:bottom; width:67px; height:12px; padding:2px; border:solid 1px #000000; border-top:none;"><br />
+</td>
+<td style="vertical-align:bottom; width:66px; height:12px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">34</span></p>
+</td>
+<td style="vertical-align:top; width:152px; height:12px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">GND</span></p>
+</td>
+<td style="vertical-align:bottom; width:75px; height:12px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><br />
+</td>
+<td style="vertical-align:bottom; width:56px; height:12px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-weight: bold;">68</span></p>
+</td>
+<td style="vertical-align:top; width:116px; height:12px; padding:2px; border:solid 1px #000000; border-top:none; border-left:none;"><p><span style="font-size: 9pt;">GND</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+{
+ if (document.all) setTimeout(function() {nsrInit();},20); 
+    else nsrInit();
+ } 
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

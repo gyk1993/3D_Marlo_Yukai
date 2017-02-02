@@ -1,0 +1,199 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   30 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "sfEvent"\
+      Description  "ActiveChartEvent"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "isStable"\
+      Description  "IsstableBool"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "is_active_c22_LibWalking"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "is_Main"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Main"\
+    }\
+    ChartData {\
+      Name         "is_active_Main"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         "Main"\
+    }\
+    ChartData {\
+      Name         "is_Support"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Main.Run.Support"\
+    }\
+    ChartData {\
+      Name         "is_active_Support"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         "Main.Run.Support"\
+    }\
+    ChartData {\
+      Name         "is_Stage"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Main.Run.Stage"\
+    }\
+    ChartData {\
+      Name         "is_active_Stage"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         "Main.Run.Stage"\
+    }\
+    ChartData {\
+      Name         "is_ControllerMode"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Main.Run.ControllerMode"\
+    }\
+    ChartData {\
+      Name         "is_active_ControllerMode"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         "Main.Run.ControllerMode"\
+    }\
+    ChartData {\
+      Name         "is_Transition"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Main.Run.ControllerMode.Transition"\
+    }\
+    ChartData {\
+      Name         "is_active_Serialize"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         "Serialize"\
+    }\
+    ChartData {\
+      Name         "is_ControlStatus"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Serialize.ControlStatus"\
+    }\
+    ChartData {\
+      Name         "is_active_ControlStatus"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         "Serialize.ControlStatus"\
+    }\
+    ChartData {\
+      Name         "is_SerialState"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Serialize.SerialState"\
+    }\
+    ChartData {\
+      Name         "is_active_SerialState"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         "Serialize.SerialState"\
+    }\
+    ChartData {\
+      Name         "SerialBuffer"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "SerialBuffer"\
+      Dimensions   [494,4]\
+    }\
+    ChartData {\
+      Name         "SerialIdx"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "SerialIdx"\
+    }\
+    ChartData {\
+      Name         "TransitionStepCount"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "TransitionStepCount"\
+    }\
+    ChartData {\
+      Name         "WalkingStepCount"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "WalkingStepCount"\
+    }\
+    ChartData {\
+      Name         "ControlParamsPrev"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "ControlParamsPrev"\
+    }\
+    ChartData {\
+      Name         "ControlStatePrev"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "ControlStatePrev"\
+    }\
+    ChartData {\
+      Name         "s"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "s"\
+    }\
+    ChartData {\
+      Name         "SerialBufferBegin"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "SerialBufferBegin"\
+    }\
+    ChartData {\
+      Name         "SerialBufferEnd"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "SerialBufferEnd"\
+    }\
+    ChartData {\
+      Name         "theta"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "theta"\
+    }\
+    ChartData {\
+      Name         "tLastSend"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "Serialize.SerialState.sendSerial.tLastSend"\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i1"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i2"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

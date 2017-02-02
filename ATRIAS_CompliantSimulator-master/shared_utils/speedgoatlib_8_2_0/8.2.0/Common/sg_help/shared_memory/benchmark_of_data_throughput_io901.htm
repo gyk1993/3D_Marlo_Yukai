@@ -1,0 +1,249 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>IO901, 902 &gt; Using shared memory to synchronize target machines &gt; Run the models &gt; Benchmark of data throughput</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+     .p_Heading1{ color: #147EC2;
+    font-size: 1.455em !important;
+     border-bottom: 1px solid #E0E1E1;
+    color: #147EC2;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 20px;
+    padding-bottom: 4px;}
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "benchmark_of_data_throughput_io901.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<div id="breadcrumbs" style="display:none"><a href="io901.htm">IO901, 902</a> &gt; <a href="using_shared_memory_io901.htm">Using shared memory to synchronize target machines</a> &gt; <a href="run_the_models_io901.htm">Run the models</a></div>
+
+<div id="printheader"><h1 class="p_Heading1"><span class="f_Heading1">Benchmark of data throughput</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
+  <tr valign="bottom">
+    <td align="left" valign="bottom" class="topichead">
+   
+   <h1 class="p_Heading1"><span class="f_Heading1">Benchmark of data throughput</span></h1>
+
+    
+  </tr>  
+</table>
+<!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<p>This benchmark provides information about the maximum possible data throughput using the Intel Core i5 3.6 GHz CPU as the master.</p>
+<p>According to the datasheet, the IO901 I/O module has a maximum network throughput of approximately 205 Megabytes (MBps) using a ring topology network. We will not be able to reach this value because of the latencies introduced by the PCI bus and the data preparation in the Simulink model. The IO901 I/O module operates on 66MHz 64bit mode. </p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>The benchmark test model uses the following partition:</p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'Courier New';">datasize = 250;  </span><span style="font-family: 'Courier New'; color: #228b22;">% size of partition in singles (4 bytes)</span></p>
+<p><span style="font-family: 'Courier New';">GtPartition(1).Address = </span><span style="font-family: 'Courier New'; color: #a020f0;">'0x0000'</span><span style="font-family: 'Courier New';">;</span></p>
+<p><span style="font-family: 'Courier New';">GtPartition(1).Type = </span><span style="font-family: 'Courier New'; color: #a020f0;">'single'</span><span style="font-family: 'Courier New';">;</span></p>
+<p><span style="font-family: 'Courier New';">GtPartition(1).Size = num2str(datasize);</span></p>
+<p>&nbsp;</p>
+<p>The entire partition is read and sent at each model time step, and an interrupt is asserted to synchronize all other target machines:</p>
+<p>&nbsp;</p>
+<p><img src="io901_benchmark_1.png" width="1015" height="853" alt="io901_benchmark_1" style="border:none" /></p>
+<p>&nbsp;</p>
+<p style="line-height: 1.15; margin: 0px 0px 13px 0px;">The function xpcBench is used to determine the minimal achievable model sample rate without CPU overload.</p>
+<p>The results of the tests are as follows:</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:143px; background-color:#4f81bd; padding:4px; border:solid 1px #4f81bd; border-right:none; border-bottom:none;"><p>Data size</p>
+</td>
+<td style="vertical-align:top; width:214px; background-color:#4f81bd; padding:4px; border:solid 1px #4f81bd; border-right:none; border-bottom:none; border-left:none;"><p>Minimal achievable sample time </p>
+</td>
+<td style="vertical-align:top; width:239px; background-color:#4f81bd; padding:4px; border:solid 1px #4f81bd; border-bottom:none; border-left:none;"><p>Data throughput</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:143px; padding:4px; border:solid 1px #4f81bd; border-top:none; border-right:none; border-bottom:none;"><p>1 (4 bytes)</p>
+</td>
+<td style="vertical-align:top; width:214px; padding:4px; border:solid 1px #4f81bd; border-top:none; border-right:none; border-bottom:none; border-left:none;"><p>12 µs</p>
+</td>
+<td style="vertical-align:top; width:239px; padding:4px; border:solid 1px #4f81bd; border-top:none; border-bottom:none; border-left:none;"><p>330 Kbytes/s</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:143px; padding:4px; border:solid 1px #4f81bd; border-top:none; border-right:none; border-bottom:none;"><p>5 (20 bytes)</p>
+</td>
+<td style="vertical-align:top; width:214px; padding:4px; border:solid 1px #4f81bd; border-top:none; border-right:none; border-bottom:none; border-left:none;"><p>16 µs</p>
+</td>
+<td style="vertical-align:top; width:239px; padding:4px; border:solid 1px #4f81bd; border-top:none; border-bottom:none; border-left:none;"><p>1.25 Mbytes/s</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:143px; padding:4px; border:solid 1px #4f81bd; border-top:none; border-right:none; border-bottom:none;"><p>10 (40 bytes)</p>
+</td>
+<td style="vertical-align:top; width:214px; padding:4px; border:solid 1px #4f81bd; border-top:none; border-right:none; border-bottom:none; border-left:none;"><p>22 µs</p>
+</td>
+<td style="vertical-align:top; width:239px; padding:4px; border:solid 1px #4f81bd; border-top:none; border-bottom:none; border-left:none;"><p>1.82 Mbytes/s</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:143px; padding:4px; border:solid 1px #4f81bd; border-top:none; border-right:none; border-bottom:none;"><p>50 (200 bytes)</p>
+</td>
+<td style="vertical-align:top; width:214px; padding:4px; border:solid 1px #4f81bd; border-top:none; border-right:none; border-bottom:none; border-left:none;"><p>62 µs</p>
+</td>
+<td style="vertical-align:top; width:239px; padding:4px; border:solid 1px #4f81bd; border-top:none; border-bottom:none; border-left:none;"><p>3.22 Mbytes/s</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:143px; padding:4px; border:solid 1px #4f81bd; border-top:none; border-right:none; border-bottom:none;"><p>100 (400 bytes)</p>
+</td>
+<td style="vertical-align:top; width:214px; padding:4px; border:solid 1px #4f81bd; border-top:none; border-right:none; border-bottom:none; border-left:none;"><p>112 µs</p>
+</td>
+<td style="vertical-align:top; width:239px; padding:4px; border:solid 1px #4f81bd; border-top:none; border-bottom:none; border-left:none;"><p>3.57 Mbytes/s</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:143px; padding:4px; border:solid 1px #4f81bd; border-top:none; border-right:none; border-bottom:none;"><p>250 (1000 bytes)</p>
+</td>
+<td style="vertical-align:top; width:214px; padding:4px; border:solid 1px #4f81bd; border-top:none; border-right:none; border-bottom:none; border-left:none;"><p>265 µs</p>
+</td>
+<td style="vertical-align:top; width:239px; padding:4px; border:solid 1px #4f81bd; border-top:none; border-bottom:none; border-left:none;"><p>3.77 Mbytes/s</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:143px; padding:4px; border:solid 1px #4f81bd; border-top:none; border-right:none; border-bottom:none;"><p>500 (2000 bytes)</p>
+</td>
+<td style="vertical-align:top; width:214px; padding:4px; border:solid 1px #4f81bd; border-top:none; border-right:none; border-bottom:none; border-left:none;"><p>518 µs</p>
+</td>
+<td style="vertical-align:top; width:239px; padding:4px; border:solid 1px #4f81bd; border-top:none; border-bottom:none; border-left:none;"><p>3.86 Mbytes/s</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:143px; padding:4px; border:solid 1px #4f81bd; border-top:none; border-right:none;"><p>1000 (4000 bytes)</p>
+</td>
+<td style="vertical-align:top; width:214px; padding:4px; border:solid 1px #4f81bd; border-top:none; border-right:none; border-left:none;"><p>1000 µs</p>
+</td>
+<td style="vertical-align:top; width:239px; padding:4px; border:solid 1px #4f81bd; border-top:none; border-left:none;"><p>4 Mbytes/s</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>For very small data sizes, the kernel interrupt latency distorts the achievable data throughput. For larger data sets, the achievable maximum data throughput (receive and send) is fairly linear and approaches a value of 4 Mbytes/s.</p>
+<p>&nbsp;</p>
+<p>Tests have shown that using a PMC to PCIe (PCI Express) carrier does not improve the maximum throughput.</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+{
+ if (document.all) setTimeout(function() {nsrInit();},20); 
+    else nsrInit();
+ } 
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

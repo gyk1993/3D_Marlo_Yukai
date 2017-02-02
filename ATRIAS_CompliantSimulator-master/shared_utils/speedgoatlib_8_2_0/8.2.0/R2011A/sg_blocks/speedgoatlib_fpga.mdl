@@ -1,0 +1,1902 @@
+Library {
+  Name			  "speedgoatlib_fpga"
+  Version		  7.7
+  MdlSubVersion		  0
+  SavedCharacterEncoding  "windows-1252"
+  LibraryType		  "BlockLibrary"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  MaxMDLFileLineLength	  120
+  Created		  "Tue Dec 18 09:01:18 2012"
+  Creator		  "cedric"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "lab3"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Tue Jul 01 08:27:41 2014"
+  RTWModifiedTimeStamp	  326104061
+  ModelVersionFormat	  "1.%<AutoIncrement:111>"
+  ConfigurationManager	  "none"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks on
+  BrowserLookUnderMasks	  on
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  RecordCoverage	  off
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  CovForceBlockReductionOff on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      6
+      Version		      "1.11.0"
+      Array {
+	Type			"Handle"
+	Dimension		9
+	Simulink.SolverCC {
+	  $ObjectID		  7
+	  Version		  "1.11.0"
+	  StartTime		  "0.0"
+	  StopTime		  "10.0"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  ConcurrentTasks	  off
+	  Solver		  "ode45"
+	  SolverName		  "ode45"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  8
+	  Version		  "1.11.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SignalLoggingSaveFormat "Dataset"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  DSMLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  DSMLoggingName	  "dsmout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  9
+	  Version		  "1.11.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    8
+	    Cell		    "BooleansAsBitfields"
+	    Cell		    "PassReuseOutputArgsAs"
+	    Cell		    "PassReuseOutputArgsThreshold"
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    Cell		    "UseSpecifiedMinMax"
+	    PropName		    "DisabledProps"
+	  }
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  UseIntDivNetSlope	  off
+	  UseSpecifiedMinMax	  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  StrengthReduction	  off
+	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
+	  BitfieldContainerType	  "uint_T"
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  MaxStackSize		  "Inherit from target"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	  ParallelExecutionInRapidAccelerator on
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  10
+	  Version		  "1.11.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"warning"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  MaskedZcDiagnostic	  "warning"
+	  IgnoredZcDiagnostic	  "warning"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Enable All"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  SimStateOlderReleaseMsg "error"
+	  InitInArrayFormatMsg	  "warning"
+	  StrictBusMsg		  "ErrorLevel1"
+	  BusNameAdapt		  "WarnAndRepair"
+	  NonBusSignalsTreatedAsBus "none"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	  SFUnusedDataAndEventsDiag "warning"
+	  SFUnexpectedBacktrackingDiag "warning"
+	  SFInvalidInputDataAccessInChartInitDiag "warning"
+	  SFNoUnconditionalDefaultTransitionDiag "warning"
+	  SFTransitionOutsideNaturalParentDiag "warning"
+	  SFUnconditionalTransitionShadowingDiag "warning"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  11
+	  Version		  "1.11.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdBitPerFloat	  32
+	  ProdBitPerDouble	  64
+	  ProdBitPerPointer	  32
+	  ProdLargestAtomicInteger "Char"
+	  ProdLargestAtomicFloat  "None"
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetBitPerFloat	  32
+	  TargetBitPerDouble	  64
+	  TargetBitPerPointer	  32
+	  TargetLargestAtomicInteger "Char"
+	  TargetLargestAtomicFloat "None"
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  12
+	  Version		  "1.11.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceErrorOnInvalidPool on
+	  ParallelModelReferenceMATLABWorkerInit "None"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  PropagateVarSize	  "Infer from blocks in model"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	  PropagateSignalLabelsOutOfModel off
+	  SupportModelReferenceSimTargetCustomCode off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  13
+	  Version		  "1.11.0"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimCtrlC		  on
+	  SimExtrinsic		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimParseCustomCode	  on
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  14
+	  Version		  "1.11.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    15
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    Cell		    "PortableWordSizes"
+	    Cell		    "GenerateWebview"
+	    Cell		    "GenerateCodeMetricsReport"
+	    Cell		    "GenerateCodeReplacementReport"
+	    Cell		    "GenerateErtSFunction"
+	    Cell		    "CreateSILPILBlock"
+	    Cell		    "CodeExecutionProfiling"
+	    Cell		    "CodeProfilingSaveOptions"
+	    Cell		    "CodeProfilingInstrumentation"
+	    PropName		    "DisabledProps"
+	  }
+	  SystemTargetFile	  "grt.tlc"
+	  TLCOptions		  ""
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  PostCodeGenCommand	  ""
+	  Description		  ""
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ProcessScript		  ""
+	  ConfigurationScript	  ""
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  CustomSourceCode	  ""
+	  CustomHeaderCode	  ""
+	  CustomInclude		  ""
+	  CustomSource		  ""
+	  CustomLibrary		  ""
+	  CustomInitializer	  ""
+	  CustomTerminator	  ""
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  GenerateCodeMetricsReport off
+	  RTWCompilerOptimization "Off"
+	  RTWCustomCompilerOptimizations ""
+	  CheckMdlBeforeBuild	  "Off"
+	  CustomRebuildMode	  "OnUpdate"
+	  DataInitializer	  ""
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      15
+	      Version		      "1.11.0"
+	      Array {
+		Type			"Cell"
+		Dimension		22
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"IgnoreTestpoints"
+		Cell			"InsertBlockDesc"
+		Cell			"InsertPolySpaceComments"
+		Cell			"SFDataObjDesc"
+		Cell			"MATLABFcnDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InternalIdentifier"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrFcnArg"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		Cell			"ReqsInCode"
+		PropName		"DisabledProps"
+	      }
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      MATLABFcnDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M_T"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      InsertPolySpaceComments off
+	      SimulinkBlockComments   on
+	      MATLABSourceComments    off
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      16
+	      Version		      "1.11.0"
+	      Array {
+		Type			"Cell"
+		Dimension		15
+		Cell			"GeneratePreprocessorConditionals"
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"CPPClassGenCompliant"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"MultiInstanceERTCode"
+		PropName		"DisabledProps"
+	      }
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      TargetFunctionLibrary   "None"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      IncludeMdlTerminateFcn  on
+	      GeneratePreprocessorConditionals "Disable all"
+	      CombineOutputUpdateFcns off
+	      CombineSignalStateStructs	off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      SupportVariableSizeSignals off
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    on
+	      AutosarCompliant	      off
+	      UseMalloc		      off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      RTWCAPIRootIO	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	hdlcoderui.hdlcc {
+	  $ObjectID		  17
+	  Version		  "1.11.0"
+	  Description		  "HDL Coder custom configuration component"
+	  Name			  "HDL Coder"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    " "
+	    PropName		    "HDLConfigFile"
+	  }
+	  HDLCActiveTab		  "0"
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition    [ 400, 210, 1280, 840 ]  
+    }
+    PropName		    "ConfigurationSets"
+  }
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      S-Function
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+      SFunctionDeploymentMode off
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      DataTypeOverrideAppliesTo	"AllNumericTypes"
+      MinMaxOverflowLogging   "UseLocalSettings"
+      Variant		      off
+      GeneratePreprocessorConditionals off
+    }
+  }
+  System {
+    Name		    "speedgoatlib_fpga"
+    Location		    [10, 10, 524, 804]
+    Open		    off
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "A4"
+    PaperUnits		    "centimeters"
+    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    "134"
+    Block {
+      BlockType		      SubSystem
+      Name		      "Analog IO"
+      SID		      "44"
+      Ports		      []
+      Position		      [35, 145, 80, 206]
+      ZOrder		      40
+      RequestExecContextInheritance off
+      System {
+	Name			"Analog IO"
+	Location		[1776, 143, 2217, 933]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  S-Function
+	  Name			  "Analog input"
+	  SID			  "43"
+	  Ports			  [0, 1]
+	  Position		  [15, 143, 195, 217]
+	  ZOrder		  39
+	  CopyFcn		  "sg_fpga_getParameters_m_a1;"
+	  InitFcn		  "sg_fpga_callBackInit_m_a1;"
+	  FunctionName		  "sg_fpga_ad_sf_a1"
+	  Parameters		  "boardType, chan, trigger, range, ts, pciSlot"
+	  EnableBusSupport	  off
+	  MaskType		  "ad_fpga_a1"
+	  MaskDescription	  "Speedgoat driver block<br>FPGA-based I/O module - A/D read<br><br>&copy; 2006 - 2014, Speedgoat "
+	  "GmbH, www.speedgoat.ch"
+	  MaskHelp		  "Documentation for this block is not available."
+	  MaskPromptString	  "FPGA module identifier:|Channel vector:|Analog input range:|Inter-module synchronization:|Sampl"
+	  "e time:|PCI slot (-1: autosearch):|board"
+	  MaskStyleString	  "popup(1|2|3|4|5|6|7|8|9|10),edit,popup(± 10 [V]|± 5 [V]|± 2.5[V]|± 1.25 [V]),popup(Initiator|Tar"
+	  "get),edit,edit,edit"
+	  MaskVariables		  "id=@1;chan=@2;range=@3;trigger=@4;ts=@5;pciSlot=@6;board=@7;"
+	  MaskTunableValueString  "on,on,on,on,on,on,on"
+	  MaskCallbackString	  "||||||"
+	  MaskEnableString	  "on,on,on,on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on,on,off,off"
+	  MaskToolTipString	  "on,on,on,on,on,on,on"
+	  MaskInitialization	  "boardType = NaN;\n[boardType] = sg_fpga_ad_m_a1(id);"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nFPGA-based I/O module\\nA/D read\\nModule: 1');port_label('output', 1, '1');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|[1]|± 10 [V]|Initiator|0.001|-1|Please select..."
+	}
+	Block {
+	  BlockType		  S-Function
+	  Name			  "Analog output"
+	  SID			  "42"
+	  Ports			  [1]
+	  Position		  [20, 16, 200, 94]
+	  ZOrder		  38
+	  CopyFcn		  "sg_fpga_getParameters_m_a1;"
+	  InitFcn		  "sg_fpga_callBackInit_m_a1;"
+	  FunctionName		  "sg_fpga_da_sf_a1"
+	  Parameters		  "boardType, chan, trigger, ts, pciSlot"
+	  EnableBusSupport	  off
+	  MaskType		  "da_fpga_a1"
+	  MaskDescription	  "Speedgoat driver block<br>FPGA-based I/O module - D/A write<br><br>&copy; 2006 - 2014, Speedgoat"
+	  " GmbH, www.speedgoat.ch"
+	  MaskHelp		  "Documentation for this block is not available."
+	  MaskPromptString	  "FPGA module identifer:|Channel vector:|Inter-module synchronization:|Sample time:|PCI slot (-1:"
+	  " autosearch):|board"
+	  MaskStyleString	  "popup(1|2|3|4|5|6|7|8|9|10),edit,popup(Initiator|Target),edit,edit,edit"
+	  MaskVariables		  "id=@1;chan=@2;trigger=@3;ts=@4;pciSlot=@5;board=@6;"
+	  MaskTunableValueString  "on,on,on,on,on,on"
+	  MaskCallbackString	  "|||||"
+	  MaskEnableString	  "on,on,on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on,off,off"
+	  MaskToolTipString	  "on,on,on,on,on,on"
+	  MaskInitialization	  "boardType = NaN;\n[boardType] = sg_fpga_da_m_a1(id);"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nFPGA-based I/O module\\nD/A write\\nModule: 1');port_label('input', 1, '1');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|[1]|Initiator|0.001|-1|Please select..."
+	}
+	Block {
+	  BlockType		  S-Function
+	  Name			  "Analog output (module 7)"
+	  SID			  "128"
+	  Ports			  [1]
+	  Position		  [15, 261, 195, 339]
+	  ZOrder		  42
+	  CopyFcn		  "sg_fpga_getParameters_m_a1;"
+	  InitFcn		  "sg_fpga_callBackInit_m_a1;"
+	  FunctionName		  "sg_fpga_damodule7_sf_a1"
+	  Parameters		  "boardType, chan, updateMode, spiChannel, selectWord, span, ts, pciSlot"
+	  EnableBusSupport	  off
+	  MaskType		  "damodule7_fpga"
+	  MaskDescription	  "Speedgoat driver block<br>FPGA based IO module - D/A write<br><br>&copy; 2006 - 2014, Speedgoat "
+	  "GmbH, www.speedgoat.ch"
+	  MaskHelp		  "web(['C:\\Users\\dkuratli\\Documents\\MATLAB\\speedgoatlib_branch_8_test1\\thirdpartydrivers\\sg_help\\"
+	  "fpga\\dialog_fields_analog_out_io331.htm'],'-helpbrowser');"
+	  MaskPromptString	  "FPGA module identifer:|Channel vector:|Update mode vector (0: PCI, 1: SPI):|SPI channel (1-16):"
+	  "|Position in the SPI frame (1-16):|Span:|Sample time:|PCI slot (-1: autosearch):|board"
+	  MaskStyleString	  "popup(1|2|3|4|5|6|7|8|9|10),edit,edit,edit,edit,popup(Unipolar 0V to 5V|Unipolar 0V to 10V|Bipol"
+	  "ar-5V to 5V|Bipolar -10V to 10V|Bipolar -2.5V to 2.5V|Bipolar -2.5V to 7.5V),edit,edit,edit"
+	  MaskVariables		  "id=@1;chan=@2;updateMode=@3;spiChannel=@4;selectWord=@5;span=@6;ts=@7;pciSlot=@8;board=@9;"
+	  MaskTunableValueString  "on,on,on,on,on,on,on,on,on"
+	  MaskCallbackString	  "||||||||"
+	  MaskEnableString	  "on,on,on,on,on,on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on,on,on,on,off,off"
+	  MaskToolTipString	  "on,on,on,on,on,on,on,on,on"
+	  MaskInitialization	  "boardType = NaN;\n[boardType] = sg_fpga_damodule7_m_a1(id);"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nFPGA based IO module\\nD/A write\\nModule: 1');port_label('input', 1, '1');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|[1]|[0]|[1]|[1]|Bipolar -10V to 10V|0.001|-1|Please select..."
+	}
+      }
+      RTWSystemCode	      "Auto"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      FunctionWithSeparateData off
+      Opaque		      off
+      MaskHideContents	      off
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "BiSS"
+      SID		      "117"
+      Ports		      []
+      Position		      [150, 425, 190, 485]
+      ZOrder		      -2
+      RequestExecContextInheritance off
+      System {
+	Name			"BiSS"
+	Location		[967, 51, 1649, 1008]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  S-Function
+	  Name			  "BiSS"
+	  SID			  "131"
+	  Ports			  [0, 1]
+	  Position		  [25, 18, 240, 122]
+	  ZOrder		  80
+	  CopyFcn		  "sg_fpga_getParameters_m_a1;"
+	  InitFcn		  "sg_fpga_callBackInit_m_a1;"
+	  FunctionName		  "sg_fpga_biss_sf_a1"
+	  Parameters		  "boardType, chan, ts, pciSlot, timeoutClkCount, numBits, clockDiv, showErr, showWarn, showCRC, numCRC"
+	  "Bits, showTrsmErr"
+	  EnableBusSupport	  off
+	  MaskType		  "biss_fpga_a1"
+	  MaskDescription	  "Speedgoat driver block<br>FPGA based IO module - BiSS<br><br>&copy; 2006 - 2014, Speedgoat GmbH,"
+	  " www.speedgoat.ch"
+	  MaskHelp		  "Documentation for this block is not available."
+	  MaskPromptString	  "FPGA module identifier:|Channel vector:|board|Sample time:|PCI slot (-1: autosearch):|Clock div"
+	  "ider vector:|Time out time vector:|Data bits vector:|Num Bits Total:|Error Flag|Warning Flag|CRC Bits|Number of CRC"
+	  " Bits:|Show transmission error"
+	  MaskStyleString	  "popup(1|2|3|4|5|6|7|8|9|10),edit,edit,edit,edit,edit,edit,edit,edit,checkbox,checkbox,checkbox,e"
+	  "dit,checkbox"
+	  MaskVariables		  "id=@1;chan=@2;board=@3;ts=@4;pciSlot=@5;clockDiv=@6;timeoutClkCount=@7;numDataBits=@8;numBits=@9;"
+	  "showErr=@10;showWarn=@11;showCRC=@12;numCRCBits=@13;showTrsmErr=@14;"
+	  MaskTunableValueString  "on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+	  MaskCallbackString	  "|||||||||||sg_fpga_biss_m_a1_display;||"
+	  MaskEnableString	  "on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+	  MaskVisibilityString	  "on,on,off,on,off,on,on,on,off,on,on,on,off,on"
+	  MaskToolTipString	  "on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+	  MaskInitialization	  "[boardType, timeoutClkCount, numBits, clockDiv, numCRCBits] = sg_fpga_biss_m_a1 (id, chan, ti"
+	  "meoutClkCount, numDataBits, clockDiv, showErr, showWarn, showCRC, numCRCBits, showTrsmErr);"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nFPGA based IO module\\nBiSS\\nModule: 1');port_label('output',1,'RxData');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|[1]|Please select...|0.001|-1|100|3000|16|0|off|off|off|0|off"
+	  MaskTabNameString	  "Module setup,Module setup,Module setup,Module setup,Module setup,BiSS configuration,BiSS confi"
+	  "guration,BiSS configuration,BiSS configuration,BiSS configuration,BiSS configuration,BiSS configuration,BiSS config"
+	  "uration,BiSS configuration"
+	}
+	Block {
+	  BlockType		  S-Function
+	  Name			  "BiSS Sniffer"
+	  SID			  "116"
+	  Ports			  [0, 1]
+	  Position		  [20, 167, 240, 263]
+	  ZOrder		  57
+	  CopyFcn		  "sg_fpga_getParameters_m_a1;"
+	  LoadFcn		  "sg_fpga_callBackInit_m_a1;"
+	  FunctionName		  "sg_fpga_biss_sniffer_sf_a1"
+	  Parameters		  "boardType, chan, wordSize, ts, pciSlot , clkTimeOut, lineDelay"
+	  EnableBusSupport	  off
+	  MaskType		  "biss_sniffer_a1"
+	  MaskDescription	  "Speedgoat driver block<br>FPGA based IO module - BiSS Sniffer<br><br>&copy; 2006 - 2014, Speedgo"
+	  "at GmbH, www.speedgoat.ch"
+	  MaskHelp		  "Documentation for this block is not available."
+	  MaskPromptString	  "FPGA module identifier:|Channel vector:|Encoder data bits|Line delay compensation|Clock time ou"
+	  "t:|Sample time:|PCI slot (-1: autosearch):|board"
+	  MaskStyleString	  "popup(1|2|3|4|5|6|7|8|9|10),edit,popup(18|26|32|36),edit,edit,edit,edit,edit"
+	  MaskVariables		  "id=@1;chan=@2;wordSize=@3;lineDelay=@4;clkTimeOut=@5;ts=@6;pciSlot=@7;board=@8;"
+	  MaskTunableValueString  "on,on,on,on,on,on,on,on"
+	  MaskCallbackString	  "|||||||"
+	  MaskEnableString	  "on,on,on,on,on,on,on,on"
+	  MaskVisibilityString	  "on,on,off,on,on,on,on,off"
+	  MaskToolTipString	  "on,on,on,on,on,on,on,on"
+	  MaskInitialization	  "boardType = 331;\nphase = 'verify';\n%[boardType, id, chan, clockDivider, wordSize, TL, TP, t"
+	  "s, pciSlot] = sg_fpga_biss_sniffer_sf_a1(boardType, phase, id, chan, clockDivider, wordSize, TL, TP, ts, pciSlot);\n"
+	  " [boardType, id, chan, wordSize, clkTimeOut, lineDelay, ts, pciSlot] = sg_fpga_biss_sniffer_m_a1(boardType, phase, "
+	  "id, chan, wordSize, clkTimeOut, lineDelay, ts, pciSlot);\n"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nFPGA based IO module\\nBiSS Sniffer\\nModule: 1');port_label('output', 1, 'RX 1')"
+	  ";"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|[1]|32|0|[60]|0.001|-1|Please select..."
+	  MaskTabNameString	  "Module setup,Module setup,BISS Sniffer configuration,BISS Sniffer configuration,BISS Sniffer c"
+	  "onfiguration,Module setup,Module setup,Module setup"
+	}
+      }
+      RTWSystemCode	      "Auto"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      FunctionWithSeparateData off
+      Opaque		      off
+      MaskHideContents	      off
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Digital IO"
+      SID		      "69"
+      Ports		      []
+      Position		      [35, 237, 80, 297]
+      ZOrder		      44
+      RequestExecContextInheritance off
+      System {
+	Name			"Digital IO"
+	Location		[1776, 143, 2217, 933]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  S-Function
+	  Name			  "Digital input"
+	  SID			  "68"
+	  Ports			  [0, 1]
+	  Position		  [20, 16, 215, 84]
+	  ZOrder		  43
+	  CopyFcn		  "sg_fpga_getParameters_m_a1;"
+	  InitFcn		  "sg_fpga_callBackInit_m_a1;"
+	  FunctionName		  "sg_fpga_di_sf_a2"
+	  Parameters		  "boardType, chan, vectorizeOutput, ts, pciSlot"
+	  EnableBusSupport	  off
+	  MaskType		  "di_fpga_a2"
+	  MaskDescription	  "Speedgoat driver block<br>FPGA-based I/O module - Digital input<br><br>&copy; 2006 - 2014, Speed"
+	  "goat GmbH, www.speedgoat.ch"
+	  MaskHelp		  "Documentation for this block is not available."
+	  MaskPromptString	  "FPGA Module identifier:|Channel vector:|Vectorize output port|Sample time:|PCI slot (-1: autose"
+	  "arch):|board"
+	  MaskStyleString	  "popup(1|2|3|4|5|6|7|8|9|10),edit,checkbox,edit,edit,edit"
+	  MaskVariables		  "id=@1;chan=@2;vectorizeOutput=@3;ts=@4;pciSlot=@5;board=@6;"
+	  MaskTunableValueString  "on,on,on,on,on,on"
+	  MaskCallbackString	  "|||||"
+	  MaskEnableString	  "on,on,on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on,off,off"
+	  MaskToolTipString	  "on,on,on,on,on,on"
+	  MaskInitialization	  "boardType = NaN;\n[boardType] = sg_fpga_di_m_a2(id, vectorizeOutput);"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nFPGA-based I/O module\\nDigital input\\nModule: 1');port_label('output', 1, '1');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|[1]|off|0.001|-1|Please select..."
+	  MaskTabNameString	  "Module setup,Module setup,Input and output port configuration,Module setup,Module setup,Module"
+	  " setup"
+	}
+	Block {
+	  BlockType		  S-Function
+	  Name			  "Digital output"
+	  SID			  "67"
+	  Ports			  [1]
+	  Position		  [20, 127, 220, 193]
+	  ZOrder		  42
+	  CopyFcn		  "sg_fpga_getParameters_m_a1;"
+	  InitFcn		  "sg_fpga_callBackInit_m_a1;"
+	  FunctionName		  "sg_fpga_do_sf_a2"
+	  Parameters		  "boardType, chan, vectorizeInput, reset, init, ts, pciSlot"
+	  EnableBusSupport	  off
+	  MaskType		  "do_fpga_a2"
+	  MaskDescription	  "Speedgoat driver block<br>FPGA-based I/O module - Digital output<br><br>&copy; 2006 - 2014, Spee"
+	  "dgoat GmbH, www.speedgoat.ch"
+	  MaskHelp		  "Documentation for this block is not available."
+	  MaskPromptString	  "FPGA Module identifier:|Channel vector:|Init values vector (0 = low, 1 = high):|Reset vector (0"
+	  " = hold, 1 = reset):|Vectorize input port|Sample time:|PCI slot (-1: autosearch):|board"
+	  MaskStyleString	  "popup(1|2|3|4|5|6|7|8|9|10),edit,edit,edit,checkbox,edit,edit,edit"
+	  MaskVariables		  "id=@1;chan=@2;init=@3;reset=@4;vectorizeInput=@5;ts=@6;pciSlot=@7;board=@8;"
+	  MaskTunableValueString  "on,on,on,on,on,on,on,on"
+	  MaskCallbackString	  "|||||||"
+	  MaskEnableString	  "on,on,on,on,on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on,on,on,off,off"
+	  MaskToolTipString	  "on,on,on,on,on,on,on,on"
+	  MaskInitialization	  "boardType = NaN;\n[boardType, init, reset] = sg_fpga_do_m_a2(id, vectorizeInput, init, reset)"
+	  ";\n"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nFPGA-based I/O module\\nDigital output\\nModule: 1');port_label('input', 1, '2');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|[2]|[0]|[0]|off|0.001|-1|Please select..."
+	  MaskTabNameString	  "Module setup,Module setup,Module setup,Module setup,Input and output port configuration,Module"
+	  " setup,Module setup,Module setup"
+	}
+      }
+      RTWSystemCode	      "Auto"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      FunctionWithSeparateData off
+      Opaque		      off
+      MaskHideContents	      off
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "EnDat"
+      SID		      "133"
+      Ports		      []
+      Position		      [40, 520, 80, 580]
+      ZOrder		      80
+      RequestExecContextInheritance off
+      System {
+	Name			"EnDat"
+	Location		[967, 51, 1649, 1008]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  S-Function
+	  Name			  "EnDat"
+	  SID			  "132"
+	  Ports			  [0, 1]
+	  Position		  [20, 16, 245, 114]
+	  ZOrder		  79
+	  CopyFcn		  "sg_fpga_getParameters_m_a1;"
+	  InitFcn		  "sg_fpga_callBackInit_m_a1;"
+	  FunctionName		  "sg_fpga_endat_sf_a1"
+	  Parameters		  "boardType, chan, ts, pciSlot, autoDataWidthDetect, posValBitWidth, revValBitWidth, trsmFreq, recover"
+	  "yTime, showErrOut, showMultiTurn"
+	  EnableBusSupport	  off
+	  MaskType		  "endat_fpga_a1"
+	  MaskDescription	  "Speedgoat driver block<br>FPGA based IO module - EnDat<br><br>&copy; 2006 - 2014, Speedgoat GmbH"
+	  ", www.speedgoat.ch"
+	  MaskHelp		  "Documentation for this block is not available."
+	  MaskPromptString	  "FPGA module identifier:|Channel vector:|board|Sample time:|PCI slot (-1: autosearch):|Automatic"
+	  " detection of encoder data width|position data width vector:|distinguishable revolutions data width vector (multitu"
+	  "rn only):|transmission frequency factor vector: |recovery time vector:|Show ErrorBit port"
+	  MaskStyleString	  "popup(1|2|3|4|5|6|7|8|9|10),edit,edit,edit,edit,checkbox,edit,edit,edit,edit,checkbox"
+	  MaskVariables		  "id=@1;chan=@2;board=@3;ts=@4;pciSlot=@5;autoDataWidthDetect=@6;posValBitWidth=@7;revValBitWidth=@"
+	  "8;trsmFreq=@9;recoveryTime=@10;showErrOut=@11;"
+	  MaskTunableValueString  "on,on,on,on,on,on,on,on,on,on,on"
+	  MaskCallbackString	  "|||||sg_fpga_endat_m_a1_display;|||||"
+	  MaskEnableString	  "on,on,on,on,on,on,on,on,on,on,on"
+	  MaskVisibilityString	  "on,on,off,on,off,on,on,on,on,on,on"
+	  MaskToolTipString	  "on,on,on,on,on,on,on,on,on,on,on"
+	  MaskInitialization	  "[boardType, posValBitWidth, revValBitWidth, trsmFreq, recoveryTime, showMultiTurn] = sg_fpga_"
+	  "endat_m_a1 (id, chan, autoDataWidthDetect, posValBitWidth, revValBitWidth, trsmFreq, recoveryTime, showErrOut);"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nFPGA based IO module\\nEnDat\\nModule: 1');port_label('output',1,'Position');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|[1]|Please select...|0.001|-1|off|[13]|[0]|[50]|[100]|off"
+	  MaskTabNameString	  "Module setup,Module setup,Module setup,Module setup,Module setup,EnDat configuration,EnDat con"
+	  "figuration,EnDat configuration,EnDat configuration,EnDat configuration,EnDat configuration"
+	}
+      }
+      RTWSystemCode	      "Auto"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      FunctionWithSeparateData off
+      Opaque		      off
+      MaskHideContents	      off
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "I2CM"
+      SID		      "101"
+      Ports		      []
+      Position		      [150, 238, 190, 302]
+      ZOrder		      -3
+      RequestExecContextInheritance off
+      System {
+	Name			"I2CM"
+	Location		[1776, 143, 2217, 933]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  S-Function
+	  Name			  "I2CM read"
+	  SID			  "104"
+	  Ports			  [3, 1]
+	  Position		  [105, 32, 440, 128]
+	  ZOrder		  64
+	  CopyFcn		  "sg_fpga_getParameters_m_a1;"
+	  InitFcn		  "sg_fpga_callBackInit_m_a1;"
+	  FunctionName		  "sg_fpga_i2cmread_sf_a1"
+	  Parameters		  "boardType, chan, clockDivider, subIndexConfiguration, ts, pciSlot"
+	  EnableBusSupport	  off
+	  MaskType		  "i2cmread_fpga_a1"
+	  MaskDescription	  "Speedgoat driver block<br>FPGA-based I/O module - I2C master read<br><br>&copy; 2006 - 2014, Spe"
+	  "edgoat GmbH, www.speedgoat.ch"
+	  MaskHelp		  "Documentation for this block is not available."
+	  MaskPromptString	  "FPGA module identifier|Channel:|Clock divider:|Enable subindex configuration|Sample time:|PCI s"
+	  "lot (-1: autosearch):|board"
+	  MaskStyleString	  "popup(1|2|3|4|5|6|7|8|9|10),edit,edit,checkbox,edit,edit,edit"
+	  MaskVariables		  "id=@1;chan=@2;clockDivider=@3;subIndexConfiguration=@4;ts=@5;pciSlot=@6;board=@7;"
+	  MaskTunableValueString  "on,on,on,on,on,on,on"
+	  MaskCallbackString	  "||||||"
+	  MaskEnableString	  "on,on,on,on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on,on,off,off"
+	  MaskToolTipString	  "on,on,on,on,on,on,on"
+	  MaskInitialization	  "boardType = NaN;\nphase = 'verify';\n[boardType] = sg_fpga_i2cmread_m_a1(phase, boardType, id"
+	  ", chan, subIndexConfiguration, clockDivider);"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nFPGA-based I/O module\\nI2CM read\\nModule: 1');port_label('input',1,'Slave ID');"
+	  "port_label('input',2,'Number of bytes to read');port_label('input',3,'Subindex');port_label('output',1,'data');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|1|100|on|0.001|-1|Please select..."
+	  MaskTabNameString	  "Module setup,Module setup,I2CM,Input and output port configuration,Module setup,Module setup,M"
+	  "odule setup"
+	}
+	Block {
+	  BlockType		  S-Function
+	  Name			  "I2CM write"
+	  SID			  "105"
+	  Ports			  [3]
+	  Position		  [110, 169, 440, 261]
+	  ZOrder		  15
+	  CopyFcn		  "sg_fpga_getParameters_m_a1;"
+	  InitFcn		  "sg_fpga_callBackInit_m_a1;"
+	  FunctionName		  "sg_fpga_i2cmwrite_sf_a1"
+	  Parameters		  "boardType, chan, clockDivider, ts, pciSlot"
+	  EnableBusSupport	  off
+	  MaskType		  "i2cmwrite_fpga_a1"
+	  MaskDescription	  "Speedgoat driver block<br>FPGA-based I/O module - I2C master write<br><br>&copy; 2006 - 2014, Sp"
+	  "eedgoat GmbH, www.speedgoat.ch"
+	  MaskHelp		  "Documentation for this block is not available."
+	  MaskPromptString	  "IO311 module identifier:|Channel:|Clock divider:|Sample time:|PCI slot (-1: autosearch):|board"
+	  MaskStyleString	  "popup(1|2|3|4|5|6|7|8|9|10),edit,edit,edit,edit,edit"
+	  MaskVariables		  "id=@1;chan=@2;clockDivider=@3;ts=@4;pciSlot=@5;board=@6;"
+	  MaskTunableValueString  "on,on,on,on,on,on"
+	  MaskCallbackString	  "|||||"
+	  MaskEnableString	  "on,on,on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on,off,off"
+	  MaskToolTipString	  "on,on,on,on,on,on"
+	  MaskInitialization	  "boardType = NaN;\nphase = 'verify';\n[boardType] = sg_fpga_i2cmwrite_m_a1(phase, boardType, i"
+	  "d, chan, clockDivider);"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nFPGA-based I/O module\\nI2CM write\\nModule: 1');port_label('input',1,'Slave ID')"
+	  ";port_label('input',2,'Number of bytes to write');port_label('input',3,'Data');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|1|100|0.001|-1|Please select..."
+	  MaskTabNameString	  "Module setup,Module setup,I2CM,Module setup,Module setup,Module setup"
+	}
+      }
+      RTWSystemCode	      "Auto"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      FunctionWithSeparateData off
+      Opaque		      off
+      MaskHideContents	      off
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Interrupt"
+      SID		      "85"
+      Ports		      []
+      Position		      [148, 54, 188, 114]
+      ZOrder		      51
+      RequestExecContextInheritance off
+      System {
+	Name			"Interrupt"
+	Location		[1776, 143, 2217, 933]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  S-Function
+	  Name			  "CoS Interrupt"
+	  SID			  "83"
+	  Ports			  []
+	  Position		  [20, 23, 156, 96]
+	  ZOrder		  49
+	  CopyFcn		  "sg_fpga_getParameters_m_a1;"
+	  InitFcn		  "sg_fpga_callBackInit_m_a1;"
+	  FunctionName		  "sg_fpga_inta_sf_a1"
+	  Parameters		  "boardType, debounce, delay, polarity, pciSlot, ts"
+	  EnableBusSupport	  off
+	  MaskType		  "inta_fpga_a1"
+	  MaskDescription	  "Speedgoat driver block<br>FPGA-based I/O module - Change of state (CoS) interrupt<br><br>&copy; "
+	  "2006 - 2014, Speedgoat GmbH, www.speedgoat.ch"
+	  MaskHelp		  "Documentation for this block is not available."
+	  MaskPromptString	  "FPGA module identifier:|Debounce duration:|Interrupt delay:|Polarity (0: sensitive to falling e"
+	  "dge, 1: sensitive to rising edge):|PCI slot (-1: autosearch):|Sample time:|board"
+	  MaskStyleString	  "popup(1|2|3|4|5|6|7|8|9|10),edit,edit,edit,edit,edit,edit"
+	  MaskVariables		  "id=@1;debounce=@2;delay=@3;polarity=@4;pciSlot=@5;ts=@6;board=@7;"
+	  MaskTunableValueString  "on,on,on,on,on,on,on"
+	  MaskCallbackString	  "||||||"
+	  MaskEnableString	  "on,on,on,on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on,off,on,off"
+	  MaskToolTipString	  "on,on,on,on,on,on,on"
+	  MaskInitialization	  "boardType = NaN;\n[maskdisplay, boardType] = sg_fpga_inta_m_a1(id);"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nFPGA-based I/O module\\nCoS interrupt\\nModule: 1');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|0|0|0|-1|-1|Please select..."
+	  MaskTabNameString	  "Module setup,Interrupt,Interrupt,Interrupt,Module setup,Module setup,Module setup"
+	}
+      }
+      RTWSystemCode	      "Auto"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      FunctionWithSeparateData off
+      Opaque		      off
+      MaskHideContents	      off
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "PWM"
+      SID		      "72"
+      Ports		      []
+      Position		      [35, 420, 80, 485]
+      ZOrder		      45
+      RequestExecContextInheritance off
+      System {
+	Name			"PWM"
+	Location		[967, 51, 1649, 1008]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  S-Function
+	  Name			  "PWM Capture"
+	  SID			  "75"
+	  Ports			  [0, 3]
+	  Position		  [70, 184, 315, 276]
+	  ZOrder		  44
+	  CopyFcn		  "sg_fpga_getParameters_m_a1;"
+	  InitFcn		  "sg_fpga_callBackInit_m_a1;"
+	  FunctionName		  "sg_fpga_cap_sf_a2"
+	  Parameters		  "boardType, chan, showHighDuration, showLowDuration, showPeriod, captureMode, ts, pciSlot"
+	  EnableBusSupport	  off
+	  MaskType		  "cap_fpga_a2"
+	  MaskDescription	  "Speedgoat driver block<br>FPGA based IO module - PWM capture<br><br>&copy; 2006 - 2014, Speedgoa"
+	  "t GmbH, www.speedgoat.ch"
+	  MaskHelp		  "web(['C:\\Program Files\\MATLAB\\R2014a\\toolbox\\rtw\\targets\\xpc\\target\\build\\xpcblocks\\thirdpa"
+	  "rtydrivers\\sg_help\\fpga\\dialog_fields_pwm_cap_io331.htm'],'-helpbrowser');"
+	  MaskPromptString	  "FPGA module identifier:|Channel vector:|Capture mode:|Show high duration|Show low duration|Show"
+	  " period|Sample time:|PCI slot (-1: autosearch):|board"
+	  MaskStyleString	  "popup(1|2|3|4|5|6|7|8|9|10),edit,popup(High transitions triggered|Low transitions triggered|Use "
+	  "dedicated trigger input|Software triggered),checkbox,checkbox,checkbox,edit,edit,edit"
+	  MaskVariables		  "id=@1;chan=@2;captureMode=@3;showHighDuration=@4;showLowDuration=@5;showPeriod=@6;ts=@7;pciSlot=@"
+	  "8;board=@9;"
+	  MaskTunableValueString  "on,on,on,on,on,on,on,on,on"
+	  MaskCallbackString	  "||||||||"
+	  MaskEnableString	  "on,on,on,on,on,on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on,on,on,on,off,off"
+	  MaskToolTipString	  "on,on,on,on,on,on,on,on,on"
+	  MaskInitialization	  "boardType = NaN;\n[boardType, captureMode] = sg_fpga_cap_m_a2(id, chan, captureMode, showHigh"
+	  "Duration, showLowDuration, showPeriod);"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nFPGA based IO module\\nPWM capture\\nModule: 1');port_label('output',1,'High');po"
+	  "rt_label('output',2,'Low');port_label('output',3,'Period');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|[1]|High transitions triggered|on|on|on|0.001|-1|Please select..."
+	  MaskTabNameString	  "Module setup,Module setup,Capture,Input and output port configuration,Input and output port co"
+	  "nfiguration,Input and output port configuration,Module setup,Module setup,Module setup"
+	}
+	Block {
+	  BlockType		  S-Function
+	  Name			  "PWM generation (3)"
+	  SID			  "65"
+	  Ports			  [2]
+	  Position		  [70, 16, 320, 109]
+	  ZOrder		  41
+	  CopyFcn		  "sg_fpga_getParameters_m_a1;"
+	  InitFcn		  "sg_fpga_callBackInit_m_a1;"
+	  FunctionName		  "sg_fpga_pwm_sf_a3"
+	  Parameters		  "boardType, chan, symmetric, invertA, invertB, invertC, period, triggerPulseLength, protection, updat"
+	  "e, triggerSource, idleA, idleB, ts, pciSlot"
+	  EnableBusSupport	  off
+	  MaskType		  "pwm_fpga_a3"
+	  MaskDescription	  "Speedgoat driver block<br>FPGA based IO module - PWM generation (3)<br><br>&copy; 2006 - 2014, S"
+	  "peedgoat GmbH, www.speedgoat.ch"
+	  MaskHelp		  "web(['C:\\Program Files\\MATLAB\\R2014a\\toolbox\\rtw\\targets\\xpc\\target\\build\\xpcblocks\\thirdpa"
+	  "rtydrivers\\sg_help\\fpga\\dialog_fields_pwm_io331.htm'],'-helpbrowser');"
+	  MaskPromptString	  "FPGA module identifier:|Channel vector:|board|Sample time:|PCI slot (-1: autosearch):|PWM patte"
+	  "rn:|PWM period vector:|Polarity of PWM A output:|Polarity of PWM B output:|Polarity of PWM Trigger output:|PWM outp"
+	  "ut A is:|PWM output B is:|Trigger source:|Trigger pulse length vector:|AB-output protection:|PWM update:"
+	  MaskStyleString	  "popup(1|2|3|4|5|6|7|8|9|10),edit,edit,edit,edit,popup(Symmetric - PWM generation is centered aro"
+	  "und half the period|Asymmetric - On and Off are freely configurable),edit,popup(High between AOn and AOff|Low betwe"
+	  "en AOn and AOff),popup(High between BOn and BOff|Low between BOn and BOff),popup(High during PWM strobe|Low during "
+	  "PWM strobe),popup(Low when PWM generation is halted|High when PWM generation is halted),popup(Low when PWM generati"
+	  "on is halted|High when PWM generation is halted),popup(PWM A On|PWM A Off|PWM A On and PWM A Off|PWM B On|PWM B Off"
+	  "|PWM B On and PWM B Off|Period starts|Half the period|Period starts and half the period),edit,popup(Disabled: A and"
+	  " B can be high at the same moment|A is forced off when B is on.|B is forced off when A is on.|A/B are forced off wh"
+	  "en A/B are on.),popup(At period starts|At half the period|At period starts and at half the period)"
+	  MaskVariables		  "id=@1;chan=@2;board=@3;ts=@4;pciSlot=@5;symmetric=@6;period=@7;invertA=@8;invertB=@9;invertC=@10;"
+	  "idleA=@11;idleB=@12;triggerSource=@13;triggerPulseLength=@14;protection=@15;update=@16;"
+	  MaskTunableValueString  "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+	  MaskCallbackString	  "|||||||||||||||"
+	  MaskEnableString	  "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+	  MaskVisibilityString	  "on,on,off,on,off,on,on,on,on,on,on,on,on,on,on,on"
+	  MaskToolTipString	  "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+	  MaskInitialization	  "boardType = NaN;\n[boardType, period, invertA, invertB, invertC, idleA, idleB, triggerPulseLe"
+	  "ngth, protection, update] = sg_fpga_pwm_m_a3(id, symmetric, period, invertA, invertB, invertC, idleA, idleB, trigge"
+	  "rPulseLength, protection, update);"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nFPGA based IO module\\nPWM generation (3)\\nModule: 1');port_label('input', 1, 'A"
+	  "');port_label('input', 2, 'B');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|[1]|Please select...|0.001|-1|Symmetric - PWM generation is centered around half the period|[1"
+	  "000]|High between AOn and AOff|High between BOn and BOff|High during PWM strobe|Low when PWM generation is halted|L"
+	  "ow when PWM generation is halted|Half the period|[100]|Disabled: A and B can be high at the same moment|At period s"
+	  "tarts"
+	  MaskTabNameString	  "Module setup,Module setup,Module setup,Module setup,Module setup,PWM generation,PWM generation"
+	  ",PWM generation,PWM generation,PWM generation,Offline state,Offline state,PWM generation,PWM generation,PWM generat"
+	  "ion,PWM generation"
+	}
+      }
+      RTWSystemCode	      "Auto"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      FunctionWithSeparateData off
+      Opaque		      off
+      MaskHideContents	      off
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Quadrature"
+      SID		      "80"
+      Ports		      []
+      Position		      [35, 329, 80, 389]
+      ZOrder		      47
+      RequestExecContextInheritance off
+      System {
+	Name			"Quadrature"
+	Location		[967, 51, 1649, 1008]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  S-Function
+	  Name			  "QAD (2)"
+	  SID			  "79"
+	  Ports			  [0, 1]
+	  Position		  [20, 16, 310, 114]
+	  ZOrder		  46
+	  CopyFcn		  "sg_fpga_getParameters_m_a1;"
+	  InitFcn		  "sg_fpga_callBackInit_m_a1;"
+	  FunctionName		  "sg_fpga_qad_sf_a2"
+	  Parameters		  "boardType, ts, pciSlot, chan, operatingMode, sampling, indexControlMode, loadOnIndexValue, limit, la"
+	  "tchMode, preloadValue, showLoadValueInput, showLoadOnIndexInput, showCmdRegInput, showCurrentPosition, showLatchedP"
+	  "osition, showDirectionFlag, showIndexFoundFlag, showLatchFlag "
+	  EnableBusSupport	  off
+	  MaskType		  "qad_fpga_a2"
+	  MaskDescription	  "Speedgoat driver block<br>FPGA based IO module - Quadrature decoder<br><br>&copy; 2006 - 2014, S"
+	  "peedgoat GmbH, www.speedgoat.ch"
+	  MaskHelp		  "web(['C:\\Program Files\\MATLAB\\R2014a\\toolbox\\rtw\\targets\\xpc\\target\\build\\xpcblocks\\thirdpa"
+	  "rtydrivers\\sg_help\\fpga\\dialog_fields_qad_io331.htm'],'-helpbrowser');"
+	  MaskPromptString	  "FPGA module identifier:|Channel vector:|Preload counter value:|Operating mode:|Sampling:|Index "
+	  "control mode:|Load on index value:|Counting mode:|Counter limit:|Latch mode:|Show asynchronous command register inp"
+	  "ut port|Show asynchronous load value input port|Show load on index value input port|Show latch status output port|S"
+	  "how direction output port|Show index found output port|Show latched position output port|Show current position outp"
+	  "ut port|Sample time:|PCI slot (-1: autosearch):|board"
+	  MaskStyleString	  "popup(1|2|3|4|5|6|7|8|9|10),edit,edit,popup(Quadrature decoder|Direction count|Up/down count),po"
+	  "pup(1x|2x|4x),popup(Ignore index input|Load on index|Index reference mode),edit,popup(Disabled (cycling counter)|Di"
+	  "vide-by-N),edit,popup(Disabled|Latch on C/index input|Latch on D input|Software latch),checkbox,checkbox,checkbox,c"
+	  "heckbox,checkbox,checkbox,checkbox,checkbox,edit,edit,edit"
+	  MaskVariables		  "id=@1;chan=@2;preloadValue=@3;operatingMode=@4;sampling=@5;indexControlMode=@6;loadOnIndexValue=@"
+	  "7;countingMode=@8;limit=@9;latchMode=@10;showCmdRegInput=@11;showLoadValueInput=@12;showLoadOnIndexInput=@13;showLa"
+	  "tchFlag=@14;showDirectionFlag=@15;showIndexFoundFlag=@16;showLatchedPosition=@17;showCurrentPosition=@18;ts=@19;pci"
+	  "Slot=@20;board=@21;"
+	  MaskTunableValueString  "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+	  MaskCallbackString	  "|||||sg_fpga_qad_m_a2('update');||sg_fpga_qad_m_a2('update');|||||||||||||"
+	  MaskEnableString	  "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on,on,on,off,on,off,on,on,on,on,on,on,on,on,on,on,off,off"
+	  MaskToolTipString	  "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+	  MaskInitialization	  "boardType = NaN;\nphase = 'verify';\n[boardType, preloadValue, loadOnIndexValue, limit, opera"
+	  "tingMode, sampling, indexControlMode, countingMode, latchMode] = sg_fpga_qad_m_a2(phase, id, chan, preloadValue, lo"
+	  "adOnIndexValue, limit, operatingMode, sampling, indexControlMode, countingMode, latchMode, showCmdRegInput, showLoa"
+	  "dValueInput, showLoadOnIndexInput, showLatchedPosition, showCurrentPosition, showIndexFoundFlag, showDirectionFlag,"
+	  " showLatchFlag);"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nFPGA based IO module\\nQAD (2)\\nModule: 1');port_label('output',1,'Current posit"
+	  "ion');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|[1]|[0]|Quadrature decoder|4x|Ignore index input|[100]|Disabled (cycling counter)|[1024]|Disab"
+	  "led|off|off|off|off|off|off|off|on|0.001|-1|Please select..."
+	  MaskTabNameString	  "Module setup,Module setup,Quadrature decoder,Quadrature decoder,Quadrature decoder,Quadrature "
+	  "decoder,Quadrature decoder,Quadrature decoder,Quadrature decoder,Quadrature decoder,Input and output port configura"
+	  "tion,Input and output port configuration,Input and output port configuration,Input and output port configuration,In"
+	  "put and output port configuration,Input and output port configuration,Input and output port configuration,Input and"
+	  " output port configuration,Module setup,Module setup,Module setup"
+	}
+	Block {
+	  BlockType		  S-Function
+	  Name			  "QAE"
+	  SID			  "90"
+	  Ports			  [2]
+	  Position		  [20, 170, 310, 270]
+	  ZOrder		  48
+	  CopyFcn		  "sg_fpga_getParameters_m_a1;"
+	  InitFcn		  "sg_fpga_callBackInit_m_a1;"
+	  FunctionName		  "sg_fpga_qae_sf_a1"
+	  Parameters		  "boardType, channel, showOutputPosition, showInputPosition, showInputSpeed, freeWheel, resetCurrentPo"
+	  "sition, initPos, initSpeed, resolution, ts, pciSlot"
+	  EnableBusSupport	  off
+	  MaskType		  "qae_fpga_a1"
+	  MaskDescription	  "Speedgoat driver block<br>FPGA based IO module - Quadrature encoder<br><br>&copy; 2006 - 2014, S"
+	  "peedgoat GmbH, www.speedgoat.ch"
+	  MaskHelp		  "web(['C:\\Program Files\\MATLAB\\R2014a\\toolbox\\rtw\\targets\\xpc\\target\\build\\xpcblocks\\thirdpa"
+	  "rtydrivers\\sg_help\\fpga\\dialog_fields_qae_io331.htm'],'-helpbrowser');"
+	  MaskPromptString	  "FPGA module identifier|Channel vector:|Resolution vector:|Initial speed vector (rpm):|Initial p"
+	  "osition vector:|Free wheel (checked: no position control)|Reset current position and speed to init values when mode"
+	  "l starts|Show speed input port|Show position input port|Show position output port|Sample time:|PCI slot (-1: autose"
+	  "arch):|board"
+	  MaskStyleString	  "popup(1|2|3|4|5|6|7|8|9|10),edit,edit,edit,edit,checkbox,checkbox,checkbox,checkbox,checkbox,edi"
+	  "t,edit,edit"
+	  MaskVariables		  "id=@1;channel=@2;resolution=@3;initSpeed=@4;initPos=@5;freeWheel=@6;resetCurrentPosition=@7;showI"
+	  "nputSpeed=@8;showInputPosition=@9;showOutputPosition=@10;ts=@11;pciSlot=@12;board=@13;"
+	  MaskTunableValueString  "on,on,on,on,on,on,on,on,on,on,on,on,on"
+	  MaskCallbackString	  "||||||||||||"
+	  MaskEnableString	  "on,on,on,on,on,on,on,on,on,on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on,on,on,on,on,on,on,on,off,off"
+	  MaskToolTipString	  "on,on,on,on,on,on,on,on,on,on,on,on,on"
+	  MaskInitialization	  "boardType = NaN;\nphase = 'verify';\n[boardType, channel, resolution, initPos, initSpeed] = s"
+	  "g_fpga_qae_m_a1(phase, id, channel, showInputSpeed, showInputPosition, showOutputPosition, resolution, initPos, ini"
+	  "tSpeed);\n"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nFPGA based IO module\\nQAE\\nModule: 1');port_label('input',1,'postion cmd');port"
+	  "_label('input',2,'speed cmd');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|[1]|[16]|[1000]|[0]|off|on|on|on|off|0.001|-1|Please select..."
+	  MaskTabNameString	  "Module setup,Module setup,Quadrature encoder,Quadrature encoder,Quadrature encoder,Quadrature "
+	  "encoder,Quadrature encoder,Input and output port configuration,Input and output port configuration,Input and output"
+	  " port configuration,Module setup,Module setup,Module setup"
+	}
+      }
+      RTWSystemCode	      "Auto"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      FunctionWithSeparateData off
+      Opaque		      off
+      MaskHideContents	      off
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "SPI"
+      SID		      "102"
+      Ports		      []
+      Position		      [150, 145, 190, 205]
+      ZOrder		      73
+      RequestExecContextInheritance off
+      System {
+	Name			"SPI"
+	Location		[1776, 143, 2217, 933]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  S-Function
+	  Name			  "SPIM send and receive"
+	  SID			  "103"
+	  Ports			  [1, 1]
+	  Position		  [35, 24, 215, 96]
+	  ZOrder		  56
+	  CopyFcn		  "sg_fpga_getParameters_m_a1;"
+	  InitFcn		  "sg_fpga_callBackInit_m_a1;"
+	  FunctionName		  "sg_fpga_spim_sf_a1"
+	  Parameters		  "boardType, chan, triggerDuration, postTriggerDuration, startDelay, interWords, endFrameDelay, halfPe"
+	  "riod, cpha, cpol, msbFirst, width, showOutputs, showTrigger, ts, pciSlot"
+	  EnableBusSupport	  off
+	  MaskType		  "spim_fpga_a1"
+	  MaskDescription	  "Speedgoat driver block<br>FPGA-based I/O module - SPI master send and receive<br><br>&copy; 2006"
+	  " - 2014, Speedgoat GmbH, www.speedgoat.ch"
+	  MaskHelp		  "Documentation for this block is not available."
+	  MaskPromptString	  "FPGA module identifier:|Channel vector:|Half period:|Phase (CPHA):|Polarity (CPOL):|Trigger dur"
+	  "ation:|Post-trigger duration:|Start frame delay:|Interwords delay:|End frame delay:|Bit order:|Show RX outputs|Show"
+	  " trigger input|Width:|PCI slot (-1: autosearch):|Sample time:|board"
+	  MaskStyleString	  "popup(1|2|3|4|5|6|7|8|9|10),edit,edit,edit,edit,edit,edit,edit,edit,edit,edit,checkbox,checkbox,"
+	  "edit,edit,edit,edit"
+	  MaskVariables		  "id=@1;chan=@2;halfPeriod=@3;cpha=@4;cpol=@5;triggerDuration=@6;postTriggerDuration=@7;startDelay="
+	  "@8;interWords=@9;endFrameDelay=@10;msbFirst=@11;showOutputs=@12;showTrigger=@13;width=@14;pciSlot=@15;ts=@16;board="
+	  "@17;"
+	  MaskTunableValueString  "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+	  MaskCallbackString	  "||||||||||||||||"
+	  MaskEnableString	  "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on,on,on,on,on,on,on,on,on,on,off,off,on,off"
+	  MaskToolTipString	  "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+	  MaskInitialization	  "boardType = NaN;\nphase = 'verify';\n[boardType, halfPeriod, cpha, cpol, msbFirst, triggerDur"
+	  "ation, postTriggerDuration, startDelay, interWords, endFrameDelay] = sg_fpga_spim_m_a1(boardType, phase, chan, id, "
+	  "showOutputs, showTrigger, halfPeriod, cpha, cpol, msbFirst, triggerDuration, postTriggerDuration, startDelay, inter"
+	  "Words, endFrameDelay);"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nFPGA-based I/O module\\nSPIM send and receive\\nModule: 1');port_label('input', 1"
+	  ", 'TX 1');port_label('output', 1, 'RX 1');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|[1]|[10]|[0]|[0]|[0]|[0]|[0]|[0]|[0]|[1]|on|off|16|-1|1e-3|Please select..."
+	  MaskTabNameString	  "Module setup,Module setup,SPIM send and receive,SPIM send and receive,SPIM send and receive,SP"
+	  "IM send and receive,SPIM send and receive,SPIM send and receive,SPIM send and receive,SPIM send and receive,SPIM se"
+	  "nd and receive,Input and output port configuration,Input and output port configuration,SPIM send and receive,Module"
+	  " setup,Module setup,Module setup"
+	}
+	Block {
+	  BlockType		  S-Function
+	  Name			  "SPIS "
+	  SID			  "106"
+	  Ports			  []
+	  Position		  [275, 24, 456, 96]
+	  ZOrder		  -5
+	  CopyFcn		  "sg_fpga_getParameters_m_a1;"
+	  InitFcn		  "sg_fpga_callBackInit_m_a1;"
+	  FunctionName		  "sg_fpga_spis_sf_a3"
+	  Parameters		  "boardType, chan, cpha, cpol, msbFirst, pciSlot"
+	  EnableBusSupport	  off
+	  MaskType		  "spis_fpga_a3"
+	  MaskDescription	  "Speedgoat driver block<br>FPGA-based I/O module - SPI slave setup<br><br>&copy; 2006 - 2014, Spe"
+	  "edgoat GmbH, www.speedgoat.ch"
+	  MaskHelp		  "Documentation for this block is not available."
+	  MaskPromptString	  "FPGA module identifier:|Channel vector:|Phase (CPHA):|Polarity (CPOL):|Bit order:|PCI slot (-1:"
+	  " autosearch):|board"
+	  MaskStyleString	  "popup(1|2|3|4|5|6|7|8|9|10),edit,edit,edit,edit,edit,edit"
+	  MaskVariables		  "id=@1;chan=@2;cpha=@3;cpol=@4;msbFirst=@5;pciSlot=@6;board=@7;"
+	  MaskTunableValueString  "on,on,on,on,on,on,on"
+	  MaskCallbackString	  "||||||"
+	  MaskEnableString	  "on,on,on,on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on,on,off,off"
+	  MaskToolTipString	  "on,on,on,on,on,on,on"
+	  MaskInitialization	  "boardType = NaN;\nphase = 'verify';\n[boardType,msbFirst, cpol, cpha] = sg_fpga_spis_m_a3(pha"
+	  "se, boardType, pciSlot, chan, id, msbFirst, cpol, cpha);"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nFPGA-based I/O module\\nSPIS setup\\nModule: 1');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|[1]|[0]|[1]|[1]|-1|Please select..."
+	  MaskTabNameString	  "Module setup,Module setup,SPIS setup,SPIS setup,SPIS setup,Module setup,Module setup"
+	}
+	Block {
+	  BlockType		  S-Function
+	  Name			  "SPIS receive"
+	  SID			  "107"
+	  Ports			  [0, 1]
+	  Position		  [275, 239, 455, 311]
+	  ZOrder		  -5
+	  CopyFcn		  "sg_fpga_getParameters_m_a1;"
+	  InitFcn		  "sg_fpga_callBackInit_m_a1;"
+	  FunctionName		  "sg_fpga_spisreceive_sf_a3"
+	  Parameters		  "boardType, chan, width, ts, pciSlot"
+	  EnableBusSupport	  off
+	  MaskType		  "spisreceive_a3"
+	  MaskDescription	  "Speedgoat driver block<br>FPGA-based I/O module - SPI slave receive<br><br>&copy; 2006 - 2014, S"
+	  "peedgoat GmbH, www.speedgoat.ch"
+	  MaskHelp		  "Documentation for this block is not available."
+	  MaskPromptString	  "FPGA module identifier|Channel vector:|width|PCI slot (-1: autosearch):|Sample time:|board"
+	  MaskStyleString	  "popup(1|2|3|4|5|6|7|8|9|10),edit,edit,edit,edit,edit"
+	  MaskVariables		  "id=@1;chan=@2;width=@3;pciSlot=@4;ts=@5;board=@6;"
+	  MaskTunableValueString  "on,on,on,on,on,on"
+	  MaskCallbackString	  "|||||"
+	  MaskEnableString	  "on,on,on,on,on,on"
+	  MaskVisibilityString	  "on,off,off,off,on,off"
+	  MaskToolTipString	  "on,on,on,on,on,on"
+	  MaskInitialization	  "boardType = NaN;\nphase = 'verify';\n[boardType] = sg_fpga_spisreceive_m_a3(phase, boardType,"
+	  " id, chan);"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nFPGA-based I/O module\\nSPIS receive\\nModule: 1');port_label('output',1,'RX1');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|1|16|-1|-1|Please select..."
+	}
+	Block {
+	  BlockType		  S-Function
+	  Name			  "SPIS send"
+	  SID			  "108"
+	  Ports			  [1]
+	  Position		  [275, 125, 455, 195]
+	  ZOrder		  -5
+	  CopyFcn		  "sg_fpga_getParameters_m_a1;"
+	  InitFcn		  "sg_fpga_callBackInit_m_a1;"
+	  FunctionName		  "sg_fpga_spissend_sf_a3"
+	  Parameters		  "boardType, chan, width, ts, pciSlot"
+	  EnableBusSupport	  off
+	  MaskType		  "spissend_a3"
+	  MaskDescription	  "Speedgoat driver block<br>FPGA-based I/O module - SPI slave send<br><br>&copy; 2006 - 2014, Spee"
+	  "dgoat GmbH, www.speedgoat.ch"
+	  MaskHelp		  "Documentation for this block is not available."
+	  MaskPromptString	  "FPGA module identifier:|Channel vector:|width|Sample time:|PCI slot (-1: autosearch):|board"
+	  MaskStyleString	  "popup(1|2|3|4|5|6|7|8|9|10),edit,edit,edit,edit,edit"
+	  MaskVariables		  "id=@1;chan=@2;width=@3;ts=@4;pciSlot=@5;board=@6;"
+	  MaskTunableValueString  "on,on,on,on,on,on"
+	  MaskCallbackString	  "|||||"
+	  MaskEnableString	  "on,on,on,on,on,on"
+	  MaskVisibilityString	  "on,off,off,on,off,off"
+	  MaskToolTipString	  "on,on,on,on,on,on"
+	  MaskInitialization	  "boardType = NaN;\nphase = 'verify';\n[boardType] = sg_fpga_spissend_m_a3(phase, boardType, id"
+	  ", chan);"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nFPGA-based I/O module\\nSPIS send\\nModule: 1');port_label('input',1,'TX1');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|1|16|1e-3|-1|Please select..."
+	}
+      }
+      RTWSystemCode	      "Auto"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      FunctionWithSeparateData off
+      Opaque		      off
+      MaskHideContents	      off
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "SSI"
+      SID		      "112"
+      Ports		      []
+      Position		      [150, 330, 190, 390]
+      ZOrder		      -9
+      RequestExecContextInheritance off
+      System {
+	Name			"SSI"
+	Location		[967, 51, 1649, 1008]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  S-Function
+	  Name			  "SSIM"
+	  SID			  "111"
+	  Ports			  [0, 1]
+	  Position		  [75, 70, 275, 150]
+	  ZOrder		  57
+	  CopyFcn		  "sg_fpga_getParameters_m_a1;"
+	  LoadFcn		  "sg_fpga_callBackInit_m_a1;"
+	  FunctionName		  "sg_fpga_ssim_sf_a1"
+	  Parameters		  "boardType, chan, clockDivider, wordSize, ts, pciSlot , TL, TP, ssiminv, coding"
+	  EnableBusSupport	  off
+	  MaskType		  "ssim_fpga_a1"
+	  MaskDescription	  "Speedgoat driver block<br>FPGA based IO module - SSI Master<br><br>&copy; 2006 - 2013, Speedgoat"
+	  " GmbH, www.speedgoat.ch"
+	  MaskHelp		  "Documentation for this block is not available."
+	  MaskPromptString	  "FPGA module identifier:|Channel vector:|Coding:|Clock divider vector:|Data bits vector(includin"
+	  "g start/stop and parity bits):|TL vector:|TP vector:|SSI2 (Max 32 bits)|Sample time:|PCI slot (-1: autosearch):|boa"
+	  "rd"
+	  MaskStyleString	  "popup(1|2|3|4|5|6|7|8|9|10),edit,popup(Binary|Gray),edit,edit,edit,edit,checkbox,edit,edit,edit"
+	  MaskVariables		  "id=@1;chan=@2;coding=@3;clockDivider=@4;wordSize=@5;TL=@6;TP=@7;ssiminv=@8;ts=@9;pciSlot=@10;boar"
+	  "d=@11;"
+	  MaskTunableValueString  "on,on,on,on,on,on,on,on,on,on,on"
+	  MaskCallbackString	  "||||||||||"
+	  MaskEnableString	  "on,on,on,on,on,on,on,on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on,on,on,on,on,on,on,off"
+	  MaskToolTipString	  "on,on,on,on,on,on,on,on,on,on,on"
+	  MaskInitialization	  "boardType = 331;\nphase = 'verify';\n[boardType, id, chan, clockDivider, wordSize, TL, TP, ts"
+	  ", pciSlot] = sg_fpga_ssim_m_a1(boardType, phase, id, chan, clockDivider, wordSize, TL, TP, ts, pciSlot);\n"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nFPGA based IO module\\nSSIM\\nModule: 1');port_label('output', 1, 'RX 1');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|[1]|Binary|[200]|[12]|[0]|[3000]|off|1e-3|-1|Please select..."
+	  MaskTabNameString	  "Module setup,Module setup,SSIM configuration,SSIM configuration,SSIM configuration,SSIM config"
+	  "uration,SSIM configuration,SSIM configuration,Module setup,Module setup,Module setup"
+	}
+      }
+      RTWSystemCode	      "Auto"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      FunctionWithSeparateData off
+      Opaque		      off
+      MaskHideContents	      off
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Setup"
+      SID		      "82"
+      Ports		      []
+      Position		      [37, 54, 77, 114]
+      ZOrder		      48
+      RequestExecContextInheritance off
+      System {
+	Name			"Setup"
+	Location		[10, 10, 503, 431]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  S-Function
+	  Name			  "FPGA Setup"
+	  SID			  "129"
+	  Ports			  []
+	  Position		  [20, 20, 165, 80]
+	  ZOrder		  52
+	  FunctionName		  "sg_fpga_setup_sf_a2"
+	  Parameters		  "boardType, bitsreamBytes, pciSlot, rearIO,pull,vio,dir"
+	  EnableBusSupport	  off
+	  MaskType		  "setup_fpga_a2"
+	  MaskDescription	  "Speedgoat driver block<br>FPGA-based I/O module - FPGA setup<br><br>&copy; 2006 - 2014, Speedgoa"
+	  "t GmbH, www.speedgoat.ch"
+	  MaskHelp		  "Documentation for this block is not available."
+	  MaskPromptString	  "FPGA module identifier:|FPGA-based I/O module:|PCI slot (-1: autosearch):|FPGA bitstream:|Condi"
+	  "tioning module|pull resistor|I/O voltage|pull resistor|I/O voltage|pull resistor|I/O voltage|pull resistor|I/O volt"
+	  "age|pull resistor|I/O voltage|pull resistor|I/O voltage|pull resistor|I/O voltage|Plug-in module installed:"
+	  MaskStyleString	  "popup(1|2|3|4|5|6|7|8|9|10),popup(Please select...|IO331),edit,edit,popup(No plug-in|IO331_21),p"
+	  "opup(pull-up 3.3V|pull-up 5.0V|pull-down|floating),popup(3.3V|5.0V),popup(pull-up 3.3V|pull-up 5.0V|pull-down|float"
+	  "ing),popup(3.3V|5.0V),popup(pull-up 3.3V|pull-up 5.0V|pull-down|floating),popup(3.3V|5.0V),popup(pull-up 3.3V|pull-"
+	  "up 5.0V|pull-down|floating),popup(3.3V|5.0V),popup(pull-up 3.3V|pull-up 5.0V|pull-down|floating),popup(3.3V|5.0V),p"
+	  "opup(pull-up 3.3V|pull-up 5.0V|pull-down|floating),popup(3.3V|5.0V),popup(pull-up 3.3V|pull-up 5.0V|pull-down|float"
+	  "ing),popup(3.3V|5.0V),popup(No plug-in|Option 1 (64 TTL)|Option 2 (30 RS422)|Option 3 (30 LVDS)|Option 5 (2 AD)|Opt"
+	  "ion 6 (16 AD\\,  8 DA\\, 16 TTL))"
+	  MaskVariables		  "id=@1;board=@2;pciSlot=@3;bitstreamFile=&4;rearIO=@5;PullRPort0=@6;VioPort0=@7;PullRPort1=@8;VioP"
+	  "ort1=@9;PullRPort2=@10;VioPort2=@11;PullRPort3=@12;VioPort3=@13;PullRPort4=@14;VioPort4=@15;PullRPort5=@16;VioPort5"
+	  "=@17;PullRPort6=@18;VioPort6=@19;frontIO=@20;"
+	  MaskTunableValueString  "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+	  MaskCallbackString	  "||||sg_fpga_setup_m_a2(2);|sg_fpga_setup_m_a2(2);|sg_fpga_setup_m_a2(2);|sg_fpga_setup_m_a2(2"
+	  ");|sg_fpga_setup_m_a2(2);|sg_fpga_setup_m_a2(2);|sg_fpga_setup_m_a2(2);|sg_fpga_setup_m_a2(2);|sg_fpga_setup_m_a2(2"
+	  ");|sg_fpga_setup_m_a2(2);|sg_fpga_setup_m_a2(2);|sg_fpga_setup_m_a2(2);|sg_fpga_setup_m_a2(2);|sg_fpga_setup_m_a2(2"
+	  ");|sg_fpga_setup_m_a2(2);|"
+	  MaskEnableString	  "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on,on,off,off,off,off,off,off,off,off,off,off,off,off,off,off,on"
+	  MaskToolTipString	  "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+	  MaskInitialization	  "bitsreamBytes = NaN;\nboardType = NaN;\npull = 0;\nvio = 0;\ndir = 0;\n\n[boardType, bitsream"
+	  "Bytes, vio, pull, dir] = sg_fpga_setup_m_a2(1, bitstreamFile, id, pciSlot,...\n PullRPort0, PullRPort1, PullRPort2,"
+	  " PullRPort3, PullRPort4, PullRPort5, PullRPort6,...\n VioPort0, VioPort1, VioPort2, VioPort3, VioPort4, VioPort5, V"
+	  "ioPort6);"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nFPGA-based I/O module\\nFPGA setup\\nModule: 1');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|Please select...|-1|speedgoat_IO331_default|No plug-in|pull-down|5.0V|pull-down|5.0V|pull-down"
+	  "|5.0V|pull-down|5.0V|pull-down|5.0V|pull-down|5.0V|pull-down|5.0V|No plug-in"
+	  MaskTabNameString	  "Module setup,Module setup,Module setup,Bitstream,Conditioning plug-in,Conditioning plug-in,Con"
+	  "ditioning plug-in,Conditioning plug-in,Conditioning plug-in,Conditioning plug-in,Conditioning plug-in,Conditioning "
+	  "plug-in,Conditioning plug-in,Conditioning plug-in,Conditioning plug-in,Conditioning plug-in,Conditioning plug-in,Co"
+	  "nditioning plug-in,Conditioning plug-in,Front plug-in"
+	}
+      }
+      RTWSystemCode	      "Auto"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      FunctionWithSeparateData off
+      Opaque		      off
+      MaskHideContents	      off
+    }
+    Annotation {
+      Name		      "Speedgoat FPGA based IO modules Simulink Real-Time driver library"
+      Position		      [33, 17]
+      HorizontalAlignment     "left"
+      FontName		      "Arial Narrow"
+      FontSize		      12
+      FontWeight	      "bold"
+    }
+  }
+}

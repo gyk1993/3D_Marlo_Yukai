@@ -1,0 +1,151 @@
+%implements s54_b0_8l9fi_Update "C"
+
+%function UpdateForTID(block, system, tid) Output
+%if tid == 0
+%assign ::GlobalCurrentTID = 0
+%<SLibCGIRAccessLocalDWork(337, 0)> %% ForEach_itr_n
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+int32_T i;
+%closefile localVarDecl
+%assign tlcUpdateFcnOfS39B62 = OpaqueTLCBlockFcn("Update", 39, 62, 9, 75)
+%assign tlcUpdateFcnOfS39B63 = OpaqueTLCBlockFcn("Update", 39, 63, 9, 75)
+%assign tlcUpdateFcnOfS4B2 = OpaqueTLCBlockFcn("Update", 4, 2, 9, 75)
+/* Update for UnitDelay: '<S13>/Unit Delay1' */
+Walking01_withElmos_DW.UnitDelay1_DSTATE[0] = Walking01_withElmos_B.DataTypeConversion57;
+Walking01_withElmos_DW.UnitDelay1_DSTATE[1] = Walking01_withElmos_B.DataTypeConversion81;
+Walking01_withElmos_DW.UnitDelay1_DSTATE[2] = Walking01_withElmos_B.DataTypeConversion9;
+Walking01_withElmos_DW.UnitDelay1_DSTATE[3] = Walking01_withElmos_B.DataTypeConversion33;
+Walking01_withElmos_DW.UnitDelay1_DSTATE[4] = Walking01_withElmos_B.DataTypeConversion104;
+Walking01_withElmos_DW.UnitDelay1_DSTATE[5] = Walking01_withElmos_B.DataTypeConversion119;
+Walking01_withElmos_DW.UnitDelay1_DSTATE[6] = Walking01_withElmos_ConstB.DataTypeConversion141[0];
+Walking01_withElmos_DW.UnitDelay1_DSTATE[7] = Walking01_withElmos_ConstB.DataTypeConversion141[1];
+Walking01_withElmos_DW.UnitDelay1_DSTATE[8] = Walking01_withElmos_ConstB.DataTypeConversion141[2];
+/* Update for UnitDelay: '<S14>/Unit Delay' */
+Walking01_withElmos_DW.UnitDelay_DSTATE_n = Walking01_withElmos_B.LogicalOperator2;
+/* Update for UnitDelay: '<S13>/Unit Delay' */
+memcpy(&Walking01_withElmos_DW.UnitDelay_DSTATE[0], &Walking01_withElmos_B.Rollover[0], 9U * sizeof(real_T));
+/* Update for UnitDelay: '<S13>/Unit Delay2' */
+for (i = 0; i < 6; i++) {
+    Walking01_withElmos_DW.UnitDelay2_DSTATE[i] = Walking01_withElmos_B.IncCalTick[i];
+}
+/* End of Update for UnitDelay: '<S13>/Unit Delay2' */
+
+/* Update for Iterator SubSystem: '<S13>/EncoderFilters' */
+for (ForEach_itr_n = 0; ForEach_itr_n < 19; ForEach_itr_n++) {
+    /* Update for UnitDelay: '<S24>/Unit Delay' */
+    Walking01_withElmos_DW.CoreSubsys[ForEach_itr_n].UnitDelay_DSTATE = Walking01_withElmos_B.CoreSubsys[ForEach_itr_n].DiscreteStateSpace;
+%<tlcUpdateFcnOfS4B2>\
+}
+/* End of Update for SubSystem: '<S13>/EncoderFilters' */
+
+/* Update for UnitDelay: '<S13>/Unit Delay4' */
+memcpy(&Walking01_withElmos_DW.UnitDelay4_DSTATE[0], &Walking01_withElmos_B.sf_ComputeEulerAngles.R0[0], 9U * sizeof(real_T));
+/* Update for UnitDelay: '<S13>/Unit Delay3' */
+Walking01_withElmos_DW.UnitDelay3_DSTATE[0] = Walking01_withElmos_B.sf_ComputeEulerAngles.YawRollover[0];
+Walking01_withElmos_DW.UnitDelay3_DSTATE[1] = Walking01_withElmos_B.sf_ComputeEulerAngles.YawRollover[1];
+%<tlcUpdateFcnOfS39B62>\
+%<tlcUpdateFcnOfS39B63>\
+/* Update for UnitDelay: '<S212>/Delay Input1' */
+Walking01_withElmos_DW.DelayInput1_DSTATE = Walking01_withElmos_B.Compare;
+/* Update for UnitDelay: '<S213>/Delay Input1' */
+Walking01_withElmos_DW.DelayInput1_DSTATE_c = Walking01_withElmos_B.Compare_l;
+/* Update for UnitDelay: '<S200>/Unit Delay' */
+Walking01_withElmos_DW.UnitDelay_DSTATE_d = Walking01_withElmos_B.s;
+/* Update for UnitDelay: '<S200>/Unit Delay1' */
+Walking01_withElmos_DW.UnitDelay1_DSTATE_g = Walking01_withElmos_B.ErrorCount;
+/* Update for DiscreteFilter: '<S21>/Discrete Filter' */
+memcpy(&Walking01_withElmos_DW.DiscreteFilter_states[0], &Walking01_withElmos_DW.DiscreteFilter_tmp[0], 30U * sizeof(real_T));
+/* Update for UnitDelay: '<S1>/Unit Delay' */
+Walking01_withElmos_DW.UnitDelay_DSTATE_k = Walking01_withElmos_B.SafetyCountOut;
+/* Update for UnitDelay: '<S1>/Unit Delay1' */
+Walking01_withElmos_DW.UnitDelay1_DSTATE_h[0] = Walking01_withElmos_B.sf_Chart.FaultDetected;
+Walking01_withElmos_DW.UnitDelay1_DSTATE_h[1] = Walking01_withElmos_B.sf_Chart_b.FaultDetected;
+Walking01_withElmos_DW.UnitDelay1_DSTATE_h[2] = Walking01_withElmos_B.FaultDetected_n;
+Walking01_withElmos_DW.UnitDelay1_DSTATE_h[3] = Walking01_withElmos_B.FaultDetected;
+/* Update for Delay: '<S4>/Resettable Delay' */
+Walking01_withElmos_DW.icLoad = 0U;
+Walking01_withElmos_DW.ResettableDelay_DSTATE = Walking01_withElmos_B.Bias;
+%closefile cfgTxt
+%<cfgTxt>
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Update(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(9, 75, fcnProtoType)>
+%<LibSetSystemField(system, "CachedUpdate0LocalVars", localVarDecl)>
+%assign ::GlobalCurrentTID = []
+%endif
+%if tid == 1
+%assign ::GlobalCurrentTID = 1
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+/* Update for RateTransition: '<S5>/Rate Transition2' */
+Walking01_withElmos_DW.RateTransition2_Buffer0[0] = Walking01_withElmos_B.sf_ComputeEulerAngles_i.ZYX[0];
+Walking01_withElmos_DW.RateTransition2_Buffer0[1] = Walking01_withElmos_B.sf_ComputeEulerAngles_i.ZYX[1];
+Walking01_withElmos_DW.RateTransition2_Buffer0[2] = Walking01_withElmos_B.sf_ComputeEulerAngles_i.ZYX[2];
+/* Update for RateTransition: '<S5>/Rate Transition1' */
+Walking01_withElmos_DW.RateTransition1_Buffer0[0] = Walking01_withElmos_B.sf_ComputeEulerAngles_i.dZYX[0];
+Walking01_withElmos_DW.RateTransition1_Buffer0[1] = Walking01_withElmos_B.sf_ComputeEulerAngles_i.dZYX[1];
+Walking01_withElmos_DW.RateTransition1_Buffer0[2] = Walking01_withElmos_B.sf_ComputeEulerAngles_i.dZYX[2];
+/* Update for Atomic SubSystem: '<S5>/SerialInterfaces' */
+/* Update for UnitDelay: '<S124>/Unit Delay2' */
+memcpy(&Walking01_withElmos_DW.UnitDelay2_DSTATE_o[0], &Walking01_withElmos_B.sf_ComputeEulerAngles_i.R0[0], 9U * sizeof(real_T));
+/* Update for UnitDelay: '<S124>/Unit Delay1' */
+Walking01_withElmos_DW.UnitDelay1_DSTATE_c[0] = Walking01_withElmos_B.sf_ComputeEulerAngles_i.YawRollover[0];
+Walking01_withElmos_DW.UnitDelay1_DSTATE_c[1] = Walking01_withElmos_B.sf_ComputeEulerAngles_i.YawRollover[1];
+/* End of Update for SubSystem: '<S5>/SerialInterfaces' */
+
+/* Update for RateTransition: '<S1>/Rate Transition1' */
+Walking01_withElmos_DW.RateTransition1_Buffer0_i = Walking01_withElmos_B.GetOverloadCounter2;
+%closefile cfgTxt
+%<cfgTxt>
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Update(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(9, 76, fcnProtoType)>
+%assign ::GlobalCurrentTID = []
+%endif
+%if tid == 2
+%assign ::GlobalCurrentTID = 2
+%<SLibCGIRAccessLocalDWork(336, 2)> %% ForEach_itr
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign tlcUpdateFcnOfS25B2 = OpaqueTLCBlockFcn("Update", 25, 2, 9, 77)
+/* Update for Iterator SubSystem: '<S13>/IMUFilters' */
+for (ForEach_itr = 0; ForEach_itr < 3; ForEach_itr++) {
+    /* Update for UnitDelay: '<S117>/Unit Delay' */
+    Walking01_withElmos_DW.CoreSubsys_p[ForEach_itr].UnitDelay_DSTATE = Walking01_withElmos_B.CoreSubsys_p[ForEach_itr].Switch;
+%<tlcUpdateFcnOfS25B2>\
+    /* Update for RateTransition: '<S117>/Rate Transition1' */
+    Walking01_withElmos_DW.CoreSubsys_p[ForEach_itr].RateTransition1_Buffer[Walking01_withElmos_DW.CoreSubsys_p[ForEach_itr].RateTransition1_ActiveBufIdx == 0] = Walking01_withElmos_B.CoreSubsys_p[ForEach_itr].sf_AnomalyDetection.q_clean;
+    Walking01_withElmos_DW.CoreSubsys_p[ForEach_itr].RateTransition1_ActiveBufIdx = (int8_T)(Walking01_withElmos_DW.CoreSubsys_p[ForEach_itr].RateTransition1_ActiveBufIdx == 0);
+    /* Update for RateTransition: '<S117>/Rate Transition2' */
+    Walking01_withElmos_DW.CoreSubsys_p[ForEach_itr].RateTransition2_Buffer[Walking01_withElmos_DW.CoreSubsys_p[ForEach_itr].RateTransition2_ActiveBufIdx == 0] = Walking01_withElmos_B.CoreSubsys_p[ForEach_itr].Switch;
+    Walking01_withElmos_DW.CoreSubsys_p[ForEach_itr].RateTransition2_ActiveBufIdx = (int8_T)(Walking01_withElmos_DW.CoreSubsys_p[ForEach_itr].RateTransition2_ActiveBufIdx == 0);
+    /* Update for RateTransition: '<S117>/Rate Transition8' */
+    Walking01_withElmos_DW.CoreSubsys_p[ForEach_itr].RateTransition8_Buffer[Walking01_withElmos_DW.CoreSubsys_p[ForEach_itr].RateTransition8_ActiveBufIdx == 0] = Walking01_withElmos_B.CoreSubsys_p[ForEach_itr].sf_AnomalyDetection.ErrorCount;
+    Walking01_withElmos_DW.CoreSubsys_p[ForEach_itr].RateTransition8_ActiveBufIdx = (int8_T)(Walking01_withElmos_DW.CoreSubsys_p[ForEach_itr].RateTransition8_ActiveBufIdx == 0);
+}
+/* End of Update for SubSystem: '<S13>/IMUFilters' */
+
+/* Update for RateTransition: '<S1>/Rate Transition' */
+Walking01_withElmos_DW.RateTransition_Buffer0 = Walking01_withElmos_B.GetOverloadCounter1;
+%closefile cfgTxt
+%<cfgTxt>
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Update(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(9, 77, fcnProtoType)>
+%assign ::GlobalCurrentTID = []
+%endif
+%endfunction

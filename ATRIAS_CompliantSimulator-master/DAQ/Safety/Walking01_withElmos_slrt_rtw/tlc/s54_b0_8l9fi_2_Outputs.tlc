@@ -1,0 +1,54 @@
+%implements s54_b0_8l9fi_2_Outputs "C"
+
+%function Outputs(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+real32_T ys[3];
+uint32_T rtb_TmpSignalConversionAtSFun_d[3];
+%closefile localVarDecl
+%<SLibGenerateExtModeOutput(system)>
+/* SignalConversion: '<S43>/TmpSignal ConversionAt SFunction Inport1' */
+rtb_TmpSignalConversionAtSFun_d[0] = rtu_u;
+rtb_TmpSignalConversionAtSFun_d[1] = rtu_u_f;
+rtb_TmpSignalConversionAtSFun_d[2] = rtu_u_a;
+/* MATLAB Function 'DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/IMU_Medulla/TypecastAndCast1': '<S43>:1' */
+/* '<S43>:1:3' ys = typecast(u, 'single'); */
+memcpy(&ys[0], &rtb_TmpSignalConversionAtSFun_d[0], (size_t)3 * sizeof(real32_T));
+/* '<S43>:1:4' y  = double(ys); */
+localB->y[0] = ys[0];
+localB->y[1] = ys[1];
+localB->y[2] = ys[2];
+%closefile cfgTxt
+%<cfgTxt>
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[2].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("Output", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, SLibSystemFcnPeriodicRateGrouping(rtmArgSys, "Output"))
+%<SLibCG_AccessArg(2, 0, 0)>
+%endif
+%if SLibCG_ArgAccessed(2, 0, 0)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "Output", rtmArgSys.CurrentTID, SLibSystemFcnPeriodicRateGrouping(rtmArgSys, "Output"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface))
+%<SLibCG_UndoAccessArg(2, 0, 0)>
+%endif
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Walking01_with_TypecastAndCast1(\
+%assign comma = ""
+%if SLibCG_ArgAccessed(2, 0, 0)
+%<comma>%<tSimStructType> * const %<tSimStruct>\
+%assign comma = ", "
+%endif
+%<comma>uint32_T rtu_u\
+%assign comma = ", "
+%<comma>uint32_T rtu_u_f\
+%assign comma = ", "
+%<comma>uint32_T rtu_u_a\
+%assign comma = ", "
+%<comma>B_TypecastAndCast1_Walking01__T *localB\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(2, 0, fcnProtoType)>
+%<LibSetSystemField(system, "CachedOutputLocalVars", localVarDecl)>
+%endfunction

@@ -1,0 +1,41 @@
+%implements s54_b0_8l9fi_ModuleConstants "C"
+
+%function ModuleConstants(block) Output
+
+
+/* Named constants for Chart: '<S34>/Chart' */
+#define Walking01_IN_SwitchOnDisabled_e ((uint8_T)3U)
+#define Walking01__IN_NO_ACTIVE_CHILD_j ((uint8_T)0U)
+#define Walking01__IN_ReadyToSwitchOn_n ((uint8_T)2U)
+#define Walking01_w_IN_Initialization_e ((uint8_T)2U)
+#define Walking01_wit_IN_FaultRunning_g ((uint8_T)1U)
+#define Walking01_withElmo_IN_Running_j ((uint8_T)3U)
+#define Walking01_withElmos_IN_Fault_d ((uint8_T)1U)
+#define Walking01_withElmos_IN_Start1_d ((uint8_T)4U)
+
+/* Named constants for Chart: '<S202>/StateLogic' */
+#define Walking01_w_event_ControlUpdate (1)
+#define Walking01_withE_event_LegImpact (2)
+#define Walking01_withEl_IN_RightDouble ((uint8_T)4U)
+#define Walking01_withEl_IN_RightSingle ((uint8_T)5U)
+#define Walking01_withElm_IN_LeftDouble ((uint8_T)1U)
+#define Walking01_withElm_IN_LeftSingle ((uint8_T)2U)
+#define Walking01_withElm_IN_Transition ((uint8_T)3U)
+#define Walking01_withElm_event_LegSwap (0)
+#define Walking01_withElmo_IN_Injection ((uint8_T)1U)
+#define Walking01_withElmo_IN_RightWait ((uint8_T)6U)
+#define Walking01_withElmo_IN_Running_e ((uint8_T)2U)
+#define Walking01_withElmo_IN_Unchanged ((uint8_T)2U)
+#define Walking01_withElmos_IN_Changed ((uint8_T)1U)
+#define Walking01_withElmos_IN_Early ((uint8_T)1U)
+#define Walking01_withElmos_IN_Error_a ((uint8_T)1U)
+#define Walking01_withElmos_IN_Idle ((uint8_T)1U)
+#define Walking01_withElmos_IN_Late ((uint8_T)2U)
+#define Walking01_withElmos_IN_LeftWait ((uint8_T)3U)
+#define Walking01_withElmos_IN_Mid ((uint8_T)3U)
+#define Walking01_withElmos_IN_Posing ((uint8_T)2U)
+#define Walking01_withElmos_IN_Reset ((uint8_T)2U)
+#define Walking01_withElmos_IN_Run_k ((uint8_T)3U)
+#define Walking01_withElmos_IN_Wait ((uint8_T)4U)
+#define Walking01_withElmos_IN_Walking ((uint8_T)4U)
+%endfunction

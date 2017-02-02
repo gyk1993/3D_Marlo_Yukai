@@ -1,0 +1,680 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>IO30X, IO31X &gt; I/O pin mapping &gt; IO303</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+     .p_Heading1{ color: #147EC2;
+    font-size: 1.455em !important;
+     border-bottom: 1px solid #E0E1E1;
+    color: #147EC2;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 20px;
+    padding-bottom: 4px;}
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "pins_io303.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<div id="breadcrumbs" style="display:none"><a href="io30x.htm">IO30X, IO31X</a> &gt; <a href="i_o_pin_mapping_io30x.htm">I/O pin mapping</a></div>
+
+<div id="printheader"><h1 class="p_Heading1"><span class="f_Heading1">IO303</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
+  <tr valign="bottom">
+    <td align="left" valign="bottom" class="topichead">
+   
+   <h1 class="p_Heading1"><span class="f_Heading1">IO303</span></h1>
+
+    
+  </tr>  
+</table>
+<!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<h2 class="p_Heading2"><span class="f_Heading2">Lower channel group setup:</span></h2>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:114px; background-color:#177cbd; padding:2px; border:solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold; color: #ffffff;">I/O line number</span></p>
+</td>
+<td style="vertical-align:top; width:114px; background-color:#177cbd; padding:2px; border:solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold; color: #ffffff;">Pin on Terminal Board</span></p>
+</td>
+<td style="vertical-align:top; width:114px; background-color:#177cbd; padding:2px; border:solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold; color: #ffffff;">Direction Vector Value</span></p>
+<p><span style="font-size: 7pt; color: #ffffff;">1 = Output</span></p>
+<p><span style="font-size: 7pt; color: #ffffff;">0 = Input</span></p>
+</td>
+<td style="vertical-align:top; width:114px; background-color:#177cbd; padding:2px; border:solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold; color: #ffffff;">Functionality implemented on FPGA bitstream</span></p>
+</td>
+<td style="vertical-align:top; width:114px; background-color:#177cbd; padding:2px; border:solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold; color: #ffffff;">Transceiver type</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>1</p>
+<p>2</p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>1</p>
+<p>2</p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">1</span></p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">PWM1 – A</span></p>
+<p><span style="font-size: 9pt;">PWM1 – B</span></p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">TTL</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>3</p>
+<p>4</p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>3</p>
+<p>4</p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">1</span></p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">PWM1 - Trigger</span></p>
+<p><span style="font-size: 9pt;">PWM2 – A</span></p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">TTL</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>5</p>
+<p>6</p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>5</p>
+<p>6</p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">1</span></p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">PWM2 – B</span></p>
+<p><span style="font-size: 9pt;">PWM2 - Trigger</span></p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">TTL</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>7</p>
+<p>8</p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>7</p>
+<p>8</p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">1</span></p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">PWM3 – A</span></p>
+<p><span style="font-size: 9pt;">PWM3 – B</span></p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">TTL</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>9</p>
+<p>10</p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>9</p>
+<p>10</p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">1</span></p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">PWM3 - Trigger</span></p>
+<p><span style="font-size: 9pt;">Negation Output</span></p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">TTL</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>11</p>
+<p>12</p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>11</p>
+<p>12</p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt; font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">CAP1 </span></p>
+<p><span style="font-size: 9pt;">CAP2 </span></p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">TTL</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>13</p>
+<p>14</p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>13</p>
+<p>14</p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt; font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">CAP3 </span></p>
+<p><span style="font-size: 9pt;">Interrupt Input</span></p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">TTL</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>15</p>
+<p>16</p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>15</p>
+<p>16</p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt; font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Negation Input</span></p>
+<p><span style="font-size: 9pt;">Reserved</span></p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">TTL</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p><span style="font-family: 'Times New Roman';">-</span></p>
+<p><span style="font-family: 'Times New Roman';">-</span></p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>17</p>
+<p>18</p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">No value</span></p>
+<p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Ground</span></p>
+<p><span style="font-size: 9pt;">Ground</span></p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="color: #000000;">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>17</p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>19</p>
+<p>20</p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt; font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">QAD1 – A (+)</span></p>
+<p><span style="font-size: 9pt;">QAD1 – A (-)</span></p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">RS422</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>18</p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>21</p>
+<p>22</p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt; font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">QAD1 – B (+)</span></p>
+<p><span style="font-size: 9pt;">QAD1 – B (-)</span></p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">RS422</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>19</p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>23</p>
+<p>24</p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt; font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">QAD1 – C/Index (+)</span></p>
+<p><span style="font-size: 9pt;">QAD1 – C/Index (-)</span></p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">RS422</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>20</p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>25</p>
+<p>26</p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt; font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">QAD2 – A (+)</span></p>
+<p><span style="font-size: 9pt;">QAD2 – A (-)</span></p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">RS422</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>21</p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>27</p>
+<p>28</p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt; font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">QAD2 – B (+)</span></p>
+<p><span style="font-size: 9pt;">QAD2 – B (-)</span></p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">RS422</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>22</p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>29</p>
+<p>30</p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt; font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">QAD2 – C/Index (+)</span></p>
+<p><span style="font-size: 9pt;">QAD2 – C/Index (-)</span></p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">RS422</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>23</p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>31</p>
+<p>32</p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt; font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">QAD3 – A (+)</span></p>
+<p><span style="font-size: 9pt;">QAD3 – A (-)</span></p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">RS422</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>24</p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>33</p>
+<p>34</p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt; font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">QAD3 – B (+)</span></p>
+<p><span style="font-size: 9pt;">QAD3 – B (-)</span></p>
+</td>
+<td style="vertical-align:middle; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">RS422</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Upper channel group setup:</span></h2>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:114px; background-color:#177cbd; padding:2px; border:solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold; color: #ffffff;">I/O line number</span></p>
+</td>
+<td style="vertical-align:top; width:114px; background-color:#177cbd; padding:2px; border:solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold; color: #ffffff;">Pin on Terminal Board</span></p>
+</td>
+<td style="vertical-align:top; width:114px; background-color:#177cbd; padding:2px; border:solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold; color: #ffffff;">Vector Value</span></p>
+<p><span style="font-size: 7pt; color: #ffffff;">1 = Output</span></p>
+<p><span style="font-size: 7pt; color: #ffffff;">0 = Input</span></p>
+</td>
+<td style="vertical-align:top; width:114px; background-color:#177cbd; padding:2px; border:solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold; color: #ffffff;">Functionality implemented on FPGA bitstream</span></p>
+</td>
+<td style="vertical-align:top; width:114px; background-color:#177cbd; padding:2px; border:solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold; color: #ffffff;">Transceiver type</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p><span style="font-family: 'Times New Roman';">-</span></p>
+<p><span style="font-family: 'Times New Roman';">-</span></p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>35</p>
+<p>36</p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">No value</span></p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">Ground</span></p>
+<p><span style="font-size: 9pt;">Ground</span></p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><br />
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>25</p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>37</p>
+<p>38</p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt; font-family: 'Times New Roman';">0</span></p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">QAD3 – C/Index (+)</span></p>
+<p><span style="font-size: 9pt;">QAD3 – C/Index (-)</span></p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">RS422</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>26</p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>39</p>
+<p>40</p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">0 / 1</span></p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO1 (+)</span></p>
+<p><span style="font-size: 9pt;">DIO1 (-)</span></p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">RS422</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>27</p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>41</p>
+<p>42</p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">0 / 1</span></p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO2 (+)</span></p>
+<p><span style="font-size: 9pt;">DIO2 (-)</span></p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">RS422</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>28</p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>43</p>
+<p>44</p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">0 / 1</span></p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO3 (+)</span></p>
+<p><span style="font-size: 9pt;">DIO3 (-)</span></p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">RS422</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>29</p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>45</p>
+<p>46</p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">0 / 1</span></p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO4 (+)</span></p>
+<p><span style="font-size: 9pt;">DIO4 (-)</span></p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">RS422</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>30</p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>47</p>
+<p>48</p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">0 / 1</span></p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO5 (+)</span></p>
+<p><span style="font-size: 9pt;">DIO5 (-)</span></p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">RS422</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>31</p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>49</p>
+<p>50</p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">0 / 1</span></p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO6 (+)</span></p>
+<p><span style="font-size: 9pt;">DIO6 (-)</span></p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">RS422</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>32</p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>51</p>
+<p>52</p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">0 / 1</span></p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO7 (+)</span></p>
+<p><span style="font-size: 9pt;">DIO7 (-)</span></p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">RS422</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>33</p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>53</p>
+<p>54</p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">0 / 1</span></p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO8 (+)</span></p>
+<p><span style="font-size: 9pt;">DIO8 (-)</span></p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">RS422</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>34</p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>55</p>
+<p>56</p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">0 / 1</span></p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO9 (+)</span></p>
+<p><span style="font-size: 9pt;">DIO9 (-)</span></p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">RS422</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>35</p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>57</p>
+<p>58</p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">0 / 1</span></p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO10 (+)</span></p>
+<p><span style="font-size: 9pt;">DIO10 (-)</span></p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">RS422</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>36</p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>59</p>
+<p>60</p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">0 / 1</span></p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO11 (+)</span></p>
+<p><span style="font-size: 9pt;">DIO11 (-)</span></p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">RS422</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>37</p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>61</p>
+<p>62</p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">0 / 1</span></p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO12 (+)</span></p>
+<p><span style="font-size: 9pt;">DIO12 (-)</span></p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">RS422</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>38</p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>63</p>
+<p>64</p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">0 / 1</span></p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO13 (+)</span></p>
+<p><span style="font-size: 9pt;">DIO13 (-)</span></p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">RS422</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>39</p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>65</p>
+<p>66</p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">0 / 1</span></p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO14 (+)</span></p>
+<p><span style="font-size: 9pt;">DIO14 (-)</span></p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">RS422</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>40</p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p>67</p>
+<p>68</p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">0 / 1</span></p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">DIO15 (+)</span></p>
+<p><span style="font-size: 9pt;">DIO15 (-)</span></p>
+</td>
+<td style="vertical-align:top; width:114px; height:31px; padding:2px; border:solid 1px #000000;"><p style="text-align: center;"><span style="font-size: 9pt;">RS422</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+{
+ if (document.all) setTimeout(function() {nsrInit();},20); 
+    else nsrInit();
+ } 
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

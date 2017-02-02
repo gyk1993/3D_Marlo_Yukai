@@ -1,0 +1,43 @@
+%implements s54_b0_8l9fi_1_InitializeConditions "C"
+
+%function InitializeConditions(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+localDW->sfEvent = Walking01_withElmo_CALL_EVENT_i;
+localDW->temporalCounter_i1 = 0U;
+localDW->is_Run = Walking01_wi_IN_NO_ACTIVE_CHILD;
+localDW->is_active_c9_Walking01_withElmo = 0U;
+localDW->is_c9_Walking01_withElmos = Walking01_wi_IN_NO_ACTIVE_CHILD;
+localDW->q_last = 0.0;
+localDW->dq_last = 0.0;
+localDW->Counter_last = 0.0;
+localB->q_clean = 0.0;
+localB->ErrorCount = 0.0;
+%closefile cfgTxt
+%<cfgTxt>
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[1].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("Initialize", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, SLibSystemFcnPeriodicRateGrouping(rtmArgSys, "Initialize"))
+%<SLibCG_AccessArg(1, 2, 0)>
+%endif
+%if SLibCG_ArgAccessed(1, 2, 0)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "Initialize", rtmArgSys.CurrentTID, SLibSystemFcnPeriodicRateGrouping(rtmArgSys, "Initialize"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface))
+%<SLibCG_UndoAccessArg(1, 2, 0)>
+%endif
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Walking01_AnomalyDetection_Init(\
+%assign comma = ""
+%if SLibCG_ArgAccessed(1, 2, 0)
+%<comma>%<tSimStructType> * const %<tSimStruct>\
+%assign comma = ", "
+%endif
+%<comma>B_AnomalyDetection_Walking01__T *localB\
+%assign comma = ", "
+%<comma>DW_AnomalyDetection_Walking01_T *localDW\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(1, 2, fcnProtoType)>
+%endfunction

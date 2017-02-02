@@ -1,0 +1,9 @@
+#ifndef _ATRIAS3D_FootPositionJacobians_Right_h_
+#define _ATRIAS3D_FootPositionJacobians_Right_h_
+
+#include <math.h>
+
+void ATRIAS3D_FootPositionJacobians_Right(const double q[13], const double dq[13], double J4R[13][3], double J4L[13][3], double dJ4R[3], double dJ4L[3]) ;
+
+
+#endif /* _ATRIAS3D_FootPositionJacobians_Right_h_ */

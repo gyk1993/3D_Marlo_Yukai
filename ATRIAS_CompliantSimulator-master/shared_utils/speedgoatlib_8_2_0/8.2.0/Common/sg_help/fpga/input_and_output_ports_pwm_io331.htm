@@ -1,0 +1,210 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>IO331 &gt; Driver configuration &gt; PWM generation driver block &gt; Input and output ports</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+     .p_Heading1{ color: #147EC2;
+    font-size: 1.455em !important;
+     border-bottom: 1px solid #E0E1E1;
+    color: #147EC2;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 20px;
+    padding-bottom: 4px;}
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "input_and_output_ports_pwm_io331.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<div id="breadcrumbs" style="display:none"><a href="io331.htm">IO331</a> &gt; <a href="driver_configuration_io331.htm">Driver configuration</a> &gt; <a href="pwm_io331.htm">PWM generation driver block</a></div>
+
+<div id="printheader"><h1 class="p_Heading1"><span class="f_Heading1">Input and output ports</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
+  <tr valign="bottom">
+    <td align="left" valign="bottom" class="topichead">
+   
+   <h1 class="p_Heading1"><span class="f_Heading1">Input and output ports</span></h1>
+
+    
+  </tr>  
+</table>
+<!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<p style="text-align: justify;">This driver block has up to 6 input ports depending on which input ports are enabled in the dialog fields of the PWM generation driver block, and contains no output ports. The possible input ports are:</p>
+<p style="text-align: justify;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table class="tbl" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:25%; background-color:#177cbd; padding:4px;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold; color: #ffffff;">Input port</span></p>
+</td>
+<td style="vertical-align:top; width:433px; background-color:#177cbd; padding:4px;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold; color: #ffffff;">Description</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:25%; padding:4px;"><p style="margin: 8px 0px 8px 0px;">A</p>
+</td>
+<td style="vertical-align:top; width:433px; padding:4px;"><p style="margin: 8px 0px 8px 0px;">The A On compare value.</p>
+<p>This port is only active when the PWM pattern is symmetric (centered on half the period). A Off will be computed by the driver to ensure the symmetric PWM generation.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:25%; background-color:#f6f6f6; padding:4px;"><p style="margin: 8px 0px 8px 0px;">B</p>
+</td>
+<td style="vertical-align:top; width:433px; background-color:#f6f6f6; padding:4px;"><p style="margin: 8px 0px 8px 0px;">The B On compare value.</p>
+<p>This port is only active when the PWM pattern is symmetric (centered on half the period). B Off will be computed by the driver to ensure the symmetric PWM generation.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:25%; padding:4px;"><p style="margin: 8px 0px 8px 0px;">A On</p>
+</td>
+<td style="vertical-align:top; width:433px; padding:4px;"><p style="margin: 8px 0px 8px 0px;">The A On compare value.</p>
+<p style="margin: 8px 0px 8px 0px;">This port is only active when the PWM pattern is asymmetric.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:25%; background-color:#f6f6f6; padding:4px;"><p style="margin: 8px 0px 8px 0px;">A Off</p>
+</td>
+<td style="vertical-align:top; width:433px; background-color:#f6f6f6; padding:4px;"><p style="margin: 8px 0px 8px 0px;">The A Off compare value.</p>
+<p style="margin: 8px 0px 8px 0px;">This port is only active when the PWM pattern is asymmetric.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:25%; padding:4px;"><p style="margin: 8px 0px 8px 0px;">B On</p>
+</td>
+<td style="vertical-align:top; width:433px; padding:4px;"><p style="margin: 8px 0px 8px 0px;">The B On compare value.</p>
+<p style="margin: 8px 0px 8px 0px;">This port is only active when the PWM pattern is asymmetric.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:25%; background-color:#f6f6f6; padding:4px;"><p style="margin: 8px 0px 8px 0px;">B Off</p>
+</td>
+<td style="vertical-align:top; width:433px; background-color:#f6f6f6; padding:4px;"><p style="margin: 8px 0px 8px 0px;">The B Off compare value.</p>
+<p style="margin: 8px 0px 8px 0px;">This port is only active when the PWM pattern is asymmetric.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>All input ports are of data type double. The widths of the input ports have to be equal to the number of PWM channels as defined in dialog field parameter “channel vector” of this driver block. Each element can be in the range from 1 to 2^32-1.</p>
+<p>&nbsp;</p>
+<p>Note: It is the responsibility of the user of the block to make sure that the A-compare, B-compare, and Period-compare values are in proper relation to each other. </p>
+<p style="text-indent: -38px; margin: 8px 0px 8px 38px;"><span style="color: #000000;">&nbsp;</span></p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+{
+ if (document.all) setTimeout(function() {nsrInit();},20); 
+    else nsrInit();
+ } 
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,257 @@
+%implements s54_b0_8l9fi_7_Outputs "C"
+
+%function Outputs(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%<SLibGenerateExtModeOutput(system)>
+/* Gateway: DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1R/Chart */
+localDW->sfEvent = Walking01_withElmo_CALL_EVENT_k;
+/* During: DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1R/Chart */
+if (localDW->is_active_c22_Walking01_withElm == 0U) {
+    /* Entry: DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1R/Chart */
+    localDW->is_active_c22_Walking01_withElm = 1U;
+    /* Entry Internal: DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1R/Chart */
+    /* Transition: '<S63>:102' */
+    localDW->is_c22_Walking01_withElmos = Walking01_withElmos_IN_Start1;
+    /* Entry 'Start1': '<S63>:103' */
+    /* '<S63>:103:1' ControlWordIndex = 0; */
+    localB->ControlWordIndex = 0.0;
+    /* '<S63>:103:1' EnableTargetTorque = 0; */
+    localB->EnableTargetTorque = 0.0;
+    /* '<S63>:103:3' FaultDetected = 0; */
+    localB->FaultDetected = 0.0;
+} else {
+    switch (localDW->is_c22_Walking01_withElmos) {
+      case Walking01_withE_IN_FaultRunning:
+        /* During 'FaultRunning': '<S63>:105' */
+        break;
+      case Walking01_wit_IN_Initialization:
+        /* During 'Initialization': '<S63>:111' */
+        /* '<S63>:95:1' sf_internal_predicateOutput = ... */
+        /* '<S63>:95:1' MedullaCommand == 4 || MedullaCommand == 5; */
+        if ((rtu_MedullaCommand == 4.0) || (rtu_MedullaCommand == 5.0)) {
+            /* Transition: '<S63>:95' */
+            /* Exit Internal 'Initialization': '<S63>:111' */
+            localDW->is_Initialization = Walking01__IN_NO_ACTIVE_CHILD_b;
+            localDW->is_c22_Walking01_withElmos = Walking01_withE_IN_FaultRunning;
+            /* Entry 'FaultRunning': '<S63>:105' */
+            /* '<S63>:105:1' ControlWordIndex = 1; */
+            localB->ControlWordIndex = 1.0;
+            /* '<S63>:105:1' EnableTargetTorque = 0; */
+            localB->EnableTargetTorque = 0.0;
+            /* '<S63>:105:3' FaultDetected = 1; */
+            localB->FaultDetected = 1.0;
+        } else {
+            switch (localDW->is_Initialization) {
+              case Walking01_withElmos_IN_Fault:
+                /* During 'Fault': '<S63>:96' */
+                /* '<S63>:107:1' sf_internal_predicateOutput = ... */
+                /* '<S63>:107:1' Timeout >=20; */
+                if (localDW->Timeout >= 20.0) {
+                    /* Transition: '<S63>:107' */
+                    localDW->is_Initialization = Walking01_withElmos_IN_Fault;
+                    /* Entry 'Fault': '<S63>:96' */
+                    /* '<S63>:96:1' ControlWordIndex = 3; */
+                    localB->ControlWordIndex = 3.0;
+                    /* '<S63>:96:1' EnableTargetTorque = 0; */
+                    localB->EnableTargetTorque = 0.0;
+                    /* '<S63>:96:3' Timeout = 0; */
+                    localDW->Timeout = 0.0;
+                } else {
+                    /* '<S63>:116:1' sf_internal_predicateOutput = ... */
+                    /* '<S63>:116:1' SwitchOnDisabledMode == 1; */
+                    if (rtu_SwitchOnDisabledMode == 1) {
+                        /* Transition: '<S63>:116' */
+                        localDW->is_Initialization = Walking01_w_IN_SwitchOnDisabled;
+                        /* Entry 'SwitchOnDisabled': '<S63>:97' */
+                        /* '<S63>:97:1' ControlWordIndex = 1; */
+                        localB->ControlWordIndex = 1.0;
+                        /* '<S63>:97:1' Timeout = 0; */
+                        localDW->Timeout = 0.0;
+                        /* '<S63>:97:3' EnableTargetTorque = 0; */
+                        localB->EnableTargetTorque = 0.0;
+                    } else {
+                        /* '<S63>:96:4' Timeout = Timeout + 1; */
+                        localDW->Timeout++;
+                        /* '<S63>:96:5' ControlWordIndex = 0; */
+                        localB->ControlWordIndex = 0.0;
+                    }
+                }
+                break;
+              case Walking01_wi_IN_ReadyToSwitchOn:
+                /* During 'ReadyToSwitchOn': '<S63>:115' */
+                /* '<S63>:114:1' sf_internal_predicateOutput = ... */
+                /* '<S63>:114:1' FaultMode == 1; */
+                if (rtu_FaultMode == 1) {
+                    /* Transition: '<S63>:114' */
+                    localDW->is_Initialization = Walking01_withElmos_IN_Fault;
+                    /* Entry 'Fault': '<S63>:96' */
+                    /* '<S63>:96:1' ControlWordIndex = 3; */
+                    localB->ControlWordIndex = 3.0;
+                    /* '<S63>:96:1' EnableTargetTorque = 0; */
+                    localB->EnableTargetTorque = 0.0;
+                    /* '<S63>:96:3' Timeout = 0; */
+                    localDW->Timeout = 0.0;
+                } else {
+                    /* '<S63>:118:1' sf_internal_predicateOutput = ... */
+                    /* '<S63>:118:1' SwitchOnDisabledMode == 1; */
+                    if (rtu_SwitchOnDisabledMode == 1) {
+                        /* Transition: '<S63>:118' */
+                        localDW->is_Initialization = Walking01_w_IN_SwitchOnDisabled;
+                        /* Entry 'SwitchOnDisabled': '<S63>:97' */
+                        /* '<S63>:97:1' ControlWordIndex = 1; */
+                        localB->ControlWordIndex = 1.0;
+                        /* '<S63>:97:1' Timeout = 0; */
+                        localDW->Timeout = 0.0;
+                        /* '<S63>:97:3' EnableTargetTorque = 0; */
+                        localB->EnableTargetTorque = 0.0;
+                    } else {
+                        /* Transition: '<S63>:98' */
+                        localDW->is_Initialization = Walking01__IN_NO_ACTIVE_CHILD_b;
+                        localDW->is_c22_Walking01_withElmos = Walking01_withElmos_IN_Running;
+                        /* Entry 'Running': '<S63>:100' */
+                        /* '<S63>:100:1' ControlWordIndex = 2; */
+                        localB->ControlWordIndex = 2.0;
+                        /* '<S63>:100:1' EnableTargetTorque = 1; */
+                        localB->EnableTargetTorque = 1.0;
+                    }
+                }
+                break;
+              default:
+                /* During 'SwitchOnDisabled': '<S63>:97' */
+                /* '<S63>:99:1' sf_internal_predicateOutput = ... */
+                /* '<S63>:99:1' ReadyToSwitchOnMode == 1; */
+                if (rtu_ReadyToSwitchOnMode == 1) {
+                    /* Transition: '<S63>:99' */
+                    localDW->is_Initialization = Walking01_wi_IN_ReadyToSwitchOn;
+                    /* Entry 'ReadyToSwitchOn': '<S63>:115' */
+                    /* '<S63>:115:1' ControlWordIndex = 2; */
+                    localB->ControlWordIndex = 2.0;
+                    /* '<S63>:115:1' Timeout = 0; */
+                    localDW->Timeout = 0.0;
+                    /* '<S63>:115:3' EnableTargetTorque = 0; */
+                    localB->EnableTargetTorque = 0.0;
+                } else {
+                    /* '<S63>:110:1' sf_internal_predicateOutput = ... */
+                    /* '<S63>:110:1' FaultMode == 1; */
+                    if (rtu_FaultMode == 1) {
+                        /* Transition: '<S63>:110' */
+                        localDW->is_Initialization = Walking01_withElmos_IN_Fault;
+                        /* Entry 'Fault': '<S63>:96' */
+                        /* '<S63>:96:1' ControlWordIndex = 3; */
+                        localB->ControlWordIndex = 3.0;
+                        /* '<S63>:96:1' EnableTargetTorque = 0; */
+                        localB->EnableTargetTorque = 0.0;
+                        /* '<S63>:96:3' Timeout = 0; */
+                        localDW->Timeout = 0.0;
+                    } else {
+                        /* '<S63>:97:3' Timeout = Timeout + 1; */
+                        localDW->Timeout++;
+                    }
+                }
+                break;
+            }
+        }
+        break;
+      case Walking01_withElmos_IN_Running:
+        /* During 'Running': '<S63>:100' */
+        /* '<S63>:101:1' sf_internal_predicateOutput = ... */
+        /* '<S63>:101:1' FaultMode == 1; */
+        if (rtu_FaultMode == 1) {
+            /* Transition: '<S63>:101' */
+            localDW->is_c22_Walking01_withElmos = Walking01_withE_IN_FaultRunning;
+            /* Entry 'FaultRunning': '<S63>:105' */
+            /* '<S63>:105:1' ControlWordIndex = 1; */
+            localB->ControlWordIndex = 1.0;
+            /* '<S63>:105:1' EnableTargetTorque = 0; */
+            localB->EnableTargetTorque = 0.0;
+            /* '<S63>:105:3' FaultDetected = 1; */
+            localB->FaultDetected = 1.0;
+        } else {
+            /* '<S63>:113:1' sf_internal_predicateOutput = ... */
+            /* '<S63>:113:1' MedullaCommand == 4 || MedullaCommand == 5; */
+            if ((rtu_MedullaCommand == 4.0) || (rtu_MedullaCommand == 5.0)) {
+                /* Transition: '<S63>:113' */
+                localDW->is_c22_Walking01_withElmos = Walking01_withE_IN_FaultRunning;
+                /* Entry 'FaultRunning': '<S63>:105' */
+                /* '<S63>:105:1' ControlWordIndex = 1; */
+                localB->ControlWordIndex = 1.0;
+                /* '<S63>:105:1' EnableTargetTorque = 0; */
+                localB->EnableTargetTorque = 0.0;
+                /* '<S63>:105:3' FaultDetected = 1; */
+                localB->FaultDetected = 1.0;
+            }
+        }
+        break;
+      default:
+        /* During 'Start1': '<S63>:103' */
+        /* '<S63>:117:1' sf_internal_predicateOutput = ... */
+        /* '<S63>:117:1' MedullaCommand == 4 || MedullaCommand == 5; */
+        if ((rtu_MedullaCommand == 4.0) || (rtu_MedullaCommand == 5.0)) {
+            /* Transition: '<S63>:117' */
+            localDW->is_c22_Walking01_withElmos = Walking01_withE_IN_FaultRunning;
+            /* Entry 'FaultRunning': '<S63>:105' */
+            /* '<S63>:105:1' ControlWordIndex = 1; */
+            localB->ControlWordIndex = 1.0;
+            /* '<S63>:105:1' EnableTargetTorque = 0; */
+            localB->EnableTargetTorque = 0.0;
+            /* '<S63>:105:3' FaultDetected = 1; */
+            localB->FaultDetected = 1.0;
+        } else {
+            /* '<S63>:109:1' sf_internal_predicateOutput = ... */
+            /* '<S63>:109:1' MedullaCommand == 2; */
+            if (rtu_MedullaCommand == 2.0) {
+                /* Transition: '<S63>:109' */
+                localDW->is_c22_Walking01_withElmos = Walking01_wit_IN_Initialization;
+                /* Entry Internal 'Initialization': '<S63>:111' */
+                /* Transition: '<S63>:112' */
+                localDW->is_Initialization = Walking01_w_IN_SwitchOnDisabled;
+                /* Entry 'SwitchOnDisabled': '<S63>:97' */
+                /* '<S63>:97:1' ControlWordIndex = 1; */
+                localB->ControlWordIndex = 1.0;
+                /* '<S63>:97:1' Timeout = 0; */
+                localDW->Timeout = 0.0;
+                /* '<S63>:97:3' EnableTargetTorque = 0; */
+                localB->EnableTargetTorque = 0.0;
+            }
+        }
+        break;
+    }
+}
+%closefile cfgTxt
+%<cfgTxt>
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[7].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("Output", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, SLibSystemFcnPeriodicRateGrouping(rtmArgSys, "Output"))
+%<SLibCG_AccessArg(7, 1, 0)>
+%endif
+%if SLibCG_ArgAccessed(7, 1, 0)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "Output", rtmArgSys.CurrentTID, SLibSystemFcnPeriodicRateGrouping(rtmArgSys, "Output"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface))
+%<SLibCG_UndoAccessArg(7, 1, 0)>
+%endif
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Walking01_withElmos_Chart(\
+%assign comma = ""
+%if SLibCG_ArgAccessed(7, 1, 0)
+%<comma>%<tSimStructType> * const %<tSimStruct>\
+%assign comma = ", "
+%endif
+%<comma>boolean_T rtu_SwitchOnDisabledMode\
+%assign comma = ", "
+%<comma>boolean_T rtu_ReadyToSwitchOnMode\
+%assign comma = ", "
+%<comma>boolean_T rtu_FaultMode\
+%assign comma = ", "
+%<comma>real_T rtu_MedullaCommand\
+%assign comma = ", "
+%<comma>B_Chart_Walking01_withElmos_T *localB\
+%assign comma = ", "
+%<comma>DW_Chart_Walking01_withElmos_T *localDW\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(7, 1, fcnProtoType)>
+%<LibSetSystemField(system, "CachedOutputLocalVars", localVarDecl)>
+%endfunction

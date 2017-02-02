@@ -1,0 +1,45 @@
+%implements s54_b0_8l9fi_1_Functions "C"
+
+%function Walking01_withElmos_check_error_Fcn0(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+/* MATLAB Function 'check_error': '<S25>:11' */
+/* '<S25>:11:3' err = (q<q_limits(1)) || (q>q_limits(2)) ... */
+/* '<S25>:11:4'         || (abs(q - q_clean) > (ErrorCount+1)*Threshold); */
+return (rtu_q < rtu_q_limits[0]) || (rtu_q > rtu_q_limits[1]) || (fabs(rtu_q - localB->q_clean) > (localB->ErrorCount + 1.0) * rtu_Threshold);
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[1].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("Walking01_withElmos_check_error", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, SLibSystemFcnPeriodicRateGrouping(rtmArgSys, "Walking01_withElmos_check_error"))
+%<SLibCG_AccessArg(1, 0, 3)>
+%endif
+%if SLibCG_ArgAccessed(1, 0, 3)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "Walking01_withElmos_check_error", rtmArgSys.CurrentTID, SLibSystemFcnPeriodicRateGrouping(rtmArgSys, "Walking01_withElmos_check_error"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface))
+%<SLibCG_UndoAccessArg(1, 0, 3)>
+%endif
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static boolean_T Walking01_withElmos_check_error(\
+%assign comma = ""
+%<comma>real_T rtu_q\
+%assign comma = ", "
+%<comma>const real_T rtu_q_limits[2]\
+%assign comma = ", "
+%<comma>real_T rtu_Threshold\
+%assign comma = ", "
+%if SLibCG_ArgAccessed(1, 0, 3)
+%<comma>%<tSimStructType> * const %<tSimStruct>\
+%assign comma = ", "
+%endif
+%<comma>B_AnomalyDetection_Walking01__T *localB\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(1, 0, fcnProtoType)>
+%return fcnBuff
+%endfunction
+

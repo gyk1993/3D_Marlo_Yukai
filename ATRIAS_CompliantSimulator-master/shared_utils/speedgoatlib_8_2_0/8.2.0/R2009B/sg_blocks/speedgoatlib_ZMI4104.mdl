@@ -1,0 +1,980 @@
+Library {
+  Name			  "speedgoatlib_ZMI4104"
+  Version		  7.4
+  MdlSubVersion		  0
+  SavedCharacterEncoding  "windows-1252"
+  LibraryType		  "BlockLibrary"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  MaxMDLFileLineLength	  120
+  Created		  "Wed Dec 05 22:09:50 2012"
+  Creator		  "dkuratli"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "lab3"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Tue Jul 01 08:27:30 2014"
+  RTWModifiedTimeStamp	  326104050
+  ModelVersionFormat	  "1.%<AutoIncrement:40>"
+  ConfigurationManager	  "none"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks on
+  BrowserLookUnderMasks	  on
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  RecordCoverage	  off
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  CovForceBlockReductionOff on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      6
+      Version		      "1.6.0"
+      Array {
+	Type			"Handle"
+	Dimension		9
+	Simulink.SolverCC {
+	  $ObjectID		  7
+	  Version		  "1.6.0"
+	  StartTime		  "0.0"
+	  StopTime		  "10.0"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  Solver		  "ode45"
+	  SolverName		  "ode45"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  8
+	  Version		  "1.6.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  9
+	  Version		  "1.6.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    8
+	    Cell		    "BooleansAsBitfields"
+	    Cell		    "PassReuseOutputArgsAs"
+	    Cell		    "PassReuseOutputArgsThreshold"
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    Cell		    "UseSpecifiedMinMax"
+	    PropName		    "DisabledProps"
+	  }
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  UseIntDivNetSlope	  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  StrengthReduction	  off
+	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	  EnforceIntegerDowncast  on
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  10
+	  Version		  "1.6.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"warning"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Enable All"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  StrictBusMsg		  "ErrorLevel1"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  11
+	  Version		  "1.6.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  12
+	  Version		  "1.6.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  13
+	  Version		  "1.6.0"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimCtrlC		  on
+	  SimExtrinsic		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  14
+	  Version		  "1.6.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    15
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    Cell		    "PortableWordSizes"
+	    Cell		    "GenerateWebview"
+	    Cell		    "GenerateCodeMetricsReport"
+	    Cell		    "GenerateCodeReplacementReport"
+	    Cell		    "GenerateErtSFunction"
+	    Cell		    "CreateSILPILBlock"
+	    Cell		    "CodeExecutionProfiling"
+	    Cell		    "CodeProfilingSaveOptions"
+	    Cell		    "CodeProfilingInstrumentation"
+	    PropName		    "DisabledProps"
+	  }
+	  SystemTargetFile	  "grt.tlc"
+	  TLCOptions		  ""
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  PostCodeGenCommand	  ""
+	  Description		  ""
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ProcessScript		  ""
+	  ConfigurationScript	  ""
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  CustomSourceCode	  ""
+	  CustomHeaderCode	  ""
+	  CustomInclude		  ""
+	  CustomSource		  ""
+	  CustomLibrary		  ""
+	  CustomInitializer	  ""
+	  CustomTerminator	  ""
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  RTWCompilerOptimization "Off"
+	  RTWCustomCompilerOptimizations ""
+	  CheckMdlBeforeBuild	  "Off"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      15
+	      Version		      "1.6.0"
+	      Array {
+		Type			"Cell"
+		Dimension		22
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"IgnoreTestpoints"
+		Cell			"InsertBlockDesc"
+		Cell			"InsertPolySpaceComments"
+		Cell			"SFDataObjDesc"
+		Cell			"MATLABFcnDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InternalIdentifier"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrFcnArg"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		Cell			"ReqsInCode"
+		PropName		"DisabledProps"
+	      }
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M_T"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      SimulinkBlockComments   on
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      16
+	      Version		      "1.6.0"
+	      Array {
+		Type			"Cell"
+		Dimension		15
+		Cell			"GeneratePreprocessorConditionals"
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"CPPClassGenCompliant"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"MultiInstanceERTCode"
+		PropName		"DisabledProps"
+	      }
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      TargetFunctionLibrary   "None"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      IncludeMdlTerminateFcn  on
+	      GeneratePreprocessorConditionals "Disable all"
+	      CombineOutputUpdateFcns off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      SupportVariableSizeSignals off
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    on
+	      AutosarCompliant	      off
+	      UseMalloc		      off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	hdlcoderui.hdlcc {
+	  $ObjectID		  17
+	  Version		  "1.6.0"
+	  Description		  "HDL Coder custom configuration component"
+	  Name			  "HDL Coder"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    " "
+	    PropName		    "HDLConfigFile"
+	  }
+	  HDLCActiveTab		  "0"
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition    [ 360, 135, 1240, 765 ]  
+    }
+    PropName		    "ConfigurationSets"
+  }
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      S-Function
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+      SFunctionDeploymentMode off
+    }
+  }
+  System {
+    Name		    "speedgoatlib_ZMI4104"
+    Location		    [10, 10, 500, 600]
+    Open		    off
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    30
+    Block {
+      BlockType		      S-Function
+      Name		      "VME Setup"
+      SID		      1
+      Ports		      [0, 1]
+      Position		      [20, 15, 300, 115]
+      FunctionName	      "sg_zmi4104_vmesetup_s"
+      Parameters	      "slot,-1,modules, z1_addr_sw1, z1_addr_sw2, z2_addr_sw1, z2_addr_sw2"
+      EnableBusSupport	      off
+      MaskType		      "vmesetup_zmi4104"
+      MaskDescription	      "Speedgoat driver block<br>ZMI4104 - VME Setup<br><br>&copy; 2006 - 2012, Speedgoat GmbH, "
+      "www.speedgoat.ch"
+      MaskPromptString	      "Bus Adapter identifier|Number of ZMI4104C|PCI [bus,slot] (-1: autosearch)|ZMI4104C ident"
+      "ifier|VME Address (A23-A20: SW1)|VME Address (A19-A16: SW2)|ZMI4104C identifier|VME Address (A23-A20: SW1)|VME A"
+      "ddress (A19-A16: SW2)"
+      MaskStyleString	      "popup(1),popup(1|2),edit,edit,edit,edit,edit,edit,edit"
+      MaskVariables	      "id=@1;modules=@2;slot=@3;z1_id=@4;z1_addr_sw1=@5;z1_addr_sw2=@6;z2_id=@7;z2_addr_sw1=@8;z2_"
+      "addr_sw2=@9;"
+      MaskTunableValueString  "on,on,on,on,on,on,on,on,on"
+      MaskCallbackString      "||||||||"
+      MaskEnableString	      "on,on,on,off,on,on,off,on,on"
+      MaskVisibilityString    "off,on,on,on,on,on,on,on,on"
+      MaskToolTipString	      "on,on,on,on,on,on,on,on,on"
+      MaskInitialization      "sg_zmi4104_vmesetup_m(id, modules, slot);"
+      MaskSelfModifiable      on
+      MaskDisplay	      "disp('Speedgoat\\nZMI4104\\nVME Setup\\nBus Adapter: 1'); port_label('output',1,'ZMI4104 (1)'"
+      ");"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "1|1|-1|1|0|0|2|0|1"
+      MaskTabNameString	      "PCI adapter card,PCI adapter card,PCI adapter card,ZMI4104C card 1,ZMI4104C card 1,ZMI4"
+      "104C card 1,ZMI4104C card 2,ZMI4104C card 2,ZMI4104C card 2"
+    }
+    Block {
+      BlockType		      S-Function
+      Name		      "VME Status"
+      SID		      19
+      Ports		      [0, 1]
+      Position		      [20, 155, 245, 245]
+      FunctionName	      "sg_zmi4104_vmestatus_s"
+      Parameters	      "slot, ts"
+      EnableBusSupport	      off
+      MaskType		      "vmestatus_zmi4104"
+      MaskDescription	      "Speedgoat driver block<br>ZMI4104 - VME Status<br><br>&copy; 2006 - 2012, Speedgoat GmbH,"
+      " www.speedgoat.ch"
+      MaskPromptString	      "PCI Bus Adapter identifier|Sample time [s]|PCI [bus,slot] (-1: autosearch)"
+      MaskStyleString	      "popup(1),edit,edit"
+      MaskVariables	      "id=@1;ts=@2;slot=@3;"
+      MaskTunableValueString  "on,on,on"
+      MaskCallbackString      "||"
+      MaskEnableString	      "on,on,on"
+      MaskVisibilityString    "off,on,off"
+      MaskToolTipString	      "on,on,on"
+      MaskInitialization      "slot = sg_zmi4104_vmestatus_m(id);"
+      MaskSelfModifiable      on
+      MaskDisplay	      "disp('Speedgoat\\nZMI4104\\nVME Status\\nBus Adapter: 1'); port_label('output',1,'Fiber-optic"
+      "');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "1|-1|-1"
+    }
+    Block {
+      BlockType		      S-Function
+      Name		      "ZMI4104 Configuration"
+      SID		      2
+      Ports		      [5]
+      Position		      [385, 20, 665, 120]
+      FunctionName	      "sg_zmi4104_initaxis_s"
+      Parameters	      "slot, ts, ax1_filter_kp, ax1_filter_kv, ax2_filter_kp, ax2_filter_kv, ax3_filter_kp, ax3_filte"
+      "r_kv, ax4_filter_kp, ax4_filter_kv"
+      EnableBusSupport	      off
+      MaskType		      "initaxis_zmi4104"
+      MaskDescription	      "Speedgoat driver block<br>ZMI4104 - Configuration<br><br>&copy; 2006 - 2012, Speedgoat Gm"
+      "bH, www.speedgoat.ch"
+      MaskPromptString	      "PCI Bus Adapter identifier|Sample time [s]|PCI [bus,slot] (-1: autosearch)|Digital filte"
+      "ring: Kv value|Digital filtering: Kp value|Digital filtering: Kv value|Digital filtering: Kp value|Digital filte"
+      "ring: Kv value|Digital filtering: Kp value|Digital filtering: Kv value|Digital filtering: Kp value"
+      MaskStyleString	      "popup(1),edit,edit,popup(-7|-9|-11|-13|-15|-17|-19|-21),popup(-2|-3|-4|-5|-6|-7|-8|-9),po"
+      "pup(-7|-9|-11|-13|-15|-17|-19|-21),popup(-2|-3|-4|-5|-6|-7|-8|-9),popup(-7|-9|-11|-13|-15|-17|-19|-21),popup(-2|"
+      "-3|-4|-5|-6|-7|-8|-9),popup(-7|-9|-11|-13|-15|-17|-19|-21),popup(-2|-3|-4|-5|-6|-7|-8|-9)"
+      MaskVariables	      "id=@1;ts=@2;slot=@3;ax1_filter_kv=@4;ax1_filter_kp=@5;ax2_filter_kv=@6;ax2_filter_kp=@7;ax3"
+      "_filter_kv=@8;ax3_filter_kp=@9;ax4_filter_kv=@10;ax4_filter_kp=@11;"
+      MaskTunableValueString  "on,on,on,on,on,on,on,on,on,on,on"
+      MaskCallbackString      "||||||||||"
+      MaskEnableString	      "on,on,on,on,on,on,on,on,on,on,on"
+      MaskVisibilityString    "off,off,off,on,on,on,on,on,on,on,on"
+      MaskToolTipString	      "on,on,on,on,on,on,on,on,on,on,on"
+      MaskInitialization      "slot = sg_zmi4104_initaxis_m(id);"
+      MaskSelfModifiable      on
+      MaskDisplay	      "disp('Speedgoat\\nZMI4104\\nConfiguration\\nBus Adapter: 1'); port_label('input',1,'ZMI4104 A"
+      "ddress');port_label('input',2,'Init/Reset Axis 1');port_label('input',3,'Init/Reset Axis 2');port_label('input',"
+      "4,'Init/Reset Axis 3');port_label('input',5,'Init/Reset Axis 4');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "1|-1|-1|-19|-8|-19|-8|-19|-8|-19|-8"
+      MaskTabNameString	      "Axis 1,Axis 1,Axis 1,Axis 1,Axis 1,Axis 2,Axis 2,Axis 3,Axis 3,Axis 4,Axis 4"
+    }
+    Block {
+      BlockType		      S-Function
+      Name		      "ZMI4104 Position"
+      SID		      20
+      Ports		      [0, 2]
+      Position		      [355, 306, 625, 419]
+      FunctionName	      "sg_zmi4104_position_s"
+      Parameters	      "slot, ts, zmi_id, axis, act_vel, act_time"
+      EnableBusSupport	      off
+      MaskType		      "position_zmi4104"
+      MaskDescription	      "Speedgoat driver block<br>ZMI4104 - Position<br><br>&copy; 2006 - 2012, Speedgoat GmbH, w"
+      "ww.speedgoat.ch"
+      MaskPromptString	      "PCI Bus Adapter identifier|ZMI4104C identifier|Measurement axis|Sample time [s]|PCI [bus"
+      ",slot] (-1: autosearch)|Velocity measurement|Time measurement"
+      MaskStyleString	      "popup(1),popup(1|2),popup(1|2|3|4),edit,edit,checkbox,checkbox"
+      MaskVariables	      "id=@1;zmi_id=@2;axis=@3;ts=@4;slot=@5;act_vel=@6;act_time=@7;"
+      MaskTunableValueString  "on,on,on,on,on,on,on"
+      MaskCallbackString      "||||||"
+      MaskEnableString	      "on,on,on,on,on,on,on"
+      MaskVisibilityString    "off,on,on,on,off,on,on"
+      MaskToolTipString	      "on,on,on,on,on,on,on"
+      MaskInitialization      "slot = sg_zmi4104_position_m(id, zmi_id, axis, act_vel, act_time);"
+      MaskSelfModifiable      on
+      MaskDisplay	      "disp('Speedgoat\\nZMI4104\\nPosition\\nBus Adapter: 1\\nZMI4104: 1\\nAxis: 1'); port_label('o"
+      "utput',1,'Position');port_label('output',2,'Time');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "1|1|1|-1|-1|off|on"
+      MaskTabNameString	      "Block setup,Block setup,Block setup,Block setup,Block setup,Measurement,Measurement"
+    }
+    Block {
+      BlockType		      S-Function
+      Name		      "ZMI4104 Read register"
+      SID		      16
+      Ports		      [2, 1]
+      Position		      [630, 479, 850, 581]
+      FunctionName	      "sg_zmi4104_readreg_s"
+      Parameters	      "slot, ts, zmi_id, axis, pci_access"
+      EnableBusSupport	      off
+      MaskType		      "readreg_zmi4104"
+      MaskDescription	      "Speedgoat driver block<br>ZMI4104 - Read register<br><br>&copy; 2006 - 2012, Speedgoat Gm"
+      "bH, www.speedgoat.ch"
+      MaskPromptString	      "PCI Bus Adapter identifier|ZMI4104C identifier|Measurement axis|PCI access|Sample time ["
+      "s]|PCI [bus,slot] (-1: autosearch)"
+      MaskStyleString	      "popup(1),popup(1|2),popup(1|2|3|4),popup(16-bit read|32-bit read),edit,edit"
+      MaskVariables	      "id=@1;zmi_id=@2;axis=@3;pci_access=@4;ts=@5;slot=@6;"
+      MaskTunableValueString  "on,on,on,on,on,on"
+      MaskCallbackString      "|||||"
+      MaskEnableString	      "on,on,on,on,on,on"
+      MaskVisibilityString    "off,on,on,on,on,off"
+      MaskToolTipString	      "on,on,on,on,on,on"
+      MaskInitialization      "slot = sg_zmi4104_readreg_m(id, zmi_id, axis, pci_access);"
+      MaskSelfModifiable      on
+      MaskDisplay	      "disp('Speedgoat\\nZMI4104\\nRead register\\nBus Adapter: 1\\nZMI4104: 1\\nAxis: 1'); port_lab"
+      "el('input',1,'Enable');port_label('input',2,'Register');port_label('output',1,'Value (16-bit)');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "1|1|1|16-bit read|-1|-1"
+    }
+    Block {
+      BlockType		      S-Function
+      Name		      "ZMI4104 Read register v2"
+      SID		      26
+      Ports		      [5, 1]
+      Position		      [935, 479, 1155, 581]
+      FunctionName	      "sg_zmi4104_readreg_v2_s"
+      Parameters	      "slot, ts"
+      EnableBusSupport	      off
+      MaskType		      "readreg_zmi4104_v2"
+      MaskDescription	      "Speedgoat driver block<br>ZMI4104 - Read register<br><br>&copy; 2006 - 2013, Speedgoat Gm"
+      "bH, www.speedgoat.ch"
+      MaskPromptString	      "PCI Bus Adapter identifier|Sample time [s]|PCI [bus,slot] (-1: autosearch)"
+      MaskStyleString	      "popup(1),edit,edit"
+      MaskVariables	      "id=@1;ts=@2;slot=@3;"
+      MaskTunableValueString  "on,on,on"
+      MaskCallbackString      "||"
+      MaskEnableString	      "on,on,on"
+      MaskVisibilityString    "off,on,off"
+      MaskToolTipString	      "on,on,on"
+      MaskInitialization      "slot = sg_zmi4104_readreg_v2_m(id);"
+      MaskSelfModifiable      on
+      MaskDisplay	      "disp('Speedgoat\\nZMI4104\\nRead register\\nBus Adapter: 1'); port_label('input',1,'Enable');"
+      "port_label('input',2,'ZMI4104 ID');port_label('input',3,'Axis');port_label('input',4,'PCI Access');port_label('i"
+      "nput',5,'Register');port_label('output',1,'Value');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "1|-1|-1"
+    }
+    Block {
+      BlockType		      S-Function
+      Name		      "ZMI4104 Reset"
+      SID		      24
+      Ports		      [3]
+      Position		      [335, 624, 555, 726]
+      FunctionName	      "sg_zmi4104_reset_s"
+      Parameters	      "slot, ts, zmi_id, axis"
+      EnableBusSupport	      off
+      MaskType		      "reset_zmi4104"
+      MaskDescription	      "Speedgoat driver block<br>ZMI4104 - Reset<br><br>&copy; 2006 - 2012, Speedgoat GmbH, www."
+      "speedgoat.ch"
+      MaskPromptString	      "PCI Bus Adapter identifier|ZMI4104C identifier|Measurement axis|Sample time [s]|PCI [bus"
+      ",slot] (-1: autosearch)"
+      MaskStyleString	      "popup(1),popup(1|2),popup(1|2|3|4),edit,edit"
+      MaskVariables	      "id=@1;zmi_id=@2;axis=@3;ts=@4;slot=@5;"
+      MaskTunableValueString  "on,on,on,on,on"
+      MaskCallbackString      "||||"
+      MaskEnableString	      "on,on,on,on,on"
+      MaskVisibilityString    "off,on,on,on,off"
+      MaskToolTipString	      "on,on,on,on,on"
+      MaskInitialization      "slot = sg_zmi4104_reset_m(id, zmi_id, axis);"
+      MaskSelfModifiable      on
+      MaskDisplay	      "disp('Speedgoat\\nZMI4104\\nReset\\nBus Adapter: 1\\nZMI4104: 1\\nAxis: 1'); port_label('inpu"
+      "t',1,'Position');port_label('input',2,'Time');port_label('input',3,'Axis');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "1|1|1|-1|-1"
+    }
+    Block {
+      BlockType		      S-Function
+      Name		      "ZMI4104 Sample position"
+      SID		      4
+      Ports		      [0, 2]
+      Position		      [20, 305, 290, 420]
+      FunctionName	      "sg_zmi4104_samplepos_s"
+      Parameters	      "slot, ts, zmi_id, axis, act_vel, act_time"
+      EnableBusSupport	      off
+      MaskType		      "samplepos_zmi4104"
+      MaskDescription	      "Speedgoat driver block<br>ZMI4104 - Sample position<br><br>&copy; 2006 - 2012, Speedgoat "
+      "GmbH, www.speedgoat.ch"
+      MaskPromptString	      "PCI Bus Adapter identifier|ZMI4104C identifier|Measurement axis|Sample time [s]|PCI [bus"
+      ",slot] (-1: autosearch)|Velocity measurement|Time measurement"
+      MaskStyleString	      "popup(1),popup(1|2),popup(1|2|3|4),edit,edit,checkbox,checkbox"
+      MaskVariables	      "id=@1;zmi_id=@2;axis=@3;ts=@4;slot=@5;act_vel=@6;act_time=@7;"
+      MaskTunableValueString  "on,on,on,on,on,on,on"
+      MaskCallbackString      "||||||"
+      MaskEnableString	      "on,on,on,on,on,on,on"
+      MaskVisibilityString    "off,on,on,on,off,on,on"
+      MaskToolTipString	      "on,on,on,on,on,on,on"
+      MaskInitialization      "slot = sg_zmi4104_samplepos_m(id, zmi_id, axis, act_vel, act_time);"
+      MaskSelfModifiable      on
+      MaskDisplay	      "disp('Speedgoat\\nZMI4104\\nSample position\\nBus Adapter: 1\\nZMI4104: 1\\nAxis: 1'); port_l"
+      "abel('output',1,'Sample Position');port_label('output',2,'Time');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "1|1|1|-1|-1|off|on"
+      MaskTabNameString	      "Block setup,Block setup,Block setup,Block setup,Block setup,Measurement,Measurement"
+    }
+    Block {
+      BlockType		      S-Function
+      Name		      "ZMI4104 Status"
+      SID		      23
+      Ports		      [0, 1]
+      Position		      [20, 618, 245, 732]
+      FunctionName	      "sg_zmi4104_status_s"
+      Parameters	      "slot, ts, zmi_id, axis"
+      EnableBusSupport	      off
+      MaskType		      "status_zmi4104"
+      MaskDescription	      "Speedgoat driver block<br>ZMI4104 - Status<br><br>&copy; 2006 - 2012, Speedgoat GmbH, www"
+      ".speedgoat.ch"
+      MaskPromptString	      "PCI Bus Adapter identifier|ZMI4104C identifier|Measurement axis|Sample time [s]|PCI [bus"
+      ",slot] (-1: autosearch)"
+      MaskStyleString	      "popup(1),popup(1|2),popup(1|2|3|4),edit,edit"
+      MaskVariables	      "id=@1;zmi_id=@2;axis=@3;ts=@4;slot=@5;"
+      MaskTunableValueString  "on,on,on,on,on"
+      MaskCallbackString      "||||"
+      MaskEnableString	      "on,on,on,on,on"
+      MaskVisibilityString    "off,on,on,on,off"
+      MaskToolTipString	      "on,on,on,on,on"
+      MaskInitialization      "slot = sg_zmi4104_status_m(id, zmi_id, axis);"
+      MaskSelfModifiable      on
+      MaskDisplay	      "disp('Speedgoat\\nZMI4104\\nStatus\\nBus Adapter: 1\\nZMI4104: 1\\nAxis: 1'); port_label('out"
+      "put',1,'Errors');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "1|1|1|-1|-1"
+    }
+    Block {
+      BlockType		      S-Function
+      Name		      "ZMI4104 Write register"
+      SID		      17
+      Ports		      [3]
+      Position		      [20, 479, 240, 581]
+      FunctionName	      "sg_zmi4104_writereg_s"
+      Parameters	      "slot, ts, zmi_id, axis, pci_access"
+      EnableBusSupport	      off
+      MaskType		      "writereg_zmi4104"
+      MaskDescription	      "Speedgoat driver block<br>ZMI4104 - Write register<br><br>&copy; 2006 - 2012, Speedgoat G"
+      "mbH, www.speedgoat.ch"
+      MaskPromptString	      "PCI Bus Adapter identifier|ZMI4104C identifier|Measurement axis|PCI access|Sample time ["
+      "s]|PCI [bus,slot] (-1: autosearch)"
+      MaskStyleString	      "popup(1),popup(1|2),popup(1|2|3|4),popup(16-bit write|32-bit write),edit,edit"
+      MaskVariables	      "id=@1;zmi_id=@2;axis=@3;pci_access=@4;ts=@5;slot=@6;"
+      MaskTunableValueString  "on,on,on,on,on,on"
+      MaskCallbackString      "|||||"
+      MaskEnableString	      "on,on,on,on,on,on"
+      MaskVisibilityString    "off,on,on,on,on,off"
+      MaskToolTipString	      "on,on,on,on,on,on"
+      MaskInitialization      "slot = sg_zmi4104_writereg_m(id, zmi_id, axis, pci_access);"
+      MaskSelfModifiable      on
+      MaskDisplay	      "disp('Speedgoat\\nZMI4104\\nWrite register\\nBus Adapter: 1\\nZMI4104: 1\\nAxis: 1'); port_la"
+      "bel('input',1,'Enable');port_label('input',2,'Register');port_label('input',3,'Value (16-bit)');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "1|1|1|16-bit write|-1|-1"
+    }
+    Block {
+      BlockType		      S-Function
+      Name		      "ZMI4104 Write register v2"
+      SID		      25
+      Ports		      [6]
+      Position		      [335, 475, 555, 580]
+      FunctionName	      "sg_zmi4104_writereg_v2_s"
+      Parameters	      "slot, ts"
+      EnableBusSupport	      off
+      MaskType		      "writereg_zmi4104_v2"
+      MaskDescription	      "Speedgoat driver block<br>ZMI4104 - Write register<br><br>&copy; 2006 - 2013, Speedgoat G"
+      "mbH, www.speedgoat.ch"
+      MaskPromptString	      "PCI Bus Adapter identifier|Sample time [s]|PCI [bus,slot] (-1: autosearch)"
+      MaskStyleString	      "popup(1),edit,edit"
+      MaskVariables	      "id=@1;ts=@2;slot=@3;"
+      MaskTunableValueString  "on,on,on"
+      MaskCallbackString      "||"
+      MaskEnableString	      "on,on,on"
+      MaskVisibilityString    "off,on,off"
+      MaskToolTipString	      "on,on,on"
+      MaskInitialization      "slot = sg_zmi4104_writereg_v2_m(id);"
+      MaskSelfModifiable      on
+      MaskDisplay	      "disp('Speedgoat\\nZMI4104\\nWrite register\\nBus Adapter: 1\\nZMI4104'); port_label('input',1"
+      ",'Enable');port_label('input',2,'ZMI4104 ID');port_label('input',3,'Axis');port_label('input',4,'PCI Access');po"
+      "rt_label('input',5,'Register');port_label('input',6,'Value');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "1|-1|-1"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+#include "Walking01_withElmos.pt"
+
+
+const xpc_ParamMappingInfo  xpcparamsMMI[] =
+  {
+    {
+      {Walking01_withElmos_PT},
+      "Walking01_withElmos",
+      "",
+      "Walking01_withElmos",
+      0,
+      100,
+    },
+  };

@@ -1,0 +1,9 @@
+#ifndef _ATRIAS3D_B_Right_h_
+#define _ATRIAS3D_B_Right_h_
+
+#include <math.h>
+
+void ATRIAS3D_B_Right(const double q[13], double B[6][13]) ;
+
+
+#endif /* _ATRIAS3D_B_Right_h_ */

@@ -1,0 +1,159 @@
+<!-- saved from url=(0014)about:internet -->
+<div class="dead">
+<pre class="code">
+<span class="srcline"><span class="lineno"><a href="3,1" id="srcline1">  1</a></span><span class="line"><span class="keyword">classdef</span> Controller_MARLO &lt; matlab.System</span></span>
+<span class="srcline"><span class="lineno"><a href="3,2" id="srcline2">  2</a></span><span class="line">    <span class="comment">%CONTROLLER Controller superclass.</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,3" id="srcline3">  3</a></span><span class="line">    </span></span>
+<span class="srcline"><span class="lineno"><a href="3,4" id="srcline4">  4</a></span><span class="line">    <span class="comment">% PUBLIC PROPERTIES =====================================================</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,5" id="srcline5">  5</a></span><span class="line">    <span class="keyword">properties</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,6" id="srcline6">  6</a></span><span class="line">        <span class="comment">% Simulation flag</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,7" id="srcline7">  7</a></span><span class="line">        isSim@logical = true</span></span>
+<span class="srcline"><span class="lineno"><a href="3,8" id="srcline8">  8</a></span><span class="line">    <span class="keyword">end</span> <span class="comment">% properties</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,9" id="srcline9">  9</a></span><span class="line">    </span></span>
+<span class="srcline"><span class="lineno"><a href="3,10" id="srcline10"> 10</a></span><span class="line">    <span class="keyword">properties</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,11" id="srcline11"> 11</a></span><span class="line">        <span class="comment">% Torque limit (N*m)</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,12" id="srcline12"> 12</a></span><span class="line">        u_lim@double = 250  <span class="comment">% MARLO</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,13" id="srcline13"> 13</a></span><span class="line">        </span></span>
+<span class="srcline"><span class="lineno"><a href="3,14" id="srcline14"> 14</a></span><span class="line">    <span class="keyword">end</span> <span class="comment">% properties</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,15" id="srcline15"> 15</a></span><span class="line">    </span></span>
+<span class="srcline"><span class="lineno"><a href="3,16" id="srcline16"> 16</a></span><span class="line">    <span class="comment">% PROTECTED PROPERTIES ==================================================</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,17" id="srcline17"> 17</a></span><span class="line">    <span class="keyword">properties</span> (Access = protected)</span></span>
+<span class="srcline"><span class="lineno"><a href="3,18" id="srcline18"> 18</a></span><span class="line">        <span class="comment">% PS3 controller object</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,19" id="srcline19"> 19</a></span><span class="line">        ps3@PS3Controller</span></span>
+<span class="srcline"><span class="lineno"><a href="3,20" id="srcline20"> 20</a></span><span class="line">        <span class="comment">% Run time (s)</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,21" id="srcline21"> 21</a></span><span class="line">        runTime@double = 0</span></span>
+<span class="srcline"><span class="lineno"><a href="3,22" id="srcline22"> 22</a></span><span class="line">        <span class="comment">% Controller run state</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,23" id="srcline23"> 23</a></span><span class="line">        isRun@logical = true</span></span>
+<span class="srcline"><span class="lineno"><a href="3,24" id="srcline24"> 24</a></span><span class="line">    <span class="keyword">end</span> <span class="comment">% properties</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,25" id="srcline25"> 25</a></span><span class="line">    </span></span>
+<span class="srcline"><span class="lineno"><a href="3,26" id="srcline26"> 26</a></span><span class="line">    <span class="comment">% CONSTANT PROPERTIES ===================================================</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,27" id="srcline27"> 27</a></span><span class="line">    <span class="keyword">properties</span> (Constant = true, Hidden = true)</span></span>
+<span class="srcline"><span class="lineno"><a href="3,28" id="srcline28"> 28</a></span><span class="line">        <span class="comment">% Sample interval time (s)</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,29" id="srcline29"> 29</a></span><span class="line">        sampleInterval = 0.0005 <span class="comment">%MARLO sample time</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,30" id="srcline30"> 30</a></span><span class="line">    <span class="keyword">end</span> <span class="comment">% properties</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,31" id="srcline31"> 31</a></span><span class="line">    </span></span>
+<span class="srcline"><span class="lineno"><a href="3,32" id="srcline32"> 32</a></span><span class="line">    <span class="comment">% ABSTRACT METHODS ======================================================</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,33" id="srcline33"> 33</a></span><span class="line">    <span class="keyword">methods</span> (Abstract = true)</span></span>
+<span class="srcline"><span class="lineno"><a href="3,34" id="srcline34"> 34</a></span><span class="line">        [] = userSetup(obj)</span></span>
+<span class="srcline"><span class="lineno"><a href="3,35" id="srcline35"> 35</a></span><span class="line">        [u,y_out,dy_out] = userStep(obj, q, dq, ControlState, theta_limits_norm, hAlphaSet,T,ps3Axes,ps3Buttons, pov)</span></span>
+<span class="srcline"><span class="lineno"><a href="3,36" id="srcline36"> 36</a></span><span class="line">        [userOut] = userOutput(obj,q,dq)</span></span>
+<span class="srcline"><span class="lineno"><a href="3,37" id="srcline37"> 37</a></span><span class="line">    <span class="keyword">end</span> <span class="comment">% methods</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,38" id="srcline38"> 38</a></span><span class="line">    </span></span>
+<span class="srcline"><span class="lineno"><a href="3,39" id="srcline39"> 39</a></span><span class="line">    <span class="comment">% PROTECTED METHODS =====================================================</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,40" id="srcline40"> 40</a></span><span class="line">    <span class="keyword">methods</span> (Access = protected)</span></span>
+<span class="srcline"><span class="lineno"><a href="3,41" id="srcline41"> 41</a></span><span class="line">        <span class="keyword">function</span> setupImpl(obj)</span></span>
+<span class="srcline"><span class="lineno"><a href="3,42" id="srcline42"> 42</a></span><span class="line">            <span class="comment">%SETUPIMPL Initialize system object.</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,43" id="srcline43"> 43</a></span><span class="line">            </span></span>
+<span class="srcline"><span class="lineno"><a href="3,44" id="srcline44"> 44</a></span><span class="line">            <span class="comment">% Initialize PS3 controller interface</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,45" id="srcline45"> 45</a></span><span class="line">            obj.ps3 = PS3Controller;</span></span>
+<span class="srcline"><span class="lineno"><a href="3,46" id="srcline46"> 46</a></span><span class="line">            <span class="comment">% Run controller specific initialization</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,47" id="srcline47"> 47</a></span><span class="line">            obj.userSetup;</span></span>
+<span class="srcline"><span class="lineno"><a href="3,48" id="srcline48"> 48</a></span><span class="line">        <span class="keyword">end</span> <span class="comment">% setupImpl</span></span></span>
+</pre>
+</div>
+<pre class="code">
+<span class="srcline"><span class="lineno"><a href="3,49" id="srcline49"> 49</a></span><span class="line">        </span></span>
+<span class="srcline"><span class="lineno"><a href="3,50" id="srcline50"> 50</a></span><span class="line">        <span class="keyword">function</span> [<span class="var type1" id="S38T111U107">eStop</span>, <span class="var type1" id="S39T111U108">u</span>, <span class="var type1" id="S40T111U109">userOut</span>,<span class="var type1" id="S41T111U110">y_out</span>,<span class="var type1" id="S42T111U111">dy_out</span>] = stepImpl(<span class="var type1" id="S43T107U114">obj</span>, <span class="var type1" id="S44T106U115">q</span>, <span class="var type1" id="S45T106U116">dq</span>,<span class="keyword">...</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,51" id="srcline51"> 51</a></span><span class="line">                <span class="var type1" id="S46T9U117">ControlState</span>, <span class="var type1" id="S47T62U118">theta_limits_norm</span>, <span class="var type1" id="S48T63U119">hAlphaSet</span>,<span class="var type1" id="S49T9U120">T</span>,<span class="keyword">...</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,52" id="srcline52"> 52</a></span><span class="line">                <span class="var type1" id="S50T108U121">ps3Axes</span>,<span class="var type1" id="S51T109U122">ps3Buttons</span>)</span></span>
+<span class="srcline"><span class="lineno"><a href="3,53" id="srcline53"> 53</a></span><span class="line">            <span class="comment">%STEPIMPL System output and state update equations.</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,54" id="srcline54"> 54</a></span><span class="line">            </span></span>
+<span class="srcline"><span class="lineno"><a href="3,55" id="srcline55"> 55</a></span><span class="line">            <span class="comment">% Initialize control input</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,56" id="srcline56"> 56</a></span><span class="line">            <span class="var type0" id="S39T0U125">u</span> = <span class="mxinfo " id="T112:U15">zeros(<span class="mxinfo " id="T9:U16">1</span>,<span class="mxinfo " id="T9:U17">6</span>)</span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="3,57" id="srcline57"> 57</a></span><span class="line">            </span></span>
+<span class="srcline"><span class="lineno"><a href="3,58" id="srcline58"> 58</a></span><span class="line">            <span class="comment">% Simulation overrides</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,59" id="srcline59"> 59</a></span><span class="line">            <span class="comment">% Coordinate transformation for simulator</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,60" id="srcline60"> 60</a></span><span class="line">            <span class="mxinfo " id="T9:U18"><span class="mxinfo " id="T9:U19"><span class="var type1" id="S44T106U133">q</span>(<span class="mxinfo " id="T9:U21">9</span>)</span> = <span class="mxinfo " id="T9:U22">-<span class="mxinfo " id="T9:U23"><span class="var type1" id="S44T106U137">q</span>(<span class="mxinfo " id="T9:U25">9</span>)</span></span></span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="3,61" id="srcline61"> 61</a></span><span class="line">            <span class="mxinfo " id="T9:U26"><span class="mxinfo " id="T9:U27"><span class="var type1" id="S45T106U142">dq</span>(<span class="mxinfo " id="T9:U29">9</span>)</span> = <span class="mxinfo " id="T9:U30">-<span class="mxinfo " id="T9:U31"><span class="var type1" id="S45T106U146">dq</span>(<span class="mxinfo " id="T9:U33">9</span>)</span></span></span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="3,62" id="srcline62"> 62</a></span><span class="line">            </span></span>
+<span class="srcline"><span class="lineno"><a href="3,63" id="srcline63"> 63</a></span><span class="line">            <span class="comment">% Update PS3 controller</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,64" id="srcline64"> 64</a></span><span class="line">            <span class="mxinfo " id="T113:U34"><span class="var type1" id="S43T107U152">obj</span>.ps3</span>.update(<span class="var type1" id="S50T108U155">ps3Axes</span>, <span class="var type1" id="S51T109U156">ps3Buttons</span>, <span class="message error" id="M1F127C">pov</span>);</span></span>
+<span class="srcline"><span class="lineno"><a href="3,65" id="srcline65"> 65</a></span><span class="line">            </span></span>
+<span class="srcline"><span class="lineno"><a href="3,66" id="srcline66"> 66</a></span><span class="line">            <span class="comment">% Parse start button data</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,67" id="srcline67"> 67</a></span><span class="line">            <span class="keyword">if</span> <span class="var type0" id="S43T0U165">obj</span>.ps3.start.clickDuration &gt; 1;</span></span>
+<span class="srcline"><span class="lineno"><a href="3,68" id="srcline68"> 68</a></span><span class="line">                <span class="var type0" id="S43T0U173">obj</span>.isRun = true;</span></span>
+<span class="srcline"><span class="lineno"><a href="3,69" id="srcline69"> 69</a></span><span class="line">            <span class="keyword">elseif</span> <span class="var type0" id="S43T0U181">obj</span>.ps3.start.isPressed;</span></span>
+<span class="srcline"><span class="lineno"><a href="3,70" id="srcline70"> 70</a></span><span class="line">                <span class="var type0" id="S43T0U188">obj</span>.isRun = false;</span></span>
+<span class="srcline"><span class="lineno"><a href="3,71" id="srcline71"> 71</a></span><span class="line">            <span class="keyword">end</span> <span class="comment">% if</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,72" id="srcline72"> 72</a></span><span class="line">            </span></span>
+<span class="srcline"><span class="lineno"><a href="3,73" id="srcline73"> 73</a></span><span class="line">            <span class="comment">% Parse PS button data</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,74" id="srcline74"> 74</a></span><span class="line">            <span class="keyword">if</span> <span class="var type0" id="S43T0U197">obj</span>.ps3.ps.isPressed</span></span>
+<span class="srcline"><span class="lineno"><a href="3,75" id="srcline75"> 75</a></span><span class="line">                <span class="var type0" id="S38T0U203">eStop</span> = true;</span></span>
+<span class="srcline"><span class="lineno"><a href="3,76" id="srcline76"> 76</a></span><span class="line">            <span class="keyword">else</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,77" id="srcline77"> 77</a></span><span class="line">                <span class="var type0" id="S38T0U209">eStop</span> = false;</span></span>
+<span class="srcline"><span class="lineno"><a href="3,78" id="srcline78"> 78</a></span><span class="line">            <span class="keyword">end</span> <span class="comment">% if</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,79" id="srcline79"> 79</a></span><span class="line">            </span></span>
+<span class="srcline"><span class="lineno"><a href="3,80" id="srcline80"> 80</a></span><span class="line">            <span class="comment">% Run controller logic</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,81" id="srcline81"> 81</a></span><span class="line">            <span class="keyword">if</span> <span class="var type0" id="S43T0U215">obj</span>.isRun</span></span>
+<span class="srcline"><span class="lineno"><a href="3,82" id="srcline82"> 82</a></span><span class="line">                <span class="var type0" id="S43T0U220">obj</span>.runTime = <span class="var type0" id="S43T0U224">obj</span>.runTime + <span class="var type0" id="S43T0U227">obj</span>.sampleInterval;</span></span>
+<span class="srcline"><span class="lineno"><a href="3,83" id="srcline83"> 83</a></span><span class="line">                <span class="comment">% Run controller</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,84" id="srcline84"> 84</a></span><span class="line">                [<span class="var type0" id="S39T0U232">u</span>,<span class="var type0" id="S41T0U233">y_out</span>,<span class="var type0" id="S42T0U234">dy_out</span>] = <span class="var type0" id="S43T0U237">obj</span>.userStep(<span class="var type0" id="S44T0U239">q</span>, <span class="var type0" id="S45T0U240">dq</span>, <span class="var type0" id="S46T0U241">ControlState</span>, <span class="var type0" id="S47T0U242">theta_limits_norm</span>, <span class="var type0" id="S48T0U243">hAlphaSet</span>,<span class="var type0" id="S49T0U244">T</span>);</span></span>
+<span class="srcline"><span class="lineno"><a href="3,85" id="srcline85"> 85</a></span><span class="line">            <span class="keyword">else</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,86" id="srcline86"> 86</a></span><span class="line">                <span class="comment">% Reset run time</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,87" id="srcline87"> 87</a></span><span class="line">                <span class="var type0" id="S43T0U249">obj</span>.runTime = 0;</span></span>
+<span class="srcline"><span class="lineno"><a href="3,88" id="srcline88"> 88</a></span><span class="line">                </span></span>
+<span class="srcline"><span class="lineno"><a href="3,89" id="srcline89"> 89</a></span><span class="line">                <span class="comment">% Run controller specific initialization</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,90" id="srcline90"> 90</a></span><span class="line">                <span class="var type0" id="S43T0U254">obj</span>.userSetup;</span></span>
+<span class="srcline"><span class="lineno"><a href="3,91" id="srcline91"> 91</a></span><span class="line">                </span></span>
+<span class="srcline"><span class="lineno"><a href="3,92" id="srcline92"> 92</a></span><span class="line">                <span class="comment">% Damping gains</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,93" id="srcline93"> 93</a></span><span class="line">                <span class="var type0" id="S56T0U258">kd_leg</span> = 150;</span></span>
+<span class="srcline"><span class="lineno"><a href="3,94" id="srcline94"> 94</a></span><span class="line">                <span class="var type0" id="S57T0U262">kd_hip</span> = 40;</span></span>
+<span class="srcline"><span class="lineno"><a href="3,95" id="srcline95"> 95</a></span><span class="line">                </span></span>
+<span class="srcline"><span class="lineno"><a href="3,96" id="srcline96"> 96</a></span><span class="line">                <span class="comment">% Leg actuator torques computed to behave like virtual dampers</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,97" id="srcline97"> 97</a></span><span class="line">                <span class="var type0" id="S39T0U267">u</span>([1 2 4 5]) = (0 - <span class="var type0" id="S45T0U279">dq</span>([2 4 6 8]))*<span class="var type0" id="S56T0U286">kd_leg</span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="3,98" id="srcline98"> 98</a></span><span class="line">                <span class="var type0" id="S39T0U290">u</span>([3 6]) = (0 - <span class="var type0" id="S45T0U300">dq</span>([9 10]))*<span class="var type0" id="S57T0U305">kd_hip</span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="3,99" id="srcline99"> 99</a></span><span class="line">                <span class="var type0" id="S41T0U308">y_out</span> = zeros(6,1);</span></span>
+<span class="srcline"><span class="lineno"><a href="3,100" id="srcline100">100</a></span><span class="line">                <span class="var type0" id="S42T0U315">dy_out</span> = zeros(6,1);</span></span>
+<span class="srcline"><span class="lineno"><a href="3,101" id="srcline101">101</a></span><span class="line">            <span class="keyword">end</span> <span class="comment">% if</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,102" id="srcline102">102</a></span><span class="line">            </span></span>
+<span class="srcline"><span class="lineno"><a href="3,103" id="srcline103">103</a></span><span class="line">            <span class="comment">% Limit torque commands</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,104" id="srcline104">104</a></span><span class="line">            <span class="var type0" id="S39T0U322">u</span> = clamp(<span class="var type0" id="S39T0U325">u</span>, -<span class="var type0" id="S43T0U328">obj</span>.u_lim, <span class="var type0" id="S43T0U331">obj</span>.u_lim);</span></span>
+<span class="srcline"><span class="lineno"><a href="3,105" id="srcline105">105</a></span><span class="line">            <span class="comment">% Simulation overrides</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,106" id="srcline106">106</a></span><span class="line">            <span class="var type0" id="S39T0U335">u</span> = -<span class="var type0" id="S39T0U337">u</span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="3,107" id="srcline107">107</a></span><span class="line">            <span class="var type0" id="S39T0U341">u</span>(3) = -<span class="var type0" id="S39T0U345">u</span>(3);</span></span>
+<span class="srcline"><span class="lineno"><a href="3,108" id="srcline108">108</a></span><span class="line">            </span></span>
+<span class="srcline"><span class="lineno"><a href="3,109" id="srcline109">109</a></span><span class="line">            <span class="comment">% User output</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,110" id="srcline110">110</a></span><span class="line">            <span class="var type0" id="S40T0U349">userOut</span> = <span class="var type0" id="S43T0U352">obj</span>.userOutput(<span class="var type0" id="S44T0U354">q</span>,<span class="var type0" id="S45T0U355">dq</span>);</span></span>
+<span class="srcline"><span class="lineno"><a href="3,111" id="srcline111">111</a></span><span class="line">        <span class="keyword">end</span> <span class="comment">% stepImpl</span></span></span>
+</pre>
+<div class="dead">
+<pre class="code">
+<span class="srcline"><span class="lineno"><a href="3,112" id="srcline112">112</a></span><span class="line">    <span class="keyword">end</span> <span class="comment">% methods</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,113" id="srcline113">113</a></span><span class="line"><span class="keyword">end</span> <span class="comment">% classdef</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,114" id="srcline114">114</a></span><span class="line"></span></span>
+<span class="srcline"><span class="lineno"><a href="3,115" id="srcline115">115</a></span><span class="line"><span class="comment">%% LOCAL FUNCTIONS ========================================================</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,116" id="srcline116">116</a></span><span class="line"></span></span>
+<span class="srcline"><span class="lineno"><a href="3,117" id="srcline117">117</a></span><span class="line"><span class="keyword">function</span> b = clamp(a, lim1, lim2)</span></span>
+<span class="srcline"><span class="lineno"><a href="3,118" id="srcline118">118</a></span><span class="line">    <span class="comment">%CLAMP Clamp value between two bounds.</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,119" id="srcline119">119</a></span><span class="line">    </span></span>
+<span class="srcline"><span class="lineno"><a href="3,120" id="srcline120">120</a></span><span class="line">    <span class="comment">% Find which limit is min and max</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,121" id="srcline121">121</a></span><span class="line">    a_min = min(lim1, lim2);</span></span>
+<span class="srcline"><span class="lineno"><a href="3,122" id="srcline122">122</a></span><span class="line">    a_max = max(lim1, lim2);</span></span>
+<span class="srcline"><span class="lineno"><a href="3,123" id="srcline123">123</a></span><span class="line">    </span></span>
+<span class="srcline"><span class="lineno"><a href="3,124" id="srcline124">124</a></span><span class="line">    <span class="comment">% Clamp value between limits</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,125" id="srcline125">125</a></span><span class="line">    b = max(min(a, a_max), a_min);</span></span>
+<span class="srcline"><span class="lineno"><a href="3,126" id="srcline126">126</a></span><span class="line"><span class="keyword">end</span> <span class="comment">% clamp</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,127" id="srcline127">127</a></span><span class="line"></span></span>
+<span class="srcline"><span class="lineno"><a href="3,128" id="srcline128">128</a></span><span class="line"><span class="keyword">function</span> [y, dy] = cubic(x1, x2, y1, y2, dy1, dy2, x, dx)</span></span>
+<span class="srcline"><span class="lineno"><a href="3,129" id="srcline129">129</a></span><span class="line">    <span class="comment">%CUBIC Cubic interpolation between values.</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,130" id="srcline130">130</a></span><span class="line">    </span></span>
+<span class="srcline"><span class="lineno"><a href="3,131" id="srcline131">131</a></span><span class="line">    <span class="comment">% Limit range since curve fit is only valid within range</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,132" id="srcline132">132</a></span><span class="line">    x = clamp(x, x1, x2);</span></span>
+<span class="srcline"><span class="lineno"><a href="3,133" id="srcline133">133</a></span><span class="line">    <span class="comment">% Interpolate</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,134" id="srcline134">134</a></span><span class="line">    a0 = 2*(y1 - y2) + (dy1 + dy2)*(x2 - x1);</span></span>
+<span class="srcline"><span class="lineno"><a href="3,135" id="srcline135">135</a></span><span class="line">    a1 = y2 - y1 - dy1*(x2 - x1) - a0;</span></span>
+<span class="srcline"><span class="lineno"><a href="3,136" id="srcline136">136</a></span><span class="line">    a2 = dy1*(x2 - x1);</span></span>
+<span class="srcline"><span class="lineno"><a href="3,137" id="srcline137">137</a></span><span class="line">    a3 = y1;</span></span>
+<span class="srcline"><span class="lineno"><a href="3,138" id="srcline138">138</a></span><span class="line">    s = (x - x1)/(x2 - x1);</span></span>
+<span class="srcline"><span class="lineno"><a href="3,139" id="srcline139">139</a></span><span class="line">    y = a0*s^3 + a1*s^2 + a2*s + a3;</span></span>
+<span class="srcline"><span class="lineno"><a href="3,140" id="srcline140">140</a></span><span class="line">    dy = dx*(-3*a0*(x - x1)^2/(x1 - x2)^3 + 2*a1*(x - x1)/(x1 - x2)^2 - a2/(x1 - x2));</span></span>
+<span class="srcline"><span class="lineno"><a href="3,141" id="srcline141">141</a></span><span class="line"><span class="keyword">end</span> <span class="comment">% cubic</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,142" id="srcline142">142</a></span><span class="line"></span></span>
+<span class="srcline"><span class="lineno"><a href="3,143" id="srcline143">143</a></span><span class="line"><span class="keyword">function</span> s = scaleFactor(f, tl, tu)</span></span>
+<span class="srcline"><span class="lineno"><a href="3,144" id="srcline144">144</a></span><span class="line">    <span class="comment">%SCALEFACTOR Compute scalar (0 to 1) representing forces in leg.</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,145" id="srcline145">145</a></span><span class="line">    </span></span>
+<span class="srcline"><span class="lineno"><a href="3,146" id="srcline146">146</a></span><span class="line">    s = (clamp(f, tl, tu) - tl)/(tu - tl);</span></span>
+<span class="srcline"><span class="lineno"><a href="3,147" id="srcline147">147</a></span><span class="line"><span class="keyword">end</span> <span class="comment">% scaleFactor</span></span></span>
+<span class="srcline"><span class="lineno"><a href="3,148" id="srcline148">148</a></span><span class="line"> </span></span>
+</pre>
+</div>

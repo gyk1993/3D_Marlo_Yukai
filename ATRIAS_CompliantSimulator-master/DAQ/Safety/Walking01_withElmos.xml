@@ -1,0 +1,2840 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root>
+	<SubSystem>
+		<Name>DAQ_WITH_SAFETY_IMU</Name>
+		<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU</xPCName>
+		<SubSystem>
+			<Name>CPU Overload Regulator</Name>
+			<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/CPU Overload Regulator</xPCName>
+			<SubSystem>
+				<Name>Compare
+To Constant</Name>
+				<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/CPU Overload Regulator/Compare To Constant</xPCName>
+			</SubSystem>
+			<SubSystem>
+				<Name>Compare
+To Constant1</Name>
+				<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/CPU Overload Regulator/Compare To Constant1</xPCName>
+			</SubSystem>
+			<SubSystem>
+				<Name>Compare
+To Zero</Name>
+				<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/CPU Overload Regulator/Compare To Zero</xPCName>
+			</SubSystem>
+			<SubSystem>
+				<Name>Reset CPU Overload Count</Name>
+				<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/CPU Overload Regulator/Reset CPU Overload Count</xPCName>
+				<SubSystem>
+					<Name>Set Overload
+Counter 1</Name>
+					<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/CPU Overload Regulator/Reset CPU Overload Count/Set Overload Counter 1</xPCName>
+					<signal>
+						<sigName>Data Type 
+Conversion</sigName>
+						<xpcsigName>DAQ_WITH_SAFETY_IMU/CPU Overload Regulator/Reset CPU Overload Count/Set Overload Counter 1/Data Type  Conversion</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+				</SubSystem>
+			</SubSystem>
+			<signal>
+				<sigName>Bias</sigName>
+				<xpcsigName>DAQ_WITH_SAFETY_IMU/CPU Overload Regulator/Bias</xpcsigName>
+				<sigWidth>1</sigWidth>
+				<sigDim>[1, 1]</sigDim>
+			</signal>
+			<signal>
+				<sigName>Task Execution
+Time </sigName>
+				<xpcsigName>DAQ_WITH_SAFETY_IMU/CPU Overload Regulator/Task Execution Time </xpcsigName>
+				<sigWidth>1</sigWidth>
+				<sigDim>[1, 1]</sigDim>
+			</signal>
+		</SubSystem>
+		<SubSystem>
+			<Name>DAQ</Name>
+			<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ</xPCName>
+			<SubSystem>
+				<Name>EtherCATNetwork</Name>
+				<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork</xPCName>
+				<SubSystem>
+					<Name>EncoderFilters</Name>
+					<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EncoderFilters</xPCName>
+					<SubSystem>
+						<Name>CheckAndFilterEncoder</Name>
+						<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EncoderFilters/CheckAndFilterEncoder</xPCName>
+						<SubSystem>
+							<Name>AnomalyDetection</Name>
+							<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EncoderFilters/CheckAndFilterEncoder/AnomalyDetection</xPCName>
+						</SubSystem>
+						<signal>
+							<sigName>AnomalyDetection/p1</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EncoderFilters/CheckAndFilterEncoder/AnomalyDetection/p1</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>AnomalyDetection/p2</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EncoderFilters/CheckAndFilterEncoder/AnomalyDetection/p2</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Discrete State-Space</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EncoderFilters/CheckAndFilterEncoder/Discrete State-Space</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Unit Delay</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EncoderFilters/CheckAndFilterEncoder/Unit Delay</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+					</SubSystem>
+				</SubSystem>
+				<SubSystem>
+					<Name>EtherCATRobotMicrostrain</Name>
+					<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain</xPCName>
+					<SubSystem>
+						<Name>HipMedulla_3L</Name>
+						<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/HipMedulla_3L</xPCName>
+						<signal>
+							<sigName>Data Type Conversion3</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/HipMedulla_3L/Data Type Conversion3</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Data Type Conversion4</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/HipMedulla_3L/Data Type Conversion4</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Data Type Conversion5</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/HipMedulla_3L/Data Type Conversion5</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var </sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/HipMedulla_3L/EtherCAT Rx Var </xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 1</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/HipMedulla_3L/EtherCAT Rx Var 1</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 12</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/HipMedulla_3L/EtherCAT Rx Var 12</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 13</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/HipMedulla_3L/EtherCAT Rx Var 13</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 14</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/HipMedulla_3L/EtherCAT Rx Var 14</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 15</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/HipMedulla_3L/EtherCAT Rx Var 15</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 16</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/HipMedulla_3L/EtherCAT Rx Var 16</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 17</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/HipMedulla_3L/EtherCAT Rx Var 17</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 18</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/HipMedulla_3L/EtherCAT Rx Var 18</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 19</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/HipMedulla_3L/EtherCAT Rx Var 19</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 2</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/HipMedulla_3L/EtherCAT Rx Var 2</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 3</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/HipMedulla_3L/EtherCAT Rx Var 3</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 4</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/HipMedulla_3L/EtherCAT Rx Var 4</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 5</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/HipMedulla_3L/EtherCAT Rx Var 5</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 6</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/HipMedulla_3L/EtherCAT Rx Var 6</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+					</SubSystem>
+					<SubSystem>
+						<Name>HipMedulla_3R</Name>
+						<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/HipMedulla_3R</xPCName>
+						<signal>
+							<sigName>Data Type Conversion3</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/HipMedulla_3R/Data Type Conversion3</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Data Type Conversion4</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/HipMedulla_3R/Data Type Conversion4</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Data Type Conversion5</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/HipMedulla_3R/Data Type Conversion5</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var </sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/HipMedulla_3R/EtherCAT Rx Var </xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 1</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/HipMedulla_3R/EtherCAT Rx Var 1</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 12</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/HipMedulla_3R/EtherCAT Rx Var 12</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 13</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/HipMedulla_3R/EtherCAT Rx Var 13</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 14</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/HipMedulla_3R/EtherCAT Rx Var 14</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 15</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/HipMedulla_3R/EtherCAT Rx Var 15</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 16</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/HipMedulla_3R/EtherCAT Rx Var 16</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 17</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/HipMedulla_3R/EtherCAT Rx Var 17</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 18</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/HipMedulla_3R/EtherCAT Rx Var 18</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 19</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/HipMedulla_3R/EtherCAT Rx Var 19</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 2</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/HipMedulla_3R/EtherCAT Rx Var 2</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 3</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/HipMedulla_3R/EtherCAT Rx Var 3</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 4</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/HipMedulla_3R/EtherCAT Rx Var 4</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 5</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/HipMedulla_3R/EtherCAT Rx Var 5</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 6</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/HipMedulla_3R/EtherCAT Rx Var 6</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+					</SubSystem>
+					<SubSystem>
+						<Name>IMU_Medulla</Name>
+						<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/IMU_Medulla</xPCName>
+						<SubSystem>
+							<Name>TypecastAndCast</Name>
+							<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/IMU_Medulla/TypecastAndCast</xPCName>
+						</SubSystem>
+						<SubSystem>
+							<Name>TypecastAndCast1</Name>
+							<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/IMU_Medulla/TypecastAndCast1</xPCName>
+						</SubSystem>
+						<SubSystem>
+							<Name>TypecastAndCast2</Name>
+							<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/IMU_Medulla/TypecastAndCast2</xPCName>
+						</SubSystem>
+						<signal>
+							<sigName>TypecastAndCast1</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/IMU_Medulla/TypecastAndCast1</xpcsigName>
+							<sigWidth>3</sigWidth>
+							<sigDim>[3, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>TypecastAndCast2</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/IMU_Medulla/TypecastAndCast2</xpcsigName>
+							<sigWidth>3</sigWidth>
+							<sigDim>[3, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Data Type Conversion1</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/IMU_Medulla/Data Type Conversion1</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Data Type Conversion3</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/IMU_Medulla/Data Type Conversion3</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Data Type Conversion4</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/IMU_Medulla/Data Type Conversion4</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 1</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/IMU_Medulla/EtherCAT Rx Var 1</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 10</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/IMU_Medulla/EtherCAT Rx Var 10</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 11</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/IMU_Medulla/EtherCAT Rx Var 11</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 12</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/IMU_Medulla/EtherCAT Rx Var 12</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 13</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/IMU_Medulla/EtherCAT Rx Var 13</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 14</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/IMU_Medulla/EtherCAT Rx Var 14</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 15</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/IMU_Medulla/EtherCAT Rx Var 15</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 16</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/IMU_Medulla/EtherCAT Rx Var 16</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 17</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/IMU_Medulla/EtherCAT Rx Var 17</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 18</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/IMU_Medulla/EtherCAT Rx Var 18</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 19</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/IMU_Medulla/EtherCAT Rx Var 19</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 2</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/IMU_Medulla/EtherCAT Rx Var 2</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 3</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/IMU_Medulla/EtherCAT Rx Var 3</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 4</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/IMU_Medulla/EtherCAT Rx Var 4</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 5</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/IMU_Medulla/EtherCAT Rx Var 5</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 6</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/IMU_Medulla/EtherCAT Rx Var 6</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 7</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/IMU_Medulla/EtherCAT Rx Var 7</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 8</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/IMU_Medulla/EtherCAT Rx Var 8</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 9</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/IMU_Medulla/EtherCAT Rx Var 9</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+					</SubSystem>
+					<SubSystem>
+						<Name>LegElmo_1L</Name>
+						<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1L</xPCName>
+						<SubSystem>
+							<Name>EtherCATSubsystem</Name>
+							<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1L/EtherCATSubsystem</xPCName>
+							<signal>
+								<sigName>EtherCAT PDO Receive</sigName>
+								<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1L/EtherCATSubsystem/EtherCAT PDO Receive</xpcsigName>
+								<sigWidth>1</sigWidth>
+								<sigDim>[1, 1]</sigDim>
+							</signal>
+							<signal>
+								<sigName>EtherCAT PDO Receive1</sigName>
+								<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1L/EtherCATSubsystem/EtherCAT PDO Receive1</xpcsigName>
+								<sigWidth>1</sigWidth>
+								<sigDim>[1, 1]</sigDim>
+							</signal>
+							<signal>
+								<sigName>EtherCAT PDO Receive2</sigName>
+								<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1L/EtherCATSubsystem/EtherCAT PDO Receive2</xpcsigName>
+								<sigWidth>1</sigWidth>
+								<sigDim>[1, 1]</sigDim>
+							</signal>
+							<signal>
+								<sigName>EtherCAT PDO Receive3</sigName>
+								<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1L/EtherCATSubsystem/EtherCAT PDO Receive3</xpcsigName>
+								<sigWidth>1</sigWidth>
+								<sigDim>[1, 1]</sigDim>
+							</signal>
+							<signal>
+								<sigName>EtherCAT PDO Receive4</sigName>
+								<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1L/EtherCATSubsystem/EtherCAT PDO Receive4</xpcsigName>
+								<sigWidth>1</sigWidth>
+								<sigDim>[1, 1]</sigDim>
+							</signal>
+							<signal>
+								<sigName>EtherCAT PDO Receive5</sigName>
+								<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1L/EtherCATSubsystem/EtherCAT PDO Receive5</xpcsigName>
+								<sigWidth>1</sigWidth>
+								<sigDim>[1, 1]</sigDim>
+							</signal>
+						</SubSystem>
+						<SubSystem>
+							<Name>Subsystem</Name>
+							<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1L/Subsystem</xPCName>
+						</SubSystem>
+						<SubSystem>
+							<Name>Subsystem1</Name>
+							<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1L/Subsystem1</xPCName>
+							<SubSystem>
+								<Name>EnableControlWord</Name>
+								<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1L/Subsystem1/EnableControlWord</xPCName>
+							</SubSystem>
+							<SubSystem>
+								<Name>FaultReset</Name>
+								<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1L/Subsystem1/FaultReset</xPCName>
+							</SubSystem>
+							<SubSystem>
+								<Name>NothingControlWord</Name>
+								<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1L/Subsystem1/NothingControlWord</xPCName>
+							</SubSystem>
+							<SubSystem>
+								<Name>ShutdownControlWord</Name>
+								<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1L/Subsystem1/ShutdownControlWord</xPCName>
+							</SubSystem>
+							<signal>
+								<sigName>Merge</sigName>
+								<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1L/Subsystem1/Merge</xpcsigName>
+								<sigWidth>1</sigWidth>
+								<sigDim>[1, 1]</sigDim>
+							</signal>
+						</SubSystem>
+						<SubSystem>
+							<Name>Subsystem2</Name>
+							<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1L/Subsystem2</xPCName>
+							<SubSystem>
+								<Name>Compare
+To Constant</Name>
+								<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1L/Subsystem2/Compare To Constant</xPCName>
+								<signal>
+									<sigName>Compare</sigName>
+									<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1L/Subsystem2/Compare To Constant/Compare</xpcsigName>
+									<sigWidth>1</sigWidth>
+									<sigDim>[1, 1]</sigDim>
+								</signal>
+							</SubSystem>
+						</SubSystem>
+						<SubSystem>
+							<Name>Subsystem3</Name>
+							<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1L/Subsystem3</xPCName>
+							<SubSystem>
+								<Name>Compare
+To Constant</Name>
+								<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1L/Subsystem3/Compare To Constant</xPCName>
+								<signal>
+									<sigName>Compare</sigName>
+									<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1L/Subsystem3/Compare To Constant/Compare</xpcsigName>
+									<sigWidth>1</sigWidth>
+									<sigDim>[1, 1]</sigDim>
+								</signal>
+							</SubSystem>
+						</SubSystem>
+						<SubSystem>
+							<Name>Subsystem4</Name>
+							<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1L/Subsystem4</xPCName>
+							<SubSystem>
+								<Name>Compare
+To Constant</Name>
+								<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1L/Subsystem4/Compare To Constant</xPCName>
+								<signal>
+									<sigName>Compare</sigName>
+									<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1L/Subsystem4/Compare To Constant/Compare</xpcsigName>
+									<sigWidth>1</sigWidth>
+									<sigDim>[1, 1]</sigDim>
+								</signal>
+							</SubSystem>
+						</SubSystem>
+						<SubSystem>
+							<Name>Subsystem5</Name>
+							<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1L/Subsystem5</xPCName>
+							<SubSystem>
+								<Name>Compare
+To Constant</Name>
+								<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1L/Subsystem5/Compare To Constant</xPCName>
+								<signal>
+									<sigName>Compare</sigName>
+									<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1L/Subsystem5/Compare To Constant/Compare</xpcsigName>
+									<sigWidth>1</sigWidth>
+									<sigDim>[1, 1]</sigDim>
+								</signal>
+							</SubSystem>
+						</SubSystem>
+						<SubSystem>
+							<Name>Subsystem6</Name>
+							<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1L/Subsystem6</xPCName>
+						</SubSystem>
+						<SubSystem>
+							<Name>Subsystem7</Name>
+							<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1L/Subsystem7</xPCName>
+						</SubSystem>
+						<SubSystem>
+							<Name>Chart</Name>
+							<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1L/Chart</xPCName>
+						</SubSystem>
+						<signal>
+							<sigName>Chart/p1</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1L/Chart/p1</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Chart/p2</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1L/Chart/p2</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Chart/p3</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1L/Chart/p3</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Switch</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1L/Switch</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+					</SubSystem>
+					<SubSystem>
+						<Name>LegElmo_1R</Name>
+						<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1R</xPCName>
+						<SubSystem>
+							<Name>EtherCATSubsystem</Name>
+							<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1R/EtherCATSubsystem</xPCName>
+							<signal>
+								<sigName>EtherCAT PDO Receive</sigName>
+								<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1R/EtherCATSubsystem/EtherCAT PDO Receive</xpcsigName>
+								<sigWidth>1</sigWidth>
+								<sigDim>[1, 1]</sigDim>
+							</signal>
+							<signal>
+								<sigName>EtherCAT PDO Receive1</sigName>
+								<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1R/EtherCATSubsystem/EtherCAT PDO Receive1</xpcsigName>
+								<sigWidth>1</sigWidth>
+								<sigDim>[1, 1]</sigDim>
+							</signal>
+							<signal>
+								<sigName>EtherCAT PDO Receive2</sigName>
+								<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1R/EtherCATSubsystem/EtherCAT PDO Receive2</xpcsigName>
+								<sigWidth>1</sigWidth>
+								<sigDim>[1, 1]</sigDim>
+							</signal>
+							<signal>
+								<sigName>EtherCAT PDO Receive3</sigName>
+								<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1R/EtherCATSubsystem/EtherCAT PDO Receive3</xpcsigName>
+								<sigWidth>1</sigWidth>
+								<sigDim>[1, 1]</sigDim>
+							</signal>
+							<signal>
+								<sigName>EtherCAT PDO Receive4</sigName>
+								<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1R/EtherCATSubsystem/EtherCAT PDO Receive4</xpcsigName>
+								<sigWidth>1</sigWidth>
+								<sigDim>[1, 1]</sigDim>
+							</signal>
+							<signal>
+								<sigName>EtherCAT PDO Receive5</sigName>
+								<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1R/EtherCATSubsystem/EtherCAT PDO Receive5</xpcsigName>
+								<sigWidth>1</sigWidth>
+								<sigDim>[1, 1]</sigDim>
+							</signal>
+						</SubSystem>
+						<SubSystem>
+							<Name>Subsystem</Name>
+							<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1R/Subsystem</xPCName>
+						</SubSystem>
+						<SubSystem>
+							<Name>Subsystem1</Name>
+							<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1R/Subsystem1</xPCName>
+							<SubSystem>
+								<Name>EnableControlWord</Name>
+								<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1R/Subsystem1/EnableControlWord</xPCName>
+							</SubSystem>
+							<SubSystem>
+								<Name>FaultReset</Name>
+								<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1R/Subsystem1/FaultReset</xPCName>
+							</SubSystem>
+							<SubSystem>
+								<Name>NothingControlWord</Name>
+								<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1R/Subsystem1/NothingControlWord</xPCName>
+							</SubSystem>
+							<SubSystem>
+								<Name>ShutdownControlWord</Name>
+								<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1R/Subsystem1/ShutdownControlWord</xPCName>
+							</SubSystem>
+							<signal>
+								<sigName>Merge</sigName>
+								<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1R/Subsystem1/Merge</xpcsigName>
+								<sigWidth>1</sigWidth>
+								<sigDim>[1, 1]</sigDim>
+							</signal>
+						</SubSystem>
+						<SubSystem>
+							<Name>Subsystem2</Name>
+							<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1R/Subsystem2</xPCName>
+							<SubSystem>
+								<Name>Compare
+To Constant</Name>
+								<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1R/Subsystem2/Compare To Constant</xPCName>
+								<signal>
+									<sigName>Compare</sigName>
+									<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1R/Subsystem2/Compare To Constant/Compare</xpcsigName>
+									<sigWidth>1</sigWidth>
+									<sigDim>[1, 1]</sigDim>
+								</signal>
+							</SubSystem>
+						</SubSystem>
+						<SubSystem>
+							<Name>Subsystem3</Name>
+							<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1R/Subsystem3</xPCName>
+							<SubSystem>
+								<Name>Compare
+To Constant</Name>
+								<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1R/Subsystem3/Compare To Constant</xPCName>
+								<signal>
+									<sigName>Compare</sigName>
+									<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1R/Subsystem3/Compare To Constant/Compare</xpcsigName>
+									<sigWidth>1</sigWidth>
+									<sigDim>[1, 1]</sigDim>
+								</signal>
+							</SubSystem>
+						</SubSystem>
+						<SubSystem>
+							<Name>Subsystem4</Name>
+							<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1R/Subsystem4</xPCName>
+							<SubSystem>
+								<Name>Compare
+To Constant</Name>
+								<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1R/Subsystem4/Compare To Constant</xPCName>
+								<signal>
+									<sigName>Compare</sigName>
+									<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1R/Subsystem4/Compare To Constant/Compare</xpcsigName>
+									<sigWidth>1</sigWidth>
+									<sigDim>[1, 1]</sigDim>
+								</signal>
+							</SubSystem>
+						</SubSystem>
+						<SubSystem>
+							<Name>Subsystem5</Name>
+							<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1R/Subsystem5</xPCName>
+							<SubSystem>
+								<Name>Compare
+To Constant</Name>
+								<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1R/Subsystem5/Compare To Constant</xPCName>
+								<signal>
+									<sigName>Compare</sigName>
+									<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1R/Subsystem5/Compare To Constant/Compare</xpcsigName>
+									<sigWidth>1</sigWidth>
+									<sigDim>[1, 1]</sigDim>
+								</signal>
+							</SubSystem>
+						</SubSystem>
+						<SubSystem>
+							<Name>Subsystem6</Name>
+							<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1R/Subsystem6</xPCName>
+						</SubSystem>
+						<SubSystem>
+							<Name>Subsystem7</Name>
+							<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1R/Subsystem7</xPCName>
+						</SubSystem>
+						<SubSystem>
+							<Name>Chart</Name>
+							<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1R/Chart</xPCName>
+						</SubSystem>
+						<signal>
+							<sigName>Chart/p1</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1R/Chart/p1</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Chart/p2</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1R/Chart/p2</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Chart/p3</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1R/Chart/p3</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Switch</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_1R/Switch</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+					</SubSystem>
+					<SubSystem>
+						<Name>LegElmo_2L</Name>
+						<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2L</xPCName>
+						<SubSystem>
+							<Name>EtherCATSubsystem</Name>
+							<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2L/EtherCATSubsystem</xPCName>
+							<signal>
+								<sigName>EtherCAT PDO Receive</sigName>
+								<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2L/EtherCATSubsystem/EtherCAT PDO Receive</xpcsigName>
+								<sigWidth>1</sigWidth>
+								<sigDim>[1, 1]</sigDim>
+							</signal>
+							<signal>
+								<sigName>EtherCAT PDO Receive1</sigName>
+								<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2L/EtherCATSubsystem/EtherCAT PDO Receive1</xpcsigName>
+								<sigWidth>1</sigWidth>
+								<sigDim>[1, 1]</sigDim>
+							</signal>
+							<signal>
+								<sigName>EtherCAT PDO Receive2</sigName>
+								<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2L/EtherCATSubsystem/EtherCAT PDO Receive2</xpcsigName>
+								<sigWidth>1</sigWidth>
+								<sigDim>[1, 1]</sigDim>
+							</signal>
+							<signal>
+								<sigName>EtherCAT PDO Receive3</sigName>
+								<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2L/EtherCATSubsystem/EtherCAT PDO Receive3</xpcsigName>
+								<sigWidth>1</sigWidth>
+								<sigDim>[1, 1]</sigDim>
+							</signal>
+							<signal>
+								<sigName>EtherCAT PDO Receive4</sigName>
+								<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2L/EtherCATSubsystem/EtherCAT PDO Receive4</xpcsigName>
+								<sigWidth>1</sigWidth>
+								<sigDim>[1, 1]</sigDim>
+							</signal>
+							<signal>
+								<sigName>EtherCAT PDO Receive5</sigName>
+								<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2L/EtherCATSubsystem/EtherCAT PDO Receive5</xpcsigName>
+								<sigWidth>1</sigWidth>
+								<sigDim>[1, 1]</sigDim>
+							</signal>
+						</SubSystem>
+						<SubSystem>
+							<Name>Subsystem</Name>
+							<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2L/Subsystem</xPCName>
+						</SubSystem>
+						<SubSystem>
+							<Name>Subsystem1</Name>
+							<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2L/Subsystem1</xPCName>
+							<SubSystem>
+								<Name>EnableControlWord</Name>
+								<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2L/Subsystem1/EnableControlWord</xPCName>
+							</SubSystem>
+							<SubSystem>
+								<Name>FaultReset</Name>
+								<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2L/Subsystem1/FaultReset</xPCName>
+							</SubSystem>
+							<SubSystem>
+								<Name>NothingControlWord</Name>
+								<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2L/Subsystem1/NothingControlWord</xPCName>
+							</SubSystem>
+							<SubSystem>
+								<Name>ShutdownControlWord</Name>
+								<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2L/Subsystem1/ShutdownControlWord</xPCName>
+							</SubSystem>
+							<signal>
+								<sigName>Merge</sigName>
+								<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2L/Subsystem1/Merge</xpcsigName>
+								<sigWidth>1</sigWidth>
+								<sigDim>[1, 1]</sigDim>
+							</signal>
+						</SubSystem>
+						<SubSystem>
+							<Name>Subsystem2</Name>
+							<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2L/Subsystem2</xPCName>
+							<SubSystem>
+								<Name>Compare
+To Constant</Name>
+								<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2L/Subsystem2/Compare To Constant</xPCName>
+								<signal>
+									<sigName>Compare</sigName>
+									<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2L/Subsystem2/Compare To Constant/Compare</xpcsigName>
+									<sigWidth>1</sigWidth>
+									<sigDim>[1, 1]</sigDim>
+								</signal>
+							</SubSystem>
+						</SubSystem>
+						<SubSystem>
+							<Name>Subsystem3</Name>
+							<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2L/Subsystem3</xPCName>
+							<SubSystem>
+								<Name>Compare
+To Constant</Name>
+								<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2L/Subsystem3/Compare To Constant</xPCName>
+								<signal>
+									<sigName>Compare</sigName>
+									<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2L/Subsystem3/Compare To Constant/Compare</xpcsigName>
+									<sigWidth>1</sigWidth>
+									<sigDim>[1, 1]</sigDim>
+								</signal>
+							</SubSystem>
+						</SubSystem>
+						<SubSystem>
+							<Name>Subsystem4</Name>
+							<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2L/Subsystem4</xPCName>
+							<SubSystem>
+								<Name>Compare
+To Constant</Name>
+								<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2L/Subsystem4/Compare To Constant</xPCName>
+								<signal>
+									<sigName>Compare</sigName>
+									<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2L/Subsystem4/Compare To Constant/Compare</xpcsigName>
+									<sigWidth>1</sigWidth>
+									<sigDim>[1, 1]</sigDim>
+								</signal>
+							</SubSystem>
+						</SubSystem>
+						<SubSystem>
+							<Name>Subsystem5</Name>
+							<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2L/Subsystem5</xPCName>
+							<SubSystem>
+								<Name>Compare
+To Constant</Name>
+								<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2L/Subsystem5/Compare To Constant</xPCName>
+								<signal>
+									<sigName>Compare</sigName>
+									<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2L/Subsystem5/Compare To Constant/Compare</xpcsigName>
+									<sigWidth>1</sigWidth>
+									<sigDim>[1, 1]</sigDim>
+								</signal>
+							</SubSystem>
+						</SubSystem>
+						<SubSystem>
+							<Name>Subsystem6</Name>
+							<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2L/Subsystem6</xPCName>
+						</SubSystem>
+						<SubSystem>
+							<Name>Subsystem7</Name>
+							<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2L/Subsystem7</xPCName>
+						</SubSystem>
+						<SubSystem>
+							<Name>Chart</Name>
+							<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2L/Chart</xPCName>
+						</SubSystem>
+						<signal>
+							<sigName>Chart/p1</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2L/Chart/p1</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Chart/p2</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2L/Chart/p2</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Chart/p3</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2L/Chart/p3</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Switch</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2L/Switch</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+					</SubSystem>
+					<SubSystem>
+						<Name>LegElmo_2R</Name>
+						<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2R</xPCName>
+						<SubSystem>
+							<Name>EtherCATSubsystem</Name>
+							<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2R/EtherCATSubsystem</xPCName>
+							<signal>
+								<sigName>EtherCAT PDO Receive</sigName>
+								<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2R/EtherCATSubsystem/EtherCAT PDO Receive</xpcsigName>
+								<sigWidth>1</sigWidth>
+								<sigDim>[1, 1]</sigDim>
+							</signal>
+							<signal>
+								<sigName>EtherCAT PDO Receive1</sigName>
+								<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2R/EtherCATSubsystem/EtherCAT PDO Receive1</xpcsigName>
+								<sigWidth>1</sigWidth>
+								<sigDim>[1, 1]</sigDim>
+							</signal>
+							<signal>
+								<sigName>EtherCAT PDO Receive2</sigName>
+								<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2R/EtherCATSubsystem/EtherCAT PDO Receive2</xpcsigName>
+								<sigWidth>1</sigWidth>
+								<sigDim>[1, 1]</sigDim>
+							</signal>
+							<signal>
+								<sigName>EtherCAT PDO Receive3</sigName>
+								<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2R/EtherCATSubsystem/EtherCAT PDO Receive3</xpcsigName>
+								<sigWidth>1</sigWidth>
+								<sigDim>[1, 1]</sigDim>
+							</signal>
+							<signal>
+								<sigName>EtherCAT PDO Receive4</sigName>
+								<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2R/EtherCATSubsystem/EtherCAT PDO Receive4</xpcsigName>
+								<sigWidth>1</sigWidth>
+								<sigDim>[1, 1]</sigDim>
+							</signal>
+							<signal>
+								<sigName>EtherCAT PDO Receive5</sigName>
+								<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2R/EtherCATSubsystem/EtherCAT PDO Receive5</xpcsigName>
+								<sigWidth>1</sigWidth>
+								<sigDim>[1, 1]</sigDim>
+							</signal>
+						</SubSystem>
+						<SubSystem>
+							<Name>Subsystem</Name>
+							<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2R/Subsystem</xPCName>
+						</SubSystem>
+						<SubSystem>
+							<Name>Subsystem1</Name>
+							<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2R/Subsystem1</xPCName>
+							<SubSystem>
+								<Name>EnableControlWord</Name>
+								<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2R/Subsystem1/EnableControlWord</xPCName>
+							</SubSystem>
+							<SubSystem>
+								<Name>FaultReset</Name>
+								<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2R/Subsystem1/FaultReset</xPCName>
+							</SubSystem>
+							<SubSystem>
+								<Name>NothingControlWord</Name>
+								<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2R/Subsystem1/NothingControlWord</xPCName>
+							</SubSystem>
+							<SubSystem>
+								<Name>ShutdownControlWord</Name>
+								<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2R/Subsystem1/ShutdownControlWord</xPCName>
+							</SubSystem>
+							<signal>
+								<sigName>Merge</sigName>
+								<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2R/Subsystem1/Merge</xpcsigName>
+								<sigWidth>1</sigWidth>
+								<sigDim>[1, 1]</sigDim>
+							</signal>
+						</SubSystem>
+						<SubSystem>
+							<Name>Subsystem2</Name>
+							<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2R/Subsystem2</xPCName>
+							<SubSystem>
+								<Name>Compare
+To Constant</Name>
+								<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2R/Subsystem2/Compare To Constant</xPCName>
+								<signal>
+									<sigName>Compare</sigName>
+									<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2R/Subsystem2/Compare To Constant/Compare</xpcsigName>
+									<sigWidth>1</sigWidth>
+									<sigDim>[1, 1]</sigDim>
+								</signal>
+							</SubSystem>
+						</SubSystem>
+						<SubSystem>
+							<Name>Subsystem3</Name>
+							<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2R/Subsystem3</xPCName>
+							<SubSystem>
+								<Name>Compare
+To Constant</Name>
+								<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2R/Subsystem3/Compare To Constant</xPCName>
+								<signal>
+									<sigName>Compare</sigName>
+									<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2R/Subsystem3/Compare To Constant/Compare</xpcsigName>
+									<sigWidth>1</sigWidth>
+									<sigDim>[1, 1]</sigDim>
+								</signal>
+							</SubSystem>
+						</SubSystem>
+						<SubSystem>
+							<Name>Subsystem4</Name>
+							<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2R/Subsystem4</xPCName>
+							<SubSystem>
+								<Name>Compare
+To Constant</Name>
+								<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2R/Subsystem4/Compare To Constant</xPCName>
+								<signal>
+									<sigName>Compare</sigName>
+									<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2R/Subsystem4/Compare To Constant/Compare</xpcsigName>
+									<sigWidth>1</sigWidth>
+									<sigDim>[1, 1]</sigDim>
+								</signal>
+							</SubSystem>
+						</SubSystem>
+						<SubSystem>
+							<Name>Subsystem5</Name>
+							<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2R/Subsystem5</xPCName>
+							<SubSystem>
+								<Name>Compare
+To Constant</Name>
+								<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2R/Subsystem5/Compare To Constant</xPCName>
+								<signal>
+									<sigName>Compare</sigName>
+									<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2R/Subsystem5/Compare To Constant/Compare</xpcsigName>
+									<sigWidth>1</sigWidth>
+									<sigDim>[1, 1]</sigDim>
+								</signal>
+							</SubSystem>
+						</SubSystem>
+						<SubSystem>
+							<Name>Subsystem6</Name>
+							<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2R/Subsystem6</xPCName>
+						</SubSystem>
+						<SubSystem>
+							<Name>Subsystem7</Name>
+							<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2R/Subsystem7</xPCName>
+						</SubSystem>
+						<SubSystem>
+							<Name>Chart</Name>
+							<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2R/Chart</xPCName>
+						</SubSystem>
+						<signal>
+							<sigName>Chart/p1</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2R/Chart/p1</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Chart/p2</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2R/Chart/p2</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Chart/p3</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2R/Chart/p3</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Switch</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegElmo_2R/Switch</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+					</SubSystem>
+					<SubSystem>
+						<Name>LegMedulla_1L</Name>
+						<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1L</xPCName>
+						<signal>
+							<sigName>Data Type Conversion3</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1L/Data Type Conversion3</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Data Type Conversion4</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1L/Data Type Conversion4</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Data Type Conversion5</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1L/Data Type Conversion5</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var </sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1L/EtherCAT Rx Var </xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 1</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1L/EtherCAT Rx Var 1</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 10</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1L/EtherCAT Rx Var 10</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 11</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1L/EtherCAT Rx Var 11</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 12</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1L/EtherCAT Rx Var 12</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 13</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1L/EtherCAT Rx Var 13</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 14</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1L/EtherCAT Rx Var 14</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 15</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1L/EtherCAT Rx Var 15</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 16</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1L/EtherCAT Rx Var 16</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 17</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1L/EtherCAT Rx Var 17</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 18</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1L/EtherCAT Rx Var 18</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 19</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1L/EtherCAT Rx Var 19</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 2</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1L/EtherCAT Rx Var 2</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 20</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1L/EtherCAT Rx Var 20</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 21</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1L/EtherCAT Rx Var 21</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 22</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1L/EtherCAT Rx Var 22</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 23</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1L/EtherCAT Rx Var 23</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 3</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1L/EtherCAT Rx Var 3</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 4</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1L/EtherCAT Rx Var 4</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 5</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1L/EtherCAT Rx Var 5</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 6</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1L/EtherCAT Rx Var 6</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 7</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1L/EtherCAT Rx Var 7</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 8</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1L/EtherCAT Rx Var 8</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 9</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1L/EtherCAT Rx Var 9</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+					</SubSystem>
+					<SubSystem>
+						<Name>LegMedulla_1R</Name>
+						<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1R</xPCName>
+						<signal>
+							<sigName>Data Type Conversion3</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1R/Data Type Conversion3</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Data Type Conversion4</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1R/Data Type Conversion4</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Data Type Conversion5</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1R/Data Type Conversion5</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var </sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1R/EtherCAT Rx Var </xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 1</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1R/EtherCAT Rx Var 1</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 10</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1R/EtherCAT Rx Var 10</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 11</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1R/EtherCAT Rx Var 11</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 12</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1R/EtherCAT Rx Var 12</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 13</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1R/EtherCAT Rx Var 13</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 14</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1R/EtherCAT Rx Var 14</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 15</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1R/EtherCAT Rx Var 15</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 16</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1R/EtherCAT Rx Var 16</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 17</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1R/EtherCAT Rx Var 17</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 18</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1R/EtherCAT Rx Var 18</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 19</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1R/EtherCAT Rx Var 19</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 2</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1R/EtherCAT Rx Var 2</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 20</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1R/EtherCAT Rx Var 20</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 21</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1R/EtherCAT Rx Var 21</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 22</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1R/EtherCAT Rx Var 22</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 23</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1R/EtherCAT Rx Var 23</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 3</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1R/EtherCAT Rx Var 3</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 4</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1R/EtherCAT Rx Var 4</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 5</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1R/EtherCAT Rx Var 5</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 6</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1R/EtherCAT Rx Var 6</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 7</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1R/EtherCAT Rx Var 7</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 8</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1R/EtherCAT Rx Var 8</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 9</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_1R/EtherCAT Rx Var 9</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+					</SubSystem>
+					<SubSystem>
+						<Name>LegMedulla_2L</Name>
+						<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2L</xPCName>
+						<signal>
+							<sigName>Data Type Conversion3</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2L/Data Type Conversion3</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Data Type Conversion4</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2L/Data Type Conversion4</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Data Type Conversion5</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2L/Data Type Conversion5</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var </sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2L/EtherCAT Rx Var </xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 1</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2L/EtherCAT Rx Var 1</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 10</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2L/EtherCAT Rx Var 10</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 11</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2L/EtherCAT Rx Var 11</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 12</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2L/EtherCAT Rx Var 12</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 13</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2L/EtherCAT Rx Var 13</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 14</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2L/EtherCAT Rx Var 14</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 15</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2L/EtherCAT Rx Var 15</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 16</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2L/EtherCAT Rx Var 16</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 17</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2L/EtherCAT Rx Var 17</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 18</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2L/EtherCAT Rx Var 18</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 19</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2L/EtherCAT Rx Var 19</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 2</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2L/EtherCAT Rx Var 2</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 20</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2L/EtherCAT Rx Var 20</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 21</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2L/EtherCAT Rx Var 21</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 22</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2L/EtherCAT Rx Var 22</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 23</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2L/EtherCAT Rx Var 23</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 3</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2L/EtherCAT Rx Var 3</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 4</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2L/EtherCAT Rx Var 4</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 5</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2L/EtherCAT Rx Var 5</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 6</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2L/EtherCAT Rx Var 6</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 7</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2L/EtherCAT Rx Var 7</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 8</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2L/EtherCAT Rx Var 8</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 9</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2L/EtherCAT Rx Var 9</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+					</SubSystem>
+					<SubSystem>
+						<Name>LegMedulla_2R</Name>
+						<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2R</xPCName>
+						<signal>
+							<sigName>Data Type Conversion3</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2R/Data Type Conversion3</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Data Type Conversion4</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2R/Data Type Conversion4</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Data Type Conversion5</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2R/Data Type Conversion5</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var </sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2R/EtherCAT Rx Var </xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 1</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2R/EtherCAT Rx Var 1</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 10</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2R/EtherCAT Rx Var 10</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 11</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2R/EtherCAT Rx Var 11</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 12</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2R/EtherCAT Rx Var 12</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 13</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2R/EtherCAT Rx Var 13</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 14</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2R/EtherCAT Rx Var 14</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 15</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2R/EtherCAT Rx Var 15</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 16</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2R/EtherCAT Rx Var 16</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 17</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2R/EtherCAT Rx Var 17</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 18</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2R/EtherCAT Rx Var 18</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 19</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2R/EtherCAT Rx Var 19</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 2</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2R/EtherCAT Rx Var 2</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 20</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2R/EtherCAT Rx Var 20</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 21</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2R/EtherCAT Rx Var 21</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 22</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2R/EtherCAT Rx Var 22</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 23</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2R/EtherCAT Rx Var 23</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 3</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2R/EtherCAT Rx Var 3</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 4</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2R/EtherCAT Rx Var 4</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 5</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2R/EtherCAT Rx Var 5</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 6</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2R/EtherCAT Rx Var 6</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 7</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2R/EtherCAT Rx Var 7</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 8</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2R/EtherCAT Rx Var 8</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT Rx Var 9</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/LegMedulla_2R/EtherCAT Rx Var 9</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+					</SubSystem>
+					<SubSystem>
+						<Name>ConvertAmpCurrent</Name>
+						<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/ConvertAmpCurrent</xPCName>
+					</SubSystem>
+					<SubSystem>
+						<Name>ConvertLogicVoltage</Name>
+						<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/ConvertLogicVoltage</xPCName>
+					</SubSystem>
+					<SubSystem>
+						<Name>ConvertMotorVoltage</Name>
+						<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/ConvertMotorVoltage</xPCName>
+					</SubSystem>
+					<SubSystem>
+						<Name>ConvertThermistors</Name>
+						<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/ConvertThermistors</xPCName>
+					</SubSystem>
+					<SubSystem>
+						<Name>EncodeSwitches</Name>
+						<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/EncodeSwitches</xPCName>
+					</SubSystem>
+					<signal>
+						<sigName>Data Type Conversion104</sigName>
+						<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/Data Type Conversion104</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>Data Type Conversion119</sigName>
+						<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/Data Type Conversion119</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>Data Type Conversion141</sigName>
+						<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/Data Type Conversion141</xpcsigName>
+						<sigWidth>3</sigWidth>
+						<sigDim>[3, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>Data Type Conversion33</sigName>
+						<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/Data Type Conversion33</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>Data Type Conversion57</sigName>
+						<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/Data Type Conversion57</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>Data Type Conversion81</sigName>
+						<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/Data Type Conversion81</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>Data Type Conversion9</sigName>
+						<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/Data Type Conversion9</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>Data Type Conversion97</sigName>
+						<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/Data Type Conversion97</xpcsigName>
+						<sigWidth>6</sigWidth>
+						<sigDim>[6, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Init </sigName>
+						<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/EtherCATRobotMicrostrain/EtherCAT Init </xpcsigName>
+						<sigWidth>6</sigWidth>
+						<sigDim>[6, 1]</sigDim>
+					</signal>
+				</SubSystem>
+				<SubSystem>
+					<Name>IMUFilters</Name>
+					<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/IMUFilters</xPCName>
+					<SubSystem>
+						<Name>CheckAndFilterIMU</Name>
+						<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/IMUFilters/CheckAndFilterIMU</xPCName>
+						<SubSystem>
+							<Name>AnomalyDetection</Name>
+							<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/IMUFilters/CheckAndFilterIMU/AnomalyDetection</xPCName>
+						</SubSystem>
+						<signal>
+							<sigName>AnomalyDetection/p1</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/IMUFilters/CheckAndFilterIMU/AnomalyDetection/p1</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>AnomalyDetection/p2</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/IMUFilters/CheckAndFilterIMU/AnomalyDetection/p2</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Rate Transition</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/IMUFilters/CheckAndFilterIMU/Rate Transition</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Rate Transition3</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/IMUFilters/CheckAndFilterIMU/Rate Transition3</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Rate Transition4</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/IMUFilters/CheckAndFilterIMU/Rate Transition4</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Rate Transition5</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/IMUFilters/CheckAndFilterIMU/Rate Transition5</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Rate Transition6</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/IMUFilters/CheckAndFilterIMU/Rate Transition6</xpcsigName>
+							<sigWidth>2</sigWidth>
+							<sigDim>[1, 2]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Rate Transition7</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/IMUFilters/CheckAndFilterIMU/Rate Transition7</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Switch</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/IMUFilters/CheckAndFilterIMU/Switch</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Unit Delay</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/IMUFilters/CheckAndFilterIMU/Unit Delay</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+					</SubSystem>
+				</SubSystem>
+				<SubSystem>
+					<Name>Subsystem</Name>
+					<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/Subsystem</xPCName>
+				</SubSystem>
+				<SubSystem>
+					<Name>ComputeEulerAngles</Name>
+					<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/ComputeEulerAngles</xPCName>
+				</SubSystem>
+				<SubSystem>
+					<Name>calibrate</Name>
+					<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/calibrate</xPCName>
+				</SubSystem>
+				<SubSystem>
+					<Name>convert_mtr_current_to_pwm</Name>
+					<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/convert_mtr_current_to_pwm</xPCName>
+				</SubSystem>
+				<signal>
+					<sigName>ComputeEulerAngles/p1</sigName>
+					<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/ComputeEulerAngles/p1</xpcsigName>
+					<sigWidth>3</sigWidth>
+					<sigDim>[3, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>ComputeEulerAngles/p2</sigName>
+					<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/ComputeEulerAngles/p2</xpcsigName>
+					<sigWidth>3</sigWidth>
+					<sigDim>[3, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>ComputeEulerAngles/p3</sigName>
+					<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/ComputeEulerAngles/p3</xpcsigName>
+					<sigWidth>9</sigWidth>
+					<sigDim>[3, 3]</sigDim>
+				</signal>
+				<signal>
+					<sigName>ComputeEulerAngles/p4</sigName>
+					<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/ComputeEulerAngles/p4</xpcsigName>
+					<sigWidth>9</sigWidth>
+					<sigDim>[3, 3]</sigDim>
+				</signal>
+				<signal>
+					<sigName>ComputeEulerAngles/p5</sigName>
+					<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/ComputeEulerAngles/p5</xpcsigName>
+					<sigWidth>2</sigWidth>
+					<sigDim>[2, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>calibrate/p1</sigName>
+					<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/calibrate/p1</xpcsigName>
+					<sigWidth>19</sigWidth>
+					<sigDim>[19, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>calibrate/p2</sigName>
+					<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/calibrate/p2</xpcsigName>
+					<sigWidth>19</sigWidth>
+					<sigDim>[19, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>calibrate/p3</sigName>
+					<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/calibrate/p3</xpcsigName>
+					<sigWidth>9</sigWidth>
+					<sigDim>[9, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>calibrate/p4</sigName>
+					<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/calibrate/p4</xpcsigName>
+					<sigWidth>6</sigWidth>
+					<sigDim>[6, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Vector
+Concatenate</sigName>
+					<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/EtherCATNetwork/Vector Concatenate</xpcsigName>
+					<sigWidth>19</sigWidth>
+					<sigDim>[19, 1]</sigDim>
+				</signal>
+			</SubSystem>
+			<SubSystem>
+				<Name>Reset</Name>
+				<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/Reset</xPCName>
+				<SubSystem>
+					<Name>Compare
+To Constant</Name>
+					<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/Reset/Compare To Constant</xPCName>
+				</SubSystem>
+				<SubSystem>
+					<Name>Compare
+To Constant1</Name>
+					<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/Reset/Compare To Constant1</xPCName>
+				</SubSystem>
+				<SubSystem>
+					<Name>Compare
+To Constant2</Name>
+					<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/Reset/Compare To Constant2</xPCName>
+				</SubSystem>
+				<signal>
+					<sigName>Logical
+Operator1</sigName>
+					<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/Reset/Logical Operator1</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Logical
+Operator2</sigName>
+					<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/Reset/Logical Operator2</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+			</SubSystem>
+			<SubSystem>
+				<Name>SerialInterfaces</Name>
+				<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/SerialInterfaces</xPCName>
+				<SubSystem>
+					<Name>KVH</Name>
+					<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/SerialInterfaces/KVH</xPCName>
+					<SubSystem>
+						<Name>Subsystem</Name>
+						<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/SerialInterfaces/KVH/Subsystem</xPCName>
+						<signal>
+							<sigName>FIFO write 1</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/SerialInterfaces/KVH/Subsystem/FIFO write 1</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Read HW FIFO</sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/SerialInterfaces/KVH/Subsystem/Read HW FIFO</xpcsigName>
+							<sigWidth>65</sigWidth>
+							<sigDim>[65, 1]</sigDim>
+						</signal>
+					</SubSystem>
+					<SubSystem>
+						<Name>UpdateOrientation</Name>
+						<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/SerialInterfaces/KVH/UpdateOrientation</xPCName>
+						<SubSystem>
+							<Name>EstimateOrientation</Name>
+							<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/SerialInterfaces/KVH/UpdateOrientation/EstimateOrientation</xPCName>
+						</SubSystem>
+						<SubSystem>
+							<Name>MATLAB Function</Name>
+							<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/SerialInterfaces/KVH/UpdateOrientation/MATLAB Function</xPCName>
+						</SubSystem>
+						<signal>
+							<sigName>FIFO bin read </sigName>
+							<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/SerialInterfaces/KVH/UpdateOrientation/FIFO bin read </xpcsigName>
+							<sigWidth>37</sigWidth>
+							<sigDim>[37, 1]</sigDim>
+						</signal>
+					</SubSystem>
+					<SubSystem>
+						<Name>ComputeEulerAngles</Name>
+						<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/SerialInterfaces/KVH/ComputeEulerAngles</xPCName>
+					</SubSystem>
+					<signal>
+						<sigName>ComputeEulerAngles/p1</sigName>
+						<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/SerialInterfaces/KVH/ComputeEulerAngles/p1</xpcsigName>
+						<sigWidth>3</sigWidth>
+						<sigDim>[3, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>ComputeEulerAngles/p2</sigName>
+						<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/SerialInterfaces/KVH/ComputeEulerAngles/p2</xpcsigName>
+						<sigWidth>3</sigWidth>
+						<sigDim>[3, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>ComputeEulerAngles/p3</sigName>
+						<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/SerialInterfaces/KVH/ComputeEulerAngles/p3</xpcsigName>
+						<sigWidth>9</sigWidth>
+						<sigDim>[3, 3]</sigDim>
+					</signal>
+					<signal>
+						<sigName>ComputeEulerAngles/p4</sigName>
+						<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/SerialInterfaces/KVH/ComputeEulerAngles/p4</xpcsigName>
+						<sigWidth>9</sigWidth>
+						<sigDim>[3, 3]</sigDim>
+					</signal>
+					<signal>
+						<sigName>ComputeEulerAngles/p5</sigName>
+						<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/SerialInterfaces/KVH/ComputeEulerAngles/p5</xpcsigName>
+						<sigWidth>2</sigWidth>
+						<sigDim>[2, 1]</sigDim>
+					</signal>
+				</SubSystem>
+			</SubSystem>
+			<SubSystem>
+				<Name>StateEstimator</Name>
+				<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/StateEstimator</xPCName>
+				<SubSystem>
+					<Name>GeneralizedCoordinates</Name>
+					<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/DAQ/StateEstimator/GeneralizedCoordinates</xPCName>
+				</SubSystem>
+				<signal>
+					<sigName>GeneralizedCoordinates/p2</sigName>
+					<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/StateEstimator/GeneralizedCoordinates/p2</xpcsigName>
+					<sigWidth>13</sigWidth>
+					<sigDim>[13, 1]</sigDim>
+				</signal>
+			</SubSystem>
+			<signal>
+				<sigName>Rate Transition1</sigName>
+				<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/Rate Transition1</xpcsigName>
+				<sigWidth>3</sigWidth>
+				<sigDim>[3, 1]</sigDim>
+			</signal>
+			<signal>
+				<sigName>Rate Transition2</sigName>
+				<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/Rate Transition2</xpcsigName>
+				<sigWidth>3</sigWidth>
+				<sigDim>[3, 1]</sigDim>
+			</signal>
+			<signal>
+				<sigName>Rate Transition3</sigName>
+				<xpcsigName>DAQ_WITH_SAFETY_IMU/DAQ/Rate Transition3</xpcsigName>
+				<sigWidth>1</sigWidth>
+				<sigDim>[1, 1]</sigDim>
+			</signal>
+		</SubSystem>
+		<SubSystem>
+			<Name>Saturation
+Dynamic</Name>
+			<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/Saturation Dynamic</xPCName>
+		</SubSystem>
+		<SubSystem>
+			<Name>AdjustForCOMOffset</Name>
+			<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/AdjustForCOMOffset</xPCName>
+		</SubSystem>
+		<SubSystem>
+			<Name>SAFETY</Name>
+			<xPCName>Walking01_withElmos/DAQ_WITH_SAFETY_IMU/SAFETY</xPCName>
+		</SubSystem>
+		<signal>
+			<sigName>AdjustForCOMOffset</sigName>
+			<xpcsigName>DAQ_WITH_SAFETY_IMU/AdjustForCOMOffset</xpcsigName>
+			<sigWidth>13</sigWidth>
+			<sigDim>[13, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>SAFETY/p2</sigName>
+			<xpcsigName>DAQ_WITH_SAFETY_IMU/SAFETY/p2</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>SAFETY/p4</sigName>
+			<xpcsigName>DAQ_WITH_SAFETY_IMU/SAFETY/p4</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Gain</sigName>
+			<xpcsigName>DAQ_WITH_SAFETY_IMU/Gain</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Rate Transition</sigName>
+			<xpcsigName>DAQ_WITH_SAFETY_IMU/Rate Transition</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Rate Transition1</sigName>
+			<xpcsigName>DAQ_WITH_SAFETY_IMU/Rate Transition1</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Get Overload
+Counter </sigName>
+			<xpcsigName>DAQ_WITH_SAFETY_IMU/Get Overload Counter </xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Get Overload
+Counter 1</sigName>
+			<xpcsigName>DAQ_WITH_SAFETY_IMU/Get Overload Counter 1</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Get Overload
+Counter 2</sigName>
+			<xpcsigName>DAQ_WITH_SAFETY_IMU/Get Overload Counter 2</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+	</SubSystem>
+	<SubSystem>
+		<Name>Walking</Name>
+		<xPCName>Walking01_withElmos/Walking</xPCName>
+		<SubSystem>
+			<Name>AdjustYaw</Name>
+			<xPCName>Walking01_withElmos/Walking/AdjustYaw</xPCName>
+		</SubSystem>
+		<SubSystem>
+			<Name>Compare
+To Zero</Name>
+			<xPCName>Walking01_withElmos/Walking/Compare To Zero</xPCName>
+		</SubSystem>
+		<SubSystem>
+			<Name>Continuous</Name>
+			<xPCName>Walking01_withElmos/Walking/Continuous</xPCName>
+			<SubSystem>
+				<Name>Saturation</Name>
+				<xPCName>Walking01_withElmos/Walking/Continuous/Saturation</xPCName>
+				<SubSystem>
+					<Name>Saturation
+Dynamic</Name>
+					<xPCName>Walking01_withElmos/Walking/Continuous/Saturation/Saturation Dynamic</xPCName>
+				</SubSystem>
+				<SubSystem>
+					<Name>SmartSaturation</Name>
+					<xPCName>Walking01_withElmos/Walking/Continuous/Saturation/SmartSaturation</xPCName>
+				</SubSystem>
+			</SubSystem>
+			<SubSystem>
+				<Name>CheckError</Name>
+				<xPCName>Walking01_withElmos/Walking/Continuous/CheckError</xPCName>
+			</SubSystem>
+			<SubSystem>
+				<Name>controller1</Name>
+				<xPCName>Walking01_withElmos/Walking/Continuous/controller1</xPCName>
+			</SubSystem>
+			<signal>
+				<sigName>CheckError/p2</sigName>
+				<xpcsigName>Walking/Continuous/CheckError/p2</xpcsigName>
+				<sigWidth>1</sigWidth>
+				<sigDim>[1, 1]</sigDim>
+			</signal>
+			<signal>
+				<sigName>controller1/p5</sigName>
+				<xpcsigName>Walking/Continuous/controller1/p5</xpcsigName>
+				<sigWidth>1</sigWidth>
+				<sigDim>[1, 1]</sigDim>
+			</signal>
+		</SubSystem>
+		<SubSystem>
+			<Name>ControlParameters</Name>
+			<xPCName>Walking01_withElmos/Walking/ControlParameters</xPCName>
+			<SubSystem>
+				<Name>Subsystem</Name>
+				<xPCName>Walking01_withElmos/Walking/ControlParameters/Subsystem</xPCName>
+			</SubSystem>
+			<SubSystem>
+				<Name>Subsystem1</Name>
+				<xPCName>Walking01_withElmos/Walking/ControlParameters/Subsystem1</xPCName>
+			</SubSystem>
+			<SubSystem>
+				<Name>Subsystem2</Name>
+				<xPCName>Walking01_withElmos/Walking/ControlParameters/Subsystem2</xPCName>
+			</SubSystem>
+		</SubSystem>
+		<SubSystem>
+			<Name>Discrete</Name>
+			<xPCName>Walking01_withElmos/Walking/Discrete</xPCName>
+			<SubSystem>
+				<Name>Detect Rise
+Positive1</Name>
+				<xPCName>Walking01_withElmos/Walking/Discrete/Detect Rise Positive1</xPCName>
+				<SubSystem>
+					<Name>Positive</Name>
+					<xPCName>Walking01_withElmos/Walking/Discrete/Detect Rise Positive1/Positive</xPCName>
+					<signal>
+						<sigName>Compare</sigName>
+						<xpcsigName>Walking/Discrete/Detect Rise Positive1/Positive/Compare</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+				</SubSystem>
+			</SubSystem>
+			<SubSystem>
+				<Name>Detect Rise
+Positive2</Name>
+				<xPCName>Walking01_withElmos/Walking/Discrete/Detect Rise Positive2</xPCName>
+				<SubSystem>
+					<Name>Positive</Name>
+					<xPCName>Walking01_withElmos/Walking/Discrete/Detect Rise Positive2/Positive</xPCName>
+					<signal>
+						<sigName>Compare</sigName>
+						<xpcsigName>Walking/Discrete/Detect Rise Positive2/Positive/Compare</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+				</SubSystem>
+				<signal>
+					<sigName>FixPt
+Relational
+Operator</sigName>
+					<xpcsigName>Walking/Discrete/Detect Rise Positive2/FixPt Relational Operator</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+			</SubSystem>
+			<SubSystem>
+				<Name>KA Acceleration</Name>
+				<xPCName>Walking01_withElmos/Walking/Discrete/KA Acceleration</xPCName>
+				<signal>
+					<sigName>Vector
+Concatenate</sigName>
+					<xpcsigName>Walking/Discrete/KA Acceleration/Vector Concatenate</xpcsigName>
+					<sigWidth>2</sigWidth>
+					<sigDim>[2, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Discrete State-Space</sigName>
+					<xpcsigName>Walking/Discrete/KA Acceleration/Discrete State-Space</xpcsigName>
+					<sigWidth>2</sigWidth>
+					<sigDim>[2, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Discrete State-Space1</sigName>
+					<xpcsigName>Walking/Discrete/KA Acceleration/Discrete State-Space1</xpcsigName>
+					<sigWidth>2</sigWidth>
+					<sigDim>[2, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>TKA</sigName>
+					<xpcsigName>Walking/Discrete/KA Acceleration/TKA</xpcsigName>
+					<sigWidth>2</sigWidth>
+					<sigDim>[2, 1]</sigDim>
+				</signal>
+			</SubSystem>
+			<SubSystem>
+				<Name>StateLogic</Name>
+				<xPCName>Walking01_withElmos/Walking/Discrete/StateLogic</xPCName>
+			</SubSystem>
+			<signal>
+				<sigName>StateLogic/p3</sigName>
+				<xpcsigName>Walking/Discrete/StateLogic/p3</xpcsigName>
+				<sigWidth>5</sigWidth>
+				<sigDim>[5, 1]</sigDim>
+			</signal>
+			<signal>
+				<sigName>EnableTransition</sigName>
+				<xpcsigName>Walking/Discrete/EnableTransition</xpcsigName>
+				<sigWidth>1</sigWidth>
+				<sigDim>[1, 1]</sigDim>
+			</signal>
+			<signal>
+				<sigName>ResetControl</sigName>
+				<xpcsigName>Walking/Discrete/ResetControl</xpcsigName>
+				<sigWidth>1</sigWidth>
+				<sigDim>[1, 1]</sigDim>
+			</signal>
+			<signal>
+				<sigName>Data Type Conversion1</sigName>
+				<xpcsigName>Walking/Discrete/Data Type Conversion1</xpcsigName>
+				<sigWidth>1</sigWidth>
+				<sigDim>[1, 1]</sigDim>
+			</signal>
+		</SubSystem>
+	</SubSystem>
+	<block>
+		<blkName>Model Parameters</blkName>
+		<xpcblkName>Model Parameters</xpcblkName>
+		<SLblockPath>. </SLblockPath>
+		<isSrc>[0 1 1]</isSrc>
+		<parameter>
+			<paramName>AllowDoubleSupport</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>CommandSerialize</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>ControllerModeInit</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>DecouplingMode</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>DesiredYawOffset</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>EnableFeedforwardOnStep</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>EnableTransition</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>EnableVelocityBasedUpdate</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>ErrorVelZeroFactor</paramName>
+			<dim>[6,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>ErrorZeroFactor</paramName>
+			<dim>[6,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>FeedforwardGain</paramName>
+			<dim>[6,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>GearOffsets</paramName>
+			<dim>[4,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>H0Transition</paramName>
+			<dim>[6,13]</dim>
+		</parameter>
+		<parameter>
+			<paramName>H0WalkingDouble</paramName>
+			<dim>[6,13]</dim>
+		</parameter>
+		<parameter>
+			<paramName>H0WalkingSingle</paramName>
+			<dim>[6,13]</dim>
+		</parameter>
+		<parameter>
+			<paramName>HAlphaStarInjection</paramName>
+			<dim>[6,6]</dim>
+		</parameter>
+		<parameter>
+			<paramName>HAlphaStarPosing</paramName>
+			<dim>[6,6]</dim>
+		</parameter>
+		<parameter>
+			<paramName>HAlphaStarTransition</paramName>
+			<dim>[6,6]</dim>
+		</parameter>
+		<parameter>
+			<paramName>HAlphaStarWalkingDouble</paramName>
+			<dim>[6,6]</dim>
+		</parameter>
+		<parameter>
+			<paramName>HAlphaStarWalkingSingle</paramName>
+			<dim>[6,6]</dim>
+		</parameter>
+		<parameter>
+			<paramName>HAlphaTransition</paramName>
+			<dim>[6,6]</dim>
+		</parameter>
+		<parameter>
+			<paramName>HAlphaWalkingDouble</paramName>
+			<dim>[6,6]</dim>
+		</parameter>
+		<parameter>
+			<paramName>HAlphaWalkingSingle</paramName>
+			<dim>[6,6]</dim>
+		</parameter>
+		<parameter>
+			<paramName>HBarAlphaTransition</paramName>
+			<dim>[6,5]</dim>
+		</parameter>
+		<parameter>
+			<paramName>HBarAlphaWalkingDouble</paramName>
+			<dim>[6,5]</dim>
+		</parameter>
+		<parameter>
+			<paramName>HBarAlphaWalkingSingle</paramName>
+			<dim>[6,5]</dim>
+		</parameter>
+		<parameter>
+			<paramName>HBarLimitsTransition</paramName>
+			<dim>[6,2]</dim>
+		</parameter>
+		<parameter>
+			<paramName>HBarLimitsWalkingDouble</paramName>
+			<dim>[6,2]</dim>
+		</parameter>
+		<parameter>
+			<paramName>HBarLimitsWalkingSingle</paramName>
+			<dim>[6,2]</dim>
+		</parameter>
+		<parameter>
+			<paramName>IMUCommand</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>IMUThreshold</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>IMUTorsoOffsets</paramName>
+			<dim>[2,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>K1MidStanceUpdate</paramName>
+			<dim>[6,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>K2MidStanceUpdate</paramName>
+			<dim>[6,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>KASaturationEarly</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>KASaturationMax</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>KASaturationS1</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>KASaturationS2</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>KASpringOffsets</paramName>
+			<dim>[2,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>KThetaMinus</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>KThetaPlus</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>LegHipTorqueLimit</paramName>
+			<dim>[2,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>ManualSwap</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>MaxError</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>MaxErrorVel</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>MedullaCommand</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>MinDeltaTheta</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>MinDeltaThetaTransition</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>PhiOffset</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>RLimits</paramName>
+			<dim>[1,2]</dim>
+		</parameter>
+		<parameter>
+			<paramName>ResetControl</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>RollPhaseVelocityThresh</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>RunMode</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>SelectFeedforward</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>StanceLegInit</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>StartSecondGaitOnStep</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>TMaxUpdate</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>TPosing</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>Theta0</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>ThetaLimitsTransition</paramName>
+			<dim>[1,2]</dim>
+		</parameter>
+		<parameter>
+			<paramName>ThetaLimitsWalkingDouble</paramName>
+			<dim>[1,2]</dim>
+		</parameter>
+		<parameter>
+			<paramName>ThetaLimitsWalkingSingle</paramName>
+			<dim>[1,2]</dim>
+		</parameter>
+		<parameter>
+			<paramName>TorsoBackAngle</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>TorsoBackOnStep</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>TorsoCOMOffsets</paramName>
+			<dim>[2,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>UseKASaturation</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>UsePosingControl</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>VelocityBasedUpdateDTheta0</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>VelocityBasedUpdateK1</paramName>
+			<dim>[6,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>VelocityBasedUpdateK2</paramName>
+			<dim>[6,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>VelocityBasedUpdateLimits</paramName>
+			<dim>[6,2]</dim>
+		</parameter>
+		<parameter>
+			<paramName>VelocityControlTorsoGain</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>VelocityControlTorsoMax</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>VelocityControlTorsoMin</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>VelocityControlTorsoV0</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>YawLimit</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>epsilon</paramName>
+			<dim>[2,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>ff_params</paramName>
+			<dim>[5,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>hd_posing</paramName>
+			<dim>[6,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>k_precomp</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>kd</paramName>
+			<dim>[6,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>kd_2dof</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>kd_torso</paramName>
+			<dim>[2,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>kp</paramName>
+			<dim>[6,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>kp_2dof</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>lat_bias</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>lat_bias2</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>lateralParams</paramName>
+			<dim>[5,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>linkFeedback</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>optimal_sat_weights</paramName>
+			<dim>[2,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>step_params</paramName>
+			<dim>[5,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>swap_params</paramName>
+			<dim>[7,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>tStepInitial</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>transitionParams</paramName>
+			<dim>[5,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>u_ff</paramName>
+			<dim>[6,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>use2DOFHipControl</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>useOptimalSaturation</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>w_torso_lat</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>EnableFT</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>ResetDAQ</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>ResetYaw</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+	</block>
+</Root>

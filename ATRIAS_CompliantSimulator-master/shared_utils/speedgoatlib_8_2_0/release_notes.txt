@@ -1,0 +1,185 @@
+*******************************************************************************
+* SPEEDGOAT TOOLS AND DRIVERS                                                 *
+* RELEASE NOTES                                                               *
+*******************************************************************************
+
+For further information, please contact support@speedgoat.ch
+
+* SPEEDGOAT 8.2.0 (30-June-2014)
+   - New driver support: IO642 Profibus DP Slave
+   - IO503, IO504: naming adaptations
+   - IO3xx: SPI mask parameter improvements
+   - PIL Resistors: fixed bug with wrong channel count in mask
+   - IO321: bugfix in bitstream download
+
+* SPEEDGOAT 8.1.1 (16-June-2014)
+   - New driver support for IO925-9, IO970-PT100-6, IO973-6-2000 (strain gauge sim) 
+
+* SPEEDGOAT 8.1.0 (4-June-2014)
+   - New driver support: IO331 FPGA codemodule EnDat
+   - New driver support: IO331 FPGA codemodule BiSS
+   - IO331 SPI: update of documentation
+   - IO101: update of documentation
+   - FPGA codemodule Demux modifications
+   - IO30x/IO31x SSIM: bug fix
+
+* SPEEDGOAT 8.0.5 (22-May-2014)
+   - IO331-6: update of default bitstream and documentation
+
+* SPEEDGOAT 8.0.4 (19-May-2014)
+   - IO30x/IO31x: SPI pack and unpack function corrected, SPI clock divider is now settable on 32 bits.
+   - IO331-6: DA sync are now set for 90ns, all channels are now again working.
+
+* SPEEDGOAT 8.0.3 (6-May-2014)
+   - IO331-21 support has been added
+   - IO104 DMA corrections
+   - IO30x/IO31x PWM initialization correction
+   - IO75x load configuration bug fix for speegoatlib 8
+
+* SPEEDGOAT 8.0.2 (7-April-2014)
+   - IO104 synchronization improvements and documentation
+   - IO106 DMA corrections
+   - IO601 LIN bug fix
+
+* SPEEDGOAT 8.0.1 (20-March-2014)
+   - IO511 documentation has been added
+   - Bug fix for speedgoatkerneltransfer (standalone option, resizeable window)
+
+* SPEEDGOAT 8.0.0 (17-March-2014)
+   - Drivers fully compatible with R2014a and Simulink Real-Time
+   - New installer speedgoat_setup. The MEX files are generated at the final 
+     user end, for better back and forward compatibility.
+   - The kernel transfer function speedgoatmachineboot is now obsolete. It
+     has been replaced with the graphical interface speedgoatkerneltransfer.
+     speedgoatmachineboot still exists but links to the new function.
+   - New Speedgoat Product Documentation with updated documentation.
+   - New functions:
+      >> speedgoat (get started with Speedgoat tools and drivers)
+      >> speedgoat_uninstall (uninstalls the Speedgoat tools and drivers)
+      >> speedgoatdoc (opens the main Speedgoat Product Documentation page)
+      >> speedgoatroot (locates the folder where the files are installed)
+      >> speedgoat_mex (re-MEX the S-Function files, if needed)
+   - IO104 support for DMA mode and driver updated.
+
+*******************************************************************************
+
+* SPEEDGOAT 7.9.1 (7-March-2014)
+   - IO331-7 support with double update mechanism
+   - IO921-16/10 display sequence updated
+   - PWM driver: prevents small periods from being set (minimum 2 ticks)
+
+* SPEEDGOAT 7.8.5 (17-February-2014) 
+   - BiSS support has been added
+   - IO331 support for SPI
+   - PWM trigger on IO331 compensated by 1 tick
+   - IO421-4 driver update
+
+* SPEEDGOAT 7.8.4 (27-January-2014)
+   - Bug fix for QAD Setup
+   - SSI Master and SSI Slave updated
+   - IO421 support for LVDT simulation, S/R simulation and S/R measurement
+   - ZOH FPGA Code module
+
+* SPEEDGOAT 7.8.3 (15-January-2014)
+   - I2C Master bug fix
+   - IO601 bug fix for Japanese MATLAB version
+   - New driver support: IO921-12/10
+
+* SPEEDGOAT 7.8.2 (11-December-2013)
+   - Bug fix for IO301 SSI Slave
+   - SSI Master and Slave has been added for all IO30x/IO31x
+
+* SPEEDGOAT 7.8.1 (29-November-2013)
+   - IO756 support for warmstart parameters
+   - LIN Master updated
+   - Bug fix for IO601
+   - Bug fix for SPI Slave
+   - SSI Master has been added to IO312 and IO331
+   - SSI Slave has been added to IO312
+
+* SPEEDGOAT 7.7.0 (6-September-2013)
+   - New drivers support: EtherNet/IP Scanner and Adapter (IO755, IO756)
+
+* SPEEDGOAT 7.6.3 (28-June-2013)
+   - Bug fix for IO113
+   - New driver support: IO925-6
+
+* SPEEDGOAT 7.6.2 (13-June-2013)
+   - New driver support: EtherCAT Slave (IO750)
+   - Default bitstream for IO331-2 has been added
+
+* SPEEDGOAT 7.4.2 (20-March-2013)
+   - IO102 support for High Voltage option
+
+* SPEEDGOAT 7.4.1 (19-March-2013)
+   - speedgoatmachineboot support for R2013a
+   - New drivers support: IO926-6, IO926-18, IO971-6
+
+* SPEEDGOAT 7.4.0 (21-February-2013)
+   - Minor bugs fixed for I2C Master
+   - IO106 DMA, pseudo-differential and differential mode, bugs fixed
+   - QAD support for more than one driver block per model
+
+* SPEEDGOAT 7.2.9 (30-January-2013)
+   - IO311 library updated with I2C driver blocks
+   - I2C Master support for multiple channels
+
+* SPEEDGOAT 7.2.8 (16-January-2013)
+   - Issue when using several IO204 modules in the same model has been fixed
+   - IO311 bitstream, issue when using more than one PWM block has been fixed
+
+* SPEEDGOAT 7.2.7 (15-January-2013)
+   - IO207, new setup, read and write drivers blocks
+
+* SPEEDGOAT 7.2.6 (12-December-2012)
+   - IO90x driver updated
+   - IO112 DMA mode is now available
+   - IO321-2 and IO321-3 drivers updated
+
+* SPEEDGOAT 7.2.5 (20-November-2012)
+   - IO105 issue has been solved (delay in analog aquisition)
+   - Sorted order execution issue solved for IO112 and IO113
+   - New library for IO71x (speedgoatlib_IO71X)
+   - speedgoatmachineboot with EthernetIndex option
+
+* SPEEDGOAT 7.0.11 (18-July-2012)
+   - New IO511 Send/Receive driver block
+
+* SPEEDGOAT 7.0.10 (11-July-2012)
+   - New IO3xx QAD Setup (v2) driver block
+
+* SPEEDGOAT 7.0.8 (19-June-2012)
+   - IO114 support has been added
+
+* SPEEDGOAT 7.0.7 (8-June-2012)
+   - IO3xx documentation for LDO and SPI
+   - IO511 mask name has been changed
+
+* SPEEDGOAT 7.0.2 (2-Mai-2012)
+   - speedgoat_IO303_default bitstream bug fix
+
+* SPEEDGOAT 7.0.1 (1-Mai-2012)
+   - Minor revision of the IO106 driver library
+   - Enhanced speedgoat_setup     
+
+* SPEEDGOAT 7.0.0 (30-April-2012)
+   Speedgoat driver library has been completely revised and enhanced.
+   - New style and layout
+   - 64-bit support
+   - All drivers block unlocked and accessible
+   - Individual libraries are available for each I/O module. Backwards 
+     compatibility with existing models is maintained through forwarding 
+     tables
+   - Help browser for most I/O modules
+   - Demo models included for IO101, IO102, IO103, IO104, IO106 with IO107,
+     IO301 (3 models), IO601 (3 models) and IO702. Further test models are 
+     available
+   - Improved installer
+   - New uninstall functionality
+
+* SPEEDGOAT 6.4.1 (7-March-2012)
+   - Bitstream for FPGA Code modules provided as a mat-file
+
+* SPEEDGOAT 6.4.0 (29-February-2012)
+   - New module IO920 (programmable resistors card)
+   - New module IO930 (reed relays card)

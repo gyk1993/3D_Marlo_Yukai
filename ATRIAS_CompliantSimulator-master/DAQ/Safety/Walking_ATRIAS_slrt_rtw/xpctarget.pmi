@@ -1,0 +1,14 @@
+#include "Walking_ATRIAS.pt"
+
+
+const xpc_ParamMappingInfo  xpcparamsMMI[] =
+  {
+    {
+      {Walking_ATRIAS_PT},
+      "Walking_ATRIAS",
+      "",
+      "Walking_ATRIAS",
+      0,
+      40,
+    },
+  };

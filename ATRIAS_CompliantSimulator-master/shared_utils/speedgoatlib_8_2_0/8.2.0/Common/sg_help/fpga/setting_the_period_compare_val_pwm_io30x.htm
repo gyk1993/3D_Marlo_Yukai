@@ -1,0 +1,204 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>IO30X, IO31X &gt; Driver configuration &gt; PWM generation driver block &gt; Usage Notes &gt; Compare values</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+     .p_Heading1{ color: #147EC2;
+    font-size: 1.455em !important;
+     border-bottom: 1px solid #E0E1E1;
+    color: #147EC2;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 20px;
+    padding-bottom: 4px;}
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "setting_the_period_compare_val_pwm_io30x.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<div id="breadcrumbs" style="display:none"><a href="io30x.htm">IO30X, IO31X</a> &gt; <a href="driver_configuration_io30x.htm">Driver configuration</a> &gt; <a href="pwm_io30x.htm">PWM generation driver block</a> &gt; <a href="usage_notes_io30x_pwm.htm">Usage Notes</a></div>
+
+<div id="printheader"><h1 class="p_Heading1"><span class="f_Heading1">Compare values</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
+  <tr valign="bottom">
+    <td align="left" valign="bottom" class="topichead">
+   
+   <h1 class="p_Heading1"><span class="f_Heading1">Compare values</span></h1>
+
+    
+  </tr>  
+</table>
+<!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<p><span style="font-weight: bold;">Period compare</span></p>
+<p>&nbsp;</p>
+<p>The maximum count value reached is actually one count higher than the 'period compare' value. The 'period compare' value is equal to half of the period of the PWM output signal. For a PWM frequency (f) of a 1000Hz, the 'period compare' value has to be set according to the following formula:</p>
+<p>&nbsp;</p>
+<p><img src="pwm_formula_1.png" width="346" height="33" alt="PWM_formula_1" style="border:none" /></p>
+<p>&nbsp;</p>
+<p>FPGA frequency is 33MHz (66MHz for the IO32x).</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>The 'period compare' value is defined by the 'Period-compare Count' input port and initialized by the 'Initial period-compare start state vector' configuration parameter. This single value applied to both A and B output signals.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">A compare and B compare</span></p>
+<p>&nbsp;</p>
+<p>A and B compare values can be calculated using the following formulas:</p>
+<p>&nbsp;</p>
+<p>A compare = (FPGA freq. * T) / 2</p>
+<p>&nbsp;</p>
+<p>B compare = (FPGA freq. * T) / 2</p>
+<p>&nbsp;</p>
+<p>Where:</p>
+<p>T is the desired time (s)</p>
+<p>FPGA freq. is normally 33MHz.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Limitations</span></p>
+<p>&nbsp;</p>
+<p>Limitations apply to the possible values of 'A compare', 'B compare', and 'period compare':</p>
+<p>&nbsp;</p>
+<p>Minimum 'period compare' value: 3.</p>
+<p>Maximum 'period compare' value: (2<span style="font-size: 7pt; vertical-align: super;">32 </span>/ 2) - 3</p>
+<p>&nbsp;</p>
+<p>Minimum 'A compare' value: 3</p>
+<p>Maximum 'A compare' value: 'period compare' - 3</p>
+<p>&nbsp;</p>
+<p>Minimum 'B compare' value: 3</p>
+<p>Maximum 'B compare' value: 'period compare' - 3</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>This implies that 'A compare' and 'B compare' values cannot be equal to ‘0’ or ‘Period-Compare’, and therefore cannot be used to generate a duty cycle of 0 or 100%. To achieve these border cases see the 'Duty cycle border cases' section.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Deadband compensation</span></p>
+<p>&nbsp;</p>
+<p>For single output PWM half-bridge generation with dead-band (T<span style="font-size: 7pt; vertical-align: sub;">dead</span>) update the A compare and B compare values as follows:</p>
+<p>&nbsp;</p>
+<p>A compare = AB compare - ((FPGA freq. x T<span style="font-size: 7pt; vertical-align: sub;">dead</span>) / 2)</p>
+<p>B compare = AB compare + ((FPGA freq. x T<span style="font-size: 7pt; vertical-align: sub;">dead</span>) / 2)</p>
+<p>&nbsp;</p>
+<p>where:</p>
+<p>AB compare is the nominal value of both A and B compare before deadband compensation.</p>
+<p>FPGA freq. is normally 33MHz</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+{
+ if (document.all) setTimeout(function() {nsrInit();},20); 
+    else nsrInit();
+ } 
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

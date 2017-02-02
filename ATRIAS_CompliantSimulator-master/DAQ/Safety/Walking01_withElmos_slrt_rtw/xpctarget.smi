@@ -1,0 +1,17 @@
+#include "Walking01_withElmos.bio"
+#include "Walking01_withElmos.lbl"
+#include "Walking01_withElmos.sid"
+
+
+const xpc_SigMappingInfo xpcMMI[] =
+  {
+    {
+      {Walking01_withElmos_BIO},
+      {Walking01_withElmos_SID},
+      {Walking01_withElmos_LBL},
+      "",
+      "Walking01_withElmos",
+      0,
+      561,
+    },
+  };

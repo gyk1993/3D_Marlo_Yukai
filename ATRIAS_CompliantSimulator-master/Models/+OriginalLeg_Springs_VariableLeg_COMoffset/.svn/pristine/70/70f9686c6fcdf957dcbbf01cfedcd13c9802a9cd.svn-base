@@ -1,0 +1,9 @@
+#ifndef _ATRIAS3D_StanceYaw_Left_h_
+#define _ATRIAS3D_StanceYaw_Left_h_
+
+#include <math.h>
+
+void ATRIAS3D_StanceYaw_Left(const double q[13], const double dq[13], double E[13], double* jacob_Edq_dq) ;
+
+
+#endif /* _ATRIAS3D_StanceYaw_Left_h_ */

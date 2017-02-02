@@ -1,0 +1,9 @@
+#ifndef _ATRIAS3D_FootPointPosJacob_Left_h_
+#define _ATRIAS3D_FootPointPosJacob_Left_h_
+
+#include <math.h>
+
+void ATRIAS3D_FootPointPosJacob_Left(const double q[13], double p4R[3], double R1[3][3], double J4R[13][3], double JR1Col[13][9], double p4L[3], double R5[3][3], double J4L[13][3], double JR5Col[13][9]) ;
+
+
+#endif /* _ATRIAS3D_FootPointPosJacob_Left_h_ */

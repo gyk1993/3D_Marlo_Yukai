@@ -1,0 +1,3530 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root>
+	<SubSystem>
+		<Name>RoughTerrain1</Name>
+		<xPCName>Walking_ATRIAS/RoughTerrain1</xPCName>
+		<SubSystem>
+			<Name>Saturation</Name>
+			<xPCName>Walking_ATRIAS/RoughTerrain1/Saturation</xPCName>
+			<SubSystem>
+				<Name>Saturation
+Dynamic</Name>
+				<xPCName>Walking_ATRIAS/RoughTerrain1/Saturation/Saturation Dynamic</xPCName>
+				<signal>
+					<sigName>LowerRelop1</sigName>
+					<xpcsigName>RoughTerrain1/Saturation/Saturation Dynamic/LowerRelop1</xpcsigName>
+					<sigWidth>6</sigWidth>
+					<sigDim>[6, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>UpperRelop</sigName>
+					<xpcsigName>RoughTerrain1/Saturation/Saturation Dynamic/UpperRelop</xpcsigName>
+					<sigWidth>6</sigWidth>
+					<sigDim>[6, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Switch</sigName>
+					<xpcsigName>RoughTerrain1/Saturation/Saturation Dynamic/Switch</xpcsigName>
+					<sigWidth>6</sigWidth>
+					<sigDim>[6, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Switch2</sigName>
+					<xpcsigName>RoughTerrain1/Saturation/Saturation Dynamic/Switch2</xpcsigName>
+					<sigWidth>6</sigWidth>
+					<sigDim>[6, 1]</sigDim>
+				</signal>
+			</SubSystem>
+			<signal>
+				<sigName>Data Type Conversion1</sigName>
+				<xpcsigName>RoughTerrain1/Saturation/Data Type Conversion1</xpcsigName>
+				<sigWidth>6</sigWidth>
+				<sigDim>[6, 1]</sigDim>
+				<sigLabel>torque_sat</sigLabel>
+			</signal>
+			<signal>
+				<sigName>Gain</sigName>
+				<xpcsigName>RoughTerrain1/Saturation/Gain</xpcsigName>
+				<sigWidth>6</sigWidth>
+				<sigDim>[6, 1]</sigDim>
+			</signal>
+			<signal>
+				<sigName>Gain1</sigName>
+				<xpcsigName>RoughTerrain1/Saturation/Gain1</xpcsigName>
+				<sigWidth>6</sigWidth>
+				<sigDim>[6, 1]</sigDim>
+			</signal>
+		</SubSystem>
+		<SubSystem>
+			<Name>Scope 1</Name>
+			<xPCName>Walking_ATRIAS/RoughTerrain1/Scope 1</xPCName>
+		</SubSystem>
+		<SubSystem>
+			<Name>Scope 2</Name>
+			<xPCName>Walking_ATRIAS/RoughTerrain1/Scope 2</xPCName>
+		</SubSystem>
+		<SubSystem>
+			<Name>Scope 3</Name>
+			<xPCName>Walking_ATRIAS/RoughTerrain1/Scope 3</xPCName>
+		</SubSystem>
+		<SubSystem>
+			<Name>Scope 4</Name>
+			<xPCName>Walking_ATRIAS/RoughTerrain1/Scope 4</xPCName>
+		</SubSystem>
+		<SubSystem>
+			<Name>Scope 5</Name>
+			<xPCName>Walking_ATRIAS/RoughTerrain1/Scope 5</xPCName>
+		</SubSystem>
+		<SubSystem>
+			<Name>Scope 6</Name>
+			<xPCName>Walking_ATRIAS/RoughTerrain1/Scope 6</xPCName>
+		</SubSystem>
+		<SubSystem>
+			<Name>TrackHold</Name>
+			<xPCName>Walking_ATRIAS/RoughTerrain1/TrackHold</xPCName>
+			<SubSystem>
+				<Name>Compare
+To Constant</Name>
+				<xPCName>Walking_ATRIAS/RoughTerrain1/TrackHold/Compare To Constant</xPCName>
+				<signal>
+					<sigName>Compare</sigName>
+					<xpcsigName>RoughTerrain1/TrackHold/Compare To Constant/Compare</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+			</SubSystem>
+			<signal>
+				<sigName>Discrete-Time
+Integrator1</sigName>
+				<xpcsigName>RoughTerrain1/TrackHold/Discrete-Time Integrator1</xpcsigName>
+				<sigWidth>1</sigWidth>
+				<sigDim>[1, 1]</sigDim>
+			</signal>
+			<signal>
+				<sigName>Divide</sigName>
+				<xpcsigName>RoughTerrain1/TrackHold/Divide</xpcsigName>
+				<sigWidth>1</sigWidth>
+				<sigDim>[1, 1]</sigDim>
+			</signal>
+			<signal>
+				<sigName>Switch</sigName>
+				<xpcsigName>RoughTerrain1/TrackHold/Switch</xpcsigName>
+				<sigWidth>1</sigWidth>
+				<sigDim>[1, 1]</sigDim>
+			</signal>
+			<signal>
+				<sigName>Unit Delay</sigName>
+				<xpcsigName>RoughTerrain1/TrackHold/Unit Delay</xpcsigName>
+				<sigWidth>1</sigWidth>
+				<sigDim>[1, 1]</sigDim>
+			</signal>
+		</SubSystem>
+		<SubSystem>
+			<Name>UM2OSU
+Cooridnate Change</Name>
+			<xPCName>Walking_ATRIAS/RoughTerrain1/UM2OSU Cooridnate Change</xPCName>
+			<signal>
+				<sigName>Gain</sigName>
+				<xpcsigName>RoughTerrain1/UM2OSU Cooridnate Change/Gain</xpcsigName>
+				<sigWidth>13</sigWidth>
+				<sigDim>[13, 1]</sigDim>
+			</signal>
+			<signal>
+				<sigName>Add</sigName>
+				<xpcsigName>RoughTerrain1/UM2OSU Cooridnate Change/Add</xpcsigName>
+				<sigWidth>13</sigWidth>
+				<sigDim>[13, 1]</sigDim>
+			</signal>
+		</SubSystem>
+		<SubSystem>
+			<Name>UM2OSU
+Cooridnate Change2</Name>
+			<xPCName>Walking_ATRIAS/RoughTerrain1/UM2OSU Cooridnate Change2</xPCName>
+			<signal>
+				<sigName>Gain</sigName>
+				<xpcsigName>RoughTerrain1/UM2OSU Cooridnate Change2/Gain</xpcsigName>
+				<sigWidth>13</sigWidth>
+				<sigDim>[13, 1]</sigDim>
+			</signal>
+		</SubSystem>
+		<signal>
+			<sigName>Constant3</sigName>
+			<xpcsigName>RoughTerrain1/Constant3</xpcsigName>
+			<sigWidth>6</sigWidth>
+			<sigDim>[6, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Constant4</sigName>
+			<xpcsigName>RoughTerrain1/Constant4</xpcsigName>
+			<sigWidth>11</sigWidth>
+			<sigDim>[11, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Data Type Conversion</sigName>
+			<xpcsigName>RoughTerrain1/Data Type Conversion</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Gain</sigName>
+			<xpcsigName>RoughTerrain1/Gain</xpcsigName>
+			<sigWidth>6</sigWidth>
+			<sigDim>[6, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Gain1</sigName>
+			<xpcsigName>RoughTerrain1/Gain1</xpcsigName>
+			<sigWidth>6</sigWidth>
+			<sigDim>[6, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Gain2</sigName>
+			<xpcsigName>RoughTerrain1/Gain2</xpcsigName>
+			<sigWidth>6</sigWidth>
+			<sigDim>[6, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Reshape</sigName>
+			<xpcsigName>RoughTerrain1/Reshape</xpcsigName>
+			<sigWidth>6</sigWidth>
+			<sigDim>[6, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Reshape1</sigName>
+			<xpcsigName>RoughTerrain1/Reshape1</xpcsigName>
+			<sigWidth>16</sigWidth>
+			<sigDim>[16, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Reshape3</sigName>
+			<xpcsigName>RoughTerrain1/Reshape3</xpcsigName>
+			<sigWidth>6</sigWidth>
+			<sigDim>[6, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Reshape4</sigName>
+			<xpcsigName>RoughTerrain1/Reshape4</xpcsigName>
+			<sigWidth>6</sigWidth>
+			<sigDim>[6, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Controller3/p1</sigName>
+			<xpcsigName>RoughTerrain1/Controller3/p1</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Controller3/p2</sigName>
+			<xpcsigName>RoughTerrain1/Controller3/p2</xpcsigName>
+			<sigWidth>6</sigWidth>
+			<sigDim>[1, 6]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Controller3/p3</sigName>
+			<xpcsigName>RoughTerrain1/Controller3/p3</xpcsigName>
+			<sigWidth>16</sigWidth>
+			<sigDim>[1, 16]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Controller3/p4</sigName>
+			<xpcsigName>RoughTerrain1/Controller3/p4</xpcsigName>
+			<sigWidth>6</sigWidth>
+			<sigDim>[6, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Controller3/p5</sigName>
+			<xpcsigName>RoughTerrain1/Controller3/p5</xpcsigName>
+			<sigWidth>6</sigWidth>
+			<sigDim>[6, 1]</sigDim>
+		</signal>
+	</SubSystem>
+	<SubSystem>
+		<Name>Scope 1</Name>
+		<xPCName>Walking_ATRIAS/Scope 1</xPCName>
+	</SubSystem>
+	<SubSystem>
+		<Name>Scope 2</Name>
+		<xPCName>Walking_ATRIAS/Scope 2</xPCName>
+	</SubSystem>
+	<SubSystem>
+		<Name>Scope 3</Name>
+		<xPCName>Walking_ATRIAS/Scope 3</xPCName>
+	</SubSystem>
+	<SubSystem>
+		<Name>Scope 4</Name>
+		<xPCName>Walking_ATRIAS/Scope 4</xPCName>
+	</SubSystem>
+	<SubSystem>
+		<Name>Scope 5</Name>
+		<xPCName>Walking_ATRIAS/Scope 5</xPCName>
+	</SubSystem>
+	<SubSystem>
+		<Name>Subsystem1</Name>
+		<xPCName>Walking_ATRIAS/Subsystem1</xPCName>
+		<SubSystem>
+			<Name>Reset</Name>
+			<xPCName>Walking_ATRIAS/Subsystem1/Reset</xPCName>
+			<SubSystem>
+				<Name>Compare
+To Constant</Name>
+				<xPCName>Walking_ATRIAS/Subsystem1/Reset/Compare To Constant</xPCName>
+				<signal>
+					<sigName>Compare</sigName>
+					<xpcsigName>Subsystem1/Reset/Compare To Constant/Compare</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+			</SubSystem>
+			<SubSystem>
+				<Name>Compare
+To Constant1</Name>
+				<xPCName>Walking_ATRIAS/Subsystem1/Reset/Compare To Constant1</xPCName>
+				<signal>
+					<sigName>Compare</sigName>
+					<xpcsigName>Subsystem1/Reset/Compare To Constant1/Compare</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+			</SubSystem>
+			<signal>
+				<sigName>Digital Clock</sigName>
+				<xpcsigName>Subsystem1/Reset/Digital Clock</xpcsigName>
+				<sigWidth>1</sigWidth>
+				<sigDim>[1, 1]</sigDim>
+			</signal>
+			<signal>
+				<sigName>Logical
+Operator</sigName>
+				<xpcsigName>Subsystem1/Reset/Logical Operator</xpcsigName>
+				<sigWidth>1</sigWidth>
+				<sigDim>[1, 1]</sigDim>
+			</signal>
+			<signal>
+				<sigName>Logical
+Operator1</sigName>
+				<xpcsigName>Subsystem1/Reset/Logical Operator1</xpcsigName>
+				<sigWidth>1</sigWidth>
+				<sigDim>[1, 1]</sigDim>
+			</signal>
+			<signal>
+				<sigName>Logical
+Operator2</sigName>
+				<xpcsigName>Subsystem1/Reset/Logical Operator2</xpcsigName>
+				<sigWidth>1</sigWidth>
+				<sigDim>[1, 1]</sigDim>
+			</signal>
+			<signal>
+				<sigName>Unit Delay</sigName>
+				<xpcsigName>Subsystem1/Reset/Unit Delay</xpcsigName>
+				<sigWidth>1</sigWidth>
+				<sigDim>[1, 1]</sigDim>
+			</signal>
+		</SubSystem>
+		<SubSystem>
+			<Name>Saturation
+Dynamic</Name>
+			<xPCName>Walking_ATRIAS/Subsystem1/Saturation Dynamic</xPCName>
+			<signal>
+				<sigName>LowerRelop1</sigName>
+				<xpcsigName>Subsystem1/Saturation Dynamic/LowerRelop1</xpcsigName>
+				<sigWidth>6</sigWidth>
+				<sigDim>[6, 1]</sigDim>
+			</signal>
+			<signal>
+				<sigName>UpperRelop</sigName>
+				<xpcsigName>Subsystem1/Saturation Dynamic/UpperRelop</xpcsigName>
+				<sigWidth>6</sigWidth>
+				<sigDim>[6, 1]</sigDim>
+			</signal>
+			<signal>
+				<sigName>Switch</sigName>
+				<xpcsigName>Subsystem1/Saturation Dynamic/Switch</xpcsigName>
+				<sigWidth>6</sigWidth>
+				<sigDim>[6, 1]</sigDim>
+			</signal>
+			<signal>
+				<sigName>Switch2</sigName>
+				<xpcsigName>Subsystem1/Saturation Dynamic/Switch2</xpcsigName>
+				<sigWidth>6</sigWidth>
+				<sigDim>[6, 1]</sigDim>
+			</signal>
+		</SubSystem>
+		<SubSystem>
+			<Name>Scope 5</Name>
+			<xPCName>Walking_ATRIAS/Subsystem1/Scope 5</xPCName>
+		</SubSystem>
+		<SubSystem>
+			<Name>StateEstimator</Name>
+			<xPCName>Walking_ATRIAS/Subsystem1/StateEstimator</xPCName>
+			<SubSystem>
+				<Name>GeneralizedCoordinates</Name>
+				<xPCName>Walking_ATRIAS/Subsystem1/StateEstimator/GeneralizedCoordinates</xPCName>
+			</SubSystem>
+			<signal>
+				<sigName>GeneralizedCoordinates/p1</sigName>
+				<xpcsigName>Subsystem1/StateEstimator/GeneralizedCoordinates/p1</xpcsigName>
+				<sigWidth>13</sigWidth>
+				<sigDim>[13, 1]</sigDim>
+			</signal>
+			<signal>
+				<sigName>GeneralizedCoordinates/p2</sigName>
+				<xpcsigName>Subsystem1/StateEstimator/GeneralizedCoordinates/p2</xpcsigName>
+				<sigWidth>13</sigWidth>
+				<sigDim>[13, 1]</sigDim>
+			</signal>
+		</SubSystem>
+		<SubSystem>
+			<Name>Subsystem</Name>
+			<xPCName>Walking_ATRIAS/Subsystem1/Subsystem</xPCName>
+			<SubSystem>
+				<Name>EncoderFilters1</Name>
+				<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EncoderFilters1</xPCName>
+				<SubSystem>
+					<Name>CheckAndFilterEncoder</Name>
+					<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EncoderFilters1/CheckAndFilterEncoder</xPCName>
+					<SubSystem>
+						<Name>Velocity Filter</Name>
+						<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EncoderFilters1/CheckAndFilterEncoder/Velocity Filter</xPCName>
+						<SubSystem>
+							<Name>OSU_filter</Name>
+							<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EncoderFilters1/CheckAndFilterEncoder/Velocity Filter/OSU_filter</xPCName>
+							<SubSystem>
+								<Name>difference</Name>
+								<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EncoderFilters1/CheckAndFilterEncoder/Velocity Filter/OSU_filter/difference</xPCName>
+								<signal>
+									<sigName>Diff</sigName>
+									<xpcsigName>Subsystem1/Subsystem/EncoderFilters1/CheckAndFilterEncoder/Velocity Filter/OSU_filter/difference/Diff</xpcsigName>
+									<sigWidth>1</sigWidth>
+									<sigDim>[1, 1]</sigDim>
+								</signal>
+								<signal>
+									<sigName>UD</sigName>
+									<xpcsigName>Subsystem1/Subsystem/EncoderFilters1/CheckAndFilterEncoder/Velocity Filter/OSU_filter/difference/UD</xpcsigName>
+									<sigWidth>1</sigWidth>
+									<sigDim>[1, 1]</sigDim>
+									<sigLabel>U(k-1)</sigLabel>
+								</signal>
+							</SubSystem>
+							<signal>
+								<sigName>Gain1</sigName>
+								<xpcsigName>Subsystem1/Subsystem/EncoderFilters1/CheckAndFilterEncoder/Velocity Filter/OSU_filter/Gain1</xpcsigName>
+								<sigWidth>1</sigWidth>
+								<sigDim>[1, 1]</sigDim>
+							</signal>
+							<signal>
+								<sigName>two_pole_filter</sigName>
+								<xpcsigName>Subsystem1/Subsystem/EncoderFilters1/CheckAndFilterEncoder/Velocity Filter/OSU_filter/two_pole_filter</xpcsigName>
+								<sigWidth>1</sigWidth>
+								<sigDim>[1, 1]</sigDim>
+							</signal>
+						</SubSystem>
+						<SubSystem>
+							<Name>Logic Filter</Name>
+							<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EncoderFilters1/CheckAndFilterEncoder/Velocity Filter/Logic Filter</xPCName>
+						</SubSystem>
+						<signal>
+							<sigName>Logic Filter/p1</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EncoderFilters1/CheckAndFilterEncoder/Velocity Filter/Logic Filter/p1</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Logic Filter/p2</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EncoderFilters1/CheckAndFilterEncoder/Velocity Filter/Logic Filter/p2</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Unit Delay1</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EncoderFilters1/CheckAndFilterEncoder/Velocity Filter/Unit Delay1</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Unit Delay2</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EncoderFilters1/CheckAndFilterEncoder/Velocity Filter/Unit Delay2</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+					</SubSystem>
+				</SubSystem>
+			</SubSystem>
+			<SubSystem>
+				<Name>EtherCATRobotMicrostrain</Name>
+				<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain</xPCName>
+				<SubSystem>
+					<Name>HipMedulla_3L</Name>
+					<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/HipMedulla_3L</xPCName>
+					<signal>
+						<sigName>Data Type Conversion3</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/HipMedulla_3L/Data Type Conversion3</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>Data Type Conversion4</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/HipMedulla_3L/Data Type Conversion4</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>Data Type Conversion5</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/HipMedulla_3L/Data Type Conversion5</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var </sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/HipMedulla_3L/EtherCAT Rx Var </xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 1</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/HipMedulla_3L/EtherCAT Rx Var 1</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 12</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/HipMedulla_3L/EtherCAT Rx Var 12</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 13</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/HipMedulla_3L/EtherCAT Rx Var 13</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 14</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/HipMedulla_3L/EtherCAT Rx Var 14</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 15</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/HipMedulla_3L/EtherCAT Rx Var 15</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 16</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/HipMedulla_3L/EtherCAT Rx Var 16</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 17</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/HipMedulla_3L/EtherCAT Rx Var 17</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 18</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/HipMedulla_3L/EtherCAT Rx Var 18</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 19</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/HipMedulla_3L/EtherCAT Rx Var 19</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 2</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/HipMedulla_3L/EtherCAT Rx Var 2</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 3</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/HipMedulla_3L/EtherCAT Rx Var 3</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 4</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/HipMedulla_3L/EtherCAT Rx Var 4</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 5</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/HipMedulla_3L/EtherCAT Rx Var 5</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 6</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/HipMedulla_3L/EtherCAT Rx Var 6</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+				</SubSystem>
+				<SubSystem>
+					<Name>HipMedulla_3R</Name>
+					<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/HipMedulla_3R</xPCName>
+					<signal>
+						<sigName>Data Type Conversion3</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/HipMedulla_3R/Data Type Conversion3</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>Data Type Conversion4</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/HipMedulla_3R/Data Type Conversion4</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>Data Type Conversion5</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/HipMedulla_3R/Data Type Conversion5</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var </sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/HipMedulla_3R/EtherCAT Rx Var </xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 1</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/HipMedulla_3R/EtherCAT Rx Var 1</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 12</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/HipMedulla_3R/EtherCAT Rx Var 12</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 13</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/HipMedulla_3R/EtherCAT Rx Var 13</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 14</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/HipMedulla_3R/EtherCAT Rx Var 14</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 15</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/HipMedulla_3R/EtherCAT Rx Var 15</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 16</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/HipMedulla_3R/EtherCAT Rx Var 16</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 17</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/HipMedulla_3R/EtherCAT Rx Var 17</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 18</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/HipMedulla_3R/EtherCAT Rx Var 18</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 19</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/HipMedulla_3R/EtherCAT Rx Var 19</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 2</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/HipMedulla_3R/EtherCAT Rx Var 2</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 3</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/HipMedulla_3R/EtherCAT Rx Var 3</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 4</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/HipMedulla_3R/EtherCAT Rx Var 4</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 5</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/HipMedulla_3R/EtherCAT Rx Var 5</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 6</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/HipMedulla_3R/EtherCAT Rx Var 6</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+				</SubSystem>
+				<SubSystem>
+					<Name>IMU_Medulla</Name>
+					<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/IMU_Medulla</xPCName>
+					<signal>
+						<sigName>Data Type Conversion3</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/IMU_Medulla/Data Type Conversion3</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>Data Type Conversion4</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/IMU_Medulla/Data Type Conversion4</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 1</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/IMU_Medulla/EtherCAT Rx Var 1</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 11</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/IMU_Medulla/EtherCAT Rx Var 11</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 12</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/IMU_Medulla/EtherCAT Rx Var 12</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 15</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/IMU_Medulla/EtherCAT Rx Var 15</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 16</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/IMU_Medulla/EtherCAT Rx Var 16</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 17</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/IMU_Medulla/EtherCAT Rx Var 17</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 18</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/IMU_Medulla/EtherCAT Rx Var 18</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 2</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/IMU_Medulla/EtherCAT Rx Var 2</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 3</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/IMU_Medulla/EtherCAT Rx Var 3</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 4</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/IMU_Medulla/EtherCAT Rx Var 4</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 5</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/IMU_Medulla/EtherCAT Rx Var 5</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 6</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/IMU_Medulla/EtherCAT Rx Var 6</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 9</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/IMU_Medulla/EtherCAT Rx Var 9</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+				</SubSystem>
+				<SubSystem>
+					<Name>LegElmo_1L</Name>
+					<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1L</xPCName>
+					<SubSystem>
+						<Name>EtherCATSubsystem</Name>
+						<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1L/EtherCATSubsystem</xPCName>
+						<signal>
+							<sigName>EtherCAT PDO Receive</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1L/EtherCATSubsystem/EtherCAT PDO Receive</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT PDO Receive1</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1L/EtherCATSubsystem/EtherCAT PDO Receive1</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT PDO Receive2</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1L/EtherCATSubsystem/EtherCAT PDO Receive2</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT PDO Receive5</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1L/EtherCATSubsystem/EtherCAT PDO Receive5</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+					</SubSystem>
+					<SubSystem>
+						<Name>Subsystem</Name>
+						<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1L/Subsystem</xPCName>
+						<signal>
+							<sigName>Vector
+Concatenate</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1L/Subsystem/Vector Concatenate</xpcsigName>
+							<sigWidth>2</sigWidth>
+							<sigDim>[2, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Data Type Conversion6</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1L/Subsystem/Data Type Conversion6</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Fcn</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1L/Subsystem/Fcn</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+					</SubSystem>
+					<SubSystem>
+						<Name>Subsystem1</Name>
+						<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1L/Subsystem1</xPCName>
+						<SubSystem>
+							<Name>EnableControlWord</Name>
+							<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1L/Subsystem1/EnableControlWord</xPCName>
+						</SubSystem>
+						<SubSystem>
+							<Name>FaultReset</Name>
+							<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1L/Subsystem1/FaultReset</xPCName>
+						</SubSystem>
+						<SubSystem>
+							<Name>NothingControlWord</Name>
+							<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1L/Subsystem1/NothingControlWord</xPCName>
+						</SubSystem>
+						<SubSystem>
+							<Name>ShutdownControlWord</Name>
+							<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1L/Subsystem1/ShutdownControlWord</xPCName>
+						</SubSystem>
+						<signal>
+							<sigName>Merge</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1L/Subsystem1/Merge</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+					</SubSystem>
+					<SubSystem>
+						<Name>Subsystem2</Name>
+						<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1L/Subsystem2</xPCName>
+						<SubSystem>
+							<Name>Compare
+To Constant</Name>
+							<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1L/Subsystem2/Compare To Constant</xPCName>
+							<signal>
+								<sigName>Compare</sigName>
+								<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1L/Subsystem2/Compare To Constant/Compare</xpcsigName>
+								<sigWidth>1</sigWidth>
+								<sigDim>[1, 1]</sigDim>
+							</signal>
+						</SubSystem>
+						<signal>
+							<sigName>Bitwise
+Operator</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1L/Subsystem2/Bitwise Operator</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+					</SubSystem>
+					<SubSystem>
+						<Name>Subsystem3</Name>
+						<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1L/Subsystem3</xPCName>
+						<SubSystem>
+							<Name>Compare
+To Constant</Name>
+							<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1L/Subsystem3/Compare To Constant</xPCName>
+							<signal>
+								<sigName>Compare</sigName>
+								<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1L/Subsystem3/Compare To Constant/Compare</xpcsigName>
+								<sigWidth>1</sigWidth>
+								<sigDim>[1, 1]</sigDim>
+							</signal>
+						</SubSystem>
+						<signal>
+							<sigName>Bitwise
+Operator</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1L/Subsystem3/Bitwise Operator</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+					</SubSystem>
+					<SubSystem>
+						<Name>Subsystem4</Name>
+						<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1L/Subsystem4</xPCName>
+						<SubSystem>
+							<Name>Compare
+To Constant</Name>
+							<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1L/Subsystem4/Compare To Constant</xPCName>
+							<signal>
+								<sigName>Compare</sigName>
+								<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1L/Subsystem4/Compare To Constant/Compare</xpcsigName>
+								<sigWidth>1</sigWidth>
+								<sigDim>[1, 1]</sigDim>
+							</signal>
+						</SubSystem>
+						<signal>
+							<sigName>Bitwise
+Operator</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1L/Subsystem4/Bitwise Operator</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+					</SubSystem>
+					<SubSystem>
+						<Name>Subsystem5</Name>
+						<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1L/Subsystem5</xPCName>
+						<SubSystem>
+							<Name>Compare
+To Constant</Name>
+							<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1L/Subsystem5/Compare To Constant</xPCName>
+							<signal>
+								<sigName>Compare</sigName>
+								<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1L/Subsystem5/Compare To Constant/Compare</xpcsigName>
+								<sigWidth>1</sigWidth>
+								<sigDim>[1, 1]</sigDim>
+							</signal>
+						</SubSystem>
+						<signal>
+							<sigName>Bitwise
+Operator</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1L/Subsystem5/Bitwise Operator</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+					</SubSystem>
+					<SubSystem>
+						<Name>Subsystem6</Name>
+						<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1L/Subsystem6</xPCName>
+						<signal>
+							<sigName>Vector
+Concatenate</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1L/Subsystem6/Vector Concatenate</xpcsigName>
+							<sigWidth>2</sigWidth>
+							<sigDim>[2, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Fcn</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1L/Subsystem6/Fcn</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+					</SubSystem>
+					<SubSystem>
+						<Name>Chart</Name>
+						<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1L/Chart</xPCName>
+					</SubSystem>
+					<signal>
+						<sigName>Chart/p1</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1L/Chart/p1</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>Chart/p2</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1L/Chart/p2</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>Chart/p3</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1L/Chart/p3</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>Data Type Conversion2</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1L/Data Type Conversion2</xpcsigName>
+						<sigWidth>2</sigWidth>
+						<sigDim>[2, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>Data Type Conversion20</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1L/Data Type Conversion20</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>Data Type Conversion42</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1L/Data Type Conversion42</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>Switch</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1L/Switch</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+				</SubSystem>
+				<SubSystem>
+					<Name>LegElmo_1R</Name>
+					<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1R</xPCName>
+					<SubSystem>
+						<Name>EtherCATSubsystem</Name>
+						<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1R/EtherCATSubsystem</xPCName>
+						<signal>
+							<sigName>EtherCAT PDO Receive</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1R/EtherCATSubsystem/EtherCAT PDO Receive</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT PDO Receive1</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1R/EtherCATSubsystem/EtherCAT PDO Receive1</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT PDO Receive2</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1R/EtherCATSubsystem/EtherCAT PDO Receive2</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT PDO Receive5</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1R/EtherCATSubsystem/EtherCAT PDO Receive5</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+					</SubSystem>
+					<SubSystem>
+						<Name>Subsystem</Name>
+						<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1R/Subsystem</xPCName>
+						<signal>
+							<sigName>Vector
+Concatenate</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1R/Subsystem/Vector Concatenate</xpcsigName>
+							<sigWidth>2</sigWidth>
+							<sigDim>[2, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Data Type Conversion6</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1R/Subsystem/Data Type Conversion6</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Fcn</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1R/Subsystem/Fcn</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+					</SubSystem>
+					<SubSystem>
+						<Name>Subsystem1</Name>
+						<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1R/Subsystem1</xPCName>
+						<SubSystem>
+							<Name>EnableControlWord</Name>
+							<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1R/Subsystem1/EnableControlWord</xPCName>
+						</SubSystem>
+						<SubSystem>
+							<Name>FaultReset</Name>
+							<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1R/Subsystem1/FaultReset</xPCName>
+						</SubSystem>
+						<SubSystem>
+							<Name>NothingControlWord</Name>
+							<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1R/Subsystem1/NothingControlWord</xPCName>
+						</SubSystem>
+						<SubSystem>
+							<Name>ShutdownControlWord</Name>
+							<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1R/Subsystem1/ShutdownControlWord</xPCName>
+						</SubSystem>
+						<signal>
+							<sigName>Merge</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1R/Subsystem1/Merge</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+					</SubSystem>
+					<SubSystem>
+						<Name>Subsystem2</Name>
+						<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1R/Subsystem2</xPCName>
+						<SubSystem>
+							<Name>Compare
+To Constant</Name>
+							<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1R/Subsystem2/Compare To Constant</xPCName>
+							<signal>
+								<sigName>Compare</sigName>
+								<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1R/Subsystem2/Compare To Constant/Compare</xpcsigName>
+								<sigWidth>1</sigWidth>
+								<sigDim>[1, 1]</sigDim>
+							</signal>
+						</SubSystem>
+						<signal>
+							<sigName>Bitwise
+Operator</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1R/Subsystem2/Bitwise Operator</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+					</SubSystem>
+					<SubSystem>
+						<Name>Subsystem3</Name>
+						<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1R/Subsystem3</xPCName>
+						<SubSystem>
+							<Name>Compare
+To Constant</Name>
+							<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1R/Subsystem3/Compare To Constant</xPCName>
+							<signal>
+								<sigName>Compare</sigName>
+								<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1R/Subsystem3/Compare To Constant/Compare</xpcsigName>
+								<sigWidth>1</sigWidth>
+								<sigDim>[1, 1]</sigDim>
+							</signal>
+						</SubSystem>
+						<signal>
+							<sigName>Bitwise
+Operator</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1R/Subsystem3/Bitwise Operator</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+					</SubSystem>
+					<SubSystem>
+						<Name>Subsystem4</Name>
+						<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1R/Subsystem4</xPCName>
+						<SubSystem>
+							<Name>Compare
+To Constant</Name>
+							<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1R/Subsystem4/Compare To Constant</xPCName>
+							<signal>
+								<sigName>Compare</sigName>
+								<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1R/Subsystem4/Compare To Constant/Compare</xpcsigName>
+								<sigWidth>1</sigWidth>
+								<sigDim>[1, 1]</sigDim>
+							</signal>
+						</SubSystem>
+						<signal>
+							<sigName>Bitwise
+Operator</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1R/Subsystem4/Bitwise Operator</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+					</SubSystem>
+					<SubSystem>
+						<Name>Subsystem5</Name>
+						<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1R/Subsystem5</xPCName>
+						<SubSystem>
+							<Name>Compare
+To Constant</Name>
+							<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1R/Subsystem5/Compare To Constant</xPCName>
+							<signal>
+								<sigName>Compare</sigName>
+								<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1R/Subsystem5/Compare To Constant/Compare</xpcsigName>
+								<sigWidth>1</sigWidth>
+								<sigDim>[1, 1]</sigDim>
+							</signal>
+						</SubSystem>
+						<signal>
+							<sigName>Bitwise
+Operator</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1R/Subsystem5/Bitwise Operator</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+					</SubSystem>
+					<SubSystem>
+						<Name>Subsystem6</Name>
+						<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1R/Subsystem6</xPCName>
+						<signal>
+							<sigName>Vector
+Concatenate</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1R/Subsystem6/Vector Concatenate</xpcsigName>
+							<sigWidth>2</sigWidth>
+							<sigDim>[2, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Fcn</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1R/Subsystem6/Fcn</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+					</SubSystem>
+					<SubSystem>
+						<Name>Chart</Name>
+						<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1R/Chart</xPCName>
+					</SubSystem>
+					<signal>
+						<sigName>Chart/p1</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1R/Chart/p1</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>Chart/p2</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1R/Chart/p2</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>Chart/p3</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1R/Chart/p3</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>Data Type Conversion20</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1R/Data Type Conversion20</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>Data Type Conversion3</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1R/Data Type Conversion3</xpcsigName>
+						<sigWidth>2</sigWidth>
+						<sigDim>[2, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>Data Type Conversion42</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1R/Data Type Conversion42</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>Switch</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_1R/Switch</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+				</SubSystem>
+				<SubSystem>
+					<Name>LegElmo_2L</Name>
+					<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2L</xPCName>
+					<SubSystem>
+						<Name>EtherCATSubsystem</Name>
+						<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2L/EtherCATSubsystem</xPCName>
+						<signal>
+							<sigName>EtherCAT PDO Receive</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2L/EtherCATSubsystem/EtherCAT PDO Receive</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT PDO Receive1</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2L/EtherCATSubsystem/EtherCAT PDO Receive1</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT PDO Receive2</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2L/EtherCATSubsystem/EtherCAT PDO Receive2</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT PDO Receive5</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2L/EtherCATSubsystem/EtherCAT PDO Receive5</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+					</SubSystem>
+					<SubSystem>
+						<Name>Subsystem</Name>
+						<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2L/Subsystem</xPCName>
+						<signal>
+							<sigName>Vector
+Concatenate</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2L/Subsystem/Vector Concatenate</xpcsigName>
+							<sigWidth>2</sigWidth>
+							<sigDim>[2, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Data Type Conversion6</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2L/Subsystem/Data Type Conversion6</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Fcn</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2L/Subsystem/Fcn</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+					</SubSystem>
+					<SubSystem>
+						<Name>Subsystem1</Name>
+						<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2L/Subsystem1</xPCName>
+						<SubSystem>
+							<Name>EnableControlWord</Name>
+							<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2L/Subsystem1/EnableControlWord</xPCName>
+						</SubSystem>
+						<SubSystem>
+							<Name>FaultReset</Name>
+							<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2L/Subsystem1/FaultReset</xPCName>
+						</SubSystem>
+						<SubSystem>
+							<Name>NothingControlWord</Name>
+							<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2L/Subsystem1/NothingControlWord</xPCName>
+						</SubSystem>
+						<SubSystem>
+							<Name>ShutdownControlWord</Name>
+							<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2L/Subsystem1/ShutdownControlWord</xPCName>
+						</SubSystem>
+						<signal>
+							<sigName>Merge</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2L/Subsystem1/Merge</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+					</SubSystem>
+					<SubSystem>
+						<Name>Subsystem2</Name>
+						<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2L/Subsystem2</xPCName>
+						<SubSystem>
+							<Name>Compare
+To Constant</Name>
+							<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2L/Subsystem2/Compare To Constant</xPCName>
+							<signal>
+								<sigName>Compare</sigName>
+								<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2L/Subsystem2/Compare To Constant/Compare</xpcsigName>
+								<sigWidth>1</sigWidth>
+								<sigDim>[1, 1]</sigDim>
+							</signal>
+						</SubSystem>
+						<signal>
+							<sigName>Bitwise
+Operator</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2L/Subsystem2/Bitwise Operator</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+					</SubSystem>
+					<SubSystem>
+						<Name>Subsystem3</Name>
+						<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2L/Subsystem3</xPCName>
+						<SubSystem>
+							<Name>Compare
+To Constant</Name>
+							<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2L/Subsystem3/Compare To Constant</xPCName>
+							<signal>
+								<sigName>Compare</sigName>
+								<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2L/Subsystem3/Compare To Constant/Compare</xpcsigName>
+								<sigWidth>1</sigWidth>
+								<sigDim>[1, 1]</sigDim>
+							</signal>
+						</SubSystem>
+						<signal>
+							<sigName>Bitwise
+Operator</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2L/Subsystem3/Bitwise Operator</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+					</SubSystem>
+					<SubSystem>
+						<Name>Subsystem4</Name>
+						<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2L/Subsystem4</xPCName>
+						<SubSystem>
+							<Name>Compare
+To Constant</Name>
+							<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2L/Subsystem4/Compare To Constant</xPCName>
+							<signal>
+								<sigName>Compare</sigName>
+								<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2L/Subsystem4/Compare To Constant/Compare</xpcsigName>
+								<sigWidth>1</sigWidth>
+								<sigDim>[1, 1]</sigDim>
+							</signal>
+						</SubSystem>
+						<signal>
+							<sigName>Bitwise
+Operator</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2L/Subsystem4/Bitwise Operator</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+					</SubSystem>
+					<SubSystem>
+						<Name>Subsystem5</Name>
+						<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2L/Subsystem5</xPCName>
+						<SubSystem>
+							<Name>Compare
+To Constant</Name>
+							<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2L/Subsystem5/Compare To Constant</xPCName>
+							<signal>
+								<sigName>Compare</sigName>
+								<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2L/Subsystem5/Compare To Constant/Compare</xpcsigName>
+								<sigWidth>1</sigWidth>
+								<sigDim>[1, 1]</sigDim>
+							</signal>
+						</SubSystem>
+						<signal>
+							<sigName>Bitwise
+Operator</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2L/Subsystem5/Bitwise Operator</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+					</SubSystem>
+					<SubSystem>
+						<Name>Subsystem6</Name>
+						<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2L/Subsystem6</xPCName>
+						<signal>
+							<sigName>Vector
+Concatenate</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2L/Subsystem6/Vector Concatenate</xpcsigName>
+							<sigWidth>2</sigWidth>
+							<sigDim>[2, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Fcn</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2L/Subsystem6/Fcn</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+					</SubSystem>
+					<SubSystem>
+						<Name>Chart</Name>
+						<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2L/Chart</xPCName>
+					</SubSystem>
+					<signal>
+						<sigName>Chart/p1</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2L/Chart/p1</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>Chart/p2</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2L/Chart/p2</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>Chart/p3</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2L/Chart/p3</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>Data Type Conversion2</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2L/Data Type Conversion2</xpcsigName>
+						<sigWidth>2</sigWidth>
+						<sigDim>[2, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>Data Type Conversion20</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2L/Data Type Conversion20</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>Data Type Conversion42</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2L/Data Type Conversion42</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>Switch</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2L/Switch</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+				</SubSystem>
+				<SubSystem>
+					<Name>LegElmo_2R</Name>
+					<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2R</xPCName>
+					<SubSystem>
+						<Name>EtherCATSubsystem</Name>
+						<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2R/EtherCATSubsystem</xPCName>
+						<signal>
+							<sigName>EtherCAT PDO Receive</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2R/EtherCATSubsystem/EtherCAT PDO Receive</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT PDO Receive1</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2R/EtherCATSubsystem/EtherCAT PDO Receive1</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT PDO Receive3</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2R/EtherCATSubsystem/EtherCAT PDO Receive3</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>EtherCAT PDO Receive5</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2R/EtherCATSubsystem/EtherCAT PDO Receive5</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+					</SubSystem>
+					<SubSystem>
+						<Name>Subsystem</Name>
+						<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2R/Subsystem</xPCName>
+						<signal>
+							<sigName>Vector
+Concatenate</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2R/Subsystem/Vector Concatenate</xpcsigName>
+							<sigWidth>2</sigWidth>
+							<sigDim>[2, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Data Type Conversion6</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2R/Subsystem/Data Type Conversion6</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Fcn</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2R/Subsystem/Fcn</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+					</SubSystem>
+					<SubSystem>
+						<Name>Subsystem1</Name>
+						<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2R/Subsystem1</xPCName>
+						<SubSystem>
+							<Name>EnableControlWord</Name>
+							<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2R/Subsystem1/EnableControlWord</xPCName>
+						</SubSystem>
+						<SubSystem>
+							<Name>FaultReset</Name>
+							<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2R/Subsystem1/FaultReset</xPCName>
+						</SubSystem>
+						<SubSystem>
+							<Name>NothingControlWord</Name>
+							<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2R/Subsystem1/NothingControlWord</xPCName>
+						</SubSystem>
+						<SubSystem>
+							<Name>ShutdownControlWord</Name>
+							<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2R/Subsystem1/ShutdownControlWord</xPCName>
+						</SubSystem>
+						<signal>
+							<sigName>Merge</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2R/Subsystem1/Merge</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+					</SubSystem>
+					<SubSystem>
+						<Name>Subsystem2</Name>
+						<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2R/Subsystem2</xPCName>
+						<SubSystem>
+							<Name>Compare
+To Constant</Name>
+							<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2R/Subsystem2/Compare To Constant</xPCName>
+							<signal>
+								<sigName>Compare</sigName>
+								<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2R/Subsystem2/Compare To Constant/Compare</xpcsigName>
+								<sigWidth>1</sigWidth>
+								<sigDim>[1, 1]</sigDim>
+							</signal>
+						</SubSystem>
+						<signal>
+							<sigName>Bitwise
+Operator</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2R/Subsystem2/Bitwise Operator</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+					</SubSystem>
+					<SubSystem>
+						<Name>Subsystem3</Name>
+						<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2R/Subsystem3</xPCName>
+						<SubSystem>
+							<Name>Compare
+To Constant</Name>
+							<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2R/Subsystem3/Compare To Constant</xPCName>
+							<signal>
+								<sigName>Compare</sigName>
+								<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2R/Subsystem3/Compare To Constant/Compare</xpcsigName>
+								<sigWidth>1</sigWidth>
+								<sigDim>[1, 1]</sigDim>
+							</signal>
+						</SubSystem>
+						<signal>
+							<sigName>Bitwise
+Operator</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2R/Subsystem3/Bitwise Operator</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+					</SubSystem>
+					<SubSystem>
+						<Name>Subsystem4</Name>
+						<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2R/Subsystem4</xPCName>
+						<SubSystem>
+							<Name>Compare
+To Constant</Name>
+							<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2R/Subsystem4/Compare To Constant</xPCName>
+							<signal>
+								<sigName>Compare</sigName>
+								<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2R/Subsystem4/Compare To Constant/Compare</xpcsigName>
+								<sigWidth>1</sigWidth>
+								<sigDim>[1, 1]</sigDim>
+							</signal>
+						</SubSystem>
+						<signal>
+							<sigName>Bitwise
+Operator</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2R/Subsystem4/Bitwise Operator</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+					</SubSystem>
+					<SubSystem>
+						<Name>Subsystem5</Name>
+						<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2R/Subsystem5</xPCName>
+						<SubSystem>
+							<Name>Compare
+To Constant</Name>
+							<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2R/Subsystem5/Compare To Constant</xPCName>
+							<signal>
+								<sigName>Compare</sigName>
+								<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2R/Subsystem5/Compare To Constant/Compare</xpcsigName>
+								<sigWidth>1</sigWidth>
+								<sigDim>[1, 1]</sigDim>
+							</signal>
+						</SubSystem>
+						<signal>
+							<sigName>Bitwise
+Operator</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2R/Subsystem5/Bitwise Operator</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+					</SubSystem>
+					<SubSystem>
+						<Name>Subsystem6</Name>
+						<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2R/Subsystem6</xPCName>
+						<signal>
+							<sigName>Vector
+Concatenate</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2R/Subsystem6/Vector Concatenate</xpcsigName>
+							<sigWidth>2</sigWidth>
+							<sigDim>[2, 1]</sigDim>
+						</signal>
+						<signal>
+							<sigName>Fcn</sigName>
+							<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2R/Subsystem6/Fcn</xpcsigName>
+							<sigWidth>1</sigWidth>
+							<sigDim>[1, 1]</sigDim>
+						</signal>
+					</SubSystem>
+					<SubSystem>
+						<Name>Chart</Name>
+						<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2R/Chart</xPCName>
+					</SubSystem>
+					<signal>
+						<sigName>Chart/p1</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2R/Chart/p1</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>Chart/p2</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2R/Chart/p2</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>Chart/p3</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2R/Chart/p3</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>Data Type Conversion2</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2R/Data Type Conversion2</xpcsigName>
+						<sigWidth>2</sigWidth>
+						<sigDim>[2, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>Data Type Conversion20</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2R/Data Type Conversion20</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>Data Type Conversion42</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2R/Data Type Conversion42</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>Switch</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegElmo_2R/Switch</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+				</SubSystem>
+				<SubSystem>
+					<Name>LegMedulla_1L</Name>
+					<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1L</xPCName>
+					<signal>
+						<sigName>Data Type Conversion3</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1L/Data Type Conversion3</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>Data Type Conversion4</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1L/Data Type Conversion4</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>Data Type Conversion5</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1L/Data Type Conversion5</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var </sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1L/EtherCAT Rx Var </xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 1</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1L/EtherCAT Rx Var 1</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 10</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1L/EtherCAT Rx Var 10</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 11</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1L/EtherCAT Rx Var 11</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 12</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1L/EtherCAT Rx Var 12</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 13</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1L/EtherCAT Rx Var 13</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 14</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1L/EtherCAT Rx Var 14</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 15</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1L/EtherCAT Rx Var 15</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 16</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1L/EtherCAT Rx Var 16</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 17</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1L/EtherCAT Rx Var 17</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 18</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1L/EtherCAT Rx Var 18</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 19</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1L/EtherCAT Rx Var 19</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 2</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1L/EtherCAT Rx Var 2</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 20</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1L/EtherCAT Rx Var 20</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 21</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1L/EtherCAT Rx Var 21</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 22</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1L/EtherCAT Rx Var 22</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 23</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1L/EtherCAT Rx Var 23</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 3</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1L/EtherCAT Rx Var 3</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 4</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1L/EtherCAT Rx Var 4</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 5</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1L/EtherCAT Rx Var 5</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 6</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1L/EtherCAT Rx Var 6</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 7</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1L/EtherCAT Rx Var 7</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 8</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1L/EtherCAT Rx Var 8</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 9</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1L/EtherCAT Rx Var 9</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+				</SubSystem>
+				<SubSystem>
+					<Name>LegMedulla_1R</Name>
+					<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1R</xPCName>
+					<signal>
+						<sigName>Data Type Conversion3</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1R/Data Type Conversion3</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>Data Type Conversion4</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1R/Data Type Conversion4</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>Data Type Conversion5</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1R/Data Type Conversion5</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var </sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1R/EtherCAT Rx Var </xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 1</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1R/EtherCAT Rx Var 1</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 10</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1R/EtherCAT Rx Var 10</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 11</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1R/EtherCAT Rx Var 11</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 12</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1R/EtherCAT Rx Var 12</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 13</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1R/EtherCAT Rx Var 13</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 14</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1R/EtherCAT Rx Var 14</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 15</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1R/EtherCAT Rx Var 15</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 16</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1R/EtherCAT Rx Var 16</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 17</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1R/EtherCAT Rx Var 17</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 18</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1R/EtherCAT Rx Var 18</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 19</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1R/EtherCAT Rx Var 19</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 2</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1R/EtherCAT Rx Var 2</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 20</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1R/EtherCAT Rx Var 20</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 21</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1R/EtherCAT Rx Var 21</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 22</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1R/EtherCAT Rx Var 22</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 23</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1R/EtherCAT Rx Var 23</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 3</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1R/EtherCAT Rx Var 3</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 4</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1R/EtherCAT Rx Var 4</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 5</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1R/EtherCAT Rx Var 5</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 6</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1R/EtherCAT Rx Var 6</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 7</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1R/EtherCAT Rx Var 7</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 8</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1R/EtherCAT Rx Var 8</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 9</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_1R/EtherCAT Rx Var 9</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+				</SubSystem>
+				<SubSystem>
+					<Name>LegMedulla_2L</Name>
+					<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2L</xPCName>
+					<signal>
+						<sigName>Data Type Conversion3</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2L/Data Type Conversion3</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>Data Type Conversion4</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2L/Data Type Conversion4</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>Data Type Conversion5</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2L/Data Type Conversion5</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var </sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2L/EtherCAT Rx Var </xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 1</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2L/EtherCAT Rx Var 1</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 10</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2L/EtherCAT Rx Var 10</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 11</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2L/EtherCAT Rx Var 11</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 12</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2L/EtherCAT Rx Var 12</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 13</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2L/EtherCAT Rx Var 13</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 14</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2L/EtherCAT Rx Var 14</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 15</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2L/EtherCAT Rx Var 15</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 16</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2L/EtherCAT Rx Var 16</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 17</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2L/EtherCAT Rx Var 17</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 18</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2L/EtherCAT Rx Var 18</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 19</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2L/EtherCAT Rx Var 19</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 2</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2L/EtherCAT Rx Var 2</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 20</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2L/EtherCAT Rx Var 20</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 21</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2L/EtherCAT Rx Var 21</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 22</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2L/EtherCAT Rx Var 22</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 23</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2L/EtherCAT Rx Var 23</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 3</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2L/EtherCAT Rx Var 3</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 4</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2L/EtherCAT Rx Var 4</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 5</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2L/EtherCAT Rx Var 5</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 6</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2L/EtherCAT Rx Var 6</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 7</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2L/EtherCAT Rx Var 7</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 8</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2L/EtherCAT Rx Var 8</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 9</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2L/EtherCAT Rx Var 9</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+				</SubSystem>
+				<SubSystem>
+					<Name>LegMedulla_2R</Name>
+					<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2R</xPCName>
+					<signal>
+						<sigName>Data Type Conversion3</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2R/Data Type Conversion3</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>Data Type Conversion4</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2R/Data Type Conversion4</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>Data Type Conversion5</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2R/Data Type Conversion5</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var </sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2R/EtherCAT Rx Var </xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 1</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2R/EtherCAT Rx Var 1</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 10</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2R/EtherCAT Rx Var 10</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 11</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2R/EtherCAT Rx Var 11</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 12</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2R/EtherCAT Rx Var 12</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 13</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2R/EtherCAT Rx Var 13</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 14</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2R/EtherCAT Rx Var 14</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 15</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2R/EtherCAT Rx Var 15</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 16</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2R/EtherCAT Rx Var 16</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 17</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2R/EtherCAT Rx Var 17</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 18</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2R/EtherCAT Rx Var 18</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 19</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2R/EtherCAT Rx Var 19</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 2</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2R/EtherCAT Rx Var 2</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 20</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2R/EtherCAT Rx Var 20</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 21</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2R/EtherCAT Rx Var 21</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 22</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2R/EtherCAT Rx Var 22</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 23</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2R/EtherCAT Rx Var 23</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 3</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2R/EtherCAT Rx Var 3</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 4</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2R/EtherCAT Rx Var 4</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 5</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2R/EtherCAT Rx Var 5</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 6</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2R/EtherCAT Rx Var 6</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 7</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2R/EtherCAT Rx Var 7</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 8</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2R/EtherCAT Rx Var 8</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+					<signal>
+						<sigName>EtherCAT Rx Var 9</sigName>
+						<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/LegMedulla_2R/EtherCAT Rx Var 9</xpcsigName>
+						<sigWidth>1</sigWidth>
+						<sigDim>[1, 1]</sigDim>
+					</signal>
+				</SubSystem>
+				<SubSystem>
+					<Name>ConvertAmpCurrent</Name>
+					<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/ConvertAmpCurrent</xPCName>
+				</SubSystem>
+				<SubSystem>
+					<Name>ConvertLogicVoltage</Name>
+					<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/ConvertLogicVoltage</xPCName>
+				</SubSystem>
+				<SubSystem>
+					<Name>ConvertMotorVoltage</Name>
+					<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/ConvertMotorVoltage</xPCName>
+				</SubSystem>
+				<SubSystem>
+					<Name>ConvertThermistors</Name>
+					<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/ConvertThermistors</xPCName>
+				</SubSystem>
+				<SubSystem>
+					<Name>EncodeSwitches</Name>
+					<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EtherCATRobotMicrostrain/EncodeSwitches</xPCName>
+				</SubSystem>
+				<signal>
+					<sigName>ConvertAmpCurrent</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/ConvertAmpCurrent</xpcsigName>
+					<sigWidth>10</sigWidth>
+					<sigDim>[10, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>ConvertLogicVoltage</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/ConvertLogicVoltage</xpcsigName>
+					<sigWidth>6</sigWidth>
+					<sigDim>[6, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>ConvertMotorVoltage</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/ConvertMotorVoltage</xpcsigName>
+					<sigWidth>6</sigWidth>
+					<sigDim>[6, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>ConvertThermistors</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/ConvertThermistors</xpcsigName>
+					<sigWidth>30</sigWidth>
+					<sigDim>[30, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>EncodeSwitches</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/EncodeSwitches</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion1</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion1</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion10</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion10</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion101</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion101</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion102</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion102</xpcsigName>
+					<sigWidth>3</sigWidth>
+					<sigDim>[3, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion103</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion103</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion104</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion104</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion105</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion105</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion106</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion106</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion107</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion107</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion108</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion108</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion109</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion109</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion11</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion11</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion110</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion110</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion111</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion111</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion112</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion112</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion114</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion114</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion116</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion116</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion117</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion117</xpcsigName>
+					<sigWidth>3</sigWidth>
+					<sigDim>[3, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion118</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion118</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion119</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion119</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion12</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion12</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion120</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion120</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion121</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion121</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion122</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion122</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion123</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion123</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion124</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion124</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion125</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion125</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion126</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion126</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion13</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion13</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion14</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion14</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion141</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion141</xpcsigName>
+					<sigWidth>3</sigWidth>
+					<sigDim>[3, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion15</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion15</xpcsigName>
+					<sigWidth>6</sigWidth>
+					<sigDim>[6, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion157</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion157</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion16</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion16</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion17</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion17</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion18</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion18</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion19</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion19</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion2</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion2</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion20</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion20</xpcsigName>
+					<sigWidth>3</sigWidth>
+					<sigDim>[3, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion21</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion21</xpcsigName>
+					<sigWidth>2</sigWidth>
+					<sigDim>[2, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion22</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion22</xpcsigName>
+					<sigWidth>3</sigWidth>
+					<sigDim>[3, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion23</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion23</xpcsigName>
+					<sigWidth>2</sigWidth>
+					<sigDim>[2, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion24</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion24</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion25</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion25</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion26</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion26</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion27</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion27</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion28</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion28</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion29</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion29</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion3</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion3</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion30</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion30</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion31</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion31</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion32</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion32</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion33</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion33</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion34</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion34</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion35</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion35</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion36</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion36</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion37</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion37</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion38</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion38</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion39</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion39</xpcsigName>
+					<sigWidth>6</sigWidth>
+					<sigDim>[6, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion4</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion4</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion45</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion45</xpcsigName>
+					<sigWidth>2</sigWidth>
+					<sigDim>[2, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion47</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion47</xpcsigName>
+					<sigWidth>2</sigWidth>
+					<sigDim>[2, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion49</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion49</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion5</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion5</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion50</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion50</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion51</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion51</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion52</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion52</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion53</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion53</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion54</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion54</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion55</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion55</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion56</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion56</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion57</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion57</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion58</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion58</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion59</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion59</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion6</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion6</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion60</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion60</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion61</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion61</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion62</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion62</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion63</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion63</xpcsigName>
+					<sigWidth>6</sigWidth>
+					<sigDim>[6, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion69</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion69</xpcsigName>
+					<sigWidth>2</sigWidth>
+					<sigDim>[2, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion7</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion7</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion71</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion71</xpcsigName>
+					<sigWidth>2</sigWidth>
+					<sigDim>[2, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion73</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion73</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion74</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion74</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion75</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion75</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion76</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion76</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion77</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion77</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion78</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion78</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion79</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion79</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion8</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion8</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion80</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion80</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion81</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion81</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion82</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion82</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion83</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion83</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion84</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion84</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion85</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion85</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion86</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion86</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion87</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion87</xpcsigName>
+					<sigWidth>6</sigWidth>
+					<sigDim>[6, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion9</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion9</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion93</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion93</xpcsigName>
+					<sigWidth>2</sigWidth>
+					<sigDim>[2, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion95</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion95</xpcsigName>
+					<sigWidth>2</sigWidth>
+					<sigDim>[2, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion97</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion97</xpcsigName>
+					<sigWidth>6</sigWidth>
+					<sigDim>[6, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Data Type Conversion98</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Data Type Conversion98</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Make3x1</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Make3x1</xpcsigName>
+					<sigWidth>3</sigWidth>
+					<sigDim>[3, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Counter/p1</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Counter/p1</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>Counter/p2</sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/Counter/p2</xpcsigName>
+					<sigWidth>1</sigWidth>
+					<sigDim>[1, 1]</sigDim>
+				</signal>
+				<signal>
+					<sigName>EtherCAT Init </sigName>
+					<xpcsigName>Subsystem1/Subsystem/EtherCATRobotMicrostrain/EtherCAT Init </xpcsigName>
+					<sigWidth>6</sigWidth>
+					<sigDim>[6, 1]</sigDim>
+				</signal>
+			</SubSystem>
+			<SubSystem>
+				<Name>ComputeEulerAngles1</Name>
+				<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/ComputeEulerAngles1</xPCName>
+			</SubSystem>
+			<SubSystem>
+				<Name>EstimateOrientation</Name>
+				<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/EstimateOrientation</xPCName>
+			</SubSystem>
+			<SubSystem>
+				<Name>ZeroingLegs</Name>
+				<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/ZeroingLegs</xPCName>
+			</SubSystem>
+			<SubSystem>
+				<Name>calibrate</Name>
+				<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/calibrate</xPCName>
+			</SubSystem>
+			<SubSystem>
+				<Name>convert_mtr_current_to_pwm</Name>
+				<xPCName>Walking_ATRIAS/Subsystem1/Subsystem/convert_mtr_current_to_pwm</xPCName>
+			</SubSystem>
+			<signal>
+				<sigName>ComputeEulerAngles1/p1</sigName>
+				<xpcsigName>Subsystem1/Subsystem/ComputeEulerAngles1/p1</xpcsigName>
+				<sigWidth>3</sigWidth>
+				<sigDim>[3, 1]</sigDim>
+			</signal>
+			<signal>
+				<sigName>ComputeEulerAngles1/p2</sigName>
+				<xpcsigName>Subsystem1/Subsystem/ComputeEulerAngles1/p2</xpcsigName>
+				<sigWidth>3</sigWidth>
+				<sigDim>[3, 1]</sigDim>
+			</signal>
+			<signal>
+				<sigName>ComputeEulerAngles1/p3</sigName>
+				<xpcsigName>Subsystem1/Subsystem/ComputeEulerAngles1/p3</xpcsigName>
+				<sigWidth>9</sigWidth>
+				<sigDim>[3, 3]</sigDim>
+			</signal>
+			<signal>
+				<sigName>ComputeEulerAngles1/p4</sigName>
+				<xpcsigName>Subsystem1/Subsystem/ComputeEulerAngles1/p4</xpcsigName>
+				<sigWidth>9</sigWidth>
+				<sigDim>[3, 3]</sigDim>
+			</signal>
+			<signal>
+				<sigName>ComputeEulerAngles1/p5</sigName>
+				<xpcsigName>Subsystem1/Subsystem/ComputeEulerAngles1/p5</xpcsigName>
+				<sigWidth>2</sigWidth>
+				<sigDim>[2, 1]</sigDim>
+			</signal>
+			<signal>
+				<sigName>EstimateOrientation/p1</sigName>
+				<xpcsigName>Subsystem1/Subsystem/EstimateOrientation/p1</xpcsigName>
+				<sigWidth>9</sigWidth>
+				<sigDim>[3, 3]</sigDim>
+			</signal>
+			<signal>
+				<sigName>EstimateOrientation/p2</sigName>
+				<xpcsigName>Subsystem1/Subsystem/EstimateOrientation/p2</xpcsigName>
+				<sigWidth>3</sigWidth>
+				<sigDim>[3, 1]</sigDim>
+			</signal>
+			<signal>
+				<sigName>EstimateOrientation/p3</sigName>
+				<xpcsigName>Subsystem1/Subsystem/EstimateOrientation/p3</xpcsigName>
+				<sigWidth>3</sigWidth>
+				<sigDim>[3, 1]</sigDim>
+			</signal>
+			<signal>
+				<sigName>EstimateOrientation/p4</sigName>
+				<xpcsigName>Subsystem1/Subsystem/EstimateOrientation/p4</xpcsigName>
+				<sigWidth>1</sigWidth>
+				<sigDim>[1, 1]</sigDim>
+			</signal>
+			<signal>
+				<sigName>EstimateOrientation/p5</sigName>
+				<xpcsigName>Subsystem1/Subsystem/EstimateOrientation/p5</xpcsigName>
+				<sigWidth>3</sigWidth>
+				<sigDim>[3, 1]</sigDim>
+			</signal>
+			<signal>
+				<sigName>ZeroingLegs</sigName>
+				<xpcsigName>Subsystem1/Subsystem/ZeroingLegs</xpcsigName>
+				<sigWidth>6</sigWidth>
+				<sigDim>[6, 1]</sigDim>
+			</signal>
+			<signal>
+				<sigName>calibrate/p1</sigName>
+				<xpcsigName>Subsystem1/Subsystem/calibrate/p1</xpcsigName>
+				<sigWidth>19</sigWidth>
+				<sigDim>[19, 1]</sigDim>
+			</signal>
+			<signal>
+				<sigName>calibrate/p2</sigName>
+				<xpcsigName>Subsystem1/Subsystem/calibrate/p2</xpcsigName>
+				<sigWidth>19</sigWidth>
+				<sigDim>[19, 1]</sigDim>
+			</signal>
+			<signal>
+				<sigName>calibrate/p3</sigName>
+				<xpcsigName>Subsystem1/Subsystem/calibrate/p3</xpcsigName>
+				<sigWidth>9</sigWidth>
+				<sigDim>[9, 1]</sigDim>
+			</signal>
+			<signal>
+				<sigName>calibrate/p4</sigName>
+				<xpcsigName>Subsystem1/Subsystem/calibrate/p4</xpcsigName>
+				<sigWidth>6</sigWidth>
+				<sigDim>[6, 1]</sigDim>
+			</signal>
+			<signal>
+				<sigName>convert_mtr_current_to_pwm</sigName>
+				<xpcsigName>Subsystem1/Subsystem/convert_mtr_current_to_pwm</xpcsigName>
+				<sigWidth>6</sigWidth>
+				<sigDim>[6, 1]</sigDim>
+			</signal>
+			<signal>
+				<sigName>Vector
+Concatenate</sigName>
+				<xpcsigName>Subsystem1/Subsystem/Vector Concatenate</xpcsigName>
+				<sigWidth>19</sigWidth>
+				<sigDim>[19, 1]</sigDim>
+			</signal>
+			<signal>
+				<sigName>Data Type Conversion7</sigName>
+				<xpcsigName>Subsystem1/Subsystem/Data Type Conversion7</xpcsigName>
+				<sigWidth>3</sigWidth>
+				<sigDim>[3, 1]</sigDim>
+			</signal>
+			<signal>
+				<sigName>Reshape3</sigName>
+				<xpcsigName>Subsystem1/Subsystem/Reshape3</xpcsigName>
+				<sigWidth>9</sigWidth>
+				<sigDim>[9, 1]</sigDim>
+			</signal>
+			<signal>
+				<sigName>Current Saturation</sigName>
+				<xpcsigName>Subsystem1/Subsystem/Current Saturation</xpcsigName>
+				<sigWidth>6</sigWidth>
+				<sigDim>[6, 1]</sigDim>
+			</signal>
+			<signal>
+				<sigName>Unit Delay</sigName>
+				<xpcsigName>Subsystem1/Subsystem/Unit Delay</xpcsigName>
+				<sigWidth>9</sigWidth>
+				<sigDim>[9, 1]</sigDim>
+			</signal>
+			<signal>
+				<sigName>Unit Delay1</sigName>
+				<xpcsigName>Subsystem1/Subsystem/Unit Delay1</xpcsigName>
+				<sigWidth>9</sigWidth>
+				<sigDim>[9, 1]</sigDim>
+			</signal>
+			<signal>
+				<sigName>Unit Delay10</sigName>
+				<xpcsigName>Subsystem1/Subsystem/Unit Delay10</xpcsigName>
+				<sigWidth>9</sigWidth>
+				<sigDim>[3, 3]</sigDim>
+			</signal>
+			<signal>
+				<sigName>Unit Delay2</sigName>
+				<xpcsigName>Subsystem1/Subsystem/Unit Delay2</xpcsigName>
+				<sigWidth>6</sigWidth>
+				<sigDim>[6, 1]</sigDim>
+			</signal>
+			<signal>
+				<sigName>Unit Delay5</sigName>
+				<xpcsigName>Subsystem1/Subsystem/Unit Delay5</xpcsigName>
+				<sigWidth>3</sigWidth>
+				<sigDim>[3, 1]</sigDim>
+			</signal>
+			<signal>
+				<sigName>Unit Delay6</sigName>
+				<xpcsigName>Subsystem1/Subsystem/Unit Delay6</xpcsigName>
+				<sigWidth>9</sigWidth>
+				<sigDim>[3, 3]</sigDim>
+			</signal>
+			<signal>
+				<sigName>Unit Delay7</sigName>
+				<xpcsigName>Subsystem1/Subsystem/Unit Delay7</xpcsigName>
+				<sigWidth>3</sigWidth>
+				<sigDim>[3, 1]</sigDim>
+			</signal>
+			<signal>
+				<sigName>Unit Delay8</sigName>
+				<xpcsigName>Subsystem1/Subsystem/Unit Delay8</xpcsigName>
+				<sigWidth>1</sigWidth>
+				<sigDim>[1, 1]</sigDim>
+			</signal>
+			<signal>
+				<sigName>Unit Delay9</sigName>
+				<xpcsigName>Subsystem1/Subsystem/Unit Delay9</xpcsigName>
+				<sigWidth>2</sigWidth>
+				<sigDim>[2, 1]</sigDim>
+			</signal>
+		</SubSystem>
+		<SubSystem>
+			<Name>AdjustForCOMOffset</Name>
+			<xPCName>Walking_ATRIAS/Subsystem1/AdjustForCOMOffset</xPCName>
+		</SubSystem>
+		<SubSystem>
+			<Name>SAFETY</Name>
+			<xPCName>Walking_ATRIAS/Subsystem1/SAFETY</xPCName>
+		</SubSystem>
+		<signal>
+			<sigName>AdjustForCOMOffset</sigName>
+			<xpcsigName>Subsystem1/AdjustForCOMOffset</xpcsigName>
+			<sigWidth>13</sigWidth>
+			<sigDim>[13, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>SAFETY/p1</sigName>
+			<xpcsigName>Subsystem1/SAFETY/p1</xpcsigName>
+			<sigWidth>6</sigWidth>
+			<sigDim>[6, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>SAFETY/p2</sigName>
+			<xpcsigName>Subsystem1/SAFETY/p2</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>SAFETY/p3</sigName>
+			<xpcsigName>Subsystem1/SAFETY/p3</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>SAFETY/p4</sigName>
+			<xpcsigName>Subsystem1/SAFETY/p4</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Constant2</sigName>
+			<xpcsigName>Subsystem1/Constant2</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Gain</sigName>
+			<xpcsigName>Subsystem1/Gain</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>TorqueToCurrent</sigName>
+			<xpcsigName>Subsystem1/TorqueToCurrent</xpcsigName>
+			<sigWidth>6</sigWidth>
+			<sigDim>[6, 1]</sigDim>
+			<sigLabel>current_unsat</sigLabel>
+		</signal>
+		<signal>
+			<sigName>Unit Delay</sigName>
+			<xpcsigName>Subsystem1/Unit Delay</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Unit Delay1</sigName>
+			<xpcsigName>Subsystem1/Unit Delay1</xpcsigName>
+			<sigWidth>13</sigWidth>
+			<sigDim>[13, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Unit Delay2</sigName>
+			<xpcsigName>Subsystem1/Unit Delay2</xpcsigName>
+			<sigWidth>13</sigWidth>
+			<sigDim>[13, 1]</sigDim>
+		</signal>
+	</SubSystem>
+	<signal>
+		<sigName>Data Type Conversion</sigName>
+		<xpcsigName>Data Type Conversion</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>Digital Clock</sigName>
+		<xpcsigName>Digital Clock</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>Gain1</sigName>
+		<xpcsigName>Gain1</xpcsigName>
+		<sigWidth>4</sigWidth>
+		<sigDim>[4, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>rad2deg</sigName>
+		<xpcsigName>rad2deg</xpcsigName>
+		<sigWidth>13</sigWidth>
+		<sigDim>[13, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>Add</sigName>
+		<xpcsigName>Add</xpcsigName>
+		<sigWidth>4</sigWidth>
+		<sigDim>[4, 1]</sigDim>
+	</signal>
+	<block>
+		<blkName>Model Parameters</blkName>
+		<xpcblkName>Model Parameters</xpcblkName>
+		<SLblockPath>. </SLblockPath>
+		<isSrc>[0 1 1]</isSrc>
+		<parameter>
+			<paramName>GearOffsets</paramName>
+			<dim>[4,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>IMUTorsoOffsets</paramName>
+			<dim>[2,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>LegHipTorqueLimit</paramName>
+			<dim>[2,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>MedullaCommand</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>TorsoCOMOffsets</paramName>
+			<dim>[2,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>dx_err_d_gain</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>dx_err_p_gain</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>dx_gain</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>dy_err_d_gain</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>dy_err_p_gain</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>dy_gain</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>hAlphaSet</paramName>
+			<dim>[4, 6, 5, 3]</dim>
+		</parameter>
+		<parameter>
+			<paramName>hip_gain</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>hip_offset</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>isTrackHold</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>kd_hip</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>kd_st_leg</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>kd_sw_leg</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>kd_vs</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>kd_yaw</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>kp_hip</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>kp_st_leg</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>kp_sw_leg</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>kp_vs</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>kp_yaw</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>lbForce</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>ps3Axes</paramName>
+			<dim>[1,6]</dim>
+		</parameter>
+		<parameter>
+			<paramName>ps3Buttons</paramName>
+			<dim>[1,11]</dim>
+		</parameter>
+		<parameter>
+			<paramName>ps3Pov</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>step_gain</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>t0_step</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>theta_limits_norm</paramName>
+			<dim>[9,2]</dim>
+		</parameter>
+		<parameter>
+			<paramName>uHipGravity</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>ubForce</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>velFilConst</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>isSetHipConst</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>isSim</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>isTestGravity</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>isTestHipTrack</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>isVCtracking</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>isVirtualConstraint</paramName>
+			<dim>[1,1]</dim>
+		</parameter>
+	</block>
+</Root>

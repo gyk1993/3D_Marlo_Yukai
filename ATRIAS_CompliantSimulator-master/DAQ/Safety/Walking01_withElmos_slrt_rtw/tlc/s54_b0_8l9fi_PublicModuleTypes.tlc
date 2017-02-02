@@ -1,0 +1,19 @@
+%implements s54_b0_8l9fi_PublicModuleTypes "C"
+
+%function PublicModuleTypes(block) Output
+
+
+/* Custom Type definition for Chart: '<S202>/StateLogic' */
+#ifndef struct_sHmAB4PxSQg3wmqo1saFKWH
+#define struct_sHmAB4PxSQg3wmqo1saFKWH
+struct sHmAB4PxSQg3wmqo1saFKWH
+{
+    real_T halpha[24];
+    real_T spPlus;
+};
+#endif /*struct_sHmAB4PxSQg3wmqo1saFKWH*/
+#ifndef typedef_sHmAB4PxSQg3wmqo1saFKWH_Walki_T
+#define typedef_sHmAB4PxSQg3wmqo1saFKWH_Walki_T
+typedef struct sHmAB4PxSQg3wmqo1saFKWH sHmAB4PxSQg3wmqo1saFKWH_Walki_T;
+#endif /*typedef_sHmAB4PxSQg3wmqo1saFKWH_Walki_T*/
+%endfunction

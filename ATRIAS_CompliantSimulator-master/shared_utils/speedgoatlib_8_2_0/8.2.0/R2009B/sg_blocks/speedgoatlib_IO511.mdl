@@ -1,0 +1,2440 @@
+Library {
+  Name			  "speedgoatlib_IO511"
+  Version		  7.4
+  MdlSubVersion		  0
+  SavedCharacterEncoding  "windows-1252"
+  Description		  "7.14.0.739 (R2012a)"
+  LibraryType		  "BlockLibrary"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  MaxMDLFileLineLength	  120
+  Created		  "Tue Aug 17 10:35:03 2010"
+  Creator		  "cschafft"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "lab3"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Tue Jul 01 08:25:55 2014"
+  RTWModifiedTimeStamp	  326103955
+  ModelVersionFormat	  "1.%<AutoIncrement:84>"
+  ConfigurationManager	  "none"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  RecordCoverage	  off
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  CovForceBlockReductionOff on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      6
+      Version		      "1.6.0"
+      Array {
+	Type			"Handle"
+	Dimension		9
+	Simulink.SolverCC {
+	  $ObjectID		  7
+	  Version		  "1.6.0"
+	  StartTime		  "0.0"
+	  StopTime		  "10.0"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  Solver		  "ode45"
+	  SolverName		  "ode45"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  8
+	  Version		  "1.6.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  9
+	  Version		  "1.6.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    7
+	    Cell		    "BooleansAsBitfields"
+	    Cell		    "PassReuseOutputArgsAs"
+	    Cell		    "PassReuseOutputArgsThreshold"
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    PropName		    "DisabledProps"
+	  }
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  UseIntDivNetSlope	  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  StrengthReduction	  off
+	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	  EnforceIntegerDowncast  on
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  10
+	  Version		  "1.6.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"warning"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  StrictBusMsg		  "Warning"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  11
+	  Version		  "1.6.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  12
+	  Version		  "1.6.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  13
+	  Version		  "1.6.0"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimCtrlC		  on
+	  SimExtrinsic		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  14
+	  Version		  "1.6.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    6
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    PropName		    "DisabledProps"
+	  }
+	  SystemTargetFile	  "grt.tlc"
+	  TLCOptions		  ""
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  PostCodeGenCommand	  ""
+	  Description		  ""
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ProcessScript		  ""
+	  ConfigurationScript	  ""
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  CustomSourceCode	  ""
+	  CustomHeaderCode	  ""
+	  CustomInclude		  ""
+	  CustomSource		  ""
+	  CustomLibrary		  ""
+	  CustomInitializer	  ""
+	  CustomTerminator	  ""
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  RTWCompilerOptimization "Off"
+	  RTWCustomCompilerOptimizations ""
+	  CheckMdlBeforeBuild	  "Off"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      15
+	      Version		      "1.6.0"
+	      Array {
+		Type			"Cell"
+		Dimension		19
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"IgnoreTestpoints"
+		Cell			"InsertBlockDesc"
+		Cell			"SFDataObjDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrFcnArg"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		Cell			"ReqsInCode"
+		PropName		"DisabledProps"
+	      }
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M_T"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      SimulinkBlockComments   on
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      16
+	      Version		      "1.6.0"
+	      Array {
+		Type			"Cell"
+		Dimension		16
+		Cell			"GeneratePreprocessorConditionals"
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"CPPClassGenCompliant"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"PurelyIntegerCode"
+		Cell			"PortableWordSizes"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"MultiInstanceERTCode"
+		PropName		"DisabledProps"
+	      }
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      TargetFunctionLibrary   "None"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      IncludeMdlTerminateFcn  on
+	      GeneratePreprocessorConditionals "Disable all"
+	      CombineOutputUpdateFcns off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      SupportVariableSizeSignals off
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    on
+	      AutosarCompliant	      off
+	      UseMalloc		      off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	hdlcoderui.hdlcc {
+	  $ObjectID		  17
+	  Version		  "1.6.0"
+	  Description		  "HDL Coder custom configuration component"
+	  Name			  "HDL Coder"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    ""
+	    PropName		    "HDLConfigFile"
+	  }
+	  HDLCActiveTab		  "0"
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition    [ 400, 210, 1280, 840 ]  
+    }
+    PropName		    "ConfigurationSets"
+  }
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+      LockScale		      off
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+      OutDataTypeMode	      "Inherit from 'Constant value'"
+      OutDataType	      "fixdt(1,16,0)"
+      ConRadixGroup	      "Use specified scaling"
+      OutScaling	      "[]"
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchByCopyingInsideSignal off
+      Interpolate	      on
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+    }
+    Block {
+      BlockType		      RateTransition
+      Integrity		      on
+      Deterministic	      on
+      X0		      "0"
+      OutPortSampleTimeOpt    "Specify"
+      OutPortSampleTimeMultiple	"1"
+      OutPortSampleTime	      "-1"
+    }
+    Block {
+      BlockType		      S-Function
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+      SFunctionDeploymentMode off
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      TriggerPort
+      TriggerType	      "rising"
+      StatesWhenEnabling      "inherit"
+      PropagateVarSize	      "During execution"
+      ShowOutputPort	      off
+      OutputDataType	      "auto"
+      SampleTimeType	      "triggered"
+      SampleTime	      "1"
+      ZeroCross		      on
+    }
+  }
+  System {
+    Name		    "speedgoatlib_IO511"
+    Location		    [10, 10, 850, 510]
+    Open		    off
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "A4"
+    PaperUnits		    "centimeters"
+    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    190
+    Block {
+      BlockType		      SubSystem
+      Name		      "IO511 Send and Receive"
+      SID		      149
+      Ports		      [4, 4]
+      Position		      [15, 15, 210, 270]
+      RequestExecContextInheritance off
+      MaskDisplay	      "disp('IO511\\nSpeedgoat\\nSend\\nReceive');\nport_label('input', 1, 'Chan1 TX' );\nport_label"
+      "('input', 2, 'Chan2 TX' );\nport_label('input', 3, 'Chan3 TX' );\nport_label('input', 4, 'Chan4 TX' );\nport_lab"
+      "el('output', 1, 'Chan1 RX' );\nport_label('output', 2, 'Chan2 RX' );\nport_label('output', 3, 'Chan3 RX' );\npor"
+      "t_label('output', 4, 'Chan4 RX' );\n\n"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"IO511 Send and Receive"
+	Location		[211, 52, 1200, 1853]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "In1"
+	  SID			  150
+	  Position		  [25, 138, 55, 152]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "In2"
+	  SID			  151
+	  Position		  [25, 228, 55, 242]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "In3"
+	  SID			  152
+	  Position		  [25, 323, 55, 337]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "In4"
+	  SID			  153
+	  Position		  [25, 413, 55, 427]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant"
+	  SID			  154
+	  Position		  [25, 182, 55, 198]
+	  ShowName		  off
+	  OutDataTypeStr	  "Inherit: Inherit via back propagation"
+	  OutDataTypeMode	  "Inherit via back propagation"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant1"
+	  SID			  155
+	  Position		  [25, 272, 55, 288]
+	  ShowName		  off
+	  OutDataTypeStr	  "Inherit: Inherit via back propagation"
+	  OutDataTypeMode	  "Inherit via back propagation"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant2"
+	  SID			  156
+	  Position		  [25, 362, 55, 378]
+	  ShowName		  off
+	  OutDataTypeStr	  "Inherit: Inherit via back propagation"
+	  OutDataTypeMode	  "Inherit via back propagation"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant3"
+	  SID			  157
+	  Position		  [25, 452, 55, 468]
+	  ShowName		  off
+	  OutDataTypeStr	  "Inherit: Inherit via back propagation"
+	  OutDataTypeMode	  "Inherit via back propagation"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "IRQ Source"
+	  SID			  158
+	  Ports			  [0, 1]
+	  Position		  [205, 40, 325, 100]
+	  LibraryVersion	  "1.1835"
+	  SourceBlock		  "xpclib/Asynchronous\nEvent/IRQ Source"
+	  SourceType		  "xpcinterrupt"
+	  irqNo			  "Auto (PCI only)"
+	  preempt		  "off"
+	  b_type		  "ATI-RP-R5"
+	  slot			  "-1"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "ISR"
+	  SID			  159
+	  Ports			  [0, 4, 0, 1]
+	  Position		  [335, 151, 420, 444]
+	  LibraryVersion	  "1.762"
+	  TreatAsAtomicUnit	  on
+	  RequestExecContextInheritance	off
+	  System {
+	    Name		    "ISR"
+	    Location		    [16, 52, 1770, 1983]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      TriggerPort
+	      Name		      "function"
+	      SID		      160
+	      Ports		      []
+	      Position		      [25, 15, 45, 35]
+	      TriggerType	      "function-call"
+	      StatesWhenEnabling      "held"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "FIFO write 1"
+	      SID		      161
+	      Ports		      [1, 1]
+	      Position		      [740, 118, 810, 152]
+	      LibraryVersion	      "1.22"
+	      SourceBlock	      "xpclib/RS232/FIFO write "
+	      SourceType	      "Asynchronous FIFO Block: writer"
+	      size		      "1024"
+	      inputtype		      "count+16 bit uint"
+	      present		      off
+	      sampletime	      "-1"
+	      id		      "RCV channel 1"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "FIFO write 2"
+	      SID		      162
+	      Ports		      [1, 1]
+	      Position		      [740, 228, 810, 262]
+	      LibraryVersion	      "1.22"
+	      SourceBlock	      "xpclib/RS232/FIFO write "
+	      SourceType	      "Asynchronous FIFO Block: writer"
+	      size		      "1024"
+	      inputtype		      "count+16 bit uint"
+	      present		      off
+	      sampletime	      "-1"
+	      id		      "RCV channel 2"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "FIFO write 3"
+	      SID		      163
+	      Ports		      [1, 1]
+	      Position		      [745, 338, 815, 372]
+	      LibraryVersion	      "1.22"
+	      SourceBlock	      "xpclib/RS232/FIFO write "
+	      SourceType	      "Asynchronous FIFO Block: writer"
+	      size		      "1024"
+	      inputtype		      "count+16 bit uint"
+	      present		      off
+	      sampletime	      "-1"
+	      id		      "RCV channel 3"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "FIFO write 4"
+	      SID		      164
+	      Ports		      [1, 1]
+	      Position		      [745, 453, 815, 487]
+	      LibraryVersion	      "1.22"
+	      SourceBlock	      "xpclib/RS232/FIFO write "
+	      SourceType	      "Asynchronous FIFO Block: writer"
+	      size		      "1024"
+	      inputtype		      "count+16 bit uint"
+	      present		      off
+	      sampletime	      "-1"
+	      id		      "RCV channel 4"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Int Source Filter1"
+	      SID		      165
+	      Ports		      [1, 1]
+	      Position		      [265, 105, 390, 165]
+	      LibraryVersion	      "1.83"
+	      SourceBlock	      "speedgoatlib_IO511/IO511 internal blocks/Int Source Filter"
+	      SourceType	      "intfilter_IO511"
+	      id		      "1"
+	      chan		      "1"
+	      dir		      "1"
+	      width		      "2"
+	      ts		      "-1"
+	      pciSlot		      "-1"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Int Source Filter2"
+	      SID		      166
+	      Ports		      [1, 1]
+	      Position		      [265, 215, 390, 275]
+	      LibraryVersion	      "1.83"
+	      SourceBlock	      "speedgoatlib_IO511/IO511 internal blocks/Int Source Filter"
+	      SourceType	      "intfilter_IO511"
+	      id		      "1"
+	      chan		      "2"
+	      dir		      "1"
+	      width		      "2"
+	      ts		      "-1"
+	      pciSlot		      "-1"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Int Source Filter4"
+	      SID		      167
+	      Ports		      [1, 1]
+	      Position		      [265, 328, 395, 382]
+	      LibraryVersion	      "1.83"
+	      SourceBlock	      "speedgoatlib_IO511/IO511 internal blocks/Int Source Filter"
+	      SourceType	      "intfilter_IO511"
+	      id		      "1"
+	      chan		      "3"
+	      dir		      "1"
+	      width		      "2"
+	      ts		      "-1"
+	      pciSlot		      "-1"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Int Source Filter6"
+	      SID		      168
+	      Ports		      [1, 1]
+	      Position		      [265, 439, 395, 501]
+	      LibraryVersion	      "1.83"
+	      SourceBlock	      "speedgoatlib_IO511/IO511 internal blocks/Int Source Filter"
+	      SourceType	      "intfilter_IO511"
+	      id		      "1"
+	      chan		      "4"
+	      dir		      "1"
+	      width		      "2"
+	      ts		      "-1"
+	      pciSlot		      "-1"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Read HW FIFO1"
+	      SID		      169
+	      Ports		      [1, 1]
+	      Position		      [495, 103, 660, 167]
+	      LibraryVersion	      "1.83"
+	      SourceBlock	      "speedgoatlib_IO511/IO511 internal blocks/Read HW FIFO"
+	      SourceType	      "rdhwfifo_IO511"
+	      id		      "1"
+	      chan		      "1"
+	      fifoSize		      "64"
+	      pciSlot		      "-1"
+	      ts		      "-1"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Read HW FIFO2"
+	      SID		      170
+	      Ports		      [1, 1]
+	      Position		      [495, 218, 660, 272]
+	      LibraryVersion	      "1.83"
+	      SourceBlock	      "speedgoatlib_IO511/IO511 internal blocks/Read HW FIFO"
+	      SourceType	      "rdhwfifo_IO511"
+	      id		      "1"
+	      chan		      "2"
+	      fifoSize		      "64"
+	      pciSlot		      "-1"
+	      ts		      "-1"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Read HW FIFO3"
+	      SID		      171
+	      Ports		      [1, 1]
+	      Position		      [495, 327, 665, 383]
+	      LibraryVersion	      "1.83"
+	      SourceBlock	      "speedgoatlib_IO511/IO511 internal blocks/Read HW FIFO"
+	      SourceType	      "rdhwfifo_IO511"
+	      id		      "1"
+	      chan		      "3"
+	      fifoSize		      "64"
+	      pciSlot		      "-1"
+	      ts		      "-1"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Read HW FIFO4"
+	      SID		      172
+	      Ports		      [1, 1]
+	      Position		      [495, 440, 665, 500]
+	      LibraryVersion	      "1.83"
+	      SourceBlock	      "speedgoatlib_IO511/IO511 internal blocks/Read HW FIFO"
+	      SourceType	      "rdhwfifo_IO511"
+	      id		      "1"
+	      chan		      "4"
+	      fifoSize		      "64"
+	      pciSlot		      "-1"
+	      ts		      "-1"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Read Int vector"
+	      SID		      173
+	      Ports		      [0, 1]
+	      Position		      [50, 107, 185, 163]
+	      LibraryVersion	      "1.83"
+	      SourceBlock	      "speedgoatlib_IO511/IO511 internal blocks/Read Int vector"
+	      SourceType	      "rdintvector_IO511"
+	      id		      "1"
+	      ts		      "-1"
+	      pciSlot		      "-1"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "RX1"
+	      SID		      174
+	      Position		      [835, 128, 865, 142]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "RX2"
+	      SID		      175
+	      Position		      [845, 238, 875, 252]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "RX3"
+	      SID		      176
+	      Position		      [850, 348, 880, 362]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "RX4"
+	      SID		      177
+	      Position		      [850, 463, 880, 477]
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "Read HW FIFO1"
+	      SrcPort		      1
+	      DstBlock		      "FIFO write 1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "FIFO write 1"
+	      SrcPort		      1
+	      DstBlock		      "RX1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Int Source Filter1"
+	      SrcPort		      1
+	      DstBlock		      "Read HW FIFO1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Read Int vector"
+	      SrcPort		      1
+	      Points		      [30, 0]
+	      Branch {
+		Points			[0, 110]
+		Branch {
+		  Points		  [0, 110]
+		  Branch {
+		    Points		    [0, 115]
+		    DstBlock		    "Int Source Filter6"
+		    DstPort		    1
+		  }
+		  Branch {
+		    DstBlock		    "Int Source Filter4"
+		    DstPort		    1
+		  }
+		}
+		Branch {
+		  DstBlock		  "Int Source Filter2"
+		  DstPort		  1
+		}
+	      }
+	      Branch {
+		DstBlock		"Int Source Filter1"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Int Source Filter6"
+	      SrcPort		      1
+	      DstBlock		      "Read HW FIFO4"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Int Source Filter4"
+	      SrcPort		      1
+	      DstBlock		      "Read HW FIFO3"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Read HW FIFO2"
+	      SrcPort		      1
+	      DstBlock		      "FIFO write 2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "FIFO write 2"
+	      SrcPort		      1
+	      DstBlock		      "RX2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Read HW FIFO3"
+	      SrcPort		      1
+	      DstBlock		      "FIFO write 3"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "FIFO write 3"
+	      SrcPort		      1
+	      DstBlock		      "RX3"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Read HW FIFO4"
+	      SrcPort		      1
+	      DstBlock		      "FIFO write 4"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "FIFO write 4"
+	      SrcPort		      1
+	      DstBlock		      "RX4"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Int Source Filter2"
+	      SrcPort		      1
+	      DstBlock		      "Read HW FIFO2"
+	      DstPort		      1
+	    }
+	  }
+	  RTWSystemCode		  "Auto"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  MaskHideContents	  off
+	}
+	Block {
+	  BlockType		  RateTransition
+	  Name			  "Rate Transition4"
+	  SID			  178
+	  Position		  [450, 175, 470, 195]
+	  ShowName		  off
+	  Integrity		  off
+	  Deterministic		  off
+	}
+	Block {
+	  BlockType		  RateTransition
+	  Name			  "Rate Transition5"
+	  SID			  179
+	  Position		  [450, 250, 470, 270]
+	  ShowName		  off
+	  Integrity		  off
+	  Deterministic		  off
+	}
+	Block {
+	  BlockType		  RateTransition
+	  Name			  "Rate Transition6"
+	  SID			  180
+	  Position		  [450, 325, 470, 345]
+	  ShowName		  off
+	  Integrity		  off
+	  Deterministic		  off
+	}
+	Block {
+	  BlockType		  RateTransition
+	  Name			  "Rate Transition7"
+	  SID			  181
+	  Position		  [450, 400, 470, 420]
+	  ShowName		  off
+	  Integrity		  off
+	  Deterministic		  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Setup"
+	  SID			  182
+	  Ports			  []
+	  Position		  [15, 15, 165, 94]
+	  LibraryVersion	  "1.83"
+	  SourceBlock		  "speedgoatlib_IO511/IO511 internal blocks/Setup"
+	  SourceType		  "setup_IO511"
+	  id			  "1"
+	  chan			  "[1 2 3 4]"
+	  mode			  "[1 1 0 0]"
+	  freq			  "1e6"
+	  rxAlmost		  "[2 2 2 2]"
+	  pciSlot		  "-1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Write HW FIFO1"
+	  SID			  183
+	  Ports			  [2]
+	  Position		  [90, 145, 255, 205]
+	  LibraryVersion	  "1.83"
+	  SourceBlock		  "speedgoatlib_IO511/IO511 internal blocks/Write HW FIFO"
+	  SourceType		  "wrhwfifo_IO511"
+	  id			  "1"
+	  chan			  "1"
+	  max			  "2"
+	  pciSlot		  "-1"
+	  ts			  "-1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Write HW FIFO2"
+	  SID			  184
+	  Ports			  [2]
+	  Position		  [90, 236, 255, 294]
+	  LibraryVersion	  "1.83"
+	  SourceBlock		  "speedgoatlib_IO511/IO511 internal blocks/Write HW FIFO"
+	  SourceType		  "wrhwfifo_IO511"
+	  id			  "1"
+	  chan			  "2"
+	  max			  "2"
+	  pciSlot		  "-1"
+	  ts			  "-1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Write HW FIFO3"
+	  SID			  185
+	  Ports			  [2]
+	  Position		  [90, 330, 255, 385]
+	  LibraryVersion	  "1.83"
+	  SourceBlock		  "speedgoatlib_IO511/IO511 internal blocks/Write HW FIFO"
+	  SourceType		  "wrhwfifo_IO511"
+	  id			  "1"
+	  chan			  "3"
+	  max			  "2"
+	  pciSlot		  "-1"
+	  ts			  "-1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Write HW FIFO4"
+	  SID			  186
+	  Ports			  [2]
+	  Position		  [90, 422, 255, 473]
+	  LibraryVersion	  "1.83"
+	  SourceBlock		  "speedgoatlib_IO511/IO511 internal blocks/Write HW FIFO"
+	  SourceType		  "wrhwfifo_IO511"
+	  id			  "1"
+	  chan			  "4"
+	  max			  "2"
+	  pciSlot		  "-1"
+	  ts			  "-1"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "RX1"
+	  SID			  187
+	  Position		  [500, 178, 530, 192]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "RX2"
+	  SID			  188
+	  Position		  [500, 253, 530, 267]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "RX3"
+	  SID			  189
+	  Position		  [500, 328, 530, 342]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "RX4"
+	  SID			  190
+	  Position		  [500, 403, 530, 417]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "In1"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  DstBlock		  "Write HW FIFO1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "In2"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  DstBlock		  "Write HW FIFO2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "In3"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  DstBlock		  "Write HW FIFO3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "In4"
+	  SrcPort		  1
+	  Points		  [0, 15]
+	  DstBlock		  "Write HW FIFO4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant3"
+	  SrcPort		  1
+	  DstBlock		  "Write HW FIFO4"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Constant2"
+	  SrcPort		  1
+	  DstBlock		  "Write HW FIFO3"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Constant1"
+	  SrcPort		  1
+	  DstBlock		  "Write HW FIFO2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Constant"
+	  SrcPort		  1
+	  DstBlock		  "Write HW FIFO1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "IRQ Source"
+	  SrcPort		  1
+	  Points		  [45, 0]
+	  DstBlock		  "ISR"
+	  DstPort		  trigger
+	}
+	Line {
+	  SrcBlock		  "Rate Transition4"
+	  SrcPort		  1
+	  DstBlock		  "RX1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Rate Transition5"
+	  SrcPort		  1
+	  DstBlock		  "RX2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Rate Transition6"
+	  SrcPort		  1
+	  DstBlock		  "RX3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Rate Transition7"
+	  SrcPort		  1
+	  DstBlock		  "RX4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "ISR"
+	  SrcPort		  1
+	  DstBlock		  "Rate Transition4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "ISR"
+	  SrcPort		  2
+	  DstBlock		  "Rate Transition5"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "ISR"
+	  SrcPort		  3
+	  DstBlock		  "Rate Transition6"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "ISR"
+	  SrcPort		  4
+	  DstBlock		  "Rate Transition7"
+	  DstPort		  1
+	}
+      }
+      RTWSystemCode	      "Auto"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      FunctionWithSeparateData off
+      Opaque		      off
+      MaskHideContents	      off
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "IO511 Send and Receive v2"
+      SID		      105
+      Ports		      [4, 4]
+      Position		      [295, 15, 490, 270]
+      RequestExecContextInheritance off
+      MaskType		      "sendrecv_IO511"
+      MaskDescription	      "IO511 Send and Receive block"
+      MaskHelp		      "web(['C:\\Users\\lab3\\Documents\\MATLAB\\trunk\\thirdpartydrivers\\sg_help\\serial\\dialog_fie"
+      "lds_send_receive_io511.htm'],'-helpbrowser');"
+      MaskPromptString	      "Module identifier|PCI slot (-1: autosearch)|Channel setup|Mode|Mode|Mode|Mode|Frequency "
+      "[Hz] (-1 if TX freq is cable sourced)|Frequency [Hz] (-1 if TX freq is cable sourced)|Frequency [Hz] (-1 if TX f"
+      "req is cable sourced)|Frequency [Hz] (-1 if TX freq is cable sourced)|RX FIFO almost full threshold|RX FIFO almo"
+      "st full threshold|RX FIFO almost full threshold|RX FIFO almost full threshold|Data size (count)|Data size (count"
+      ")|Data size (count)|Data size (count)"
+      MaskStyleString	      "popup(1|2),edit,popup(1|2|3|4),popup(DTE|DCE),popup(DTE|DCE),popup(DTE|DCE),popup(DTE|DCE"
+      "),edit,edit,edit,edit,edit,edit,edit,edit,edit,edit,edit,edit"
+      MaskVariables	      "module_id=@1;pci_slot=@2;channel_setup=@3;channel1_mode=@4;channel2_mode=@5;channel3_mode=@"
+      "6;channel4_mode=@7;channel1_freq=@8;channel2_freq=@9;channel3_freq=@10;channel4_freq=@11;channel1_fifo_threshold"
+      "=@12;channel2_fifo_threshold=@13;channel3_fifo_threshold=@14;channel4_fifo_threshold=@15;channel1_data_size=@16;"
+      "channel2_data_size=@17;channel3_data_size=@18;channel4_data_size=@19;"
+      MaskTunableValueString  "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskCallbackString      "||sg_IO511_sendrecv_m(2);||||||||||||||||"
+      MaskEnableString	      "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskVisibilityString    "on,on,on,on,off,off,off,on,off,off,off,on,off,off,off,on,off,off,off"
+      MaskToolTipString	      "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskInitialization      "%set_param(gcb, 'LinkStatus', 'inactive');\nmode_vect = nan;\nfreq_vect = nan; \nfifo_t"
+      "hreshold_vect = nan;\nsg_IO511_sendrecv_m(3);\nsg_IO511_sendrecv_m(1, module_id, pci_slot, ...\n                "
+      "       mode_vect, channel1_mode, channel2_mode, channel3_mode, channel4_mode, ...\n                       freq_v"
+      "ect, channel1_freq, channel2_freq, channel3_freq, channel4_freq, ...\n                       fifo_threshold_vect"
+      ", channel1_fifo_threshold, channel2_fifo_threshold, channel3_fifo_threshold, channel4_fifo_threshold, ...\n     "
+      "                  channel1_data_size, channel2_data_size, channel3_data_size, channel4_data_size);\n\n\n"
+      MaskSelfModifiable      on
+      MaskDisplay	      "disp('IO511\\nSpeedgoat\\nSend\\nReceive');\nport_label('input', 1, 'Chan1 TX' );\nport_label"
+      "('input', 2, 'Chan2 TX' );\nport_label('input', 3, 'Chan3 TX' );\nport_label('input', 4, 'Chan4 TX' );\nport_lab"
+      "el('output', 1, 'Chan1 RX' );\nport_label('output', 2, 'Chan2 RX' );\nport_label('output', 3, 'Chan3 RX' );\npor"
+      "t_label('output', 4, 'Chan4 RX' );\n\n"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "1|-1|1|DTE|DTE|DCE|DCE|10e6|10e6|10e6|10e6|2|2|2|2|2|2|2|2"
+      System {
+	Name			"IO511 Send and Receive v2"
+	Location		[193, 52, 1459, 1853]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	SIDHighWatermark	313
+	Block {
+	  BlockType		  Inport
+	  Name			  "In1"
+	  SID			  106
+	  Position		  [25, 138, 55, 152]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "In2"
+	  SID			  107
+	  Position		  [25, 228, 55, 242]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "In3"
+	  SID			  108
+	  Position		  [25, 323, 55, 337]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "In4"
+	  SID			  109
+	  Position		  [25, 428, 55, 442]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant"
+	  SID			  110
+	  Position		  [25, 182, 55, 198]
+	  ShowName		  off
+	  OutDataTypeStr	  "Inherit: Inherit via back propagation"
+	  OutDataTypeMode	  "Inherit via back propagation"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant1"
+	  SID			  111
+	  Position		  [25, 272, 55, 288]
+	  ShowName		  off
+	  OutDataTypeStr	  "Inherit: Inherit via back propagation"
+	  OutDataTypeMode	  "Inherit via back propagation"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant2"
+	  SID			  112
+	  Position		  [25, 362, 55, 378]
+	  ShowName		  off
+	  OutDataTypeStr	  "Inherit: Inherit via back propagation"
+	  OutDataTypeMode	  "Inherit via back propagation"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant3"
+	  SID			  113
+	  Position		  [25, 457, 55, 473]
+	  ShowName		  off
+	  OutDataTypeStr	  "Inherit: Inherit via back propagation"
+	  OutDataTypeMode	  "Inherit via back propagation"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "IRQ Source"
+	  SID			  148
+	  Ports			  [0, 1]
+	  Position		  [205, 55, 320, 95]
+	  LibraryVersion	  "1.1835"
+	  SourceBlock		  "xpclib/Asynchronous\nEvent/IRQ Source"
+	  SourceType		  "xpcinterrupt"
+	  irqNo			  "Auto (PCI only)"
+	  preempt		  "off"
+	  b_type		  "ATI-RP-R5"
+	  slot			  "-1"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "ISR"
+	  SID			  115
+	  Ports			  [0, 4, 0, 1]
+	  Position		  [335, 151, 420, 444]
+	  LibraryVersion	  "1.762"
+	  TreatAsAtomicUnit	  on
+	  RequestExecContextInheritance	off
+	  System {
+	    Name		    "ISR"
+	    Location		    [16, 52, 1770, 1983]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      TriggerPort
+	      Name		      "function"
+	      SID		      116
+	      Ports		      []
+	      Position		      [25, 15, 45, 35]
+	      TriggerType	      "function-call"
+	      StatesWhenEnabling      "held"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "FIFO write 1"
+	      SID		      117
+	      Ports		      [1, 1]
+	      Position		      [740, 118, 810, 152]
+	      LibraryVersion	      "1.22"
+	      SourceBlock	      "xpclib/RS232/FIFO write "
+	      SourceType	      "Asynchronous FIFO Block: writer"
+	      size		      "1024"
+	      inputtype		      "count+16 bit uint"
+	      present		      off
+	      sampletime	      "-1"
+	      id		      "IO511 RCV channel 1"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "FIFO write 2"
+	      SID		      118
+	      Ports		      [1, 1]
+	      Position		      [740, 228, 810, 262]
+	      LibraryVersion	      "1.22"
+	      SourceBlock	      "xpclib/RS232/FIFO write "
+	      SourceType	      "Asynchronous FIFO Block: writer"
+	      size		      "1024"
+	      inputtype		      "count+16 bit uint"
+	      present		      off
+	      sampletime	      "-1"
+	      id		      "IO511 RCV channel 2"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "FIFO write 3"
+	      SID		      119
+	      Ports		      [1, 1]
+	      Position		      [745, 338, 815, 372]
+	      LibraryVersion	      "1.22"
+	      SourceBlock	      "xpclib/RS232/FIFO write "
+	      SourceType	      "Asynchronous FIFO Block: writer"
+	      size		      "1024"
+	      inputtype		      "count+16 bit uint"
+	      present		      off
+	      sampletime	      "-1"
+	      id		      "IO511 RCV channel 3"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "FIFO write 4"
+	      SID		      120
+	      Ports		      [1, 1]
+	      Position		      [745, 453, 815, 487]
+	      LibraryVersion	      "1.22"
+	      SourceBlock	      "xpclib/RS232/FIFO write "
+	      SourceType	      "Asynchronous FIFO Block: writer"
+	      size		      "1024"
+	      inputtype		      "count+16 bit uint"
+	      present		      off
+	      sampletime	      "-1"
+	      id		      "IO511 RCV channel 4"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Int Source Filter1"
+	      SID		      121
+	      Ports		      [1, 1]
+	      Position		      [265, 105, 390, 165]
+	      LibraryVersion	      "1.83"
+	      SourceBlock	      "speedgoatlib_IO511/IO511 internal blocks/Int Source Filter"
+	      SourceType	      "intfilter_IO511"
+	      id		      "1"
+	      chan		      "1"
+	      dir		      "1"
+	      width		      "2"
+	      ts		      "-1"
+	      pciSlot		      "-1"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Int Source Filter2"
+	      SID		      122
+	      Ports		      [1, 1]
+	      Position		      [265, 215, 390, 275]
+	      LibraryVersion	      "1.83"
+	      SourceBlock	      "speedgoatlib_IO511/IO511 internal blocks/Int Source Filter"
+	      SourceType	      "intfilter_IO511"
+	      id		      "1"
+	      chan		      "2"
+	      dir		      "1"
+	      width		      "2"
+	      ts		      "-1"
+	      pciSlot		      "-1"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Int Source Filter3"
+	      SID		      123
+	      Ports		      [1, 1]
+	      Position		      [265, 328, 395, 382]
+	      LibraryVersion	      "1.83"
+	      SourceBlock	      "speedgoatlib_IO511/IO511 internal blocks/Int Source Filter"
+	      SourceType	      "intfilter_IO511"
+	      id		      "1"
+	      chan		      "3"
+	      dir		      "1"
+	      width		      "2"
+	      ts		      "-1"
+	      pciSlot		      "-1"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Int Source Filter4"
+	      SID		      124
+	      Ports		      [1, 1]
+	      Position		      [265, 439, 395, 501]
+	      LibraryVersion	      "1.83"
+	      SourceBlock	      "speedgoatlib_IO511/IO511 internal blocks/Int Source Filter"
+	      SourceType	      "intfilter_IO511"
+	      id		      "1"
+	      chan		      "4"
+	      dir		      "1"
+	      width		      "2"
+	      ts		      "-1"
+	      pciSlot		      "-1"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Read HW FIFO1"
+	      SID		      125
+	      Ports		      [1, 1]
+	      Position		      [495, 103, 660, 167]
+	      LibraryVersion	      "1.83"
+	      SourceBlock	      "speedgoatlib_IO511/IO511 internal blocks/Read HW FIFO"
+	      SourceType	      "rdhwfifo_IO511"
+	      id		      "1"
+	      chan		      "1"
+	      fifoSize		      "1024"
+	      pciSlot		      "-1"
+	      ts		      "-1"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Read HW FIFO2"
+	      SID		      126
+	      Ports		      [1, 1]
+	      Position		      [495, 218, 660, 272]
+	      LibraryVersion	      "1.83"
+	      SourceBlock	      "speedgoatlib_IO511/IO511 internal blocks/Read HW FIFO"
+	      SourceType	      "rdhwfifo_IO511"
+	      id		      "1"
+	      chan		      "2"
+	      fifoSize		      "1024"
+	      pciSlot		      "-1"
+	      ts		      "-1"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Read HW FIFO3"
+	      SID		      127
+	      Ports		      [1, 1]
+	      Position		      [495, 327, 665, 383]
+	      LibraryVersion	      "1.83"
+	      SourceBlock	      "speedgoatlib_IO511/IO511 internal blocks/Read HW FIFO"
+	      SourceType	      "rdhwfifo_IO511"
+	      id		      "1"
+	      chan		      "3"
+	      fifoSize		      "1024"
+	      pciSlot		      "-1"
+	      ts		      "-1"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Read HW FIFO4"
+	      SID		      128
+	      Ports		      [1, 1]
+	      Position		      [495, 440, 665, 500]
+	      LibraryVersion	      "1.83"
+	      SourceBlock	      "speedgoatlib_IO511/IO511 internal blocks/Read HW FIFO"
+	      SourceType	      "rdhwfifo_IO511"
+	      id		      "1"
+	      chan		      "4"
+	      fifoSize		      "1024"
+	      pciSlot		      "-1"
+	      ts		      "-1"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Read Int vector"
+	      SID		      129
+	      Ports		      [0, 1]
+	      Position		      [50, 107, 185, 163]
+	      LibraryVersion	      "1.83"
+	      SourceBlock	      "speedgoatlib_IO511/IO511 internal blocks/Read Int vector"
+	      SourceType	      "rdintvector_IO511"
+	      id		      "1"
+	      ts		      "-1"
+	      pciSlot		      "-1"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "RX1"
+	      SID		      130
+	      Position		      [835, 128, 865, 142]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "RX2"
+	      SID		      131
+	      Position		      [845, 238, 875, 252]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "RX3"
+	      SID		      132
+	      Position		      [850, 348, 880, 362]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "RX4"
+	      SID		      133
+	      Position		      [850, 463, 880, 477]
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "Int Source Filter2"
+	      SrcPort		      1
+	      DstBlock		      "Read HW FIFO2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "FIFO write 4"
+	      SrcPort		      1
+	      DstBlock		      "RX4"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Read HW FIFO4"
+	      SrcPort		      1
+	      DstBlock		      "FIFO write 4"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "FIFO write 3"
+	      SrcPort		      1
+	      DstBlock		      "RX3"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Read HW FIFO3"
+	      SrcPort		      1
+	      DstBlock		      "FIFO write 3"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "FIFO write 2"
+	      SrcPort		      1
+	      DstBlock		      "RX2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Read HW FIFO2"
+	      SrcPort		      1
+	      DstBlock		      "FIFO write 2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Int Source Filter3"
+	      SrcPort		      1
+	      DstBlock		      "Read HW FIFO3"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Int Source Filter4"
+	      SrcPort		      1
+	      DstBlock		      "Read HW FIFO4"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Read Int vector"
+	      SrcPort		      1
+	      Points		      [30, 0]
+	      Branch {
+		DstBlock		"Int Source Filter1"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 110]
+		Branch {
+		  DstBlock		  "Int Source Filter2"
+		  DstPort		  1
+		}
+		Branch {
+		  Points		  [0, 110]
+		  Branch {
+		    DstBlock		    "Int Source Filter3"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, 115]
+		    DstBlock		    "Int Source Filter4"
+		    DstPort		    1
+		  }
+		}
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Int Source Filter1"
+	      SrcPort		      1
+	      DstBlock		      "Read HW FIFO1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "FIFO write 1"
+	      SrcPort		      1
+	      DstBlock		      "RX1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Read HW FIFO1"
+	      SrcPort		      1
+	      DstBlock		      "FIFO write 1"
+	      DstPort		      1
+	    }
+	  }
+	  RTWSystemCode		  "Auto"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  MaskHideContents	  off
+	}
+	Block {
+	  BlockType		  RateTransition
+	  Name			  "Rate Transition1"
+	  SID			  134
+	  Position		  [495, 239, 535, 281]
+	  ShowName		  off
+	  Integrity		  off
+	  Deterministic		  off
+	}
+	Block {
+	  BlockType		  RateTransition
+	  Name			  "Rate Transition2"
+	  SID			  135
+	  Position		  [495, 314, 535, 356]
+	  ShowName		  off
+	  Integrity		  off
+	  Deterministic		  off
+	}
+	Block {
+	  BlockType		  RateTransition
+	  Name			  "Rate Transition3"
+	  SID			  136
+	  Position		  [495, 389, 535, 431]
+	  ShowName		  off
+	  Integrity		  off
+	  Deterministic		  off
+	}
+	Block {
+	  BlockType		  RateTransition
+	  Name			  "Rate Transition4"
+	  SID			  137
+	  Position		  [495, 164, 535, 206]
+	  ShowName		  off
+	  Integrity		  off
+	  Deterministic		  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Setup"
+	  SID			  138
+	  Ports			  []
+	  Position		  [15, 15, 165, 94]
+	  LibraryVersion	  "1.83"
+	  SourceBlock		  "speedgoatlib_IO511/IO511 internal blocks/Setup"
+	  SourceType		  "setup_IO511"
+	  id			  "1"
+	  chan			  "[1 2 3 4]"
+	  mode			  "[0 0 1 1]"
+	  freq			  "[10000000 10000000 10000000 10000000]"
+	  rxAlmost		  "[2 2 2 2]"
+	  pciSlot		  "-1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Write HW FIFO1"
+	  SID			  139
+	  Ports			  [2]
+	  Position		  [90, 145, 255, 205]
+	  LibraryVersion	  "1.83"
+	  SourceBlock		  "speedgoatlib_IO511/IO511 internal blocks/Write HW FIFO"
+	  SourceType		  "wrhwfifo_IO511"
+	  id			  "1"
+	  chan			  "1"
+	  max			  "2"
+	  pciSlot		  "-1"
+	  ts			  "-1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Write HW FIFO2"
+	  SID			  140
+	  Ports			  [2]
+	  Position		  [90, 236, 255, 294]
+	  LibraryVersion	  "1.83"
+	  SourceBlock		  "speedgoatlib_IO511/IO511 internal blocks/Write HW FIFO"
+	  SourceType		  "wrhwfifo_IO511"
+	  id			  "1"
+	  chan			  "2"
+	  max			  "2"
+	  pciSlot		  "-1"
+	  ts			  "-1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Write HW FIFO3"
+	  SID			  141
+	  Ports			  [2]
+	  Position		  [90, 330, 255, 385]
+	  LibraryVersion	  "1.83"
+	  SourceBlock		  "speedgoatlib_IO511/IO511 internal blocks/Write HW FIFO"
+	  SourceType		  "wrhwfifo_IO511"
+	  id			  "1"
+	  chan			  "3"
+	  max			  "2"
+	  pciSlot		  "-1"
+	  ts			  "-1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Write HW FIFO4"
+	  SID			  142
+	  Ports			  [2]
+	  Position		  [90, 422, 255, 473]
+	  LibraryVersion	  "1.83"
+	  SourceBlock		  "speedgoatlib_IO511/IO511 internal blocks/Write HW FIFO"
+	  SourceType		  "wrhwfifo_IO511"
+	  id			  "1"
+	  chan			  "4"
+	  max			  "2"
+	  pciSlot		  "-1"
+	  ts			  "-1"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "RX1"
+	  SID			  143
+	  Position		  [635, 178, 665, 192]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "RX2"
+	  SID			  144
+	  Position		  [635, 253, 665, 267]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "RX3"
+	  SID			  145
+	  Position		  [635, 328, 665, 342]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "RX4"
+	  SID			  146
+	  Position		  [635, 403, 665, 417]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "ISR"
+	  SrcPort		  4
+	  DstBlock		  "Rate Transition3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "ISR"
+	  SrcPort		  3
+	  DstBlock		  "Rate Transition2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "ISR"
+	  SrcPort		  2
+	  DstBlock		  "Rate Transition1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "ISR"
+	  SrcPort		  1
+	  DstBlock		  "Rate Transition4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Rate Transition3"
+	  SrcPort		  1
+	  DstBlock		  "RX4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Rate Transition2"
+	  SrcPort		  1
+	  DstBlock		  "RX3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Rate Transition1"
+	  SrcPort		  1
+	  DstBlock		  "RX2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Rate Transition4"
+	  SrcPort		  1
+	  DstBlock		  "RX1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "IRQ Source"
+	  SrcPort		  1
+	  Points		  [50, 0]
+	  DstBlock		  "ISR"
+	  DstPort		  trigger
+	}
+	Line {
+	  SrcBlock		  "Constant"
+	  SrcPort		  1
+	  DstBlock		  "Write HW FIFO1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Constant1"
+	  SrcPort		  1
+	  DstBlock		  "Write HW FIFO2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Constant2"
+	  SrcPort		  1
+	  DstBlock		  "Write HW FIFO3"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Constant3"
+	  SrcPort		  1
+	  Points		  [0, -5]
+	  DstBlock		  "Write HW FIFO4"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "In4"
+	  SrcPort		  1
+	  DstBlock		  "Write HW FIFO4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "In3"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  DstBlock		  "Write HW FIFO3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "In2"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  DstBlock		  "Write HW FIFO2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "In1"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  DstBlock		  "Write HW FIFO1"
+	  DstPort		  1
+	}
+      }
+      RTWSystemCode	      "Auto"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      FunctionWithSeparateData off
+      Opaque		      off
+      MaskHideContents	      off
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "IO511 internal blocks"
+      SID		      3
+      Ports		      []
+      Position		      [575, 15, 615, 75]
+      RequestExecContextInheritance off
+      System {
+	Name			"IO511 internal blocks"
+	Location		[179, 52, 1073, 1980]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  S-Function
+	  Name			  "Enable TX Int"
+	  SID			  1
+	  Ports			  [1]
+	  Position		  [30, 388, 200, 462]
+	  InitFcn		  "sg_IO511_txintenable_m(1);"
+	  FunctionName		  "sg_IO511_txintenable_s"
+	  Parameters		  "pciSlot, ts, chan"
+	  EnableBusSupport	  off
+	  MaskType		  "txintenable_IO511"
+	  MaskDescription	  "Speedgoat driver block<br>IO511 - HDLC/SDLC enable TX interrupts<br><br>&copy; 2006 - 2012, Spee"
+	  "dgoat GmbH, www.speedgoat.ch"
+	  MaskHelp		  "Documentation for this block is not available."
+	  MaskPromptString	  "IO511 module identifier:|Channel:|PCI slot (-1: autosearch):|Sample time:"
+	  MaskStyleString	  "popup(1|2|3|4|5|6|7|8|9|10),edit,edit,edit"
+	  MaskVariables		  "id=@1;chan=@2;pciSlot=@3;ts=@4;"
+	  MaskTunableValueString  "on,on,on,on"
+	  MaskCallbackString	  "|||"
+	  MaskEnableString	  "on,on,on,on"
+	  MaskVisibilityString	  "on,on,off,on"
+	  MaskToolTipString	  "on,on,on,on"
+	  MaskInitialization	  "sg_IO511_txintenable_m(3, id);"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nIO511\\nHDLC/SDLC enable TX int\\nModule: 1');port_label('input', 1, 'DP');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|1|-1|0.001"
+	}
+	Block {
+	  BlockType		  S-Function
+	  Name			  "Int Source Filter"
+	  SID			  8
+	  Ports			  [1, 1]
+	  Position		  [30, 491, 200, 569]
+	  InitFcn		  "sg_IO511_intfilter_m(1);"
+	  FunctionName		  "sg_IO511_intfilter_s"
+	  Parameters		  "pciSlot,ts,dir,chan,width"
+	  EnableBusSupport	  off
+	  MaskType		  "intfilter_IO511"
+	  MaskDescription	  "Speedgoat driver block<br>IO511 - HDLC/SDLC interrupts source filter<br><br>&copy; 2006 - 2012, "
+	  "Speedgoat GmbH, www.speedgoat.ch"
+	  MaskHelp		  "Documentation for this block is not available."
+	  MaskPromptString	  "IO511 module identifier:|Channel:|Direction (TX: 0, RX: 1, USC: 2):|Width:|Sample time:|PCI slo"
+	  "t (-1: autosearch):"
+	  MaskStyleString	  "popup(1|2|3|4|5|6|7|8|9|10),edit,edit,edit,edit,edit"
+	  MaskVariables		  "id=@1;chan=@2;dir=@3;width=@4;ts=@5;pciSlot=@6;"
+	  MaskTunableValueString  "on,on,on,on,on,on"
+	  MaskCallbackString	  "|||||"
+	  MaskEnableString	  "on,on,on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on,on,off"
+	  MaskToolTipString	  "on,on,on,on,on,on"
+	  MaskInitialization	  "sg_IO511_intfilter_m(3, id);"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nIO511\\nHDLC/SDLC int filter\\nModule: 1');port_label('input', 1, 'S');port_label"
+	  "('output', 1, 'E');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|1|1|1|-1|-1"
+	}
+	Block {
+	  BlockType		  S-Function
+	  Name			  "Read HW FIFO"
+	  SID			  5
+	  Ports			  [1, 1]
+	  Position		  [30, 132, 200, 218]
+	  InitFcn		  "sg_IO511_rdhwfifo_m(1);"
+	  FunctionName		  "sg_IO511_rdhwfifo_s"
+	  Parameters		  "pciSlot, ts, chan, fifoSize"
+	  EnableBusSupport	  off
+	  MaskType		  "rdhwfifo_IO511"
+	  MaskDescription	  "Speedgoat driver block<br>IO511 - HDLC/SDLC read HW FIFO<br><br>&copy; 2006 - 2012, Speedgoat Gm"
+	  "bH, www.speedgoat.ch"
+	  MaskHelp		  "Documentation for this block is not available."
+	  MaskPromptString	  "IO511 module identifier:|Channel:|FIFO size to read:|PCI slot (-1: autosearch):|Sample time:"
+	  MaskStyleString	  "popup(1|2|3|4|5|6|7|8|9|10),edit,edit,edit,edit"
+	  MaskVariables		  "id=@1;chan=@2;fifoSize=@3;pciSlot=@4;ts=@5;"
+	  MaskTunableValueString  "on,on,on,on,on"
+	  MaskCallbackString	  "||||"
+	  MaskEnableString	  "on,on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,off,on"
+	  MaskToolTipString	  "on,on,on,on,on"
+	  MaskInitialization	  "sg_IO511_rdhwfifo_m(3, id);"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nIO511\\nHDLC/SDLC read HW FIFO\\nModule: 1');port_label('input', 1, 'E');port_lab"
+	  "el('output', 1, 'D');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|1|1|-1|-1"
+	}
+	Block {
+	  BlockType		  S-Function
+	  Name			  "Read Int vector"
+	  SID			  9
+	  Ports			  [0, 1]
+	  Position		  [30, 264, 200, 336]
+	  InitFcn		  "sg_IO511_rdintvector_m(1);"
+	  FunctionName		  "sg_IO511_rdintvector_s"
+	  Parameters		  "pciSlot,ts"
+	  EnableBusSupport	  off
+	  MaskType		  "rdintvector_IO511"
+	  MaskDescription	  "Speedgoat driver block<br>IO511 - HDLC/SDLC read interrupt vector<br><br>&copy; 2006 - 2012, Spe"
+	  "edgoat GmbH, www.speedgoat.ch"
+	  MaskHelp		  "Documentation for this block is not available."
+	  MaskPromptString	  "IO511 module identifier:|Sample time:|PCI slot (-1: autosearch):"
+	  MaskStyleString	  "popup(1|2|3|4|5|6|7|8|9|10),edit,edit"
+	  MaskVariables		  "id=@1;ts=@2;pciSlot=@3;"
+	  MaskTunableValueString  "on,on,on"
+	  MaskCallbackString	  "||"
+	  MaskEnableString	  "on,on,on"
+	  MaskVisibilityString	  "on,on,off"
+	  MaskToolTipString	  "on,on,on"
+	  MaskInitialization	  "sg_IO511_rdintvector_m(3, id);"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nIO511\\nHDLC/SDLC read int\\nModule: 1');port_label('output', 1, 'S');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|-1|-1"
+	}
+	Block {
+	  BlockType		  S-Function
+	  Name			  "Setup"
+	  SID			  10
+	  Ports			  []
+	  Position		  [30, 25, 153, 95]
+	  InitFcn		  "sg_IO511_setup_m(1);"
+	  FunctionName		  "sg_IO511_setup_s"
+	  Parameters		  "pciSlot, chan, mode, freq, rxAlmost"
+	  EnableBusSupport	  off
+	  MaskType		  "setup_IO511"
+	  MaskDescription	  "Speedgoat driver block<br>IO511 - Setup<br><br>&copy; 2006 - 2012, Speedgoat GmbH, www.speedgoat"
+	  ".ch"
+	  MaskHelp		  "Documentation for this block is not available."
+	  MaskPromptString	  "IO511 module identifier:|Channels:|Mode (0: DTE, 1: DCE):|Frequency [Hz] (-1: if TX freq is cab"
+	  "le sourced):|RX FIFO almost full threshold:|PCI slot (-1: autosearch):"
+	  MaskStyleString	  "popup(1|2|3|4|5|6|7|8|9|10),edit,edit,edit,edit,edit"
+	  MaskVariables		  "id=@1;chan=@2;mode=@3;freq=@4;rxAlmost=@5;pciSlot=@6;"
+	  MaskTunableValueString  "on,on,on,on,on,on"
+	  MaskCallbackString	  "|||||"
+	  MaskEnableString	  "on,on,on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on,on,on"
+	  MaskToolTipString	  "on,on,on,on,on,on"
+	  MaskInitialization	  "sg_IO511_setup_m(3, id, pciSlot);\niocr = 0;"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nIO511\\nSetup\\nModule: 1');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|[1 2 3 4]|[0 0 1 1]|[8e6 8e6 8e6 8e6]|[2 2 2 2]|-1"
+	}
+	Block {
+	  BlockType		  S-Function
+	  Name			  "Write HW FIFO"
+	  SID			  6
+	  Ports			  [2]
+	  Position		  [245, 134, 410, 221]
+	  InitFcn		  "sg_IO511_wrhwfifo_m(1);"
+	  FunctionName		  "sg_IO511_wrhwfifo_s"
+	  Parameters		  "pciSlot, ts, chan, max"
+	  EnableBusSupport	  off
+	  MaskType		  "wrhwfifo_IO511"
+	  MaskDescription	  "Speedgoat driver block<br>IO511 - HDLC/SDLC write HW FIFO<br><br>&copy; 2006 - 2012, Speedgoat G"
+	  "mbH, www.speedgoat.ch"
+	  MaskHelp		  "Documentation for this block is not available."
+	  MaskPromptString	  "IO511 module identifier:|Channel:|Maximum data to be written to software FIFO:|PCI slot (-1: au"
+	  "tosearch):|Sample time:"
+	  MaskStyleString	  "popup(1|2|3|4|5|6|7|8|9|10),edit,edit,edit,edit"
+	  MaskVariables		  "id=@1;chan=@2;max=@3;pciSlot=@4;ts=@5;"
+	  MaskTunableValueString  "on,on,on,on,on"
+	  MaskCallbackString	  "||||"
+	  MaskEnableString	  "on,on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,off,on"
+	  MaskToolTipString	  "on,on,on,on,on"
+	  MaskInitialization	  "sg_IO511_wrhwfifo_m(3, id);"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nIO511\\nHDLC/SDLC write HW FIFO\\nModule: 1');port_label('input', 1, 'D');port_la"
+	  "bel('input', 2, 'E');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|1|64|-1|-1"
+	}
+      }
+      RTWSystemCode	      "Auto"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      FunctionWithSeparateData off
+      Opaque		      off
+      MaskHideContents	      off
+    }
+  }
+}

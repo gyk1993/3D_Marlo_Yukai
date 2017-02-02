@@ -1,0 +1,208 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>IO30X, IO31X &gt; Driver configuration &gt; PWM generation driver block &gt; Usage Notes &gt; Running Modes</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+     .p_Heading1{ color: #147EC2;
+    font-size: 1.455em !important;
+     border-bottom: 1px solid #E0E1E1;
+    color: #147EC2;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 20px;
+    padding-bottom: 4px;}
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "running_modes_pwm_io30x.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<div id="breadcrumbs" style="display:none"><a href="io30x.htm">IO30X, IO31X</a> &gt; <a href="driver_configuration_io30x.htm">Driver configuration</a> &gt; <a href="pwm_io30x.htm">PWM generation driver block</a> &gt; <a href="usage_notes_io30x_pwm.htm">Usage Notes</a></div>
+
+<div id="printheader"><h1 class="p_Heading1"><span class="f_Heading1">Running Modes</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
+  <tr valign="bottom">
+    <td align="left" valign="bottom" class="topichead">
+   
+   <h1 class="p_Heading1"><span class="f_Heading1">Running Modes</span></h1>
+
+    
+  </tr>  
+</table>
+<!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<p>PWM generation can either be in <span style="font-style: italic;">Stopped</span> or <span style="font-style: italic;">Started</span> mode.</p>
+<p>&nbsp;</p>
+<p>The mode is controlled by the 'Start/Stop' input port and is initialized by the 'Initial start/stop vector' parameter. &nbsp;The default mode after target application download is <span style="font-style: italic;">Stopped</span>. </p>
+<p>&nbsp;</p>
+<p>When in <span style="font-style: italic;">Stopped</span> mode the output signals A, B, and Trigger are as follows:</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table class="tbl" style="width:700px; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; background-color:#f6f6f6; padding:10px;"><p>A-Output:</p>
+</td>
+<td style="vertical-align:top; width:503px; background-color:#f6f6f6; padding:10px;"><p>Set to the level defined by A-output Stop State</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:10px;"><p>B-Output:</p>
+</td>
+<td style="vertical-align:top; width:503px; padding:10px;"><p>Set to the level defined by B-output Stop State</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; background-color:#f6f6f6; padding:10px;"><p>Trigger-Output:</p>
+</td>
+<td style="vertical-align:top; width:503px; background-color:#f6f6f6; padding:10px;"><p>Trigger-Output: Low at all times, no Trigger pulses are generated</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>When <span style="font-style: italic;">Started </span>mode is entered the output signals are:</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table class="tbl" style="width:700px; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; background-color:#f6f6f6; padding:10px;"><p>A-Output:</p>
+</td>
+<td style="vertical-align:top; width:503px; background-color:#f6f6f6; padding:10px;"><p>Set to the level defined by A-output Start State</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:10px;"><p>B-Output:</p>
+</td>
+<td style="vertical-align:top; width:503px; padding:10px;"><p>Set to the level defined by B-output Start State</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; background-color:#f6f6f6; padding:10px;"><p>Trigger-Output:</p>
+</td>
+<td style="vertical-align:top; width:503px; background-color:#f6f6f6; padding:10px;"><p>Low</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>When in <span style="font-style: italic;">Started</span> mode the PWM control logic repeats PWM generation cycles until <span style="font-style: italic;">Stopped</span> mode is active again. The current PWM generation cycle is always completed, even if mode changes to <span style="font-style: italic;">Stopped</span> &nbsp;during a cycle.</p>
+<p>&nbsp;</p>
+<p>The PWM modules has an internal 32 bit counter which is reset to zero on entering <span style="font-style: italic;">Started</span> mode. The counter then counts up until the 'period compare' value is reached. The 'period compare' value is set by the 'Period-compare count' input port, and initialized by the 'Initial period-compare count vector' parameter. Once the 'period compare' value has been reached the counter begins to count back down to zero. On reaching zero the cycle restarts with the counter counting up again.</p>
+<p>&nbsp;</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+{
+ if (document.all) setTimeout(function() {nsrInit();},20); 
+    else nsrInit();
+ } 
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

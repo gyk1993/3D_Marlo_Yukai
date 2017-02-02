@@ -1,0 +1,9 @@
+#ifndef _ATRIAS3D_COMJacob_Hip_h_
+#define _ATRIAS3D_COMJacob_Hip_h_
+
+#include <math.h>
+
+void ATRIAS3D_COMJacob_Hip(const double q[16], const double dq[16], double J_cm[16][3], double dJ_cm[16][3]) ;
+
+
+#endif /* _ATRIAS3D_COMJacob_Hip_h_ */

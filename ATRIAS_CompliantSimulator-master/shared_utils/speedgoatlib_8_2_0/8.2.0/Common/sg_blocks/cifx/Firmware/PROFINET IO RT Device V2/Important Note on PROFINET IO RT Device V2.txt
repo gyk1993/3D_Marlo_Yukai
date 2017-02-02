@@ -1,0 +1,30 @@
+Hinweis zu PROFINET IO RT Device V2:
+
+Die PROFINET IO RT Device V2 Firmware wird nicht weiter erweitert oder gepflegt.
+In der Version 2.1.45.0 hat sie einen letzen, freigegebenen Stand für CIFX und 
+COMX Produkte erreicht. Bis Ende 2011 wurde diese Firmware zusammen mit passenden 
+EDS und ChangeLog auf den Produkt-DVDs für Bestandskunden weiter mit ausgeliefert.
+Ab 2012 ist PROFINET IO RT Device V2 nicht mehr Bestandteil der Produkt-DVDs,
+kann aber gerne auf Anfrage noch geliefert werden.
+
+Es ist zu berücksichtigen, dass PROFINET IO RT Device V2 nicht mehr von dem 
+aktuellsten netX Configuration Tool unterstützt wird und dass die Konfiguration 
+ausschließlich mit SYCON.net erfolgen muss.
+
+ 
+  
+      
+    
+Note for PROFINET IO RT Device V2:
+
+PROFINET IO RT Device V2 firmware will not be expanded or maintained anymore.
+Version 2.1.45.0 is the final released version for CIFX and COMX products.
+Till end of 2011 this firmware including appropriate EDS and ChangeLog has been
+added to Product-DVD for existing customers. 
+From 2012 PROFINET IO RT Device V2 firmware will not be part of the Product-DVD anymore,
+but can be delivered on request.
+
+Please note, that PROFINET IO RT Device V2 will not be supported from the latest 
+netX configuration tool and thus the configuration has to be done with SYCON.net.
+
+
