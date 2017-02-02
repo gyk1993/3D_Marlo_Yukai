@@ -28,7 +28,7 @@ ControlState.Commands.IntegralControl = false;
 
 if isSim
     ControlState.Offsets.xOffset = 0;
-    ControlState.Offsets.yOffset = 0.0175;
+    ControlState.Offsets.yOffset = 0;
 else
     ControlState.Offsets.xOffset = 0;
     ControlState.Offsets.yOffset = 0;

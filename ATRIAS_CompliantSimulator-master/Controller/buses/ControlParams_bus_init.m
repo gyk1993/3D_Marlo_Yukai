@@ -1,5 +1,5 @@
 % Load in optimization parameters
-MAT_PATH = 'C:\Users\Ross\Documents\GIT\RobotOptimization\Examples\atrias\mat\';
+MAT_PATH = 'D:\ÑÐ¾¿Éú\robots\GitHub\3D_Marlo_Yukai\RobotOptimization\Examples\atrias\mat\';
 optimization = load([MAT_PATH,'walkingInPlace_v1']);
 
 
