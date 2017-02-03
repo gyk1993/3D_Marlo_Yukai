@@ -24,7 +24,7 @@ DAQ_bus_init
 
 % Load Initial Condition
 if isSim
-    MAT_PATH = 'D:\ÑÐ¾¿Éú\robots\GitHub\3D_Marlo_Yukai\RobotOptimization\Examples\atrias\mat\';
+    MAT_PATH = 'D:\Graduate\robots\GitHub\3D_Marlo_Yukai\RobotOptimization\Examples\atrias\mat\';
     optimization = load([MAT_PATH,'walkingInPlace_v1']);
 
     q0_new = optimization.outputs{1}.q(1,:)';
@@ -49,12 +49,26 @@ end
 
 
 %% Animate Simulation
-steps.t = t_out;
-steps.q = q_out;
-steps.u = reshape(u,6,[])';
-steps.vcm_average = log.Data.vel_step_average_last; 
-anim = RobotAnimator(steps,0.8,leg_length,torso_com_offset, terrain);
-anim.Play
+% steps.t = t_out;
+% steps.q = q_out;
+% steps.u = reshape(u,6,[])';
+% steps.vcm_average = log.Data.vel_step_average_last; 
+% anim = RobotAnimator(steps,0.8,leg_length,torso_com_offset, terrain);
+% anim.Play
+
+MODEL_PATH = 'D:\Graduate\robots\GitHub\3D_Marlo_Yukai\Model-Generator\models\atrias\gen\';
+ANIM_PATH = 'D:\Graduate\robots\GitHub\3D_Marlo_Yukai\RobotAnimator\';
+addpath(genpath(MODEL_PATH));
+addpath(ANIM_PATH);
+
+f = figure;
+anim = AtriasAnimator(log.t, [TorsoPosition(:, 1:3), log.Data.q(:, [1:6, 9:13, 16:17])]');
+anim.Animate(true);
+anim.isLooping = false;
+anim.updateWorldPosition = true;
+anim.pov = Animator.AnimatorPointOfView.North;
+conGUI = Animator.AnimatorControls();
+conGUI.anim = anim;
 
 %% Simulation Logging
 log.t = t_out;
@@ -64,7 +78,6 @@ log.DataVec = reshape(DataVec,size(DataVec,1),[])';
 log.StateEstimatorVec = reshape(StateEstimatorVec,size(StateEstimatorVec,1),[])';
 log = DataVec2Struct(log, Data);
 log = StateEstimatorVec2Struct(log, StateEstimator);
-
 %% Experiment Logging
 log = DataVec2Struct(log, Data, datalogfilename, 1);
 log = DAQVec2Struct(log, DAQ, datalogfilename, 1);

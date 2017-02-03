@@ -25,7 +25,7 @@ classdef Controller < Controller_MARLO
                 userStep(obj, input)   
             
             % Extract input 
-            obj.t = input.t;    
+%             obj.t = input.t;    
             q = input.q;
             dq = input.dq;
             ControlParams = input.ControlParams;
