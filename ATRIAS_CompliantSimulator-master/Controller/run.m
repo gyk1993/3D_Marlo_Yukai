@@ -25,14 +25,14 @@ DAQ_bus_init
 % Load Initial Condition
 if isSim
     MAT_PATH = 'D:\Graduate\robots\GitHub\3D_Marlo_Yukai\RobotOptimization\Examples\atrias\mat\';
-    optimization = load([MAT_PATH,'walkingInPlace_v1']);
+    optimization = load([MAT_PATH,'walkingInPlace_v3']);
 
     q0_new = optimization.outputs{1}.q(1,:)';
     dq0_new = optimization.outputs{1}.dq(1,:)';
     
     % Change to old coordinates
     q0 = zeros(13,1);
-    q0(1:3,:) = q0_new([5,4,6],:);
+    q0(1:3,:) = q0_new([6,5,4],:);
     q0(4:13,:) = q0_new([8,9,13,14,8,9,7,13,14,12],:);
     q0(13,:) = -q0(13,:);
 
@@ -44,6 +44,7 @@ if isSim
     q = [q0_new(1:3); q0];
     dq = [dq0_new(1:3); dq0];
 
+    q(3)=1.2;
     xinit = [q; dq];
 end
 
@@ -70,6 +71,8 @@ anim.pov = Animator.AnimatorPointOfView.North;
 conGUI = Animator.AnimatorControls();
 conGUI.anim = anim;
 
+%% get some plots
+    
 %% Simulation Logging
 log.t = t_out;
 log.q = q_out;

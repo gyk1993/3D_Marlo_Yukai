@@ -94,6 +94,10 @@ q_log = [outputs{1}.q; outputs{2}.q]';
 t_log = linspace(0,outputs{1}.t(1)+outputs{2}.t(1),2*29);
 
 %% Animate Step
+
+q_log = [outputs{1}.q; outputs{2}.q]';
+t_log = linspace(0,outputs{1}.t(1)+outputs{2}.t(1),2*29);
+
 addpath(genpath('..\..\..\RobotAnimator'))
 f = figure;
 anim = AtriasAnimator(t_log, q_log);

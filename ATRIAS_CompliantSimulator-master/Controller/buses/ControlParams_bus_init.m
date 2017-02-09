@@ -1,6 +1,6 @@
 % Load in optimization parameters
 MAT_PATH = 'D:\Graduate\robots\GitHub\3D_Marlo_Yukai\RobotOptimization\Examples\atrias\mat\';
-optimization = load([MAT_PATH,'walkingInPlace_v1']);
+optimization = load([MAT_PATH,'walkingInPlace_v3']);
 
 
 % Pitch, SwingLeg, StanceKnee, SwingKnee, Roll, SwingHip
