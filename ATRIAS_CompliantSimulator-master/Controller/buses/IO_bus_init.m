@@ -18,6 +18,12 @@ clear Data_bus
 Data.q = zeros(17,1);
 Data.dq = zeros(17,1);
 Data.u = zeros(6,1);
+Data.y = zeros(6,1);
+Data.dy = zeros(6,1);
+Data.s = 0;
+Data.cs = 0;
+% Data.Hd = zeros(6,1);
+% Data.dHd = zeros(6,1);
 
 
 createBusObject(Data, 'Data_bus');

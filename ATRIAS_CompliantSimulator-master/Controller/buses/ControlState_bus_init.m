@@ -10,6 +10,8 @@ ControlState.velocity_average = [0;0;0];
 ControlState.InDoubleSupport = 0;
 ControlState.InSingleSupport = 0;
 
+ControlState.LastStepTime = 0;
+
 ControlState.Options.Enable_dx_tgt = 1;
 ControlState.Options.Enable_dy_tgt = 1;
 ControlState.Options.EnableSideStep = 0;
