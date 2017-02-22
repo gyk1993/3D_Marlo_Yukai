@@ -11,12 +11,14 @@ classdef Controller < Controller_MARLO
 	% CONSTANT PROPERTIES ===================================================
 	properties (Constant = true, Hidden = true)
 		velcocity_filtered = [0;0;0];	
-        Kp = 10;
-        Kd = 1;
+        Kp = 100;
+        Kd = 5;
         ks_leg = 2690.8;
         impact_thre = 200;
-        Kfd_p=0.25;
-        Kfd_r=0.15
+        Kfd_p=0.6;
+        Kfd_r=0.4;
+        Kfp_p=0.7;
+        Kfp_r=0.6;
 	end % properties
 	
 	% PUBLIC METHODS ========================================================
@@ -40,50 +42,29 @@ classdef Controller < Controller_MARLO
 
             % Decide which leg is on the ground
             ControlState.s = (t - ControlState.LastStepTime)*ControlParams.LeftStance.ct;
+            s=ControlState.s;
             % cs is used in the bazier curve
-            if ControlState.s>1.05
+            if s>1.05
                 cs=1.05;
-            elseif ControlState.s<-0.05;
+            elseif s<-0.05;
                 cs=-0.05;
             else
-                cs=ControlState.s;
+                cs=s;
             end
             switch_flag=decide_phase(obj,q,ControlState.StanceLeg,ControlState.s);
             if switch_flag==1
                 ControlState.StanceLeg=-ControlState.StanceLeg;
                 ControlState.LastStepTime=t;
             end
-            
-            if ControlState.StanceLeg==1;
-                ControlParams_choice=ControlParams.RightStance;
-                swing_leg_index=2;
-                swing_hip_index=6;
-            elseif ControlState.StanceLeg==-1;
-                ControlParams_choice=ControlParams.LeftStance;
-                swing_leg_index=1;
-                swing_hip_index=5;
-            else
-                disp('Something wrong with the ControlState.StanceLeg');
-            end
-            
-            Hd=bezier(ControlParams_choice.HAlpha_q,cs);
-            Hd(swing_leg_index)=Hd(swing_leg_index)+obj.Kfd_p*(-dq(1));
-            Hd(swing_hip_index)=Hd(swing_hip_index)+obj.Kfd_r*(-dq(2));
-            dHd=bezier(ControlParams_choice.HAlpha_dq,cs);
-%             Hd=[-1/8*pi;7/8*pi-1/8*pi;9/8*pi-1/8*pi;1/8*pi;7/8*pi+1/8*pi;9/8*pi+1/8*pi];
-%             H0=zeros(6,17); H0(1:3,4:6)=eye(3);H0(4:6,11:13)=eye(3);
-            H0=ControlParams_choice.H0;
-            y=H0*q-Hd;
-            dy=H0*dq-dHd;
-            
-            Kd=50*eye(6);
-            Kp=1000*eye(6);
+            [st_leg_i,st_hip_i,sw_leg_i,sw_hip_i,ControlParams_choice]=get_index(ControlState,ControlParams);
 
+            
+            [y dy]=get_error(obj,q,dq,s,cs,ControlParams_choice,st_leg_i,st_hip_i,sw_leg_i,sw_hip_i);
             u = zeros(6,1);
-            
-            u=ControlParams_choice.M^-1*(-Kd*dy-Kp*y);
-            
-            
+            y(st_leg_i)=-q(1);
+            y(st_hip_i)=-q(2);
+
+            u=ControlParams_choice.M^-1*(-obj.Kd*dy-obj.Kp*y);
             % Store Data
             Data.q = q;
             Data.dq = dq;
@@ -113,6 +94,47 @@ classdef Controller < Controller_MARLO
 end % classdef
 
 %% LOCAL FUNCTIONS ========================================================
+function [y dy]=get_error(obj,q,dq,s,cs,ControlParams_choice,st_leg_i,st_hip_i,sw_leg_i,sw_hip_i)
+%             Hd=bezier(ControlParams_choice.HAlpha_q,cs);
+%             Hd(swing_leg_index)=Hd(swing_leg_index)+obj.Kfd_p*(-dq(1));
+%             Hd(swing_hip_index)=Hd(swing_hip_index)+obj.Kfd_r*(-dq(2));
+%             dHd=bezier(ControlParams_choice.HAlpha_dq,cs);
+%             Hd=[-1/8*pi;7/8*pi-1/8*pi;9/8*pi-1/8*pi;1/8*pi;7/8*pi+1/8*pi;9/8*pi+1/8*pi];
+%             H0=zeros(6,17); H0(1:3,4:6)=eye(3);H0(4:6,11:13)=eye(3);
+            H0=ControlParams_choice.H0;
+            dh0=H0*dq;
+            h0=H0*q;
+            Hd=bezier(ControlParams_choice.HAlpha_q,cs);
+            dHd=bezierd(ControlParams_choice.HAlpha_q,cs)*ControlParams_choice.ct;
+            pitch_tune=obj.Kfd_p*(dh0(st_leg_i)+dq(1));
+            pitch_tune=sign(pitch_tune)*min(abs(obj.Kfd_p*(dh0(st_leg_i)+dq(1))),0.3);
+            Hd(sw_leg_i)=Hd(sw_leg_i)-pitch_tune;
+            if st_hip_i==5 && dh0(st_hip_i)<0 || st_hip_i==6 && dh0(st_hip_i)>0
+                Hd(sw_hip_i)=Hd(sw_hip_i)-obj.Kfd_r*(dh0(st_hip_i));
+            end
+%             Hd(sw_leg_i)=Hd(sw_leg_i)-obj.Kfp_p*(h0(st_leg_i)-Hd(st_leg_i))-obj.Kfd_p*(dh0(st_leg_i)-dHd(st_leg_i));
+%             Hd(sw_hip_i)=Hd(sw_hip_i)-obj.Kfp_r*(h0(st_hip_i)-Hd(st_hip_i))-obj.Kfd_p*(dh0(st_hip_i)-dHd(st_hip_i));
+%             Hd(swing_leg_index)=Hd(swing_leg_index);
+%             Hd(swing_hip_index)=Hd(swing_hip_index);
+            y=H0*q-Hd;
+            dy=H0*dq-dHd;
+end
+
+function [st_leg_i,st_hip_i,sw_leg_i,sw_hip_i,ControlParams_choice]=get_index(ControlState,ControlParams)
+if ControlState.StanceLeg==1;
+    ControlParams_choice=ControlParams.RightStance;
+    sw_leg_i=2;
+    sw_hip_i=6;
+    st_leg_i=1;
+    st_hip_i=5;
+else ControlState.StanceLeg==-1;
+    ControlParams_choice=ControlParams.LeftStance;
+    sw_leg_i=1;
+    sw_hip_i=5;
+    st_leg_i=2;
+    st_hip_i=6;
+end
+end
 function switch_flag=decide_phase(obj,q,stanceleg_flag,s)
 q_pitch=q(1);
 q_roll=q(2);
@@ -142,7 +164,8 @@ fz_sw = 2*obj.ks_leg*(cos(q_pitch + q_sw_lB)*(q_sw_mA - q_sw_lA) - cos(q_pitch +
 
 
 
-if (fz_sw>obj.impact_thre && s>0.5) || s>2 
+if (fz_sw>obj.impact_thre && s>0.5) || s>2
+% if s>1
     switch_flag=1;
 else
     switch_flag=0;

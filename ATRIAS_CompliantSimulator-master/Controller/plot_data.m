@@ -37,8 +37,14 @@ title(joint{i})
 end
 
 %% plot torque
-% figure
-% 
+figure
+for i=1:6
+    subplot(2,3,i)es
+    
+    
+    plot(t,u(:,i));
+%     axis([0 t(end) -6 6])
+end
 
 %% plot y dy
 figure
