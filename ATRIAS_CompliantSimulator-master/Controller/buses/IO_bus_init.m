@@ -22,8 +22,8 @@ Data.y = zeros(6,1);
 Data.dy = zeros(6,1);
 Data.s = 0;
 Data.cs = 0;
-% Data.Hd = zeros(6,1);
-% Data.dHd = zeros(6,1);
+Data.Hd = zeros(6,1);
+Data.dHd = zeros(6,1);
 
 
 createBusObject(Data, 'Data_bus');
