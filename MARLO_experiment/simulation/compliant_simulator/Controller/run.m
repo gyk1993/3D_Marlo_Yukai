@@ -153,7 +153,7 @@ tg = xpc
 mdl = 'Controller_Exp';
 hgui = control_gui(@getsignalids,mdl);
 handles = guidata(hgui);
-set(hgui,'Position',[0 0 350 72.0000])
+set(hgui,'Position',[-30 -30 350 72.0000])
 tg.set('CommunicationTimeOut',20)
 
 %% Open model
