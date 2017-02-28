@@ -1,0 +1,220 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>IO421, IO422 &gt; Driver configuration &gt; IO421-3 / IO422-3 LVDT/RVDT simulation &gt; LVDT write driver block &gt; Input and output ports</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+     .p_Heading1{ color: #147EC2;
+    font-size: 1.455em !important;
+     border-bottom: 1px solid #E0E1E1;
+    color: #147EC2;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 20px;
+    padding-bottom: 4px;}
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "input_and_output_ports_io421.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<div id="breadcrumbs" style="display:none"><a href="io421.htm">IO421, IO422</a> &gt; <a href="driver_configuration_io421.htm">Driver configuration</a> &gt; <a href="io421-3_lvdt_rvdt_simulation.htm">IO421-3 / IO422-3 LVDT/RVDT simulation</a> &gt; <a href="lvdt_write_driver_block_io421.htm">LVDT write driver block</a></div>
+
+<div id="printheader"><h1 class="p_Heading1"><span class="f_Heading1">Input and output ports</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
+  <tr valign="bottom">
+    <td align="left" valign="bottom" class="topichead">
+   
+   <h1 class="p_Heading1"><span class="f_Heading1">Input and output ports</span></h1>
+
+    
+  </tr>  
+</table>
+<!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table class="tbl" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:160px; background-color:#177cbd; padding:10px;"><p><span style="font-weight: bold; color: #ffffff;">Input port</span></p>
+</td>
+<td style="vertical-align:top; width:431px; background-color:#177cbd; padding:10px;"><p><span style="font-weight: bold; color: #ffffff;">Description</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:160px; background-color:#f6f6f6; padding:10px;"><p>Position <span style="font-style: italic;">n </span></p>
+<p>(<span style="font-style: italic;">n</span> is the channel number)</p>
+</td>
+<td style="vertical-align:top; width:431px; background-color:#f6f6f6; padding:10px;"><p>The simulated position of the ferromagnetic rod during runtime.</p>
+<p>&nbsp;</p>
+<p>Range -1 to +1.</p>
+<p>&nbsp;</p>
+<p>The number of these ports is dependent on the channel count, which is specified by the 'Channels vector' parameter.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table class="tbl" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:160px; background-color:#177cbd; padding:10px;"><p><span style="font-weight: bold; color: #ffffff;">Output port</span></p>
+</td>
+<td style="vertical-align:top; width:431px; background-color:#177cbd; padding:10px;"><p><span style="font-weight: bold; color: #ffffff;">Description</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:160px; background-color:#f6f6f6; padding:10px;"><p>Wrapped position</p>
+</td>
+<td style="vertical-align:top; width:431px; background-color:#f6f6f6; padding:10px;"><p>Position data based on A/B value.</p>
+<p>&nbsp;</p>
+<p>This port is enabled or disabled in the 'Input and output ports configuration' tab of this block's dialog box.</p>
+<p>The width of this port is dependent of the number of channels (defined by the 'Channels vector' parameter). </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:160px; padding:10px;"><p>Wrapped frequency</p>
+</td>
+<td style="vertical-align:top; width:431px; padding:10px;"><p style="line-height: 1.15; margin: 8px 0px 8px 0px;">The frequency of the reference signal. </p>
+<p>This port is enabled or disabled in the 'Input and output ports configuration' tab of this block's dialog box.</p>
+<p>The width of this port is dependent of the number of channels (defined by the 'Channels vector' parameter). </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:160px; background-color:#f6f6f6; padding:10px;"><p>Wrapped voltage</p>
+</td>
+<td style="vertical-align:top; width:431px; background-color:#f6f6f6; padding:10px;"><p style="line-height: 1.15; margin: 8px 0px 8px 0px;">The voltage of the reference signal. </p>
+<p>This port is enabled or disabled in the 'Input and output ports configuration' tab of this block's dialog box.</p>
+<p>The width of this port is dependent of the number of channels (defined by the 'Channels vector' parameter). </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:160px; padding:10px;"><p>Status</p>
+</td>
+<td style="vertical-align:top; width:431px; padding:10px;"><p>Status information for this module.</p>
+<p>&nbsp;</p>
+<p>This parameter is a vector of 4 binary elements. Each element represents a fault. A value of 0 indicates that no fault is present, and 1 indicates a fault. The faults are as follows (in order of position within the vector):</p>
+<p>&nbsp;</p>
+<p style="text-align: left; line-height: 1.15; padding: 0px 0px 0px 24px; margin: 5px 0px 5px 24px;"><span style="font-size:10pt; font-family: 'Arial';color:#000000;display:inline-block;width:24px;margin-left:-24px">1.</span>The signal is below 90% of the expected threshold, and signal loss occurs.</p><p style="text-align: left; line-height: 1.15; padding: 0px 0px 0px 24px; margin: 5px 0px 5px 24px;"><span style="font-size:10pt; font-family: 'Arial';color:#000000;display:inline-block;width:24px;margin-left:-24px">2.</span>The reference is below 90% of the expected threshold.</p><p style="text-align: left; line-height: 1.15; padding: 0px 0px 0px 24px; margin: 5px 0px 5px 24px;"><span style="font-size:10pt; font-family: 'Arial';color:#000000;display:inline-block;width:24px;margin-left:-24px">3.</span>The built-in tests have failed.</p><p style="text-align: left; line-height: 1.15; padding: 0px 0px 0px 24px; margin: 5px 0px 5px 24px;"><span style="font-size:10pt; font-family: 'Arial';color:#000000;display:inline-block;width:24px;margin-left:-24px">4.</span>Reference phase has been lost.</p><p>&nbsp;</p>
+<p>This port is enabled or disabled in the 'Input and output ports configuration' tab of this block's dialog box.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>All ports are vectors. The width of the vector, and the order of the corresponding channels, is dependent on the configuration of the 'Channel vector' parameter.</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+{
+ if (document.all) setTimeout(function() {nsrInit();},20); 
+    else nsrInit();
+ } 
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

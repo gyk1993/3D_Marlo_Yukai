@@ -1,0 +1,9 @@
+#ifndef _ATRIAS3D_FootYaw_Left_h_
+#define _ATRIAS3D_FootYaw_Left_h_
+
+#include <math.h>
+
+void ATRIAS3D_FootYaw_Left(const double q[13], double* p4R_yaw, double* p4L_yaw) ;
+
+
+#endif /* _ATRIAS3D_FootYaw_Left_h_ */

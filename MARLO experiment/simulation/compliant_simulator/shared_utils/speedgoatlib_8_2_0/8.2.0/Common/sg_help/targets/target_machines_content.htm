@@ -1,0 +1,399 @@
+﻿<!DOCTYPE HTML>
+<html><head>
+   <title>Performance</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+   <!-- This line includes the general project style sheet (not required) -->
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <!-- This block defines the styles of the TOC headings, change them as needed -->
+   <style type="text/css">
+       body { font-family: "Verdana",Geneva,sans-serif; font-size: 9pt;}
+       /*.heading1 { font-size: 10pt; color: #000000; text-decoration: none; }
+       .heading2 { font-size: 10pt; color: #000000; text-decoration: none; }
+       .heading3 { font-size: 10pt; color: #000000; text-decoration: none; }
+       .heading4 { font-size: 10pt; color: #000000; text-decoration: none; }
+       .heading5 { font-size: 10pt; color: #000000; text-decoration: none; }
+       .heading6 { font-size: 10pt; color: #000000; text-decoration: none; }
+
+       .hilight1 { font-size: 10pt; color: #FFFFFF; background: #194E84; text-decoration: none; }
+       .hilight2 { font-size: 10pt; color: #FFFFFF; background: #194E84; text-decoration: none; }
+       .hilight3 { font-size: 10pt; color: #FFFFFF; background: #194E84; text-decoration: none; }
+       .hilight4 { font-size: 10pt; color: #FFFFFF; background: #194E84; text-decoration: none; }
+       .hilight5 { font-size: 10pt; color: #FFFFFF; background: #194E84; text-decoration: none; }
+       .hilight6 { font-size: 10pt; color: #FFFFFF; background: #194E84; text-decoration: none; }       */
+
+       /* TOC LIST CSS */
+       .hilight1 {text-decoration: underline; }
+       .hilight2 {text-decoration: underline;}
+       .hilight3 {text-decoration: underline;}
+       .hilight4 {text-decoration: underline;}
+       .hilight5 {text-decoration: underline;}
+       .hilight6 {text-decoration: underline;} 
+       #toc    { padding:0; margin:0 }
+       #toc li {  margin-left:0; /*padding:1px */
+           background-position: 11px 11px !important; /* Position of side nav bar tree icons          */
+           background-color: #147EC2 !important; 
+    cursor: pointer;
+    padding: 0 0 0 14px !important; /* Layout of tree */
+  
+       }
+       #toc ul { padding-left:0; margin-left:0px } /* Indentation of tree children. Originally: '#toc ul { padding-left:0; margin-left:15px }'*/
+       #toc  ul li ul li a{     font-weight: normal !important; }             
+       /* TOC LIST CSS */
+       h1{
+       background: url("aside_title.png") no-repeat scroll 0 0 transparent;
+    color: white;
+    display: block;
+    font-size: 1em;
+    font-weight: normal;
+    line-height: 36px;
+    margin: 0 -8px 14px; /* Position of side nav bar heading*/
+    padding: 0 12px;
+    text-transform: uppercase;
+       }
+       .sidenav
+       {
+        margin: -14px -8px 14px; /* position of side nav bar */
+       }
+      
+       .sidenav ul li a {
+       
+    background: no-repeat scroll 0 0 #147EC2;
+     background-position: 14px 12px;
+    color: white;
+    display: block;
+    font-weight: normal;
+    padding: 6px;
+    text-decoration:none;
+}
+
+#aside_in {
+width: 184px;
+    padding: 0 8px 14px;
+}
+.lasta
+{
+ background: url("side_nav_last.png") no-repeat scroll center bottom #147EC2;
+    padding-bottom: 12px;
+    display:block;
+}
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript">
+     var parentScope = (parent.hmNavigationFrame);
+     if (!parentScope) {
+		      var s = document.createElement("script");
+		      s.setAttribute("type","text/javascript");
+		      s.setAttribute("src", "helpman_navigation.js");
+		      document.getElementsByTagName("head")[0].appendChild(s);
+	    }
+     else {
+       if (initialtocstate != "expandall") parent.hmAddCss(document, "#toc li ul { display: none }");
+     }
+     function loadicons() { var icons = new Array(); for (i=0; i<arguments.length; i++) { icons[i] = new Image(); icons[i].src = arguments[i]; } }
+     function loadtoc() { if (parentScope) parent.loadstate(document.getElementById("toc")); else loadstate(document.getElementById("toc")); }
+     function savetoc() { if (parentScope) parent.savestate(document.getElementById("toc")); else savestate(document.getElementById("toc")); }
+     function clicked(node, event) { deselect(); if (parentScope) parent.hmNodeClicked(node, event); else hmNodeClicked(node, event); }
+     function dblclicked(node) { if (parentScope) parent.hmNodeDblclicked(node); else hmNodeDblclicked(node); }
+     function deselect() { if (window.getSelection) window.getSelection().removeAllRanges(); else if (document.selection) document.selection.empty(); }
+     $(document).ready(function(){
+       loadtoc();
+       $(window).onunload = savetoc;
+     });
+   </script>
+</head>
+<body style="margin: 0px;">
+<div id="aside_in">
+<h1>Target Machines</h1>
+<div class="sidenav">
+<ul id="toc" style="list-style-type:none;display:block;padding-left:0">
+<li class="heading1" id="i1" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading1" id="a1" href="performance.htm" target="hmcontent"><span class="heading1" id="s1" ondblclick="return dblclicked(this)">Performance</span></a>
+<ul id="ul1" style="list-style-type:none">
+<li class="heading2" id="i1.1" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading2" id="a1.1" href="software_installation.htm" target="hmcontent"><span class="heading2" id="s1.1" ondblclick="return dblclicked(this)">Software Installation</span></a>
+<ul id="ul1.1" style="list-style-type:none">
+<li class="heading3" id="i1.1.1" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a1.1.1" href="c_compiler.htm" target="hmcontent"><span class="heading3" id="s1.1.1">C Compiler</span></a>
+</li>
+<li class="heading3" id="i1.1.2" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a1.1.2" href="mathworks_sw.htm" target="hmcontent"><span class="heading3" id="s1.1.2" ondblclick="return dblclicked(this)">MathWorks</span></a>
+<ul id="ul1.1.2" style="list-style-type:none">
+<li class="heading4" id="i1.1.2.1" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a1.1.2.1" href="software_updates_and_patches_performance.htm" target="hmcontent"><span class="heading4" id="s1.1.2.1">Software updates and patches</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i1.1.3" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a1.1.3" href="hdl_coder.htm" target="hmcontent"><span class="heading3" id="s1.1.3">Xilinx HDL software</span></a>
+</li>
+<li class="heading3" id="i1.1.4" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a1.1.4" href="speedgoat_software.htm" target="hmcontent"><span class="heading3" id="s1.1.4">Speedgoat software</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i1.2" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading2" id="a1.2" href="install_the_system.htm" target="hmcontent"><span class="heading2" id="s1.2">Target machine installation</span></a>
+</li>
+<li class="heading2" id="i1.3" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading2" id="a1.3" href="host-target_communications.htm" target="hmcontent"><span class="heading2" id="s1.3" ondblclick="return dblclicked(this)">Host-target communication</span></a>
+<ul id="ul1.3" style="list-style-type:none">
+<li class="heading3" id="i1.3.1" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a1.3.1" href="host_configuration.htm" target="hmcontent"><span class="heading3" id="s1.3.1" ondblclick="return dblclicked(this)">Windows network settings configuration</span></a>
+<ul id="ul1.3.1" style="list-style-type:none">
+<li class="heading4" id="i1.3.1.1" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a1.3.1.1" href="configuring_lan_settings_on_t2.htm" target="hmcontent"><span class="heading4" id="s1.3.1.1">Configuring LAN settings on the host PC using Windows 7</span></a>
+</li>
+<li class="heading4" id="i1.3.1.2" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a1.3.1.2" href="configuring_lan_settings_on_t3.htm" target="hmcontent"><span class="heading4" id="s1.3.1.2">Configuring LAN settings on the host PC using Windows 8</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i1.3.2" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a1.3.2" href="matlab_network.htm" target="hmcontent"><span class="heading3" id="s1.3.2">MATLAB network settings</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i1.4" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading2" id="a1.4" href="kernel_configuration_and_transfer.htm" target="hmcontent"><span class="heading2" id="s1.4" ondblclick="return dblclicked(this)">Kernel configuration and transfer</span></a>
+<ul id="ul1.4" style="list-style-type:none">
+<li class="heading3" id="i1.4.1" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a1.4.1" href="kernel_configuration.htm" target="hmcontent"><span class="heading3" id="s1.4.1">Kernel configuration</span></a>
+</li>
+<li class="heading3" id="i1.4.2" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a1.4.2" href="kernel_usb_transfer.htm" target="hmcontent"><span class="heading3" id="s1.4.2">Kernel USB transfer</span></a>
+</li>
+<li class="heading3" id="i1.4.3" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a1.4.3" href="kernel_network_boot.htm" target="hmcontent"><span class="heading3" id="s1.4.3">Kernel network boot</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i1.5" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading2" id="a1.5" href="slrt_environment.htm" target="hmcontent"><span class="heading2" id="s1.5" ondblclick="return dblclicked(this)">Simulink Real-Time environment</span></a>
+<ul id="ul1.5" style="list-style-type:none">
+<li class="heading3" id="i1.5.1" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a1.5.1" href="communication.htm" target="hmcontent"><span class="heading3" id="s1.5.1">Communicate with the target</span></a>
+</li>
+<li class="heading3" id="i1.5.2" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a1.5.2" href="xpc_libraries.htm" target="hmcontent"><span class="heading3" id="s1.5.2">Simulink drivers and libraries</span></a>
+</li>
+<li class="heading3" id="i1.5.3" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a1.5.3" href="data_logging_and_file_transfer.htm" target="hmcontent"><span class="heading3" id="s1.5.3">Data logging and file transfer</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i2" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading1" id="a2" href="mobile.htm" target="hmcontent"><span class="heading1" id="s2" ondblclick="return dblclicked(this)">Mobile</span></a>
+<ul id="ul2" style="list-style-type:none">
+<li class="heading2" id="i2.1" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading2" id="a2.1" href="software_installation_mobile.htm" target="hmcontent"><span class="heading2" id="s2.1" ondblclick="return dblclicked(this)">Software installation</span></a>
+<ul id="ul2.1" style="list-style-type:none">
+<li class="heading3" id="i2.1.1" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a2.1.1" href="c_compiler_mobile.htm" target="hmcontent"><span class="heading3" id="s2.1.1">C Compiler</span></a>
+</li>
+<li class="heading3" id="i2.1.2" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a2.1.2" href="mathworks_mobile.htm" target="hmcontent"><span class="heading3" id="s2.1.2" ondblclick="return dblclicked(this)">MathWorks</span></a>
+<ul id="ul2.1.2" style="list-style-type:none">
+<li class="heading4" id="i2.1.2.1" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a2.1.2.1" href="software_updates_and_patches_mobile.htm" target="hmcontent"><span class="heading4" id="s2.1.2.1">Software updates and patches</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i2.1.3" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a2.1.3" href="hdl_software_mobile.htm" target="hmcontent"><span class="heading3" id="s2.1.3">Xilinx HDL software</span></a>
+</li>
+<li class="heading3" id="i2.1.4" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a2.1.4" href="speedgoat_software_mobile.htm" target="hmcontent"><span class="heading3" id="s2.1.4">Speedgoat software</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i2.2" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading2" id="a2.2" href="install_the_system_mobile.htm" target="hmcontent"><span class="heading2" id="s2.2">Target machine installation</span></a>
+</li>
+<li class="heading2" id="i2.3" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading2" id="a2.3" href="host-target_communicaton_mobile.htm" target="hmcontent"><span class="heading2" id="s2.3" ondblclick="return dblclicked(this)">Host-target communicaton</span></a>
+<ul id="ul2.3" style="list-style-type:none">
+<li class="heading3" id="i2.3.1" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a2.3.1" href="windows_network_settings_config_mobile.htm" target="hmcontent"><span class="heading3" id="s2.3.1" ondblclick="return dblclicked(this)">Windows network settings configuration</span></a>
+<ul id="ul2.3.1" style="list-style-type:none">
+<li class="heading4" id="i2.3.1.1" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a2.3.1.1" href="configuring_lan_settings_on_win7_mobile.htm" target="hmcontent"><span class="heading4" id="s2.3.1.1">Configuring LAN settings on the host PC using Windows 7</span></a>
+</li>
+<li class="heading4" id="i2.3.1.2" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a2.3.1.2" href="configuring_lan_settings_on_win8_mobile.htm" target="hmcontent"><span class="heading4" id="s2.3.1.2">Configuring LAN settings on the host PC using Windows 8</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i2.3.2" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a2.3.2" href="matlab_network_settings_mobile.htm" target="hmcontent"><span class="heading3" id="s2.3.2">MATLAB network settings</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i2.4" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading2" id="a2.4" href="kernel_configuration_and_trans_mobile.htm" target="hmcontent"><span class="heading2" id="s2.4" ondblclick="return dblclicked(this)">Kernel configuration and transfer</span></a>
+<ul id="ul2.4" style="list-style-type:none">
+<li class="heading3" id="i2.4.1" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a2.4.1" href="kernel_configuration_mobile.htm" target="hmcontent"><span class="heading3" id="s2.4.1">Kernel configuration</span></a>
+</li>
+<li class="heading3" id="i2.4.2" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a2.4.2" href="kernelusbtransfer_mobile.htm" target="hmcontent"><span class="heading3" id="s2.4.2">Kernel USB transfer</span></a>
+</li>
+<li class="heading3" id="i2.4.3" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a2.4.3" href="kernel_network_boot_mobile.htm" target="hmcontent"><span class="heading3" id="s2.4.3">Kernel network boot</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i2.5" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading2" id="a2.5" href="slrt_target_environment_mobile.htm" target="hmcontent"><span class="heading2" id="s2.5" ondblclick="return dblclicked(this)">Simulink Real-Time environment</span></a>
+<ul id="ul2.5" style="list-style-type:none">
+<li class="heading3" id="i2.5.1" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a2.5.1" href="communicate_with_the_target_mobile.htm" target="hmcontent"><span class="heading3" id="s2.5.1">Communicate with the target</span></a>
+</li>
+<li class="heading3" id="i2.5.2" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a2.5.2" href="simulink_drivers_and_libraries_mobile.htm" target="hmcontent"><span class="heading3" id="s2.5.2">Simulink drivers and libraries</span></a>
+</li>
+<li class="heading3" id="i2.5.3" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a2.5.3" href="data_logging_and_file_transfer_mobile.htm" target="hmcontent"><span class="heading3" id="s2.5.3">Data logging and file transfer</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i3" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading1" id="a3" href="open_frame.htm" target="hmcontent"><span class="heading1" id="s3" ondblclick="return dblclicked(this)">Openframe</span></a>
+<ul id="ul3" style="list-style-type:none">
+<li class="heading2" id="i3.1" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading2" id="a3.1" href="software_installation_openframe.htm" target="hmcontent"><span class="heading2" id="s3.1" ondblclick="return dblclicked(this)">Software installation</span></a>
+<ul id="ul3.1" style="list-style-type:none">
+<li class="heading3" id="i3.1.1" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a3.1.1" href="c_compiler_openframe.htm" target="hmcontent"><span class="heading3" id="s3.1.1">C Compiler</span></a>
+</li>
+<li class="heading3" id="i3.1.2" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a3.1.2" href="mathworks_openframe.htm" target="hmcontent"><span class="heading3" id="s3.1.2" ondblclick="return dblclicked(this)">MathWorks</span></a>
+<ul id="ul3.1.2" style="list-style-type:none">
+<li class="heading4" id="i3.1.2.1" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a3.1.2.1" href="software_updates_and_patches_openframe.htm" target="hmcontent"><span class="heading4" id="s3.1.2.1">Software updates and patches</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i3.1.3" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a3.1.3" href="hdl_software_openframe.htm" target="hmcontent"><span class="heading3" id="s3.1.3">Xilinx HDL software</span></a>
+</li>
+<li class="heading3" id="i3.1.4" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a3.1.4" href="speedgoat_software_openframe.htm" target="hmcontent"><span class="heading3" id="s3.1.4">Speedgoat software</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i3.2" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading2" id="a3.2" href="install_the_system_openframe.htm" target="hmcontent"><span class="heading2" id="s3.2">Target machine installation</span></a>
+</li>
+<li class="heading2" id="i3.3" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading2" id="a3.3" href="host-target_communicaton_openframe.htm" target="hmcontent"><span class="heading2" id="s3.3" ondblclick="return dblclicked(this)">Host-target communicaton</span></a>
+<ul id="ul3.3" style="list-style-type:none">
+<li class="heading3" id="i3.3.1" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a3.3.1" href="windows_network_settings_config_openframe.htm" target="hmcontent"><span class="heading3" id="s3.3.1" ondblclick="return dblclicked(this)">Windows network settings configuration</span></a>
+<ul id="ul3.3.1" style="list-style-type:none">
+<li class="heading4" id="i3.3.1.1" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a3.3.1.1" href="configuring_lan_settings_on_win7_openframe.htm" target="hmcontent"><span class="heading4" id="s3.3.1.1">Configuring LAN settings on the host PC using Windows 7</span></a>
+</li>
+<li class="heading4" id="i3.3.1.2" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a3.3.1.2" href="configuring_lan_settings_on_win8_openframe.htm" target="hmcontent"><span class="heading4" id="s3.3.1.2">Configuring LAN settings on the host PC using Windows 8</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i3.3.2" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a3.3.2" href="matlab_network_settings_open_frame.htm" target="hmcontent"><span class="heading3" id="s3.3.2">MATLAB network settings</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i3.4" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading2" id="a3.4" href="kernel_configuration_and_trans_openframe.htm" target="hmcontent"><span class="heading2" id="s3.4" ondblclick="return dblclicked(this)">Kernel configuration and transfer</span></a>
+<ul id="ul3.4" style="list-style-type:none">
+<li class="heading3" id="i3.4.1" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a3.4.1" href="kernel_configuration_openframe.htm" target="hmcontent"><span class="heading3" id="s3.4.1">Kernel configuration</span></a>
+</li>
+<li class="heading3" id="i3.4.2" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a3.4.2" href="kernel_usb_transfer_openframe.htm" target="hmcontent"><span class="heading3" id="s3.4.2">Kernel USB transfer</span></a>
+</li>
+<li class="heading3" id="i3.4.3" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a3.4.3" href="kernel_network_boot_openframe.htm" target="hmcontent"><span class="heading3" id="s3.4.3">Kernel network boot</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i3.5" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading2" id="a3.5" href="slrt_target_environment_openframe.htm" target="hmcontent"><span class="heading2" id="s3.5" ondblclick="return dblclicked(this)">Simulink Real-Time environment</span></a>
+<ul id="ul3.5" style="list-style-type:none">
+<li class="heading3" id="i3.5.1" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a3.5.1" href="communicate_with_the_target_openframe.htm" target="hmcontent"><span class="heading3" id="s3.5.1">Communicate with the target</span></a>
+</li>
+<li class="heading3" id="i3.5.2" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a3.5.2" href="simulink_drivers_and_libraries_openframe.htm" target="hmcontent"><span class="heading3" id="s3.5.2">Simulink drivers and libraries</span></a>
+</li>
+<li class="heading3" id="i3.5.3" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a3.5.3" href="data_logging_and_file_transfer_openframe.htm" target="hmcontent"><span class="heading3" id="s3.5.3">Data logging and file transfer</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i4" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading1" id="a4" href="education.htm" target="hmcontent"><span class="heading1" id="s4" ondblclick="return dblclicked(this)">Education</span></a>
+<ul id="ul4" style="list-style-type:none">
+<li class="heading2" id="i4.1" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading2" id="a4.1" href="software_installation_edu.htm" target="hmcontent"><span class="heading2" id="s4.1" ondblclick="return dblclicked(this)">Software installation</span></a>
+<ul id="ul4.1" style="list-style-type:none">
+<li class="heading3" id="i4.1.1" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a4.1.1" href="c_compiler_edu.htm" target="hmcontent"><span class="heading3" id="s4.1.1">C Compiler</span></a>
+</li>
+<li class="heading3" id="i4.1.2" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a4.1.2" href="mathworks_edu.htm" target="hmcontent"><span class="heading3" id="s4.1.2" ondblclick="return dblclicked(this)">MathWorks</span></a>
+<ul id="ul4.1.2" style="list-style-type:none">
+<li class="heading4" id="i4.1.2.1" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a4.1.2.1" href="software_updates_and_patches_edu.htm" target="hmcontent"><span class="heading4" id="s4.1.2.1">Software updates and patches</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i4.1.3" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a4.1.3" href="hdl_software_edu.htm" target="hmcontent"><span class="heading3" id="s4.1.3">Xilinx HDL software</span></a>
+</li>
+<li class="heading3" id="i4.1.4" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a4.1.4" href="speedgoat_software_edu.htm" target="hmcontent"><span class="heading3" id="s4.1.4">Speedgoat software</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i4.2" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading2" id="a4.2" href="install_the_system_edu.htm" target="hmcontent"><span class="heading2" id="s4.2">Target machine installation</span></a>
+</li>
+<li class="heading2" id="i4.3" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading2" id="a4.3" href="host-target_communicaton_edu.htm" target="hmcontent"><span class="heading2" id="s4.3" ondblclick="return dblclicked(this)">Host-target communicaton</span></a>
+<ul id="ul4.3" style="list-style-type:none">
+<li class="heading3" id="i4.3.1" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.1" href="windows_network_settings_config_edu.htm" target="hmcontent"><span class="heading3" id="s4.3.1" ondblclick="return dblclicked(this)">Windows network settings configuration</span></a>
+<ul id="ul4.3.1" style="list-style-type:none">
+<li class="heading4" id="i4.3.1.1" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a4.3.1.1" href="configuring_lan_settings_on_win7_edu.htm" target="hmcontent"><span class="heading4" id="s4.3.1.1">Configuring LAN settings on the host PC using Windows 7</span></a>
+</li>
+<li class="heading4" id="i4.3.1.2" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a4.3.1.2" href="configuring_lan_settings_on_win8_edu.htm" target="hmcontent"><span class="heading4" id="s4.3.1.2">Configuring LAN settings on the host PC using Windows 8</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i4.3.2" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.2" href="matlab_network_settings_edu.htm" target="hmcontent"><span class="heading3" id="s4.3.2">MATLAB network settings</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i4.4" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading2" id="a4.4" href="kernel_configuration_and_trans_edu.htm" target="hmcontent"><span class="heading2" id="s4.4" ondblclick="return dblclicked(this)">Kernel configuration and transfer</span></a>
+<ul id="ul4.4" style="list-style-type:none">
+<li class="heading3" id="i4.4.1" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a4.4.1" href="kernel_configuration_edu.htm" target="hmcontent"><span class="heading3" id="s4.4.1">Kernel configuration</span></a>
+</li>
+<li class="heading3" id="i4.4.2" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a4.4.2" href="kernel_usb_transfer_edu.htm" target="hmcontent"><span class="heading3" id="s4.4.2">Kernel USB transfer</span></a>
+</li>
+<li class="heading3" id="i4.4.3" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a4.4.3" href="kernel_network_boot_edu.htm" target="hmcontent"><span class="heading3" id="s4.4.3">Kernel network boot</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i4.5" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading2" id="a4.5" href="slrt_target_environment_edu.htm" target="hmcontent"><span class="heading2" id="s4.5" ondblclick="return dblclicked(this)">Simulink Real-Time environment</span></a>
+<ul id="ul4.5" style="list-style-type:none">
+<li class="heading3" id="i4.5.1" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a4.5.1" href="communicate_with_the_target_edu.htm" target="hmcontent"><span class="heading3" id="s4.5.1">Communicate with the target</span></a>
+</li>
+<li class="heading3" id="i4.5.2" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a4.5.2" href="simulink_drivers_and_libraries_edu.htm" target="hmcontent"><span class="heading3" id="s4.5.2">Simulink drivers and libraries</span></a>
+</li>
+<li class="heading3" id="i4.5.3" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a4.5.3" href="data_logging_and_file_transfer_edu.htm" target="hmcontent"><span class="heading3" id="s4.5.3">Data logging and file transfer</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i5" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading1" id="a5" href="modular.htm" target="hmcontent"><span class="heading1" id="s5" ondblclick="return dblclicked(this)">Modular</span></a>
+<ul id="ul5" style="list-style-type:none">
+<li class="heading2" id="i5.1" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading2" id="a5.1" href="software_installation_mod.htm" target="hmcontent"><span class="heading2" id="s5.1" ondblclick="return dblclicked(this)">Software installation</span></a>
+<ul id="ul5.1" style="list-style-type:none">
+<li class="heading3" id="i5.1.1" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a5.1.1" href="c_compiler_mod.htm" target="hmcontent"><span class="heading3" id="s5.1.1">C Compiler</span></a>
+</li>
+<li class="heading3" id="i5.1.2" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a5.1.2" href="mathworks_mod.htm" target="hmcontent"><span class="heading3" id="s5.1.2" ondblclick="return dblclicked(this)">MathWorks</span></a>
+<ul id="ul5.1.2" style="list-style-type:none">
+<li class="heading4" id="i5.1.2.1" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a5.1.2.1" href="software_updates_and_patches_mod.htm" target="hmcontent"><span class="heading4" id="s5.1.2.1">Software updates and patches</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i5.1.3" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a5.1.3" href="hdl_software_mod.htm" target="hmcontent"><span class="heading3" id="s5.1.3">Xilinx HDL software</span></a>
+</li>
+<li class="heading3" id="i5.1.4" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a5.1.4" href="speedgoat_software_mod.htm" target="hmcontent"><span class="heading3" id="s5.1.4">Speedgoat software</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i5.2" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading2" id="a5.2" href="install_the_system_mod.htm" target="hmcontent"><span class="heading2" id="s5.2">Target machine installation</span></a>
+</li>
+<li class="heading2" id="i5.3" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading2" id="a5.3" href="host-target_communicaton_mod.htm" target="hmcontent"><span class="heading2" id="s5.3" ondblclick="return dblclicked(this)">Host-target communicaton</span></a>
+<ul id="ul5.3" style="list-style-type:none">
+<li class="heading3" id="i5.3.1" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a5.3.1" href="windows_network_settings_config_mod.htm" target="hmcontent"><span class="heading3" id="s5.3.1" ondblclick="return dblclicked(this)">Windows network settings configuration</span></a>
+<ul id="ul5.3.1" style="list-style-type:none">
+<li class="heading4" id="i5.3.1.1" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a5.3.1.1" href="configuring_lan_settings_on_win7_mod.htm" target="hmcontent"><span class="heading4" id="s5.3.1.1">Configuring LAN settings on the host PC using Windows 7</span></a>
+</li>
+<li class="heading4" id="i5.3.1.2" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a5.3.1.2" href="configuring_lan_settings_on_win8_mod.htm" target="hmcontent"><span class="heading4" id="s5.3.1.2">Configuring LAN settings on the host PC using Windows 8</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i5.3.2" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a5.3.2" href="matlab_network_settings_mod.htm" target="hmcontent"><span class="heading3" id="s5.3.2">MATLAB network settings</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i5.4" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading2" id="a5.4" href="kernel_configuration_and_trans_mod.htm" target="hmcontent"><span class="heading2" id="s5.4" ondblclick="return dblclicked(this)">Kernel configuration and transfer</span></a>
+<ul id="ul5.4" style="list-style-type:none">
+<li class="heading3" id="i5.4.1" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a5.4.1" href="kernel_configuration_mod.htm" target="hmcontent"><span class="heading3" id="s5.4.1">Kernel configuration</span></a>
+</li>
+<li class="heading3" id="i5.4.2" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a5.4.2" href="kernel_usb_transfer_mod.htm" target="hmcontent"><span class="heading3" id="s5.4.2">Kernel USB transfer</span></a>
+</li>
+<li class="heading3" id="i5.4.3" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a5.4.3" href="kernel_network_boot_mod.htm" target="hmcontent"><span class="heading3" id="s5.4.3">Kernel network boot</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i5.5" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading2" id="a5.5" href="slrt_target_environment_mod.htm" target="hmcontent"><span class="heading2" id="s5.5" ondblclick="return dblclicked(this)">Simulink Real-Time environment</span></a>
+<ul id="ul5.5" style="list-style-type:none">
+<li class="heading3" id="i5.5.1" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a5.5.1" href="communicate_with_the_target_mod.htm" target="hmcontent"><span class="heading3" id="s5.5.1">Communicate with the target</span></a>
+</li>
+<li class="heading3" id="i5.5.2" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a5.5.2" href="simulink_drivers_and_libraries_mod.htm" target="hmcontent"><span class="heading3" id="s5.5.2">Simulink drivers and libraries</span></a>
+</li>
+<li class="heading3" id="i5.5.3" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a5.5.3" href="data_logging_and_file_transfer_mod.htm" target="hmcontent"><span class="heading3" id="s5.5.3">Data logging and file transfer</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<script type="text/javascript">loadicons('list_arrow.png');</script>
+<a href="#" class="lasta"></a>
+</div>
+</div>
+</body>
+</html>

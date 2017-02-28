@@ -1,0 +1,207 @@
+﻿<!DOCTYPE HTML>
+<html><head>
+   <title>LVDT ETC.</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+   <!-- This line includes the general project style sheet (not required) -->
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <!-- This block defines the styles of the TOC headings, change them as needed -->
+   <style type="text/css">
+       body { font-family: "Verdana",Geneva,sans-serif; font-size: 9pt;}
+       /*.heading1 { font-size: 10pt; color: #000000; text-decoration: none; }
+       .heading2 { font-size: 10pt; color: #000000; text-decoration: none; }
+       .heading3 { font-size: 10pt; color: #000000; text-decoration: none; }
+       .heading4 { font-size: 10pt; color: #000000; text-decoration: none; }
+       .heading5 { font-size: 10pt; color: #000000; text-decoration: none; }
+       .heading6 { font-size: 10pt; color: #000000; text-decoration: none; }
+
+       .hilight1 { font-size: 10pt; color: #FFFFFF; background: #194E84; text-decoration: none; }
+       .hilight2 { font-size: 10pt; color: #FFFFFF; background: #194E84; text-decoration: none; }
+       .hilight3 { font-size: 10pt; color: #FFFFFF; background: #194E84; text-decoration: none; }
+       .hilight4 { font-size: 10pt; color: #FFFFFF; background: #194E84; text-decoration: none; }
+       .hilight5 { font-size: 10pt; color: #FFFFFF; background: #194E84; text-decoration: none; }
+       .hilight6 { font-size: 10pt; color: #FFFFFF; background: #194E84; text-decoration: none; }       */
+
+       /* TOC LIST CSS */
+       .hilight1 {text-decoration: underline; }
+       .hilight2 {text-decoration: underline;}
+       .hilight3 {text-decoration: underline;}
+       .hilight4 {text-decoration: underline;}
+       .hilight5 {text-decoration: underline;}
+       .hilight6 {text-decoration: underline;} 
+       #toc    { padding:0; margin:0 }
+       #toc li {  margin-left:0; /*padding:1px */
+           background-position: 11px 11px !important; /* Position of side nav bar tree icons          */
+           background-color: #147EC2 !important; 
+    cursor: pointer;
+    padding: 0 0 0 14px !important; /* Layout of tree */
+  
+       }
+       #toc ul { padding-left:0; margin-left:0px } /* Indentation of tree children. Originally: '#toc ul { padding-left:0; margin-left:15px }'*/
+       #toc  ul li ul li a{     font-weight: normal !important; }             
+       /* TOC LIST CSS */
+       h1{
+       background: url("aside_title.png") no-repeat scroll 0 0 transparent;
+    color: white;
+    display: block;
+    font-size: 1em;
+    font-weight: normal;
+    line-height: 36px;
+    margin: 0 -8px 14px; /* Position of side nav bar heading*/
+    padding: 0 12px;
+    text-transform: uppercase;
+       }
+       .sidenav
+       {
+        margin: -14px -8px 14px; /* position of side nav bar */
+       }
+      
+       .sidenav ul li a {
+       
+    background: no-repeat scroll 0 0 #147EC2;
+     background-position: 14px 12px;
+    color: white;
+    display: block;
+    font-weight: normal;
+    padding: 6px;
+    text-decoration:none;
+}
+
+#aside_in {
+width: 184px;
+    padding: 0 8px 14px;
+}
+.lasta
+{
+ background: url("side_nav_last.png") no-repeat scroll center bottom #147EC2;
+    padding-bottom: 12px;
+    display:block;
+}
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript">
+     var parentScope = (parent.hmNavigationFrame);
+     if (!parentScope) {
+		      var s = document.createElement("script");
+		      s.setAttribute("type","text/javascript");
+		      s.setAttribute("src", "helpman_navigation.js");
+		      document.getElementsByTagName("head")[0].appendChild(s);
+	    }
+     else {
+       if (initialtocstate != "expandall") parent.hmAddCss(document, "#toc li ul { display: none }");
+     }
+     function loadicons() { var icons = new Array(); for (i=0; i<arguments.length; i++) { icons[i] = new Image(); icons[i].src = arguments[i]; } }
+     function loadtoc() { if (parentScope) parent.loadstate(document.getElementById("toc")); else loadstate(document.getElementById("toc")); }
+     function savetoc() { if (parentScope) parent.savestate(document.getElementById("toc")); else savestate(document.getElementById("toc")); }
+     function clicked(node, event) { deselect(); if (parentScope) parent.hmNodeClicked(node, event); else hmNodeClicked(node, event); }
+     function dblclicked(node) { if (parentScope) parent.hmNodeDblclicked(node); else hmNodeDblclicked(node); }
+     function deselect() { if (window.getSelection) window.getSelection().removeAllRanges(); else if (document.selection) document.selection.empty(); }
+     $(document).ready(function(){
+       loadtoc();
+       $(window).onunload = savetoc;
+     });
+   </script>
+</head>
+<body style="margin: 0px;">
+<div id="aside_in">
+<h1>LVDT ETC.</h1>
+<div class="sidenav">
+<ul id="toc" style="list-style-type:none;display:block;padding-left:0">
+<li class="heading1" id="i1" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading1" id="a1" href="io421.htm" target="hmcontent"><span class="heading1" id="s1" ondblclick="return dblclicked(this)">IO421, IO422</span></a>
+<ul id="ul1" style="list-style-type:none">
+<li class="heading2" id="i1.1" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading2" id="a1.1" href="i_o_pin_mapping_io421.htm" target="hmcontent"><span class="heading2" id="s1.1" ondblclick="return dblclicked(this)">IO421 I/O pin mapping</span></a>
+<ul id="ul1.1" style="list-style-type:none">
+<li class="heading3" id="i1.1.1" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a1.1.1" href="slot_1_io421.htm" target="hmcontent"><span class="heading3" id="s1.1.1">Slot 1</span></a>
+</li>
+<li class="heading3" id="i1.1.2" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a1.1.2" href="slot_2_io421.htm" target="hmcontent"><span class="heading3" id="s1.1.2">Slot 2</span></a>
+</li>
+<li class="heading3" id="i1.1.3" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a1.1.3" href="slot_3_io421.htm" target="hmcontent"><span class="heading3" id="s1.1.3">Slot 3</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i1.2" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading2" id="a1.2" href="i_o_pin_mapping_io422.htm" target="hmcontent"><span class="heading2" id="s1.2">IO422 I/O pin mapping</span></a>
+</li>
+<li class="heading2" id="i1.3" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading2" id="a1.3" href="driver_configuration_io421.htm" target="hmcontent"><span class="heading2" id="s1.3" ondblclick="return dblclicked(this)">Driver configuration</span></a>
+<ul id="ul1.3" style="list-style-type:none">
+<li class="heading3" id="i1.3.1" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a1.3.1" href="io421-1_lvdt_rvdt_measurement.htm" target="hmcontent"><span class="heading3" id="s1.3.1" ondblclick="return dblclicked(this)">IO421-1 / IO422-1 LVDT/RVDT measurement</span></a>
+<ul id="ul1.3.1" style="list-style-type:none">
+<li class="heading4" id="i1.3.1.1" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a1.3.1.1" href="lvdt_read_driver_block_io421-1.htm" target="hmcontent"><span class="heading4" id="s1.3.1.1" ondblclick="return dblclicked(this)">LVDT read driver block</span></a>
+<ul id="ul1.3.1.1" style="list-style-type:none">
+<li class="heading5" id="i1.3.1.1.1" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a1.3.1.1.1" href="input_and_output_ports_io421-1_lvdt_write.htm" target="hmcontent"><span class="heading5" id="s1.3.1.1.1">Input and output ports</span></a>
+</li>
+<li class="heading5" id="i1.3.1.1.2" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a1.3.1.1.2" href="dialog_fields_io421-1_lvdt_write.htm" target="hmcontent"><span class="heading5" id="s1.3.1.1.2">Dialog fields</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i1.3.2" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a1.3.2" href="io421-2_synchro_or_resolver_meas.htm" target="hmcontent"><span class="heading3" id="s1.3.2" ondblclick="return dblclicked(this)">IO421-2 / IO422-2 Synchro or resolver measurement</span></a>
+<ul id="ul1.3.2" style="list-style-type:none">
+<li class="heading4" id="i1.3.2.1" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a1.3.2.1" href="s_r_read_driver_block_io421-2.htm" target="hmcontent"><span class="heading4" id="s1.3.2.1" ondblclick="return dblclicked(this)">Synchro/Resolver read driver block</span></a>
+<ul id="ul1.3.2.1" style="list-style-type:none">
+<li class="heading5" id="i1.3.2.1.1" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a1.3.2.1.1" href="input_and_output_ports_io421-2_sr_read.htm" target="hmcontent"><span class="heading5" id="s1.3.2.1.1">Input and output ports</span></a>
+</li>
+<li class="heading5" id="i1.3.2.1.2" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a1.3.2.1.2" href="dialog_fields_io421-2_sr_read.htm" target="hmcontent"><span class="heading5" id="s1.3.2.1.2">Dialog fields</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i1.3.3" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a1.3.3" href="io421-3_lvdt_rvdt_simulation.htm" target="hmcontent"><span class="heading3" id="s1.3.3" ondblclick="return dblclicked(this)">IO421-3 / IO422-3 LVDT/RVDT simulation</span></a>
+<ul id="ul1.3.3" style="list-style-type:none">
+<li class="heading4" id="i1.3.3.1" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a1.3.3.1" href="lvdt_write_driver_block_io421.htm" target="hmcontent"><span class="heading4" id="s1.3.3.1" ondblclick="return dblclicked(this)">LVDT write driver block</span></a>
+<ul id="ul1.3.3.1" style="list-style-type:none">
+<li class="heading5" id="i1.3.3.1.1" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a1.3.3.1.1" href="input_and_output_ports_io421.htm" target="hmcontent"><span class="heading5" id="s1.3.3.1.1">Input and output ports</span></a>
+</li>
+<li class="heading5" id="i1.3.3.1.2" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a1.3.3.1.2" href="dialog_fields_io421_lvdt_write.htm" target="hmcontent"><span class="heading5" id="s1.3.3.1.2">Dialog fields</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i1.3.4" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a1.3.4" href="io421-4_synchro_resolver_simullation.htm" target="hmcontent"><span class="heading3" id="s1.3.4" ondblclick="return dblclicked(this)">IO421-4 / IO421-4 Synchro/Resolver simulation</span></a>
+<ul id="ul1.3.4" style="list-style-type:none">
+<li class="heading4" id="i1.3.4.1" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a1.3.4.1" href="s_r_write_driver_block_io421-4.htm" target="hmcontent"><span class="heading4" id="s1.3.4.1" ondblclick="return dblclicked(this)">Synchro/Resolver write driver block</span></a>
+<ul id="ul1.3.4.1" style="list-style-type:none">
+<li class="heading5" id="i1.3.4.1.1" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a1.3.4.1.1" href="input_and_output_ports_io421-4_sr_write.htm" target="hmcontent"><span class="heading5" id="s1.3.4.1.1">Input and output ports</span></a>
+</li>
+<li class="heading5" id="i1.3.4.1.2" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a1.3.4.1.2" href="dialog_fields_io421-4_sr_write.htm" target="hmcontent"><span class="heading5" id="s1.3.4.1.2">Dialog fields</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i1.3.5" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a1.3.5" href="io421-5_ac_reference_signal_source.htm" target="hmcontent"><span class="heading3" id="s1.3.5" ondblclick="return dblclicked(this)">IO421-5 / IO422-5 AC reference signal source</span></a>
+<ul id="ul1.3.5" style="list-style-type:none">
+<li class="heading4" id="i1.3.5.1" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a1.3.5.1" href="reference_driver_block_io421-5.htm" target="hmcontent"><span class="heading4" id="s1.3.5.1" ondblclick="return dblclicked(this)">Reference driver block</span></a>
+<ul id="ul1.3.5.1" style="list-style-type:none">
+<li class="heading5" id="i1.3.5.1.1" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a1.3.5.1.1" href="input_and_output_ports_io421-5_ac_ref.htm" target="hmcontent"><span class="heading5" id="s1.3.5.1.1">Input and output ports</span></a>
+</li>
+<li class="heading5" id="i1.3.5.1.2" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a1.3.5.1.2" href="dialog_fields_io421-5_ac_ref.htm" target="hmcontent"><span class="heading5" id="s1.3.5.1.2">Dialog fields</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i1.4" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading2" id="a1.4" href="usage_notes_io421.htm" target="hmcontent"><span class="heading2" id="s1.4" ondblclick="return dblclicked(this)">Usage notes</span></a>
+<ul id="ul1.4" style="list-style-type:none">
+<li class="heading3" id="i1.4.1" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a1.4.1" href="lvdt_connection_methods_io421-1.htm" target="hmcontent"><span class="heading3" id="s1.4.1">IO421-1 / IO422-1 LVDT/RVDT connection methods</span></a>
+</li>
+<li class="heading3" id="i1.4.2" style="background:url() no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a1.4.2" href="io421-3_lvdt_connection_methods.htm" target="hmcontent"><span class="heading3" id="s1.4.2">IO421-3 / IO422-3 LVDT/RVDT connection methods</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<script type="text/javascript">loadicons('list_arrow.png');</script>
+<a href="#" class="lasta"></a>
+</div>
+</div>
+</body>
+</html>

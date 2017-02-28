@@ -1,0 +1,9 @@
+#ifndef _ATRIAS3D_COMPositions_Right_h_
+#define _ATRIAS3D_COMPositions_Right_h_
+
+#include <math.h>
+
+void ATRIAS3D_COMPositions_Right(const double q[13], double pcm[3], double pcmT[3], double pcmHR[3], double pcm1R[3], double pcm2R[3], double pcm3R[3], double pcm4R[3], double pcmHL[3], double pcm1L[3], double pcm2L[3], double pcm3L[3], double pcm4L[3]) ;
+
+
+#endif /* _ATRIAS3D_COMPositions_Right_h_ */

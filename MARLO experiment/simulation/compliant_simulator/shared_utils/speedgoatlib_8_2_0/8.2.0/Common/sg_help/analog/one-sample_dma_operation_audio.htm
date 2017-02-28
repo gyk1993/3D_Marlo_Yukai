@@ -1,0 +1,380 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>One-Sample Closed-Loop DMA Operation (Audio)</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+     .p_Heading1{ color: #147EC2;
+    font-size: 1.455em !important;
+     border-bottom: 1px solid #E0E1E1;
+    color: #147EC2;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 20px;
+    padding-bottom: 4px;}
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "one-sample_dma_operation_audio.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<div id="breadcrumbs" style="display:none"></div>
+
+<div id="printheader"><h1 class="p_Heading1"><span class="f_Heading1">One-Sample Closed-Loop DMA Operation (Audio)</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
+  <tr valign="bottom">
+    <td align="left" valign="bottom" class="topichead">
+   
+   <h1 class="p_Heading1"><span class="f_Heading1">One-Sample Closed-Loop DMA Operation (Audio)</span></h1>
+
+    
+  </tr>  
+</table>
+<!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<p>In this configuration we use only one sample per frame. The sampling rate is defined by the burst trigger interval time, which is exactly 1/48kHz in this example.</p>
+<p>&nbsp;</p>
+<p><img src="io104_v2_use_case_closed_loop_audio.png" width="1103" height="769" alt="io104_v2_use_case_closed_loop_audio" style="border:none" /></p>
+<p>&nbsp;</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Example Configuration Values</span></h2>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:183px; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri; font-weight: bold;">Main Parameters</span></p>
+</td>
+<td style="vertical-align:top; width:82px; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri; font-weight: bold;">Value</span></p>
+</td>
+<td style="vertical-align:top; width:437px; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri; font-weight: bold;">Comment</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:183px; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">Sample Time</span></p>
+</td>
+<td style="vertical-align:top; width:82px; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">-1</span></p>
+</td>
+<td style="vertical-align:top; width:437px; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">Inherit from model base rate, which is interrupt-driven.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:183px; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">Inter-Module Frame Synchronisation</span></p>
+</td>
+<td style="vertical-align:top; width:82px; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">Initiator</span></p>
+</td>
+<td style="vertical-align:top; width:437px; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">We are trigger initiator and we could sync other cards.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:183px; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">Frame Time (Burst Trigger Interval)</span></p>
+</td>
+<td style="vertical-align:top; width:82px; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">1/48000</span></p>
+</td>
+<td style="vertical-align:top; width:437px; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">We want a 48kHz sampling rate.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:183px; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">Auto calibration</span></p>
+</td>
+<td style="vertical-align:top; width:82px; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">yes</span></p>
+</td>
+<td style="vertical-align:top; width:437px; padding:0px;"><p>&nbsp;</p>
+</td>
+</tr>
+</table>
+</div>
+<p style="line-height: 1.70; margin: 0px 0px 13px 0px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:183px; background-color:#ffffff; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri; font-weight: bold;">Analog Input Parameters</span></p>
+</td>
+<td style="vertical-align:top; width:80px; background-color:#ffffff; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri; font-weight: bold;">Value</span></p>
+</td>
+<td style="vertical-align:top; width:439px; background-color:#ffffff; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri; font-weight: bold;">Comment</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:183px; background-color:#ffffff; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">Active Channels</span></p>
+</td>
+<td style="vertical-align:top; width:80px; background-color:#ffffff; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">[1 2 5]</span></p>
+</td>
+<td style="vertical-align:top; width:439px; background-color:#ffffff; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">We want to use input channels 1, 2 and 5</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:183px; background-color:#ffffff; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">Voltage Range Ch[1 2 5 6]</span></p>
+</td>
+<td style="vertical-align:top; width:80px; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">±2.5V</span></p>
+</td>
+<td style="vertical-align:top; width:439px; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">Our input signals are between -2.5V and +2.5V</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:183px; background-color:#ffffff; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">Voltage Range Ch[3 4 7 8]</span></p>
+</td>
+<td style="vertical-align:top; width:80px; background-color:#ffffff; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">±10V</span></p>
+</td>
+<td style="vertical-align:top; width:439px; background-color:#ffffff; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">We don’t use them anyway.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:183px; background-color:#ffffff; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">Block Sample Time</span></p>
+</td>
+<td style="vertical-align:top; width:80px; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">-1</span></p>
+</td>
+<td style="vertical-align:top; width:439px; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">Inherit from model base rate, which is interrupt-driven.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:183px; background-color:#ffffff; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">Frame Size</span></p>
+</td>
+<td style="vertical-align:top; width:80px; background-color:#ffffff; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">1</span></p>
+</td>
+<td style="vertical-align:top; width:439px; background-color:#ffffff; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">We want only one sample of each channel.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:182px; background-color:#ffffff; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">Use Frame Burst Trigger For Inputs</span></p>
+</td>
+<td style="vertical-align:top; width:80px; padding:0px;"><p><span style="font-size: 9pt; font-family: Wingdings;">þ</span></p>
+</td>
+<td style="vertical-align:top; width:439px; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">The input acquisition shall be started by the trigger.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:183px; background-color:#ffffff; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">Inter-Module Clock Synchronisation</span></p>
+</td>
+<td style="vertical-align:top; width:80px; background-color:#ffffff; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">Initiator</span></p>
+</td>
+<td style="vertical-align:top; width:439px; background-color:#ffffff; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">We use our internal input clock generator.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:183px; background-color:#ffffff; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">Input Sample Time</span></p>
+</td>
+<td style="vertical-align:top; width:80px; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">20/40320000</span></p>
+</td>
+<td style="vertical-align:top; width:439px; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">For the fastest possible acquisition time we chose the maximum sample rate of 2MSPS.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:183px; background-color:#ffffff; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">Block Sample Time</span></p>
+</td>
+<td style="vertical-align:top; width:81px; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">-1</span></p>
+</td>
+<td style="vertical-align:top; width:438px; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">Inherit from model base rate, which is interrupt-driven.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="line-height: 1.70; margin: 0px 0px 13px 0px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:182px; background-color:#ffffff; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri; font-weight: bold;">Analog Outputs Parameters</span></p>
+</td>
+<td style="vertical-align:top; width:84px; background-color:#ffffff; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri; font-weight: bold;">Value</span></p>
+</td>
+<td style="vertical-align:top; width:435px; background-color:#ffffff; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri; font-weight: bold;">Comment</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:182px; background-color:#ffffff; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">Active Channel Group</span></p>
+</td>
+<td style="vertical-align:top; width:84px; background-color:#ffffff; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">[2 3 4]</span></p>
+</td>
+<td style="vertical-align:top; width:435px; background-color:#ffffff; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">We use three output channels.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:182px; background-color:#ffffff; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">Voltage Range</span></p>
+</td>
+<td style="vertical-align:top; width:84px; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">±2.5V</span></p>
+</td>
+<td style="vertical-align:top; width:435px; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">Our output signals are between -2.5V and +2.5V</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:182px; background-color:#ffffff; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">Reset Vector</span></p>
+</td>
+<td style="vertical-align:top; width:84px; background-color:#ffffff; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">1</span></p>
+</td>
+<td style="vertical-align:top; width:435px; background-color:#ffffff; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">Set all outputs to default values before and after execution.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:182px; background-color:#ffffff; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">Initial Value Vector</span></p>
+</td>
+<td style="vertical-align:top; width:84px; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">0</span></p>
+</td>
+<td style="vertical-align:top; width:435px; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">Default value is 0V for all outputs</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:182px; background-color:#ffffff; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">Frame Size</span></p>
+</td>
+<td style="vertical-align:top; width:84px; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">1</span></p>
+</td>
+<td style="vertical-align:top; width:435px; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">We update only one sample of each channel in each execution step.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:182px; background-color:#ffffff; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">Use Frame Burst Trigger for Outputs</span></p>
+</td>
+<td style="vertical-align:top; width:84px; background-color:#ffffff; padding:0px;"><p><span style="font-size: 9pt; font-family: Wingdings;">þ</span></p>
+</td>
+<td style="vertical-align:top; width:435px; background-color:#ffffff; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">The output sampling shall be started by the burst trigger.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:182px; background-color:#ffffff; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">Inter-Module Clock Synchronisation</span></p>
+</td>
+<td style="vertical-align:top; width:84px; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">Initiator</span></p>
+</td>
+<td style="vertical-align:top; width:435px; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">We use our internal input clock generator.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:182px; background-color:#ffffff; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">Output Sample Time</span></p>
+</td>
+<td style="vertical-align:top; width:84px; background-color:#ffffff; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">40/40320000</span></p>
+</td>
+<td style="vertical-align:top; width:435px; background-color:#ffffff; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">For the fastest possible acquisition time we choose the maximum sample rate of 1MSPS.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:183px; background-color:#ffffff; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">Block Sample Time</span></p>
+</td>
+<td style="vertical-align:top; width:84px; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">-1</span></p>
+</td>
+<td style="vertical-align:top; width:435px; padding:0px;"><p><span style="font-size: 9pt; font-family: Calibri;">Inherit from model base rate, which is interrupt-driven.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="p_Heading2"><span class="f_Heading2">&nbsp;</span></h2>
+<h2 class="p_Heading2"><span class="f_Heading2">Tweaking the Latency</span></h2>
+<p>The system latency is defined by the burst trigger interval time plus the analog output settling time of 1µs. If the latency must exactly match the sampling interval, one should define multiple samples per frame on the input side and only use the last value in the model.</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+{
+ if (document.all) setTimeout(function() {nsrInit();},20); 
+    else nsrInit();
+ } 
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

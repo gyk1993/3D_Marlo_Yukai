@@ -1,0 +1,1241 @@
+Library {
+  Name			  "speedgoatlib_IO104"
+  Version		  7.4
+  MdlSubVersion		  0
+  SavedCharacterEncoding  "windows-1252"
+  Description		  "7.14.0.739 (R2012a)"
+  LibraryType		  "BlockLibrary"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  ForwardingTableString	  "||__slOldName__||speedgoatlib_IO104/Setup||__slNewName__||speedgoatlib_IO104/obs/Setup||__s"
+  "lOldName__||speedgoatlib_IO104/Analog output||__slNewName__||speedgoatlib_IO104/obs/Analog output||__slOldName__||sp"
+  "eedgoatlib_IO104/Analog input||__slNewName__||speedgoatlib_IO104/obs/Analog input||__slOldName__||speedgoatlib_IO104"
+  "/Digital input||__slNewName__||speedgoatlib_IO104/obs/Digital input||__slOldName__||speedgoatlib_IO104/Digital outpu"
+  "t||__slNewName__||speedgoatlib_IO104/obs/Digital output||__slOldName__||speedgoatlib_IO104/Start conversion||__slNew"
+  "Name__||speedgoatlib_IO104/obs/Start conversion||__slOldName__||speedgoatlib_IO104/Read channels||__slNewName__||spe"
+  "edgoatlib_IO104/obs/Read channels||__slOldName__||speedgoatlib_IO104/Update channels||__slNewName__||speedgoatlib_IO"
+  "104/obs/Update channels||__slOldName__||speedgoatlib_IO104/Write channels||__slNewName__||speedgoatlib_IO104/obs/Wri"
+  "te channels"
+  MaxMDLFileLineLength	  120
+  Created		  "Mon Mar 05 18:05:48 2012"
+  Creator		  "dkuratli"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "lab3"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Tue Jul 01 08:21:07 2014"
+  RTWModifiedTimeStamp	  326103667
+  ModelVersionFormat	  "1.%<AutoIncrement:187>"
+  ConfigurationManager	  "none"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  RecordCoverage	  off
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  CovForceBlockReductionOff on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      6
+      Version		      "1.6.0"
+      Array {
+	Type			"Handle"
+	Dimension		9
+	Simulink.SolverCC {
+	  $ObjectID		  7
+	  Version		  "1.6.0"
+	  StartTime		  "0.0"
+	  StopTime		  "10.0"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  Solver		  "ode45"
+	  SolverName		  "ode45"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  8
+	  Version		  "1.6.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  9
+	  Version		  "1.6.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    8
+	    Cell		    "BooleansAsBitfields"
+	    Cell		    "PassReuseOutputArgsAs"
+	    Cell		    "PassReuseOutputArgsThreshold"
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    Cell		    "UseSpecifiedMinMax"
+	    PropName		    "DisabledProps"
+	  }
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  UseIntDivNetSlope	  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  StrengthReduction	  off
+	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	  EnforceIntegerDowncast  on
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  10
+	  Version		  "1.6.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"warning"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Enable All"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  StrictBusMsg		  "ErrorLevel1"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  11
+	  Version		  "1.6.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  12
+	  Version		  "1.6.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  13
+	  Version		  "1.6.0"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimCtrlC		  on
+	  SimExtrinsic		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  14
+	  Version		  "1.6.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    9
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    Cell		    "GenerateWebview"
+	    Cell		    "GenerateCodeMetricsReport"
+	    Cell		    "GenerateCodeReplacementReport"
+	    PropName		    "DisabledProps"
+	  }
+	  SystemTargetFile	  "grt.tlc"
+	  TLCOptions		  ""
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  PostCodeGenCommand	  ""
+	  Description		  ""
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ProcessScript		  ""
+	  ConfigurationScript	  ""
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  CustomSourceCode	  ""
+	  CustomHeaderCode	  ""
+	  CustomInclude		  ""
+	  CustomSource		  ""
+	  CustomLibrary		  ""
+	  CustomInitializer	  ""
+	  CustomTerminator	  ""
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  RTWCompilerOptimization "Off"
+	  RTWCustomCompilerOptimizations ""
+	  CheckMdlBeforeBuild	  "Off"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      15
+	      Version		      "1.6.0"
+	      Array {
+		Type			"Cell"
+		Dimension		21
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"IgnoreTestpoints"
+		Cell			"InsertBlockDesc"
+		Cell			"InsertPolySpaceComments"
+		Cell			"SFDataObjDesc"
+		Cell			"MATLABFcnDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrFcnArg"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		Cell			"ReqsInCode"
+		PropName		"DisabledProps"
+	      }
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M_T"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      SimulinkBlockComments   on
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      16
+	      Version		      "1.6.0"
+	      Array {
+		Type			"Cell"
+		Dimension		16
+		Cell			"GeneratePreprocessorConditionals"
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"CPPClassGenCompliant"
+		Cell			"PortableWordSizes"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"MultiInstanceERTCode"
+		PropName		"DisabledProps"
+	      }
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      TargetFunctionLibrary   "None"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      IncludeMdlTerminateFcn  on
+	      GeneratePreprocessorConditionals "Disable all"
+	      CombineOutputUpdateFcns off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      SupportVariableSizeSignals off
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    on
+	      AutosarCompliant	      off
+	      UseMalloc		      off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	hdlcoderui.hdlcc {
+	  $ObjectID		  17
+	  Version		  "1.6.0"
+	  Description		  "HDL Coder custom configuration component"
+	  Name			  "HDL Coder"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    ""
+	    PropName		    "HDLConfigFile"
+	  }
+	  HDLCActiveTab		  "0"
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition    [ 400, 210, 1280, 840 ]  
+    }
+    PropName		    "ConfigurationSets"
+  }
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      S-Function
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+      SFunctionDeploymentMode off
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+  }
+  System {
+    Name		    "speedgoatlib_IO104"
+    Location		    [10, 10, 500, 850]
+    Open		    off
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    47
+    Block {
+      BlockType		      S-Function
+      Name		      "Analog input (v2) "
+      SID		      3
+      Ports		      [0, 8]
+      Position		      [15, 162, 150, 258]
+      InitFcn		      "sg_IO104_DMA_ad_m(1);"
+      FunctionName	      "sg_IO104_DMA_ad_s"
+      Parameters	      "parPciSlot, parTs, parTriggerInitiator, parTriggerRate, parAdChannels, parAdChannelsSorted, pa"
+      "rAdRange1, parAdRange2, parAdCoupling, parAdUseTrigger, parAdFrameSize, parAdClockInitiator, parAdSampleTime"
+      EnableBusSupport	      off
+      MaskType		      "ad_IO104_v2"
+      MaskDescription	      "Speedgoat driver block<br>IO104 - Analog input<br><br>&copy; 2006 - 2014, Speedgoat GmbH,"
+      " www.speedgoat.ch"
+      MaskHelp		      "web(['C:\\Users\\lab3\\Documents\\MATLAB\\trunk\\thirdpartydrivers\\sg_help\\analog\\dialog_fie"
+      "lds_analog_in_io104.htm'],'-helpbrowser');"
+      MaskPromptString	      "IO104 Module Identifier                            |Block Sample Time                   "
+      "                  |PCI slot                                                      |Active Channels               "
+      "                         |(Channels Sorted)                                     |Voltage Range for Channels [ 1 "
+      "2 5 6 ]     |Voltage Range for Channels [ 3 4 7 8 ]     |Input Coupling                                         "
+      "  |Input Frame Size                                       |Use Frame Burst Trigger|Inter-Module Input Clock Sync"
+      "hronization|Input Sample Time (Clock Generator)       |Trigger Initiator                                        "
+      " |Frame Time                                               "
+      MaskStyleString	      "popup(1|2|3|4|5|6|7|8|9|10),edit,edit,edit,edit,popup(+-10V|+-5V|+-2.5V),popup(+-10V|+-5V"
+      "|+-2.5V),popup(Differential|Single-Ended),edit,checkbox,popup(Initiator|Target),edit,popup(Initiator|Target),edi"
+      "t"
+      MaskVariables	      "parModuleId=@1;parTs=@2;parPciSlot=@3;parAdChannels=@4;parAdChannelsSorted=@5;parAdRange1=@"
+      "6;parAdRange2=@7;parAdCoupling=@8;parAdFrameSize=@9;parAdUseTrigger=@10;parAdClockInitiator=@11;parAdSampleTime="
+      "@12;parTriggerInitiator=@13;parTriggerRate=@14;"
+      MaskTunableValueString  "on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskCallbackString      "|||||||||||||"
+      MaskEnableString	      "on,on,off,on,on,on,off,off,off,on,off,off,off,off"
+      MaskVisibilityString    "on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskToolTipString	      "on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskInitialization      "%[maskdisplay] = \nsg_IO104_DMA_ad_m( 2);\n% , ...\n%\n%     parModuleId, parAdChannels"
+      ");\n"
+      MaskSelfModifiable      on
+      MaskDisplay	      "disp('Speedgoat\\nIO104\\nAnalog input\\nModule: 1');port_label('output',1,'1');port_label('o"
+      "utput',2,'2');port_label('output',3,'3');port_label('output',4,'4');port_label('output',5,'5');port_label('outpu"
+      "t',6,'6');port_label('output',7,'7');port_label('output',8,'8');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "1|-1|-1|[1,2,3,4,5,6,7,8]|[1,2,3,4,5,6,7,8]|+-10V|+-10V|Differential|1000|on|Initiator|9."
+      "920634921e-07|Initiator|9.920634921e-04"
+    }
+    Block {
+      BlockType		      S-Function
+      Name		      "Analog output (v2) "
+      SID		      4
+      Ports		      [4]
+      Position		      [180, 165, 310, 260]
+      InitFcn		      "sg_IO104_DMA_da_m(1);"
+      FunctionName	      "sg_IO104_DMA_da_s"
+      Parameters	      "parPciSlot, parTs, parTriggerInitiator, parTriggerRate, parDaChannels, parDaChannelsSorted, pa"
+      "rDaInitValue, parDaReset, parDaRange, parDaUseTrigger, parDaFrameSize, parDaSampleTime,parAdBlockPresent"
+      EnableBusSupport	      off
+      MaskType		      "da_IO104_v2"
+      MaskDescription	      "Speedgoat driver block<br>IO104 - Analog output<br><br>&copy; 2006 - 2014, Speedgoat GmbH"
+      ", www.speedgoat.ch"
+      MaskHelp		      "web(['C:\\Users\\lab3\\Documents\\MATLAB\\trunk\\thirdpartydrivers\\sg_help\\analog\\dialog_fie"
+      "lds_analog_out_io104.htm'],'-helpbrowser');"
+      MaskPromptString	      "IO104 Module Identifier                               |Block Sample Time                "
+      "                        |PCI slot (-1 = autosearch)                           |Active Channels                  "
+      "                         |Channels Sorted                                          |Initial Values              "
+      "                                   |Reset on stop                                              |Voltage Range   "
+      "                                          |Output Frame Size                                       |Use Frame Bu"
+      "rst Trigger|Inter-Module Output Clock Synchronization|Output Sample Time                                     |Tr"
+      "igger Initiator                                            |Frame Time                                          "
+      "        |Number of AD blocks"
+      MaskStyleString	      "popup(1|2|3|4|5|6|7|8|9|10),edit,edit,edit,edit,edit,edit,popup(+-10V|+-5V|+-2.5V),edit,c"
+      "heckbox,popup(Initiator|Target),edit,popup(Initiator|Target),edit,edit"
+      MaskVariables	      "parModuleId=@1;parTs=@2;parPciSlot=@3;parDaChannels=@4;parDaChannelsSorted=@5;parDaInitValu"
+      "e=@6;parDaReset=@7;parDaRange=@8;parDaFrameSize=@9;parDaUseTrigger=@10;parDaClockInitiator=@11;parDaSampleTime=@"
+      "12;parTriggerInitiator=@13;parTriggerRate=@14;parAdBlockPresent=@15;"
+      MaskTunableValueString  "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskCallbackString      "||||||||||||||"
+      MaskEnableString	      "on,on,off,off,on,off,off,off,off,on,off,off,off,off,off"
+      MaskVisibilityString    "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskToolTipString	      "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskInitialization      "[maskDisplay] = sg_IO104_DMA_da_m(2);\n\n\n"
+      MaskSelfModifiable      on
+      MaskDisplay	      "disp('Speedgoat\\nIO104\\nAnalog output\\nModule: 1');port_label('input',1,'1');port_label('i"
+      "nput',2,'2');port_label('input',3,'3');port_label('input',4,'4');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "1|-1|-1|[1,2,3,4]|[1,2,3,4]|[0,0,0,0]|[1,1,1,1]|+-10V|1000|on|Initiator|9.920634921e-07|I"
+      "nitiator|9.920634921e-04|0"
+    }
+    Block {
+      BlockType		      S-Function
+      Name		      "Digital input (v2) "
+      SID		      5
+      Ports		      [0, 8]
+      Position		      [15, 290, 150, 390]
+      InitFcn		      "sg_IO104_DMA_di_m(1);"
+      FunctionName	      "sg_IO104_DMA_di_s"
+      Parameters	      "parDiChannels, parTs, parPciSlot"
+      EnableBusSupport	      off
+      MaskType		      "di_IO104_v2"
+      MaskDescription	      "Speedgoat driver block<br>IO104 - Digital input<br><br>&copy; 2006 - 2014, Speedgoat GmbH"
+      ", www.speedgoat.ch"
+      MaskHelp		      "web(['C:\\Users\\lab3\\Documents\\MATLAB\\trunk\\thirdpartydrivers\\sg_help\\analog\\dialog_fie"
+      "lds_digital_in_io104.htm'],'-helpbrowser');"
+      MaskPromptString	      "IO104 Module Identifier                            |Block Sample Time                   "
+      "                  |PCI slot|Active Channels                                        "
+      MaskStyleString	      "popup(1|2|3|4|5|6|7|8|9|10),edit,edit,edit"
+      MaskVariables	      "parModuleId=@1;parTs=@2;parPciSlot=@3;parDiChannels=@4;"
+      MaskTunableValueString  "on,on,on,on"
+      MaskCallbackString      "|||"
+      MaskEnableString	      "on,on,on,off"
+      MaskVisibilityString    "on,on,off,on"
+      MaskToolTipString	      "on,on,on,on"
+      MaskInitialization      "sg_IO104_DMA_di_m(2);\n"
+      MaskSelfModifiable      on
+      MaskDisplay	      "disp('Speedgoat\\nIO104\\nDigital input\\nModule: 1');port_label('output',1,'9');port_label('"
+      "output',2,'10');port_label('output',3,'11');port_label('output',4,'12');port_label('output',5,'13');port_label('"
+      "output',6,'14');port_label('output',7,'15');port_label('output',8,'16');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "1|-1|-1|[9,10,11,12,13,14,15,16]"
+    }
+    Block {
+      BlockType		      S-Function
+      Name		      "Digital output (v2) "
+      SID		      6
+      Ports		      [8]
+      Position		      [180, 290, 310, 390]
+      InitFcn		      "sg_IO104_DMA_do_m(1);"
+      FunctionName	      "sg_IO104_DMA_do_s"
+      Parameters	      "parDoChannels, parPciSlot, parTs, parDoInitValues, parDoReset"
+      EnableBusSupport	      off
+      MaskType		      "do_IO104_v2"
+      MaskDescription	      "Speedgoat driver block<br>IO104 - Digital output<br><br>&copy; 2006 - 2014, Speedgoat Gmb"
+      "H, www.speedgoat.ch"
+      MaskHelp		      "web(['C:\\Users\\lab3\\Documents\\MATLAB\\trunk\\thirdpartydrivers\\sg_help\\analog\\dialog_fie"
+      "lds_digital_out_io104.htm'],'-helpbrowser');"
+      MaskPromptString	      "IO104 Module Identifier                            |Block Sample Time                   "
+      "                  |Active Channels                                        |Initial Values                       "
+      "                       |Reset on stop                                            |PCI slot"
+      MaskStyleString	      "popup(1|2|3|4|5|6|7|8|9|10),edit,edit,edit,edit,edit"
+      MaskVariables	      "parModuleId=@1;parTs=@2;parDoChannels=@3;parDoInitValues=@4;parDoReset=@5;parPciSlot=@6;"
+      MaskTunableValueString  "on,on,on,on,on,on"
+      MaskCallbackString      "|||||"
+      MaskEnableString	      "on,on,off,off,off,on"
+      MaskVisibilityString    "on,on,on,on,on,off"
+      MaskToolTipString	      "on,on,on,on,on,on"
+      MaskInitialization      "sg_IO104_DMA_do_m(2);\n\n"
+      MaskSelfModifiable      on
+      MaskDisplay	      "disp('Speedgoat\\nIO104\\nDigital output\\nModule: 1');port_label('input',1,'1');port_label('"
+      "input',2,'2');port_label('input',3,'3');port_label('input',4,'4');port_label('input',5,'5');port_label('input',6"
+      ",'6');port_label('input',7,'7');port_label('input',8,'8');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "1|-1|[1,2,3,4,5,6,7,8]|[0,0,0,0,0,0,0,0]|[1,1,1,1,1,1,1,1]|-1"
+    }
+    Block {
+      BlockType		      S-Function
+      Name		      "Setup (v2) "
+      SID		      28
+      Ports		      []
+      Position		      [105, 70, 240, 140]
+      InitFcn		      "sg_IO104_DMA_setup_m(1);\n%, parModuleId, parPciSlot, parCalibrate, parTriggerInitiator, parTrig"
+      "gerRate,     parAdChannels, parAdRange1, parAdRange2, parAdCoupling,     parAdUseTrigger, parAdFrameSize, parAdC"
+      "lockInitiator, parAdSampleTime,     parDaChannels, parDaRange, parDaInitValue, parDaReset,     parDaUseTrigger, "
+      "parDaFrameSize, parDaClockInitiator, parDaSampleTime,     parDioByte0Dir, parDioByte1Dir, parDiChannels,     par"
+      "DoChannels, parDoReset, parDoInitValues);"
+      FunctionName	      "sg_IO104_DMA_setup_s"
+      Parameters	      "parPciSlot, parTriggerInitiator, parTriggerRate, parCalibrate, parAdChannels, parAdRange1, par"
+      "AdRange2, parAdCoupling, parAdUseTrigger, parAdFrameSize, parAdClockInitiator, parAdSampleTime, parDaChannels, p"
+      "arDaChannelsSorted, parDaInitValue, parDaReset, parDaRange, parDaUseTrigger, parDaFrameSize, parDaClockInitiator"
+      ", parDaSampleTime, parDioByte0Dir, parDioByte1Dir, parDoChannels, parDoInitValues, parDoReset, parDiChannels"
+      EnableBusSupport	      off
+      MaskType		      "setup_IO104_v2"
+      MaskDescription	      "Speedgoat driver block<br>IO104 - Setup<br><br>&copy; 2006 - 2014, Speedgoat GmbH, www.sp"
+      "eedgoat.ch"
+      MaskHelp		      "web(['C:\\Program Files\\MATLAB\\R2014a\\toolbox\\rtw\\targets\\xpc\\target\\build\\xpcblocks\\"
+      "thirdpartydrivers\\sg_help\\analog\\dialog_fields_setup_io104.htm'],'-helpbrowser');"
+      MaskPromptString	      "PCI slot (-1 = autosearch)                |IO104 Module Identifier                    |I"
+      "nter-Module Frame Synchronization|Frame Time (Burst Trigger Interval)|Autocalibrate|Active Channels             "
+      "                             |Voltage Range for Channels [ 1 2 5 6 ]      |Voltage Range for Channels [ 3 4 7 8 "
+      "]      |Input Coupling                                            |Use Frame Burst Trigger |Input Frame Size [sa"
+      "mples]                       |Inter-Module Input Clock Synchronization |Input Sample Time (Clock Generator)     "
+      "   |Active Channels                                           |Channels Sorted|Initial Values                   "
+      "                              |Reset to Initial Values on model stop           |Voltage Range                   "
+      "                          |Use Frame Burst Trigger for Outputs|Output Frame Size [samples]                      "
+      " |Inter-Module Output Clock Synchronization|Input Sample Time (Clock Generator)           |Digital I/O 1..8 Dire"
+      "ction   |Digital I/O 9..16 Direction |Active Output Channels   |Initial Values                     |Reset on sto"
+      "p                  |Active Input Channels     "
+      MaskStyleString	      "edit,popup(1|2|3|4|5|6|7|8|9|10),popup(Initiator|Target),edit,checkbox,edit,popup(+-10V|+"
+      "-5V|+-2.5V),popup(+-10V|+-5V|+-2.5V),popup(Differential|Single-Ended),checkbox,edit,popup(Initiator|Target),edit"
+      ",edit,edit,edit,edit,popup(+-10V|+-5V|+-2.5V),checkbox,edit,popup(Initiator|Target),edit,popup(Inputs|Outputs),p"
+      "opup(Inputs|Outputs),edit,edit,edit,edit"
+      MaskVariables	      "parPciSlot=@1;parModuleId=@2;parTriggerInitiator=@3;parTriggerRate=@4;parCalibrate=@5;parAd"
+      "Channels=@6;parAdRange1=@7;parAdRange2=@8;parAdCoupling=@9;parAdUseTrigger=@10;parAdFrameSize=@11;parAdClockInit"
+      "iator=@12;parAdSampleTime=@13;parDaChannels=@14;parDaChannelsSorted=@15;parDaInitValue=@16;parDaReset=@17;parDaR"
+      "ange=@18;parDaUseTrigger=@19;parDaFrameSize=@20;parDaClockInitiator=@21;parDaSampleTime=@22;parDioByte0Dir=@23;p"
+      "arDioByte1Dir=@24;parDoChannels=@25;parDoInitValues=@26;parDoReset=@27;parDiChannels=@28;"
+      MaskTunableValueString  "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskCallbackString      "||sg_IO104_DMA_setup_m(3);\n%, parModuleId, parPciSlot, parCalibrate, parTriggerInitiat"
+      "or, parTriggerRate,     parAdChannels, parAdRange1, parAdRange2, parAdCoupling,     parAdUseTrigger, parAdFrameS"
+      "ize, parAdClockInitiator, parAdSampleTime,     parDaChannels, parDaRange, parDaInitValue, parDaReset,     parDaU"
+      "seTrigger, parDaFrameSize, parDaClockInitiator, parDaSampleTime,     parDioByte0Dir, parDioByte1Dir, parDiChanne"
+      "ls,     parDoChannels, parDoReset, parDoInitValues);|||||||||sg_IO104_DMA_setup_m(3);\n%, parModuleId, parPciSlo"
+      "t, parCalibrate, parTriggerInitiator, parTriggerRate,     parAdChannels, parAdRange1, parAdRange2, parAdCoupling"
+      ",     parAdUseTrigger, parAdFrameSize, parAdClockInitiator, parAdSampleTime,     parDaChannels, parDaRange, parD"
+      "aInitValue, parDaReset,     parDaUseTrigger, parDaFrameSize, parDaClockInitiator, parDaSampleTime,     parDioByt"
+      "e0Dir, parDioByte1Dir, parDiChannels,     parDoChannels, parDoReset, parDoInitValues);|sg_IO104_DMA_setup_m(3);\n"
+      "%, parModuleId, parPciSlot, parCalibrate, parTriggerInitiator, parTriggerRate,     parAdChannels, parAdRange1, p"
+      "arAdRange2, parAdCoupling,     parAdUseTrigger, parAdFrameSize, parAdClockInitiator, parAdSampleTime,     parDaC"
+      "hannels, parDaRange, parDaInitValue, parDaReset,     parDaUseTrigger, parDaFrameSize, parDaClockInitiator, parDa"
+      "SampleTime,     parDioByte0Dir, parDioByte1Dir, parDiChannels,     parDoChannels, parDoReset, parDoInitValues);|"
+      "|||||||sg_IO104_DMA_setup_m(3);\n%, parModuleId, parPciSlot, parCalibrate, parTriggerInitiator, parTriggerRate, "
+      "    parAdChannels, parAdRange1, parAdRange2, parAdCoupling,     parAdUseTrigger, parAdFrameSize, parAdClockIniti"
+      "ator, parAdSampleTime,     parDaChannels, parDaRange, parDaInitValue, parDaReset,     parDaUseTrigger, parDaFram"
+      "eSize, parDaClockInitiator, parDaSampleTime,     parDioByte0Dir, parDioByte1Dir, parDiChannels,     parDoChannel"
+      "s, parDoReset, parDoInitValues);||sg_IO104_DMA_setup_m(3);\n%, parModuleId, parPciSlot, parCalibrate, parTrigger"
+      "Initiator, parTriggerRate,     parAdChannels, parAdRange1, parAdRange2, parAdCoupling,     parAdUseTrigger, parA"
+      "dFrameSize, parAdClockInitiator, parAdSampleTime,     parDaChannels, parDaRange, parDaInitValue, parDaReset,    "
+      " parDaUseTrigger, parDaFrameSize, parDaClockInitiator, parDaSampleTime,     parDioByte0Dir, parDioByte1Dir, parD"
+      "iChannels,     parDoChannels, parDoReset, parDoInitValues);|sg_IO104_DMA_setup_m(3);\n%, parModuleId, parPciSlot"
+      ", parCalibrate, parTriggerInitiator, parTriggerRate,     parAdChannels, parAdRange1, parAdRange2, parAdCoupling,"
+      "     parAdUseTrigger, parAdFrameSize, parAdClockInitiator, parAdSampleTime,     parDaChannels, parDaRange, parDa"
+      "InitValue, parDaReset,     parDaUseTrigger, parDaFrameSize, parDaClockInitiator, parDaSampleTime,     parDioByte"
+      "0Dir, parDioByte1Dir, parDiChannels,     parDoChannels, parDoReset, parDoInitValues);||||"
+      MaskEnableString	      "on,on,on,on,on,on,on,on,on,on,on,on,on,on,off,on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskVisibilityString    "on,on,on,on,on,on,on,on,on,on,on,on,on,on,off,on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskToolTipString	      "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskInitialization      "sg_IO104_DMA_setup_m(2);\n%sg_IO104_DMA_setup_m(2, parModuleId, parPciSlot, parCalibrat"
+      "e, parTriggerInitiator, parTriggerRate,     parAdChannels, parAdRange1, parAdRange2, parAdCoupling,     parAdUse"
+      "Trigger, parAdFrameSize, parAdClockInitiator, parAdSampleTime,     parDaChannels, parDaRange, parDaInitValue, pa"
+      "rDaReset,     parDaUseTrigger, parDaFrameSize, parDaClockInitiator, parDaSampleTime,     parDioByte0Dir, parDioB"
+      "yte1Dir, parDiChannels,     parDoChannels, parDoReset, parDoInitValues);"
+      MaskSelfModifiable      on
+      MaskDisplay	      "disp('Speedgoat\\nIO104\\nSetup\\nModule: 1');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "-1|1|Initiator|sample_time * frame_size|on|[1:8]|+-10V|+-10V|Differential|on|frame_size|I"
+      "nitiator|sample_time|[1:4]|0|[0]|[1]|+-10V|on|frame_size|Initiator|sample_time|Outputs|Inputs|[1,2,3,4,5,6,7,8]|"
+      "[0]|[1]|[9,10,11,12,13,14,15,16]"
+      MaskTabNameString	      "Main,Main,Main,Main,Main,Analog Inputs,Analog Inputs,Analog Inputs,Analog Inputs,Analog"
+      " Inputs,Analog Inputs,Analog Inputs,Analog Inputs,Analog Outputs,Analog Outputs,Analog Outputs,Analog Outputs,An"
+      "alog Outputs,Analog Outputs,Analog Outputs,Analog Outputs,Analog Outputs,Digital I/O,Digital I/O,Digital I/O,Dig"
+      "ital I/O,Digital I/O,Digital I/O"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "obs"
+      SID		      19
+      Ports		      []
+      Position		      [412, 330, 452, 390]
+      RequestExecContextInheritance off
+      System {
+	Name			"obs"
+	Location		[2372, 53, 2773, 666]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"80"
+	Block {
+	  BlockType		  S-Function
+	  Name			  "Analog input"
+	  SID			  20
+	  Ports			  [0, 1]
+	  Position		  [90, 150, 225, 220]
+	  InitFcn		  "sg_IO104_ad_m(1);"
+	  FunctionName		  "sg_IO104_ad_s"
+	  Parameters		  "channels, adPorts, range1, range2, ts, pciSlot"
+	  EnableBusSupport	  off
+	  MaskType		  "ad_IO104"
+	  MaskDescription	  "Speedgoat driver block<br>IO104 - Analog input<br><br>&copy; 2006 - 2013, Speedgoat GmbH, www.sp"
+	  "eedgoat.ch"
+	  MaskHelp		  "web(['C:\\Program Files\\MATLAB\\R2014a\\toolbox\\rtw\\targets\\xpc\\target\\build\\xpcblocks\\thirdpa"
+	  "rtydrivers\\sg_html\\io104_analog-input-driver-block.html'],'-helpbrowser');"
+	  MaskPromptString	  "IO104 module identifier:|Channels:|Ports:|Range1:|Range2:|Sample time:|PCI slot:"
+	  MaskStyleString	  "popup(1|2|3|4|5|6|7|8|9|10),edit,edit,edit,edit,edit,edit"
+	  MaskVariables		  "id=@1;channels=@2;adPorts=@3;range1=@4;range2=@5;ts=@6;pciSlot=@7;"
+	  MaskTunableValueString  "on,on,on,on,on,on,on"
+	  MaskCallbackString	  "||||||"
+	  MaskEnableString	  "on,on,on,on,on,on,on"
+	  MaskVisibilityString	  "on,off,off,off,off,on,off"
+	  MaskToolTipString	  "on,on,on,on,on,on,on"
+	  MaskInitialization	  "maskDisplay=sg_IO104_ad_m( 2, id, channels);\n"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nIO104\\nAnalog input\\nModule: 1');port_label('output',1,'1');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|1|0|1|0|0.001|0"
+	}
+	Block {
+	  BlockType		  S-Function
+	  Name			  "Analog output"
+	  SID			  21
+	  Ports			  [1]
+	  Position		  [255, 150, 385, 220]
+	  InitFcn		  "sg_IO104_da_m(1);"
+	  FunctionName		  "sg_IO104_da_s"
+	  Parameters		  "channels, range, ts, pciSlot"
+	  EnableBusSupport	  off
+	  MaskType		  "da_IO104"
+	  MaskDescription	  "Speedgoat driver block<br>IO104 - Analog output<br><br>&copy; 2006 - 2013, Speedgoat GmbH, www.s"
+	  "peedgoat.ch"
+	  MaskHelp		  "web(['C:\\Program Files\\MATLAB\\R2014a\\toolbox\\rtw\\targets\\xpc\\target\\build\\xpcblocks\\thirdpa"
+	  "rtydrivers\\sg_html\\io104_analog-output-driver-block.html'],'-helpbrowser');"
+	  MaskPromptString	  "IO104 module identifier:|Channel:|Range: |Sampletime:|PCI slot (-1: autosearch):"
+	  MaskStyleString	  "popup(1|2|3|4|5|6|7|8|9|10),edit,edit,edit,edit"
+	  MaskVariables		  "id=@1;channels=@2;range=@3;ts=@4;pciSlot=@5;"
+	  MaskTunableValueString  "on,on,on,on,on"
+	  MaskCallbackString	  "||||"
+	  MaskEnableString	  "on,on,on,on,on"
+	  MaskVisibilityString	  "on,off,off,on,off"
+	  MaskToolTipString	  "on,on,on,on,on"
+	  MaskInitialization	  "[maskDisplay]=sg_IO104_da_m( 2, id, channels);\n"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nIO104\\nAnalog output\\nModule: 1');port_label('input',1,'1');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|[1]|1|0.001|-1"
+	}
+	Block {
+	  BlockType		  S-Function
+	  Name			  "Digital input"
+	  SID			  22
+	  Ports			  [0, 1]
+	  Position		  [90, 250, 225, 320]
+	  InitFcn		  "sg_IO104_di_m(1);"
+	  FunctionName		  "sg_IO104_di_s"
+	  Parameters		  "channels, ts, pciSlot"
+	  EnableBusSupport	  off
+	  MaskType		  "di_IO104"
+	  MaskDescription	  "Speedgoat driver block<br>IO104 - Digital input<br><br>&copy; 2006 - 2013, Speedgoat GmbH, www.s"
+	  "peedgoat.ch"
+	  MaskHelp		  "web(['C:\\Program Files\\MATLAB\\R2014a\\toolbox\\rtw\\targets\\xpc\\target\\build\\xpcblocks\\thirdpa"
+	  "rtydrivers\\sg_html\\io104_digital-input-driver-block.html'],'-helpbrowser');"
+	  MaskPromptString	  "IO104 module identifier:|Channels:|Sample time:|PCI slot:"
+	  MaskStyleString	  "popup(1|2|3|4|5|6|7|8|9|10),edit,edit,edit"
+	  MaskVariables		  "id=@1;channels=@2;ts=@3;pciSlot=@4;"
+	  MaskTunableValueString  "on,on,on,on"
+	  MaskCallbackString	  "|||"
+	  MaskEnableString	  "on,on,on,on"
+	  MaskVisibilityString	  "on,off,on,off"
+	  MaskToolTipString	  "on,on,on,on"
+	  MaskInitialization	  "maskDisplay=sg_IO104_di_m( 2, id, channels);\n"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nIO104\\nDigital input\\nModule: 1');port_label('output',1,'1');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|1|0.001|0"
+	}
+	Block {
+	  BlockType		  S-Function
+	  Name			  "Digital output"
+	  SID			  23
+	  Ports			  [1]
+	  Position		  [255, 250, 385, 320]
+	  InitFcn		  "sg_IO104_do_m(1);"
+	  FunctionName		  "sg_IO104_do_s"
+	  Parameters		  "channels, ts, pciSlot"
+	  EnableBusSupport	  off
+	  MaskType		  "do_IO104"
+	  MaskDescription	  "Speedgoat driver block<br>IO104 - Digital output<br><br>&copy; 2006 - 2013, Speedgoat GmbH, www."
+	  "speedgoat.ch"
+	  MaskHelp		  "web(['C:\\Program Files\\MATLAB\\R2014a\\toolbox\\rtw\\targets\\xpc\\target\\build\\xpcblocks\\thirdpa"
+	  "rtydrivers\\sg_html\\io104_digital-output-driver-block.html'],'-helpbrowser');"
+	  MaskPromptString	  "IO104 module identifier:|Channel:|Sampletime:|PCI slot (-1: autosearch):"
+	  MaskStyleString	  "popup(1|2|3|4|5|6|7|8|9|10),edit,edit,edit"
+	  MaskVariables		  "id=@1;channels=@2;ts=@3;pciSlot=@4;"
+	  MaskTunableValueString  "on,on,on,on"
+	  MaskCallbackString	  "|||"
+	  MaskEnableString	  "on,on,on,on"
+	  MaskVisibilityString	  "on,off,on,off"
+	  MaskToolTipString	  "on,on,on,on"
+	  MaskInitialization	  "[maskDisplay]=sg_IO104_do_m( 2, id, channels);\n"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nIO104\\nDigital output\\nModule: 1');port_label('input',1,'1');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|[1]|0.001|-1"
+	}
+	Block {
+	  BlockType		  S-Function
+	  Name			  "Read channels"
+	  SID			  40
+	  Ports			  [0, 1]
+	  Position		  [255, 349, 390, 421]
+	  InitFcn		  "sg_IO104_adread_m(1);"
+	  FunctionName		  "sg_IO104_adread_s"
+	  Parameters		  "inSync, outSync, channels, adPorts, range1, range2, ts, pciSlot"
+	  EnableBusSupport	  off
+	  MaskType		  "adread_IO104"
+	  MaskDescription	  "Speedgoat driver block<br>IO104 - Analog input read channels<br><br>&copy; 2006 - 2013, Speedgoa"
+	  "t GmbH, www.speedgoat.ch"
+	  MaskHelp		  "Documentation for this block is not available."
+	  MaskPromptString	  "IO104 module identifier:|Show input synchronization port|Show output synchronization port|Chann"
+	  "els:|Ports:|Range1:|Range2:|Sample time:|PCI slot:"
+	  MaskStyleString	  "popup(1|2|3|4|5|6|7|8|9|10),checkbox,checkbox,edit,edit,edit,edit,edit,edit"
+	  MaskVariables		  "id=@1;inSync=@2;outSync=@3;channels=@4;adPorts=@5;range1=@6;range2=@7;ts=@8;pciSlot=@9;"
+	  MaskTunableValueString  "on,on,on,on,on,on,on,on,on"
+	  MaskCallbackString	  "||||||||"
+	  MaskEnableString	  "on,on,on,on,on,on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,off,off,off,off,on,off"
+	  MaskToolTipString	  "on,on,on,on,on,on,on,on,on"
+	  MaskInitialization	  "maskDisplay=sg_IO104_adread_m( 2, id, inSync, outSync, channels);\n"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nIO104\\nAnalog input\\nRead channels\\nModule: 1');port_label('output',1,'1');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|off|off|1|0|0|0|0.001|0"
+	}
+	Block {
+	  BlockType		  S-Function
+	  Name			  "Setup"
+	  SID			  2
+	  Ports			  []
+	  Position		  [175, 45, 310, 115]
+	  InitFcn		  "sg_IO104_setup_m(1);"
+	  FunctionName		  "sg_IO104_setup_s"
+	  Parameters		  "cal, initiator, pciSlot, adChannel, adRange1, adRange2, adCoupling, daChannel, daRange, daReset, daI"
+	  "nitValue, diChannel, doChannel, doReset, doInitValue"
+	  EnableBusSupport	  off
+	  MaskType		  "setup_IO104"
+	  MaskDescription	  "Speedgoat driver block<br>IO104 - Setup<br><br>&copy; 2006 - 2013, Speedgoat GmbH, www.speedgoat"
+	  ".ch"
+	  MaskHelp		  "web(['C:\\Program Files\\MATLAB\\R2014a\\toolbox\\rtw\\targets\\xpc\\target\\build\\xpcblocks\\thirdpa"
+	  "rtydrivers\\sg_html\\io104_setup-driver-block.html'],'-helpbrowser');"
+	  MaskPromptString	  "Parameter group:|IO104 module identifier:|Autocalibrate|Inter-module synchronization:|PCI slot "
+	  "(-1: autosearch):|Channel vector|Range (channels 1,2,5,6):|Range (channels 3,4,7,8):|Input coupling:|Channel vector"
+	  ":|Range:|Reset vector:|Initial value vector:|Channel vector:|Channel vector:|Reset vector:|Initial value vector:"
+	  MaskStyleString	  "popup(Module setup|Analog input setup|Analog output setup|Digital input setup|Digital output set"
+	  "up),popup(1|2|3|4|5|6|7|8|9|10),checkbox,popup(Initiator|Target),edit,edit,popup(+-10V|+-5V|+-2.5V),popup(+-10V|+-5"
+	  "V|+-2.5V),popup(Differential|Single-ended),edit,popup(+-10V|+-5V|+-2.5V),edit,edit,edit,edit,edit,edit"
+	  MaskVariables		  "group=@1;id=@2;cal=@3;initiator=@4;pciSlot=@5;adChannel=@6;adRange1=@7;adRange2=@8;adCoupling=@9;"
+	  "daChannel=@10;daRange=@11;daReset=@12;daInitValue=@13;diChannel=@14;doChannel=@15;doReset=@16;doInitValue=@17;"
+	  MaskTunableValueString  "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+	  MaskCallbackString	  "sg_IO104_setup_m(2);||||||||||||||||"
+	  MaskEnableString	  "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on,on,off,off,off,off,off,off,off,off,off,off,off,off"
+	  MaskToolTipString	  "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+	  MaskInitialization	  "[maskDisplay]= sg_IO104_setup_m(3, id, cal, initiator, pciSlot, adChannel, adRange1, adRange2"
+	  ", adCoupling, daChannel, daRange, daReset, daInitValue, diChannel, doChannel, doReset, doInitValue);\n"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nIO104\\nSetup\\nModule: 1');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "Module setup|1|off|Target|-1|[1]|+-10V|+-10V|Differential|[1]|+-10V|[1]|[0]|[1]|[1]|[1]|[0]"
+	}
+	Block {
+	  BlockType		  S-Function
+	  Name			  "Start conversion"
+	  SID			  41
+	  Ports			  []
+	  Position		  [90, 349, 225, 421]
+	  InitFcn		  "sg_IO104_adstart_m(1);"
+	  FunctionName		  "sg_IO104_adstart_s"
+	  Parameters		  "inSync, outSync, ts, pciSlot"
+	  EnableBusSupport	  off
+	  MaskType		  "adstart_IO104"
+	  MaskDescription	  "Speedgoat driver block<br>IO104 - Analog input start conversion<br><br>&copy; 2006 - 2013, Speed"
+	  "goat GmbH, www.speedgoat.ch"
+	  MaskHelp		  "Documentation for this block is not available."
+	  MaskPromptString	  "IO104 module identifier:|Show input synchronization port|Show output synchronization port|Sampl"
+	  "e time:|PCI slot:"
+	  MaskStyleString	  "popup(1|2|3|4|5|6|7|8|9|10),checkbox,checkbox,edit,edit"
+	  MaskVariables		  "id=@1;inSync=@2;outSync=@3;ts=@4;pciSlot=@5;"
+	  MaskTunableValueString  "on,on,on,on,on"
+	  MaskCallbackString	  "||||"
+	  MaskEnableString	  "on,on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on,off"
+	  MaskToolTipString	  "on,on,on,on,on"
+	  MaskInitialization	  "maskDisplay=sg_IO104_adstart_m( 2, id, inSync, outSync);\n"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nIO104\\nAnalog input\\nStart conversion\\nModule: 1');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|off|off|0.001|0"
+	}
+	Block {
+	  BlockType		  S-Function
+	  Name			  "Update channels"
+	  SID			  42
+	  Ports			  []
+	  Position		  [90, 459, 225, 531]
+	  InitFcn		  "sg_IO104_daupdate_m(1);"
+	  FunctionName		  "sg_IO104_daupdate_s"
+	  Parameters		  "inSync, outSync, ts, pciSlot"
+	  EnableBusSupport	  off
+	  MaskType		  "daupdate_IO104"
+	  MaskDescription	  "Speedgoat driver block<br>IO104 - Analog output update channels<br><br>&copy; 2006 - 2013, Speed"
+	  "goat GmbH, www.speedgoat.ch"
+	  MaskHelp		  "Documentation for this block is not available."
+	  MaskPromptString	  "IO104 module identifier:|Show input synchronization port|Show output synchronization port|Sampl"
+	  "e time:|PCI slot:"
+	  MaskStyleString	  "popup(1|2|3|4|5|6|7|8|9|10),checkbox,checkbox,edit,edit"
+	  MaskVariables		  "id=@1;inSync=@2;outSync=@3;ts=@4;pciSlot=@5;"
+	  MaskTunableValueString  "on,on,on,on,on"
+	  MaskCallbackString	  "||||"
+	  MaskEnableString	  "on,on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on,off"
+	  MaskToolTipString	  "on,on,on,on,on"
+	  MaskInitialization	  "maskDisplay=sg_IO104_daupdate_m( 2, id, inSync, outSync);\n"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nIO104\\nAnalog output\\nUpdate channels\\nModule: 1');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|off|off|0.001|0"
+	}
+	Block {
+	  BlockType		  S-Function
+	  Name			  "Write channels"
+	  SID			  43
+	  Ports			  [1]
+	  Position		  [260, 460, 390, 530]
+	  InitFcn		  "sg_IO104_dawrite_m(1);"
+	  FunctionName		  "sg_IO104_dawrite_s"
+	  Parameters		  "inSync, outSync, channels, range, ts, pciSlot"
+	  EnableBusSupport	  off
+	  MaskType		  "dawrite_IO104"
+	  MaskDescription	  "Speedgoat driver block<br>IO104 - Analog output write channels<br><br>&copy; 2006 - 2013, Speedg"
+	  "oat GmbH, www.speedgoat.ch"
+	  MaskHelp		  "Documentation for this block is not available."
+	  MaskPromptString	  "IO104 module identifier:|Show input synchronization port|Show output synchronization port|Chann"
+	  "el:|Range: |Sampletime:|PCI slot (-1: autosearch):"
+	  MaskStyleString	  "popup(1|2|3|4|5|6|7|8|9|10),checkbox,checkbox,edit,edit,edit,edit"
+	  MaskVariables		  "id=@1;inSync=@2;outSync=@3;channels=@4;range=@5;ts=@6;pciSlot=@7;"
+	  MaskTunableValueString  "on,on,on,on,on,on,on"
+	  MaskCallbackString	  "||||||"
+	  MaskEnableString	  "on,on,on,on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,off,off,on,off"
+	  MaskToolTipString	  "on,on,on,on,on,on,on"
+	  MaskInitialization	  "[maskDisplay]=sg_IO104_dawrite_m( 2, id, inSync, outSync, channels);\n"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nIO104\\nAnalog output\\nWrite channels\\nModule: 1');port_label('input',1,'1');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|off|off|[1]|1|0.001|-1"
+	}
+      }
+      RTWSystemCode	      "Auto"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      FunctionWithSeparateData off
+      Opaque		      off
+      MaskHideContents	      off
+    }
+    Annotation {
+      Name		      "Speedgoat IO104 Simulink Real-Time driver library"
+      Position		      [13, 32]
+      HorizontalAlignment     "left"
+      FontName		      "Arial Narrow"
+      FontSize		      12
+      FontWeight	      "bold"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+#ifndef _ATRIAS3D_COMJacob_Left_h_
+#define _ATRIAS3D_COMJacob_Left_h_
+
+#include <math.h>
+
+void ATRIAS3D_COMJacob_Left(const double q[13], const double dq[13], double J_cm[13][3], double dJ_cm[13][3]) ;
+
+
+#endif /* _ATRIAS3D_COMJacob_Left_h_ */

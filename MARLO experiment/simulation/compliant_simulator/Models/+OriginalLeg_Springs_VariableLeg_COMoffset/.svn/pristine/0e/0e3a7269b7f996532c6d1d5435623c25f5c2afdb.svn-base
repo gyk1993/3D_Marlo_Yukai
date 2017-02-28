@@ -1,0 +1,9 @@
+#ifndef _ATRIAS3D_HipPosVel_Right_h_
+#define _ATRIAS3D_HipPosVel_Right_h_
+
+#include <math.h>
+
+void ATRIAS3D_HipPosVel_Right(const double q[13], const double dq[13], double p0[3], double v0[3], double pSwing[3]) ;
+
+
+#endif /* _ATRIAS3D_HipPosVel_Right_h_ */

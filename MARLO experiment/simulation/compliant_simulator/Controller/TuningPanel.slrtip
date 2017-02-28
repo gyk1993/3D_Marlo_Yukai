@@ -1,0 +1,237 @@
+
+  <Object type="Desktop.Xpc.Designer.InstrumentPanel, Desktop.Xpc.Designer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TuningPanel" children="Controls">
+    <Object type="System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="VCGroupBox" children="Controls">
+      <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label12" children="Controls">
+        <Property name="Text">HA Foot Plsmnt</Property>
+        <Property name="UseCompatibleTextRendering">True</Property>
+        <Property name="Location">112, 152</Property>
+        <Property name="Name">Label12</Property>
+        <Property name="Size">100, 23</Property>
+      </Object>
+      <Object type="MW.Instruments.SwitchLED, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="SwitchLED3" children="Controls">
+        <Property name="BindingSrcPath">/jointPassivity_ctrl</Property>
+        <Property name="TargetName">MARLO_Wired</Property>
+        <Property name="BindingSrcType">Parameter</Property>
+        <Property name="Text">Enable Passivety</Property>
+        <Property name="Size">100, 49</Property>
+        <Property name="Location">112, 74</Property>
+        <Property name="Name">SwitchLED3</Property>
+      </Object>
+      <Object type="MW.Instruments.NumericEntry, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericEntry10" children="Controls">
+        <Property name="BindingSrcPath">/footPlacementHA_ctrl</Property>
+        <Property name="TargetName">MARLO_Wired</Property>
+        <Property name="BindingSrcType">Parameter</Property>
+        <Property name="Size">100, 23</Property>
+        <Property name="Location">112, 126</Property>
+        <Property name="Name">NumericEntry10</Property>
+      </Object>
+      <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label11" children="Controls">
+        <Property name="Text">Swing HA Offset</Property>
+        <Property name="UseCompatibleTextRendering">True</Property>
+        <Property name="Location">112, 48</Property>
+        <Property name="Name">Label11</Property>
+        <Property name="Size">100, 23</Property>
+      </Object>
+      <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label13" children="Controls">
+        <Property name="Text">LA Foot Plsmnt</Property>
+        <Property name="UseCompatibleTextRendering">True</Property>
+        <Property name="Location">6, 152</Property>
+        <Property name="Name">Label13</Property>
+        <Property name="Size">100, 23</Property>
+      </Object>
+      <Object type="MW.Instruments.NumericEntry, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericEntry9" children="Controls">
+        <Property name="BindingSrcPath">/deltaSwHA_ctrl</Property>
+        <Property name="TargetName">MARLO_Wired</Property>
+        <Property name="BindingSrcType">Parameter</Property>
+        <Property name="Size">100, 23</Property>
+        <Property name="Location">112, 22</Property>
+        <Property name="Name">NumericEntry9</Property>
+      </Object>
+      <Object type="MW.Instruments.NumericEntry, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericEntry11" children="Controls">
+        <Property name="BindingSrcPath">/footPlacementLA_ctrl</Property>
+        <Property name="TargetName">MARLO_Wired</Property>
+        <Property name="BindingSrcType">Parameter</Property>
+        <Property name="Size">100, 23</Property>
+        <Property name="Location">6, 126</Property>
+        <Property name="Name">NumericEntry11</Property>
+      </Object>
+      <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label10" children="Controls">
+        <Property name="Text">s Period (s)</Property>
+        <Property name="UseCompatibleTextRendering">True</Property>
+        <Property name="Location">6, 100</Property>
+        <Property name="Name">Label10</Property>
+        <Property name="Size">100, 23</Property>
+      </Object>
+      <Object type="MW.Instruments.NumericEntry, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericEntry8" children="Controls">
+        <Property name="BindingSrcPath">/s_period_ctrl</Property>
+        <Property name="TargetName">MARLO_Wired</Property>
+        <Property name="BindingSrcType">Parameter</Property>
+        <Property name="Size">100, 23</Property>
+        <Property name="Location">6, 74</Property>
+        <Property name="Name">NumericEntry8</Property>
+      </Object>
+      <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label9" children="Controls">
+        <Property name="Text">Swing LA Offset</Property>
+        <Property name="UseCompatibleTextRendering">True</Property>
+        <Property name="Location">6, 48</Property>
+        <Property name="Name">Label9</Property>
+        <Property name="Size">100, 23</Property>
+      </Object>
+      <Object type="MW.Instruments.NumericEntry, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericEntry7" children="Controls">
+        <Property name="BindingSrcPath">/deltaSwLA_ctrl</Property>
+        <Property name="TargetName">MARLO_Wired</Property>
+        <Property name="BindingSrcType">Parameter</Property>
+        <Property name="Size">100, 23</Property>
+        <Property name="Location">6, 22</Property>
+        <Property name="Name">NumericEntry7</Property>
+      </Object>
+      <Property name="Text">VC Ctrl</Property>
+      <Property name="UseCompatibleTextRendering">True</Property>
+      <Property name="Location">12, 202</Property>
+      <Property name="Name">VCGroupBox</Property>
+      <Property name="Size">239, 178</Property>
+    </Object>
+    <Object type="System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="JointGroupBox" children="Controls">
+      <Object type="MW.Instruments.NumericalUpDownEntry, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericalUpDownEntry1" children="Controls">
+        <Property name="BindingSrcPath">/joint_test_link_num_ctrl</Property>
+        <Property name="TargetName">MARLO_Wired</Property>
+        <Property name="BindingSrcType">Parameter</Property>
+        <Property name="Maximum">6</Property>
+        <Property name="Minimum">1</Property>
+        <Property name="Value">1</Property>
+        <Property name="Location">6, 74</Property>
+        <Property name="Name">NumericalUpDownEntry1</Property>
+        <Property name="Size">120, 23</Property>
+      </Object>
+      <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label3" children="Controls">
+        <Property name="Text">Freq (Hz)</Property>
+        <Property name="UseCompatibleTextRendering">True</Property>
+        <Property name="Location">6, 48</Property>
+        <Property name="Name">Label3</Property>
+        <Property name="Size">64, 23</Property>
+      </Object>
+      <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label4" children="Controls">
+        <Property name="Text">Amp (deg)</Property>
+        <Property name="UseCompatibleTextRendering">True</Property>
+        <Property name="Location">122, 48</Property>
+        <Property name="Name">Label4</Property>
+        <Property name="Size">64, 23</Property>
+      </Object>
+      <Object type="MW.Instruments.NumericEntry, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericEntry6" children="Controls">
+        <Property name="BindingSrcPath">/joint_test_amp_ctrl</Property>
+        <Property name="TargetName">MARLO_Wired</Property>
+        <Property name="BindingSrcType">Parameter</Property>
+        <Property name="Size">87, 23</Property>
+        <Property name="Location">122, 22</Property>
+        <Property name="Name">NumericEntry6</Property>
+      </Object>
+      <Object type="MW.Instruments.SwitchLED, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="SwitchLED2" children="Controls">
+        <Property name="BindingSrcPath">/joint_zero_ctrl</Property>
+        <Property name="TargetName">MARLO_Wired</Property>
+        <Property name="BindingSrcType">Parameter</Property>
+        <Property name="Text">STAY ON ZERO POSTION</Property>
+        <Property name="Size">222, 49</Property>
+        <Property name="Location">6, 114</Property>
+        <Property name="Name">SwitchLED2</Property>
+      </Object>
+      <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label6" children="Controls">
+        <Property name="TextAlign">MiddleLeft</Property>
+        <Property name="Text">Link (RH, RA, RB, LH, LA, LB)</Property>
+        <Property name="UseCompatibleTextRendering">True</Property>
+        <Property name="Location">143, 74</Property>
+        <Property name="Name">Label6</Property>
+        <Property name="Size">85, 36</Property>
+      </Object>
+      <Object type="MW.Instruments.NumericEntry, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericEntry5" children="Controls">
+        <Property name="BindingSrcPath">/joint_test_freq_ctrl</Property>
+        <Property name="TargetName">MARLO_Wired</Property>
+        <Property name="BindingSrcType">Parameter</Property>
+        <Property name="Size">87, 23</Property>
+        <Property name="Location">6, 22</Property>
+        <Property name="Name">NumericEntry5</Property>
+      </Object>
+      <Property name="Text">Joint Ctrl</Property>
+      <Property name="UseCompatibleTextRendering">True</Property>
+      <Property name="Location">12, 386</Property>
+      <Property name="Name">JointGroupBox</Property>
+      <Property name="RightToLeft">No</Property>
+      <Property name="Size">239, 169</Property>
+    </Object>
+    <Object type="System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="GainsGroupBox" children="Controls">
+      <Object type="MW.Instruments.NumericEntry, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericEntry3" children="Controls">
+        <Property name="BindingSrcPath">/kp_hip_ctrl</Property>
+        <Property name="TargetName">MARLO_Wired</Property>
+        <Property name="BindingSrcType">Parameter</Property>
+        <Property name="Size">87, 23</Property>
+        <Property name="Location">6, 74</Property>
+        <Property name="Name">NumericEntry3</Property>
+      </Object>
+      <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label1" children="Controls">
+        <Property name="Text">Kp Leg</Property>
+        <Property name="UseCompatibleTextRendering">True</Property>
+        <Property name="Location">6, 48</Property>
+        <Property name="Name">Label1</Property>
+        <Property name="Size">64, 23</Property>
+      </Object>
+      <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label8" children="Controls">
+        <Property name="Text">Kd Hip</Property>
+        <Property name="UseCompatibleTextRendering">True</Property>
+        <Property name="Location">112, 100</Property>
+        <Property name="Name">Label8</Property>
+        <Property name="Size">64, 23</Property>
+      </Object>
+      <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label2" children="Controls">
+        <Property name="Text">Kd Leg</Property>
+        <Property name="UseCompatibleTextRendering">True</Property>
+        <Property name="Location">112, 48</Property>
+        <Property name="Name">Label2</Property>
+        <Property name="Size">64, 23</Property>
+      </Object>
+      <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label7" children="Controls">
+        <Property name="Text">Kp Hip</Property>
+        <Property name="UseCompatibleTextRendering">True</Property>
+        <Property name="Location">6, 100</Property>
+        <Property name="Name">Label7</Property>
+        <Property name="Size">64, 23</Property>
+      </Object>
+      <Object type="MW.Instruments.NumericEntry, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericEntry1" children="Controls">
+        <Property name="BindingSrcPath">/kp_ctrl</Property>
+        <Property name="TargetName">MARLO_Wired</Property>
+        <Property name="BindingSrcType">Parameter</Property>
+        <Property name="Size">87, 23</Property>
+        <Property name="Location">6, 22</Property>
+        <Property name="Name">NumericEntry1</Property>
+      </Object>
+      <Object type="MW.Instruments.NumericEntry, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericEntry4" children="Controls">
+        <Property name="BindingSrcPath">/kd_hip_ctrl</Property>
+        <Property name="TargetName">MARLO_Wired</Property>
+        <Property name="BindingSrcType">Parameter</Property>
+        <Property name="Size">87, 23</Property>
+        <Property name="Location">112, 74</Property>
+        <Property name="Name">NumericEntry4</Property>
+      </Object>
+      <Object type="MW.Instruments.NumericEntry, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericEntry2" children="Controls">
+        <Property name="BindingSrcPath">/kd_ctrl</Property>
+        <Property name="TargetName">MARLO_Wired</Property>
+        <Property name="BindingSrcType">Parameter</Property>
+        <Property name="Size">87, 23</Property>
+        <Property name="Location">112, 22</Property>
+        <Property name="Name">NumericEntry2</Property>
+      </Object>
+      <Property name="Text">Gains</Property>
+      <Property name="UseCompatibleTextRendering">True</Property>
+      <Property name="Location">12, 67</Property>
+      <Property name="Name">GainsGroupBox</Property>
+      <Property name="Size">239, 129</Property>
+    </Object>
+    <Object type="MW.Instruments.SwitchLED, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="SwitchLED1" children="Controls">
+      <Property name="BindingSrcPath">/hold_ctrl</Property>
+      <Property name="TargetName">MARLO_Wired</Property>
+      <Property name="BindingSrcType">Parameter</Property>
+      <Property name="Text">HOLD (t/s)</Property>
+      <Property name="Size">239, 49</Property>
+      <Property name="Location">12, 12</Property>
+      <Property name="Name">SwitchLED1</Property>
+    </Object>
+    <Property name="ClientSize">1920, 1200</Property>
+  </Object>

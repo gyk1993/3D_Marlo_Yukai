@@ -1,0 +1,3160 @@
+Library {
+  Name			  "speedgoatlib_IO601"
+  Version		  7.8
+  MdlSubVersion		  0
+  SavedCharacterEncoding  "windows-1252"
+  Description		  "7.14.0.739 (R2012a)"
+  LibraryType		  "BlockLibrary"
+  SaveDefaultBlockParams  on
+  LockLinksToLibrary	  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  FPTRunName		  "Run 1"
+  ForwardingTableString	  "||__slOldName__||speedgoatlib_IO601/Setup||__slNewName__||speedgoatlib_IO601/Obsolete/Setup"
+  "||__slOldName__||speedgoatlib_IO601/Read status CAN port||__slNewName__||speedgoatlib_IO601/Obsolete/Read status CAN"
+  " port||__slOldName__||speedgoatlib_IO601/Read||__slNewName__||speedgoatlib_IO601/Obsolete/Read (v2)||__slOldName__||"
+  "speedgoatlib_IO601/Combined read||__slNewName__||speedgoatlib_IO601/Obsolete/Combined read||__slOldName__||speedgoat"
+  "lib_IO601/Write||__slNewName__||speedgoatlib_IO601/Obsolete/Write (v2)||__slOldName__||speedgoatlib_IO601/Send||__sl"
+  "NewName__||speedgoatlib_IO601/Obsolete/Send||__slOldName__||speedgoatlib_IO601/Receive||__slNewName__||speedgoatlib_"
+  "IO601/Obsolete/Receive"
+  MaxMDLFileLineLength	  120
+  Created		  "Mon Mar 05 18:05:48 2012"
+  Creator		  "dkuratli"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "lab3"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Tue Jul 01 08:26:11 2014"
+  RTWModifiedTimeStamp	  326103971
+  ModelVersionFormat	  "1.%<AutoIncrement:84>"
+  ConfigurationManager	  "none"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowDesignRanges	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  RecordCoverage	  off
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  CovForceBlockReductionOff on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      6
+      Version		      "1.11.1"
+      Array {
+	Type			"Handle"
+	Dimension		9
+	Simulink.SolverCC {
+	  $ObjectID		  7
+	  Version		  "1.11.1"
+	  StartTime		  "0.0"
+	  StopTime		  "10.0"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  ConcurrentTasks	  off
+	  Solver		  "ode45"
+	  SolverName		  "ode45"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  8
+	  Version		  "1.11.1"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SignalLoggingSaveFormat "ModelDataLogs"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  DSMLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  DSMLoggingName	  "dsmout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  9
+	  Version		  "1.11.1"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    8
+	    Cell		    "BooleansAsBitfields"
+	    Cell		    "PassReuseOutputArgsAs"
+	    Cell		    "PassReuseOutputArgsThreshold"
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    Cell		    "UseSpecifiedMinMax"
+	    PropName		    "DisabledProps"
+	  }
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  UseIntDivNetSlope	  off
+	  UseFloatMulNetSlope	  off
+	  UseSpecifiedMinMax	  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  StrengthReduction	  off
+	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
+	  BitfieldContainerType	  "uint_T"
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  MaxStackSize		  "Inherit from target"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	  ParallelExecutionInRapidAccelerator on
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  10
+	  Version		  "1.11.1"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"warning"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  MaskedZcDiagnostic	  "warning"
+	  IgnoredZcDiagnostic	  "warning"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Enable All"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  FrameProcessingCompatibilityMsg "warning"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  SimStateOlderReleaseMsg "error"
+	  InitInArrayFormatMsg	  "warning"
+	  StrictBusMsg		  "ErrorLevel1"
+	  BusNameAdapt		  "WarnAndRepair"
+	  NonBusSignalsTreatedAsBus "none"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	  SFUnusedDataAndEventsDiag "warning"
+	  SFUnexpectedBacktrackingDiag "warning"
+	  SFInvalidInputDataAccessInChartInitDiag "warning"
+	  SFNoUnconditionalDefaultTransitionDiag "warning"
+	  SFTransitionOutsideNaturalParentDiag "warning"
+	  SFUnconditionalTransitionShadowingDiag "warning"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  11
+	  Version		  "1.11.1"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdBitPerFloat	  32
+	  ProdBitPerDouble	  64
+	  ProdBitPerPointer	  32
+	  ProdLargestAtomicInteger "Char"
+	  ProdLargestAtomicFloat  "None"
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetBitPerFloat	  32
+	  TargetBitPerDouble	  64
+	  TargetBitPerPointer	  32
+	  TargetLargestAtomicInteger "Char"
+	  TargetLargestAtomicFloat "None"
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  12
+	  Version		  "1.11.1"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceErrorOnInvalidPool on
+	  ParallelModelReferenceMATLABWorkerInit "None"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  PropagateVarSize	  "Infer from blocks in model"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	  PropagateSignalLabelsOutOfModel off
+	  SupportModelReferenceSimTargetCustomCode off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  13
+	  Version		  "1.11.1"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimCtrlC		  on
+	  SimExtrinsic		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimParseCustomCode	  on
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  14
+	  Version		  "1.11.1"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    9
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    Cell		    "GenerateWebview"
+	    Cell		    "GenerateCodeMetricsReport"
+	    Cell		    "GenerateCodeReplacementReport"
+	    PropName		    "DisabledProps"
+	  }
+	  SystemTargetFile	  "grt.tlc"
+	  TLCOptions		  ""
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  PostCodeGenCommand	  ""
+	  Description		  ""
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ProcessScript		  ""
+	  ConfigurationScript	  ""
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  CustomSourceCode	  ""
+	  CustomHeaderCode	  ""
+	  CustomInclude		  ""
+	  CustomSource		  ""
+	  CustomLibrary		  ""
+	  CustomInitializer	  ""
+	  CustomTerminator	  ""
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  GenerateCodeMetricsReport off
+	  RTWCompilerOptimization "Off"
+	  RTWCustomCompilerOptimizations ""
+	  CheckMdlBeforeBuild	  "Off"
+	  CustomRebuildMode	  "OnUpdate"
+	  DataInitializer	  ""
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      15
+	      Version		      "1.11.1"
+	      Array {
+		Type			"Cell"
+		Dimension		21
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"IgnoreTestpoints"
+		Cell			"InsertBlockDesc"
+		Cell			"InsertPolySpaceComments"
+		Cell			"SFDataObjDesc"
+		Cell			"MATLABFcnDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrFcnArg"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		Cell			"ReqsInCode"
+		PropName		"DisabledProps"
+	      }
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      MATLABFcnDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M_T"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      InsertPolySpaceComments off
+	      SimulinkBlockComments   on
+	      MATLABSourceComments    off
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      16
+	      Version		      "1.11.1"
+	      Array {
+		Type			"Cell"
+		Dimension		16
+		Cell			"GeneratePreprocessorConditionals"
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"CPPClassGenCompliant"
+		Cell			"PortableWordSizes"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"MultiInstanceERTCode"
+		PropName		"DisabledProps"
+	      }
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      TargetFunctionLibrary   "None"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      ConcurrentExecutionCompliant on
+	      IncludeMdlTerminateFcn  on
+	      GeneratePreprocessorConditionals "Disable all"
+	      CombineOutputUpdateFcns off
+	      CombineSignalStateStructs	off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      SupportVariableSizeSignals off
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    on
+	      AutosarCompliant	      off
+	      UseMalloc		      off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      RTWCAPIRootIO	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	hdlcoderui.hdlcc {
+	  $ObjectID		  17
+	  Version		  "1.11.1"
+	  Description		  "HDL Coder custom configuration component"
+	  Name			  "HDL Coder"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    ""
+	    PropName		    "HDLConfigFile"
+	  }
+	  HDLCActiveTab		  "0"
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition    [ 400, 210, 1280, 840 ]  
+    }
+    PropName		    "ConfigurationSets"
+  }
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Concatenate
+      NumInputs		      "2"
+      Mode		      "Vector"
+      ConcatenateDimension    "1"
+    }
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+      LockScale		      off
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+      PreserveConstantTs      off
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via back propagation"
+      LockScale		      off
+      ConvertRealWorld	      "Real World Value (RWV)"
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      OutputFunctionCall      off
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchInputForFeedbackSignals off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      S-Function
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+      SFunctionDeploymentMode off
+    }
+    Block {
+      BlockType		      Selector
+      NumberOfDimensions      "1"
+      IndexMode		      "One-based"
+      InputPortWidth	      "-1"
+      SampleTime	      "-1"
+      IndexOptions	      "Index vector (dialog)"
+      Indices		      "1"
+      OutputSizes	      "1"
+    }
+    Block {
+      BlockType		      SignalSpecification
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      Dimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      DataTypeOverrideAppliesTo	"AllNumericTypes"
+      MinMaxOverflowLogging   "UseLocalSettings"
+      SFBlockType	      "NONE"
+      Variant		      off
+      GeneratePreprocessorConditionals off
+    }
+    Block {
+      BlockType		      Terminator
+    }
+  }
+  System {
+    Name		    "speedgoatlib_IO601"
+    Location		    [10, 10, 700, 850]
+    Open		    off
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    "184"
+    Block {
+      BlockType		      SubSystem
+      Name		      "CAN message"
+      SID		      "50"
+      Ports		      []
+      Position		      [45, 487, 89, 545]
+      ZOrder		      1
+      OpenFcn		      "canmsglib"
+      RequestExecContextInheritance off
+      System {
+	Name			"CAN message"
+	Location		[477, 52, 1714, 2937]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+      }
+      RTWSystemCode	      "Auto"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      FunctionWithSeparateData off
+      Opaque		      off
+      MaskHideContents	      off
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "J1939"
+      SID		      "51"
+      Ports		      []
+      Position		      [125, 487, 169, 545]
+      ZOrder		      1
+      OpenFcn		      "xpcJ1939lib"
+      RequestExecContextInheritance off
+      System {
+	Name			"J1939"
+	Location		[477, 52, 1714, 2937]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+      }
+      RTWSystemCode	      "Auto"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      FunctionWithSeparateData off
+      Opaque		      off
+      MaskHideContents	      off
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "LIN"
+      SID		      "151"
+      Ports		      []
+      Position		      [205, 487, 250, 548]
+      ZOrder		      153
+      RequestExecContextInheritance off
+      System {
+	Name			"LIN"
+	Location		[10, 10, 700, 850]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  S-Function
+	  Name			  "LIN master read"
+	  SID			  "149"
+	  Ports			  [2, 14]
+	  Position		  [330, 190, 545, 395]
+	  ZOrder		  152
+	  InitFcn		  "sg_IO601_linmasterread_m(1);"
+	  FunctionName		  "sg_IO601_linmasterread_s"
+	  Parameters		  "id, nbMessages, ts, pciSlot"
+	  EnableBusSupport	  off
+	  MaskType		  "masterreadlin_IO601"
+	  MaskDescription	  "Speedgoat driver block<br>IO601 - LIN Master read<br><br>&copy; 2006 - 2013, Speedgoat GmbH, www"
+	  ".speedgoat.ch"
+	  MaskHelp		  "Documentation for this block is not available."
+	  MaskPromptString	  "IO601 module identifier:|Number of messages to read:|Sample time:|PCI slot (-1: autosearch):"
+	  MaskStyleString	  "popup(1|2|3|4|5|6|7|8|9|10),edit,edit,edit"
+	  MaskVariables		  "id=@1;nbMessages=@2;ts=@3;pciSlot=@4;"
+	  MaskTunableValueString  "on,on,on,on"
+	  MaskCallbackString	  "|||"
+	  MaskEnableString	  "on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,off"
+	  MaskToolTipString	  "on,on,on,on"
+	  MaskInitialization	  "sg_IO601_linmasterread_m(2, id, nbMessages);"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nIO601\\nLIN Master read\\nModule: 1');port_label('input',1,'id');port_label('inpu"
+	  "t',2,'length');port_label('output',1,'id');port_label('output',2,'length');port_label('output',3,'data1');port_labe"
+	  "l('output',4,'data2');port_label('output',5,'data3');port_label('output',6,'data4');port_label('output',7,'data5');"
+	  "port_label('output',8,'data6');port_label('output',9,'data7');port_label('output',10,'data8');port_label('output',1"
+	  "1,'timestamp');port_label('output',12,'checksum');port_label('output',13,'type');port_label('output',14,'info');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|1|0.001|-1"
+	}
+	Block {
+	  BlockType		  S-Function
+	  Name			  "LIN master write"
+	  SID			  "150"
+	  Ports			  [11]
+	  Position		  [55, 177, 225, 383]
+	  ZOrder		  151
+	  InitFcn		  "sg_IO601_linmasterwrite_m(1);"
+	  FunctionName		  "sg_IO601_linmasterwrite_s"
+	  Parameters		  "id, nbMessages, ts, pciSlot"
+	  EnableBusSupport	  off
+	  MaskType		  "masterwritelin_IO601"
+	  MaskDescription	  "Speedgoat driver block<br>IO601 - LIN Master write<br><br>&copy; 2006 - 2013, Speedgoat GmbH, ww"
+	  "w.speedgoat.ch"
+	  MaskHelp		  "Documentation for this block is not available."
+	  MaskPromptString	  "IO601 module identifier:|Number of messages to write:|Sample time:|PCI slot (-1: autosearch):"
+	  MaskStyleString	  "popup(1|2|3|4|5|6|7|8|9|10),edit,edit,edit"
+	  MaskVariables		  "id=@1;nbMessages=@2;ts=@3;pciSlot=@4;"
+	  MaskTunableValueString  "on,on,on,on"
+	  MaskCallbackString	  "|||"
+	  MaskEnableString	  "on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,off"
+	  MaskToolTipString	  "on,on,on,on"
+	  MaskInitialization	  "sg_IO601_linmasterwrite_m(2, id, nbMessages);"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nIO601\\nLIN Master write\\nModule: 1');port_label('input',1,'type');port_label('i"
+	  "nput',2,'id');port_label('input',3,'length');port_label('input',4,'data1');port_label('input',5,'data2');port_label"
+	  "('input',6,'data3');port_label('input',7,'data4');port_label('input',8,'data5');port_label('input',9,'data6');port_"
+	  "label('input',10,'data7');port_label('input',11,'data8');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|1|0.001|-1"
+	}
+	Block {
+	  BlockType		  S-Function
+	  Name			  "LIN setup"
+	  SID			  "180"
+	  Ports			  []
+	  Position		  [65, 49, 215, 121]
+	  ZOrder		  181
+	  InitFcn		  "sg_IO601_setuplin_m(1);"
+	  FunctionName		  "sg_IO601_setuplin_s"
+	  Parameters		  "id, baudRate, role, pciSlot"
+	  EnableBusSupport	  off
+	  MaskType		  "setuplin_IO601"
+	  MaskDescription	  "Speedgoat driver block<br>IO601 - LIN Setup<br><br>&copy; 2006 - 2013, Speedgoat GmbH, www.speed"
+	  "goat.ch"
+	  MaskHelp		  "Documentation for this block is not available."
+	  MaskPromptString	  "IO601 module identifier:|Role:|Baudrate (bits/s):|PCI slot (-1: autosearch):"
+	  MaskStyleString	  "popup(1|2|3|4|5|6|7|8|9|10),popup(Slave|Master),edit,edit"
+	  MaskVariables		  "id=@1;role=@2;baudRate=@3;pciSlot=@4;"
+	  MaskTunableValueString  "on,on,on,on"
+	  MaskCallbackString	  "|||"
+	  MaskEnableString	  "on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on"
+	  MaskToolTipString	  "on,on,on,on"
+	  MaskInitialization	  "sg_IO601_setuplin_m(2, id, baudRate, pciSlot);"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nIO601\\nLIN Setup\\nModule: 1');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|Master|20000|-1"
+	}
+	Block {
+	  BlockType		  S-Function
+	  Name			  "LIN slave read"
+	  SID			  "182"
+	  Ports			  [0, 13]
+	  Position		  [345, 434, 535, 576]
+	  ZOrder		  183
+	  InitFcn		  "sg_IO601_linslaveread_m(1);"
+	  FunctionName		  "sg_IO601_linslaveread_s"
+	  Parameters		  "id, nbMessages, ts, pciSlot"
+	  EnableBusSupport	  off
+	  MaskType		  "slavereadlin_IO601"
+	  MaskDescription	  "Speedgoat driver block<br>IO601 - LIN Slave read<br><br>&copy; 2006 - 2013, Speedgoat GmbH, www."
+	  "speedgoat.ch"
+	  MaskHelp		  "Documentation for this block is not available."
+	  MaskPromptString	  "IO601 module identifier:|Number of messages to read:|Sample time:|PCI slot (-1: autosearch):"
+	  MaskStyleString	  "popup(1|2|3|4|5|6|7|8|9|10),edit,edit,edit"
+	  MaskVariables		  "id=@1;nbMessages=@2;ts=@3;pciSlot=@4;"
+	  MaskTunableValueString  "on,on,on,on"
+	  MaskCallbackString	  "|||"
+	  MaskEnableString	  "on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,off"
+	  MaskToolTipString	  "on,on,on,on"
+	  MaskInitialization	  "sg_IO601_linslaveread_m(2, id, nbMessages);"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nIO601\\nLIN Slave read\\nModule: 1');port_label('output',1,'id');port_label('outp"
+	  "ut',2,'length');port_label('output',3,'data1');port_label('output',4,'data2');port_label('output',5,'data3');port_l"
+	  "abel('output',6,'data4');port_label('output',7,'data5');port_label('output',8,'data6');port_label('output',9,'data7"
+	  "');port_label('output',10,'data8');port_label('output',11,'timestamp');port_label('output',12,'checksum');port_labe"
+	  "l('output',13,'type');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|1|0.001|-1"
+	}
+	Block {
+	  BlockType		  S-Function
+	  Name			  "LIN slave update"
+	  SID			  "181"
+	  Ports			  [10]
+	  Position		  [45, 433, 240, 592]
+	  ZOrder		  182
+	  InitFcn		  "sg_IO601_linslavewrite_m(1);"
+	  FunctionName		  "sg_IO601_linslavewrite_s"
+	  Parameters		  "id, nbMessages, ts, pciSlot"
+	  EnableBusSupport	  off
+	  MaskType		  "slavewritelin_IO601"
+	  MaskDescription	  "Speedgoat driver block<br>IO601 - LIN Slave update<br><br>&copy; 2006 - 2013, Speedgoat GmbH, ww"
+	  "w.speedgoat.ch"
+	  MaskHelp		  "Documentation for this block is not available."
+	  MaskPromptString	  "IO601 module identifier:|Number of messages to update:|Sample time:|PCI slot (-1: autosearch):"
+	  MaskStyleString	  "popup(1|2|3|4|5|6|7|8|9|10),edit,edit,edit"
+	  MaskVariables		  "id=@1;nbMessages=@2;ts=@3;pciSlot=@4;"
+	  MaskTunableValueString  "on,on,on,on"
+	  MaskCallbackString	  "|||"
+	  MaskEnableString	  "on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,off"
+	  MaskToolTipString	  "on,on,on,on"
+	  MaskInitialization	  "sg_IO601_linslavewrite_m(2, id, nbMessages);"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nIO601\\nLIN Slave update\\nModule: 1');port_label('input',1,'id');port_label('inp"
+	  "ut',2,'length');port_label('input',3,'data1');port_label('input',4,'data2');port_label('input',5,'data3');port_labe"
+	  "l('input',6,'data4');port_label('input',7,'data5');port_label('input',8,'data6');port_label('input',9,'data7');port"
+	  "_label('input',10,'data8');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|1|0.001|-1"
+	}
+	Block {
+	  BlockType		  S-Function
+	  Name			  "LIN status"
+	  SID			  "184"
+	  Ports			  [0, 4]
+	  Position		  [360, 44, 515, 126]
+	  ZOrder		  232
+	  InitFcn		  "sg_IO601_statuslin_m(1);"
+	  FunctionName		  "sg_IO601_statuslin_s"
+	  Parameters		  "ts, pciSlot"
+	  EnableBusSupport	  off
+	  MaskType		  "statuslin_IO601"
+	  MaskDescription	  "Speedgoat driver block<br>IO601 - LIN Status<br><br>&copy; 2006 - 2013, Speedgoat GmbH, www.spee"
+	  "dgoat.ch"
+	  MaskHelp		  "Documentation for this block is not available."
+	  MaskPromptString	  "IO601 module identifier:|Sample time:|PCI slot (-1: autosearch):"
+	  MaskStyleString	  "popup(1|2|3|4|5|6|7|8|9|10),edit,edit"
+	  MaskVariables		  "id=@1;ts=@2;pciSlot=@3;"
+	  MaskTunableValueString  "on,on,on"
+	  MaskCallbackString	  "||"
+	  MaskEnableString	  "on,on,on"
+	  MaskVisibilityString	  "on,on,off"
+	  MaskToolTipString	  "on,on,on"
+	  MaskInitialization	  "sg_IO601_statuslin_m(2, id);"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nIO601\\nLIN Status\\nModule: 1');port_label('output',1,'role');port_label('output"
+	  "',2,'bus load');port_label('output',3,'baudrate');port_label('output',4,'error flag');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|0.001|[2,4]"
+	}
+      }
+      RTWSystemCode	      "Auto"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      FunctionWithSeparateData off
+      Opaque		      off
+      MaskHideContents	      off
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Obsolete"
+      SID		      "49"
+      Ports		      []
+      Position		      [45, 577, 89, 635]
+      ZOrder		      1
+      RequestExecContextInheritance off
+      System {
+	Name			"Obsolete"
+	Location		[1685, 52, 2812, 2042]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  S-Function
+	  Name			  "Combined read"
+	  SID			  "61"
+	  Ports			  [0, 1]
+	  Position		  [25, 275, 135, 335]
+	  ZOrder		  3
+	  InitFcn		  " sg_IO601_cread_m(1);"
+	  FunctionName		  "sg_IO601_cread_s"
+	  Parameters		  "id, depth, status, sampletime, pciSlot"
+	  EnableBusSupport	  off
+	  MaskType		  "cread_IO601"
+	  MaskDescription	  "Speedgoat driver block<br>IO601 - Combined read<br><br>&copy; 2006 - 2013, Speedgoat GmbH, www.s"
+	  "peedgoat.ch"
+	  MaskHelp		  "web(['C:\\Program Files\\MATLAB\\R2013a\\toolbox\\rtw\\targets\\xpc\\target\\build\\xpcblocks\\thirdpa"
+	  "rtydrivers\\sg_html\\io601_combined-read-driver-block.html'],'-helpbrowser');"
+	  MaskPromptString	  "IO601 module identifier:|Receive queue read depth [CAN port 1, CAN port 2]:|Show status output "
+	  "port|Sample time:|PCI slot (-1: autosearch):"
+	  MaskStyleString	  "popup(1|2|3|4|5|6|7|8|9|10),edit,checkbox,edit,edit"
+	  MaskVariables		  "id=@1;depth=@2;status=@3;sampletime=@4;pciSlot=@5;"
+	  MaskTunableValueString  "on,on,on,on,on"
+	  MaskCallbackString	  "||||"
+	  MaskEnableString	  "on,on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on,off"
+	  MaskToolTipString	  "on,on,on,on,on"
+	  MaskInitialization	  "maskDisplay= sg_IO601_cread_m(2, id);\n"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nIO601\\nCombined read\\nModule: 1');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|[1,0]|off|0.001|0"
+	}
+	Block {
+	  BlockType		  S-Function
+	  Name			  "Read"
+	  SID			  "7"
+	  Ports			  [0, 1]
+	  Position		  [195, 95, 305, 155]
+	  ZOrder		  -1
+	  InitFcn		  "sg_IO601_read_m(1);"
+	  FunctionName		  "sg_IO601_read_s"
+	  Parameters		  "id, port, depth, status, sampletime, pciSlot"
+	  EnableBusSupport	  off
+	  MaskType		  "read_IO601"
+	  MaskDescription	  "Speedgoat driver block<br>IO601 - Read<br><br>&copy; 2006 - 2013, Speedgoat GmbH, www.speedgoat."
+	  "ch"
+	  MaskHelp		  "web(['C:\\Program Files\\MATLAB\\R2013a\\toolbox\\rtw\\targets\\xpc\\target\\build\\xpcblocks\\thirdpa"
+	  "rtydrivers\\sg_html\\io601_read-driver-block-including-can-messaging-support.html'],'-helpbrowser');"
+	  MaskPromptString	  "IO601 module identifier:|CAN port:|Receive queue read depth:|Show status output port|Sample tim"
+	  "e:|PCI slot (-1: autosearch):"
+	  MaskStyleString	  "popup(1|2|3|4|5|6|7|8|9|10),popup(1|2),edit,checkbox,edit,edit"
+	  MaskVariables		  "id=@1;port=@2;depth=@3;status=@4;sampletime=@5;pciSlot=@6;"
+	  MaskTunableValueString  "on,on,on,on,on,on"
+	  MaskCallbackString	  "|||||"
+	  MaskEnableString	  "on,on,on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,off,on,off"
+	  MaskToolTipString	  "on,on,on,on,on,on"
+	  MaskInitialization	  "maskDisplay= sg_IO601_read_m(2, id);"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nIO601\\nRead\\nModule: 1');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|1|1|off|0.001|0"
+	}
+	Block {
+	  BlockType		  S-Function
+	  Name			  "Read (v2)"
+	  SID			  "5"
+	  Ports			  [0, 2]
+	  Position		  [195, 185, 305, 245]
+	  ZOrder		  2
+	  InitFcn		  "sg_IO601_read_m(1);"
+	  FunctionName		  "sg_IO601_read2_s"
+	  Parameters		  "id, port, depth, outputFormat, status, sampletime, pciSlot"
+	  EnableBusSupport	  off
+	  MaskType		  "read_IO601"
+	  MaskDescription	  "Speedgoat driver block<br>IO601 - Read<br><br>&copy; 2006 - 2013, Speedgoat GmbH, www.speedgoat."
+	  "ch"
+	  MaskHelp		  "web(['C:\\Program Files\\MATLAB\\R2013a\\toolbox\\rtw\\targets\\xpc\\target\\build\\xpcblocks\\thirdpa"
+	  "rtydrivers\\sg_html\\io601_read-driver-block-including-can-messaging-support.html'],'-helpbrowser');"
+	  MaskPromptString	  "IO601 module identifier:|Output format:|CAN port:|Receive queue read depth:|Show status output "
+	  "port|Sample time:|PCI slot (-1: autosearch):"
+	  MaskStyleString	  "popup(1|2|3|4|5|6|7|8|9|10),popup(Matrix of doubles (legacy)|Vector of CAN_MESSAGE plus count),p"
+	  "opup(1|2),edit,checkbox,edit,edit"
+	  MaskVariables		  "id=@1;outputFormat=@2;port=@3;depth=@4;status=@5;sampletime=@6;pciSlot=@7;"
+	  MaskTunableValueString  "on,on,on,on,on,on,on"
+	  MaskCallbackString	  "||||||"
+	  MaskEnableString	  "on,on,on,on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on,off,on,off"
+	  MaskToolTipString	  "on,on,on,on,on,on,on"
+	  MaskInitialization	  "maskDisplay= sg_IO601_read_m(2, id);"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nIO601\\nRead\\nModule: 1');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|Vector of CAN_MESSAGE plus count|1|1|off|0.001|-1"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Read status"
+	  SID			  "67"
+	  Ports			  [1, 6]
+	  Position		  [195, 535, 335, 680]
+	  ZOrder		  9
+	  RequestExecContextInheritance	off
+	  MaskType		  "readstatus_IO601"
+	  MaskDescription	  "This block accepts as an input the output of a Status block and outputs the six status elements "
+	  "as individual ports. This block is just a graphical subsystem."
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  System {
+	    Name		    "Read status"
+	    Location		    [16, 52, 1343, 3243]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Status"
+	      SID		      "68"
+	      Position		      [15, 193, 45, 207]
+	      ZOrder		      -1
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux"
+	      SID		      "69"
+	      Ports		      [1, 6]
+	      Position		      [270, 26, 275, 369]
+	      ZOrder		      -2
+	      BackgroundColor	      "black"
+	      ShowName		      off
+	      Outputs		      "6"
+	      DisplayOption	      "bar"
+	    }
+	    Block {
+	      BlockType		      SignalSpecification
+	      Name		      "Signal Specification"
+	      SID		      "70"
+	      Position		      [80, 181, 225, 219]
+	      ZOrder		      -3
+	      OutDataTypeStr	      "uint16"
+	      Dimensions	      "6"
+	      SignalType	      "real"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Status CAN Port 1"
+	      SID		      "71"
+	      Position		      [340, 53, 370, 67]
+	      ZOrder		      -4
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Busload CAN Port 1"
+	      SID		      "72"
+	      Position		      [340, 108, 370, 122]
+	      ZOrder		      -5
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Status CAN Port 2"
+	      SID		      "73"
+	      Position		      [340, 163, 370, 177]
+	      ZOrder		      -6
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Busload CAN Port 2"
+	      SID		      "74"
+	      Position		      [340, 218, 370, 232]
+	      ZOrder		      -7
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "CPU Load"
+	      SID		      "75"
+	      Position		      [340, 273, 370, 287]
+	      ZOrder		      -8
+	      Port		      "5"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Life counter"
+	      SID		      "76"
+	      Position		      [335, 328, 365, 342]
+	      ZOrder		      -9
+	      Port		      "6"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "Signal Specification"
+	      SrcPort		      1
+	      DstBlock		      "Demux"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      1
+	      DstBlock		      "Status CAN Port 1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      2
+	      DstBlock		      "Busload CAN Port 1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      3
+	      DstBlock		      "Status CAN Port 2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Status"
+	      SrcPort		      1
+	      DstBlock		      "Signal Specification"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      4
+	      DstBlock		      "Busload CAN Port 2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      5
+	      DstBlock		      "CPU Load"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      6
+	      DstBlock		      "Life counter"
+	      DstPort		      1
+	    }
+	  }
+	  RTWSystemCode		  "Auto"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  MaskHideContents	  off
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Read status CAN port"
+	  SID			  "78"
+	  Ports			  [1, 8]
+	  Position		  [535, 272, 705, 518]
+	  ZOrder		  10
+	  RequestExecContextInheritance	off
+	  MaskType		  "readstatuscanport_IO601"
+	  MaskDescription	  "This block accepts as an input the output of a CAN Port Status signal from the Read status block"
+	  " and outputs 8 individual status signals.  This block is just a graphical subsystem. "
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  System {
+	    Name		    "Read status CAN port"
+	    Location		    [16, 52, 1562, 3504]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Status CAN Port"
+	      SID		      "88"
+	      Position		      [15, 193, 45, 207]
+	      ZOrder		      -1
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      DataTypeConversion
+	      Name		      "Data Type Conversion"
+	      SID		      "89"
+	      Position		      [445, 51, 520, 79]
+	      ZOrder		      -2
+	      OutDataTypeStr	      "boolean"
+	      RndMeth		      "Floor"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      DataTypeConversion
+	      Name		      "Data Type Conversion1"
+	      SID		      "90"
+	      Position		      [445, 101, 520, 129]
+	      ZOrder		      -3
+	      OutDataTypeStr	      "boolean"
+	      RndMeth		      "Floor"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      DataTypeConversion
+	      Name		      "Data Type Conversion2"
+	      SID		      "91"
+	      Position		      [445, 156, 520, 184]
+	      ZOrder		      -4
+	      OutDataTypeStr	      "boolean"
+	      RndMeth		      "Floor"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      DataTypeConversion
+	      Name		      "Data Type Conversion3"
+	      SID		      "92"
+	      Position		      [445, 266, 520, 294]
+	      ZOrder		      -5
+	      OutDataTypeStr	      "boolean"
+	      RndMeth		      "Floor"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      DataTypeConversion
+	      Name		      "Data Type Conversion4"
+	      SID		      "93"
+	      Position		      [445, 321, 520, 349]
+	      ZOrder		      -6
+	      OutDataTypeStr	      "boolean"
+	      RndMeth		      "Floor"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      DataTypeConversion
+	      Name		      "Data Type Conversion5"
+	      SID		      "94"
+	      Position		      [445, 376, 520, 404]
+	      ZOrder		      -7
+	      OutDataTypeStr	      "boolean"
+	      RndMeth		      "Floor"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      DataTypeConversion
+	      Name		      "Data Type Conversion6"
+	      SID		      "95"
+	      Position		      [445, 426, 520, 454]
+	      ZOrder		      -8
+	      OutDataTypeStr	      "boolean"
+	      RndMeth		      "Floor"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      DataTypeConversion
+	      Name		      "Data Type Conversion7"
+	      SID		      "96"
+	      Position		      [445, 211, 520, 239]
+	      ZOrder		      -9
+	      OutDataTypeStr	      "boolean"
+	      RndMeth		      "Floor"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Extract Bits"
+	      SID		      "97"
+	      Ports		      [1, 1]
+	      Position		      [315, 50, 395, 80]
+	      ZOrder		      -10
+	      LibraryVersion	      "1.287"
+	      SourceBlock	      "simulink/Logic and Bit\nOperations/Extract Bits"
+	      SourceType	      "Extract Bits"
+	      bitsToExtract	      "Range of bits"
+	      numBits		      "8"
+	      bitIdxRange	      "[1]"
+	      outScalingMode	      "Preserve fixed-point scaling"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Extract Bits1"
+	      SID		      "98"
+	      Ports		      [1, 1]
+	      Position		      [315, 100, 395, 130]
+	      ZOrder		      -11
+	      LibraryVersion	      "1.287"
+	      SourceBlock	      "simulink/Logic and Bit\nOperations/Extract Bits"
+	      SourceType	      "Extract Bits"
+	      bitsToExtract	      "Range of bits"
+	      numBits		      "8"
+	      bitIdxRange	      "[2]"
+	      outScalingMode	      "Preserve fixed-point scaling"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Extract Bits2"
+	      SID		      "99"
+	      Ports		      [1, 1]
+	      Position		      [315, 155, 395, 185]
+	      ZOrder		      -12
+	      LibraryVersion	      "1.287"
+	      SourceBlock	      "simulink/Logic and Bit\nOperations/Extract Bits"
+	      SourceType	      "Extract Bits"
+	      bitsToExtract	      "Range of bits"
+	      numBits		      "8"
+	      bitIdxRange	      "[3]"
+	      outScalingMode	      "Preserve fixed-point scaling"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Extract Bits3"
+	      SID		      "100"
+	      Ports		      [1, 1]
+	      Position		      [315, 265, 395, 295]
+	      ZOrder		      -13
+	      LibraryVersion	      "1.287"
+	      SourceBlock	      "simulink/Logic and Bit\nOperations/Extract Bits"
+	      SourceType	      "Extract Bits"
+	      bitsToExtract	      "Range of bits"
+	      numBits		      "8"
+	      bitIdxRange	      "[5]"
+	      outScalingMode	      "Preserve fixed-point scaling"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Extract Bits4"
+	      SID		      "101"
+	      Ports		      [1, 1]
+	      Position		      [315, 320, 395, 350]
+	      ZOrder		      -14
+	      LibraryVersion	      "1.287"
+	      SourceBlock	      "simulink/Logic and Bit\nOperations/Extract Bits"
+	      SourceType	      "Extract Bits"
+	      bitsToExtract	      "Range of bits"
+	      numBits		      "8"
+	      bitIdxRange	      "[6]"
+	      outScalingMode	      "Preserve fixed-point scaling"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Extract Bits5"
+	      SID		      "102"
+	      Ports		      [1, 1]
+	      Position		      [315, 375, 395, 405]
+	      ZOrder		      -15
+	      LibraryVersion	      "1.287"
+	      SourceBlock	      "simulink/Logic and Bit\nOperations/Extract Bits"
+	      SourceType	      "Extract Bits"
+	      bitsToExtract	      "Range of bits"
+	      numBits		      "8"
+	      bitIdxRange	      "[8]"
+	      outScalingMode	      "Preserve fixed-point scaling"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Extract Bits6"
+	      SID		      "103"
+	      Ports		      [1, 1]
+	      Position		      [315, 425, 395, 455]
+	      ZOrder		      -16
+	      LibraryVersion	      "1.287"
+	      SourceBlock	      "simulink/Logic and Bit\nOperations/Extract Bits"
+	      SourceType	      "Extract Bits"
+	      bitsToExtract	      "Range of bits"
+	      numBits		      "8"
+	      bitIdxRange	      "[9]"
+	      outScalingMode	      "Preserve fixed-point scaling"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Extract Bits7"
+	      SID		      "104"
+	      Ports		      [1, 1]
+	      Position		      [315, 210, 395, 240]
+	      ZOrder		      -17
+	      LibraryVersion	      "1.287"
+	      SourceBlock	      "simulink/Logic and Bit\nOperations/Extract Bits"
+	      SourceType	      "Extract Bits"
+	      bitsToExtract	      "Range of bits"
+	      numBits		      "8"
+	      bitIdxRange	      "[4]"
+	      outScalingMode	      "Preserve fixed-point scaling"
+	    }
+	    Block {
+	      BlockType		      SignalSpecification
+	      Name		      "Signal Specification"
+	      SID		      "105"
+	      Position		      [80, 181, 225, 219]
+	      ZOrder		      -18
+	      OutDataTypeStr	      "uint16"
+	      Dimensions	      "1"
+	      SignalType	      "real"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Error/Warning"
+	      SID		      "106"
+	      Position		      [580, 58, 610, 72]
+	      ZOrder		      -19
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Bus Off"
+	      SID		      "107"
+	      Position		      [580, 108, 610, 122]
+	      ZOrder		      -20
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Data Overrun"
+	      SID		      "108"
+	      Position		      [580, 163, 610, 177]
+	      ZOrder		      -21
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Transmit"
+	      SID		      "109"
+	      Position		      [580, 273, 610, 287]
+	      ZOrder		      -22
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Transceiver Error"
+	      SID		      "110"
+	      Position		      [580, 328, 610, 342]
+	      ZOrder		      -23
+	      Port		      "5"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Receive Queue Overrun"
+	      SID		      "111"
+	      Position		      [580, 383, 610, 397]
+	      ZOrder		      -24
+	      Port		      "6"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Receive Queue Empty"
+	      SID		      "112"
+	      Position		      [580, 433, 610, 447]
+	      ZOrder		      -25
+	      Port		      "7"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Receive"
+	      SID		      "113"
+	      Position		      [580, 218, 610, 232]
+	      ZOrder		      -26
+	      Port		      "8"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "Signal Specification"
+	      SrcPort		      1
+	      Points		      [35, 0]
+	      Branch {
+		Points			[0, -30]
+		Branch {
+		  Points		  [0, -55]
+		  Branch {
+		    Points		    [0, -50]
+		    DstBlock		    "Extract Bits"
+		    DstPort		    1
+		  }
+		  Branch {
+		    DstBlock		    "Extract Bits1"
+		    DstPort		    1
+		  }
+		}
+		Branch {
+		  DstBlock		  "Extract Bits2"
+		  DstPort		  1
+		}
+	      }
+	      Branch {
+		Points			[0, 25]
+		Branch {
+		  Points		  [0, 55]
+		  Branch {
+		    Points		    [0, 55]
+		    Branch {
+		    Points		    [0, 55]
+		    Branch {
+		    Points		    [0, 50]
+		    DstBlock		    "Extract Bits6"
+		    DstPort		    1
+		    }
+		    Branch {
+		    DstBlock		    "Extract Bits5"
+		    DstPort		    1
+		    }
+		    }
+		    Branch {
+		    DstBlock		    "Extract Bits4"
+		    DstPort		    1
+		    }
+		  }
+		  Branch {
+		    DstBlock		    "Extract Bits3"
+		    DstPort		    1
+		  }
+		}
+		Branch {
+		  DstBlock		  "Extract Bits7"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Status CAN Port"
+	      SrcPort		      1
+	      DstBlock		      "Signal Specification"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Extract Bits"
+	      SrcPort		      1
+	      DstBlock		      "Data Type Conversion"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Data Type Conversion"
+	      SrcPort		      1
+	      DstBlock		      "Error/Warning"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Extract Bits1"
+	      SrcPort		      1
+	      DstBlock		      "Data Type Conversion1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Extract Bits2"
+	      SrcPort		      1
+	      DstBlock		      "Data Type Conversion2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Extract Bits3"
+	      SrcPort		      1
+	      DstBlock		      "Data Type Conversion3"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Extract Bits4"
+	      SrcPort		      1
+	      DstBlock		      "Data Type Conversion4"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Extract Bits5"
+	      SrcPort		      1
+	      DstBlock		      "Data Type Conversion5"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Extract Bits6"
+	      SrcPort		      1
+	      DstBlock		      "Data Type Conversion6"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Data Type Conversion6"
+	      SrcPort		      1
+	      DstBlock		      "Receive Queue Empty"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Data Type Conversion5"
+	      SrcPort		      1
+	      DstBlock		      "Receive Queue Overrun"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Data Type Conversion4"
+	      SrcPort		      1
+	      DstBlock		      "Transceiver Error"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Data Type Conversion3"
+	      SrcPort		      1
+	      DstBlock		      "Transmit"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Data Type Conversion2"
+	      SrcPort		      1
+	      DstBlock		      "Data Overrun"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Data Type Conversion1"
+	      SrcPort		      1
+	      DstBlock		      "Bus Off"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Extract Bits7"
+	      SrcPort		      1
+	      DstBlock		      "Data Type Conversion7"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Data Type Conversion7"
+	      SrcPort		      1
+	      DstBlock		      "Receive"
+	      DstPort		      1
+	    }
+	  }
+	  RTWSystemCode		  "Auto"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  MaskHideContents	  off
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Read status1"
+	  SID			  "77"
+	  Ports			  [1, 6]
+	  Position		  [350, 275, 490, 420]
+	  ZOrder		  11
+	  RequestExecContextInheritance	off
+	  MaskType		  "readstatus_IO601"
+	  MaskDescription	  "This block accepts as an input the output of a Status block and outputs the six status elements "
+	  "as individual ports. This block is just a graphical subsystem."
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  System {
+	    Name		    "Read status1"
+	    Location		    [16, 52, 1343, 3243]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Status"
+	      SID		      "79"
+	      Position		      [15, 193, 45, 207]
+	      ZOrder		      -1
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux"
+	      SID		      "80"
+	      Ports		      [1, 6]
+	      Position		      [270, 26, 275, 369]
+	      ZOrder		      -2
+	      BackgroundColor	      "black"
+	      ShowName		      off
+	      Outputs		      "6"
+	      DisplayOption	      "bar"
+	    }
+	    Block {
+	      BlockType		      SignalSpecification
+	      Name		      "Signal Specification"
+	      SID		      "81"
+	      Position		      [80, 181, 225, 219]
+	      ZOrder		      -3
+	      OutDataTypeStr	      "uint16"
+	      Dimensions	      "6"
+	      SignalType	      "real"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Status CAN Port 1"
+	      SID		      "82"
+	      Position		      [340, 53, 370, 67]
+	      ZOrder		      -4
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Busload CAN Port 1"
+	      SID		      "83"
+	      Position		      [340, 108, 370, 122]
+	      ZOrder		      -5
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Status CAN Port 2"
+	      SID		      "84"
+	      Position		      [340, 163, 370, 177]
+	      ZOrder		      -6
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Busload CAN Port 2"
+	      SID		      "85"
+	      Position		      [340, 218, 370, 232]
+	      ZOrder		      -7
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "CPU Load"
+	      SID		      "86"
+	      Position		      [340, 273, 370, 287]
+	      ZOrder		      -8
+	      Port		      "5"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Life counter"
+	      SID		      "87"
+	      Position		      [335, 328, 365, 342]
+	      ZOrder		      -9
+	      Port		      "6"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "Signal Specification"
+	      SrcPort		      1
+	      DstBlock		      "Demux"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      1
+	      DstBlock		      "Status CAN Port 1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      2
+	      DstBlock		      "Busload CAN Port 1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      3
+	      DstBlock		      "Status CAN Port 2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Status"
+	      SrcPort		      1
+	      DstBlock		      "Signal Specification"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      4
+	      DstBlock		      "Busload CAN Port 2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      5
+	      DstBlock		      "CPU Load"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      6
+	      DstBlock		      "Life counter"
+	      DstPort		      1
+	    }
+	  }
+	  RTWSystemCode		  "Auto"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  MaskHideContents	  off
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Receive"
+	  SID			  "62"
+	  Ports			  [1, 1]
+	  Position		  [205, 392, 320, 488]
+	  ZOrder		  5
+	  InitFcn		  "sg_IO601_receive_m(1);"
+	  RequestExecContextInheritance	off
+	  MaskType		  "receive_IO601"
+	  MaskDescription	  "Speedgoat driver block<br>IO601 - Receive<br><br>&copy; 2006 - 2013, Speedgoat GmbH, www.speedgo"
+	  "at.ch"
+	  MaskHelp		  "Documentation for this block is not available."
+	  MaskPromptString	  "IO601 module identifier:|CAN port:|CAN message type:|CAN identifier:"
+	  MaskStyleString	  "popup(1|2|3|4|5|6|7|8|9|10),popup(Any|CAN 1|CAN 2),popup(Standard (11-bit)|Extended (29-bit)),ed"
+	  "it"
+	  MaskVariables		  "id=@1;canPort=@2;canType=@3;canId=@4;"
+	  MaskTunableValueString  "on,on,on,on"
+	  MaskCallbackString	  "|||"
+	  MaskEnableString	  "on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on"
+	  MaskToolTipString	  "on,on,on,on"
+	  MaskInitialization	  "maskDisplay= sg_IO601_receive_m(2, id, canPort, canType, canId);\n"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nIO601\\nReceive\\nModule: 1\\nCAN any:  Std\\nId: 0 (0x0)');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|Any|Standard (11-bit)|0"
+	  System {
+	    Name		    "Receive"
+	    Location		    [427, 52, 1858, 3458]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    SIDHighWatermark	    "5"
+	    SIDPrevWatermark	    "5"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      SID		      "62:1"
+	      Position		      [35, 168, 65, 182]
+	      ZOrder		      -1
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "FIFO Read Filter  1"
+	      SID		      "62:2"
+	      Ports		      [1, 2]
+	      Position		      [180, 146, 260, 199]
+	      ZOrder		      -2
+	      LibraryVersion	      "1.6"
+	      SourceBlock	      "xpclib/CAN/Softing/CAN-AC2-PCI\nSJA 1000/FIFO Mode/FIFO Read Filter "
+	      SourceType	      "canrcvfifofilter"
+	      portin		      "Any"
+	      ctypein		      "SDF"
+	      direction		      "Include"
+	      ident		      "canId"
+	      identsel		      "Include"
+	    }
+	    Block {
+	      BlockType		      Selector
+	      Name		      "Selector"
+	      SID		      "62:3"
+	      Ports		      [1, 1]
+	      Position		      [355, 132, 415, 158]
+	      ZOrder		      -3
+	      InputPortWidth	      "6"
+	      Indices		      "[6]"
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator"
+	      SID		      "62:4"
+	      Position		      [330, 185, 350, 205]
+	      ZOrder		      -4
+	      ShowName		      off
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      SID		      "62:5"
+	      Position		      [535, 138, 565, 152]
+	      ZOrder		      -5
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "FIFO Read Filter  1"
+	      SrcPort		      1
+	      Points		      [35, 0; 0, -15]
+	      DstBlock		      "Selector"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "FIFO Read Filter  1"
+	      SrcPort		      2
+	      Points		      [25, 0; 0, 10]
+	      DstBlock		      "Terminator"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "In1"
+	      SrcPort		      1
+	      DstBlock		      "FIFO Read Filter  1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Selector"
+	      SrcPort		      1
+	      DstBlock		      "Out1"
+	      DstPort		      1
+	    }
+	  }
+	  RTWSystemCode		  "Auto"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  MaskHideContents	  off
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Send"
+	  SID			  "63"
+	  Ports			  [1]
+	  Position		  [25, 390, 145, 490]
+	  ZOrder		  4
+	  InitFcn		  "sg_IO601_send_m(1);"
+	  RequestExecContextInheritance	off
+	  MaskType		  "send_IO601"
+	  MaskDescription	  "Speedgoat driver block<br>IO601 - Send<br><br>&copy; 2006 - 2013, Speedgoat GmbH, www.speedgoat."
+	  "ch"
+	  MaskHelp		  "Documentation for this block is not available."
+	  MaskPromptString	  "IO601 module identifier:|CAN port:|CAN message type:|CAN identifier:|CAN data frame size:|Sampl"
+	  "e time:"
+	  MaskStyleString	  "popup(1|2|3|4|5|6|7|8|9|10),popup(CAN 1|CAN 2),popup(Standard (11-bit)|Extended (29-bit)),edit,e"
+	  "dit,edit"
+	  MaskVariables		  "id=@1;canPort=@2;canType=@3;canId=@4;canSize=@5;ts=@6;"
+	  MaskTunableValueString  "on,on,on,on,on,on"
+	  MaskCallbackString	  "|||||"
+	  MaskEnableString	  "on,on,on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on,on,on"
+	  MaskToolTipString	  "on,on,on,on,on,on"
+	  MaskInitialization	  "[a,b,maskDisplay]=sg_IO601_send_m(2, id, canPort, canType, canId, canSize);\n\n"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nIO601\\nSend\\nModule: 1\\nCAN 1:  Std, 8\\nId: 0 (0x0)');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|CAN 1|Standard (11-bit)|0|8|0.001"
+	  System {
+	    Name		    "Send"
+	    Location		    [427, 52, 1858, 3458]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    SIDHighWatermark	    "6"
+	    SIDPrevWatermark	    "6"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      SID		      "63:1"
+	      Position		      [100, 78, 130, 92]
+	      ZOrder		      -1
+	      IconDisplay	      "Port number"
+	      PortDimensions	      "1"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant"
+	      SID		      "63:2"
+	      Position		      [25, 30, 55, 60]
+	      ZOrder		      -2
+	      Value		      "a"
+	      VectorParams1D	      off
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant1"
+	      SID		      "63:3"
+	      Position		      [25, 110, 55, 140]
+	      ZOrder		      -3
+	      Value		      "b"
+	      VectorParams1D	      off
+	    }
+	    Block {
+	      BlockType		      Concatenate
+	      Name		      "Matrix\nConcatenation"
+	      SID		      "63:4"
+	      Ports		      [3, 1]
+	      Position		      [155, 25, 210, 145]
+	      ZOrder		      -4
+	      NumInputs		      "3"
+	      Mode		      "Multidimensional array"
+	      ConcatenateDimension    "2"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Write"
+	      SID		      "63:6"
+	      Ports		      [1]
+	      Position		      [280, 56, 390, 114]
+	      ZOrder		      -5
+	      LibraryVersion	      "1.83"
+	      SourceBlock	      "speedgoatlib_IO601/Obsolete/Write"
+	      SourceType	      "write_IO601"
+	      id		      "1"
+	      status		      off
+	      sampletime	      "ts"
+	      pciSlot		      "0"
+	    }
+	    Line {
+	      SrcBlock		      "Matrix\nConcatenation"
+	      SrcPort		      1
+	      DstBlock		      "Write"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Constant"
+	      SrcPort		      1
+	      DstBlock		      "Matrix\nConcatenation"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Constant1"
+	      SrcPort		      1
+	      DstBlock		      "Matrix\nConcatenation"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "In1"
+	      SrcPort		      1
+	      DstBlock		      "Matrix\nConcatenation"
+	      DstPort		      2
+	    }
+	  }
+	  RTWSystemCode		  "Auto"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  MaskHideContents	  off
+	}
+	Block {
+	  BlockType		  S-Function
+	  Name			  "Setup"
+	  SID			  "3"
+	  Ports			  []
+	  Position		  [20, 15, 130, 75]
+	  ZOrder		  1
+	  InitFcn		  "sg_IO601_setup_m(1);"
+	  FunctionName		  "sg_IO601_setup_s"
+	  Parameters		  "id, can1enable, can1bus, can1UserBR, acc1, filter1std, filter1ext, can2enable, can2bus, can2UserBR, "
+	  "acc2, filter2std, filter2ext, initarray, termarray, pciSlot"
+	  EnableBusSupport	  off
+	  MaskType		  "setup_IO601"
+	  MaskDescription	  "Speedgoat driver block<br>IO601 - Setup<br><br>&copy; 2006 - 2013, Speedgoat GmbH, www.speedgoat"
+	  ".ch"
+	  MaskHelp		  "web(['C:\\Program Files\\MATLAB\\R2013a\\toolbox\\rtw\\targets\\xpc\\target\\build\\xpcblocks\\thirdpa"
+	  "rtydrivers\\sg_html\\io601_setup-driver-block.html'],'-helpbrowser');"
+	  MaskPromptString	  "Parameter group:|IO601 module identifier:|Enable|Physical bus:|Baud rate:|User defined baud rat"
+	  "e [BRP, SJW, TSEG1, TSEG2]:|Acceptance [StdMask, StdCode, ExtMask, ExtCode]:|Standard identifier receive filter vec"
+	  "tor:|Extended identifier receive filter vector:|Enable|Physical bus:|Baud rate:|User defined baud rate [BRP, SJW, T"
+	  "SEG1, TSEG2]:|Acceptance [StdMask, StdCode, ExtMask, ExtCode]:|Standard identifier receive filter vector:|Extended "
+	  "identifier receive filter vector:|Initialization command structure:|Termination command structure:|PCI slot (-1: au"
+	  "tosearch):"
+	  MaskStyleString	  "popup(Module setup|CAN 1 port setup|CAN 2 port setup|Initialisation and termination setup),popup"
+	  "(1|2|3|4|5|6|7|8|9|10),checkbox,popup(Highspeed |Lowspeed),popup(1 MBaud|800 kBaud|500 kBaud|250 kBaud|125 kBaud|10"
+	  "0 kBaud|10 kBaud|User defined),edit,edit,edit,edit,checkbox,popup(Highspeed|Lowspeed),popup(1 MBaud|800 kBaud|500 k"
+	  "Baud|250 kBaud|125 kBaud|100 kBaud|10 kBaud|User defined),edit,edit,edit,edit,edit,edit,edit"
+	  MaskVariables		  "group=@1;id=@2;can1enable=@3;can1bus=@4;can1Baudrate=@5;can1UserBR=@6;acc1=@7;filter1std=@8;filte"
+	  "r1ext=@9;can2enable=@10;can2bus=@11;can2Baudrate=@12;can2UserBR=@13;acc2=@14;filter2std=@15;filter2ext=@16;init=@17"
+	  ";term=@18;pciSlot=@19;"
+	  MaskTunableValueString  "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+	  MaskCallbackString	  "sg_IO601_setup_m(2);||||||||||||||||||"
+	  MaskEnableString	  "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+	  MaskVisibilityString	  "on,on,off,off,off,off,off,off,off,off,off,off,off,off,off,off,off,off,on"
+	  MaskToolTipString	  "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+	  MaskInitialization	  "can1str='';can2str='';\nif can1bus==2, can1str=' LS'; end;if can2bus==2, can2str=' LS'; end;\n"
+	  "initarray=0;\ntermarray=0;\n[can1UserBR, can2UserBR, initarray, termarray]= sg_IO601_setup_m(3, id, can1bus, can1Ba"
+	  "udrate, can1UserBR, acc1, filter1std, ...\n                filter1ext, can2bus, can2Baudrate, can2UserBR, acc2, fil"
+	  "ter2std, filter2ext, ...\n                init, term, pciSlot);"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nIO601\\nSetup\\nModule: 1');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "Module setup|1|on|Highspeed |1 MBaud|[1,1,5,2]|[0,0,0,0]|[]|[]|on|Highspeed|1 MBaud|[1,1,5,2]|[0"
+	  ",0,0,0]|[]|[]|[]|[]|-1"
+	}
+	Block {
+	  BlockType		  S-Function
+	  Name			  "Status"
+	  SID			  "66"
+	  Ports			  [0, 1]
+	  Position		  [30, 535, 140, 595]
+	  ZOrder		  8
+	  InitFcn		  " sg_IO601_status_m(1);"
+	  FunctionName		  "sg_IO601_status_s"
+	  Parameters		  "id, sampletime, pciSlot"
+	  EnableBusSupport	  off
+	  MaskType		  "status_IO601"
+	  MaskDescription	  "Speedgoat driver block<br>IO601 - Status<br><br>&copy; 2006 - 2013, Speedgoat GmbH, www.speedgoa"
+	  "t.ch"
+	  MaskHelp		  "web(['C:\\Program Files\\MATLAB\\R2013a\\toolbox\\rtw\\targets\\xpc\\target\\build\\xpcblocks\\thirdpa"
+	  "rtydrivers\\sg_html\\io601_status-driver-block.html'],'-helpbrowser');"
+	  MaskPromptString	  "IO601 module identifier:|Sample time:|PCI slot (-1: autosearch):"
+	  MaskStyleString	  "popup(1|2|3|4|5|6|7|8|9|10),edit,edit"
+	  MaskVariables		  "id=@1;sampletime=@2;pciSlot=@3;"
+	  MaskTunableValueString  "on,on,on"
+	  MaskCallbackString	  "||"
+	  MaskEnableString	  "on,on,on"
+	  MaskVisibilityString	  "on,on,off"
+	  MaskToolTipString	  "on,on,on"
+	  MaskInitialization	  "maskDisplay= sg_IO601_status_m(2, id);"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nIO601\\nStatus\\nModule: 1');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|0.001|0"
+	}
+	Block {
+	  BlockType		  S-Function
+	  Name			  "Write"
+	  SID			  "6"
+	  Ports			  [1]
+	  Position		  [25, 96, 135, 154]
+	  ZOrder		  -2
+	  InitFcn		  "sg_IO601_write_m(1);"
+	  FunctionName		  "sg_IO601_write_s"
+	  Parameters		  "id, status, sampletime, pciSlot"
+	  EnableBusSupport	  off
+	  MaskType		  "write_IO601"
+	  MaskDescription	  "Speedgoat driver block<br>IO601 - Write<br><br>&copy; 2006 - 2013, Speedgoat GmbH, www.speedgoat"
+	  ".ch"
+	  MaskHelp		  "web(['C:\\Program Files\\MATLAB\\R2013a\\toolbox\\rtw\\targets\\xpc\\target\\build\\xpcblocks\\thirdpa"
+	  "rtydrivers\\sg_html\\io601_write-driver-block-including-can-messaging-support.html'],'-helpbrowser');"
+	  MaskPromptString	  "IO601 module identifier:|Show status output port|Sample time:|PCI slot (-1: autosearch):"
+	  MaskStyleString	  "popup(1|2|3|4|5|6|7|8|9|10),checkbox,edit,edit"
+	  MaskVariables		  "id=@1;status=@2;sampletime=@3;pciSlot=@4;"
+	  MaskTunableValueString  "on,on,on,on"
+	  MaskCallbackString	  "|||"
+	  MaskEnableString	  "on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,off"
+	  MaskToolTipString	  "on,on,on,on"
+	  MaskInitialization	  "maskDisplay= sg_IO601_write_m(2, id);"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nIO601\\nWrite\\nModule: 1');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|off|0.001|0"
+	}
+	Block {
+	  BlockType		  S-Function
+	  Name			  "Write (v2)"
+	  SID			  "65"
+	  Ports			  [2]
+	  Position		  [25, 186, 135, 244]
+	  ZOrder		  7
+	  InitFcn		  " sg_IO601_write_m(1);"
+	  FunctionName		  "sg_IO601_write2_s"
+	  Parameters		  "id, status, inputType, count, maxMsg, port, sampletime, pciSlot"
+	  EnableBusSupport	  off
+	  MaskType		  "write_IO601"
+	  MaskDescription	  "Speedgoat driver block<br>IO601 - Write<br><br>&copy; 2006 - 2013, Speedgoat GmbH, www.speedgoat"
+	  ".ch"
+	  MaskHelp		  "web(['C:\\Program Files\\MATLAB\\R2013a\\toolbox\\rtw\\targets\\xpc\\target\\build\\xpcblocks\\thirdpa"
+	  "rtydrivers\\sg_html\\io601_write-driver-block-including-can-messaging-support.html'],'-helpbrowser');"
+	  MaskPromptString	  "IO601 module identifier:|Show input count port|data input port type:|Port (if input is CAN_MESS"
+	  "AGE):|Max CAN Message Transmit (Per Sample Time):|Show status output port|Sample time:|PCI slot (-1: autosearch):"
+	  MaskStyleString	  "popup(1|2|3|4|5|6|7|8|9|10),checkbox,popup(Matrix of double (m*5 or m*6)|CAN_MESSAGE),popup(1|2)"
+	  ",edit,checkbox,edit,edit"
+	  MaskVariables		  "id=@1;count=@2;inputType=@3;port=@4;maxMsg=@5;status=@6;sampletime=@7;pciSlot=@8;"
+	  MaskTunableValueString  "on,on,on,on,on,on,on,on"
+	  MaskCallbackString	  "|||||||"
+	  MaskEnableString	  "on,on,on,on,on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on,on,on,on,off"
+	  MaskToolTipString	  "on,on,on,on,on,on,on,on"
+	  MaskInitialization	  "maskDisplay= sg_IO601_write_m(2, id);\n\n"
+	  MaskSelfModifiable	  on
+	  MaskDisplay		  "disp('Speedgoat\\nIO601\\nWrite\\nModule: 1');"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|on|CAN_MESSAGE|2|20|off|0.001|-1"
+	}
+      }
+      RTWSystemCode	      "Auto"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      FunctionWithSeparateData off
+      Opaque		      off
+      MaskHideContents	      off
+    }
+    Block {
+      BlockType		      S-Function
+      Name		      "Read (v3)"
+      SID		      "60"
+      Ports		      [0, 4]
+      Position		      [460, 49, 590, 116]
+      ZOrder		      67
+      LibraryVersion	      "*1.30"
+      InitFcn		      "sg_init_modules('IO601', false, 'setup_IO601_3');"
+      FunctionName	      "sg_IO601_read_s_3"
+      Parameters	      "depth1, depth2, outputFormat, port1, port2, sampletime, pciSlot"
+      EnableBusSupport	      off
+      MaskType		      "read_IO601_3"
+      MaskDescription	      "Speedgoat driver block<br>IO601 - Read<br><br>&copy; 2006 - 2014, Speedgoat GmbH, www.spe"
+      "edgoat.ch"
+      MaskHelp		      "web(['C:\\Users\\lab3\\Documents\\MATLAB\\trunk\\thirdpartydrivers\\sg_help\\comms\\dialog_fiel"
+      "ds_io601_read.htm'],'-helpbrowser');"
+      MaskPromptString	      "IO601 module identifier:|Output port datatype:|Show CAN message output port 1|Show CAN m"
+      "essage output port 2|Receive queue read depth:|Receive queue read depth:|Sample time:|PCI slot (-1: autosearch):"
+      MaskStyleString	      "popup(1|2|3|4|5|6|7|8|9|10),popup(Matrix of doubles (legacy)|Vector of CAN_MESSAGE),check"
+      "box,checkbox,edit,edit,edit,edit"
+      MaskVariables	      "id=@1;outputFormat=@2;port1=@3;port2=@4;depth1=@5;depth2=@6;sampletime=@7;pciSlot=@8;"
+      MaskTunableValueString  "on,on,on,on,on,on,on,on"
+      MaskCallbackString      "|||||||"
+      MaskEnableString	      "on,on,on,on,on,on,on,on"
+      MaskVisibilityString    "on,on,on,on,on,on,on,off"
+      MaskToolTipString	      "on,on,on,on,on,on,on,on"
+      MaskInitialization      "sg_IO601_read_m_3(id, port1, port2);"
+      MaskSelfModifiable      on
+      MaskDisplay	      "disp('Speedgoat\\nIO601\\nRead\\nModule: 1');port_label('output', 1, 'CAN port 1');port_label"
+      "('output', 2, 'count 1');port_label('output', 3, 'CAN port 2');port_label('output', 4, 'count 2');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "1|Matrix of doubles (legacy)|on|on|4|4|0.001|-1"
+      MaskTabNameString	      "Module setup,Input and output port configuration,Input and output port configuration,In"
+      "put and output port configuration,CAN port 1,CAN port 2,Module setup,Module setup"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Read status CAN port (v3)"
+      SID		      "116"
+      Ports		      [1, 8]
+      Position		      [20, 269, 225, 441]
+      ZOrder		      149
+      RequestExecContextInheritance off
+      MaskType		      "readstatuscanport_IO601"
+      MaskDescription	      "This block accepts as an input the output of a CAN Port Status signal from the Read statu"
+      "s block and outputs 8 individual status signals.  This block is just a graphical subsystem. "
+      MaskHelp		      "web(fullfile(speedgoatroot,'sg_help','comms','read_status_can_port_driver_block_io601.htm'), '-"
+      "helpbrowser');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"Read status CAN port (v3)"
+	Location		[1685, 52, 2812, 2042]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "Status CAN Port"
+	  SID			  "122"
+	  Position		  [15, 193, 45, 207]
+	  ZOrder		  -1
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion"
+	  SID			  "123"
+	  Position		  [615, 51, 690, 79]
+	  ZOrder		  -2
+	  OutDataTypeStr	  "boolean"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion1"
+	  SID			  "124"
+	  Position		  [615, 101, 690, 129]
+	  ZOrder		  -3
+	  OutDataTypeStr	  "boolean"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion2"
+	  SID			  "125"
+	  Position		  [615, 156, 690, 184]
+	  ZOrder		  -4
+	  OutDataTypeStr	  "boolean"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion3"
+	  SID			  "126"
+	  Position		  [615, 266, 690, 294]
+	  ZOrder		  -5
+	  OutDataTypeStr	  "boolean"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion4"
+	  SID			  "127"
+	  Position		  [615, 321, 690, 349]
+	  ZOrder		  -6
+	  OutDataTypeStr	  "boolean"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion5"
+	  SID			  "128"
+	  Position		  [615, 376, 690, 404]
+	  ZOrder		  -7
+	  OutDataTypeStr	  "boolean"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion6"
+	  SID			  "129"
+	  Position		  [615, 426, 690, 454]
+	  ZOrder		  -8
+	  OutDataTypeStr	  "boolean"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion7"
+	  SID			  "130"
+	  Position		  [615, 211, 690, 239]
+	  ZOrder		  -9
+	  OutDataTypeStr	  "boolean"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion8"
+	  SID			  "148"
+	  Position		  [110, 193, 160, 207]
+	  ZOrder		  1
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Extract Bits"
+	  SID			  "131"
+	  Ports			  [1, 1]
+	  Position		  [485, 50, 565, 80]
+	  ZOrder		  -10
+	  LibraryVersion	  "1.287"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Extract Bits"
+	  SourceType		  "Extract Bits"
+	  bitsToExtract		  "Range of bits"
+	  numBits		  "8"
+	  bitIdxRange		  "[1]"
+	  outScalingMode	  "Preserve fixed-point scaling"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Extract Bits1"
+	  SID			  "132"
+	  Ports			  [1, 1]
+	  Position		  [485, 100, 565, 130]
+	  ZOrder		  -11
+	  LibraryVersion	  "1.287"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Extract Bits"
+	  SourceType		  "Extract Bits"
+	  bitsToExtract		  "Range of bits"
+	  numBits		  "8"
+	  bitIdxRange		  "[2]"
+	  outScalingMode	  "Preserve fixed-point scaling"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Extract Bits2"
+	  SID			  "133"
+	  Ports			  [1, 1]
+	  Position		  [485, 155, 565, 185]
+	  ZOrder		  -12
+	  LibraryVersion	  "1.287"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Extract Bits"
+	  SourceType		  "Extract Bits"
+	  bitsToExtract		  "Range of bits"
+	  numBits		  "8"
+	  bitIdxRange		  "[3]"
+	  outScalingMode	  "Preserve fixed-point scaling"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Extract Bits3"
+	  SID			  "134"
+	  Ports			  [1, 1]
+	  Position		  [485, 265, 565, 295]
+	  ZOrder		  -13
+	  LibraryVersion	  "1.287"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Extract Bits"
+	  SourceType		  "Extract Bits"
+	  bitsToExtract		  "Range of bits"
+	  numBits		  "8"
+	  bitIdxRange		  "[5]"
+	  outScalingMode	  "Preserve fixed-point scaling"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Extract Bits4"
+	  SID			  "135"
+	  Ports			  [1, 1]
+	  Position		  [485, 320, 565, 350]
+	  ZOrder		  -14
+	  LibraryVersion	  "1.287"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Extract Bits"
+	  SourceType		  "Extract Bits"
+	  bitsToExtract		  "Range of bits"
+	  numBits		  "8"
+	  bitIdxRange		  "[6]"
+	  outScalingMode	  "Preserve fixed-point scaling"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Extract Bits5"
+	  SID			  "136"
+	  Ports			  [1, 1]
+	  Position		  [485, 375, 565, 405]
+	  ZOrder		  -15
+	  LibraryVersion	  "1.287"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Extract Bits"
+	  SourceType		  "Extract Bits"
+	  bitsToExtract		  "Range of bits"
+	  numBits		  "8"
+	  bitIdxRange		  "[8]"
+	  outScalingMode	  "Preserve fixed-point scaling"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Extract Bits6"
+	  SID			  "137"
+	  Ports			  [1, 1]
+	  Position		  [485, 425, 565, 455]
+	  ZOrder		  -16
+	  LibraryVersion	  "1.287"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Extract Bits"
+	  SourceType		  "Extract Bits"
+	  bitsToExtract		  "Range of bits"
+	  numBits		  "8"
+	  bitIdxRange		  "[9]"
+	  outScalingMode	  "Preserve fixed-point scaling"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Extract Bits7"
+	  SID			  "138"
+	  Ports			  [1, 1]
+	  Position		  [485, 210, 565, 240]
+	  ZOrder		  -17
+	  LibraryVersion	  "1.287"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Extract Bits"
+	  SourceType		  "Extract Bits"
+	  bitsToExtract		  "Range of bits"
+	  numBits		  "8"
+	  bitIdxRange		  "[4]"
+	  outScalingMode	  "Preserve fixed-point scaling"
+	}
+	Block {
+	  BlockType		  SignalSpecification
+	  Name			  "Signal Specification"
+	  SID			  "139"
+	  Position		  [250, 181, 395, 219]
+	  ZOrder		  -18
+	  OutDataTypeStr	  "uint16"
+	  Dimensions		  "1"
+	  SignalType		  "real"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Error/Warning"
+	  SID			  "140"
+	  Position		  [750, 58, 780, 72]
+	  ZOrder		  -19
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Bus Off"
+	  SID			  "141"
+	  Position		  [750, 108, 780, 122]
+	  ZOrder		  -20
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Data Overrun"
+	  SID			  "142"
+	  Position		  [750, 163, 780, 177]
+	  ZOrder		  -21
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Transmit"
+	  SID			  "143"
+	  Position		  [750, 273, 780, 287]
+	  ZOrder		  -22
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Transceiver Error"
+	  SID			  "144"
+	  Position		  [750, 328, 780, 342]
+	  ZOrder		  -23
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Receive Queue Overrun"
+	  SID			  "145"
+	  Position		  [750, 383, 780, 397]
+	  ZOrder		  -24
+	  Port			  "6"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Receive Queue Empty"
+	  SID			  "146"
+	  Position		  [750, 433, 780, 447]
+	  ZOrder		  -25
+	  Port			  "7"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Receive"
+	  SID			  "147"
+	  Position		  [750, 218, 780, 232]
+	  ZOrder		  -26
+	  Port			  "8"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion7"
+	  SrcPort		  1
+	  DstBlock		  "Receive"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Extract Bits7"
+	  SrcPort		  1
+	  DstBlock		  "Data Type Conversion7"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion1"
+	  SrcPort		  1
+	  DstBlock		  "Bus Off"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion2"
+	  SrcPort		  1
+	  DstBlock		  "Data Overrun"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion3"
+	  SrcPort		  1
+	  DstBlock		  "Transmit"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion4"
+	  SrcPort		  1
+	  DstBlock		  "Transceiver Error"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion5"
+	  SrcPort		  1
+	  DstBlock		  "Receive Queue Overrun"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion6"
+	  SrcPort		  1
+	  DstBlock		  "Receive Queue Empty"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Extract Bits6"
+	  SrcPort		  1
+	  DstBlock		  "Data Type Conversion6"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Extract Bits5"
+	  SrcPort		  1
+	  DstBlock		  "Data Type Conversion5"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Extract Bits4"
+	  SrcPort		  1
+	  DstBlock		  "Data Type Conversion4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Extract Bits3"
+	  SrcPort		  1
+	  DstBlock		  "Data Type Conversion3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Extract Bits2"
+	  SrcPort		  1
+	  DstBlock		  "Data Type Conversion2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Extract Bits1"
+	  SrcPort		  1
+	  DstBlock		  "Data Type Conversion1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion"
+	  SrcPort		  1
+	  DstBlock		  "Error/Warning"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Extract Bits"
+	  SrcPort		  1
+	  DstBlock		  "Data Type Conversion"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Status CAN Port"
+	  SrcPort		  1
+	  DstBlock		  "Data Type Conversion8"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Signal Specification"
+	  SrcPort		  1
+	  Points		  [35, 0]
+	  Branch {
+	    Points		    [0, 25]
+	    Branch {
+	      DstBlock		      "Extract Bits7"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, 55]
+	      Branch {
+		DstBlock		"Extract Bits3"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 55]
+		Branch {
+		  DstBlock		  "Extract Bits4"
+		  DstPort		  1
+		}
+		Branch {
+		  Points		  [0, 55]
+		  Branch {
+		    DstBlock		    "Extract Bits5"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, 50]
+		    DstBlock		    "Extract Bits6"
+		    DstPort		    1
+		  }
+		}
+	      }
+	    }
+	  }
+	  Branch {
+	    Points		    [0, -30]
+	    Branch {
+	      DstBlock		      "Extract Bits2"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, -55]
+	      Branch {
+		DstBlock		"Extract Bits1"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, -50]
+		DstBlock		"Extract Bits"
+		DstPort			1
+	      }
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion8"
+	  SrcPort		  1
+	  DstBlock		  "Signal Specification"
+	  DstPort		  1
+	}
+      }
+      RTWSystemCode	      "Auto"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      FunctionWithSeparateData off
+      Opaque		      off
+      MaskHideContents	      off
+    }
+    Block {
+      BlockType		      S-Function
+      Name		      "Setup (v3)"
+      SID		      "54"
+      Ports		      []
+      Position		      [20, 50, 150, 115]
+      ZOrder		      2
+      InitFcn		      "sg_init_modules('IO601', true, '');"
+      FunctionName	      "sg_IO601_setup_s_3"
+      Parameters	      "can1enable, can1bus, can1UserBR, stdAcc1, extAcc1, can2enable, can2bus, can2UserBR, stdAcc2, e"
+      "xtAcc2, pciSlot"
+      EnableBusSupport	      off
+      MaskType		      "setup_IO601_3"
+      MaskDescription	      "Speedgoat driver block<br>IO601 - Setup<br><br>&copy; 2006 - 2014, Speedgoat GmbH, www.sp"
+      "eedgoat.ch"
+      MaskHelp		      "web(['C:\\Users\\lab3\\Documents\\MATLAB\\trunk\\thirdpartydrivers\\sg_help\\comms\\dialog_fiel"
+      "ds_io601.htm'],'-helpbrowser');"
+      MaskPromptString	      "IO601 module identifier:|Enable|Physical bus:|Baud rate:|User defined baud rate [BRP, SJ"
+      "W, TSEG1, TSEG2]:|Acceptance [StdMask1, StdCode1,StdMask2, StdCode2]:|Acceptance [ExtMask1, ExtCode1, ExtMask2, "
+      "ExtCode2]:|Enable|Physical bus:|Baud rate:|User defined baud rate [BRP, SJW, TSEG1, TSEG2]:|Acceptance [StdMask1"
+      ", StdCode1,StdMask2, StdCode2]:|Acceptance [ExtMask1, ExtCode1, ExtMask2, ExtCode2]:|PCI slot (-1: autosearch):"
+      MaskStyleString	      "popup(1|2|3|4|5|6|7|8|9|10),checkbox,popup(Highspeed |Lowspeed),popup(1 MBaud|800 kBaud|5"
+      "00 kBaud|250 kBaud|125 kBaud|100 kBaud|10 kBaud|User defined),edit,edit,edit,checkbox,popup(Highspeed|Lowspeed),"
+      "popup(1 MBaud|800 kBaud|500 kBaud|250 kBaud|125 kBaud|100 kBaud|10 kBaud|User defined),edit,edit,edit,edit"
+      MaskVariables	      "id=@1;can1enable=@2;can1bus=@3;can1Baudrate=@4;can1UserBR=@5;stdAcc1=@6;extAcc1=@7;can2enab"
+      "le=@8;can2bus=@9;can2Baudrate=@10;can2UserBR=@11;stdAcc2=@12;extAcc2=@13;pciSlot=@14;"
+      MaskTunableValueString  "on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskCallbackString      "|||||||||||||"
+      MaskEnableString	      "on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskVisibilityString    "on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskToolTipString	      "on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskInitialization      "can1str='';can2str='';\nif can1bus==2, can1str=' LS'; end;if can2bus==2, can2str=' LS';"
+      " end;\n%[can1UserBR, can2UserBR, initarray, termarray]= sg_IO601_setup_m(3, id, can1bus, can1Baudrate, can1UserB"
+      "R, acc1, filter1std, ...\n%                filter1ext, can2bus, can2Baudrate, can2UserBR, acc2, filter2std, filt"
+      "er2ext, ...\n%                init, term, pciSlot);\n\n\n\n[can1UserBR, can2UserBR, stdAcc1, stdAcc2, extAcc1, e"
+      "xtAcc2]= sg_IO601_setup_m_3(id, can1Baudrate, can1UserBR, can2Baudrate, can2UserBR, pciSlot, stdAcc1, stdAcc2, e"
+      "xtAcc1, extAcc2);\n"
+      MaskSelfModifiable      on
+      MaskDisplay	      "disp('Speedgoat\\nIO601\\nSetup\\nModule: 1');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "1|on|Highspeed |1 MBaud|[1,1,5,2]|[0,0,0,0]|[0,0,0,0]|on|Highspeed|1 MBaud|[1,1,5,2]|[0,0"
+      ",0,0]|[0,0,0,0]|-1"
+      MaskTabNameString	      "Module setup,CAN port 1,CAN port 1,CAN port 1,CAN port 1,CAN port 1,CAN port 1,CAN port"
+      " 2,CAN port 2,CAN port 2,CAN port 2,CAN port 2,CAN port 2,Module setup"
+    }
+    Block {
+      BlockType		      S-Function
+      Name		      "Status (v3)"
+      SID		      "114"
+      Ports		      [0, 6]
+      Position		      [20, 176, 315, 244]
+      ZOrder		      148
+      InitFcn		      "sg_init_modules('IO601', false, 'setup_IO601_3');"
+      FunctionName	      "sg_IO601_status_s_3"
+      Parameters	      "ts, pciSlot"
+      EnableBusSupport	      off
+      MaskType		      "status_IO601_3"
+      MaskDescription	      "Speedgoat driver block<br>IO601 - Status<br><br>&copy; 2006 - 2014, Speedgoat GmbH, www.s"
+      "peedgoat.ch"
+      MaskHelp		      "web(['C:\\Users\\lab3\\Documents\\MATLAB\\trunk\\thirdpartydrivers\\sg_help\\comms\\dialog_fiel"
+      "ds_io601_status.htm'],'-helpbrowser');"
+      MaskPromptString	      "IO601 module identifier:|Sample time:|PCI slot (-1: autosearch):"
+      MaskStyleString	      "popup(1|2|3|4|5|6|7|8|9|10),edit,edit"
+      MaskVariables	      "id=@1;ts=@2;pciSlot=@3;"
+      MaskTunableValueString  "on,on,on"
+      MaskCallbackString      "||"
+      MaskEnableString	      "on,on,on"
+      MaskVisibilityString    "on,on,off"
+      MaskToolTipString	      "on,on,on"
+      MaskInitialization      "sg_IO601_status_m_3(id)"
+      MaskSelfModifiable      on
+      MaskDisplay	      "disp('Speedgoat\\nIO601\\nStatus\\nModule: 1');port_label('output', 1, 'CAN port 1 status');p"
+      "ort_label('output', 2, 'CAN port 1 bus last');port_label('output', 3, 'CAN port 2 status');port_label('output', "
+      "4, 'CAN port 2 bus last');port_label('output', 5, 'CPU last');port_label('output', 6, 'Live counter');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "1|0.001|-1"
+    }
+    Block {
+      BlockType		      S-Function
+      Name		      "Write (v3)"
+      SID		      "117"
+      Ports		      [2]
+      Position		      [195, 46, 405, 119]
+      ZOrder		      150
+      Priority		      "1"
+      InitFcn		      "sg_init_modules('IO601', false, 'setup_IO601_3');"
+      FunctionName	      "sg_IO601_write_s_3"
+      Parameters	      "id, status, inputType, maxMsg, port, initarray, termarray, sampletime, pciSlot"
+      EnableBusSupport	      off
+      MaskType		      "write_IO601_3"
+      MaskDescription	      "Speedgoat driver block<br>IO601 - Write<br><br>&copy; 2006 - 2014, Speedgoat GmbH, www.sp"
+      "eedgoat.ch"
+      MaskHelp		      "web(['C:\\Users\\lab3\\Documents\\MATLAB\\trunk\\thirdpartydrivers\\sg_help\\comms\\dialog_fiel"
+      "ds_write_io601.htm'],'-helpbrowser');"
+      MaskPromptString	      "IO601 module identifier:|Sample time:|PCI slot (-1: autosearch):|CAN message input port "
+      "datatype:|Port (if input is CAN_MESSAGE):|CAN messages pool size (only relevant with CAN_MESSAGE option):|Show s"
+      "tatus output port|Initialization command structure:|Termination command structure:"
+      MaskStyleString	      "popup(1|2|3|4|5|6|7|8|9|10),edit,edit,popup(Matrix of double (m*5 or m*6)|CAN_MESSAGE plu"
+      "s count),popup(1|2),edit,checkbox,edit,edit"
+      MaskVariables	      "id=@1;sampletime=@2;pciSlot=@3;inputType=@4;port=@5;maxMsg=@6;status=@7;init=@8;term=@9;"
+      MaskTunableValueString  "on,on,on,on,on,on,on,on,on"
+      MaskCallbackString      "||||||||"
+      MaskEnableString	      "on,on,on,on,on,on,on,on,on"
+      MaskVisibilityString    "on,on,off,on,on,on,on,on,on"
+      MaskToolTipString	      "on,on,on,on,on,on,on,on,on"
+      MaskInitialization      "[initarray, termarray] = sg_IO601_write_m_3(id, inputType, status, init, term);\n\n"
+      MaskSelfModifiable      on
+      MaskDisplay	      "disp('Speedgoat\\nIO601\\nWrite\\nModule: 1');port_label('input', 1, 'CAN message');port_labe"
+      "l('input', 2, 'count');"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "1|0.001|-1|CAN_MESSAGE plus count|1|1|off|[]|[]"
+      MaskTabNameString	      "Module setup,Module setup,Module setup,Input and output port configuration,Input and ou"
+      "tput port configuration,Input and output port configuration,Input and output port configuration,Init and termina"
+      "tion setup,Init and termination setup"
+    }
+    Annotation {
+      Name		      "Speedgoat IO601 Simulink Real-Time driver library"
+      Position		      [18, 17]
+      HorizontalAlignment     "left"
+      FontName		      "Arial Narrow"
+      FontSize		      12
+      FontWeight	      "bold"
+    }
+  }
+}

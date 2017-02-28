@@ -1,0 +1,99 @@
+/*
+ * File : SATRIAS3D_Lagrange_Hip.c
+ * Based on timestwo.c
+ */
+
+#define S_FUNCTION_NAME  SATRIAS3D_Lagrange_Hip
+#define S_FUNCTION_LEVEL 2
+
+#include "simstruc.h"
+#include "ATRIAS3D_D_Hip.h"
+#include "ATRIAS3D_Cdq_Hip.h"
+#include "ATRIAS3D_G_Hip.h"
+#include "ATRIAS3D_B_Hip.h"
+
+/* Function: mdlInitializeSizes ===============================================
+ * Abstract:
+ *   Setup sizes of the various vectors.
+ */
+static void mdlInitializeSizes(SimStruct *S)
+{
+    ssSetNumSFcnParams(S, 0);
+    if (ssGetNumSFcnParams(S) != ssGetSFcnParamsCount(S)) {
+        return; /* Parameter mismatch will be reported by Simulink */
+    }
+
+    if (!ssSetNumInputPorts(S, 2))
+        return;
+    
+    ssSetInputPortWidth(S, 0, 16);
+    ssSetInputPortDirectFeedThrough(S, 0, 1);
+    ssSetInputPortRequiredContiguous(S, 0, 1);
+    ssSetInputPortWidth(S, 1, 16);
+    ssSetInputPortDirectFeedThrough(S, 1, 1);
+    ssSetInputPortRequiredContiguous(S, 1, 1);
+    
+    if (!ssSetNumOutputPorts(S, 4))
+        return;
+    ssSetOutputPortMatrixDimensions(S, 0, 16, 16);
+    ssSetOutputPortWidth(S, 1, 16);
+    ssSetOutputPortWidth(S, 2, 16);
+    ssSetOutputPortMatrixDimensions(S, 3, 16, 6);
+
+    ssSetNumSampleTimes(S, 1);
+
+    /* specify the sim state compliance to be same as a built-in block */
+    ssSetSimStateCompliance(S, USE_DEFAULT_SIM_STATE);
+
+    ssSetOptions(S,
+                 SS_OPTION_WORKS_WITH_CODE_REUSE |
+                 SS_OPTION_EXCEPTION_FREE_CODE |
+                 SS_OPTION_USE_TLC_WITH_ACCELERATOR);
+}
+
+
+/* Function: mdlInitializeSampleTimes =========================================
+ * Abstract:
+ *    Specifiy that we inherit our sample time from the driving block.
+ */
+static void mdlInitializeSampleTimes(SimStruct *S)
+{
+    ssSetSampleTime(S, 0, INHERITED_SAMPLE_TIME);
+    ssSetOffsetTime(S, 0, 0.0);
+    ssSetModelReferenceSampleTimeDefaultInheritance(S); 
+}
+
+/* Function: mdlOutputs =======================================================
+ * Abstract:
+ */
+static void mdlOutputs(SimStruct *S, int_T tid)
+{
+    const real_T* q   = ssGetInputPortRealSignal(S,0);
+    const real_T* dq  = ssGetInputPortRealSignal(S,1);
+    real_T      * D   = ssGetOutputPortRealSignal(S,0);
+    real_T      * Cdq = ssGetOutputPortRealSignal(S,1);
+    real_T      * G   = ssGetOutputPortRealSignal(S,2);
+    real_T      * B   = ssGetOutputPortRealSignal(S,3);
+    
+    ATRIAS3D_D_Hip((double *) q, (double (*)[16]) D);
+    ATRIAS3D_Cdq_Hip((double *) q, (double *) dq, (double *) Cdq);
+    ATRIAS3D_G_Hip((double *) q, (double *) G);
+    ATRIAS3D_B_Hip((double *) q, (double (*)[16]) B);
+}
+
+
+/* Function: mdlTerminate =====================================================
+ * Abstract:
+ *    No termination needed, but we are required to have this routine.
+ */
+static void mdlTerminate(SimStruct *S)
+{
+}
+
+
+
+#ifdef  MATLAB_MEX_FILE    /* Is this file being compiled as a MEX-file? */
+#include "simulink.c"      /* MEX-file interface mechanism */
+#else
+#include "cg_sfun.h"       /* Code generation registration function */
+#endif

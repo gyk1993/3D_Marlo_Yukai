@@ -1,0 +1,514 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>IO101 &gt; I/O pin mapping</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+     .p_Heading1{ color: #147EC2;
+    font-size: 1.455em !important;
+     border-bottom: 1px solid #E0E1E1;
+    color: #147EC2;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 20px;
+    padding-bottom: 4px;}
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "i_o_pin_mapping_io101.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<div id="breadcrumbs" style="display:none"><a href="io101.htm">IO101</a></div>
+
+<div id="printheader"><h1 class="p_Heading1"><span class="f_Heading1">I/O pin mapping</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
+  <tr valign="bottom">
+    <td align="left" valign="bottom" class="topichead">
+   
+   <h1 class="p_Heading1"><span class="f_Heading1">I/O pin mapping</span></h1>
+
+    
+  </tr>  
+</table>
+<!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table style="width:100%; border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:41px; background-color:#177cbd; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold; color: #ffffff;"> &nbsp;Pin</span></p>
+</td>
+<td style="vertical-align:top; width:327px; background-color:#177cbd; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold;">  </span><span style="font-weight: bold; color: #ffffff;">Signal</span></p>
+</td>
+<td style="vertical-align:top; width:41px; background-color:#177cbd; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold; color: #ffffff;"> &nbsp;Pin</span></p>
+</td>
+<td style="vertical-align:top; width:331px; background-color:#177cbd; padding:2px; border:solid 1px #000000;"><p><span style="font-weight: bold; color: #ffffff;"> &nbsp;Signal</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;1</p>
+</td>
+<td style="vertical-align:top; width:327px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Counter </p>
+</td>
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;35</p>
+</td>
+<td style="vertical-align:top; width:331px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Ground </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;2</p>
+</td>
+<td style="vertical-align:top; width:327px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Digital 01 (lower channel)</p>
+</td>
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;36</p>
+</td>
+<td style="vertical-align:top; width:331px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Digital 09 (upper channel)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;3</p>
+</td>
+<td style="vertical-align:top; width:327px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Digital 02 (lower channel)</p>
+</td>
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;37</p>
+</td>
+<td style="vertical-align:top; width:331px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Digital 10 (upper channel)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;4</p>
+</td>
+<td style="vertical-align:top; width:327px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Digital 03 (lower channel)</p>
+</td>
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;38</p>
+</td>
+<td style="vertical-align:top; width:331px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Digital 11 (upper channel)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;5</p>
+</td>
+<td style="vertical-align:top; width:327px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Digital 04 (lower channel)</p>
+</td>
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;39</p>
+</td>
+<td style="vertical-align:top; width:331px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Digital 12 (upper channel)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;6</p>
+</td>
+<td style="vertical-align:top; width:327px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Digital 05 (lower channel)</p>
+</td>
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;40</p>
+</td>
+<td style="vertical-align:top; width:331px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Digital 13 (upper channel)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;7</p>
+</td>
+<td style="vertical-align:top; width:327px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Digital 06 (lower channel)</p>
+</td>
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;41</p>
+</td>
+<td style="vertical-align:top; width:331px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Digital 14 (upper channel)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;8</p>
+</td>
+<td style="vertical-align:top; width:327px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Digital 07 (lower channel)</p>
+</td>
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;42</p>
+</td>
+<td style="vertical-align:top; width:331px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Digital 15 (upper channel)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;9</p>
+</td>
+<td style="vertical-align:top; width:327px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Digital 08 (lower channel)</p>
+</td>
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;43</p>
+</td>
+<td style="vertical-align:top; width:331px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Digital 16 (upper channel)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;10</p>
+</td>
+<td style="vertical-align:top; width:327px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Ground </p>
+</td>
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;44</p>
+</td>
+<td style="vertical-align:top; width:331px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Analog Out 05</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;11</p>
+</td>
+<td style="vertical-align:top; width:327px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Ground </p>
+</td>
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;45</p>
+</td>
+<td style="vertical-align:top; width:331px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Analog Out 06</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;12</p>
+</td>
+<td style="vertical-align:top; width:327px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Analog Out 01</p>
+</td>
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;46</p>
+</td>
+<td style="vertical-align:top; width:331px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Ground </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;13</p>
+</td>
+<td style="vertical-align:top; width:327px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Analog Out 02</p>
+</td>
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;47</p>
+</td>
+<td style="vertical-align:top; width:331px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Ground </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;14</p>
+</td>
+<td style="vertical-align:top; width:327px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Analog Out 03</p>
+</td>
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;48</p>
+</td>
+<td style="vertical-align:top; width:331px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Ground </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;15</p>
+</td>
+<td style="vertical-align:top; width:327px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Analog Out 04</p>
+</td>
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;49</p>
+</td>
+<td style="vertical-align:top; width:331px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Ground </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;16</p>
+</td>
+<td style="vertical-align:top; width:327px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Ground </p>
+</td>
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;50</p>
+</td>
+<td style="vertical-align:top; width:331px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Analog Out 07</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;17</p>
+</td>
+<td style="vertical-align:top; width:327px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Ground </p>
+</td>
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;51</p>
+</td>
+<td style="vertical-align:top; width:331px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Analog Out 08</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;18</p>
+</td>
+<td style="vertical-align:top; width:327px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Ground </p>
+</td>
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;52</p>
+</td>
+<td style="vertical-align:top; width:331px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Sense (Analog input ground)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;19</p>
+</td>
+<td style="vertical-align:top; width:327px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Analog In SE: 16, DIFF: 16 (+)</p>
+</td>
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;53</p>
+</td>
+<td style="vertical-align:top; width:331px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Analog In SE: 32, DIFF: 16 (-)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;20</p>
+</td>
+<td style="vertical-align:top; width:327px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Analog In SE: 15, DIFF: 15 (+)</p>
+</td>
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;54</p>
+</td>
+<td style="vertical-align:top; width:331px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Analog In SE: 31, DIFF: 15 (-)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;21</p>
+</td>
+<td style="vertical-align:top; width:327px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Analog In SE: 14, DIFF: 14 (+)</p>
+</td>
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;55</p>
+</td>
+<td style="vertical-align:top; width:331px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Analog In SE: 30, DIFF: 14 (-)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;22</p>
+</td>
+<td style="vertical-align:top; width:327px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Analog In SE: 13, DIFF: 13 (+)</p>
+</td>
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;56</p>
+</td>
+<td style="vertical-align:top; width:331px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Analog In SE: 29, DIFF: 13 (-)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;23</p>
+</td>
+<td style="vertical-align:top; width:327px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Analog In SE: 12, DIFF: 12 (+)</p>
+</td>
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;57</p>
+</td>
+<td style="vertical-align:top; width:331px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Analog In SE: 28, DIFF: 12 (-)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;24</p>
+</td>
+<td style="vertical-align:top; width:327px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Analog In SE: 11, DIFF: 11 (+)</p>
+</td>
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;58</p>
+</td>
+<td style="vertical-align:top; width:331px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Analog In SE: 27, DIFF: 11 (-)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;25</p>
+</td>
+<td style="vertical-align:top; width:327px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Analog In SE: 10, DIFF: 10 (+)</p>
+</td>
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;59</p>
+</td>
+<td style="vertical-align:top; width:331px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Analog In SE: 26, DIFF: 10 (-)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;26</p>
+</td>
+<td style="vertical-align:top; width:327px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Analog In SE: 09, DIFF: 09 (+)</p>
+</td>
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;60</p>
+</td>
+<td style="vertical-align:top; width:331px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Analog In SE: 25, DIFF: 09 (-)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;27</p>
+</td>
+<td style="vertical-align:top; width:327px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Analog In SE: 08, DIFF: 08 (+)</p>
+</td>
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;61</p>
+</td>
+<td style="vertical-align:top; width:331px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Analog In SE: 24, DIFF: 08 (-)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;28</p>
+</td>
+<td style="vertical-align:top; width:327px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Analog In SE: 07, DIFF: 07 (+)</p>
+</td>
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;62</p>
+</td>
+<td style="vertical-align:top; width:331px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Analog In SE: 23, DIFF: 07 (-)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;29</p>
+</td>
+<td style="vertical-align:top; width:327px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Analog In SE: 06, DIFF: 06 (+)</p>
+</td>
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;63</p>
+</td>
+<td style="vertical-align:top; width:331px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Analog In SE: 22, DIFF: 06 (-)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;30</p>
+</td>
+<td style="vertical-align:top; width:327px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Analog In SE: 05, DIFF: 05 (+)</p>
+</td>
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;64</p>
+</td>
+<td style="vertical-align:top; width:331px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Analog In SE: 21, DIFF: 05 (-)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;31 </p>
+</td>
+<td style="vertical-align:top; width:327px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Analog In SE: 04, DIFF: 04 (+)</p>
+</td>
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;65</p>
+</td>
+<td style="vertical-align:top; width:331px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Analog In SE: 20, DIFF: 04 (-)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:41px; height:14px; padding:2px; border:solid 1px #000000;"><p> &nbsp;32</p>
+</td>
+<td style="vertical-align:top; width:327px; height:14px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Analog In SE: 03, DIFF: 03 (+)</p>
+</td>
+<td style="vertical-align:top; width:41px; height:14px; padding:2px; border:solid 1px #000000;"><p> &nbsp;66</p>
+</td>
+<td style="vertical-align:top; width:331px; height:14px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Analog In SE: 19, DIFF: 03 (-)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;33</p>
+</td>
+<td style="vertical-align:top; width:327px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Analog In SE: 02, DIFF: 02 (+)</p>
+</td>
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;67</p>
+</td>
+<td style="vertical-align:top; width:331px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Analog In SE: 18, DIFF: 02 (-)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;34</p>
+</td>
+<td style="vertical-align:top; width:327px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Analog In SE: 01, DIFF: 01 (+)</p>
+</td>
+<td style="vertical-align:top; width:41px; padding:2px; border:solid 1px #000000;"><p> &nbsp;68</p>
+</td>
+<td style="vertical-align:top; width:331px; padding:2px; border:solid 1px #000000;"><p> &nbsp;Analog In SE: 17, DIFF: 01 (-)</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold; text-decoration: underline;">Important notes </span></p>
+<p>&nbsp;</p>
+<p>Analog inputs are floating, if not connected. All unused analog inputs should be connected to ground. </p>
+<p>&nbsp;</p>
+<p>In single ended mode, pin 52 (sense) must be used for analog input ground. </p>
+<p>&nbsp;</p>
+<p>Ground for analog outputs and digital I/O lines are pins 10, 11, 16, 17, 18, 35, 46, 47, 48 and 49. </p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+{
+ if (document.all) setTimeout(function() {nsrInit();},20); 
+    else nsrInit();
+ } 
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding="utf-8"?>
+
+<toc version="2.0">
+<!-- First tocitem specifies top level in Help browser Contents pane -->
+<!-- This can be a roadmap page, as shown below, or a content page -->
+    <tocitem target="frontpage.htm">Speedgoat
+           
+        <!-- Blocks -->
+        <tocitem target="targets/index.html" 
+                 image="HelpIcon.USER_GUIDE">Target machines
+        </tocitem>
+        
+        <tocitem target="analog/index.html" 
+                 image="HelpIcon.BLOCK">Analog
+        </tocitem>
+        
+        <tocitem target="digital/index.html" 
+                 image="HelpIcon.BLOCK">Digital
+        </tocitem>
+        
+        <tocitem target="comms/index.html" 
+                 image="HelpIcon.BLOCK">Communication protocols
+        </tocitem>
+        
+        <tocitem target="serial/index.html" 
+                 image="HelpIcon.BLOCK">Serial
+        </tocitem>
+        
+        <tocitem target="fpga/index.html" 
+                 image="HelpIcon.BLOCK">Configurable FPGA
+        </tocitem>
+        
+        <tocitem target="lvdt_etc/index.html" 
+                 image="HelpIcon.BLOCK">LVDT/RVDT/Synchro/Resolver
+        </tocitem>
+        
+        <tocitem target="shared_memory/index.html" 
+                 image="HelpIcon.BLOCK">Shared memory
+        </tocitem>
+        
+        <tocitem target="sensors/index.html" 
+                 image="HelpIcon.BLOCK">High precision resistor, potentiometer, and reed relay simulation
+        </tocitem>
+        
+		
+        <!-- Demo -->
+        <tocitem target="examples.htm" 
+                 image="HelpIcon.DEMOS">Examples
+
+        </tocitem>
+        
+    </tocitem>
+</toc>

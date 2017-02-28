@@ -1,0 +1,9 @@
+#ifndef _ATRIAS3D_Cdq_Left_h_
+#define _ATRIAS3D_Cdq_Left_h_
+
+#include <math.h>
+
+void ATRIAS3D_Cdq_Left(const double q[13], const double dq[13], double Cdq[13]) ;
+
+
+#endif /* _ATRIAS3D_Cdq_Left_h_ */

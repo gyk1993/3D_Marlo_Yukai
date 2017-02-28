@@ -1,0 +1,206 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>IO30X, IO31X &gt; Driver configuration &gt; PWM generation driver block &gt; Usage Notes &gt; How to configure typical signal types &gt; Left-aligned</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+     .p_Heading1{ color: #147EC2;
+    font-size: 1.455em !important;
+     border-bottom: 1px solid #E0E1E1;
+    color: #147EC2;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 20px;
+    padding-bottom: 4px;}
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "left-aligned_pwm_30x.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<div id="breadcrumbs" style="display:none"><a href="io30x.htm">IO30X, IO31X</a> &gt; <a href="driver_configuration_io30x.htm">Driver configuration</a> &gt; <a href="pwm_io30x.htm">PWM generation driver block</a> &gt; <a href="usage_notes_io30x_pwm.htm">Usage Notes</a> &gt; <a href="how_to_configure_pwm_30x.htm">How to configure typical signal types</a></div>
+
+<div id="printheader"><h1 class="p_Heading1"><span class="f_Heading1">Left-aligned</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
+  <tr valign="bottom">
+    <td align="left" valign="bottom" class="topichead">
+   
+   <h1 class="p_Heading1"><span class="f_Heading1">Left-aligned</span></h1>
+
+    
+  </tr>  
+</table>
+<!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<p>Here is a timing diagram for a left-aligned (asymmetrical) signal:</p>
+<p>&nbsp;</p>
+<p><img src="pwm_left.png" width="566" height="500" alt="pwm_left" style="border:none" /></p>
+<p>&nbsp;</p>
+<p>The counter increments until the half-period (C) and then decrements to zero again.</p>
+<p>The line A signal goes high on the A-up event and low on the period-compare event.</p>
+<p>The line B signal goes high on the B-up event and low on the period-compare event.</p>
+<p>The signals are therefore left aligned.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>In order to define at which points on the counting cycle the polarity of the signal changes the four 'A-action' elements are configured as in the following table.</p>
+<p> 'A-action' is either set by the 'Initial A-action matrix' parameter, or by the 'A-action' input port.</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table class="tbl" style="width:700px; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:175px; background-color:#177cbd; padding:10px;"><p><span style="color: #ffffff;">Event (see Events sub-section)</span></p>
+</td>
+<td style="vertical-align:top; width:435px; background-color:#177cbd; padding:10px;"><p><span style="color: #ffffff;">Configuration value</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:175px; padding:10px;"><p>Zero</p>
+</td>
+<td style="vertical-align:top; width:435px; padding:10px;"><p>2 - Set state</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:175px; background-color:#f6f6f6; padding:10px;"><p>Period-Compare</p>
+</td>
+<td style="vertical-align:top; width:435px; background-color:#f6f6f6; padding:10px;"><p>0 - No state change</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:175px; padding:10px;"><p>A-Up-compare</p>
+</td>
+<td style="vertical-align:top; width:435px; padding:10px;"><p>0 - No state change</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:175px; background-color:#f6f6f6; padding:10px;"><p>A-down-compare</p>
+</td>
+<td style="vertical-align:top; width:435px; background-color:#f6f6f6; padding:10px;"><p>1 - Clear state</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>So for this example the A-action matrix would be [2,0,0,1]'.</p>
+<p>&nbsp;</p>
+<p>The timing of the A-Up and A-Down events is defined by the 'A-compare count' input port (initialized by the 'Initial A-compare start state vector' configuration parameter). </p>
+<p>&nbsp;</p>
+<p>The B signal is similarly configured.</p>
+<p>&nbsp;</p>
+<p>The timing of the C event (the point when the counter begins counting down to zero, half of the period T), is defined by the 'Period-compare Count' and initialized by the 'Initial period-compare start state vector' configuration parameter. See section 'Setting compare values' for information on calculating the PWM output frequency.</p>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+{
+ if (document.all) setTimeout(function() {nsrInit();},20); 
+    else nsrInit();
+ } 
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

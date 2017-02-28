@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<demos>
+    <name>Speedgoat</name>
+    <type>simulink</type>
+    <icon>HelpIcon.DEMOS</icon>
+    <description>You can find here some examples with Speedgoat I/O modules</description>
+    <website><a href="http://www.speedgoat.ch">Speedgoat website</a></website>
+
+    <demosection>
+        <label>Analog I/O</label>
+        <demoitem>
+            <label>IO102 Simple loopback</label>
+            <type>model</type>
+            <source>IO102simpleloopback</source>
+            <file>html/IO102simpleloopbackdemo.html</file>
+        </demoitem>
+    </demosection>
+    
+    <demosection>
+        <label>FPGA-based I/O</label>
+        <demoitem>
+            <label>IO301 Simple PWM and Capture</label>
+            <type>model</type>
+            <source>IO301simplepwmcap</source>
+            <file>html/IO301simplepwmcapdemo.html</file>
+        </demoitem>
+        <demoitem>
+            <label>IO301 Model synchronization with external interrupt source</label>
+            <type>model</type>
+            <source>IO301interruptsynch</source>
+            <file>html/IO301interruptsynchdemo.html</file>
+        </demoitem>
+        <demoitem>
+            <label>IO301 Subsystem synchronization with external interrupt source</label>
+            <type>model</type>
+            <source>IO301interruptsynchsubsystem</source>
+            <file>html/IO301interruptsynchsubsystemdemo.html</file>
+        </demoitem>
+    </demosection>
+    
+    <demosection>
+        <label>Serial I/O</label>
+        <demoitem>
+            <label>IO503 without interrupts</label>
+            <type>model</type>
+            <source>IO503nointerrupt</source>
+            <file>html/IO503nointerruptdemo.html</file>
+        </demoitem>
+        <demoitem>
+            <label>IO503 hybdrid</label>
+            <type>model</type>
+            <source>IO503hybrid</source>
+            <file>html/IO503hybriddemo.html</file>
+        </demoitem>
+    </demosection>
+
+</demos>

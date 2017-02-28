@@ -1,0 +1,9 @@
+#ifndef _ATRIAS3D_ShinRotationMatrices_Right_h_
+#define _ATRIAS3D_ShinRotationMatrices_Right_h_
+
+#include <math.h>
+
+void ATRIAS3D_ShinRotationMatrices_Right(const double q[13], double R1[3][3], double R5[3][3]) ;
+
+
+#endif /* _ATRIAS3D_ShinRotationMatrices_Right_h_ */

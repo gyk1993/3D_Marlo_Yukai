@@ -1,0 +1,625 @@
+﻿<!DOCTYPE HTML>
+<html><head>
+   <title>IO331</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+   <!-- This line includes the general project style sheet (not required) -->
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <!-- This block defines the styles of the TOC headings, change them as needed -->
+   <style type="text/css">
+       body { font-family: "Verdana",Geneva,sans-serif; font-size: 9pt;}
+       /*.heading1 { font-size: 10pt; color: #000000; text-decoration: none; }
+       .heading2 { font-size: 10pt; color: #000000; text-decoration: none; }
+       .heading3 { font-size: 10pt; color: #000000; text-decoration: none; }
+       .heading4 { font-size: 10pt; color: #000000; text-decoration: none; }
+       .heading5 { font-size: 10pt; color: #000000; text-decoration: none; }
+       .heading6 { font-size: 10pt; color: #000000; text-decoration: none; }
+
+       .hilight1 { font-size: 10pt; color: #FFFFFF; background: #194E84; text-decoration: none; }
+       .hilight2 { font-size: 10pt; color: #FFFFFF; background: #194E84; text-decoration: none; }
+       .hilight3 { font-size: 10pt; color: #FFFFFF; background: #194E84; text-decoration: none; }
+       .hilight4 { font-size: 10pt; color: #FFFFFF; background: #194E84; text-decoration: none; }
+       .hilight5 { font-size: 10pt; color: #FFFFFF; background: #194E84; text-decoration: none; }
+       .hilight6 { font-size: 10pt; color: #FFFFFF; background: #194E84; text-decoration: none; }       */
+
+       /* TOC LIST CSS */
+       .hilight1 {text-decoration: underline; }
+       .hilight2 {text-decoration: underline;}
+       .hilight3 {text-decoration: underline;}
+       .hilight4 {text-decoration: underline;}
+       .hilight5 {text-decoration: underline;}
+       .hilight6 {text-decoration: underline;} 
+       #toc    { padding:0; margin:0 }
+       #toc li {  margin-left:0; /*padding:1px */
+           background-position: 11px 11px !important; /* Position of side nav bar tree icons          */
+           background-color: #147EC2 !important; 
+    cursor: pointer;
+    padding: 0 0 0 14px !important; /* Layout of tree */
+  
+       }
+       #toc ul { padding-left:0; margin-left:0px } /* Indentation of tree children. Originally: '#toc ul { padding-left:0; margin-left:15px }'*/
+       #toc  ul li ul li a{     font-weight: normal !important; }             
+       /* TOC LIST CSS */
+       h1{
+       background: url("aside_title.png") no-repeat scroll 0 0 transparent;
+    color: white;
+    display: block;
+    font-size: 1em;
+    font-weight: normal;
+    line-height: 36px;
+    margin: 0 -8px 14px; /* Position of side nav bar heading*/
+    padding: 0 12px;
+    text-transform: uppercase;
+       }
+       .sidenav
+       {
+        margin: -14px -8px 14px; /* position of side nav bar */
+       }
+      
+       .sidenav ul li a {
+       
+    background: no-repeat scroll 0 0 #147EC2;
+     background-position: 14px 12px;
+    color: white;
+    display: block;
+    font-weight: normal;
+    padding: 6px;
+    text-decoration:none;
+}
+
+#aside_in {
+width: 184px;
+    padding: 0 8px 14px;
+}
+.lasta
+{
+ background: url("side_nav_last.png") no-repeat scroll center bottom #147EC2;
+    padding-bottom: 12px;
+    display:block;
+}
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript">
+     var parentScope = (parent.hmNavigationFrame);
+     if (!parentScope) {
+		      var s = document.createElement("script");
+		      s.setAttribute("type","text/javascript");
+		      s.setAttribute("src", "helpman_navigation.js");
+		      document.getElementsByTagName("head")[0].appendChild(s);
+	    }
+     else {
+       if (initialtocstate != "expandall") parent.hmAddCss(document, "#toc li ul { display: none }");
+     }
+     function loadicons() { var icons = new Array(); for (i=0; i<arguments.length; i++) { icons[i] = new Image(); icons[i].src = arguments[i]; } }
+     function loadtoc() { if (parentScope) parent.loadstate(document.getElementById("toc")); else loadstate(document.getElementById("toc")); }
+     function savetoc() { if (parentScope) parent.savestate(document.getElementById("toc")); else savestate(document.getElementById("toc")); }
+     function clicked(node, event) { deselect(); if (parentScope) parent.hmNodeClicked(node, event); else hmNodeClicked(node, event); }
+     function dblclicked(node) { if (parentScope) parent.hmNodeDblclicked(node); else hmNodeDblclicked(node); }
+     function deselect() { if (window.getSelection) window.getSelection().removeAllRanges(); else if (document.selection) document.selection.empty(); }
+     $(document).ready(function(){
+       loadtoc();
+       $(window).onunload = savetoc;
+     });
+   </script>
+</head>
+<body style="margin: 0px;">
+<div id="aside_in">
+<h1>IO331</h1>
+<div class="sidenav">
+<ul id="toc" style="list-style-type:none;display:block;padding-left:0">
+<li class="heading1" id="i1" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading1" id="a1" href="io30x.htm" target="hmcontent"><span class="heading1" id="s1" ondblclick="return dblclicked(this)">IO30X, IO31X</span></a>
+<ul id="ul1" style="list-style-type:none">
+<li class="heading2" id="i1.1" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading2" id="a1.1" href="i_o_pin_mapping_io30x.htm" target="hmcontent"><span class="heading2" id="s1.1" ondblclick="return dblclicked(this)">I/O pin mapping</span></a>
+<ul id="ul1.1" style="list-style-type:none">
+<li class="heading3" id="i1.1.1" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a1.1.1" href="pins_io301.htm" target="hmcontent"><span class="heading3" id="s1.1.1">IO301</span></a>
+</li>
+<li class="heading3" id="i1.1.2" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a1.1.2" href="pins_io302.htm" target="hmcontent"><span class="heading3" id="s1.1.2">IO302</span></a>
+</li>
+<li class="heading3" id="i1.1.3" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a1.1.3" href="pins_io303.htm" target="hmcontent"><span class="heading3" id="s1.1.3">IO303</span></a>
+</li>
+<li class="heading3" id="i1.1.4" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a1.1.4" href="pins_io304.htm" target="hmcontent"><span class="heading3" id="s1.1.4">IO304</span></a>
+</li>
+<li class="heading3" id="i1.1.5" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a1.1.5" href="io311_pin_mapping.htm" target="hmcontent"><span class="heading3" id="s1.1.5">IO311</span></a>
+</li>
+<li class="heading3" id="i1.1.6" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a1.1.6" href="io312_pin_mapping.htm" target="hmcontent"><span class="heading3" id="s1.1.6">IO312</span></a>
+</li>
+<li class="heading3" id="i1.1.7" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a1.1.7" href="io313_pin_mapping.htm" target="hmcontent"><span class="heading3" id="s1.1.7">IO313</span></a>
+</li>
+<li class="heading3" id="i1.1.8" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a1.1.8" href="io314_pin_mapping.htm" target="hmcontent"><span class="heading3" id="s1.1.8">IO314</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i1.2" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading2" id="a1.2" href="driver_configuration_io30x.htm" target="hmcontent"><span class="heading2" id="s1.2" ondblclick="return dblclicked(this)">Driver configuration</span></a>
+<ul id="ul1.2" style="list-style-type:none">
+<li class="heading3" id="i1.2.1" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a1.2.1" href="setup_driver_block_io30x.htm" target="hmcontent"><span class="heading3" id="s1.2.1" ondblclick="return dblclicked(this)">Setup driver block</span></a>
+<ul id="ul1.2.1" style="list-style-type:none">
+<li class="heading4" id="i1.2.1.1" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a1.2.1.1" href="input_and_output_ports_setup_io30x.htm" target="hmcontent"><span class="heading4" id="s1.2.1.1">Input and output ports</span></a>
+</li>
+<li class="heading4" id="i1.2.1.2" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a1.2.1.2" href="dialog_fields_setup_io30x.htm" target="hmcontent"><span class="heading4" id="s1.2.1.2" ondblclick="return dblclicked(this)">Dialog fields</span></a>
+<ul id="ul1.2.1.2" style="list-style-type:none">
+<li class="heading5" id="i1.2.1.2.1" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a1.2.1.2.1" href="lower_channel_direction_setup_io30x.htm" target="hmcontent"><span class="heading5" id="s1.2.1.2.1">Lower channel direction vector</span></a>
+</li>
+<li class="heading5" id="i1.2.1.2.2" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a1.2.1.2.2" href="upper_channel_direction_vector_setup_io30x.htm" target="hmcontent"><span class="heading5" id="s1.2.1.2.2">Upper channel direction vector</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i1.2.2" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a1.2.2" href="digital_io30x.htm" target="hmcontent"><span class="heading3" id="s1.2.2" ondblclick="return dblclicked(this)">Digital</span></a>
+<ul id="ul1.2.2" style="list-style-type:none">
+<li class="heading4" id="i1.2.2.1" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a1.2.2.1" href="usage_notes_dio_io30x.htm" target="hmcontent"><span class="heading4" id="s1.2.2.1">Usage Notes</span></a>
+</li>
+<li class="heading4" id="i1.2.2.2" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a1.2.2.2" href="digital_input_driver_block_io3xx.htm" target="hmcontent"><span class="heading4" id="s1.2.2.2" ondblclick="return dblclicked(this)">Digital input driver block</span></a>
+<ul id="ul1.2.2.2" style="list-style-type:none">
+<li class="heading5" id="i1.2.2.2.1" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a1.2.2.2.1" href="input_and_output_ports_io3xx_dig_in.htm" target="hmcontent"><span class="heading5" id="s1.2.2.2.1">Input and output ports</span></a>
+</li>
+<li class="heading5" id="i1.2.2.2.2" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a1.2.2.2.2" href="dialog_fields_io3xx_dig_in.htm" target="hmcontent"><span class="heading5" id="s1.2.2.2.2">Dialog fields</span></a>
+</li>
+</ul>
+</li>
+<li class="heading4" id="i1.2.2.3" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a1.2.2.3" href="digital_output_driver_block_io3xx_dig_out.htm" target="hmcontent"><span class="heading4" id="s1.2.2.3" ondblclick="return dblclicked(this)">Digital output driver block</span></a>
+<ul id="ul1.2.2.3" style="list-style-type:none">
+<li class="heading5" id="i1.2.2.3.1" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a1.2.2.3.1" href="input_and_output_driver_blocks_io3xx_dig_out.htm" target="hmcontent"><span class="heading5" id="s1.2.2.3.1">Input and output driver blocks</span></a>
+</li>
+<li class="heading5" id="i1.2.2.3.2" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a1.2.2.3.2" href="dialog_fields_io3xx_dig_out.htm" target="hmcontent"><span class="heading5" id="s1.2.2.3.2">Dialog fields</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i1.2.3" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a1.2.3" href="interrupt_driver_block_io30x.htm" target="hmcontent"><span class="heading3" id="s1.2.3" ondblclick="return dblclicked(this)">Interrupt driver block</span></a>
+<ul id="ul1.2.3" style="list-style-type:none">
+<li class="heading4" id="i1.2.3.1" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a1.2.3.1" href="input_and_output_ports_int_io30x.htm" target="hmcontent"><span class="heading4" id="s1.2.3.1">Input and output ports</span></a>
+</li>
+<li class="heading4" id="i1.2.3.2" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a1.2.3.2" href="dialog_fields_int_io30x.htm" target="hmcontent"><span class="heading4" id="s1.2.3.2">Dialog fields</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i1.2.4" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a1.2.4" href="pwm_io30x.htm" target="hmcontent"><span class="heading3" id="s1.2.4" ondblclick="return dblclicked(this)">PWM generation driver block</span></a>
+<ul id="ul1.2.4" style="list-style-type:none">
+<li class="heading4" id="i1.2.4.1" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a1.2.4.1" href="usage_notes_io30x_pwm.htm" target="hmcontent"><span class="heading4" id="s1.2.4.1" ondblclick="return dblclicked(this)">Usage Notes</span></a>
+<ul id="ul1.2.4.1" style="list-style-type:none">
+<li class="heading5" id="i1.2.4.1.1" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a1.2.4.1.1" href="how_to_configure_pwm_30x.htm" target="hmcontent"><span class="heading5" id="s1.2.4.1.1" ondblclick="return dblclicked(this)">How to configure typical signal types</span></a>
+<ul id="ul1.2.4.1.1" style="list-style-type:none">
+<li class="heading6" id="i1.2.4.1.1.1" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading6" id="a1.2.4.1.1.1" href="center-aligned_pwm_30x.htm" target="hmcontent"><span class="heading6" id="s1.2.4.1.1.1">Center-aligned</span></a>
+</li>
+<li class="heading6" id="i1.2.4.1.1.2" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading6" id="a1.2.4.1.1.2" href="right-aligned_pwm_30x.htm" target="hmcontent"><span class="heading6" id="s1.2.4.1.1.2">Right-aligned</span></a>
+</li>
+<li class="heading6" id="i1.2.4.1.1.3" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading6" id="a1.2.4.1.1.3" href="left-aligned_pwm_30x.htm" target="hmcontent"><span class="heading6" id="s1.2.4.1.1.3">Left-aligned</span></a>
+</li>
+</ul>
+</li>
+<li class="heading5" id="i1.2.4.1.2" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a1.2.4.1.2" href="setting_the_period_compare_val_pwm_io30x.htm" target="hmcontent"><span class="heading5" id="s1.2.4.1.2">Compare values</span></a>
+</li>
+<li class="heading5" id="i1.2.4.1.3" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a1.2.4.1.3" href="duty_cycles_pwm_io30x.htm" target="hmcontent"><span class="heading5" id="s1.2.4.1.3">Duty cycle border cases</span></a>
+</li>
+<li class="heading5" id="i1.2.4.1.4" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a1.2.4.1.4" href="running_modes_pwm_io30x.htm" target="hmcontent"><span class="heading5" id="s1.2.4.1.4">Running Modes</span></a>
+</li>
+<li class="heading5" id="i1.2.4.1.5" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a1.2.4.1.5" href="actions_pwm_io30x.htm" target="hmcontent"><span class="heading5" id="s1.2.4.1.5">Actions</span></a>
+</li>
+<li class="heading5" id="i1.2.4.1.6" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a1.2.4.1.6" href="pwm_events_io30x.htm" target="hmcontent"><span class="heading5" id="s1.2.4.1.6">Events</span></a>
+</li>
+<li class="heading5" id="i1.2.4.1.7" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a1.2.4.1.7" href="pwm_trigger_output_io30x.htm" target="hmcontent"><span class="heading5" id="s1.2.4.1.7">Trigger ouput</span></a>
+</li>
+<li class="heading5" id="i1.2.4.1.8" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a1.2.4.1.8" href="output_protection_pwm_io30x.htm" target="hmcontent"><span class="heading5" id="s1.2.4.1.8">Output protection</span></a>
+</li>
+<li class="heading5" id="i1.2.4.1.9" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a1.2.4.1.9" href="pwm_i_o_mapping_io30x.htm" target="hmcontent"><span class="heading5" id="s1.2.4.1.9">I/O Mapping</span></a>
+</li>
+</ul>
+</li>
+<li class="heading4" id="i1.2.4.2" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a1.2.4.2" href="input_and_output_ports_pwm_io30x.htm" target="hmcontent"><span class="heading4" id="s1.2.4.2">Input and output ports</span></a>
+</li>
+<li class="heading4" id="i1.2.4.3" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a1.2.4.3" href="dialog_fields_pwm_io30x.htm" target="hmcontent"><span class="heading4" id="s1.2.4.3">Dialog fields</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i1.2.5" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a1.2.5" href="cap_driver_block_io30x.htm" target="hmcontent"><span class="heading3" id="s1.2.5" ondblclick="return dblclicked(this)">PWM capture driver block</span></a>
+<ul id="ul1.2.5" style="list-style-type:none">
+<li class="heading4" id="i1.2.5.1" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a1.2.5.1" href="usage_notes_cap_io30x.htm" target="hmcontent"><span class="heading4" id="s1.2.5.1">Usage Notes</span></a>
+</li>
+<li class="heading4" id="i1.2.5.2" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a1.2.5.2" href="input_and_output_ports_cap_io30x.htm" target="hmcontent"><span class="heading4" id="s1.2.5.2">Input and output ports</span></a>
+</li>
+<li class="heading4" id="i1.2.5.3" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a1.2.5.3" href="dialog_fields_cap_io30x.htm" target="hmcontent"><span class="heading4" id="s1.2.5.3">Dialog fields</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i1.2.6" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a1.2.6" href="negation_io30x.htm" target="hmcontent"><span class="heading3" id="s1.2.6">Negation</span></a>
+</li>
+<li class="heading3" id="i1.2.7" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a1.2.7" href="quadrature_io30x.htm" target="hmcontent"><span class="heading3" id="s1.2.7" ondblclick="return dblclicked(this)">Quadrature</span></a>
+<ul id="ul1.2.7" style="list-style-type:none">
+<li class="heading4" id="i1.2.7.1" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a1.2.7.1" href="usage_notes_quad_io30x.htm" target="hmcontent"><span class="heading4" id="s1.2.7.1">Usage notes</span></a>
+</li>
+<li class="heading4" id="i1.2.7.2" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a1.2.7.2" href="qad_io30x.htm" target="hmcontent"><span class="heading4" id="s1.2.7.2" ondblclick="return dblclicked(this)">QAD</span></a>
+<ul id="ul1.2.7.2" style="list-style-type:none">
+<li class="heading5" id="i1.2.7.2.1" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a1.2.7.2.1" href="usage_notes_qad_io30x.htm" target="hmcontent"><span class="heading5" id="s1.2.7.2.1">Usage Notes</span></a>
+</li>
+<li class="heading5" id="i1.2.7.2.2" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a1.2.7.2.2" href="qad_setup_driver_block_io30x.htm" target="hmcontent"><span class="heading5" id="s1.2.7.2.2" ondblclick="return dblclicked(this)">QAD setup driver block</span></a>
+<ul id="ul1.2.7.2.2" style="list-style-type:none">
+<li class="heading6" id="i1.2.7.2.2.1" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading6" id="a1.2.7.2.2.1" href="input_and_output_ports_qad_setup_io30x.htm" target="hmcontent"><span class="heading6" id="s1.2.7.2.2.1">Input and output ports</span></a>
+</li>
+<li class="heading6" id="i1.2.7.2.2.2" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading6" id="a1.2.7.2.2.2" href="dialog_fields_qad_setup_io30x.htm" target="hmcontent"><span class="heading6" id="s1.2.7.2.2.2">Dialog fields</span></a>
+</li>
+</ul>
+</li>
+<li class="heading5" id="i1.2.7.2.3" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a1.2.7.2.3" href="qad_read_driver_block_io30x.htm" target="hmcontent"><span class="heading5" id="s1.2.7.2.3" ondblclick="return dblclicked(this)">QAD read driver block</span></a>
+<ul id="ul1.2.7.2.3" style="list-style-type:none">
+<li class="heading6" id="i1.2.7.2.3.1" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading6" id="a1.2.7.2.3.1" href="input_and_output_ports_qad_read_io30x.htm" target="hmcontent"><span class="heading6" id="s1.2.7.2.3.1">Input and output ports</span></a>
+</li>
+<li class="heading6" id="i1.2.7.2.3.2" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading6" id="a1.2.7.2.3.2" href="dialog_fields_qad_read_io30x.htm" target="hmcontent"><span class="heading6" id="s1.2.7.2.3.2">Dialog fields</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading4" id="i1.2.7.3" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a1.2.7.3" href="qae_io30x.htm" target="hmcontent"><span class="heading4" id="s1.2.7.3" ondblclick="return dblclicked(this)">QAE</span></a>
+<ul id="ul1.2.7.3" style="list-style-type:none">
+<li class="heading5" id="i1.2.7.3.1" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a1.2.7.3.1" href="input_and_output_ports_qae_io30x.htm" target="hmcontent"><span class="heading5" id="s1.2.7.3.1">Input and output ports</span></a>
+</li>
+<li class="heading5" id="i1.2.7.3.2" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a1.2.7.3.2" href="dialog_fields_qae_io30x.htm" target="hmcontent"><span class="heading5" id="s1.2.7.3.2">Dialog fields</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i1.2.8" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a1.2.8" href="endat_io30x.htm" target="hmcontent"><span class="heading3" id="s1.2.8">EnDat</span></a>
+</li>
+<li class="heading3" id="i1.2.9" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a1.2.9" href="biss_io30x.htm" target="hmcontent"><span class="heading3" id="s1.2.9">BiSS</span></a>
+</li>
+<li class="heading3" id="i1.2.10" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a1.2.10" href="ssi_io30x.htm" target="hmcontent"><span class="heading3" id="s1.2.10" ondblclick="return dblclicked(this)">SSI</span></a>
+<ul id="ul1.2.10" style="list-style-type:none">
+<li class="heading4" id="i1.2.10.1" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a1.2.10.1" href="ssim_io30x.htm" target="hmcontent"><span class="heading4" id="s1.2.10.1" ondblclick="return dblclicked(this)">SSIM</span></a>
+<ul id="ul1.2.10.1" style="list-style-type:none">
+<li class="heading5" id="i1.2.10.1.1" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a1.2.10.1.1" href="output_ports_ssim_io30x.htm" target="hmcontent"><span class="heading5" id="s1.2.10.1.1">Output ports</span></a>
+</li>
+<li class="heading5" id="i1.2.10.1.2" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a1.2.10.1.2" href="dialog_fields_ssim_io30x.htm" target="hmcontent"><span class="heading5" id="s1.2.10.1.2">Dialog fields</span></a>
+</li>
+</ul>
+</li>
+<li class="heading4" id="i1.2.10.2" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a1.2.10.2" href="ssis_io30x.htm" target="hmcontent"><span class="heading4" id="s1.2.10.2" ondblclick="return dblclicked(this)">SSIS</span></a>
+<ul id="ul1.2.10.2" style="list-style-type:none">
+<li class="heading5" id="i1.2.10.2.1" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a1.2.10.2.1" href="input_ports_io30x.htm" target="hmcontent"><span class="heading5" id="s1.2.10.2.1">Input ports</span></a>
+</li>
+<li class="heading5" id="i1.2.10.2.2" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a1.2.10.2.2" href="dialog_fields_ssis_io30x.htm" target="hmcontent"><span class="heading5" id="s1.2.10.2.2">Dialog fields</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i1.2.11" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a1.2.11" href="spi_io30x.htm" target="hmcontent"><span class="heading3" id="s1.2.11" ondblclick="return dblclicked(this)">SPI</span></a>
+<ul id="ul1.2.11" style="list-style-type:none">
+<li class="heading4" id="i1.2.11.1" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a1.2.11.1" href="usage_notes_spi_io30x.htm" target="hmcontent"><span class="heading4" id="s1.2.11.1">Usage notes</span></a>
+</li>
+<li class="heading4" id="i1.2.11.2" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a1.2.11.2" href="spi_io30x.htm" target="hmcontent"><span class="heading4" id="s1.2.11.2" ondblclick="return dblclicked(this)">SPI</span></a>
+<ul id="ul1.2.11.2" style="list-style-type:none">
+<li class="heading5" id="i1.2.11.2.1" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a1.2.11.2.1" href="input_and_output_ports_spi_sr_io30x_2.htm" target="hmcontent"><span class="heading5" id="s1.2.11.2.1">Input and output ports</span></a>
+</li>
+<li class="heading5" id="i1.2.11.2.2" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a1.2.11.2.2" href="dialog_fields_spi_sr_io30x_2.htm" target="hmcontent"><span class="heading5" id="s1.2.11.2.2">Dialog fields</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i1.2.12" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a1.2.12" href="i2c_io30x.htm" target="hmcontent"><span class="heading3" id="s1.2.12" ondblclick="return dblclicked(this)">I2C</span></a>
+<ul id="ul1.2.12" style="list-style-type:none">
+<li class="heading4" id="i1.2.12.1" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a1.2.12.1" href="i2c_master_write_block_io30x.htm" target="hmcontent"><span class="heading4" id="s1.2.12.1" ondblclick="return dblclicked(this)">I2C master write (I2CM write)</span></a>
+<ul id="ul1.2.12.1" style="list-style-type:none">
+<li class="heading5" id="i1.2.12.1.1" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a1.2.12.1.1" href="input_and_output_ports_i2cm_write_io30x.htm" target="hmcontent"><span class="heading5" id="s1.2.12.1.1">Input and output ports</span></a>
+</li>
+<li class="heading5" id="i1.2.12.1.2" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a1.2.12.1.2" href="dialog_fields_i2cm_write_io30x.htm" target="hmcontent"><span class="heading5" id="s1.2.12.1.2">Dialog fields</span></a>
+</li>
+</ul>
+</li>
+<li class="heading4" id="i1.2.12.2" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a1.2.12.2" href="i2cm_read_driver_block_io30x.htm" target="hmcontent"><span class="heading4" id="s1.2.12.2" ondblclick="return dblclicked(this)">I2C master read (I2CM read)</span></a>
+<ul id="ul1.2.12.2" style="list-style-type:none">
+<li class="heading5" id="i1.2.12.2.1" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a1.2.12.2.1" href="input_and_output_ports_i2cm_read_io30x.htm" target="hmcontent"><span class="heading5" id="s1.2.12.2.1">Input and output ports</span></a>
+</li>
+<li class="heading5" id="i1.2.12.2.2" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a1.2.12.2.2" href="dialog_fields_i2cm_read_io30x.htm" target="hmcontent"><span class="heading5" id="s1.2.12.2.2">Dialog fields</span></a>
+</li>
+</ul>
+</li>
+<li class="heading4" id="i1.2.12.3" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a1.2.12.3" href="i2c_slave_setup_io30x.htm" target="hmcontent"><span class="heading4" id="s1.2.12.3" ondblclick="return dblclicked(this)">I2C slave setup (I2CS setup)</span></a>
+<ul id="ul1.2.12.3" style="list-style-type:none">
+<li class="heading5" id="i1.2.12.3.1" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a1.2.12.3.1" href="input_and_output_ports_i2c_ss_io30x.htm" target="hmcontent"><span class="heading5" id="s1.2.12.3.1">Input and output ports</span></a>
+</li>
+<li class="heading5" id="i1.2.12.3.2" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a1.2.12.3.2" href="dialog_fields_i2c_ss_io30x.htm" target="hmcontent"><span class="heading5" id="s1.2.12.3.2">Dialog fields</span></a>
+</li>
+</ul>
+</li>
+<li class="heading4" id="i1.2.12.4" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a1.2.12.4" href="i2c_slave_read_io30x.htm" target="hmcontent"><span class="heading4" id="s1.2.12.4" ondblclick="return dblclicked(this)">I2C slave read (I2CS read)</span></a>
+<ul id="ul1.2.12.4" style="list-style-type:none">
+<li class="heading5" id="i1.2.12.4.1" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a1.2.12.4.1" href="input_and_output_ports_i2cs_read_io30x.htm" target="hmcontent"><span class="heading5" id="s1.2.12.4.1">Input and output ports</span></a>
+</li>
+<li class="heading5" id="i1.2.12.4.2" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a1.2.12.4.2" href="dialog_fields_i2cs_read_io30x.htm" target="hmcontent"><span class="heading5" id="s1.2.12.4.2">Dialog fields</span></a>
+</li>
+</ul>
+</li>
+<li class="heading4" id="i1.2.12.5" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a1.2.12.5" href="i2c_slave_write_io30x.htm" target="hmcontent"><span class="heading4" id="s1.2.12.5" ondblclick="return dblclicked(this)">I2C slave write (I2CS write)</span></a>
+<ul id="ul1.2.12.5" style="list-style-type:none">
+<li class="heading5" id="i1.2.12.5.1" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a1.2.12.5.1" href="input_and_output_ports_i2cs_write_io30x.htm" target="hmcontent"><span class="heading5" id="s1.2.12.5.1">Input and output ports</span></a>
+</li>
+<li class="heading5" id="i1.2.12.5.2" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a1.2.12.5.2" href="dialog_fields_i2cs_write_io30x.htm" target="hmcontent"><span class="heading5" id="s1.2.12.5.2">Dialog fields</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i1.2.13" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a1.2.13" href="zoh_io30x.htm" target="hmcontent"><span class="heading3" id="s1.2.13" ondblclick="return dblclicked(this)">ZOH</span></a>
+<ul id="ul1.2.13" style="list-style-type:none">
+<li class="heading4" id="i1.2.13.1" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a1.2.13.1" href="usage_notes_zoh_30x.htm" target="hmcontent"><span class="heading4" id="s1.2.13.1">Usage notes</span></a>
+</li>
+<li class="heading4" id="i1.2.13.2" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a1.2.13.2" href="input_and_output_ports_zoh_io30x.htm" target="hmcontent"><span class="heading4" id="s1.2.13.2">Input and output ports</span></a>
+</li>
+<li class="heading4" id="i1.2.13.3" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a1.2.13.3" href="dialog_fields_io30x_zoh.htm" target="hmcontent"><span class="heading4" id="s1.2.13.3">Dialog fields</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i2" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading1" id="a2" href="io331.htm" target="hmcontent"><span class="heading1" id="s2" ondblclick="return dblclicked(this)">IO331</span></a>
+<ul id="ul2" style="list-style-type:none">
+<li class="heading2" id="i2.1" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading2" id="a2.1" href="i_o_pin_mapping_io331.htm" target="hmcontent"><span class="heading2" id="s2.1" ondblclick="return dblclicked(this)">I/O pin mapping</span></a>
+<ul id="ul2.1" style="list-style-type:none">
+<li class="heading3" id="i2.1.1" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a2.1.1" href="i_o_pin_mapping_standard_io331.htm" target="hmcontent"><span class="heading3" id="s2.1.1">Standard</span></a>
+</li>
+<li class="heading3" id="i2.1.2" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a2.1.2" href="i_o_pin_mapping_no_io331.htm" target="hmcontent"><span class="heading3" id="s2.1.2">No plug-in module fitted</span></a>
+</li>
+<li class="heading3" id="i2.1.3" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a2.1.3" href="i_o_pin_mapping_1_io331.htm" target="hmcontent"><span class="heading3" id="s2.1.3">IO331-1 module fitted</span></a>
+</li>
+<li class="heading3" id="i2.1.4" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a2.1.4" href="i_o_pin_mapping_2_io331.htm" target="hmcontent"><span class="heading3" id="s2.1.4">IO331-2 module fitted</span></a>
+</li>
+<li class="heading3" id="i2.1.5" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a2.1.5" href="i_o_pin_mapping_3_io331.htm" target="hmcontent"><span class="heading3" id="s2.1.5">IO331-3 module fitted</span></a>
+</li>
+<li class="heading3" id="i2.1.6" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a2.1.6" href="i_o_pin_mapping_5_io331.htm" target="hmcontent"><span class="heading3" id="s2.1.6">IO331-5 module fitted</span></a>
+</li>
+<li class="heading3" id="i2.1.7" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a2.1.7" href="i_o_pin_mapping_6_io331.htm" target="hmcontent"><span class="heading3" id="s2.1.7">IO331-6 module fitted</span></a>
+</li>
+<li class="heading3" id="i2.1.8" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a2.1.8" href="io331-7_module_fitted.htm" target="hmcontent"><span class="heading3" id="s2.1.8">IO331-7 module fitted</span></a>
+</li>
+<li class="heading3" id="i2.1.9" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a2.1.9" href="io331-21.htm" target="hmcontent"><span class="heading3" id="s2.1.9">IO331-21 conditioning module fitted&nbsp;</span></a>
+</li>
+<li class="heading3" id="i2.1.10" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a2.1.10" href="io331_2_and_21_module_fitted.htm" target="hmcontent"><span class="heading3" id="s2.1.10">IO331-2 and -21 modules fitted</span></a>
+</li>
+<li class="heading3" id="i2.1.11" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a2.1.11" href="io331_6_and_21_module_fitted.htm" target="hmcontent"><span class="heading3" id="s2.1.11">IO331-6 and -21 modules fitted</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i2.2" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading2" id="a2.2" href="driver_configuration_io331.htm" target="hmcontent"><span class="heading2" id="s2.2" ondblclick="return dblclicked(this)">Driver configuration</span></a>
+<ul id="ul2.2" style="list-style-type:none">
+<li class="heading3" id="i2.2.1" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a2.2.1" href="setup_driver_block_io331.htm" target="hmcontent"><span class="heading3" id="s2.2.1" ondblclick="return dblclicked(this)">Setup driver block</span></a>
+<ul id="ul2.2.1" style="list-style-type:none">
+<li class="heading4" id="i2.2.1.1" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a2.2.1.1" href="input_and_output_ports_setup_io331.htm" target="hmcontent"><span class="heading4" id="s2.2.1.1">Input and output ports</span></a>
+</li>
+<li class="heading4" id="i2.2.1.2" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a2.2.1.2" href="dialog_fields_setup_io331.htm" target="hmcontent"><span class="heading4" id="s2.2.1.2">Dialog fields</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i2.2.2" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a2.2.2" href="analog_i_o_io331.htm" target="hmcontent"><span class="heading3" id="s2.2.2" ondblclick="return dblclicked(this)">Analog</span></a>
+<ul id="ul2.2.2" style="list-style-type:none">
+<li class="heading4" id="i2.2.2.1" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a2.2.2.1" href="analog_input_driver_block_io331.htm" target="hmcontent"><span class="heading4" id="s2.2.2.1" ondblclick="return dblclicked(this)">Analog input driver block</span></a>
+<ul id="ul2.2.2.1" style="list-style-type:none">
+<li class="heading5" id="i2.2.2.1.1" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a2.2.2.1.1" href="input_and_output_ports_analog_in_io331.htm" target="hmcontent"><span class="heading5" id="s2.2.2.1.1">Input and output ports</span></a>
+</li>
+<li class="heading5" id="i2.2.2.1.2" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a2.2.2.1.2" href="dialog_fields_analog_in_io331.htm" target="hmcontent"><span class="heading5" id="s2.2.2.1.2">Dialog fields</span></a>
+</li>
+</ul>
+</li>
+<li class="heading4" id="i2.2.2.2" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a2.2.2.2" href="analog_output_driver_block_io331.htm" target="hmcontent"><span class="heading4" id="s2.2.2.2" ondblclick="return dblclicked(this)">Analog output driver block</span></a>
+<ul id="ul2.2.2.2" style="list-style-type:none">
+<li class="heading5" id="i2.2.2.2.1" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a2.2.2.2.1" href="input_and_output_ports_analog_out_io331.htm" target="hmcontent"><span class="heading5" id="s2.2.2.2.1">Input and output ports</span></a>
+</li>
+<li class="heading5" id="i2.2.2.2.2" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a2.2.2.2.2" href="dialog_fields_analog_out_io331.htm" target="hmcontent"><span class="heading5" id="s2.2.2.2.2">Dialog fields</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i2.2.3" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a2.2.3" href="digital_io331.htm" target="hmcontent"><span class="heading3" id="s2.2.3" ondblclick="return dblclicked(this)">Digital</span></a>
+<ul id="ul2.2.3" style="list-style-type:none">
+<li class="heading4" id="i2.2.3.1" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a2.2.3.1" href="usage_notes_dio_io331.htm" target="hmcontent"><span class="heading4" id="s2.2.3.1">Usage Notes</span></a>
+</li>
+<li class="heading4" id="i2.2.3.2" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a2.2.3.2" href="digital_input_driver_block_io331.htm" target="hmcontent"><span class="heading4" id="s2.2.3.2" ondblclick="return dblclicked(this)">Digital input driver block</span></a>
+<ul id="ul2.2.3.2" style="list-style-type:none">
+<li class="heading5" id="i2.2.3.2.1" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a2.2.3.2.1" href="input_and_output_ports_digital_in_io331.htm" target="hmcontent"><span class="heading5" id="s2.2.3.2.1">Input and output ports</span></a>
+</li>
+<li class="heading5" id="i2.2.3.2.2" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a2.2.3.2.2" href="dialog_fields_digital_in_io331.htm" target="hmcontent"><span class="heading5" id="s2.2.3.2.2">Dialog fields</span></a>
+</li>
+</ul>
+</li>
+<li class="heading4" id="i2.2.3.3" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a2.2.3.3" href="digital_output_driver_block_digital_out_io331.htm" target="hmcontent"><span class="heading4" id="s2.2.3.3" ondblclick="return dblclicked(this)">Digital output driver block</span></a>
+<ul id="ul2.2.3.3" style="list-style-type:none">
+<li class="heading5" id="i2.2.3.3.1" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a2.2.3.3.1" href="input_and_output_driver_blocks_digital_out_io331.htm" target="hmcontent"><span class="heading5" id="s2.2.3.3.1">Input and output driver blocks</span></a>
+</li>
+<li class="heading5" id="i2.2.3.3.2" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a2.2.3.3.2" href="dialog_fields_digital_out_io331.htm" target="hmcontent"><span class="heading5" id="s2.2.3.3.2">Dialog fields</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i2.2.4" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a2.2.4" href="pwm_io331.htm" target="hmcontent"><span class="heading3" id="s2.2.4" ondblclick="return dblclicked(this)">PWM generation driver block</span></a>
+<ul id="ul2.2.4" style="list-style-type:none">
+<li class="heading4" id="i2.2.4.1" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a2.2.4.1" href="usage_notes_pwm_io331.htm" target="hmcontent"><span class="heading4" id="s2.2.4.1" ondblclick="return dblclicked(this)">Usage notes</span></a>
+<ul id="ul2.2.4.1" style="list-style-type:none">
+<li class="heading5" id="i2.2.4.1.1" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a2.2.4.1.1" href="how_to_configure_pwm_311.htm" target="hmcontent"><span class="heading5" id="s2.2.4.1.1" ondblclick="return dblclicked(this)">How to configure typical signal types</span></a>
+<ul id="ul2.2.4.1.1" style="list-style-type:none">
+<li class="heading6" id="i2.2.4.1.1.1" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading6" id="a2.2.4.1.1.1" href="center-aligned_pwm_io331.htm" target="hmcontent"><span class="heading6" id="s2.2.4.1.1.1">Center-aligned</span></a>
+</li>
+<li class="heading6" id="i2.2.4.1.1.2" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading6" id="a2.2.4.1.1.2" href="left_aligned_pwm_io331.htm" target="hmcontent"><span class="heading6" id="s2.2.4.1.1.2">Left aligned</span></a>
+</li>
+<li class="heading6" id="i2.2.4.1.1.3" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading6" id="a2.2.4.1.1.3" href="right_aligned_pwm_io331.htm" target="hmcontent"><span class="heading6" id="s2.2.4.1.1.3">Right aligned</span></a>
+</li>
+<li class="heading6" id="i2.2.4.1.1.4" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading6" id="a2.2.4.1.1.4" href="inverted_pwm_io331.htm" target="hmcontent"><span class="heading6" id="s2.2.4.1.1.4">Inverted</span></a>
+</li>
+</ul>
+</li>
+<li class="heading5" id="i2.2.4.1.2" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a2.2.4.1.2" href="pwm_trigger_output_io331.htm" target="hmcontent"><span class="heading5" id="s2.2.4.1.2">Trigger ouput</span></a>
+</li>
+</ul>
+</li>
+<li class="heading4" id="i2.2.4.2" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a2.2.4.2" href="input_and_output_ports_pwm_io331.htm" target="hmcontent"><span class="heading4" id="s2.2.4.2">Input and output ports</span></a>
+</li>
+<li class="heading4" id="i2.2.4.3" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a2.2.4.3" href="dialog_fields_pwm_io331.htm" target="hmcontent"><span class="heading4" id="s2.2.4.3">Dialog fields</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i2.2.5" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a2.2.5" href="pwm_capture_driver_block_io331.htm" target="hmcontent"><span class="heading3" id="s2.2.5" ondblclick="return dblclicked(this)">PWM capture driver block</span></a>
+<ul id="ul2.2.5" style="list-style-type:none">
+<li class="heading4" id="i2.2.5.1" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a2.2.5.1" href="usage_notes_cap_io331.htm" target="hmcontent"><span class="heading4" id="s2.2.5.1" ondblclick="return dblclicked(this)">Usage Notes</span></a>
+<ul id="ul2.2.5.1" style="list-style-type:none">
+<li class="heading5" id="i2.2.5.1.1" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a2.2.5.1.1" href="example_configurations_cap_io331.htm" target="hmcontent"><span class="heading5" id="s2.2.5.1.1">Example configurations</span></a>
+</li>
+<li class="heading5" id="i2.2.5.1.2" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a2.2.5.1.2" href="measuring_0_and_100_duty_cycle_cap_io331.htm" target="hmcontent"><span class="heading5" id="s2.2.5.1.2">Measuring 0% and 100% duty cycles</span></a>
+</li>
+</ul>
+</li>
+<li class="heading4" id="i2.2.5.2" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a2.2.5.2" href="input_and_output_ports_cap_io331.htm" target="hmcontent"><span class="heading4" id="s2.2.5.2">Input and output ports</span></a>
+</li>
+<li class="heading4" id="i2.2.5.3" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a2.2.5.3" href="dialog_fields_pwm_cap_io331.htm" target="hmcontent"><span class="heading4" id="s2.2.5.3">Dialog fields</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i2.2.6" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a2.2.6" href="cos_interrupt_io331.htm" target="hmcontent"><span class="heading3" id="s2.2.6" ondblclick="return dblclicked(this)">CoS interrupt driver block</span></a>
+<ul id="ul2.2.6" style="list-style-type:none">
+<li class="heading4" id="i2.2.6.1" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a2.2.6.1" href="input_and_output_ports_cos_io331.htm" target="hmcontent"><span class="heading4" id="s2.2.6.1">Input and output ports</span></a>
+</li>
+<li class="heading4" id="i2.2.6.2" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a2.2.6.2" href="dialog_fields_cos_io331.htm" target="hmcontent"><span class="heading4" id="s2.2.6.2">Dialog fields</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i2.2.7" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a2.2.7" href="quadrature_io331.htm" target="hmcontent"><span class="heading3" id="s2.2.7" ondblclick="return dblclicked(this)">Quadrature</span></a>
+<ul id="ul2.2.7" style="list-style-type:none">
+<li class="heading4" id="i2.2.7.1" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a2.2.7.1" href="usage_notes_quad_io331.htm" target="hmcontent"><span class="heading4" id="s2.2.7.1">Usage notes</span></a>
+</li>
+<li class="heading4" id="i2.2.7.2" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a2.2.7.2" href="qad_io331.htm" target="hmcontent"><span class="heading4" id="s2.2.7.2" ondblclick="return dblclicked(this)">QAD</span></a>
+<ul id="ul2.2.7.2" style="list-style-type:none">
+<li class="heading5" id="i2.2.7.2.1" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a2.2.7.2.1" href="usage_notes_qad_io331.htm" target="hmcontent"><span class="heading5" id="s2.2.7.2.1">Usage Notes</span></a>
+</li>
+<li class="heading5" id="i2.2.7.2.2" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a2.2.7.2.2" href="input_and_output_ports_qad_io331.htm" target="hmcontent"><span class="heading5" id="s2.2.7.2.2">Input and output ports</span></a>
+</li>
+<li class="heading5" id="i2.2.7.2.3" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a2.2.7.2.3" href="dialog_fields_qad_io331.htm" target="hmcontent"><span class="heading5" id="s2.2.7.2.3">Dialog fields</span></a>
+</li>
+</ul>
+</li>
+<li class="heading4" id="i2.2.7.3" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a2.2.7.3" href="qae_io331.htm" target="hmcontent"><span class="heading4" id="s2.2.7.3" ondblclick="return dblclicked(this)">QAE</span></a>
+<ul id="ul2.2.7.3" style="list-style-type:none">
+<li class="heading5" id="i2.2.7.3.1" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a2.2.7.3.1" href="input_and_output_ports_qae_io331.htm" target="hmcontent"><span class="heading5" id="s2.2.7.3.1">Input and output ports</span></a>
+</li>
+<li class="heading5" id="i2.2.7.3.2" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a2.2.7.3.2" href="dialog_fields_qae_io331.htm" target="hmcontent"><span class="heading5" id="s2.2.7.3.2">Dialog fields</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i2.2.8" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a2.2.8" href="ssi_io331.htm" target="hmcontent"><span class="heading3" id="s2.2.8" ondblclick="return dblclicked(this)">SSI</span></a>
+<ul id="ul2.2.8" style="list-style-type:none">
+<li class="heading4" id="i2.2.8.1" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a2.2.8.1" href="ssim_io331.htm" target="hmcontent"><span class="heading4" id="s2.2.8.1" ondblclick="return dblclicked(this)">SSIM</span></a>
+<ul id="ul2.2.8.1" style="list-style-type:none">
+<li class="heading5" id="i2.2.8.1.1" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a2.2.8.1.1" href="output_ports_ssim_io331.htm" target="hmcontent"><span class="heading5" id="s2.2.8.1.1">Output ports</span></a>
+</li>
+<li class="heading5" id="i2.2.8.1.2" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a2.2.8.1.2" href="dialog_fields_ssim_io331.htm" target="hmcontent"><span class="heading5" id="s2.2.8.1.2">Dialog fields</span></a>
+</li>
+</ul>
+</li>
+<li class="heading4" id="i2.2.8.2" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a2.2.8.2" href="ssis_io331.htm" target="hmcontent"><span class="heading4" id="s2.2.8.2" ondblclick="return dblclicked(this)">SSIS</span></a>
+<ul id="ul2.2.8.2" style="list-style-type:none">
+<li class="heading5" id="i2.2.8.2.1" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a2.2.8.2.1" href="input_ports_ssis_io331.htm" target="hmcontent"><span class="heading5" id="s2.2.8.2.1">Input ports</span></a>
+</li>
+<li class="heading5" id="i2.2.8.2.2" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a2.2.8.2.2" href="dialog_fields_ssis_io331.htm" target="hmcontent"><span class="heading5" id="s2.2.8.2.2">Dialog fields</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i2.2.9" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a2.2.9" href="biss_io331.htm" target="hmcontent"><span class="heading3" id="s2.2.9" ondblclick="return dblclicked(this)">BiSS</span></a>
+<ul id="ul2.2.9" style="list-style-type:none">
+<li class="heading4" id="i2.2.9.1" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a2.2.9.1" href="biss_sniffer_io331.htm" target="hmcontent"><span class="heading4" id="s2.2.9.1" ondblclick="return dblclicked(this)">BiSS Sniffer</span></a>
+<ul id="ul2.2.9.1" style="list-style-type:none">
+<li class="heading5" id="i2.2.9.1.1" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a2.2.9.1.1" href="usage_notes_biss_sniffer_io331.htm" target="hmcontent"><span class="heading5" id="s2.2.9.1.1">Usage notes</span></a>
+</li>
+<li class="heading5" id="i2.2.9.1.2" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a2.2.9.1.2" href="input_and_output_ports_biss_sniffer_io331.htm" target="hmcontent"><span class="heading5" id="s2.2.9.1.2">Input and output ports</span></a>
+</li>
+<li class="heading5" id="i2.2.9.1.3" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a2.2.9.1.3" href="dialog_fields_biss_sniffer_io331.htm" target="hmcontent"><span class="heading5" id="s2.2.9.1.3">Dialog fields</span></a>
+</li>
+</ul>
+</li>
+<li class="heading4" id="i2.2.9.2" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a2.2.9.2" href="biss_module_io331.htm" target="hmcontent"><span class="heading4" id="s2.2.9.2" ondblclick="return dblclicked(this)">BiSS</span></a>
+<ul id="ul2.2.9.2" style="list-style-type:none">
+<li class="heading5" id="i2.2.9.2.1" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a2.2.9.2.1" href="usage_notes_biss_io331.htm" target="hmcontent"><span class="heading5" id="s2.2.9.2.1">Usage notes</span></a>
+</li>
+<li class="heading5" id="i2.2.9.2.2" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a2.2.9.2.2" href="input_and_output_ports_biss_io331.htm" target="hmcontent"><span class="heading5" id="s2.2.9.2.2">Input and output ports</span></a>
+</li>
+<li class="heading5" id="i2.2.9.2.3" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a2.2.9.2.3" href="dialog_fields_biss_io331.htm" target="hmcontent"><span class="heading5" id="s2.2.9.2.3">Dialog fields</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i2.2.10" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a2.2.10" href="endat_io331.htm" target="hmcontent"><span class="heading3" id="s2.2.10" ondblclick="return dblclicked(this)">EnDat</span></a>
+<ul id="ul2.2.10" style="list-style-type:none">
+<li class="heading4" id="i2.2.10.1" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a2.2.10.1" href="usage_notes_endat_io331.htm" target="hmcontent"><span class="heading4" id="s2.2.10.1">Usage notes</span></a>
+</li>
+<li class="heading4" id="i2.2.10.2" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a2.2.10.2" href="input_and_output_ports_endat_io331.htm" target="hmcontent"><span class="heading4" id="s2.2.10.2">Input and output ports</span></a>
+</li>
+<li class="heading4" id="i2.2.10.3" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a2.2.10.3" href="dialog_fields_endat_io331.htm" target="hmcontent"><span class="heading4" id="s2.2.10.3">Dialog fields</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i2.2.11" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a2.2.11" href="spi_io331.htm" target="hmcontent"><span class="heading3" id="s2.2.11" ondblclick="return dblclicked(this)">SPI</span></a>
+<ul id="ul2.2.11" style="list-style-type:none">
+<li class="heading4" id="i2.2.11.1" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a2.2.11.1" href="usage_notes_spi_io331.htm" target="hmcontent"><span class="heading4" id="s2.2.11.1">Usage notes</span></a>
+</li>
+<li class="heading4" id="i2.2.11.2" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a2.2.11.2" href="spi.htm" target="hmcontent"><span class="heading4" id="s2.2.11.2" ondblclick="return dblclicked(this)">SPI</span></a>
+<ul id="ul2.2.11.2" style="list-style-type:none">
+<li class="heading5" id="i2.2.11.2.1" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a2.2.11.2.1" href="input_and_output_ports_spi_sr_io3xx.htm" target="hmcontent"><span class="heading5" id="s2.2.11.2.1">Input and output ports</span></a>
+</li>
+<li class="heading5" id="i2.2.11.2.2" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a2.2.11.2.2" href="dialog_fields_spi_sr_io3xx.htm" target="hmcontent"><span class="heading5" id="s2.2.11.2.2">Dialog fields</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i2.2.12" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a2.2.12" href="i2c_io331.htm" target="hmcontent"><span class="heading3" id="s2.2.12" ondblclick="return dblclicked(this)">I2C</span></a>
+<ul id="ul2.2.12" style="list-style-type:none">
+<li class="heading4" id="i2.2.12.1" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a2.2.12.1" href="i2cm_read_driver_block_io331.htm" target="hmcontent"><span class="heading4" id="s2.2.12.1" ondblclick="return dblclicked(this)">I2CM read driver block</span></a>
+<ul id="ul2.2.12.1" style="list-style-type:none">
+<li class="heading5" id="i2.2.12.1.1" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a2.2.12.1.1" href="input_and_output_ports_i2cm_read_io331.htm" target="hmcontent"><span class="heading5" id="s2.2.12.1.1">Input and output ports</span></a>
+</li>
+<li class="heading5" id="i2.2.12.1.2" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a2.2.12.1.2" href="dialog_fields_i2cm_read_io331.htm" target="hmcontent"><span class="heading5" id="s2.2.12.1.2">Dialog fields</span></a>
+</li>
+</ul>
+</li>
+<li class="heading4" id="i2.2.12.2" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a2.2.12.2" href="i2cm_write_driver_block_io331.htm" target="hmcontent"><span class="heading4" id="s2.2.12.2" ondblclick="return dblclicked(this)">I2CM write driver block</span></a>
+<ul id="ul2.2.12.2" style="list-style-type:none">
+<li class="heading5" id="i2.2.12.2.1" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a2.2.12.2.1" href="input_and_output_ports_i2cm_write_io331.htm" target="hmcontent"><span class="heading5" id="s2.2.12.2.1">Input and output ports</span></a>
+</li>
+<li class="heading5" id="i2.2.12.2.2" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading5" id="a2.2.12.2.2" href="dialog_fields_i2cm_write_io331.htm" target="hmcontent"><span class="heading5" id="s2.2.12.2.2">Dialog fields</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i2.2.13" data-bg="list_arrow.png;list_arrow.png" style="background:url(list_arrow.png) no-repeat;cursor:pointer;padding-left:7px" onclick="return clicked(this,event)"><a class="heading3" id="a2.2.13" href="zoh_io331.htm" target="hmcontent"><span class="heading3" id="s2.2.13" ondblclick="return dblclicked(this)">ZOH</span></a>
+<ul id="ul2.2.13" style="list-style-type:none">
+<li class="heading4" id="i2.2.13.1" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a2.2.13.1" href="usage_notes_io331_zoh.htm" target="hmcontent"><span class="heading4" id="s2.2.13.1">Usage notes</span></a>
+</li>
+<li class="heading4" id="i2.2.13.2" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a2.2.13.2" href="input_and_output_ports_zoh_io331.htm" target="hmcontent"><span class="heading4" id="s2.2.13.2">Input and output ports</span></a>
+</li>
+<li class="heading4" id="i2.2.13.3" style="background:url(standardli.png) no-repeat;padding-left:7px" onclick="return clicked(this,event)"><a class="heading4" id="a2.2.13.3" href="dialog_fields_io331_zoh.htm" target="hmcontent"><span class="heading4" id="s2.2.13.3">Dialog fields</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<script type="text/javascript">loadicons('list_arrow.png','standardli.png');</script>
+<a href="#" class="lasta"></a>
+</div>
+</div>
+</body>
+</html>

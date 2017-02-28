@@ -1,0 +1,16 @@
+Hinweis zu sercos Slave:
+
+Zum Redaktionsschluss befand sich die sercos Slave Firmware noch in Entwicklung und es lag
+keine freigegebenen Version vor. Diese Firmware wird beim nächsten DVD Release hinzugefügt.
+Sobald verfügbar, liefern wir die sercos Slave Firmware auf Anfrage gerne nach. 
+
+
+
+
+Note for sercos slave:
+
+At editorial deadline the sercos slave firmware still has been under development and no 
+released version has been available. This firmware will be added with the next DVD release.
+Once available, we are happy to deliver the sercos Firmware on request.
+
+

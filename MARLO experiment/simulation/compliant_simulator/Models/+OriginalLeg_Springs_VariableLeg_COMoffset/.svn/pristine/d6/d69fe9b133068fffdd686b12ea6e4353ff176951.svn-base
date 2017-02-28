@@ -1,0 +1,9 @@
+#ifndef _ATRIAS3D_FootYawJacobians_Left_h_
+#define _ATRIAS3D_FootYawJacobians_Left_h_
+
+#include <math.h>
+
+void ATRIAS3D_FootYawJacobians_Left(const double q[13], const double dq[13], double Jp4R_yaw[13], double Jp4L_yaw[13], double* dJp4R_yaw, double* dJp4L_yaw) ;
+
+
+#endif /* _ATRIAS3D_FootYawJacobians_Left_h_ */

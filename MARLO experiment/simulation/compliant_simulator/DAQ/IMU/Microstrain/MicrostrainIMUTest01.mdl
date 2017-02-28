@@ -1,0 +1,3944 @@
+Model {
+  Name			  "MicrostrainIMUTest01"
+  Version		  8.1
+  MdlSubVersion		  0
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    8
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      "Angles"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      "Rates"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      "IMU"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      "EtherCATStatus"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      "ErrorFlags"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      "Counter"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      "State"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      "ID"
+    }
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.23"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+  }
+  SavedCharacterEncoding  "windows-1252"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  DataTypeOverrideAppliesTo "AllNumericTypes"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  FPTRunName		  "Run 1"
+  MaxMDLFileLineLength	  120
+  InitFcn		  "IMU_Alignment_Params = [0 90 180];\n"
+  Object {
+    $PropName		    "BdWindowsInfo"
+    $ObjectID		    1
+    $ClassName		    "Simulink.BDWindowsInfo"
+    Object {
+      $PropName		      "WindowsInfo"
+      $ObjectID		      2
+      $ClassName	      "Simulink.WindowInfo"
+      IsActive		      [1]
+      Location		      [1.0, 1.0, 1918.0, 1038.0]
+      Object {
+	$PropName		"ModelBrowserInfo"
+	$ObjectID		3
+	$ClassName		"Simulink.ModelBrowserInfo"
+	Visible			[0]
+	DockPosition		"Left"
+	Width			[50]
+	Height			[50]
+	Filter			[9]
+      }
+      Object {
+	$PropName		"ExplorerBarInfo"
+	$ObjectID		4
+	$ClassName		"Simulink.ExplorerBarInfo"
+	Visible			[1]
+      }
+      Object {
+	$PropName		"EditorsInfo"
+	$ObjectID		5
+	$ClassName		"Simulink.EditorInfo"
+	IsActive		[1]
+	ViewObjType		"SimulinkTopLevel"
+	LoadSaveID		"0"
+	Extents			[1868.0, 864.0]
+	ZoomFactor		[1.0]
+	Offset			[0.0, 0.0]
+      }
+    }
+  }
+  Created		  "Thu Apr 24 15:23:22 2014"
+  Creator		  "bgbuss"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "bgbuss"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Thu May 08 14:24:27 2014"
+  RTWModifiedTimeStamp	  321411641
+  ModelVersionFormat	  "1.%<AutoIncrement:23>"
+  ConfigurationManager	  "None"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "disabled"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowDesignRanges	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  Object {
+    $PropName		    "DataLoggingOverride"
+    $ObjectID		    6
+    $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
+    model_		    "MicrostrainIMUTest01"
+    overrideMode_	    [0.0]
+    Array {
+      Type		      "Cell"
+      Dimension		      1
+      Cell		      "MicrostrainIMUTest01"
+      PropName		      "logAsSpecifiedByModels_"
+    }
+    Array {
+      Type		      "Cell"
+      Dimension		      1
+      Cell		      []
+      PropName		      "logAsSpecifiedByModelsSSIDs_"
+    }
+  }
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  CovForceBlockReductionOff on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse		  off
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      7
+      Version		      "1.13.0"
+      Array {
+	Type			"Handle"
+	Dimension		8
+	Simulink.SolverCC {
+	  $ObjectID		  8
+	  Version		  "1.13.0"
+	  StartTime		  "0.0"
+	  StopTime		  "inf"
+	  AbsTol		  "auto"
+	  FixedStep		  "0.001"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  EnableConcurrentExecution off
+	  ConcurrentTasks	  off
+	  Solver		  "FixedStepDiscrete"
+	  SolverName		  "FixedStepDiscrete"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  9
+	  Version		  "1.13.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  off
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SignalLoggingSaveFormat "ModelDataLogs"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  DSMLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  DSMLoggingName	  "dsmout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  10
+	  Version		  "1.13.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    8
+	    Cell		    "BooleansAsBitfields"
+	    Cell		    "PassReuseOutputArgsAs"
+	    Cell		    "PassReuseOutputArgsThreshold"
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    Cell		    "UseSpecifiedMinMax"
+	    PropName		    "DisabledProps"
+	  }
+	  BlockReduction	  off
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  UseIntDivNetSlope	  off
+	  UseFloatMulNetSlope	  off
+	  UseSpecifiedMinMax	  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  off
+	  BufferReuse		  off
+	  EnhancedBackFolding	  off
+	  StrengthReduction	  off
+	  ExpressionFolding	  off
+	  BooleansAsBitfields	  off
+	  BitfieldContainerType	  "uint_T"
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  off
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  MaxStackSize		  "Inherit from target"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	  ParallelExecutionInRapidAccelerator on
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  11
+	  Version		  "1.13.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"warning"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  MaskedZcDiagnostic	  "warning"
+	  IgnoredZcDiagnostic	  "warning"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "EnableAllAsWarning"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  FrameProcessingCompatibilityMsg "warning"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  SimStateOlderReleaseMsg "error"
+	  InitInArrayFormatMsg	  "warning"
+	  StrictBusMsg		  "ErrorLevel1"
+	  BusNameAdapt		  "WarnAndRepair"
+	  NonBusSignalsTreatedAsBus "none"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	  SFUnusedDataAndEventsDiag "warning"
+	  SFUnexpectedBacktrackingDiag "warning"
+	  SFInvalidInputDataAccessInChartInitDiag "warning"
+	  SFNoUnconditionalDefaultTransitionDiag "warning"
+	  SFTransitionOutsideNaturalParentDiag "warning"
+	  SFUnconditionalTransitionShadowingDiag "warning"
+	  SFUndirectedBroadcastEventsDiag "warning"
+	  SFTransitionActionBeforeConditionDiag	"warning"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  12
+	  Version		  "1.13.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdBitPerLongLong	  64
+	  ProdBitPerFloat	  32
+	  ProdBitPerDouble	  64
+	  ProdBitPerPointer	  32
+	  ProdLargestAtomicInteger "Char"
+	  ProdLargestAtomicFloat  "None"
+	  ProdIntDivRoundTo	  "Zero"
+	  ProdEndianess		  "LittleEndian"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdLongLongMode	  off
+	  ProdHWDeviceType	  "Generic->32-bit x86 compatible"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetBitPerLongLong	  64
+	  TargetBitPerFloat	  32
+	  TargetBitPerDouble	  64
+	  TargetBitPerPointer	  32
+	  TargetLargestAtomicInteger "Char"
+	  TargetLargestAtomicFloat "None"
+	  TargetShiftRightIntArith on
+	  TargetLongLongMode	  off
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  13
+	  Version		  "1.13.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceErrorOnInvalidPool on
+	  ParallelModelReferenceMATLABWorkerInit "None"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  PropagateVarSize	  "Infer from blocks in model"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	  PropagateSignalLabelsOutOfModel off
+	  SupportModelReferenceSimTargetCustomCode off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  14
+	  Version		  "1.13.0"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimCtrlC		  on
+	  SimExtrinsic		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimParseCustomCode	  on
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  15
+	  Version		  "1.13.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    16
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    Cell		    "GenerateWebview"
+	    Cell		    "GenerateCodeMetricsReport"
+	    Cell		    "GenerateCodeReplacementReport"
+	    Cell		    "TargetLang"
+	    Cell		    "PortableWordSizes"
+	    Cell		    "GenerateErtSFunction"
+	    Cell		    "CreateSILPILBlock"
+	    Cell		    "CodeExecutionProfiling"
+	    Cell		    "CodeProfilingSaveOptions"
+	    Cell		    "CodeProfilingInstrumentation"
+	    PropName		    "DisabledProps"
+	  }
+	  SystemTargetFile	  "xpctarget.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  PackageGeneratedCodeAndArtifacts off
+	  TemplateMakefile	  "xpc_default_tmf"
+	  Description		  "xPC Target"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ProcessScript		  "xpctarget_make_rtw_hook"
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  PortableWordSizes	  off
+	  GenerateErtSFunction	  off
+	  CreateSILPILBlock	  "None"
+	  CodeExecutionProfiling  off
+	  CodeExecutionProfileVariable "executionProfile"
+	  CodeProfilingSaveOptions "SummaryOnly"
+	  CodeProfilingInstrumentation off
+	  SILDebugging		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  GenerateWebview	  off
+	  GenerateCodeMetricsReport off
+	  GenerateCodeReplacementReport	off
+	  RTWCompilerOptimization "On"
+	  CheckMdlBeforeBuild	  "Off"
+	  CustomRebuildMode	  "OnUpdate"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      16
+	      Version		      "1.13.0"
+	      Array {
+		Type			"Cell"
+		Dimension		22
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"IgnoreTestpoints"
+		Cell			"InsertBlockDesc"
+		Cell			"InsertPolySpaceComments"
+		Cell			"SFDataObjDesc"
+		Cell			"MATLABFcnDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrFcnArg"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		Cell			"ReqsInCode"
+		Cell			"InternalIdentifier"
+		PropName		"DisabledProps"
+	      }
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      OperatorAnnotations     off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      MATLABFcnDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M_T"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      InsertPolySpaceComments off
+	      SimulinkBlockComments   on
+	      MATLABSourceComments    off
+	      EnableCustomComments    off
+	      InternalIdentifier      "Shortened"
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    xpctarget.xpcTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      17
+	      Version		      "1.13.0"
+	      Array {
+		Type			"Cell"
+		Dimension		16
+		Cell			"GeneratePreprocessorConditionals"
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"CPPClassGenCompliant"
+		Cell			"PortableWordSizes"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"GenerateAllocFcn"
+		PropName		"DisabledProps"
+	      }
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      CodeReplacementLibrary  "XPC_BLAS"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      ConcurrentExecutionCompliant on
+	      IncludeMdlTerminateFcn  on
+	      GeneratePreprocessorConditionals "Disable all"
+	      CombineOutputUpdateFcns off
+	      CombineSignalStateStructs	off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      SupportVariableSizeSignals off
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      MATLABClassNameForMDSCustomization "xpcAperiodicCustomization"
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    off
+	      AutosarCompliant	      off
+	      GRTInterface	      on
+	      GenerateAllocFcn	      off
+	      RL32ModeModifier	      "Real-Time"
+	      ExtMode		      on
+	      ExtModeMexFile	      "ext_xpc"
+	      ExtModeIntrfLevel	      "Level2 - Open"
+	      ExtModeArmWhenConnect   off
+	      RL32LogTETModifier      on
+	      RL32LogBufSizeModifier  "10000000"
+	      xPCTaskExecutionProfile off
+	      xPCRL32EventNumber      "5000"
+	      RL32IRQSourceModifier   "Timer"
+	      xPCIRQSourceBoard	      "None/Other"
+	      xPCIOIRQSlot	      "-1"
+	      xpcDblBuff	      off
+	      xpcObjCom		      off
+	      xPCGenerateASAP2	      off
+	      xPCGenerateXML	      off
+	      RL32ObjectName	      "tg"
+	      xPCisDownloadable	      on
+	      xPCisDefaultEnv	      on
+	      xPCisModelTimeout	      off
+	      xPCModelTimeoutSecs     "10"
+	      xPCLoadParamSetFile     off
+	      xPCConcurrentTasks      off
+	      xPCEnableSFAnimation    off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      ExtraOptions	      "-aGenerateTraceInfo=0 -aIgnoreTestpoints=0 "
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition     [ 488, 105, 1432, 887 ] 
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    7
+  }
+  Object {
+    $PropName		    "DataTransfer"
+    $ObjectID		    18
+    $ClassName		    "Simulink.GlobalDataTransfer"
+    DefaultTransitionBetweenSyncTasks "Ensure deterministic transfer (maximum delay)"
+    DefaultTransitionBetweenAsyncTasks "Ensure data integrity only"
+    DefaultTransitionBetweenContTasks "Ensure deterministic transfer (minimum delay)"
+    DefaultExtrapolationMethodBetweenContTasks "None"
+    AutoInsertRateTranBlk   [0]
+  }
+  ExplicitPartitioning	  off
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  MaskDefaults {
+    SelfModifiable	    "off"
+    IconFrame		    "on"
+    IconOpaque		    "on"
+    RunInitForIconRedraw    "off"
+    IconRotate		    "none"
+    PortRotate		    "default"
+    IconUnits		    "autoscale"
+  }
+  MaskParameterDefaults {
+    Evaluate		    "on"
+    Tunable		    "on"
+    NeverSave		    "off"
+    Internal		    "off"
+    ReadOnly		    "off"
+    Enabled		    "on"
+    Visible		    "on"
+    ToolTip		    "on"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      BusCreator
+      Inputs		      "4"
+      DisplayOption	      "none"
+      OutDataTypeStr	      "Inherit: auto"
+      NonVirtualBus	      off
+    }
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+      LockScale		      off
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+      PreserveConstantTs      off
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via back propagation"
+      LockScale		      off
+      ConvertRealWorld	      "Real World Value (RWV)"
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      From
+      GotoTag		      "A"
+      IconDisplay	      "Tag"
+      TagVisibility	      "local"
+    }
+    Block {
+      BlockType		      Gain
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      ParamMin		      "[]"
+      ParamMax		      "[]"
+      ParamDataTypeStr	      "Inherit: Same as input"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Goto
+      GotoTag		      "A"
+      IconDisplay	      "Tag"
+      TagVisibility	      "local"
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      OutputFunctionCall      off
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchInputForFeedbackSignals off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Mux
+      Inputs		      "4"
+      DisplayOption	      "none"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      NonVirtualBus	      off
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      S-Function
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+      SFunctionDeploymentMode off
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      FunctionInterfaceSpec   "void_void"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      DataTypeOverrideAppliesTo	"AllNumericTypes"
+      MinMaxOverflowLogging   "UseLocalSettings"
+      SFBlockType	      "NONE"
+      Variant		      off
+      GeneratePreprocessorConditionals off
+    }
+    Block {
+      BlockType		      Terminator
+    }
+  }
+  System {
+    Name		    "MicrostrainIMUTest01"
+    Location		    [1, 1, 1919, 1039]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    "132"
+    Block {
+      BlockType		      Constant
+      Name		      "Constant"
+      SID		      "28"
+      Position		      [180, 320, 210, 350]
+      ZOrder		      -4
+      Value		      "0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant1"
+      SID		      "29"
+      Position		      [180, 415, 210, 445]
+      ZOrder		      -4
+      Value		      "0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant2"
+      SID		      "30"
+      Position		      [180, 510, 210, 540]
+      ZOrder		      -4
+      Value		      "0"
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      Name		      "Data Type Conversion113"
+      SID		      "1"
+      Position		      [495, 545, 530, 555]
+      ZOrder		      -7
+      ShowName		      off
+      OutDataTypeStr	      "double"
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      Name		      "Data Type Conversion127"
+      SID		      "2"
+      Position		      [495, 560, 530, 570]
+      ZOrder		      -8
+      ShowName		      off
+      OutDataTypeStr	      "double"
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      Name		      "Data Type Conversion128"
+      SID		      "3"
+      Position		      [495, 530, 530, 540]
+      ZOrder		      -9
+      ShowName		      off
+      OutDataTypeStr	      "double"
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      Name		      "Data Type Conversion129"
+      SID		      "4"
+      Position		      [495, 515, 530, 525]
+      ZOrder		      -10
+      ShowName		      off
+      OutDataTypeStr	      "double"
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      Name		      "Data Type Conversion97"
+      SID		      "18"
+      Position		      [325, 60, 350, 70]
+      ZOrder		      -11
+      ShowName		      off
+      OutDataTypeStr	      "double"
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "EtherCAT"
+      SID		      "19"
+      Ports		      []
+      Position		      [400, 127, 574, 182]
+      ZOrder		      -12
+      Priority		      "4"
+      LibraryVersion	      "1.99"
+      SourceBlock	      "xpcethercatlib/EtherCAT Update "
+      SourceType	      "xpcethercat_update"
+      device_id		      "0"
+      task_id_list	      "[1]"
+      task_rates	      "[1]"
+      task_priorities	      "[1500]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "EtherCAT Init"
+      SID		      "20"
+      Ports		      [0, 1]
+      Position		      [130, 37, 305, 93]
+      ZOrder		      -13
+      Priority		      "0"
+      LibraryVersion	      "1.99"
+      SourceBlock	      "xpcethercatlib/EtherCAT Init "
+      SourceType	      "xpcethercatinit"
+      config_file	      "'microstrain_imu_eni.xml'"
+      device_id		      "0"
+      pci_bus		      "4"
+      pci_slot		      "4"
+      enaDC		      on
+      errRptLevel	      "0"
+      sample_time	      "-1"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "EtherCAT Rx Frames"
+      SID		      "21"
+      Ports		      [0, 1]
+      Position		      [135, 122, 310, 178]
+      ZOrder		      -14
+      Priority		      "1"
+      LibraryVersion	      "1.99"
+      SourceBlock	      "xpcethercatlib/EtherCAT Rx Frames "
+      SourceType	      "xpcethercat_rcvframes"
+      device_id		      "0"
+      sample_time	      "0"
+    }
+    Block {
+      BlockType		      From
+      Name		      "From178"
+      SID		      "22"
+      Position		      [550, 56, 650, 74]
+      ZOrder		      -9
+      BackgroundColor	      "[0.501961, 0.000000, 0.501961]"
+      ShowName		      off
+      GotoTag		      "EtherCATStatus"
+    }
+    Block {
+      BlockType		      Goto
+      Name		      "Goto146"
+      SID		      "23"
+      Position		      [400, 56, 500, 74]
+      ZOrder		      -10
+      BackgroundColor	      "[0.501961, 0.000000, 0.501961]"
+      ShowName		      off
+      GotoTag		      "EtherCATStatus"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "IMU_Medulla"
+      SID		      "14"
+      Ports		      [3, 19]
+      Position		      [240, 284, 450, 576]
+      ZOrder		      -21
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"IMU_Medulla"
+	Location		[-8, 0, 1924, 1056]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"80"
+	Block {
+	  BlockType		  Inport
+	  Name			  "MedullaCmd"
+	  SID			  "31"
+	  Position		  [590, 298, 620, 312]
+	  ZOrder		  -1
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "MedullaCounter"
+	  SID			  "32"
+	  Position		  [590, 368, 620, 382]
+	  ZOrder		  -1
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "iMUCommand"
+	  SID			  "33"
+	  Position		  [595, 458, 625, 472]
+	  ZOrder		  -1
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion1"
+	  SID			  "34"
+	  Position		  [695, 448, 770, 482]
+	  ZOrder		  -4
+	  OutDataTypeStr	  "uint16"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion3"
+	  SID			  "35"
+	  Position		  [690, 288, 765, 322]
+	  ZOrder		  -5
+	  OutDataTypeStr	  "uint8"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion4"
+	  SID			  "36"
+	  Position		  [690, 358, 765, 392]
+	  ZOrder		  -6
+	  OutDataTypeStr	  "uint16"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "EtherCAT Rx Var 1"
+	  SID			  "52"
+	  Ports			  [0, 1]
+	  Position		  [25, 1046, 395, 1104]
+	  ZOrder		  -7
+	  Priority		  "2"
+	  LibraryVersion	  "1.99"
+	  SourceBlock		  "xpcethercatlib/EtherCAT Rx Var "
+	  SourceType		  "xpcethercat_rx_var"
+	  sig_name		  "Box 2 (ATRIAS 2.1 Microstrain IMU (Medulla 1.5)).M.M12"
+	  sig_offset		  "720"
+	  sig_type		  "uint32"
+	  type_size		  "32"
+	  sig_dim		  "1"
+	  device_id		  "0"
+	  sample_time		  "0.001000"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "EtherCAT Rx Var 10"
+	  SID			  "53"
+	  Ports			  [0, 1]
+	  Position		  [25, 386, 395, 444]
+	  ZOrder		  -8
+	  Priority		  "2"
+	  LibraryVersion	  "1.99"
+	  SourceBlock		  "xpcethercatlib/EtherCAT Rx Var "
+	  SourceType		  "xpcethercat_rx_var"
+	  sig_name		  "Box 2 (ATRIAS 2.1 Microstrain IMU (Medulla 1.5)).Xaxes.XAngRate"
+	  sig_offset		  "496"
+	  sig_type		  "uint32"
+	  type_size		  "32"
+	  sig_dim		  "1"
+	  device_id		  "0"
+	  sample_time		  "0.001000"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "EtherCAT Rx Var 11"
+	  SID			  "54"
+	  Ports			  [0, 1]
+	  Position		  [25, 496, 395, 554]
+	  ZOrder		  -9
+	  Priority		  "2"
+	  LibraryVersion	  "1.99"
+	  SourceBlock		  "xpcethercatlib/EtherCAT Rx Var "
+	  SourceType		  "xpcethercat_rx_var"
+	  sig_name		  "Box 2 (ATRIAS 2.1 Microstrain IMU (Medulla 1.5)).Yaxes.YAccel"
+	  sig_offset		  "592"
+	  sig_type		  "uint32"
+	  type_size		  "32"
+	  sig_dim		  "1"
+	  device_id		  "0"
+	  sample_time		  "0.001000"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "EtherCAT Rx Var 12"
+	  SID			  "55"
+	  Ports			  [0, 1]
+	  Position		  [25, 696, 395, 754]
+	  ZOrder		  -10
+	  Priority		  "2"
+	  LibraryVersion	  "1.99"
+	  SourceBlock		  "xpcethercatlib/EtherCAT Rx Var "
+	  SourceType		  "xpcethercat_rx_var"
+	  sig_name		  "Box 2 (ATRIAS 2.1 Microstrain IMU (Medulla 1.5)).Zaxes.ZAccel"
+	  sig_offset		  "656"
+	  sig_type		  "uint32"
+	  type_size		  "32"
+	  sig_dim		  "1"
+	  device_id		  "0"
+	  sample_time		  "0.001000"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "EtherCAT Rx Var 13"
+	  SID			  "56"
+	  Ports			  [0, 1]
+	  Position		  [25, 806, 395, 864]
+	  ZOrder		  -11
+	  Priority		  "2"
+	  LibraryVersion	  "1.99"
+	  SourceBlock		  "xpcethercatlib/EtherCAT Rx Var "
+	  SourceType		  "xpcethercat_rx_var"
+	  sig_name		  "Box 2 (ATRIAS 2.1 Microstrain IMU (Medulla 1.5)).Zaxes.ZAngRate"
+	  sig_offset		  "624"
+	  sig_type		  "uint32"
+	  type_size		  "32"
+	  sig_dim		  "1"
+	  device_id		  "0"
+	  sample_time		  "0.001000"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "EtherCAT Rx Var 14"
+	  SID			  "57"
+	  Ports			  [0, 1]
+	  Position		  [25, 596, 395, 654]
+	  ZOrder		  -12
+	  Priority		  "2"
+	  LibraryVersion	  "1.99"
+	  SourceBlock		  "xpcethercatlib/EtherCAT Rx Var "
+	  SourceType		  "xpcethercat_rx_var"
+	  sig_name		  "Box 2 (ATRIAS 2.1 Microstrain IMU (Medulla 1.5)).Yaxes.YAngRate"
+	  sig_offset		  "560"
+	  sig_type		  "uint32"
+	  type_size		  "32"
+	  sig_dim		  "1"
+	  device_id		  "0"
+	  sample_time		  "0.001000"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "EtherCAT Rx Var 15"
+	  SID			  "58"
+	  Ports			  [0, 1]
+	  Position		  [935, 686, 1305, 744]
+	  ZOrder		  -13
+	  Priority		  "2"
+	  LibraryVersion	  "1.99"
+	  SourceBlock		  "xpcethercatlib/EtherCAT Rx Var "
+	  SourceType		  "xpcethercat_rx_var"
+	  sig_name		  "Box 2 (ATRIAS 2.1 Microstrain IMU (Medulla 1.5)).uController Status.Error Flags"
+	  sig_offset		  "488"
+	  sig_type		  "uint8"
+	  type_size		  "8"
+	  sig_dim		  "1"
+	  device_id		  "0"
+	  sample_time		  "0.001000"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "EtherCAT Rx Var 16"
+	  SID			  "59"
+	  Ports			  [0, 1]
+	  Position		  [935, 796, 1305, 854]
+	  ZOrder		  -14
+	  Priority		  "2"
+	  LibraryVersion	  "1.99"
+	  SourceBlock		  "xpcethercatlib/EtherCAT Rx Var "
+	  SourceType		  "xpcethercat_rx_var"
+	  sig_name		  "Box 2 (ATRIAS 2.1 Microstrain IMU (Medulla 1.5)).uController Status.ID"
+	  sig_offset		  "464"
+	  sig_type		  "uint8"
+	  type_size		  "8"
+	  sig_dim		  "1"
+	  device_id		  "0"
+	  sample_time		  "0.001000"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "EtherCAT Rx Var 17"
+	  SID			  "60"
+	  Ports			  [0, 1]
+	  Position		  [935, 586, 1305, 644]
+	  ZOrder		  -15
+	  Priority		  "2"
+	  LibraryVersion	  "1.99"
+	  SourceBlock		  "xpcethercatlib/EtherCAT Rx Var "
+	  SourceType		  "xpcethercat_rx_var"
+	  sig_name		  "Box 2 (ATRIAS 2.1 Microstrain IMU (Medulla 1.5)).uController Status.Counter"
+	  sig_offset		  "480"
+	  sig_type		  "uint8"
+	  type_size		  "8"
+	  sig_dim		  "1"
+	  device_id		  "0"
+	  sample_time		  "0.001000"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "EtherCAT Rx Var 18"
+	  SID			  "61"
+	  Ports			  [0, 1]
+	  Position		  [935, 891, 1305, 949]
+	  ZOrder		  -16
+	  Priority		  "2"
+	  LibraryVersion	  "1.99"
+	  SourceBlock		  "xpcethercatlib/EtherCAT Rx Var "
+	  SourceType		  "xpcethercat_rx_var"
+	  sig_name		  "Box 2 (ATRIAS 2.1 Microstrain IMU (Medulla 1.5)).uController Status.State"
+	  sig_offset		  "472"
+	  sig_type		  "uint8"
+	  type_size		  "8"
+	  sig_dim		  "1"
+	  device_id		  "0"
+	  sample_time		  "0.001000"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "EtherCAT Rx Var 19"
+	  SID			  "62"
+	  Ports			  [0, 1]
+	  Position		  [25, 1581, 395, 1639]
+	  ZOrder		  -17
+	  Priority		  "2"
+	  LibraryVersion	  "1.99"
+	  SourceBlock		  "xpcethercatlib/EtherCAT Rx Var "
+	  SourceType		  "xpcethercat_rx_var"
+	  sig_name		  "Box 2 (ATRIAS 2.1 Microstrain IMU (Medulla 1.5)).M.M31"
+	  sig_offset		  "880"
+	  sig_type		  "uint32"
+	  type_size		  "32"
+	  sig_dim		  "1"
+	  device_id		  "0"
+	  sample_time		  "0.001000"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "EtherCAT Rx Var 2"
+	  SID			  "63"
+	  Ports			  [0, 1]
+	  Position		  [25, 1156, 395, 1214]
+	  ZOrder		  -18
+	  Priority		  "2"
+	  LibraryVersion	  "1.99"
+	  SourceBlock		  "xpcethercatlib/EtherCAT Rx Var "
+	  SourceType		  "xpcethercat_rx_var"
+	  sig_name		  "Box 2 (ATRIAS 2.1 Microstrain IMU (Medulla 1.5)).M.M13"
+	  sig_offset		  "752"
+	  sig_type		  "uint32"
+	  type_size		  "32"
+	  sig_dim		  "1"
+	  device_id		  "0"
+	  sample_time		  "0.001000"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "EtherCAT Rx Var 3"
+	  SID			  "64"
+	  Ports			  [0, 1]
+	  Position		  [25, 1356, 395, 1414]
+	  ZOrder		  -19
+	  Priority		  "2"
+	  LibraryVersion	  "1.99"
+	  SourceBlock		  "xpcethercatlib/EtherCAT Rx Var "
+	  SourceType		  "xpcethercat_rx_var"
+	  sig_name		  "Box 2 (ATRIAS 2.1 Microstrain IMU (Medulla 1.5)).M.M22"
+	  sig_offset		  "816"
+	  sig_type		  "uint32"
+	  type_size		  "32"
+	  sig_dim		  "1"
+	  device_id		  "0"
+	  sample_time		  "0.001000"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "EtherCAT Rx Var 4"
+	  SID			  "65"
+	  Ports			  [0, 1]
+	  Position		  [25, 1466, 395, 1524]
+	  ZOrder		  -20
+	  Priority		  "2"
+	  LibraryVersion	  "1.99"
+	  SourceBlock		  "xpcethercatlib/EtherCAT Rx Var "
+	  SourceType		  "xpcethercat_rx_var"
+	  sig_name		  "Box 2 (ATRIAS 2.1 Microstrain IMU (Medulla 1.5)).M.M23"
+	  sig_offset		  "848"
+	  sig_type		  "uint32"
+	  type_size		  "32"
+	  sig_dim		  "1"
+	  device_id		  "0"
+	  sample_time		  "0.001000"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "EtherCAT Rx Var 5"
+	  SID			  "66"
+	  Ports			  [0, 1]
+	  Position		  [25, 1256, 395, 1314]
+	  ZOrder		  -21
+	  Priority		  "2"
+	  LibraryVersion	  "1.99"
+	  SourceBlock		  "xpcethercatlib/EtherCAT Rx Var "
+	  SourceType		  "xpcethercat_rx_var"
+	  sig_name		  "Box 2 (ATRIAS 2.1 Microstrain IMU (Medulla 1.5)).M.M21"
+	  sig_offset		  "784"
+	  sig_type		  "uint32"
+	  type_size		  "32"
+	  sig_dim		  "1"
+	  device_id		  "0"
+	  sample_time		  "0.001000"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "EtherCAT Rx Var 6"
+	  SID			  "67"
+	  Ports			  [0, 1]
+	  Position		  [25, 946, 395, 1004]
+	  ZOrder		  -22
+	  Priority		  "2"
+	  LibraryVersion	  "1.99"
+	  SourceBlock		  "xpcethercatlib/EtherCAT Rx Var "
+	  SourceType		  "xpcethercat_rx_var"
+	  sig_name		  "Box 2 (ATRIAS 2.1 Microstrain IMU (Medulla 1.5)).M.M11"
+	  sig_offset		  "688"
+	  sig_type		  "uint32"
+	  type_size		  "32"
+	  sig_dim		  "1"
+	  device_id		  "0"
+	  sample_time		  "0.001000"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "EtherCAT Rx Var 7"
+	  SID			  "68"
+	  Ports			  [0, 1]
+	  Position		  [25, 1681, 395, 1739]
+	  ZOrder		  -23
+	  Priority		  "2"
+	  LibraryVersion	  "1.99"
+	  SourceBlock		  "xpcethercatlib/EtherCAT Rx Var "
+	  SourceType		  "xpcethercat_rx_var"
+	  sig_name		  "Box 2 (ATRIAS 2.1 Microstrain IMU (Medulla 1.5)).M.M32"
+	  sig_offset		  "912"
+	  sig_type		  "uint32"
+	  type_size		  "32"
+	  sig_dim		  "1"
+	  device_id		  "0"
+	  sample_time		  "0.001000"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "EtherCAT Rx Var 8"
+	  SID			  "69"
+	  Ports			  [0, 1]
+	  Position		  [25, 1791, 395, 1849]
+	  ZOrder		  -24
+	  Priority		  "2"
+	  LibraryVersion	  "1.99"
+	  SourceBlock		  "xpcethercatlib/EtherCAT Rx Var "
+	  SourceType		  "xpcethercat_rx_var"
+	  sig_name		  "Box 2 (ATRIAS 2.1 Microstrain IMU (Medulla 1.5)).M.M33"
+	  sig_offset		  "944"
+	  sig_type		  "uint32"
+	  type_size		  "32"
+	  sig_dim		  "1"
+	  device_id		  "0"
+	  sample_time		  "0.001000"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "EtherCAT Rx Var 9"
+	  SID			  "70"
+	  Ports			  [0, 1]
+	  Position		  [25, 286, 395, 344]
+	  ZOrder		  -25
+	  Priority		  "2"
+	  LibraryVersion	  "1.99"
+	  SourceBlock		  "xpcethercatlib/EtherCAT Rx Var "
+	  SourceType		  "xpcethercat_rx_var"
+	  sig_name		  "Box 2 (ATRIAS 2.1 Microstrain IMU (Medulla 1.5)).Xaxes.XAccel"
+	  sig_offset		  "528"
+	  sig_type		  "uint32"
+	  type_size		  "32"
+	  sig_dim		  "1"
+	  device_id		  "0"
+	  sample_time		  "0.001000"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "EtherCAT Tx Var "
+	  SID			  "71"
+	  Ports			  [1]
+	  Position		  [795, 276, 1185, 334]
+	  ZOrder		  -26
+	  Priority		  "3"
+	  LibraryVersion	  "1.99"
+	  SourceBlock		  "xpcethercatlib/EtherCAT Tx Var "
+	  SourceType		  "xpcethercat_tx_var"
+	  sig_name		  "Box 2 (ATRIAS 2.1 Microstrain IMU (Medulla 1.5)).uControllerInput.Command"
+	  sig_offset		  "464"
+	  sig_type		  "uint8"
+	  type_size		  "8"
+	  sig_dim		  "1"
+	  device_id		  "0"
+	  sample_time		  "0.001000"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "EtherCAT Tx Var 1"
+	  SID			  "72"
+	  Ports			  [1]
+	  Position		  [795, 346, 1185, 404]
+	  ZOrder		  -27
+	  Priority		  "3"
+	  LibraryVersion	  "1.99"
+	  SourceBlock		  "xpcethercatlib/EtherCAT Tx Var "
+	  SourceType		  "xpcethercat_tx_var"
+	  sig_name		  "Box 2 (ATRIAS 2.1 Microstrain IMU (Medulla 1.5)).uControllerInput.Counter"
+	  sig_offset		  "472"
+	  sig_type		  "uint16"
+	  type_size		  "16"
+	  sig_dim		  "1"
+	  device_id		  "0"
+	  sample_time		  "0.001000"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "EtherCAT Tx Var 2"
+	  SID			  "73"
+	  Ports			  [1]
+	  Position		  [795, 436, 1185, 494]
+	  ZOrder		  -28
+	  Priority		  "3"
+	  LibraryVersion	  "1.99"
+	  SourceBlock		  "xpcethercatlib/EtherCAT Tx Var "
+	  SourceType		  "xpcethercat_tx_var"
+	  sig_name		  "Box 2 (ATRIAS 2.1 Microstrain IMU (Medulla 1.5)).uControllerInput.IMU_cmd"
+	  sig_offset		  "488"
+	  sig_type		  "uint16"
+	  type_size		  "16"
+	  sig_dim		  "1"
+	  device_id		  "0"
+	  sample_time		  "0.001000"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "M11_uint32"
+	  SID			  "74"
+	  Position		  [435, 923, 465, 937]
+	  ZOrder		  -9
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "M12_uint32"
+	  SID			  "75"
+	  Position		  [445, 1028, 475, 1042]
+	  ZOrder		  -9
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "M13_uint32"
+	  SID			  "76"
+	  Position		  [455, 1133, 485, 1147]
+	  ZOrder		  -9
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "M21_uint32"
+	  SID			  "77"
+	  Position		  [460, 1238, 490, 1252]
+	  ZOrder		  -9
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "M22_uint32"
+	  SID			  "78"
+	  Position		  [460, 1333, 490, 1347]
+	  ZOrder		  -9
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "M23_uint32"
+	  SID			  "79"
+	  Position		  [460, 1433, 490, 1447]
+	  ZOrder		  -9
+	  Port			  "6"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "M31_uint32"
+	  SID			  "80"
+	  Position		  [455, 1548, 485, 1562]
+	  ZOrder		  -9
+	  Port			  "7"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "M32_uint32"
+	  SID			  "81"
+	  Position		  [455, 1653, 485, 1667]
+	  ZOrder		  -9
+	  Port			  "8"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "M33_uint32"
+	  SID			  "82"
+	  Position		  [455, 1763, 485, 1777]
+	  ZOrder		  -9
+	  Port			  "9"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "XAngRate_uint32"
+	  SID			  "83"
+	  Position		  [435, 408, 465, 422]
+	  ZOrder		  -9
+	  Port			  "10"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "YAngRate_uint32"
+	  SID			  "84"
+	  Position		  [430, 618, 460, 632]
+	  ZOrder		  -9
+	  Port			  "11"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "ZAngRate_uint32"
+	  SID			  "85"
+	  Position		  [430, 778, 460, 792]
+	  ZOrder		  -9
+	  Port			  "12"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "XAccel_uint32"
+	  SID			  "86"
+	  Position		  [435, 303, 465, 317]
+	  ZOrder		  -9
+	  Port			  "13"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "YAccel_uint32"
+	  SID			  "87"
+	  Position		  [430, 518, 460, 532]
+	  ZOrder		  -9
+	  Port			  "14"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "ZAccel_uint32"
+	  SID			  "88"
+	  Position		  [445, 708, 475, 722]
+	  ZOrder		  -9
+	  Port			  "15"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "ID"
+	  SID			  "89"
+	  Position		  [1405, 818, 1435, 832]
+	  ZOrder		  -9
+	  Port			  "16"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "State"
+	  SID			  "90"
+	  Position		  [1400, 913, 1430, 927]
+	  ZOrder		  -9
+	  Port			  "17"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Counter"
+	  SID			  "91"
+	  Position		  [1400, 608, 1430, 622]
+	  ZOrder		  -9
+	  Port			  "18"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "ErrorFlags"
+	  SID			  "92"
+	  Position		  [1405, 708, 1435, 722]
+	  ZOrder		  -9
+	  Port			  "19"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "EtherCAT Rx Var 18"
+	  SrcPort		  1
+	  DstBlock		  "State"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "EtherCAT Rx Var 16"
+	  SrcPort		  1
+	  DstBlock		  "ID"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "EtherCAT Rx Var 15"
+	  SrcPort		  1
+	  DstBlock		  "ErrorFlags"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "EtherCAT Rx Var 17"
+	  SrcPort		  1
+	  DstBlock		  "Counter"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion1"
+	  SrcPort		  1
+	  DstBlock		  "EtherCAT Tx Var 2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "iMUCommand"
+	  SrcPort		  1
+	  DstBlock		  "Data Type Conversion1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "MedullaCounter"
+	  SrcPort		  1
+	  DstBlock		  "Data Type Conversion4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "MedullaCmd"
+	  SrcPort		  1
+	  DstBlock		  "Data Type Conversion3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion4"
+	  SrcPort		  1
+	  DstBlock		  "EtherCAT Tx Var 1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion3"
+	  SrcPort		  1
+	  DstBlock		  "EtherCAT Tx Var "
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "EtherCAT Rx Var 8"
+	  SrcPort		  1
+	  Points		  [15, 0; 0, -50]
+	  DstBlock		  "M33_uint32"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "EtherCAT Rx Var 7"
+	  SrcPort		  1
+	  Points		  [20, 0; 0, -50]
+	  DstBlock		  "M32_uint32"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "EtherCAT Rx Var 19"
+	  SrcPort		  1
+	  Points		  [15, 0; 0, -55]
+	  DstBlock		  "M31_uint32"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "EtherCAT Rx Var 4"
+	  SrcPort		  1
+	  Points		  [5, 0; 0, -55]
+	  DstBlock		  "M23_uint32"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "EtherCAT Rx Var 3"
+	  SrcPort		  1
+	  Points		  [15, 0; 0, -45]
+	  DstBlock		  "M22_uint32"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "EtherCAT Rx Var 5"
+	  SrcPort		  1
+	  Points		  [15, 0; 0, -40]
+	  DstBlock		  "M21_uint32"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "EtherCAT Rx Var 2"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, -45]
+	  DstBlock		  "M13_uint32"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "EtherCAT Rx Var 1"
+	  SrcPort		  1
+	  Points		  [15, 0; 0, -40]
+	  DstBlock		  "M12_uint32"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "EtherCAT Rx Var 6"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, -45]
+	  DstBlock		  "M11_uint32"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "EtherCAT Rx Var 13"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, -50]
+	  DstBlock		  "ZAngRate_uint32"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "EtherCAT Rx Var 12"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, -10]
+	  DstBlock		  "ZAccel_uint32"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "EtherCAT Rx Var 14"
+	  SrcPort		  1
+	  DstBlock		  "YAngRate_uint32"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "EtherCAT Rx Var 11"
+	  SrcPort		  1
+	  DstBlock		  "YAccel_uint32"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "EtherCAT Rx Var 10"
+	  SrcPort		  1
+	  DstBlock		  "XAngRate_uint32"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "EtherCAT Rx Var 9"
+	  SrcPort		  1
+	  Points		  [0, -5]
+	  DstBlock		  "XAccel_uint32"
+	  DstPort		  1
+	}
+	Annotation {
+	  SID			  "93"
+	  Position		  [268, 328]
+	  ZOrder		  -1
+	}
+      }
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux"
+      SID		      "15"
+      Ports		      [15, 1]
+      Position		      [475, 285, 480, 515]
+      ZOrder		      -12
+      ShowName		      off
+      Inputs		      "15"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "ParseMicrostrainIMUPacket"
+      SID		      "16"
+      Ports		      [1, 3]
+      Position		      [495, 364, 625, 436]
+      ZOrder		      -23
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"ParseMicrostrainIMUPacket"
+	Location		[-8, -8, 1928, 1048]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "MedullaOutput"
+	  SID			  "94"
+	  Position		  [35, 303, 65, 317]
+	  ZOrder		  -1
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  BusCreator
+	  Name			  "Bus\nCreator1"
+	  SID			  "95"
+	  Ports			  [3, 1]
+	  Position		  [960, 105, 975, 245]
+	  ZOrder		  -2
+	  ShowName		  off
+	  Inputs		  "3"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  BusCreator
+	  Name			  "Bus\nCreator10"
+	  SID			  "96"
+	  Ports			  [18, 1]
+	  Position		  [920, 472, 940, 818]
+	  ZOrder		  -2
+	  ShowName		  off
+	  Inputs		  "18"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  BusCreator
+	  Name			  "Bus\nCreator3"
+	  SID			  "97"
+	  Ports			  [3, 1]
+	  Position		  [1005, 301, 1020, 389]
+	  ZOrder		  -2
+	  ShowName		  off
+	  Inputs		  "3"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Convert_unit32_to_single"
+	  SID			  "98"
+	  Ports			  [1, 1]
+	  Position		  [100, 287, 170, 333]
+	  ZOrder		  -4
+	  LibraryVersion	  "1.32"
+	  ErrorFcn		  "Stateflow.Translate.translate"
+	  PermitHierarchicalResolution "ExplicitOnly"
+	  TreatAsAtomicUnit	  on
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  SFBlockType		  "MATLAB Function"
+	  System {
+	    Name		    "Convert_unit32_to_single"
+	    Location		    [227, 345, 838, 789]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    SIDHighWatermark	    "24"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "u"
+	      SID		      "98::1"
+	      Position		      [20, 101, 40, 119]
+	      ZOrder		      -1
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      " Demux "
+	      SID		      "98::23"
+	      Ports		      [1, 1]
+	      Position		      [270, 230, 320, 270]
+	      ZOrder		      30
+	      Outputs		      "1"
+	    }
+	    Block {
+	      BlockType		      S-Function
+	      Name		      " SFunction "
+	      SID		      "98::22"
+	      Tag		      "Stateflow S-Function MicrostrainIMUTest01 32"
+	      Ports		      [1, 2]
+	      Position		      [180, 100, 230, 160]
+	      ZOrder		      29
+	      FunctionName	      "sf_sfun"
+	      PortCounts	      "[1 2]"
+	      EnableBusSupport	      on
+	      Port {
+		PortNumber		2
+		Name			"y"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      " Terminator "
+	      SID		      "98::24"
+	      Position		      [460, 241, 480, 259]
+	      ZOrder		      31
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "y"
+	      SID		      "98::5"
+	      Position		      [460, 101, 480, 119]
+	      ZOrder		      -5
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "u"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "y"
+	      Labels		      [0, 0]
+	      SrcBlock		      " SFunction "
+	      SrcPort		      2
+	      DstBlock		      "y"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      " Demux "
+	      SrcPort		      1
+	      DstBlock		      " Terminator "
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      " SFunction "
+	      SrcPort		      1
+	      DstBlock		      " Demux "
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion1"
+	  SID			  "99"
+	  Position		  [410, 85, 445, 95]
+	  ZOrder		  -6
+	  ShowName		  off
+	  OutDataTypeStr	  "double"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion10"
+	  SID			  "100"
+	  Position		  [750, 115, 785, 125]
+	  ZOrder		  -7
+	  ShowName		  off
+	  OutDataTypeStr	  "double"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion11"
+	  SID			  "101"
+	  Position		  [745, 175, 780, 185]
+	  ZOrder		  -8
+	  ShowName		  off
+	  OutDataTypeStr	  "double"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion12"
+	  SID			  "102"
+	  Position		  [745, 245, 780, 255]
+	  ZOrder		  -9
+	  ShowName		  off
+	  OutDataTypeStr	  "double"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion13"
+	  SID			  "103"
+	  Position		  [410, 310, 445, 320]
+	  ZOrder		  -10
+	  ShowName		  off
+	  OutDataTypeStr	  "double"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion14"
+	  SID			  "104"
+	  Position		  [410, 335, 445, 345]
+	  ZOrder		  -11
+	  ShowName		  off
+	  OutDataTypeStr	  "double"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion15"
+	  SID			  "105"
+	  Position		  [410, 360, 445, 370]
+	  ZOrder		  -12
+	  ShowName		  off
+	  OutDataTypeStr	  "double"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion16"
+	  SID			  "106"
+	  Position		  [410, 385, 445, 395]
+	  ZOrder		  -13
+	  ShowName		  off
+	  OutDataTypeStr	  "double"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion17"
+	  SID			  "107"
+	  Position		  [410, 410, 445, 420]
+	  ZOrder		  -14
+	  ShowName		  off
+	  OutDataTypeStr	  "double"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion18"
+	  SID			  "108"
+	  Position		  [410, 435, 445, 445]
+	  ZOrder		  -15
+	  ShowName		  off
+	  OutDataTypeStr	  "double"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion2"
+	  SID			  "109"
+	  Position		  [410, 110, 445, 120]
+	  ZOrder		  -16
+	  ShowName		  off
+	  OutDataTypeStr	  "double"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion3"
+	  SID			  "110"
+	  Position		  [410, 135, 445, 145]
+	  ZOrder		  -17
+	  ShowName		  off
+	  OutDataTypeStr	  "double"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion4"
+	  SID			  "111"
+	  Position		  [410, 160, 445, 170]
+	  ZOrder		  -18
+	  ShowName		  off
+	  OutDataTypeStr	  "double"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion5"
+	  SID			  "112"
+	  Position		  [410, 185, 445, 195]
+	  ZOrder		  -19
+	  ShowName		  off
+	  OutDataTypeStr	  "double"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion6"
+	  SID			  "113"
+	  Position		  [410, 210, 445, 220]
+	  ZOrder		  -20
+	  ShowName		  off
+	  OutDataTypeStr	  "double"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion7"
+	  SID			  "114"
+	  Position		  [410, 235, 445, 245]
+	  ZOrder		  -21
+	  ShowName		  off
+	  OutDataTypeStr	  "double"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion8"
+	  SID			  "115"
+	  Position		  [410, 260, 445, 270]
+	  ZOrder		  -22
+	  ShowName		  off
+	  OutDataTypeStr	  "double"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion9"
+	  SID			  "116"
+	  Position		  [410, 285, 445, 295]
+	  ZOrder		  -23
+	  ShowName		  off
+	  OutDataTypeStr	  "double"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux"
+	  SID			  "117"
+	  Ports			  [1, 15]
+	  Position		  [205, 275, 210, 345]
+	  ZOrder		  -7
+	  ShowName		  off
+	  Outputs		  "15"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain"
+	  SID			  "118"
+	  Position		  [1060, 330, 1090, 360]
+	  ZOrder		  -8
+	  Gain			  "-1"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "M_WI_to_ZYX_Euler_Angles"
+	  SID			  "119"
+	  Ports			  [10, 3]
+	  Position		  [605, 72, 725, 288]
+	  ZOrder		  -4
+	  LibraryVersion	  "1.32"
+	  ErrorFcn		  "Stateflow.Translate.translate"
+	  PermitHierarchicalResolution "ExplicitOnly"
+	  TreatAsAtomicUnit	  on
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  SFBlockType		  "MATLAB Function"
+	  System {
+	    Name		    "M_WI_to_ZYX_Euler_Angles"
+	    Location		    [227, 345, 838, 789]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    SIDHighWatermark	    "47"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "M_RI_Params"
+	      SID		      "119::1"
+	      Position		      [20, 101, 40, 119]
+	      ZOrder		      -1
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "M11"
+	      SID		      "119::18"
+	      Position		      [20, 136, 40, 154]
+	      ZOrder		      -2
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "M12"
+	      SID		      "119::19"
+	      Position		      [20, 171, 40, 189]
+	      ZOrder		      -3
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "M13"
+	      SID		      "119::20"
+	      Position		      [20, 206, 40, 224]
+	      ZOrder		      -4
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "M21"
+	      SID		      "119::21"
+	      Position		      [20, 246, 40, 264]
+	      ZOrder		      -5
+	      Port		      "5"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "M22"
+	      SID		      "119::22"
+	      Position		      [20, 281, 40, 299]
+	      ZOrder		      -6
+	      Port		      "6"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "M23"
+	      SID		      "119::23"
+	      Position		      [20, 316, 40, 334]
+	      ZOrder		      -7
+	      Port		      "7"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "M31"
+	      SID		      "119::24"
+	      Position		      [20, 351, 40, 369]
+	      ZOrder		      -8
+	      Port		      "8"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "M32"
+	      SID		      "119::25"
+	      Position		      [20, 386, 40, 404]
+	      ZOrder		      -9
+	      Port		      "9"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "M33"
+	      SID		      "119::26"
+	      Position		      [20, 426, 40, 444]
+	      ZOrder		      -10
+	      Port		      "10"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      " Demux "
+	      SID		      "119::46"
+	      Ports		      [1, 1]
+	      Position		      [270, 245, 320, 285]
+	      ZOrder		      30
+	      Outputs		      "1"
+	    }
+	    Block {
+	      BlockType		      S-Function
+	      Name		      " SFunction "
+	      SID		      "119::45"
+	      Tag		      "Stateflow S-Function MicrostrainIMUTest01 33"
+	      Ports		      [10, 4]
+	      Position		      [180, 100, 230, 320]
+	      ZOrder		      29
+	      FunctionName	      "sf_sfun"
+	      PortCounts	      "[10 4]"
+	      EnableBusSupport	      on
+	      Port {
+		PortNumber		2
+		Name			"AngZ"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		3
+		Name			"AngY"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		4
+		Name			"AngX"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      " Terminator "
+	      SID		      "119::47"
+	      Position		      [460, 256, 480, 274]
+	      ZOrder		      31
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "AngZ"
+	      SID		      "119::5"
+	      Position		      [460, 101, 480, 119]
+	      ZOrder		      -14
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "AngY"
+	      SID		      "119::27"
+	      Position		      [460, 136, 480, 154]
+	      ZOrder		      -15
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "AngX"
+	      SID		      "119::28"
+	      Position		      [460, 171, 480, 189]
+	      ZOrder		      -16
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "M_RI_Params"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "M11"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "M12"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "M13"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      4
+	    }
+	    Line {
+	      SrcBlock		      "M21"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      5
+	    }
+	    Line {
+	      SrcBlock		      "M22"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      6
+	    }
+	    Line {
+	      SrcBlock		      "M23"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      7
+	    }
+	    Line {
+	      SrcBlock		      "M31"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      8
+	    }
+	    Line {
+	      SrcBlock		      "M32"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      9
+	    }
+	    Line {
+	      SrcBlock		      "M33"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      10
+	    }
+	    Line {
+	      Name		      "AngZ"
+	      Labels		      [0, 0]
+	      SrcBlock		      " SFunction "
+	      SrcPort		      2
+	      DstBlock		      "AngZ"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "AngY"
+	      Labels		      [0, 0]
+	      SrcBlock		      " SFunction "
+	      SrcPort		      3
+	      DstBlock		      "AngY"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "AngX"
+	      Labels		      [0, 0]
+	      SrcBlock		      " SFunction "
+	      SrcPort		      4
+	      DstBlock		      "AngX"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      " Demux "
+	      SrcPort		      1
+	      DstBlock		      " Terminator "
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      " SFunction "
+	      SrcPort		      1
+	      DstBlock		      " Demux "
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "MisalignmentMatrixParams"
+	  SID			  "120"
+	  Position		  [630, 25, 660, 55]
+	  ZOrder		  -4
+	  BlockMirror		  on
+	  Value			  "IMU_Alignment_Params"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "IMU_Angles"
+	  SID			  "121"
+	  Position		  [1090, 168, 1120, 182]
+	  ZOrder		  -9
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "IMU_Rates"
+	  SID			  "122"
+	  Position		  [1135, 338, 1165, 352]
+	  ZOrder		  -9
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "IMU_data"
+	  SID			  "123"
+	  Position		  [995, 638, 1025, 652]
+	  ZOrder		  -9
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Gain"
+	  SrcPort		  1
+	  DstBlock		  "IMU_Rates"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Bus\nCreator3"
+	  SrcPort		  1
+	  DstBlock		  "Gain"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Convert_unit32_to_single"
+	  SrcPort		  1
+	  DstBlock		  "Demux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "MedullaOutput"
+	  SrcPort		  1
+	  DstBlock		  "Convert_unit32_to_single"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "M_WI_to_ZYX_Euler_Angles"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  DstBlock		  "Data Type Conversion10"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "M_WI_to_ZYX_Euler_Angles"
+	  SrcPort		  2
+	  DstBlock		  "Data Type Conversion11"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "M_WI_to_ZYX_Euler_Angles"
+	  SrcPort		  3
+	  DstBlock		  "Data Type Conversion12"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion1"
+	  SrcPort		  1
+	  Points		  [120, 0]
+	  Branch {
+	    Points		    [5, 0; 0, 20]
+	    DstBlock		    "M_WI_to_ZYX_Euler_Angles"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 445]
+	    DstBlock		    "Bus\nCreator10"
+	    DstPort		    4
+	  }
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion2"
+	  SrcPort		  1
+	  Points		  [110, 0]
+	  Branch {
+	    Points		    [25, 0; 0, 15]
+	    DstBlock		    "M_WI_to_ZYX_Euler_Angles"
+	    DstPort		    3
+	  }
+	  Branch {
+	    Points		    [0, 440]
+	    DstBlock		    "Bus\nCreator10"
+	    DstPort		    5
+	  }
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion3"
+	  SrcPort		  1
+	  Points		  [100, 0]
+	  Branch {
+	    Points		    [35, 0; 0, 10]
+	    DstBlock		    "M_WI_to_ZYX_Euler_Angles"
+	    DstPort		    4
+	  }
+	  Branch {
+	    Points		    [0, 435]
+	    DstBlock		    "Bus\nCreator10"
+	    DstPort		    6
+	  }
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion4"
+	  SrcPort		  1
+	  Points		  [95, 0]
+	  Branch {
+	    Points		    [40, 0; 0, 5]
+	    DstBlock		    "M_WI_to_ZYX_Euler_Angles"
+	    DstPort		    5
+	  }
+	  Branch {
+	    Points		    [0, 430]
+	    DstBlock		    "Bus\nCreator10"
+	    DstPort		    7
+	  }
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion5"
+	  SrcPort		  1
+	  Points		  [90, 0]
+	  Branch {
+	    DstBlock		    "M_WI_to_ZYX_Euler_Angles"
+	    DstPort		    6
+	  }
+	  Branch {
+	    Points		    [0, 425]
+	    DstBlock		    "Bus\nCreator10"
+	    DstPort		    8
+	  }
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion6"
+	  SrcPort		  1
+	  Points		  [85, 0]
+	  Branch {
+	    Points		    [55, 0]
+	    DstBlock		    "M_WI_to_ZYX_Euler_Angles"
+	    DstPort		    7
+	  }
+	  Branch {
+	    Points		    [0, 420]
+	    DstBlock		    "Bus\nCreator10"
+	    DstPort		    9
+	  }
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion7"
+	  SrcPort		  1
+	  Points		  [75, 0]
+	  Branch {
+	    Points		    [60, 0; 0, -10]
+	    DstBlock		    "M_WI_to_ZYX_Euler_Angles"
+	    DstPort		    8
+	  }
+	  Branch {
+	    Points		    [0, 415]
+	    DstBlock		    "Bus\nCreator10"
+	    DstPort		    10
+	  }
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion8"
+	  SrcPort		  1
+	  Points		  [70, 0]
+	  Branch {
+	    Points		    [65, 0; 0, -15]
+	    DstBlock		    "M_WI_to_ZYX_Euler_Angles"
+	    DstPort		    9
+	  }
+	  Branch {
+	    Points		    [0, 410]
+	    DstBlock		    "Bus\nCreator10"
+	    DstPort		    11
+	  }
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion9"
+	  SrcPort		  1
+	  Points		  [65, 0]
+	  Branch {
+	    Points		    [70, 0; 0, -20]
+	    DstBlock		    "M_WI_to_ZYX_Euler_Angles"
+	    DstPort		    10
+	  }
+	  Branch {
+	    Points		    [0, 405]
+	    DstBlock		    "Bus\nCreator10"
+	    DstPort		    12
+	  }
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion10"
+	  SrcPort		  1
+	  Points		  [75, 0]
+	  Branch {
+	    Points		    [0, 355]
+	    DstBlock		    "Bus\nCreator10"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [80, 0]
+	    DstBlock		    "Bus\nCreator1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion11"
+	  SrcPort		  1
+	  Points		  [45, 0]
+	  Branch {
+	    Points		    [0, 315]
+	    DstBlock		    "Bus\nCreator10"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [115, 0]
+	    DstBlock		    "Bus\nCreator1"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion12"
+	  SrcPort		  1
+	  Points		  [0, -5; 25, 0]
+	  Branch {
+	    Points		    [0, 270]
+	    DstBlock		    "Bus\nCreator10"
+	    DstPort		    3
+	  }
+	  Branch {
+	    Points		    [135, 0]
+	    DstBlock		    "Bus\nCreator1"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion13"
+	  SrcPort		  1
+	  Points		  [55, 0]
+	  Branch {
+	    Points		    [0, 400]
+	    DstBlock		    "Bus\nCreator10"
+	    DstPort		    13
+	  }
+	  Branch {
+	    DstBlock		    "Bus\nCreator3"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion14"
+	  SrcPort		  1
+	  Points		  [50, 0]
+	  Branch {
+	    Points		    [490, 0]
+	    DstBlock		    "Bus\nCreator3"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 395]
+	    DstBlock		    "Bus\nCreator10"
+	    DstPort		    14
+	  }
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion15"
+	  SrcPort		  1
+	  Points		  [45, 0]
+	  Branch {
+	    Points		    [495, 0]
+	    DstBlock		    "Bus\nCreator3"
+	    DstPort		    3
+	  }
+	  Branch {
+	    Points		    [0, 390]
+	    DstBlock		    "Bus\nCreator10"
+	    DstPort		    15
+	  }
+	}
+	Line {
+	  SrcBlock		  "MisalignmentMatrixParams"
+	  SrcPort		  1
+	  Points		  [-40, 0; 0, 50]
+	  DstBlock		  "M_WI_to_ZYX_Euler_Angles"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  1
+	  Points		  [20, 0; 0, -185]
+	  DstBlock		  "Data Type Conversion1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  2
+	  Points		  [30, 0; 0, -165]
+	  DstBlock		  "Data Type Conversion2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  3
+	  Points		  [40, 0; 0, -145]
+	  DstBlock		  "Data Type Conversion3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  4
+	  Points		  [50, 0; 0, -125]
+	  DstBlock		  "Data Type Conversion4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  5
+	  Points		  [60, 0; 0, -105]
+	  DstBlock		  "Data Type Conversion5"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  6
+	  Points		  [70, 0; 0, -85]
+	  DstBlock		  "Data Type Conversion6"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  7
+	  Points		  [80, 0; 0, -65]
+	  DstBlock		  "Data Type Conversion7"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  8
+	  Points		  [90, 0; 0, -45]
+	  DstBlock		  "Data Type Conversion8"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  9
+	  Points		  [100, 0; 0, -25]
+	  DstBlock		  "Data Type Conversion9"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  10
+	  Points		  [110, 0; 0, -5]
+	  DstBlock		  "Data Type Conversion13"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  11
+	  Points		  [105, 0; 0, 15]
+	  DstBlock		  "Data Type Conversion14"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  12
+	  Points		  [85, 0; 0, 35]
+	  DstBlock		  "Data Type Conversion15"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  13
+	  Points		  [65, 0; 0, 55]
+	  DstBlock		  "Data Type Conversion16"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  14
+	  Points		  [45, 0; 0, 75]
+	  DstBlock		  "Data Type Conversion17"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  15
+	  Points		  [25, 0; 0, 95]
+	  DstBlock		  "Data Type Conversion18"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion18"
+	  SrcPort		  1
+	  Points		  [15, 0; 0, 375]
+	  DstBlock		  "Bus\nCreator10"
+	  DstPort		  18
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion17"
+	  SrcPort		  1
+	  Points		  [30, 0; 0, 380]
+	  DstBlock		  "Bus\nCreator10"
+	  DstPort		  17
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion16"
+	  SrcPort		  1
+	  Points		  [40, 0; 0, 385]
+	  DstBlock		  "Bus\nCreator10"
+	  DstPort		  16
+	}
+	Line {
+	  SrcBlock		  "Bus\nCreator1"
+	  SrcPort		  1
+	  DstBlock		  "IMU_Angles"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Bus\nCreator10"
+	  SrcPort		  1
+	  DstBlock		  "IMU_data"
+	  DstPort		  1
+	}
+	Annotation {
+	  SID			  "128"
+	  Name			  "CHOICE OF THE MISALIGNMENT PARAMETERS ABOVE."
+	  Position		  [1146, 487]
+	  ZOrder		  -1
+	}
+	Annotation {
+	  SID			  "127"
+	  Name			  "THIS MAPPING IS VALID ONLY FOR ONE PARTICULAR "
+	  Position		  [1146, 473]
+	  ZOrder		  -2
+	}
+	Annotation {
+	  SID			  "126"
+	  Name			  "TO ROBOT COORDINATES."
+	  Position		  [1143, 455]
+	  ZOrder		  -3
+	}
+	Annotation {
+	  SID			  "125"
+	  Name			  "ARE NEEDED TO CONVERT FROM THE IMU COORDINATES "
+	  Position		  [1144, 441]
+	  ZOrder		  -4
+	}
+	Annotation {
+	  SID			  "124"
+	  Name			  "NOTE: THE ORDERING OF THE IMU RATES AND THE NEGATION"
+	  Position		  [1143, 426]
+	  ZOrder		  -5
+	}
+      }
+    }
+    Block {
+      BlockType		      Terminator
+      Name		      "Terminator1"
+      SID		      "24"
+      Position		      [335, 140, 355, 160]
+      ZOrder		      -5
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Angles"
+      SID		      "26"
+      Position		      [670, 368, 700, 382]
+      ZOrder		      -9
+      IconDisplay	      "Port number"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Rates"
+      SID		      "27"
+      Position		      [670, 393, 700, 407]
+      ZOrder		      -9
+      Port		      "2"
+      IconDisplay	      "Port number"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "IMU"
+      SID		      "17"
+      Position		      [670, 418, 700, 432]
+      ZOrder		      -9
+      Port		      "3"
+      IconDisplay	      "Port number"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "EtherCATStatus"
+      SID		      "25"
+      Position		      [675, 58, 705, 72]
+      ZOrder		      -9
+      Port		      "4"
+      IconDisplay	      "Port number"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "ErrorFlags"
+      SID		      "129"
+      Position		      [670, 558, 700, 572]
+      ZOrder		      5
+      Port		      "5"
+      IconDisplay	      "Port number"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Counter"
+      SID		      "130"
+      Position		      [580, 543, 610, 557]
+      ZOrder		      6
+      Port		      "6"
+      IconDisplay	      "Port number"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "State"
+      SID		      "131"
+      Position		      [620, 528, 650, 542]
+      ZOrder		      7
+      Port		      "7"
+      IconDisplay	      "Port number"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "ID"
+      SID		      "132"
+      Position		      [670, 513, 700, 527]
+      ZOrder		      8
+      Port		      "8"
+      IconDisplay	      "Port number"
+    }
+    Line {
+      SrcBlock		      "ParseMicrostrainIMUPacket"
+      SrcPort		      1
+      DstBlock		      "Angles"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "ParseMicrostrainIMUPacket"
+      SrcPort		      2
+      DstBlock		      "Rates"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "ParseMicrostrainIMUPacket"
+      SrcPort		      3
+      DstBlock		      "IMU"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Mux"
+      SrcPort		      1
+      DstBlock		      "ParseMicrostrainIMUPacket"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "IMU_Medulla"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "IMU_Medulla"
+      SrcPort		      2
+      DstBlock		      "Mux"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "IMU_Medulla"
+      SrcPort		      3
+      DstBlock		      "Mux"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "IMU_Medulla"
+      SrcPort		      4
+      DstBlock		      "Mux"
+      DstPort		      4
+    }
+    Line {
+      SrcBlock		      "IMU_Medulla"
+      SrcPort		      5
+      DstBlock		      "Mux"
+      DstPort		      5
+    }
+    Line {
+      SrcBlock		      "IMU_Medulla"
+      SrcPort		      6
+      DstBlock		      "Mux"
+      DstPort		      6
+    }
+    Line {
+      SrcBlock		      "IMU_Medulla"
+      SrcPort		      7
+      DstBlock		      "Mux"
+      DstPort		      7
+    }
+    Line {
+      SrcBlock		      "IMU_Medulla"
+      SrcPort		      8
+      DstBlock		      "Mux"
+      DstPort		      8
+    }
+    Line {
+      SrcBlock		      "IMU_Medulla"
+      SrcPort		      9
+      DstBlock		      "Mux"
+      DstPort		      9
+    }
+    Line {
+      SrcBlock		      "IMU_Medulla"
+      SrcPort		      10
+      DstBlock		      "Mux"
+      DstPort		      10
+    }
+    Line {
+      SrcBlock		      "IMU_Medulla"
+      SrcPort		      11
+      DstBlock		      "Mux"
+      DstPort		      11
+    }
+    Line {
+      SrcBlock		      "IMU_Medulla"
+      SrcPort		      12
+      DstBlock		      "Mux"
+      DstPort		      12
+    }
+    Line {
+      SrcBlock		      "IMU_Medulla"
+      SrcPort		      13
+      DstBlock		      "Mux"
+      DstPort		      13
+    }
+    Line {
+      SrcBlock		      "IMU_Medulla"
+      SrcPort		      14
+      DstBlock		      "Mux"
+      DstPort		      14
+    }
+    Line {
+      SrcBlock		      "IMU_Medulla"
+      SrcPort		      15
+      DstBlock		      "Mux"
+      DstPort		      15
+    }
+    Line {
+      SrcBlock		      "IMU_Medulla"
+      SrcPort		      19
+      DstBlock		      "Data Type Conversion127"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "IMU_Medulla"
+      SrcPort		      18
+      DstBlock		      "Data Type Conversion113"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "IMU_Medulla"
+      SrcPort		      17
+      DstBlock		      "Data Type Conversion128"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "IMU_Medulla"
+      SrcPort		      16
+      DstBlock		      "Data Type Conversion129"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Data Type Conversion129"
+      SrcPort		      1
+      DstBlock		      "ID"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Data Type Conversion128"
+      SrcPort		      1
+      DstBlock		      "State"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Data Type Conversion113"
+      SrcPort		      1
+      DstBlock		      "Counter"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Data Type Conversion127"
+      SrcPort		      1
+      Points		      [23, 0; 0, 10; 78, 0; 0, -10]
+      DstBlock		      "ErrorFlags"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Constant"
+      SrcPort		      1
+      DstBlock		      "IMU_Medulla"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Constant1"
+      SrcPort		      1
+      DstBlock		      "IMU_Medulla"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Constant2"
+      SrcPort		      1
+      DstBlock		      "IMU_Medulla"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "EtherCAT Rx Frames"
+      SrcPort		      1
+      DstBlock		      "Terminator1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "EtherCAT Init"
+      SrcPort		      1
+      DstBlock		      "Data Type Conversion97"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Data Type Conversion97"
+      SrcPort		      1
+      DstBlock		      "Goto146"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "From178"
+      SrcPort		      1
+      DstBlock		      "EtherCATStatus"
+      DstPort		      1
+    }
+  }
+}
+# Finite State Machines
+#
+#    Stateflow Version 7.6 (R2013a) dated Jan 19 2013, 14:32:20
+#
+#
+
+Stateflow {
+  machine {
+    id			    1
+    name		    "MicrostrainIMUTest01"
+    created		    "24-Apr-2014 15:23:23"
+    isLibrary		    0
+    firstTarget		    27
+    sfVersion		    76014001.0015
+  }
+  chart {
+    id			    2
+    name		    "ParseMicrostrainIMUPacket/Convert_unit32_to_single"
+    windowPosition	    [549 228 213 385]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 1 1920 1080 1.333333333333333]
+    treeNode		    [0 3 0 0]
+    firstTransition	    7
+    firstJunction	    6
+    viewObj		    2
+    machine		    1
+    ssIdHighWaterMark	    5
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    firstData		    4
+    chartFileNumber	    32
+    disableImplicitCasting  1
+    eml {
+      name		      "fcn"
+    }
+  }
+  state {
+    id			    3
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    2
+    treeNode		    [2 0 0 0]
+    superState		    SUBCHART
+    subviewer		    2
+    ssIdNumber		    1
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "function y = fcn(u)\n%#codegen\ny = typecast(u, 'single');\n"
+      editorLayout	      "100 M4x1[916 676 1024 728]"
+    }
+  }
+  data {
+    id			    4
+    ssIdNumber		    4
+    name		    "u"
+    linkNode		    [2 0 5]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT32_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+    }
+    dataType		    "uint32"
+  }
+  data {
+    id			    5
+    ssIdNumber		    5
+    name		    "y"
+    linkNode		    [2 4 0]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_SINGLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "single"
+  }
+  junction {
+    id			    6
+    position		    [23.5747 49.5747 7]
+    chart		    2
+    linkNode		    [2 0 0]
+    subviewer		    2
+    ssIdNumber		    3
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    7
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [32.125 19.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      6
+      intersection	      [1 0 -1 0 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    2
+    linkNode		    [2 0 0]
+    dataLimits		    [23.575 23.575 14.625 34.575]
+    subviewer		    2
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    2
+  }
+  instance {
+    id			    8
+    name		    "ParseMicrostrainIMUPacket/Convert_unit32_to_single"
+    machine		    1
+    chart		    2
+  }
+  chart {
+    id			    9
+    name		    "ParseMicrostrainIMUPacket/M_WI_to_ZYX_Euler_Angles"
+    windowPosition	    [642 271 213 385]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 1 1920 1080 1.333333333333333]
+    treeNode		    [0 10 0 0]
+    firstTransition	    25
+    firstJunction	    24
+    viewObj		    9
+    machine		    1
+    ssIdHighWaterMark	    16
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    firstData		    11
+    chartFileNumber	    33
+    disableImplicitCasting  1
+    eml {
+      name		      "fcn"
+    }
+  }
+  state {
+    id			    10
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    9
+    treeNode		    [9 0 0 0]
+    superState		    SUBCHART
+    subviewer		    9
+    ssIdNumber		    1
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "function [AngZ,AngY,AngX] = fcn(M_RI_Params,M11,M12,M13,M21,M22,M23,M31,M32,M33)\n%#codegen\nAngZ"
+      " = 0;\nAngY = 0;\nAngX = 0;\n%Inputs are the three Euler angles (ZYX convention) in degrees which parametrize th"
+      "e\n%matrix M_RI, and the 9 elements of the M_WI matrix reported by the IMU\nM_RI_Z_rad = M_RI_Params(1)*pi/180;\n"
+      "M_RI_Y_rad = M_RI_Params(2)*pi/180;\nM_RI_X_rad = M_RI_Params(3)*pi/180;\n\n%Form the M_WI matrix from the input"
+      "s\nM_WI = [M11,M12,M13;M21,M22,M23;M31,M32,M33];  \nM_IW = M_WI.';\n%Form the M_RI matrix from the paramters\nM_"
+      "RI = RotZ(M_RI_Z_rad)*RotY(M_RI_Y_rad)*RotX(M_RI_X_rad);\n%Create the matrix that takes us from world frame 1 (z"
+      "-down) to world frame\n%2 (z-up)\nM_W_W2 = [0 1 0;1 0 0;0 0 -1]; \n\nM_RW = M_IW*M_RI; %Relationship between rob"
+      "ot frame and world frame 1 (z-down)\n\nM_RW2 = M_W_W2*M_RW; %Relationship between robot frame and world frame 2 "
+      "(z-up)\n\n[AngX,AngY,AngZ] = M_to_ZYX(M_RW2);\n\nend\n\nfunction [AngX_out,AngY_out,AngZ_out] = M_to_ZYX(M_RW_in"
+      ")\n% M_to_ZYX.m\n% Author: Kevin Galloway\n% Date: 29AUG12\n%\n% Summary: This function takes a matrix (or array"
+      " of matrices) M_RW_in and\n% returns the Euler angles based on the ZYX convention. AngX refers to\n% rotation ar"
+      "ound the X axis, AngY refers to rotation about the Y axis, and\n% AngZ refers to rotation about the Z axis. If M"
+      "_RW_in is an array of\n% matrices (i.e. a multidimensional array), then AngX, AngY and AngZ\n% will be vectors.\n"
+      "M31_RW_in = M_RW_in(3,1);\nM32_RW_in = M_RW_in(3,2);\nM33_RW_in = M_RW_in(3,3);\nM21_RW_in = M_RW_in(2,1);\nM11_"
+      "RW_in = M_RW_in(1,1);\nAngY_out = asin(-M31_RW_in);\nAngX_out = atan2(M32_RW_in,M33_RW_in);\nAngZ_out = atan2(M2"
+      "1_RW_in,M11_RW_in);\nend\n\nfunction M_X = RotX(phi)\nM_X = [1 0 0; 0 cos(phi) -sin(phi); 0 sin(phi) cos(phi)];\n"
+      "end\n\nfunction M_Y = RotY(theta)\nM_Y = [cos(theta) 0 sin(theta); 0 1 0; -sin(theta) 0 cos(theta)];\nend\n\nfun"
+      "ction M_Z = RotZ(psi)\nM_Z = [cos(psi) -sin(psi) 0; sin(psi) cos(psi) 0; 0 0 1];\nend"
+      editorLayout	      "100 M4x1[205 227 1080 733]"
+    }
+  }
+  data {
+    id			    11
+    ssIdNumber		    4
+    name		    "M_RI_Params"
+    linkNode		    [9 0 12]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    12
+    ssIdNumber		    5
+    name		    "AngZ"
+    linkNode		    [9 11 13]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    13
+    ssIdNumber		    6
+    name		    "M11"
+    linkNode		    [9 12 14]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    14
+    ssIdNumber		    7
+    name		    "M12"
+    linkNode		    [9 13 15]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    15
+    ssIdNumber		    8
+    name		    "M13"
+    linkNode		    [9 14 16]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    16
+    ssIdNumber		    9
+    name		    "M21"
+    linkNode		    [9 15 17]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    17
+    ssIdNumber		    10
+    name		    "M22"
+    linkNode		    [9 16 18]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    18
+    ssIdNumber		    11
+    name		    "M23"
+    linkNode		    [9 17 19]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    19
+    ssIdNumber		    12
+    name		    "M31"
+    linkNode		    [9 18 20]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    20
+    ssIdNumber		    13
+    name		    "M32"
+    linkNode		    [9 19 21]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    21
+    ssIdNumber		    14
+    name		    "M33"
+    linkNode		    [9 20 22]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    22
+    ssIdNumber		    15
+    name		    "AngY"
+    linkNode		    [9 21 23]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    23
+    ssIdNumber		    16
+    name		    "AngX"
+    linkNode		    [9 22 0]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  junction {
+    id			    24
+    position		    [23.5747 49.5747 7]
+    chart		    9
+    linkNode		    [9 0 0]
+    subviewer		    9
+    ssIdNumber		    3
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    25
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [32.125 19.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      24
+      intersection	      [1 0 -1 0 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    9
+    linkNode		    [9 0 0]
+    dataLimits		    [23.575 23.575 14.625 34.575]
+    subviewer		    9
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    2
+  }
+  instance {
+    id			    26
+    name		    "ParseMicrostrainIMUPacket/M_WI_to_ZYX_Euler_Angles"
+    machine		    1
+    chart		    9
+  }
+  target {
+    id			    27
+    name		    "sfun"
+    description		    "Default Simulink S-Function Target."
+    machine		    1
+    linkNode		    [1 0 28]
+  }
+  target {
+    id			    28
+    name		    "rtw"
+    machine		    1
+    linkNode		    [1 27 0]
+  }
+}

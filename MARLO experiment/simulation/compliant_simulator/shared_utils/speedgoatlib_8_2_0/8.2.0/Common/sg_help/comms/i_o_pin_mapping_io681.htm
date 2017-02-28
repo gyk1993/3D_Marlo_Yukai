@@ -1,0 +1,505 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>IO681, IO682 &gt; I/O pin mapping</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet">
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+             padding:0; 
+             overflow: hidden; 
+             background: #FFFFFF; 
+       } 
+
+      div#printheader { display: none; }
+      #idheader { width:100%; 
+                  height:auto; 
+                  padding: 0; 
+                  margin: 0; 
+       } 
+      #idcontent { position:relative }                                               
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}      
+      #switchtoggles { text-align: right; padding: 0 5px 0 0; font-size: 90%; } 
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }
+   </style>
+   <noscript>
+   <style type="text/css">
+   html, body { overflow: auto; }
+   </style> 
+   </noscript>
+   <style type="text/css" media="print">
+      span.f_Heading1 { color: black; }
+      #idheader, #printheader img { display:none; }
+      #printheader { display: block; margin-top: 20px; }
+      #idcontent { margin-top: 10px; position:relative }
+     .p_Heading1{ color: #147EC2;
+    font-size: 1.455em !important;
+     border-bottom: 1px solid #E0E1E1;
+    color: #147EC2;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 20px;
+    padding-bottom: 4px;}
+   </style>   
+
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+   <script type="text/javascript" src="nsh.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "i_o_pin_mapping_io681.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<div id="breadcrumbs" style="display:none"><a href="io681__io682.htm">IO681, IO682</a></div>
+
+<div id="printheader"><h1 class="p_Heading1"><span class="f_Heading1">I/O pin mapping</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
+  <tr valign="bottom">
+    <td align="left" valign="bottom" class="topichead">
+   
+   <h1 class="p_Heading1"><span class="f_Heading1">I/O pin mapping</span></h1>
+
+    
+  </tr>  
+</table>
+<!-- The following code displays Expand All/Collapse All links  below the header in topics containing toggles -->
+  
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<th style="vertical-align:top; width:23px; background-color:#177cbd; padding:2px; border:solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold; color: #ffffff;">Pin</span></p>
+</th>
+<th style="vertical-align:top; width:264px; background-color:#177cbd; padding:2px; border:solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold; color: #ffffff;">Signal</span></p>
+</th>
+<th style="vertical-align:top; width:23px; background-color:#177cbd; padding:2px; border:solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold; color: #ffffff;">Pin</span></p>
+</th>
+<th style="vertical-align:top; width:264px; background-color:#177cbd; padding:2px; border:solid 1px #000000;"><p style="margin: 8px 0px 8px 0px;"><span style="font-weight: bold; color: #ffffff;">Signal</span></p>
+</th>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>1</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">TX1A</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>35</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">TX1B</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>2</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">TX2A</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>36</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">TX2B</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>3</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">TX3A</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>37</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">TX3B</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>4</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">TX4A</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>38</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">TX4B</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>5</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">TX5A</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>39</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">TX5B</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>6</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">TX6A</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>40</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">TX6B</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>7</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">TX7A</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>41</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">TX7B</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>8</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">TX8A</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>42</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">TX8B</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>9</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">TX9A</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>43</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">TX9B</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>10</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">TX10A</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>44</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">TX10B</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>11</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">TX11A</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>45</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">TX11B</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>12</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">TX12A</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>46</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">TX12B</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>13</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">TX13A</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>47</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">TX13B</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>14</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">TX14A</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>48</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">TX14B</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>15</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">TX15A</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>49</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">TX15B</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>16</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">TX16A</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>50</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">TX16B</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>17</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">GROUND</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>51</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">GROUND</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>18</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">RX1A</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>52</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">RX1B</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>19</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">RX2A</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>53</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">RX2B</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>20</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">RX3A</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>54</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">RX3B</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>21</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">RX4A</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>55</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">RX4B</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>22</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">RX5A</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>56</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">RX5B</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>23</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">RX6A</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>57</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">RX6B</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>24</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">RX7A</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>58</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">RX7B</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>25</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">RX8A</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>59</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">RX8B</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>26</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">GROUND</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>60</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">GROUND</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>27</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">RX9A</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>61</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">RX9B</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>28</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">RX10A</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>62</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">RX10B</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>29</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">RX11A</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>63</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">RX11B</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>30</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">RX12A</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>64</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">RX12B</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>31</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">RX13A</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>65</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">RX13B</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>32</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">RX14A</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>66</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">RX14B</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>33</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">RX15A</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>67</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">RX15B</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>34</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">RX16A</span></p>
+</td>
+<td style="vertical-align:top; width:23px; padding:2px; border:solid 1px #000000;"><p>68</p>
+</td>
+<td style="vertical-align:top; width:264px; padding:2px; border:solid 1px #000000;"><p><span style="font-size: 9pt;">RX16B</span></p>
+</td>
+</tr>
+</table>
+</div>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+var lastSlashPos = document.URL.lastIndexOf("/") > document.URL.lastIndexOf("\\") ? document.URL.lastIndexOf("/") : document.URL.lastIndexOf("\\");
+if( document.URL.substring(lastSlashPos + 1, lastSlashPos + 4).toLowerCase() != "~hh" )
+{
+ if (document.all) setTimeout(function() {nsrInit();},20); 
+    else nsrInit();
+ } 
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
