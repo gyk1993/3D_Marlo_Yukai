@@ -2,6 +2,7 @@ optimization/opt_func/gen/
 *_slrt_rtw/
 *_grt_rtw/
 *slprj/
+*sfprj/
 *.asv
 *.autosave
 MARLO experiment/simulation/compliant_simulator/**/*.dlm

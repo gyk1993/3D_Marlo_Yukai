@@ -75,15 +75,15 @@ classdef Controller < Controller_MARLO
             pitch_tune=obj.Kfd_p*(dh0(st_leg_i)+dq(1));
             pitch_tune=sign(pitch_tune)*min(abs(obj.Kfd_p*(dh0(st_leg_i)+dq(1))),0.3);
             Hd(sw_leg_i)=Hd(sw_leg_i)-pitch_tune;
-%             if st_hip_i==5 && dh0(st_hip_i)<0 || st_hip_i==6 && dh0(st_hip_i)>0
-%                 Hd(sw_hip_i)=Hd(sw_hip_i)-obj.Kfd_r*(dh0(st_hip_i));
-%             end
+            if st_hip_i==5 && dh0(st_hip_i)<0 || st_hip_i==6 && dh0(st_hip_i)>0
+                Hd(sw_hip_i)=Hd(sw_hip_i)-obj.Kfd_r*(dh0(st_hip_i));
+            end
             
             y=h0-Hd;
             dy=dh0-dHd;
             u = zeros(6,1);
-%             y(st_leg_i)=-q(1);
-%             y(st_hip_i)=-q(2);
+            y(st_leg_i)=-q(1);
+            y(st_hip_i)=-q(2);
 
            u=ControlParams_choice.M^-1*(-obj.Kd*dy-obj.Kp*y);
 %            u(1)=-100*(q(4)-0)-5*(dq(4)-0);
