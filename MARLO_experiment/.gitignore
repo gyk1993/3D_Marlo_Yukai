@@ -1,0 +1,15 @@
+optimization/opt_func/gen/
+*_slrt_rtw/
+*_grt_rtw/
+*slprj/
+*.asv
+*.autosave
+simulation/compliant_simulator/**/*.dlm
+simulation/compliant_simulator/**/*_compiledPortWidths.m
+simulation/compliant_simulator/**/*_sfun.mexw64
+simulation/compliant_simulator/**/ecat_config_xml_3.c
+simulation/compliant_simulator/Controller/Controller_Exp.xml
+simulation/compliant_simulator/Controller/Controller_Expref.m
+simulation/complient_simulator/Controller/Controller_Expref.m
+simulation/compliant_simulator/Controller/Controller_Expbio.m
+simulation/compliant_simulator/Controller/Controller_Exppt.m
