@@ -16,20 +16,29 @@ clear Data
 clear Data_bus
 
 Data.q = zeros(17,1);
-Data.dq = zeros(17,1);
 Data.u = zeros(6,1);
 Data.y = zeros(6,1);
 Data.dy = zeros(6,1);
+Data.ya = zeros(6,1);
+Data.dya = zeros(6,1);
+Data.yd = zeros(6,1);
+Data.dyd = zeros(6,1);
 Data.s = 0;
-Data.cs = 0;
-Data.hd = zeros(6,1);
-Data.dhd = zeros(6,1);
-Data.h0 = zeros(6,1);
-Data.dh0 = zeros(6,1);
-Data.pitch_tune=0;
-Data.roll_tune=0;
-Data.pitch_tune_fil=0;
-Data.roll_tune_fil=0;
+Data.s_unsat = 0;
+Data.ds = 0;
+
+Data.Domain = 0;
+Data.s_R = 0;
+Data.s_L = 0;
+Data.fz_R = 0;
+Data.fz_L = 0;
+
+Data.velFiltered = zeros(3,1);
+Data.velMeasured = zeros(3,1);
+
+Data.swingHipAdjustment = 0;
+Data.swingLegAdjustment = 0;
+
 createBusObject(Data, 'Data_bus');
 
 %% Output Bus

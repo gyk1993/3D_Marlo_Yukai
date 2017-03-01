@@ -4,7 +4,7 @@ clear; restoredefaultpath;
 setpath;
 
 % Simulation flag
-isSim = 0;
+isSim = 1;
 
 % Load all of the model parameters
 load_model_params
@@ -26,15 +26,15 @@ ControlState.s_unsat = 0;
 
 % Load Initial Condition
 if isSim
-    MAT_PATH = 'C:\Users\oharib\Documents\GitHub\Omar-MARLO_WalkInPlace\gait-params\';
-    optimization = load([MAT_PATH,'optGait']);
-    
+    MAT_PATH = 'D:\Graduate\robots\GitHub\3D_Marlo_Yukai\RobotOptimization\Examples\atrias\mat\';
+    optimization = load([MAT_PATH,'walkingInPlace_v3']);
+
     q0_new = optimization.outputs{1}.q(1,:)';
     dq0_new = optimization.outputs{1}.dq(1,:)';
     
     % Change to old coordinates
     q0 = zeros(13,1);
-    q0(1:3,:) = q0_new([5,4,6],:);
+    q0(1:3,:) = q0_new([6,5,4],:);
     q0(4:13,:) = q0_new([8,9,13,14,8,9,7,13,14,12],:);
     q0(13,:) = -q0(13,:);
 
@@ -42,44 +42,39 @@ if isSim
     dq0(1:3,:) = dq0_new([5,4,6],:);
     dq0(4:13,:) = dq0_new([8,9,13,14,8,9,7,13,14,12],:);
     dq0(13,:) = -dq0(13,:);
-    
-    q0_new(1) = 0;
-    q0_new(2) = 0;
-    q0_new(3) = 1.1;
-    q0_new(4) = 0;
-    q0_new(5) = 0;
-    q0_new(6) = 0;
 
     q = [q0_new(1:3); q0];
     dq = [dq0_new(1:3); dq0];
-
+    
+    dq=zeros(16,1);
+    q(3)=1.5;
     xinit = [q; dq];
 end
 
-if isSim
-    mdl = 'Controller_Sim';
-    load_system(mdl);
-    cs = getActiveConfigSet(mdl);
-    mdl_cs = cs.copy;
-    set_param(mdl_cs,'StopTime','20');
-    log_obj = sim(mdl, mdl_cs);
-    
-    log = struct();
-    log_params = log_obj.get();
-    for i = 1:length(log_params)
-        log.(char(log_params(i))) = log_obj.get(char(log_params(i)));
-    end
-    
-    log.DataVec = reshape(log.DataVec,size(log.DataVec,1),[])';
-    log = DataVec2Struct(log, Data);
-
-    log = rmfield(log, {'DataVec'});
-    
-    beep;
-else
-    mdl = 'Controller_Exp';
-    open(mdl);
-end
+% if isSim
+%     mdl = 'Controller_Sim';
+%     load_system(mdl);
+%     cs = getActiveConfigSet(mdl);
+%     mdl_cs = cs.copy;
+%     set_param(mdl_cs,'StopTime','20');
+%     log_obj = sim(mdl, mdl_cs);
+%     
+%     log = struct();
+%     log_params = log_obj.get();
+%     for i = 1:length(log_params)
+%         log.(char(log_params(i))) = log_obj.get(char(log_params(i)));
+%     end
+%     
+%     log.DataVec = reshape(log.DataVec,size(log.DataVec,1),[])';
+%     log = DataVec2Struct(log, Data);
+% 
+%     log = rmfield(log, {'DataVec'});
+%     
+%     beep;
+% else
+%     mdl = 'Controller_Exp';
+%     open(mdl);
+% end
 
 ax = [];
 
@@ -127,9 +122,30 @@ f = figure;
 anim = AtriasAnimator(log.t, [log.q(:, 1:3), log.Data.q(:, [1:6, 9:13, 16:17])]');
 anim.isLooping = true;
 anim.updateWorldPosition = true;
-anim.speed = 0.2;
+% anim.speed = 0.2;
 anim.pov = Animator.AnimatorPointOfView.TopSouthEast;
 anim.Animate(true);
+conGUI = Animator.AnimatorControls();
+conGUI.anim = anim;
+%% Animate Simulation
+% steps.t = t_out;
+% steps.q = q_out;
+% steps.u = reshape(u,6,[])';
+% steps.vcm_average = log.Data.vel_step_average_last; 
+% anim = RobotAnimator(steps,0.8,leg_length,torso_com_offset, terrain);
+% anim.Play
+
+MODEL_PATH = 'D:\Graduate\robots\GitHub\3D_Marlo_Yukai\Model-Generator\models\atrias\gen\';
+ANIM_PATH = 'D:\Graduate\robots\GitHub\3D_Marlo_Yukai\RobotAnimator\';
+addpath(genpath(MODEL_PATH));
+addpath(ANIM_PATH);
+
+f = figure;
+anim = AtriasAnimator(log.t, [log.q(:, 1:3), log.Data.q(:, [1:6, 9:13, 16:17])]');
+anim.Animate(true);
+anim.isLooping = false;
+anim.updateWorldPosition = true;
+anim.pov = Animator.AnimatorPointOfView.North;
 conGUI = Animator.AnimatorControls();
 conGUI.anim = anim;
 

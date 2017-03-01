@@ -1,36 +1,79 @@
-function cellInfo = Input_bus(varargin) 
-% INPUT_BUS returns a cell array containing bus object information 
-% 
-% Optional Input: 'false' will suppress a call to Simulink.Bus.cellToObject 
-%                 when the MATLAB file is executed. 
-% The order of bus element attributes is as follows:
-%   ElementName, Dimensions, DataType, SampleTime, Complexity, SamplingMode, DimensionsMode, Min, Max, DocUnits, Description 
+function Input_bus() 
+% INPUT_BUS initializes a set of bus objects in the MATLAB base workspace 
 
-suppressObject = false; 
-if nargin == 1 && islogical(varargin{1}) && varargin{1} == false 
-    suppressObject = true; 
-elseif nargin > 1 
-    error('Invalid input argument(s) encountered'); 
-end 
+% Bus object: Input_bus 
+clear elems;
+elems(1) = Simulink.BusElement;
+elems(1).Name = 't';
+elems(1).Dimensions = [1 1];
+elems(1).DimensionsMode = 'Fixed';
+elems(1).DataType = 'double';
+elems(1).SampleTime = -1;
+elems(1).Complexity = 'real';
+elems(1).SamplingMode = 'Sample based';
+elems(1).Min = [];
+elems(1).Max = [];
+elems(1).DocUnits = '';
+elems(1).Description = '';
 
-cellInfo = { ... 
-  { ... 
-    'Input_bus', ... 
-    '', ... 
-    '', ... 
-    'Auto', ... 
-    '-1', {... 
-{'velEst', [6 1], 'double', -1, 'real', 'Sample', 'Fixed', [], [], '', ''}; ...
-{'t', [1 1], 'double', -1, 'real', 'Sample', 'Fixed', [], [], '', ''}; ...
-{'q', [17 1], 'double', -1, 'real', 'Sample', 'Fixed', [], [], '', ''}; ...
-{'dq', [17 1], 'double', -1, 'real', 'Sample', 'Fixed', [], [], '', ''}; ...
-{'ControlParams', 1, 'Bus: ControlParams_bus', -1, 'real', 'Sample', 'Fixed', [], [], '', ''}; ...
-{'ControlState', 1, 'Bus: ControlState_bus', -1, 'real', 'Sample', 'Fixed', [], [], '', ''}; ...
-    } ...
-  } ...
-}'; 
+elems(2) = Simulink.BusElement;
+elems(2).Name = 'q';
+elems(2).Dimensions = [17 1];
+elems(2).DimensionsMode = 'Fixed';
+elems(2).DataType = 'double';
+elems(2).SampleTime = -1;
+elems(2).Complexity = 'real';
+elems(2).SamplingMode = 'Sample based';
+elems(2).Min = [];
+elems(2).Max = [];
+elems(2).DocUnits = '';
+elems(2).Description = '';
 
-if ~suppressObject 
-    % Create bus objects in the MATLAB base workspace 
-    Simulink.Bus.cellToObject(cellInfo) 
-end 
+elems(3) = Simulink.BusElement;
+elems(3).Name = 'dq';
+elems(3).Dimensions = [17 1];
+elems(3).DimensionsMode = 'Fixed';
+elems(3).DataType = 'double';
+elems(3).SampleTime = -1;
+elems(3).Complexity = 'real';
+elems(3).SamplingMode = 'Sample based';
+elems(3).Min = [];
+elems(3).Max = [];
+elems(3).DocUnits = '';
+elems(3).Description = '';
+
+elems(4) = Simulink.BusElement;
+elems(4).Name = 'ControlParams';
+elems(4).Dimensions = 1;
+elems(4).DimensionsMode = 'Fixed';
+elems(4).DataType = 'Bus: ControlParams_bus';
+elems(4).SampleTime = -1;
+elems(4).Complexity = 'real';
+elems(4).SamplingMode = 'Sample based';
+elems(4).Min = [];
+elems(4).Max = [];
+elems(4).DocUnits = '';
+elems(4).Description = '';
+
+elems(5) = Simulink.BusElement;
+elems(5).Name = 'ControlState';
+elems(5).Dimensions = 1;
+elems(5).DimensionsMode = 'Fixed';
+elems(5).DataType = 'Bus: ControlState_bus';
+elems(5).SampleTime = -1;
+elems(5).Complexity = 'real';
+elems(5).SamplingMode = 'Sample based';
+elems(5).Min = [];
+elems(5).Max = [];
+elems(5).DocUnits = '';
+elems(5).Description = '';
+
+Input_bus = Simulink.Bus;
+Input_bus.HeaderFile = '';
+Input_bus.Description = '';
+Input_bus.DataScope = 'Auto';
+Input_bus.Alignment = -1;
+Input_bus.Elements = elems;
+clear elems;
+assignin('base','Input_bus', Input_bus);
+

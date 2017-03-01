@@ -1,19 +1,16 @@
 %% Script to initialize the ControlState bus
 
 ControlState.Ts = Ts;
-ControlState.T0 = 0;
 ControlState.stepNumber = 1;
-
+ControlState.StanceLeg = 1; % Right
 ControlState.s = 0;
-ControlState.s_unsat = 0;
 ControlState.ds = 0;
-ControlState.s_R = 0;
-ControlState.s_L = 0;
-ControlState.Domain = 0;
-ControlState.HAlphaErrorFix = zeros(6, 6);
-ControlState.HAlphaSpeedReg = zeros(6, 6);
 ControlState.velocity_current = [0;0;0];
 ControlState.velocity_average = [0;0;0];
+ControlState.InDoubleSupport = 0;
+ControlState.InSingleSupport = 0;
+
+ControlState.LastStepTime = 0;
 
 ControlState.Options.Enable_dx_tgt = 1;
 ControlState.Options.Enable_dy_tgt = 1;
@@ -37,10 +34,6 @@ ControlState.h0=zeros(6,1);
 ControlState.dh0=zeros(6,1);
 ControlState.pitch_tune=0;
 ControlState.roll_tune=0;
-ControlState.StanceLeg = 1; % Right
-ControlState.LastStepTime = 0;
-
-
 if isSim
     ControlState.Offsets.xOffset = 0;
     ControlState.Offsets.yOffset = 0;

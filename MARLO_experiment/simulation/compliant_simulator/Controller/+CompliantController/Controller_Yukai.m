@@ -1,35 +1,26 @@
-classdef Controller < Controller_MARLO
+classdef Controller_Yukai < Controller_MARLO
 	%MIKHAILCONTROLLER Mikhail's controller.
 	%
 	% Copyright   2015 Mikhail S. Jones
     
 	% PUBLIC PROPERTIES =====================================================
 	properties         
-
+        Kp;
+        Kd;
+        Kfd_p;
+        Kfd_r;
+        Kfp_p;
+        Kfp_r;
+        pitch_fil_para;
+        roll_fil_para;
     end % properties
 	
 	% CONSTANT PROPERTIES ===================================================
 	properties (Constant = true, Hidden = true)
 		velcocity_filtered = [0;0;0];	
-        Kp = [50 0 0 0 0 0;
-              0 50 0 0 0 0;
-              0 0 50 0 0 0;
-              0 0 0 50 0 0;
-              0 0 0 0 100 0;
-              0 0 0 0 0 100;];
-        Kd = 5*[1 0 0 0 0 0;
-              0 1 0 0 0 0;
-              0 0 1 0 0 0;
-              0 0 0 1 0 0;
-              0 0 0 0 1 0;
-              0 0 0 0 0 1;];
+
         ks_leg = 2690.8;
         impact_thre = 200;
-        Kfd_p=0.6;
-        Kfd_r=0.4;
-        Kfp_p=0.7;
-        Kfp_r=0.6;
-        pitch_fil_para=0.1;
 	end % properties
 	
 	% PUBLIC METHODS ========================================================
@@ -49,10 +40,16 @@ classdef Controller < Controller_MARLO
             ControlState = input.ControlState;		
           
             % ----- Insert Controller here ------
+            pitch_tune=0;
+            roll_tune=0;
+            pitch_tune_fil=0;
+            roll_tune_fil=0;
+            
+            
             % Decide which leg is on the ground
             ControlState.s = (t - ControlState.LastStepTime)*ControlParams.LeftStance.ct;
             s=ControlState.s;
-%             s=0;
+            s=0;
             % cs is used in the bazier curve
             if s>1.05
                 cs=1.05;
@@ -88,19 +85,19 @@ classdef Controller < Controller_MARLO
             pitch_tune_fil=first_order_filter(ControlState.pitch_tune,pitch_tune,obj.pitch_fil_para);
             hd(sw_leg_i)=hd(sw_leg_i)-pitch_tune_fil;
             
-            if st_hip_i==5 && dh0(st_hip_i)<0 || st_hip_i==6 && dh0(st_hip_i)>0
-                roll_tune=obj.Kfd_r*(dh0(st_hip_i));
-            else
-                roll_tune=0;
-            end
-            roll_tune_fil=first_order_filter(ControlState.roll_tune,roll_tune,obj.roll_fil_para);
-            hd(sw_hip_i)=hd(sw_hip_i)-roll_tune;
+%             if st_hip_i==5 && dh0(st_hip_i)<0 || st_hip_i==6 && dh0(st_hip_i)>0
+%                 roll_tune=obj.Kfd_r*(dh0(st_hip_i));
+%             else
+%                 roll_tune=0;
+%             end
+%             roll_tune_fil=first_order_filter(ControlState.roll_tune,roll_tune,obj.roll_fil_para);
+%             hd(sw_hip_i)=hd(sw_hip_i)-roll_tune;
             
             y=h0-hd;
             dy=dh0-dhd;
             u = zeros(6,1);
-            y(st_leg_i)=-q(1);
-            y(st_hip_i)=-q(2);
+%             y(st_leg_i)=-q(1);
+%             y(st_hip_i)=-q(2);
 
            u=ControlParams_choice.M^-1*(-obj.Kd*dy-obj.Kp*y);
 %            u(1)=-100*(q(4)-0)-5*(dq(4)-0);
@@ -122,7 +119,8 @@ classdef Controller < Controller_MARLO
             Data.dh0=dh0;
             Data.pitch_tune=pitch_tune;
             Data.roll_tune=roll_tune;
-            
+            Data.pitch_tune_fil=pitch_tune_fil;
+            Data.roll_tune_fil=roll_tune_fil;
             %Store state and param
             ControlState.hd=hd;
             ControlState.dhd=dhd;
@@ -226,6 +224,6 @@ else
     switch_flag=0;
 end
 end
-function pitch_tune_fil=first_order_filter(prev,pit,para)
-    pitch_tune_fil=pitch_prev*(1-para)+pitch*para;
+function filtered=first_order_filter(prev,new,para)
+    filtered=prev*(1-para)+new*para;
 end
