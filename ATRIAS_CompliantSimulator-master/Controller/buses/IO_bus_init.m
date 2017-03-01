@@ -22,10 +22,14 @@ Data.y = zeros(6,1);
 Data.dy = zeros(6,1);
 Data.s = 0;
 Data.cs = 0;
-Data.Hd = zeros(6,1);
-Data.dHd = zeros(6,1);
-
-
+Data.hd = zeros(6,1);
+Data.dhd = zeros(6,1);
+Data.h0 = zeros(6,1);
+Data.dh0 = zeros(6,1);
+Data.pitch_tune=0;
+Data.roll_tune=0;
+Data.pitch_tune_fil=0;
+Data.roll_tune_fil=0;
 createBusObject(Data, 'Data_bus');
 
 %% Output Bus

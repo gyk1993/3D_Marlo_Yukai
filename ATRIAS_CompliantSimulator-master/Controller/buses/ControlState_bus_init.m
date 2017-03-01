@@ -28,6 +28,12 @@ ControlState.Commands.TimeScale = 0;
 ControlState.Commands.PauseTime = false;
 ControlState.Commands.IntegralControl = false;
 
+ControlState.hd=zeros(6,1);
+ControlState.dhd=zeros(6,1);
+ControlState.h0=zeros(6,1);
+ControlState.dh0=zeros(6,1);
+ControlState.pitch_tune=0;
+ControlState.roll_tune=0;
 if isSim
     ControlState.Offsets.xOffset = 0;
     ControlState.Offsets.yOffset = 0;
