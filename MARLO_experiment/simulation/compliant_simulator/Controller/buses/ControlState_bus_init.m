@@ -39,6 +39,11 @@ ControlState.pitch_tune=0;
 ControlState.roll_tune=0;
 ControlState.StanceLeg = 1; % Right
 ControlState.LastStepTime = 0;
+ControlState.prev_hold=1;
+ControlState.hold_position=zeros(6,1);
+ControlState.hold_phase=0;
+ControlState.sin_phase=0;
+ControlState.ini=1;
 
 
 if isSim

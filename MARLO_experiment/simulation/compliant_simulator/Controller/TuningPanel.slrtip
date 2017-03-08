@@ -21,7 +21,7 @@
         <Property name="BindingSrcPath">/footPlacementHA_ctrl</Property>
         <Property name="TargetName">MARLO_Wired</Property>
         <Property name="BindingSrcType">Parameter</Property>
-        <Property name="Size">100, 23</Property>
+        <Property name="Size">100, 27</Property>
         <Property name="Location">112, 126</Property>
         <Property name="Name">NumericEntry10</Property>
       </Object>
@@ -43,7 +43,7 @@
         <Property name="BindingSrcPath">/deltaSwHA_ctrl</Property>
         <Property name="TargetName">MARLO_Wired</Property>
         <Property name="BindingSrcType">Parameter</Property>
-        <Property name="Size">100, 23</Property>
+        <Property name="Size">100, 27</Property>
         <Property name="Location">112, 22</Property>
         <Property name="Name">NumericEntry9</Property>
       </Object>
@@ -51,7 +51,7 @@
         <Property name="BindingSrcPath">/footPlacementLA_ctrl</Property>
         <Property name="TargetName">MARLO_Wired</Property>
         <Property name="BindingSrcType">Parameter</Property>
-        <Property name="Size">100, 23</Property>
+        <Property name="Size">100, 27</Property>
         <Property name="Location">6, 126</Property>
         <Property name="Name">NumericEntry11</Property>
       </Object>
@@ -66,7 +66,7 @@
         <Property name="BindingSrcPath">/s_period_ctrl</Property>
         <Property name="TargetName">MARLO_Wired</Property>
         <Property name="BindingSrcType">Parameter</Property>
-        <Property name="Size">100, 23</Property>
+        <Property name="Size">100, 27</Property>
         <Property name="Location">6, 74</Property>
         <Property name="Name">NumericEntry8</Property>
       </Object>
@@ -81,7 +81,7 @@
         <Property name="BindingSrcPath">/deltaSwLA_ctrl</Property>
         <Property name="TargetName">MARLO_Wired</Property>
         <Property name="BindingSrcType">Parameter</Property>
-        <Property name="Size">100, 23</Property>
+        <Property name="Size">100, 27</Property>
         <Property name="Location">6, 22</Property>
         <Property name="Name">NumericEntry7</Property>
       </Object>
@@ -101,7 +101,7 @@
         <Property name="Value">1</Property>
         <Property name="Location">6, 74</Property>
         <Property name="Name">NumericalUpDownEntry1</Property>
-        <Property name="Size">120, 23</Property>
+        <Property name="Size">120, 27</Property>
       </Object>
       <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label3" children="Controls">
         <Property name="Text">Freq (Hz)</Property>
@@ -121,7 +121,7 @@
         <Property name="BindingSrcPath">/joint_test_amp_ctrl</Property>
         <Property name="TargetName">MARLO_Wired</Property>
         <Property name="BindingSrcType">Parameter</Property>
-        <Property name="Size">87, 23</Property>
+        <Property name="Size">87, 27</Property>
         <Property name="Location">122, 22</Property>
         <Property name="Name">NumericEntry6</Property>
       </Object>
@@ -146,7 +146,7 @@
         <Property name="BindingSrcPath">/joint_test_freq_ctrl</Property>
         <Property name="TargetName">MARLO_Wired</Property>
         <Property name="BindingSrcType">Parameter</Property>
-        <Property name="Size">87, 23</Property>
+        <Property name="Size">87, 27</Property>
         <Property name="Location">6, 22</Property>
         <Property name="Name">NumericEntry5</Property>
       </Object>
@@ -159,10 +159,10 @@
     </Object>
     <Object type="System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="GainsGroupBox" children="Controls">
       <Object type="MW.Instruments.NumericEntry, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericEntry3" children="Controls">
-        <Property name="BindingSrcPath">/kp_hip_ctrl</Property>
+        <Property name="BindingSrcPath">/c_Kp_hip</Property>
         <Property name="TargetName">MARLO_Wired</Property>
         <Property name="BindingSrcType">Parameter</Property>
-        <Property name="Size">87, 23</Property>
+        <Property name="Size">87, 27</Property>
         <Property name="Location">6, 74</Property>
         <Property name="Name">NumericEntry3</Property>
       </Object>
@@ -195,26 +195,26 @@
         <Property name="Size">64, 23</Property>
       </Object>
       <Object type="MW.Instruments.NumericEntry, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericEntry1" children="Controls">
-        <Property name="BindingSrcPath">/kp_ctrl</Property>
+        <Property name="BindingSrcPath">/c_Kp_link</Property>
         <Property name="TargetName">MARLO_Wired</Property>
         <Property name="BindingSrcType">Parameter</Property>
-        <Property name="Size">87, 23</Property>
+        <Property name="Size">87, 27</Property>
         <Property name="Location">6, 22</Property>
         <Property name="Name">NumericEntry1</Property>
       </Object>
       <Object type="MW.Instruments.NumericEntry, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericEntry4" children="Controls">
-        <Property name="BindingSrcPath">/kd_hip_ctrl</Property>
+        <Property name="BindingSrcPath">/c_Kd_hip</Property>
         <Property name="TargetName">MARLO_Wired</Property>
         <Property name="BindingSrcType">Parameter</Property>
-        <Property name="Size">87, 23</Property>
+        <Property name="Size">87, 27</Property>
         <Property name="Location">112, 74</Property>
         <Property name="Name">NumericEntry4</Property>
       </Object>
       <Object type="MW.Instruments.NumericEntry, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericEntry2" children="Controls">
-        <Property name="BindingSrcPath">/kd_ctrl</Property>
+        <Property name="BindingSrcPath">/c_Kd_link</Property>
         <Property name="TargetName">MARLO_Wired</Property>
         <Property name="BindingSrcType">Parameter</Property>
-        <Property name="Size">87, 23</Property>
+        <Property name="Size">87, 27</Property>
         <Property name="Location">112, 22</Property>
         <Property name="Name">NumericEntry2</Property>
       </Object>
@@ -233,5 +233,5 @@
       <Property name="Location">12, 12</Property>
       <Property name="Name">SwitchLED1</Property>
     </Object>
-    <Property name="ClientSize">1920, 1200</Property>
+    <Property name="ClientSize">1536, 864</Property>
   </Object>

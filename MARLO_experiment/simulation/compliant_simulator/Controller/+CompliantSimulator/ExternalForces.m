@@ -1,14 +1,14 @@
 function [F] = ExternalForces(t, q, dq)
-    isTest_holdInAir = false;
+    isTest_holdInAir = true;
     isTest_dropTest = false;
-    isTest_GradualdropTest = true;
+    isTest_GradualdropTest = false;
     isTest_dropAndLiftTest = false;
     
-    F = zeros(6, 1);
+    F = zeros(16, 1);
     kpboom = 10000;
     kdboom = 1000;
     
-    height = 1.05;
+    height = 1.5;
     
     if isTest_holdInAir
         F(1) = F(1)+kpboom*(q(1))+kdboom*dq(1);   % Side
@@ -80,5 +80,6 @@ function [F] = ExternalForces(t, q, dq)
             % F(5) = F(5)+kpboom*(q(5)-0)+kdboom*dq(5);   % Roll
         end
     end
+% 
+%     F(4) = F(4)+kdboom/10*dq(4);  % Yaw friction constraint
 end
-

@@ -5,20 +5,33 @@ classdef Controller_Yukai < Controller_MARLO
     
 	% PUBLIC PROPERTIES =====================================================
 	properties         
-        Kp;
-        Kd;
+        %Kp Link
+        Kp_link;      
+        %Kd Link
+        Kd_link;
+        %Kp Hip
+        Kp_hip;
+        %Kd Hip
+        Kd_hip;
         Kfd_p;
         Kfd_r;
         Kfp_p;
         Kfp_r;
         pitch_fil_para;
         roll_fil_para;
+        
+        frequency_test;
+        joint_num_test;
+        amplitude_test;
     end % properties
-	
+	properties (Access = private) 
+        hold=1;
+    end
 	% CONSTANT PROPERTIES ===================================================
 	properties (Constant = true, Hidden = true)
 		velcocity_filtered = [0;0;0];	
-
+        D2R=pi/180;
+        R2D=180/pi;
         ks_leg = 2690.8;
         impact_thre = 200;
 	end % properties
@@ -40,10 +53,26 @@ classdef Controller_Yukai < Controller_MARLO
             ControlState = input.ControlState;		
           
             % ----- Insert Controller here ------
+            
+            
+            
+            
             pitch_tune=0;
             roll_tune=0;
             pitch_tune_fil=0;
             roll_tune_fil=0;
+            Kp=[obj.Kp_hip 0 0 0 0 0;
+                0 obj.Kp_link 0 0 0 0;
+                0 0 obj.Kp_link 0 0 0;
+                0 0 0 obj.Kp_hip 0 0;
+                0 0 0 0 obj.Kp_link 0;
+                0 0 0 0 0 obj.Kp_link];
+            Kd=[obj.Kd_hip 0 0 0 0 0;
+                0 obj.Kd_link 0 0 0 0;
+                0 0 obj.Kd_link 0 0 0;
+                0 0 0 obj.Kd_hip 0 0;
+                0 0 0 0 obj.Kd_link 0;
+                0 0 0 0 0 obj.Kd_link];
             
             
             % Decide which leg is on the ground
@@ -83,7 +112,7 @@ classdef Controller_Yukai < Controller_MARLO
             pitch_tune=obj.Kfd_p*(dh0(st_leg_i)+dq(1)); % Here pitch is pitch of the stance leg, not torso. In other word, the absolute stance leg angle
             pitch_tune=sign(pitch_tune)*min(abs(obj.Kfd_p*(dh0(st_leg_i)+dq(1))),0.3);
             pitch_tune_fil=first_order_filter(ControlState.pitch_tune,pitch_tune,obj.pitch_fil_para);
-            hd(sw_leg_i)=hd(sw_leg_i)-pitch_tune_fil;
+%             hd(sw_leg_i)=hd(sw_leg_i)-pitch_tune_fil;
             
 %             if st_hip_i==5 && dh0(st_hip_i)<0 || st_hip_i==6 && dh0(st_hip_i)>0
 %                 roll_tune=obj.Kfd_r*(dh0(st_hip_i));
@@ -92,18 +121,49 @@ classdef Controller_Yukai < Controller_MARLO
 %             end
 %             roll_tune_fil=first_order_filter(ControlState.roll_tune,roll_tune,obj.roll_fil_para);
 %             hd(sw_hip_i)=hd(sw_hip_i)-roll_tune;
+            hd_j=ControlParams_choice.M^-1*hd;
+            dhd_j=ControlParams_choice.M^-1*dhd;
+            h0_j=ControlParams_choice.M^-1*h0;
+            dh0_j=ControlParams_choice.M^-1*dh0;
             
+            if t<3.3
+                obj.hold=0;
+            elseif t<6
+                obj.hold=1;
+            else
+                obj.hold=0;
+            end
+            if obj.hold ~=ControlState.prev_hold & obj.hold == 0
+                ControlState.sin_phase = ControlState.hold_phase-2*pi*obj.frequency_test;
+            end
+            
+            hd_j(obj.joint_num_test)=hd_j(obj.joint_num_test)+obj.amplitude_test*obj.D2R*sin(2*pi*obj.frequency_test*t+ControlState.sin_phase);
+            dhd_j(obj.joint_num_test)=dhd_j(obj.joint_num_test)+obj.amplitude_test*obj.D2R*2*pi*obj.frequency_test*cos(2*pi*obj.frequency_test*t+ControlState.sin_phase);
+
             y=h0-hd;
             dy=dh0-dhd;
             u = zeros(6,1);
+            if (obj.hold ~= ControlState.prev_hold & obj.hold == 1) | ControlState.ini==1
+                ControlState.hold_position=hd_j;
+                ControlState.hold_phase = rem(2*pi*obj.frequency_test*t+ControlState.sin_phase , 2*pi);
+                ControlState.ini=0;
+            end
+            if obj.hold == 1 
+                hd_j=ControlState.hold_position;
+                dhd_j=zeros(6,1);
+            end
+            y_j=h0_j-hd_j;
+            dy_j=dh0_j-dhd_j;
 %             y(st_leg_i)=-q(1);
 %             y(st_hip_i)=-q(2);
 
-           u=ControlParams_choice.M^-1*(-obj.Kd*dy-obj.Kp*y);
+%            u=ControlParams_choice.M^-1*(-obj.Kd*dy-obj.Kp*y);
 %            u(1)=-100*(q(4)-0)-5*(dq(4)-0);
 %            u(4)=-100*(q(11)-0)-5*(dq(11)-0);
-%             u=(-obj.Kd*ControlParams_choice.M^-1*dy-obj.Kp*ControlParams_choice.M^-1*y);
-
+%             u=-Kd*ControlParams_choice.M^-1*dy-Kp*ControlParams_choice.M^-1*y;
+            u=-Kp*y_j-Kd*dy_j;
+            ControlState.prev_hold=obj.hold;
+            
             % Store Data
             
             Data.q = q;
@@ -121,6 +181,10 @@ classdef Controller_Yukai < Controller_MARLO
             Data.roll_tune=roll_tune;
             Data.pitch_tune_fil=pitch_tune_fil;
             Data.roll_tune_fil=roll_tune_fil;
+            Data.hd_j=hd_j;
+            Data.dhd_j=dhd_j;
+            Data.y_j=y_j;
+            Data.dy_j=dy_j;
             %Store state and param
             ControlState.hd=hd;
             ControlState.dhd=dhd;
@@ -217,8 +281,8 @@ fz_sw = 2*obj.ks_leg*(cos(q_pitch + q_sw_lB)*(q_sw_mA - q_sw_lA) - cos(q_pitch +
 
 
 
-if (fz_sw>obj.impact_thre && s>0.5) || s>2
-% if s>1
+% if (fz_sw>obj.impact_thre && s>0.5) || s>2
+if s>100
     switch_flag=1;
 else
     switch_flag=0;

@@ -113,20 +113,20 @@ figure; ax = [ax, subplot(1, 2, 1)]; hold on; plot(log.t, rad2deg(log.Data.swing
 linkaxes(ax, 'x');
 
 %% Animate Step
-MODEL_PATH = 'C:\Users\oharib\Documents\GitHub\Model-Generator\models\atrias\gen\';
-ANIM_PATH = 'C:\Users\oharib\Documents\GitHub\RobotAnimator\';
-addpath(genpath(MODEL_PATH));
-addpath(ANIM_PATH);
-
-f = figure;
-anim = AtriasAnimator(log.t, [log.q(:, 1:3), log.Data.q(:, [1:6, 9:13, 16:17])]');
-anim.isLooping = true;
-anim.updateWorldPosition = true;
-% anim.speed = 0.2;
-anim.pov = Animator.AnimatorPointOfView.TopSouthEast;
-anim.Animate(true);
-conGUI = Animator.AnimatorControls();
-conGUI.anim = anim;
+% MODEL_PATH = 'C:\Users\oharib\Documents\GitHub\Model-Generator\models\atrias\gen\';
+% ANIM_PATH = 'C:\Users\oharib\Documents\GitHub\RobotAnimator\';
+% addpath(genpath(MODEL_PATH));
+% addpath(ANIM_PATH);
+% 
+% f = figure;
+% anim = AtriasAnimator(log.t, [log.q(:, 1:3), log.Data.q(:, [1:6, 9:13, 16:17])]');
+% anim.isLooping = true;
+% anim.updateWorldPosition = true;
+% % anim.speed = 0.2;
+% anim.pov = Animator.AnimatorPointOfView.TopSouthEast;
+% anim.Animate(true);
+% conGUI = Animator.AnimatorControls();
+% conGUI.anim = anim;
 %% Animate Simulation
 % steps.t = t_out;
 % steps.q = q_out;
@@ -196,15 +196,15 @@ setparam(tg, id.deltaSwKA_ctrl, [0,0,deg2rad(10),deg2rad(10),deg2rad(-10),deg2ra
 setparam(tg, id.deltaSwKA_ctrl, deg2rad(5).*ones(1,6));
 setparam(tg, id.deltaStKA_ctrl, deg2rad(5).*ones(1,6));
 
-setparam(tg, id.joint_test_freq_ctrl, 0.1);
+setparam(tg, id.c_Kp_hip, 40);
 
 setparam(tg, id.zero_error_ctrl, 1);
 
 setparam(tg, id.GearOffsets, [0.4799,-0.3409,0.3498,-0.2576] + [-10,-2.5,-14,19]./100);
 
 %%
-getparam(tg, id.torso_control_ctrl)
-getparam(tg, id.deltaStKA_ctrl)
+getparam(tg, id.LegHipTorqueLimit)
+getparam(tg, id.c_Kp_hip)
 getparam(tg, id.GearOffsets)
 getparam(tg, id.s_hold_ctrl)
 getparam(tg, id.joint_test_freq_ctrl)
