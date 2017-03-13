@@ -17,6 +17,9 @@ c2o_transform=[     0     0     0     0     0     0     0     0     0     0     
      0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     1     0
      0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     1];
 
+ link2gear_transform=eye(17,17);
+ link2gear_transform([5 6 7 8 12 13 14 15],:)= link2gear_transform([7 8 5 6 14 15 12 13],:);
+ 
 
  M=[ 0, 1/2, 1/2, 0,   0,   0
  0,   0,   0, 0, 1/2, 1/2
@@ -37,8 +40,8 @@ T=0.5;
 ct_RightStance = 1/T; 
 ct_LeftStance = 1/T; 
 
-H0_RightStance_controller=H0_RightStance_opt*c2o_transform;
-H0_LeftStance_controller=H0_LeftStance_opt*c2o_transform;
+H0_RightStance_controller=H0_RightStance_opt*c2o_transform* link2gear_transform;
+H0_LeftStance_controller=H0_LeftStance_opt*c2o_transform* link2gear_transform;
 
 
 HAlpha_q_RightStance = pi*[ 1 1 1 1 1 1;

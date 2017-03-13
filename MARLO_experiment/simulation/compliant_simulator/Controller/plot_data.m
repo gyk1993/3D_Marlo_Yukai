@@ -1,5 +1,9 @@
 % q_test=DataVec(1:17,:);
 % u=DataVec(35:40,:);
+DataVec=log.DataVec';
+t=log.t;
+u=log.u_current;
+%%
 y=DataVec(41:46,:);
 dy=DataVec(47:52,:);
 s=DataVec(53,:);
@@ -119,7 +123,7 @@ end
 
 %% plot hd_j dhd_j
 figure
-index=[1 2 3 4 5 6];
+index=[2 3 1 5 6 4];
 name={'hd_AR','hd_BR','hd_HR','hd_AL','hd_BL','hd_HL'};
 for i=1:length(index)
 subplot(2,3,i)
@@ -128,7 +132,7 @@ title(name{i})
 end
 
 figure
-index=[1 2 3 4 5 6];
+index=[2 3 1 5 6 4];
 name={'dhd_AR','dhd_BR','dhd_HR','dhd_AL','dhd_BL','dhd_HL'};
 for i=1:length(index)
 subplot(2,3,i)

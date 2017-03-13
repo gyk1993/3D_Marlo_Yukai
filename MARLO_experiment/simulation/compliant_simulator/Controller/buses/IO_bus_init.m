@@ -34,6 +34,8 @@ Data.hd_j=zeros(6,1);
 Data.dhd_j=zeros(6,1);
 Data.y_j=zeros(6,1);
 Data.dy_j=zeros(6,1);
+Data.h0_j=zeros(6,1);
+Data.dh0_j=zeros(6,1);
 createBusObject(Data, 'Data_bus');
 
 %% Output Bus

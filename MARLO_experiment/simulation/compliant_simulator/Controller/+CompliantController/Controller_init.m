@@ -26,5 +26,6 @@ c_pitch_fil_para=0.1;
 c_roll_fil_para=0.1;
 c_frequency_test=1;
 c_joint_num_test=2;
-c_amplitude_test=20;
+c_amplitude_test=10;
 c_hold=1;
+c_zero=0;

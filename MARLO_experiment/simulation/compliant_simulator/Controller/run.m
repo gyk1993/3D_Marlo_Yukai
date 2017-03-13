@@ -4,7 +4,7 @@ clear; restoredefaultpath;
 setpath;
 
 % Simulation flag
-isSim = 1;
+isSim = 0;
 
 % Load all of the model parameters
 load_model_params
@@ -169,7 +169,7 @@ tg = xpc
 mdl = 'Controller_Exp';
 hgui = control_gui(@getsignalids,mdl);
 handles = guidata(hgui);
-set(hgui,'Position',[-30 -30 350 72.0000])
+set(hgui,'Position',[30 10 320 72])
 tg.set('CommunicationTimeOut',20)
 
 %% Open model

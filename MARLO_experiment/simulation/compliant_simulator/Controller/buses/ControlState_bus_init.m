@@ -44,6 +44,9 @@ ControlState.hold_position=zeros(6,1);
 ControlState.hold_phase=0;
 ControlState.sin_phase=0;
 ControlState.ini=1;
+ControlState.prev_zero=0;
+ControlState.cubic_para=zeros(4,1);
+ControlState.zero_t0=0;
 
 
 if isSim

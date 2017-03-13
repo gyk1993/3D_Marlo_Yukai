@@ -23,9 +23,11 @@ classdef Controller_Yukai < Controller_MARLO
         frequency_test;
         joint_num_test;
         amplitude_test;
+        hold;
+        zero;
     end % properties
 	properties (Access = private) 
-        hold=1;
+        tf=1;
     end
 	% CONSTANT PROPERTIES ===================================================
 	properties (Constant = true, Hidden = true)
@@ -102,7 +104,7 @@ classdef Controller_Yukai < Controller_MARLO
                 end
             end
             [st_leg_i,st_hip_i,sw_leg_i,sw_hip_i,ControlParams_choice]=get_index(ControlState,ControlParams);
-
+            
             
             H0=ControlParams_choice.H0;
             dh0=H0*dq;
@@ -112,46 +114,73 @@ classdef Controller_Yukai < Controller_MARLO
             pitch_tune=obj.Kfd_p*(dh0(st_leg_i)+dq(1)); % Here pitch is pitch of the stance leg, not torso. In other word, the absolute stance leg angle
             pitch_tune=sign(pitch_tune)*min(abs(obj.Kfd_p*(dh0(st_leg_i)+dq(1))),0.3);
             pitch_tune_fil=first_order_filter(ControlState.pitch_tune,pitch_tune,obj.pitch_fil_para);
-%             hd(sw_leg_i)=hd(sw_leg_i)-pitch_tune_fil;
+            %             hd(sw_leg_i)=hd(sw_leg_i)-pitch_tune_fil;
             
-%             if st_hip_i==5 && dh0(st_hip_i)<0 || st_hip_i==6 && dh0(st_hip_i)>0
-%                 roll_tune=obj.Kfd_r*(dh0(st_hip_i));
-%             else
-%                 roll_tune=0;
-%             end
-%             roll_tune_fil=first_order_filter(ControlState.roll_tune,roll_tune,obj.roll_fil_para);
-%             hd(sw_hip_i)=hd(sw_hip_i)-roll_tune;
+            %             if st_hip_i==5 && dh0(st_hip_i)<0 || st_hip_i==6 && dh0(st_hip_i)>0
+            %                 roll_tune=obj.Kfd_r*(dh0(st_hip_i));
+            %             else
+            %                 roll_tune=0;
+            %             end
+            %             roll_tune_fil=first_order_filter(ControlState.roll_tune,roll_tune,obj.roll_fil_para);
+            %             hd(sw_hip_i)=hd(sw_hip_i)-roll_tune;
             hd_j=ControlParams_choice.M^-1*hd;
             dhd_j=ControlParams_choice.M^-1*dhd;
             h0_j=ControlParams_choice.M^-1*h0;
             dh0_j=ControlParams_choice.M^-1*dh0;
             
-            if t<3.3
-                obj.hold=0;
-            elseif t<6
-                obj.hold=1;
-            else
-                obj.hold=0;
-            end
-            if obj.hold ~=ControlState.prev_hold & obj.hold == 0
-                ControlState.sin_phase = ControlState.hold_phase-2*pi*obj.frequency_test;
-            end
+            hd_j_s=hd_j;
+            dhd_j_s=dhd_j;
             
-            hd_j(obj.joint_num_test)=hd_j(obj.joint_num_test)+obj.amplitude_test*obj.D2R*sin(2*pi*obj.frequency_test*t+ControlState.sin_phase);
-            dhd_j(obj.joint_num_test)=dhd_j(obj.joint_num_test)+obj.amplitude_test*obj.D2R*2*pi*obj.frequency_test*cos(2*pi*obj.frequency_test*t+ControlState.sin_phase);
-
-            y=h0-hd;
-            dy=dh0-dhd;
-            u = zeros(6,1);
-            if (obj.hold ~= ControlState.prev_hold & obj.hold == 1) | ControlState.ini==1
-                ControlState.hold_position=hd_j;
-                ControlState.hold_phase = rem(2*pi*obj.frequency_test*t+ControlState.sin_phase , 2*pi);
-                ControlState.ini=0;
-            end
-            if obj.hold == 1 
+%             if t<3.3
+%                 obj.hold=0;
+%             elseif t<6
+%                 obj.hold=1;
+%             else
+%                 obj.hold=0;
+%             end
+%             
+%             if t>8.2
+%                 obj.zero=1;
+%             end
+            
+            %             if obj.zero ~=ControlState.prev_zero & obj.zero == 0
+            %                 obj.hold = 0;
+            %                 ControlState.cubic_para = cal_cubic_para(hd_j(obj.joint_num_test),dhd_j(obj.joint_num_test),0,0,tf);
+            %                 ControlState.zero_t0=t;
+            %             end
+            if obj.hold == 0
+                if ControlState.prev_hold == 1 | ControlState.prev_zero==1
+                    ControlState.sin_phase = ControlState.hold_phase-2*pi*obj.frequency_test*t;
+                end
+                [hd_j dhd_j]=add_sin_wave(obj,ControlState,hd_j,dhd_j,t);
+            else
+                if ControlState.prev_hold == 0 | ControlState.ini==1
+                    [hd_j dhd_j]=add_sin_wave(obj,ControlState,hd_j,dhd_j,t);
+                    ControlState.hold_position=hd_j;
+                    ControlState.hold_phase = rem(2*pi*obj.frequency_test*t+ControlState.sin_phase , 2*pi);
+                end
                 hd_j=ControlState.hold_position;
                 dhd_j=zeros(6,1);
             end
+
+            if obj.zero == 1
+%                 obj.hold = 0;
+                ControlState.hold_phase = 0;
+                ControlState.hold_position=hd_j_s;
+                if ControlState.prev_zero==0
+                    ControlState.cubic_para = cal_cubic_para(hd_j(obj.joint_num_test),dhd_j(obj.joint_num_test),hd_j_s(obj.joint_num_test),0,obj.tf);
+                    ControlState.zero_t0=t;
+                end
+                if t-ControlState.zero_t0<obj.tf
+                    [hd_j(obj.joint_num_test) dhd_j(obj.joint_num_test)]=cubic_path(ControlState.cubic_para,t-ControlState.zero_t0);
+                else
+                    hd_j=ControlParams_choice.M^-1*hd;
+                    dhd_j=ControlParams_choice.M^-1*dhd;
+                end
+            end
+            
+            y=h0-hd;
+            dy=dh0-dhd;
             y_j=h0_j-hd_j;
             dy_j=dh0_j-dhd_j;
 %             y(st_leg_i)=-q(1);
@@ -163,7 +192,8 @@ classdef Controller_Yukai < Controller_MARLO
 %             u=-Kd*ControlParams_choice.M^-1*dy-Kp*ControlParams_choice.M^-1*y;
             u=-Kp*y_j-Kd*dy_j;
             ControlState.prev_hold=obj.hold;
-            
+            ControlState.prev_zero=obj.zero;
+            ControlState.ini=0;
             % Store Data
             
             Data.q = q;
@@ -185,6 +215,8 @@ classdef Controller_Yukai < Controller_MARLO
             Data.dhd_j=dhd_j;
             Data.y_j=y_j;
             Data.dy_j=dy_j;
+            Data.h0_j=h0_j;
+            Data.dh0_j=dh0_j;
             %Store state and param
             ControlState.hd=hd;
             ControlState.dhd=dhd;
@@ -288,6 +320,26 @@ else
     switch_flag=0;
 end
 end
+
 function filtered=first_order_filter(prev,new,para)
     filtered=prev*(1-para)+new*para;
+end
+
+function [hd dhd] = cubic_path(a,tau)
+    hd=a(1)+a(2)*tau+a(3)*tau^2+a(4)*tau^3;
+    dhd=a(2)+2*a(3)*tau+3*a(4)*tau^2;
+end
+
+function a = cal_cubic_para(q0,v0,qf,vf,tf)
+    t0=0;
+    M=[1 t0 t0^2 t0^3;
+        0 1 2*t0 3*t0^2;
+        1 tf tf^2 tf^3;
+        0 1 2*tf 3*tf^2];
+    a=M^-1*[q0;v0;qf;vf];
+end
+
+function [hd_j dhd_j]=add_sin_wave(obj,ControlState,hd_j,dhd_j,t)
+hd_j(obj.joint_num_test)=hd_j(obj.joint_num_test)+obj.amplitude_test*obj.D2R*sin(2*pi*obj.frequency_test*t+ControlState.sin_phase);
+dhd_j(obj.joint_num_test)=dhd_j(obj.joint_num_test)+obj.amplitude_test*obj.D2R*2*pi*obj.frequency_test*cos(2*pi*obj.frequency_test*t+ControlState.sin_phase);
 end
