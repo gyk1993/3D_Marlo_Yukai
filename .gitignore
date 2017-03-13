@@ -5,12 +5,14 @@ optimization/opt_func/gen/
 *sfprj/
 *.asv
 *.autosave
-MARLO experiment/simulation/compliant_simulator/**/*.dlm
-MARLO experiment/simulation/compliant_simulator/**/*_compiledPortWidths.m
-MARLO experiment/simulation/compliant_simulator/**/*_sfun.mexw64
-MARLO experiment/simulation/compliant_simulator/**/ecat_config_xml_3.c
-MARLO experiment/simulation/compliant_simulator/Controller/Controller_Exp.xml
+MARLO_experiment/simulation/compliant_simulator/**/*.dlm
+MARLO_experiment/simulation/compliant_simulator/**/*_compiledPortWidths.m
+MARLO_experiment/simulation/compliant_simulator/**/*_sfun.mexw64
+MARLO_experiment/simulation/compliant_simulator/**/ecat_config_xml_3.c
+MARLO_experiment/simulation/compliant_simulator/Controller/Controller_Exp.xml
 MARLO experiment/simulation/compliant_simulator/Controller/Controller_Expref.m
-MARLO experiment/simulation/complient_simulator/Controller/Controller_Expref.m
-MARLO experiment/simulation/compliant_simulator/Controller/Controller_Expbio.m
-MARLO experiment/simulation/compliant_simulator/Controller/Controller_Exppt.m
+MARLO_experiment/simulation/complient_simulator/Controller/Controller_Expref.m
+MARLO_experiment/simulation/compliant_simulator/Controller/Controller_Expbio.m
+MARLO_experiment/simulation/compliant_simulator/Controller/Controller_Exppt.m
+#Local log data
+MARLO_experiment\simulation\compliant_simulator\Controller\data
