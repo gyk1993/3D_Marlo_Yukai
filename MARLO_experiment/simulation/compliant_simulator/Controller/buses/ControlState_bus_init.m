@@ -47,6 +47,9 @@ ControlState.ini=1;
 ControlState.prev_zero=0;
 ControlState.cubic_para=zeros(4,1);
 ControlState.zero_t0=0;
+ControlState.prev_t=0;
+ControlState.prev_u=zeros(6,1);
+ControlState.prev_V_filtered=zeros(3,1);
 
 
 if isSim

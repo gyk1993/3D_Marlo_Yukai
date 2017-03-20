@@ -23,8 +23,10 @@ classdef Controller_Yukai < Controller_MARLO
         frequency_test;
         joint_num_test;
         amplitude_test;
+        torso_control;
         hold;
         zero;
+        passivity;
     end % properties
 	properties (Access = private) 
         tf=1;
@@ -36,6 +38,11 @@ classdef Controller_Yukai < Controller_MARLO
         R2D=180/pi;
         ks_leg = 2690.8;
         impact_thre = 200;
+        grf_z_min = 100;        % (N)
+        grf_z_max = 200;        % (N)
+        du_max=15;
+        hip_gravity_compensation = 1;
+        hip_hit_prevention = 0*pi/180;
 	end % properties
 	
 	% PUBLIC METHODS ========================================================
@@ -48,6 +55,7 @@ classdef Controller_Yukai < Controller_MARLO
             userStep(obj, input)   
             
             % Extract input 
+            velEst = input.velEst;
             t = input.t;    
             q = input.q;
             dq = input.dq;
@@ -80,7 +88,9 @@ classdef Controller_Yukai < Controller_MARLO
             % Decide which leg is on the ground
             ControlState.s = (t - ControlState.LastStepTime)*ControlParams.LeftStance.ct;
             s=ControlState.s;
-            s=0;
+            
+            s=0.5;
+%             
             % cs is used in the bazier curve
             if s>1.05
                 cs=1.05;
@@ -89,7 +99,8 @@ classdef Controller_Yukai < Controller_MARLO
             else
                 cs=s;
             end
-            switch_flag=decide_phase(obj,q,ControlState.StanceLeg,s);
+            [switch_flag fz_st fz_sw fz_R fz_L s_R s_L]=decide_phase(obj,q,ControlState.StanceLeg,s);
+            ground_force=[fz_R; fz_L];
             if switch_flag==1
                 ControlState.StanceLeg=-ControlState.StanceLeg;
                 ControlState.LastStepTime=t;
@@ -105,6 +116,7 @@ classdef Controller_Yukai < Controller_MARLO
             end
             [st_leg_i,st_hip_i,sw_leg_i,sw_hip_i,ControlParams_choice]=get_index(ControlState,ControlParams);
             
+            [ V_measured V_filtered ] = get_velocity(obj,velEst,s_R,s_L,ControlState);
             
             H0=ControlParams_choice.H0;
             dh0=H0*dq;
@@ -123,77 +135,93 @@ classdef Controller_Yukai < Controller_MARLO
             %             end
             %             roll_tune_fil=first_order_filter(ControlState.roll_tune,roll_tune,obj.roll_fil_para);
             %             hd(sw_hip_i)=hd(sw_hip_i)-roll_tune;
+            
+            
+                
+            if sw_hip_i == 6
+                if h0(5)-hd(6) > obj.hip_hit_prevention
+                    hd(6) = h0(5)-obj.hip_hit_prevention;
+                    dhd(6) = dh0(5);
+                end
+            else
+                if hd(5)-h0(6) > obj.hip_hit_prevention
+                    hd(5)= h0(6)+obj.hip_hit_prevention;
+                    dhd(5)= dh0(6);
+                end
+            end
+                
             hd_j=ControlParams_choice.M^-1*hd;
             dhd_j=ControlParams_choice.M^-1*dhd;
             h0_j=ControlParams_choice.M^-1*h0;
             dh0_j=ControlParams_choice.M^-1*dh0;
             
-            hd_j_s=hd_j;
-            dhd_j_s=dhd_j;
-            
-%             if t<3.3
-%                 obj.hold=0;
-%             elseif t<6
-%                 obj.hold=1;
-%             else
-%                 obj.hold=0;
-%             end
-%             
-%             if t>8.2
-%                 obj.zero=1;
-%             end
-            
-            %             if obj.zero ~=ControlState.prev_zero & obj.zero == 0
-            %                 obj.hold = 0;
-            %                 ControlState.cubic_para = cal_cubic_para(hd_j(obj.joint_num_test),dhd_j(obj.joint_num_test),0,0,tf);
-            %                 ControlState.zero_t0=t;
-            %             end
-            if obj.hold == 0
-                if ControlState.prev_hold == 1 | ControlState.prev_zero==1
-                    ControlState.sin_phase = ControlState.hold_phase-2*pi*obj.frequency_test*t;
-                end
-                [hd_j dhd_j]=add_sin_wave(obj,ControlState,hd_j,dhd_j,t);
-            else
-                if ControlState.prev_hold == 0 | ControlState.ini==1
-                    [hd_j dhd_j]=add_sin_wave(obj,ControlState,hd_j,dhd_j,t);
-                    ControlState.hold_position=hd_j;
-                    ControlState.hold_phase = rem(2*pi*obj.frequency_test*t+ControlState.sin_phase , 2*pi);
-                end
-                hd_j=ControlState.hold_position;
-                dhd_j=zeros(6,1);
-            end
-
-            if obj.zero == 1
-%                 obj.hold = 0;
-                ControlState.hold_phase = 0;
-                ControlState.hold_position=hd_j_s;
-                if ControlState.prev_zero==0
-                    ControlState.cubic_para = cal_cubic_para(hd_j(obj.joint_num_test),dhd_j(obj.joint_num_test),hd_j_s(obj.joint_num_test),0,obj.tf);
-                    ControlState.zero_t0=t;
-                end
-                if t-ControlState.zero_t0<obj.tf
-                    [hd_j(obj.joint_num_test) dhd_j(obj.joint_num_test)]=cubic_path(ControlState.cubic_para,t-ControlState.zero_t0);
-                else
-                    hd_j=ControlParams_choice.M^-1*hd;
-                    dhd_j=ControlParams_choice.M^-1*dhd;
-                end
-            end
-            
+%             % Do the sin wave test
+%             [y_j dy_j ControlState] = get_error_sin_wave(obj,q,dq,s,cs,ControlParams_choice,ControlState,st_leg_i,st_hip_i,sw_leg_i,sw_hip_i);
             y=h0-hd;
             dy=dh0-dhd;
             y_j=h0_j-hd_j;
             dy_j=dh0_j-dhd_j;
-%             y(st_leg_i)=-q(1);
-%             y(st_hip_i)=-q(2);
-
+            
+            % Controlling the torso angle
+            [cp1R cp2R cp1L cp2L] = get_spring_compressed_angle(q);
+            spring_compressed=[cp1R; cp2R; cp1L; cp2L];
+            
+            if obj.passivity
+                y(st_leg_i) = 0;
+                y(st_hip_i) = 0;
+                dy(st_leg_i) = dh0(st_leg_i);
+                dy(st_hip_i) = dh0(st_hip_i);
+            end
+            
+            if  obj.torso_control
+%             if 1
+                y(1)=s_R*(-q(1))+(1-s_R)*y(1)-1/2*(cp1R+cp2R);
+                y(2)=s_L*(-q(1))+(1-s_L)*y(2)-1/2*(cp1L+cp2L);
+                y(5)=s_R*(-q(2))+(1-s_R)*y(5);
+                y(6)=s_L*(-q(2))+(1-s_L)*y(6);
+                
+                dy(1)=s_R*(-dq(1))+(1-s_R)*dy(1);
+                dy(2)=s_L*(-dq(1))+(1-s_L)*dy(2);
+                dy(5)=s_R*(-dq(2))+(1-s_R)*dy(5);
+                dy(6)=s_L*(-dq(2))+(1-s_L)*dy(6);
+%                 dy(st_leg_i)=-dq(1);
+%                 dy(st_hip_i)=-dq(2);
+            end
+            
+                
+            
+            y_j = ControlParams_choice.M^-1*y;
+            dy_j = ControlParams_choice.M^-1*dy;
+            
+            
+                
 %            u=ControlParams_choice.M^-1*(-obj.Kd*dy-obj.Kp*y);
 %            u(1)=-100*(q(4)-0)-5*(dq(4)-0);
 %            u(4)=-100*(q(11)-0)-5*(dq(11)-0);
 %             u=-Kd*ControlParams_choice.M^-1*dy-Kp*ControlParams_choice.M^-1*y;
             u=-Kp*y_j-Kd*dy_j;
+            
+            if obj.hip_gravity_compensation == 1
+                u(1)=u(1)-0.8;
+                u(4)=u(4)+0.8;
+            end
+            
+            
+            
+            %Store state and param
+            ControlState.hd=hd;
+            ControlState.dhd=dhd;
+            ControlState.h0=h0;
+            ControlState.dh0=dh0;
+            ControlState.pitch_tune=pitch_tune_fil;
+            ControlState.roll_tune=roll_tune_fil;
+            ControlState.prev_u=u;
+            ControlState.prev_t=t;
             ControlState.prev_hold=obj.hold;
             ControlState.prev_zero=obj.zero;
             ControlState.ini=0;
+            ControlState.prev_V_filtered=V_filtered;
+            
             % Store Data
             
             Data.q = q;
@@ -217,13 +245,11 @@ classdef Controller_Yukai < Controller_MARLO
             Data.dy_j=dy_j;
             Data.h0_j=h0_j;
             Data.dh0_j=dh0_j;
-            %Store state and param
-            ControlState.hd=hd;
-            ControlState.dhd=dhd;
-            ControlState.h0=h0;
-            ControlState.dh0=dh0;
-            ControlState.pitch_tune=pitch_tune_fil;
-            ControlState.roll_tune=roll_tune_fil;
+            Data.spring_compressed=spring_compressed;
+            Data.ground_force= ground_force;
+            Data.s_force = [s_R; s_L];
+            Data.V_measured=V_measured;
+            Data.V_filtered=V_filtered;
             % -----------------------------------
             
             % Store outputs
@@ -269,6 +295,56 @@ function [y dy]=get_error(obj,q,dq,s,cs,ControlParams_choice,st_leg_i,st_hip_i,s
             dy=H0*dq-dHd;
 end
 
+function [y_j dy_j ControlState] = get_error_sin_wave(obj,q,dq,s,cs,ControlParams_choice,ControlState,st_leg_i,st_hip_i,sw_leg_i,sw_hip_i)
+            H0=ControlParams_choice.H0;
+            dh0=H0*dq;
+            h0=H0*q;
+            hd=bezier(ControlParams_choice.HAlpha_q,cs);
+            dhd=bezierd(ControlParams_choice.HAlpha_q,cs)*ControlParams_choice.ct;
+            hd_j=ControlParams_choice.M^-1*hd;
+            dhd_j=ControlParams_choice.M^-1*dhd;
+            h0_j=ControlParams_choice.M^-1*h0;
+            dh0_j=ControlParams_choice.M^-1*dh0;
+            
+            hd_j_s=hd_j;
+            dhd_j_s=dhd_j;
+            
+            
+            
+            
+            if obj.hold == 0
+                if ControlState.prev_hold == 1 | ControlState.prev_zero==1
+                    ControlState.sin_phase = ControlState.hold_phase-2*pi*obj.frequency_test*t;
+                end
+                [hd_j dhd_j]=add_sin_wave(obj,ControlState,hd_j,dhd_j,t);
+            else
+                if ControlState.prev_hold == 0 | ControlState.ini==1
+                    [hd_j dhd_j]=add_sin_wave(obj,ControlState,hd_j,dhd_j,t);
+                    ControlState.hold_position=hd_j;
+                    ControlState.hold_phase = rem(2*pi*obj.frequency_test*t+ControlState.sin_phase , 2*pi);
+                end
+                hd_j=ControlState.hold_position;
+                dhd_j=zeros(6,1);
+            end
+
+            if obj.zero == 1
+                ControlState.hold_phase = 0;
+                ControlState.hold_position=hd_j_s;
+                if ControlState.prev_zero==0
+                    ControlState.cubic_para = cal_cubic_para(hd_j(obj.joint_num_test),dhd_j(obj.joint_num_test),hd_j_s(obj.joint_num_test),0,obj.tf);
+                    ControlState.zero_t0=t;
+                end
+                if t-ControlState.zero_t0<obj.tf
+                    [hd_j(obj.joint_num_test) dhd_j(obj.joint_num_test)]=cubic_path(ControlState.cubic_para,t-ControlState.zero_t0);
+                else
+                    hd_j=ControlParams_choice.M^-1*hd;
+                    dhd_j=ControlParams_choice.M^-1*dhd;
+                end
+            end
+            y_j=h0_j-hd_j;
+            dy_j=dh0_j-dhd_j;
+end
+
 function [st_leg_i,st_hip_i,sw_leg_i,sw_hip_i,ControlParams_choice]=get_index(ControlState,ControlParams)
 if ControlState.StanceLeg==1;
     ControlParams_choice=ControlParams.RightStance;
@@ -284,7 +360,8 @@ else ControlState.StanceLeg==-1;
     st_hip_i=6;
 end
 end
-function switch_flag=decide_phase(obj,q,stanceleg_flag,s)
+
+function [switch_flag fz_st fz_sw fz_R fz_L s_R s_L]=decide_phase(obj,q,stanceleg_flag,s)
 q_pitch=q(1);
 q_roll=q(2);
 q_yaw=q(3);
@@ -308,10 +385,24 @@ else
     q_sw_mB=q_BgrR;     q_st_mB=q_BgrL;
 end
 
-fz_st = 2*obj.ks_leg*(cos(q_pitch + q_st_lB)*(q_st_mA - q_st_lA) - cos(q_pitch + q_st_lA)*(q_st_mB - q_st_lB))/sin(q_st_lA - q_st_lB);
-fz_sw = 2*obj.ks_leg*(cos(q_pitch + q_sw_lB)*(q_sw_mA - q_sw_lA) - cos(q_pitch + q_sw_lA)*(q_sw_mB - q_sw_lB))/sin(q_sw_lA - q_sw_lB);
+if abs(q_st_lA - q_st_lB)< 1e-5 || abs(q_sw_lA - q_sw_lB) < 1e-5
+    fz_st = 0;
+    fz_sw = 0;
+else
+    fz_st = 2*obj.ks_leg*(cos(q_pitch + q_st_lB)*(q_st_mA - q_st_lA) - cos(q_pitch + q_st_lA)*(q_st_mB - q_st_lB))/sin(q_st_lA - q_st_lB);
+    fz_sw = 2*obj.ks_leg*(cos(q_pitch + q_sw_lB)*(q_sw_mA - q_sw_lA) - cos(q_pitch + q_sw_lA)*(q_sw_mB - q_sw_lB))/sin(q_sw_lA - q_sw_lB);
+end
 
+if stanceleg_flag==1
+    fz_R=fz_st;
+    fz_L=fz_sw;
+else
+    fz_R=fz_sw;
+    fz_L=fz_st;
+end
 
+s_R = scaleFactor(fz_R, obj.grf_z_min, obj.grf_z_max);
+s_L = scaleFactor(fz_L, obj.grf_z_min, obj.grf_z_max);
 
 % if (fz_sw>obj.impact_thre && s>0.5) || s>2
 if s>100
@@ -319,6 +410,7 @@ if s>100
 else
     switch_flag=0;
 end
+
 end
 
 function filtered=first_order_filter(prev,new,para)
@@ -342,4 +434,33 @@ end
 function [hd_j dhd_j]=add_sin_wave(obj,ControlState,hd_j,dhd_j,t)
 hd_j(obj.joint_num_test)=hd_j(obj.joint_num_test)+obj.amplitude_test*obj.D2R*sin(2*pi*obj.frequency_test*t+ControlState.sin_phase);
 dhd_j(obj.joint_num_test)=dhd_j(obj.joint_num_test)+obj.amplitude_test*obj.D2R*2*pi*obj.frequency_test*cos(2*pi*obj.frequency_test*t+ControlState.sin_phase);
+end
+
+function [cp1R cp2R cp1L cp2L] = get_spring_compressed_angle(q)
+    cp1R=q(5)-q(7);
+    cp2R=q(6)-q(8);
+    cp1L=q(12)-q(14);
+    cp2L=q(13)-q(15);
+end
+
+function [u u_d]=smooth_torque(obj,t,u,ControlState)
+    u_d=u;
+    if t-ControlState.prev_t > 10e-5
+        if (u_d-ControlState.prev_u)/(t-ControlState.prev_t)>obj.du_max
+            u = ControlState.prev_u + obj.du_max*(t-ControlState.prev_t);
+        else
+            u = u_d;
+        end
+    end
+end
+
+function [ V_measured V_filtered ] = get_velocity(obj,velEst,s_R,s_L,ControlState)
+    if ControlState.StanceLeg ==1 & s_R>0.99
+        V_measured = velEst(1:3);
+    elseif ControlState.StanceLeg == -1 & s_L>0.99
+        V_measured = velEst(4:6);
+    else
+        V_measured=zeros(3,1);
+    end
+    V_filtered = first_order_filter(ControlState.prev_V_filtered,V_measured,obj.pitch_fil_para);
 end

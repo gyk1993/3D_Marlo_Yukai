@@ -36,6 +36,11 @@ Data.y_j=zeros(6,1);
 Data.dy_j=zeros(6,1);
 Data.h0_j=zeros(6,1);
 Data.dh0_j=zeros(6,1);
+Data.spring_compressed=zeros(4,1);
+Data.ground_force=zeros(2,1);
+Data.s_force=zeros(2,1);
+Data.V_measured=zeros(3,1);
+Data.V_filtered=zeros(3,1);
 createBusObject(Data, 'Data_bus');
 
 %% Output Bus

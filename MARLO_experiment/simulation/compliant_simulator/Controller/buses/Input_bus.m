@@ -3,6 +3,9 @@ function Input_bus()
 
 % Bus object: Input_bus 
 clear elems;
+
+
+
 elems(1) = Simulink.BusElement;
 elems(1).Name = 't';
 elems(1).Dimensions = [1 1];
@@ -67,6 +70,19 @@ elems(5).Min = [];
 elems(5).Max = [];
 elems(5).DocUnits = '';
 elems(5).Description = '';
+
+elems(6) = Simulink.BusElement;
+elems(6).Name = 'velEst';
+elems(6).Dimensions = [6 1];
+elems(6).DimensionsMode = 'Fixed';
+elems(6).DataType = 'double';
+elems(6).SampleTime = -1;
+elems(6).Complexity = 'real';
+elems(6).SamplingMode = 'Sample based';
+elems(6).Min = [];
+elems(6).Max = [];
+elems(6).DocUnits = '';
+elems(6).Description = '';
 
 Input_bus = Simulink.Bus;
 Input_bus.HeaderFile = '';

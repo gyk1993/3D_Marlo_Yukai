@@ -47,7 +47,7 @@ if isSim
     dq = [dq0_new(1:3); dq0];
     
     dq=zeros(16,1);
-    q(3)=1.5;
+    q(3)=1.1;
     xinit = [q; dq];
 end
 
@@ -159,6 +159,8 @@ log = DataVec2Struct(log, Data);
 log = StateEstimatorVec2Struct(log, StateEstimator);
 
 %% Experiment Logging
+% Run after logging (everytime)
+% This converts DataVec -> Data
 %datalogfilename = 'C:\Users\oharib\Dropbox (DynamicLegLocomotion)\TeamWide\Logs\Walking\2017-02-14\NoVideo02\NoVideo02.mat';
 log = DataVec2Struct(log, Data, datalogfilename, 1);
 log = DAQVec2Struct(log, DAQ, datalogfilename, 1);
@@ -169,10 +171,11 @@ tg = xpc
 mdl = 'Controller_Exp';
 hgui = control_gui(@getsignalids,mdl);
 handles = guidata(hgui);
-set(hgui,'Position',[30 10 320 72])
+set(hgui,'Position',[30 -20 320 72])
 tg.set('CommunicationTimeOut',20)
 
 %% Open model
+% run after changing the outputs in the model
 open(mdl)
 getCompiledPortWidths(mdl);
 
@@ -181,6 +184,7 @@ tg = connectToTarget();
 id = getAllParamIds(tg)
 
 %% Compiling Port Widths 
+% run if you forget to compile after changing outputs in the model
 getCompiledPortWidths(mdl);
 log = parseModelData(log);
 save(datalogfilename,'log','status')

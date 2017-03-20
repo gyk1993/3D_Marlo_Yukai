@@ -26,7 +26,7 @@ c2o_transform=[     0     0     0     0     0     0     0     0     0     0     
  0,  -1,   1, 0,   0,   0
  0,   0,   0, 0,  -1,   1
  1,   0,   0, 0,   0,   0
- 0,   0,   0, 1,   0,   0];
+ 0,   0,   0, 1,   0,   0]; % M is from u to output;
 q_sym = sym('q',[16,1]);
 % outputs_Right = [mean(q_sym(8:9)); mean(q_sym(13:14))+q_sym(4);   q_sym(9)-q_sym(8); q_sym(14)-q_sym(13); q_sym(7); q_sym(12)];
 % outputs_Left  = [mean(q_sym(8:9))+q_sym(4); mean(q_sym(13:14));   q_sym(9)-q_sym(8); q_sym(14)-q_sym(13); q_sym(7); q_sym(12)];

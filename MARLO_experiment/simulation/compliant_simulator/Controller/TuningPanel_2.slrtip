@@ -1,5 +1,23 @@
 
   <Object type="Desktop.Xpc.Designer.InstrumentPanel, Desktop.Xpc.Designer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TuningPanel" children="Controls">
+    <Object type="MW.Instruments.SwitchLED, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="SwitchLED2" children="Controls">
+      <Property name="BindingSrcPath">/c_passivity</Property>
+      <Property name="TargetName">MARLO_Wired</Property>
+      <Property name="BindingSrcType">Parameter</Property>
+      <Property name="Text">Passivity</Property>
+      <Property name="Size">204, 76</Property>
+      <Property name="Location">329, 192</Property>
+      <Property name="Name">SwitchLED2</Property>
+    </Object>
+    <Object type="MW.Instruments.SwitchLED, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="SwitchLED3" children="Controls">
+      <Property name="BindingSrcPath">/c_torso_control</Property>
+      <Property name="TargetName">MARLO_Wired</Property>
+      <Property name="BindingSrcType">Parameter</Property>
+      <Property name="Text">Torso Control</Property>
+      <Property name="Size">211, 76</Property>
+      <Property name="Location">31, 192</Property>
+      <Property name="Name">SwitchLED3</Property>
+    </Object>
     <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label8" children="Controls">
       <Property name="Text">Kp Hip</Property>
       <Property name="UseCompatibleTextRendering">True</Property>

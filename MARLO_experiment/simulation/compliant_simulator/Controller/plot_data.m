@@ -20,6 +20,13 @@ hd_j=DataVec(83:88,:);
 dhd_j=DataVec(89:94,:);
 y_j=DataVec(95:100,:);
 dy_j=DataVec(101:106,:);
+h0_j=DataVec(107:112,:);
+dh0_j=DataVec(113:118,:);
+spring_compressed=DataVec(119:122,:);
+ground_force=DataVec(123:124,:);
+s_force=DataVec(125:126,:);
+V_measured=DataVec(127:129,:);
+V_filtered=DataVec(130:132,:);
 
 
 M_J2L=[1/2 1/2 0 0 0 0;
@@ -80,7 +87,7 @@ for i=1:6
     subplot(2,3,i)
     plot(t,uL(:,i));
     title(joint{i})
-    axis([0 t(end) -6 6])
+    axis([0 t(end) -12 12])
 end
 %% plot h0
 
@@ -89,7 +96,7 @@ index=[1 3 5 2 4 6];
 joint={'qLegR','qKneeR','qHipR','qLegL','qKneeL','qHipL'};
 for i=1:6
     subplot(2,3,i)
-    plot(t,h0(i,:));
+    plot(t,h0(index(i),:));
     title(joint{i})
 end
 
@@ -99,7 +106,7 @@ index=[1 3 5 2 4 6];
 joint={'dqLegR','dqKneeR','dqHipR','dqLegL','dqKneeL','dqHipL'};
 for i=1:6
     subplot(2,3,i)
-    plot(t,dh0(i,:));
+    plot(t,dh0(index(i),:));
     title(joint{i})
 end
 %% plot hd dhd
@@ -184,3 +191,15 @@ title('filtered roll tune');
 
 figure
 plot(t,dh0(1,:)'+dq(:,6))
+
+%% plot velocity
+
+figure
+subplot(2,1,1)
+plot(t,V_measured)
+title('V measured')
+legend('x','y','z')
+subplot(2,1,2)
+plot(t,V_filtered)
+title('V filtered')
+legend('x','y','z')
