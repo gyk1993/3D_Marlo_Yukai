@@ -2,7 +2,7 @@ classdef Controller_Yukai < Controller_MARLO
 	%MIKHAILCONTROLLER Mikhail's controller.
 	%
 	% Copyright   2015 Mikhail S. Jones
-    
+    % Modified by Yukai Mar 20th
 	% PUBLIC PROPERTIES =====================================================
 	properties         
         %Kp Link
@@ -23,13 +23,19 @@ classdef Controller_Yukai < Controller_MARLO
         frequency_test;
         joint_num_test;
         amplitude_test;
-        torso_control;
+        torso_control_switch;
+        foot_placement_switch
         hold;
         zero;
+        hold_s;
+        steptime;
+        st_knee_offset;
         passivity;
+        temp_switch;
     end % properties
 	properties (Access = private) 
         tf=1;
+
     end
 	% CONSTANT PROPERTIES ===================================================
 	properties (Constant = true, Hidden = true)
@@ -37,12 +43,12 @@ classdef Controller_Yukai < Controller_MARLO
         D2R=pi/180;
         R2D=180/pi;
         ks_leg = 2690.8;
-        impact_thre = 200;
-        grf_z_min = 100;        % (N)
-        grf_z_max = 200;        % (N)
+%         impact_thre = 200;
+        grf_z_min = 200;        % (N)
+        grf_z_max = 300;        % (N)
         du_max=15;
         hip_gravity_compensation = 1;
-        hip_hit_prevention = 0*pi/180;
+        hip_hit_prevention = 10*pi/180;
 	end % properties
 	
 	% PUBLIC METHODS ========================================================
@@ -86,26 +92,59 @@ classdef Controller_Yukai < Controller_MARLO
             
             
             % Decide which leg is on the ground
+            
+%             if t<3.1
+%                 obj.hold_s=1;
+%             elseif t<5.22
+%                 obj.hold_s=0;
+%             elseif t<7.13
+%                 obj.hold_s=1;
+%                 obj.steptime=0.1;
+%             else
+%                 obj.hold_s=0;
+%             end
+%             
+            % When switch to unhold from hold, apply the new step time and
+            % reset laststeptime
+            if obj.hold_s == 0 && ControlState.prev_hold_s == 1
+                ControlParams.RightStance.ct = 1/obj.steptime;
+                ControlParams.LeftStance.ct = 1/obj.steptime;
+                ControlState.LastStepTime = t-ControlState.prev_s*obj.steptime;
+            end
+            
+            % Calculate s and ds
             ControlState.s = (t - ControlState.LastStepTime)*ControlParams.LeftStance.ct;
             s=ControlState.s;
+            ds=ControlParams.LeftStance.ct;
             
-            s=0.5;
-%             
+            % When hold, hold s, set ds=0;
+            if obj.hold_s==1
+                s=ControlState.prev_s;
+                ds=0;
+            end
+%             s=0.5;
+            
             % cs is used in the bazier curve
-            if s>1.05
-                cs=1.05;
-            elseif s<-0.05;
-                cs=-0.05;
+            if s>1
+                cs=1;
+                dcs=0;
+            elseif s<-0;
+                cs=0;
+                dcs=0;
             else
                 cs=s;
+                dcs=ds;
             end
             [switch_flag fz_st fz_sw fz_R fz_L s_R s_L]=decide_phase(obj,q,ControlState.StanceLeg,s);
             ground_force=[fz_R; fz_L];
+            % Switching leg
             if switch_flag==1
                 ControlState.StanceLeg=-ControlState.StanceLeg;
                 ControlState.LastStepTime=t;
                 cs=0;
                 s=0;
+                % Set first two columns of bazier parameters to make hd
+                % smooth
                 if ControlState.StanceLeg==1
                     ControlParams.RightStance.HAlpha_q(:,1)=ControlState.hd;
                     ControlParams.RightStance.HAlpha_q(:,2)=ControlState.hd+ControlState.dhd/ControlParams.RightStance.ct/5;
@@ -114,18 +153,38 @@ classdef Controller_Yukai < Controller_MARLO
                     ControlParams.LeftStance.HAlpha_q(:,2)=ControlState.hd+ControlState.dhd/ControlParams.LeftStance.ct/5;
                 end
             end
-            [st_leg_i,st_hip_i,sw_leg_i,sw_hip_i,ControlParams_choice]=get_index(ControlState,ControlParams);
+            
+
+
+            
+            
+            [st_leg_i,st_knee_i,st_hip_i,sw_leg_i,sw_knee_i,sw_hip_i,ControlParams_choice]=get_index(ControlState,ControlParams);
             
             [ V_measured V_filtered ] = get_velocity(obj,velEst,s_R,s_L,ControlState);
             
+            % Calculate h0 and hd
             H0=ControlParams_choice.H0;
             dh0=H0*dq;
             h0=H0*q;
             hd=bezier(ControlParams_choice.HAlpha_q,cs);
-            dhd=bezierd(ControlParams_choice.HAlpha_q,cs)*ControlParams_choice.ct;
-            pitch_tune=obj.Kfd_p*(dh0(st_leg_i)+dq(1)); % Here pitch is pitch of the stance leg, not torso. In other word, the absolute stance leg angle
-            pitch_tune=sign(pitch_tune)*min(abs(obj.Kfd_p*(dh0(st_leg_i)+dq(1))),0.3);
-            pitch_tune_fil=first_order_filter(ControlState.pitch_tune,pitch_tune,obj.pitch_fil_para);
+            dhd=bezierd(ControlParams_choice.HAlpha_q,cs)*dcs;
+            
+            % offset for stance knee
+            hd(st_knee_i)=hd(st_knee_i)-min(1,cs/0.1)*pi/180*obj.st_knee_offset;
+            
+            
+            % foot placement
+            pitch_tune=obj.Kfd_p*V_filtered(2);
+            pitch_tune=sign(pitch_tune)*min(abs(pitch_tune),0.3);
+            roll_tune=obj.Kfd_r*V_filtered(1);
+            if obj.foot_placement_switch == 1
+                hd(sw_leg_i)=hd(sw_leg_i)+pitch_tune;
+                hd(sw_hip_i)=hd(sw_hip_i)+roll_tune;
+            end
+            
+%             pitch_tune=obj.Kfd_p*(dh0(st_leg_i)+dq(1)); % Here pitch is pitch of the stance leg, not torso. In other word, the absolute stance leg angle
+%             pitch_tune=sign(pitch_tune)*min(abs(obj.Kfd_p*(dh0(st_leg_i)+dq(1))),0.3);
+%             pitch_tune_fil=first_order_filter(ControlState.pitch_tune,pitch_tune,obj.pitch_fil_para);
             %             hd(sw_leg_i)=hd(sw_leg_i)-pitch_tune_fil;
             
             %             if st_hip_i==5 && dh0(st_hip_i)<0 || st_hip_i==6 && dh0(st_hip_i)>0
@@ -137,7 +196,7 @@ classdef Controller_Yukai < Controller_MARLO
             %             hd(sw_hip_i)=hd(sw_hip_i)-roll_tune;
             
             
-                
+            %% Safe hip angle
             if sw_hip_i == 6
                 if h0(5)-hd(6) > obj.hip_hit_prevention
                     hd(6) = h0(5)-obj.hip_hit_prevention;
@@ -149,7 +208,8 @@ classdef Controller_Yukai < Controller_MARLO
                     dhd(5)= dh0(6);
                 end
             end
-                
+            
+            % calculate desired joint angle
             hd_j=ControlParams_choice.M^-1*hd;
             dhd_j=ControlParams_choice.M^-1*dhd;
             h0_j=ControlParams_choice.M^-1*h0;
@@ -159,13 +219,14 @@ classdef Controller_Yukai < Controller_MARLO
 %             [y_j dy_j ControlState] = get_error_sin_wave(obj,q,dq,s,cs,ControlParams_choice,ControlState,st_leg_i,st_hip_i,sw_leg_i,sw_hip_i);
             y=h0-hd;
             dy=dh0-dhd;
-            y_j=h0_j-hd_j;
-            dy_j=dh0_j-dhd_j;
-            
+%             y_j=h0_j-hd_j;
+%             dy_j=dh0_j-dhd_j;
+%             
             % Controlling the torso angle
-            [cp1R cp2R cp1L cp2L] = get_spring_compressed_angle(q);
+            [cp1R cp2R cp1L cp2L dcp1R dcp2R dcp1L dcp2L] = get_spring_compressed_angle(q,dq);
             spring_compressed=[cp1R; cp2R; cp1L; cp2L];
             
+            % passivity for stance leg
             if obj.passivity
                 y(st_leg_i) = 0;
                 y(st_hip_i) = 0;
@@ -173,23 +234,32 @@ classdef Controller_Yukai < Controller_MARLO
                 dy(st_hip_i) = dh0(st_hip_i);
             end
             
-            if  obj.torso_control
-%             if 1
-                y(1)=s_R*(-q(1))+(1-s_R)*y(1)-1/2*(cp1R+cp2R);
-                y(2)=s_L*(-q(1))+(1-s_L)*y(2)-1/2*(cp1L+cp2L);
-                y(5)=s_R*(-q(2))+(1-s_R)*y(5);
-                y(6)=s_L*(-q(2))+(1-s_L)*y(6);
-                
-                dy(1)=s_R*(-dq(1))+(1-s_R)*dy(1);
-                dy(2)=s_L*(-dq(1))+(1-s_L)*dy(2);
-                dy(5)=s_R*(-dq(2))+(1-s_R)*dy(5);
-                dy(6)=s_L*(-dq(2))+(1-s_L)*dy(6);
-%                 dy(st_leg_i)=-dq(1);
-%                 dy(st_hip_i)=-dq(2);
+            % torso control
+            if  obj.torso_control_switch
+%                 if ControlState.StanceLeg == 1
+                    y(1)=s_R*(-q(1)-1/2*(cp1R+cp2R))+(1-s_R)*y(1);
+                    
+                    y(5)=s_R*(-q(2))+(1-s_R)*y(5);
+                    dy(5)=s_R*(-dq(2))+(1-s_R)*dy(5);
+%                 else
+                    y(2)=s_L*(-q(1)-1/2*(cp1L+cp2L))+(1-s_L)*y(2);
+                    
+                    y(6)=s_L*(-q(2))+(1-s_L)*y(6);
+                    dy(6)=s_L*(-dq(2))+(1-s_L)*dy(6);
+%                 end
+
+               if obj.temp_switch == 0
+                   dy(2)=s_L*(-dq(1)-1/2*(dcp1L+dcp2L))+(1-s_L)*dy(2);
+                   dy(1)=s_R*(-dq(1)-1/2*(dcp1R+dcp2R))+(1-s_R)*dy(1);
+               else
+                   dy(2)=s_L*(-dq(1))+(1-s_L)*dy(2);
+                   dy(1)=s_R*(-dq(1))+(1-s_R)*dy(1);
+               end
+                   
             end
             
                 
-            
+            % get joint error
             y_j = ControlParams_choice.M^-1*y;
             dy_j = ControlParams_choice.M^-1*dy;
             
@@ -201,6 +271,7 @@ classdef Controller_Yukai < Controller_MARLO
 %             u=-Kd*ControlParams_choice.M^-1*dy-Kp*ControlParams_choice.M^-1*y;
             u=-Kp*y_j-Kd*dy_j;
             
+            % compensation for hip
             if obj.hip_gravity_compensation == 1
                 u(1)=u(1)-0.8;
                 u(4)=u(4)+0.8;
@@ -221,6 +292,8 @@ classdef Controller_Yukai < Controller_MARLO
             ControlState.prev_zero=obj.zero;
             ControlState.ini=0;
             ControlState.prev_V_filtered=V_filtered;
+            ControlState.prev_hold_s=obj.hold_s;
+            ControlState.prev_s=s;
             
             % Store Data
             
@@ -250,6 +323,7 @@ classdef Controller_Yukai < Controller_MARLO
             Data.s_force = [s_R; s_L];
             Data.V_measured=V_measured;
             Data.V_filtered=V_filtered;
+            Data.StanceLeg=ControlState.StanceLeg;
             % -----------------------------------
             
             % Store outputs
@@ -345,18 +419,22 @@ function [y_j dy_j ControlState] = get_error_sin_wave(obj,q,dq,s,cs,ControlParam
             dy_j=dh0_j-dhd_j;
 end
 
-function [st_leg_i,st_hip_i,sw_leg_i,sw_hip_i,ControlParams_choice]=get_index(ControlState,ControlParams)
+function [st_leg_i,st_knee_i,st_hip_i,sw_leg_i,sw_knee_i,sw_hip_i,ControlParams_choice]=get_index(ControlState,ControlParams)
 if ControlState.StanceLeg==1;
     ControlParams_choice=ControlParams.RightStance;
     sw_leg_i=2;
+    sw_knee_i=4;
     sw_hip_i=6;
     st_leg_i=1;
+    st_knee_i=3;
     st_hip_i=5;
 else ControlState.StanceLeg==-1;
     ControlParams_choice=ControlParams.LeftStance;
     sw_leg_i=1;
+    sw_knee_i=3;
     sw_hip_i=5;
     st_leg_i=2;
+    st_knee_i=4;
     st_hip_i=6;
 end
 end
@@ -404,8 +482,8 @@ end
 s_R = scaleFactor(fz_R, obj.grf_z_min, obj.grf_z_max);
 s_L = scaleFactor(fz_L, obj.grf_z_min, obj.grf_z_max);
 
-% if (fz_sw>obj.impact_thre && s>0.5) || s>2
-if s>100
+if (fz_sw>obj.grf_z_max && s>0.5) || s>2
+% if s>100
     switch_flag=1;
 else
     switch_flag=0;
@@ -436,11 +514,17 @@ hd_j(obj.joint_num_test)=hd_j(obj.joint_num_test)+obj.amplitude_test*obj.D2R*sin
 dhd_j(obj.joint_num_test)=dhd_j(obj.joint_num_test)+obj.amplitude_test*obj.D2R*2*pi*obj.frequency_test*cos(2*pi*obj.frequency_test*t+ControlState.sin_phase);
 end
 
-function [cp1R cp2R cp1L cp2L] = get_spring_compressed_angle(q)
+function [cp1R cp2R cp1L cp2L dcp1R dcp2R dcp1L dcp2L] = get_spring_compressed_angle(q,dq)
     cp1R=q(5)-q(7);
     cp2R=q(6)-q(8);
     cp1L=q(12)-q(14);
     cp2L=q(13)-q(15);
+    
+    dcp1R=dq(5)-dq(7);
+    dcp2R=dq(6)-dq(8);
+    dcp1L=dq(12)-dq(14);
+    dcp2L=dq(13)-dq(15);
+    
 end
 
 function [u u_d]=smooth_torque(obj,t,u,ControlState)

@@ -28,6 +28,8 @@ c2o_transform=[     0     0     0     0     0     0     0     0     0     0     
  1,   0,   0, 0,   0,   0
  0,   0,   0, 1,   0,   0]; % M is from u to output;
 q_sym = sym('q',[16,1]);
+% outputs_Right = [mean(q_sym(8:9))+q_sym(4); mean(q_sym(13:14))+q_sym(4);   q_sym(9)-q_sym(8); q_sym(14)-q_sym(13); q_sym(7); q_sym(12)];
+% outputs_Left  = [mean(q_sym(8:9))+q_sym(4); mean(q_sym(13:14))+q_sym(4);   q_sym(9)-q_sym(8); q_sym(14)-q_sym(13); q_sym(7); q_sym(12)];
 % outputs_Right = [mean(q_sym(8:9)); mean(q_sym(13:14))+q_sym(4);   q_sym(9)-q_sym(8); q_sym(14)-q_sym(13); q_sym(7); q_sym(12)];
 % outputs_Left  = [mean(q_sym(8:9))+q_sym(4); mean(q_sym(13:14));   q_sym(9)-q_sym(8); q_sym(14)-q_sym(13); q_sym(7); q_sym(12)];
 outputs_Right = [mean(q_sym(8:9)); mean(q_sym(13:14));   q_sym(9)-q_sym(8); q_sym(14)-q_sym(13); q_sym(7); q_sym(12)];
@@ -47,12 +49,12 @@ H0_LeftStance_controller=H0_LeftStance_opt*c2o_transform* link2gear_transform;
 HAlpha_q_RightStance = pi*[ 1 1 1 1 1 1;
                             1 1 1 1 1 1;
                             1/3 1/3 1/3 1/3 1/3 1/3;
-                            1/3 1/3 1/2 1/2 1/3 1/4;
+                            1/3 1/3 7/12 7/12 1/3 4/12;
                             0 0 0 0 0 0;
                             0 0 0 0 0 0];
 HAlpha_q_LeftStance = pi*[  1 1 1 1 1 1;
                             1 1 1 1 1 1;
-                            1/3 1/3 1/2 1/2 1/3 1/4;
+                            1/3 1/3 7/12 7/12 1/3 4/12;
                             1/3 1/3 1/3 1/3 1/3 1/3;
                             0 0 0 0 0 0;
                             0 0 0 0 0 0];  

@@ -2,8 +2,11 @@
 % u=DataVec(35:40,:);
 DataVec=log.DataVec';
 t=log.t;
-u=log.u_current;
+% u=log.u_current;
 %%
+q=DataVec(1:17,:);
+dq=DataVec(18:34,:);
+u=DataVec(35:40,:);
 y=DataVec(41:46,:);
 dy=DataVec(47:52,:);
 s=DataVec(53,:);
@@ -27,6 +30,7 @@ ground_force=DataVec(123:124,:);
 s_force=DataVec(125:126,:);
 V_measured=DataVec(127:129,:);
 V_filtered=DataVec(130:132,:);
+StanceLeg=DataVec(133,:);
 
 
 M_J2L=[1/2 1/2 0 0 0 0;
@@ -45,7 +49,7 @@ index=[7 8 13 9 10 16];
 joint={'qAR','qBR','qHR','qAL','qBL','qHL'};
 for i=1:length(index)
 subplot(2,3,i)
-plot(t,q(:,index(i)))
+plot(t,q(index(i),:))
 title(joint{i})
 end
 %% plot x y z pitch roll yaw
@@ -54,7 +58,7 @@ index=[1 2 3 6 5 4];
 joint={'x' 'y' 'z' 'pitch' 'roll' 'yaw'};
 for i=1:length(index)
 subplot(2,3,i)
-plot(t,q(:,index(i)))
+plot(t,q(index(i),:))
 title(joint{i})
 end
 
@@ -63,7 +67,7 @@ index=[1 2 3 6 5 4];
 joint={'x velocity' 'y velocity' 'z velocity' 'pitch velocity' 'roll velocity' 'yaw velocity'};
 for i=1:length(index)
 subplot(2,3,i)
-plot(t,dq(:,index(i)))
+plot(t,dq(index(i),:))
 title(joint{i})
 end
 
@@ -73,19 +77,19 @@ index=[1 2 3 4 5 6];
 joint={'uAR','uBR','uHR','uAL','uBL','uHL'};
 for i=1:6
     subplot(2,3,i)
-    plot(t,u(:,i));
+    plot(t,u(i,:));
     title(joint{i})
     axis([0 t(end) -6 6])
 end
 % Joint torque to leg knee torque
 
-uL=(M_J2L*u')';
+uL=(M_J2L*u);
 figure
 index=[1 2 3 4 5 6];
 joint={'uLegR','uKneeR','uHipR','uLegL','uKneeL','uHipL'};
 for i=1:6
     subplot(2,3,i)
-    plot(t,uL(:,i));
+    plot(t,uL(i,:));
     title(joint{i})
     axis([0 t(end) -12 12])
 end
@@ -96,7 +100,7 @@ index=[1 3 5 2 4 6];
 joint={'qLegR','qKneeR','qHipR','qLegL','qKneeL','qHipL'};
 for i=1:6
     subplot(2,3,i)
-    plot(t,h0(index(i),:));
+    plot(t,180/pi*h0(index(i),:));
     title(joint{i})
 end
 
@@ -106,7 +110,7 @@ index=[1 3 5 2 4 6];
 joint={'dqLegR','dqKneeR','dqHipR','dqLegL','dqKneeL','dqHipL'};
 for i=1:6
     subplot(2,3,i)
-    plot(t,dh0(index(i),:));
+    plot(t,180/pi*dh0(index(i),:));
     title(joint{i})
 end
 %% plot hd dhd
@@ -115,7 +119,7 @@ index=[1,3,5,2,4,6];
 name={'hd Right Leg','hd Right Knee','hd Right Hip','hd Left Leg','hd Left Knee','hd Left Hip'};
 for i=1:length(index)
 subplot(2,3,i)
-plot(t,hd(index(i),:))
+plot(t,180/pi*hd(index(i),:))
 title(name{i})
 end
 
@@ -124,7 +128,7 @@ index=[1,3,5,2,4,6];
 name={'dhd Right Leg','dhd Right Knee','dhd Right Hip','dhd Left Leg','dhd Left Knee','dhd Left Hip'};
 for i=1:length(index)
 subplot(2,3,i)
-plot(t,dhd(index(i),:))
+plot(t,180/pi*dhd(index(i),:))
 title(name{i})
 end
 
@@ -134,7 +138,7 @@ index=[2 3 1 5 6 4];
 name={'hd_AR','hd_BR','hd_HR','hd_AL','hd_BL','hd_HL'};
 for i=1:length(index)
 subplot(2,3,i)
-plot(t,hd_j(index(i),:))
+plot(t,180/pi*hd_j(index(i),:))
 title(name{i})
 end
 
@@ -143,7 +147,7 @@ index=[2 3 1 5 6 4];
 name={'dhd_AR','dhd_BR','dhd_HR','dhd_AL','dhd_BL','dhd_HL'};
 for i=1:length(index)
 subplot(2,3,i)
-plot(t,dhd_j(index(i),:))
+plot(t,180/pi*dhd_j(index(i),:))
 title(name{i})
 end
 
@@ -153,7 +157,7 @@ index=[1,3,5,2,4,6];
 name={'y Right Leg','y Right Knee','y Right Hip','y Left Leg','y Left Knee','y Left Hip'};
 for i=1:length(index)
 subplot(2,3,i)
-plot(t,y(index(i),:))
+plot(t,180/pi*y(index(i),:))
 title(name{i})
 end
 
@@ -162,7 +166,7 @@ index=[1,3,5,2,4,6];
 name={'dy Right Leg','dy Right Knee','dy Right Hip','dy Left Leg','dy Left Knee','dy Left Hip'};
 for i=1:length(index)
 subplot(2,3,i)
-plot(t,dy(index(i),:))
+plot(t,180/pi*dy(index(i),:))
 title(name{i})
 end
 
@@ -191,6 +195,28 @@ title('filtered roll tune');
 
 figure
 plot(t,dh0(1,:)'+dq(:,6))
+%% plot vertical ground force
+figure
+plot(t,ground_force(1,:))
+hold on
+plot(t,ground_force(2,:))
+plot(t,100*StanceLeg,'g--')
+hold off
+legend('right','left','StanceLeg')
+title('ground force')
+%% plot s_R s_L
+figure
+subplot(3,1,1)
+plot(t,s_force(1,:))
+title('s_R')
+
+subplot(3,1,2)
+plot(t,s_force(2,:))
+title('s_L')
+
+subplot(3,1,3)
+plot(t,StanceLeg)
+title('StanceLeg')
 
 %% plot velocity
 

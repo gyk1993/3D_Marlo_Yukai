@@ -114,7 +114,7 @@ function getVariableChanges(t, var, fstr, direction)
 end
 
 function checkSafetyLimits(log,F0)
-    [violation, qmin, qmax, dqmin, dqmax, qminv, qmaxv, T] = MARLOBasicSafetyLimits5(log.q(1,:).', log.dq(1,:).');
+    [violation, qmin, qmax, dqmin, dqmax, qminv, qmaxv, T] = MARLOBasicSafetyLimits6(log.q(1,:).', log.dq(1,:).');
     Limits = [qmin, qmax, dqmin, dqmax, qminv, qmaxv];
     
     % Get coordinate labels

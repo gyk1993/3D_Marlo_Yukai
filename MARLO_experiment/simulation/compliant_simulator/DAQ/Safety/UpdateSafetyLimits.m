@@ -1,6 +1,6 @@
 %% UpdateSafetyLimits
 
-SelectBasicLimits = 5;
+SelectBasicLimits = 6;
 
 %% Define coordinates
 %
@@ -32,7 +32,29 @@ Tthetagr = [1;1]*TqxT + TqgrLA;
 
 switch SelectBasicLimits
     % Collect all coordinates and limits in a structure
-    % Lims: [qmin qmax dqmin dqmax qminv qmaxv]    
+    % Lims: [qmin qmax dqmin dqmax qminv qmaxv]
+        case 6
+        Coords.q1 = struct('T', Tq1, 'Lims', [100	200	-600	600	130	180]);
+        Coords.q2 = struct('T', Tq2, 'Lims', [160	260	-600	500	200	220]);
+        Coords.qLA = struct('T', TqLA, 'Lims', [130	230	-400	500	180	180]);
+        Coords.qKA = struct('T', TqKA, 'Lims', [40	110	-500	500	60	90]);
+        Coords.qgr1 = struct('T', Tqgr1, 'Lims', [100	200	-600	600	130	180]);
+        Coords.qgr2 = struct('T', Tqgr2, 'Lims', [160	260	-600	500	200	220]);
+        Coords.qgrLA = struct('T', TqgrLA, 'Lims', [130	230	-400	500	180	180]);
+        Coords.qgrKA = struct('T', TqgrKA, 'Lims', [40	110	-500	500	60	90]);
+        Coords.qsp1 = struct('T', Tqsp1, 'Lims', [-6	10	-200	300	-1	6]);
+        Coords.qsp2 = struct('T', Tqsp2, 'Lims', [-10	3	-400	200	-6	1]);
+        Coords.qspLA = struct('T', TqspLA, 'Lims', [-3	3	-300	300	-1	1]);
+        Coords.qspKA = struct('T', TqspKA, 'Lims', [-20	10	-600	500	-15	1]);
+        Coords.q3 = struct('T', Tq3, 'Lims', [-20 15 -250 250 -20 15]);
+        Coords.qDLA = struct('T', TqDLA, 'Lims', [-45 45 -400 400 -25 25]);
+        Coords.q3RL = struct('T', Tq3RL, 'Lims', [-25 30 -300 300 -25 30]);
+        Coords.qxT = struct('T', TqxT, 'Lims', [-30 30 -150 150 -20 20]);
+        Coords.qyT = struct('T', TqyT, 'Lims', [-20 20 -150 150 -10 10]);
+        Coords.theta = struct('T', Ttheta, 'Lims', [140 220 -300 300 160 200]);
+        Coords.thetagr = struct('T', Tthetagr, 'Lims', [140 220 -300 300 160 200]);
+        
+        suffix = '6';
     case 5
         Coords.q1 = struct('T', Tq1, 'Lims', [100	200	-600	600	130	180]);
         Coords.q2 = struct('T', Tq2, 'Lims', [160	260	-600	500	200	220]);

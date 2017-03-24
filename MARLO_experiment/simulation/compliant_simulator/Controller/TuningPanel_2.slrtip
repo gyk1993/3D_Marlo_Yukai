@@ -1,21 +1,99 @@
 
   <Object type="Desktop.Xpc.Designer.InstrumentPanel, Desktop.Xpc.Designer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TuningPanel" children="Controls">
+    <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label12" children="Controls">
+      <Property name="Text">Kfd_r</Property>
+      <Property name="UseCompatibleTextRendering">True</Property>
+      <Property name="Location">1037, 68</Property>
+      <Property name="Name">Label12</Property>
+      <Property name="Size">100, 23</Property>
+    </Object>
+    <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label11" children="Controls">
+      <Property name="Text">Kfd_p</Property>
+      <Property name="UseCompatibleTextRendering">True</Property>
+      <Property name="Location">1037, 24</Property>
+      <Property name="Name">Label11</Property>
+      <Property name="Size">100, 23</Property>
+    </Object>
+    <Object type="MW.Instruments.NumericEntry, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericEntry9" children="Controls">
+      <Property name="BindingSrcPath">/c_Kfd_r</Property>
+      <Property name="TargetName">MARLO_Wired</Property>
+      <Property name="BindingSrcType">Parameter</Property>
+      <Property name="Size">100, 27</Property>
+      <Property name="Location">890, 64</Property>
+      <Property name="Name">NumericEntry9</Property>
+    </Object>
+    <Object type="MW.Instruments.NumericEntry, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericEntry8" children="Controls">
+      <Property name="BindingSrcPath">/c_Kfd_p</Property>
+      <Property name="TargetName">MARLO_Wired</Property>
+      <Property name="BindingSrcType">Parameter</Property>
+      <Property name="Size">100, 27</Property>
+      <Property name="Location">890, 24</Property>
+      <Property name="Name">NumericEntry8</Property>
+    </Object>
+    <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label10" children="Controls">
+      <Property name="Text">Stance Knee Offset</Property>
+      <Property name="UseCompatibleTextRendering">True</Property>
+      <Property name="Location">770, 213</Property>
+      <Property name="Name">Label10</Property>
+      <Property name="Size">89, 42</Property>
+    </Object>
+    <Object type="MW.Instruments.NumericEntry, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericEntry7" children="Controls">
+      <Property name="BindingSrcPath">/c_st_knee_offset</Property>
+      <Property name="TargetName">MARLO_wired</Property>
+      <Property name="BindingSrcType">Parameter</Property>
+      <Property name="Size">100, 27</Property>
+      <Property name="Location">623, 213</Property>
+      <Property name="Name">NumericEntry7</Property>
+    </Object>
+    <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label9" children="Controls">
+      <Property name="Text">Step TIme</Property>
+      <Property name="UseCompatibleTextRendering">True</Property>
+      <Property name="Location">770, 179</Property>
+      <Property name="Name">Label9</Property>
+      <Property name="Size">78, 27</Property>
+    </Object>
+    <Object type="MW.Instruments.NumericEntry, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericEntry6" children="Controls">
+      <Property name="BindingSrcPath">/c_steptime</Property>
+      <Property name="TargetName">MARLO_Wired</Property>
+      <Property name="BindingSrcType">Parameter</Property>
+      <Property name="Size">100, 27</Property>
+      <Property name="Location">623, 179</Property>
+      <Property name="Name">NumericEntry6</Property>
+    </Object>
+    <Object type="MW.Instruments.SwitchLED, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="SwitchLED6" children="Controls">
+      <Property name="BindingSrcPath">/c_foot_placement_switch</Property>
+      <Property name="TargetName">MARLO_Wired</Property>
+      <Property name="BindingSrcType">Parameter</Property>
+      <Property name="Text">Foot Placement</Property>
+      <Property name="Size">130, 76</Property>
+      <Property name="Location">414, 179</Property>
+      <Property name="Name">SwitchLED6</Property>
+    </Object>
+    <Object type="MW.Instruments.SwitchLED, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="SwitchLED1" children="Controls">
+      <Property name="BindingSrcPath">/c_hold_s</Property>
+      <Property name="TargetName">MARLO_Wired</Property>
+      <Property name="BindingSrcType">Parameter</Property>
+      <Property name="Text">HOLD S</Property>
+      <Property name="Size">98, 76</Property>
+      <Property name="Location">298, 179</Property>
+      <Property name="Name">SwitchLED1</Property>
+    </Object>
     <Object type="MW.Instruments.SwitchLED, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="SwitchLED2" children="Controls">
       <Property name="BindingSrcPath">/c_passivity</Property>
       <Property name="TargetName">MARLO_Wired</Property>
       <Property name="BindingSrcType">Parameter</Property>
       <Property name="Text">Passivity</Property>
-      <Property name="Size">204, 76</Property>
-      <Property name="Location">329, 192</Property>
+      <Property name="Size">211, 76</Property>
+      <Property name="Location">31, 179</Property>
       <Property name="Name">SwitchLED2</Property>
     </Object>
     <Object type="MW.Instruments.SwitchLED, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="SwitchLED3" children="Controls">
-      <Property name="BindingSrcPath">/c_torso_control</Property>
+      <Property name="BindingSrcPath">/c_torso_control_switch</Property>
       <Property name="TargetName">MARLO_Wired</Property>
       <Property name="BindingSrcType">Parameter</Property>
       <Property name="Text">Torso Control</Property>
       <Property name="Size">211, 76</Property>
-      <Property name="Location">31, 192</Property>
+      <Property name="Location">31, 97</Property>
       <Property name="Name">SwitchLED3</Property>
     </Object>
     <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label8" children="Controls">
@@ -138,8 +216,8 @@
       <Property name="TargetName">MARLO_Wired</Property>
       <Property name="BindingSrcType">Parameter</Property>
       <Property name="Text">ZERO</Property>
-      <Property name="Size">211, 70</Property>
-      <Property name="Location">31, 107</Property>
+      <Property name="Size">101, 67</Property>
+      <Property name="Location">141, 24</Property>
       <Property name="Name">SwitchLED5</Property>
     </Object>
     <Object type="MW.Instruments.SwitchLED, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="SwitchLED4" children="Controls">
@@ -147,7 +225,7 @@
       <Property name="TargetName">MARLO_Wired</Property>
       <Property name="BindingSrcType">Parameter</Property>
       <Property name="Text">HOLD</Property>
-      <Property name="Size">211, 57</Property>
+      <Property name="Size">104, 70</Property>
       <Property name="Location">31, 21</Property>
       <Property name="Name">SwitchLED4</Property>
     </Object>

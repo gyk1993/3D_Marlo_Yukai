@@ -3,6 +3,8 @@ function [F] = ExternalForces(t, q, dq)
     isTest_double_Support=false;
     isTest_dropTest = false;
     isTest_moveforwardbackward=true;
+    isTest_2Dwalking=false;
+    isTest_holdwalking=false;
     isTest_GradualdropTest = false;
     isTest_dropAndLiftTest = false;
     
@@ -40,10 +42,27 @@ function [F] = ExternalForces(t, q, dq)
     
     if isTest_moveforwardbackward
         F(1) = F(1)+kpboom*(q(1))+kdboom*dq(1);   % Side
-        F(2) = F(2)+kpboom*(q(2)-0.1*sin(0.2*2*pi*t))+kdboom*dq(2);   % Side
+        F(2) = F(2)+kpboom*(q(2)-0.1*sin(1*2*pi*t))+kdboom*dq(2);   % Side
         F(4)=F(4)+kpboom*(q(4)-0)+kdboom*dq(4);   % yaw
         F(5)=F(5)+kpboom*(q(5)-0)+kdboom*dq(5);   % roll
         F(6)=F(6)+kpboom*(q(6)-0)+kdboom*dq(6);   % pitch
+    end
+    
+    if isTest_2Dwalking
+        F(1) = F(1)+kpboom*(q(1))+kdboom*dq(1);   % Side
+        F(4)=F(4)+kpboom*(q(4)-0)+kdboom*dq(4);   % yaw
+        F(5)=F(5)+kpboom*(q(5)-0)+kdboom*dq(5);   % roll
+    end
+    
+    if isTest_holdwalking
+        if t<2
+
+            F(2) = F(2)+kpboom*(q(2))+kdboom*dq(2);   % Side
+        end
+        F(1) = F(1)+kpboom*(q(1))+kdboom*dq(1);   % Side
+        F(4)=F(4)+kpboom*(q(4)-0)+kdboom*dq(4);   % yaw
+%                 F(5)=F(5)+kpboom*(q(5)-0)+kdboom*dq(5);   % roll
+%                 F(6)=F(6)+kpboom*(q(6)-0)+kdboom*dq(6);   % pitch
     end
 %     if isTest_dropTest
 %         if t < 0.3

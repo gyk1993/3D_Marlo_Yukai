@@ -50,6 +50,8 @@ ControlState.zero_t0=0;
 ControlState.prev_t=0;
 ControlState.prev_u=zeros(6,1);
 ControlState.prev_V_filtered=zeros(3,1);
+ControlState.prev_hold_s=1;
+ControlState.prev_s=0;
 
 
 if isSim
