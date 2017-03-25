@@ -186,15 +186,15 @@ title('pitch tune');
 subplot(2,2,2)
 plot(t,roll_tune);
 title('roll tune');
-subplot(2,2,3)
-plot(t,pitch_tune_fil);
-title('filtered pitch tune');
-subplot(2,2,4)
-plot(t,roll_tune_fil);
-title('filtered roll tune');
+% subplot(2,2,3)
+% plot(t,pitch_tune_fil);
+% title('filtered pitch tune');
+% subplot(2,2,4)
+% plot(t,roll_tune_fil);
+% title('filtered roll tune');
 
-figure
-plot(t,dh0(1,:)'+dq(:,6))
+% figure
+% plot(t,dh0(1,:)'+dq(:,6))
 %% plot vertical ground force
 figure
 plot(t,ground_force(1,:))

@@ -62,6 +62,8 @@ function [MotorCurrentCommandSafe, MedullaCommandSafe, SafetyState, SafetyCountO
     
     % CHECK ROBOT CONFIGURATION AND VELOCITY (HARD SAFETY)
     switch SelectBasicLimits
+        case 6
+            violation = MARLOBasicSafetyLimits6(q, dq);
         case 5
             violation = MARLOBasicSafetyLimits5(q, dq);
         case 4

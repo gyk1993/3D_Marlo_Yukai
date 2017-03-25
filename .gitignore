@@ -15,4 +15,4 @@ MARLO_experiment/simulation/complient_simulator/Controller/Controller_Expref.m
 MARLO_experiment/simulation/compliant_simulator/Controller/Controller_Expbio.m
 MARLO_experiment/simulation/compliant_simulator/Controller/Controller_Exppt.m
 #Local log data
-MARLO_experiment\simulation\compliant_simulator\Controller\data
+MARLO_experiment/simulation/compliant_simulator/Controller/data

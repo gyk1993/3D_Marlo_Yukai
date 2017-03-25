@@ -32,6 +32,8 @@ classdef Controller_Yukai < Controller_MARLO
         st_knee_offset;
         passivity;
         temp_switch;
+        v1_offset;
+        v2_offset;
     end % properties
 	properties (Access = private) 
         tf=1;
@@ -44,8 +46,8 @@ classdef Controller_Yukai < Controller_MARLO
         R2D=180/pi;
         ks_leg = 2690.8;
 %         impact_thre = 200;
-        grf_z_min = 200;        % (N)
-        grf_z_max = 300;        % (N)
+        grf_z_min = 100;        % (N)
+        grf_z_max = 200;        % (N)
         du_max=15;
         hip_gravity_compensation = 1;
         hip_hit_prevention = 10*pi/180;
@@ -174,14 +176,37 @@ classdef Controller_Yukai < Controller_MARLO
             
             
             % foot placement
-            pitch_tune=obj.Kfd_p*V_filtered(2);
+            pitch_tune=obj.Kfd_p*(V_filtered(2)-obj.v2_offset);
             pitch_tune=sign(pitch_tune)*min(abs(pitch_tune),0.3);
-            roll_tune=obj.Kfd_r*V_filtered(1);
-            if obj.foot_placement_switch == 1
-                hd(sw_leg_i)=hd(sw_leg_i)+pitch_tune;
-                hd(sw_hip_i)=hd(sw_hip_i)+roll_tune;
+            roll_tune=obj.Kfd_r*(V_filtered(1)-obj.v1_offset);
+            
+            % Limit the swing hip to inward
+            if sw_hip_i == 5
+                if roll_tune+obj.Kfd_r*obj.v1_offset<0
+                    roll_tune=roll_tune*0.1;
+                end
+            else
+                if roll_tune+roll_tune+obj.Kfd_r*obj.v1_offset>0
+                    roll_tune=roll_tune*0.1;
+                end
             end
             
+            %Limit largest hip angle
+            roll_tune=sign(roll_tune)*min(0.3,abs(roll_tune));
+            
+            if obj.foot_placement_switch == 1
+                hd(sw_leg_i)=hd(sw_leg_i)+pitch_tune*cs;
+                hd(sw_hip_i)=hd(sw_hip_i)-roll_tune*cs;
+                hd(sw_knee_i)= hd(sw_knee_i)-0.5*abs(roll_tune)*cs-0.5*abs(pitch_tune)*cs;
+            end
+            
+            
+            if obj.passivity
+                hd(st_leg_i) = h0(st_leg_i);
+                hd(st_hip_i) = h0(st_hip_i);
+                dhd(st_leg_i) = 0;
+                dhd(st_hip_i) = 0;
+            end
 %             pitch_tune=obj.Kfd_p*(dh0(st_leg_i)+dq(1)); % Here pitch is pitch of the stance leg, not torso. In other word, the absolute stance leg angle
 %             pitch_tune=sign(pitch_tune)*min(abs(obj.Kfd_p*(dh0(st_leg_i)+dq(1))),0.3);
 %             pitch_tune_fil=first_order_filter(ControlState.pitch_tune,pitch_tune,obj.pitch_fil_para);
@@ -227,23 +252,16 @@ classdef Controller_Yukai < Controller_MARLO
             spring_compressed=[cp1R; cp2R; cp1L; cp2L];
             
             % passivity for stance leg
-            if obj.passivity
-                y(st_leg_i) = 0;
-                y(st_hip_i) = 0;
-                dy(st_leg_i) = dh0(st_leg_i);
-                dy(st_hip_i) = dh0(st_hip_i);
-            end
+
             
             % torso control
             if  obj.torso_control_switch
 %                 if ControlState.StanceLeg == 1
                     y(1)=s_R*(-q(1)-1/2*(cp1R+cp2R))+(1-s_R)*y(1);
-                    
                     y(5)=s_R*(-q(2))+(1-s_R)*y(5);
                     dy(5)=s_R*(-dq(2))+(1-s_R)*dy(5);
 %                 else
                     y(2)=s_L*(-q(1)-1/2*(cp1L+cp2L))+(1-s_L)*y(2);
-                    
                     y(6)=s_L*(-q(2))+(1-s_L)*y(6);
                     dy(6)=s_L*(-dq(2))+(1-s_L)*dy(6);
 %                 end
@@ -548,3 +566,6 @@ function [ V_measured V_filtered ] = get_velocity(obj,velEst,s_R,s_L,ControlStat
     end
     V_filtered = first_order_filter(ControlState.prev_V_filtered,V_measured,obj.pitch_fil_para);
 end
+
+% function [ u u_old] =smooth_u(du_limit,t,u,ControlState)
+%     if abs(u-ControlState.prev_u)/

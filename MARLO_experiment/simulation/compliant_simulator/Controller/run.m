@@ -4,7 +4,7 @@ clear; restoredefaultpath;
 setpath;
 
 % Simulation flag
-isSim = 0;
+isSim = 1;
 
 % Load all of the model parameters
 load_model_params
@@ -47,7 +47,7 @@ if isSim
     dq = [dq0_new(1:3); dq0];
     
 %     dq=zeros(16,1);
-    q(3)=1.1;
+%     q(3)=1.1;
     xinit = [q; dq];
 end
 

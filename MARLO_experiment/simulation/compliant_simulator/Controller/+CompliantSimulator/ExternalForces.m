@@ -2,9 +2,9 @@ function [F] = ExternalForces(t, q, dq)
     isTest_holdInAir = false;
     isTest_double_Support=false;
     isTest_dropTest = false;
-    isTest_moveforwardbackward=true;
+    isTest_moveforwardbackward=false;
     isTest_2Dwalking=false;
-    isTest_holdwalking=false;
+    isTest_hold2walk=true;
     isTest_GradualdropTest = false;
     isTest_dropAndLiftTest = false;
     
@@ -34,10 +34,10 @@ function [F] = ExternalForces(t, q, dq)
         F(2) = F(2)+kpboom*(q(2))+kdboom*dq(2);   % Side
 %         F(3) = F(3)+kpboom*(q(3)-height)+kdboom*dq(3); % Hang in the air
         F(4)=F(4)+kpboom*(q(4)-0)+kdboom*dq(4);   % yaw
-        if t < 1
+%         if t < 1
         F(5)=F(5)+kpboom*(q(5)-0)+kdboom*dq(5);   % roll
         F(6)=F(6)+kpboom*(q(6)-0)+kdboom*dq(6);   % pitch
-        end
+%         end
     end
     
     if isTest_moveforwardbackward
@@ -52,17 +52,29 @@ function [F] = ExternalForces(t, q, dq)
         F(1) = F(1)+kpboom*(q(1))+kdboom*dq(1);   % Side
         F(4)=F(4)+kpboom*(q(4)-0)+kdboom*dq(4);   % yaw
         F(5)=F(5)+kpboom*(q(5)-0)+kdboom*dq(5);   % roll
+        if t<2
+            F(2) = F(2)+kpboom*(q(2))+kdboom*dq(2);   % Side
+            F(6)=F(6)+kpboom*(q(6)-0)+kdboom*dq(6);   % roll
+        end
     end
     
-    if isTest_holdwalking
+    if isTest_hold2walk
         if t<2
-
+            F(6)=F(6)+kpboom*(q(6)-0)+kdboom*dq(6);   % pitch
             F(2) = F(2)+kpboom*(q(2))+kdboom*dq(2);   % Side
-        end
-        F(1) = F(1)+kpboom*(q(1))+kdboom*dq(1);   % Side
+            F(1) = F(1)+kpboom*(q(1))+kdboom*dq(1);   % Side
         F(4)=F(4)+kpboom*(q(4)-0)+kdboom*dq(4);   % yaw
-%                 F(5)=F(5)+kpboom*(q(5)-0)+kdboom*dq(5);   % roll
-%                 F(6)=F(6)+kpboom*(q(6)-0)+kdboom*dq(6);   % pitch
+        F(5)=F(5)+kpboom*(q(5)-0)+kdboom*dq(5);   % roll
+        end
+        
+        if t > 6 & t<6.5
+            F(1)= 50;
+        end
+        
+        if t > 10 & t<11
+            F(2)=80;
+        end
+        
     end
 %     if isTest_dropTest
 %         if t < 0.3

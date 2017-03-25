@@ -1,5 +1,35 @@
 
   <Object type="Desktop.Xpc.Designer.InstrumentPanel, Desktop.Xpc.Designer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TuningPanel" children="Controls">
+    <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label14" children="Controls">
+      <Property name="Text">sagittal velocity offset</Property>
+      <Property name="UseCompatibleTextRendering">True</Property>
+      <Property name="Location">1037, 146</Property>
+      <Property name="Name">Label14</Property>
+      <Property name="Size">194, 23</Property>
+    </Object>
+    <Object type="MW.Instruments.NumericEntry, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericEntry11" children="Controls">
+      <Property name="BindingSrcPath">/c_v2_offset</Property>
+      <Property name="TargetName">MARLO_Wired</Property>
+      <Property name="BindingSrcType">Parameter</Property>
+      <Property name="Size">100, 27</Property>
+      <Property name="Location">890, 146</Property>
+      <Property name="Name">NumericEntry11</Property>
+    </Object>
+    <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label13" children="Controls">
+      <Property name="Text">lataral velocity offset</Property>
+      <Property name="UseCompatibleTextRendering">True</Property>
+      <Property name="Location">1037, 111</Property>
+      <Property name="Name">Label13</Property>
+      <Property name="Size">194, 23</Property>
+    </Object>
+    <Object type="MW.Instruments.NumericEntry, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericEntry10" children="Controls">
+      <Property name="BindingSrcPath">/c_v1_offset</Property>
+      <Property name="TargetName">MARLO_Wired</Property>
+      <Property name="BindingSrcType">Parameter</Property>
+      <Property name="Size">100, 27</Property>
+      <Property name="Location">890, 111</Property>
+      <Property name="Name">NumericEntry10</Property>
+    </Object>
     <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label12" children="Controls">
       <Property name="Text">Kfd_r</Property>
       <Property name="UseCompatibleTextRendering">True</Property>

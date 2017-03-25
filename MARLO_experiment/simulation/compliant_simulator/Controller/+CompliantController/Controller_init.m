@@ -19,7 +19,7 @@ c_Kd_hip=1;
 %     0 0 0 0 0 1;];
 
 c_Kfd_p=0.5;
-c_Kfd_r=0.6;
+c_Kfd_r=0.3;
 c_Kfp_p=0.7;
 c_Kfp_r=0.6;
 c_pitch_fil_para=0.005;
@@ -30,9 +30,20 @@ c_amplitude_test=10;
 c_hold=1;
 c_zero=0;
 c_torso_control_switch=1;
-c_foot_placement_switch=0;
-c_passivity = 0;
+c_foot_placement_switch=1;
+c_passivity = 1;
 c_hold_s = 1;
-c_steptime=0.5;
+c_steptime=0.4;
 c_st_knee_offset=0;
 c_temp_switch=0;
+c_v1_offset = 0;
+c_v2_offset = 0;
+
+%simulation
+if isSim == 1
+c_hold_s = 0;
+c_Kfd_p=0.5;
+c_Kfd_r=0.5;
+c_v1_offset = 0;
+c_v2_offset = -0.2;
+end
