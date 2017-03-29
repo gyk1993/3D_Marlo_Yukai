@@ -18,11 +18,15 @@ c_Kd_hip=1;
 %     0 0 0 0 1 0;
 %     0 0 0 0 0 1;];
 
-c_Kfd_p=0.5;
-c_Kfd_r=0.3;
+c_Kfd_p=0.4;
+c_Kfd_r=0.8;
+c_v1_offset = -0.02;
+c_v2_offset = -0.03;
+c_knee_stretch=0;
+c_st_knee_offset=5;
 c_Kfp_p=0.7;
 c_Kfp_r=0.6;
-c_pitch_fil_para=0.005;
+c_pitch_fil_para=0.004;
 c_roll_fil_para=0.1;
 c_frequency_test=1;
 c_joint_num_test=2;
@@ -34,16 +38,17 @@ c_foot_placement_switch=1;
 c_passivity = 1;
 c_hold_s = 1;
 c_steptime=0.4;
-c_st_knee_offset=0;
 c_temp_switch=0;
-c_v1_offset = 0;
-c_v2_offset = 0;
+c_nonlinear_foot_placement=1;
+
 
 %simulation
 if isSim == 1
 c_hold_s = 0;
 c_Kfd_p=0.5;
-c_Kfd_r=0.5;
-c_v1_offset = 0;
-c_v2_offset = -0.2;
+c_Kfd_r=0.8;
+c_v1_offset = -0.02;
+c_v2_offset = -0.03;
+c_knee_stretch=0.8;
+c_st_knee_offset=0;
 end

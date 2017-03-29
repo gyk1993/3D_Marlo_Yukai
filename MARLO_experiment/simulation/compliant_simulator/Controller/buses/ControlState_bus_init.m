@@ -52,6 +52,7 @@ ControlState.prev_u=zeros(6,1);
 ControlState.prev_V_filtered=zeros(3,1);
 ControlState.prev_hold_s=1;
 ControlState.prev_s=0;
+ControlState.d_alpha=zeros(6,6);
 
 
 if isSim

@@ -1,5 +1,20 @@
 
   <Object type="Desktop.Xpc.Designer.InstrumentPanel, Desktop.Xpc.Designer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TuningPanel" children="Controls">
+    <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label15" children="Controls">
+      <Property name="Text">knee stretch</Property>
+      <Property name="UseCompatibleTextRendering">True</Property>
+      <Property name="Location">1037, 183</Property>
+      <Property name="Name">Label15</Property>
+      <Property name="Size">194, 23</Property>
+    </Object>
+    <Object type="MW.Instruments.NumericEntry, mwio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NumericEntry12" children="Controls">
+      <Property name="BindingSrcPath">/c_knee_stretch</Property>
+      <Property name="TargetName">MARLO_Wired</Property>
+      <Property name="BindingSrcType">Parameter</Property>
+      <Property name="Size">100, 27</Property>
+      <Property name="Location">890, 183</Property>
+      <Property name="Name">NumericEntry12</Property>
+    </Object>
     <Object type="System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="Label14" children="Controls">
       <Property name="Text">sagittal velocity offset</Property>
       <Property name="UseCompatibleTextRendering">True</Property>

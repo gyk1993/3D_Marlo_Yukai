@@ -48,6 +48,7 @@ if isSim
     
 %     dq=zeros(16,1);
 %     q(3)=1.1;
+    q(4)=pi/2;
     xinit = [q; dq];
 end
 

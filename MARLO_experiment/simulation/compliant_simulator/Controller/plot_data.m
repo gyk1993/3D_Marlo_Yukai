@@ -4,8 +4,8 @@ DataVec=log.DataVec';
 t=log.t;
 % u=log.u_current;
 %%
-q=DataVec(1:17,:);
-dq=DataVec(18:34,:);
+% q=DataVec(1:17,:);
+% dq=DataVec(18:34,:);
 u=DataVec(35:40,:);
 y=DataVec(41:46,:);
 dy=DataVec(47:52,:);
@@ -58,7 +58,7 @@ index=[1 2 3 6 5 4];
 joint={'x' 'y' 'z' 'pitch' 'roll' 'yaw'};
 for i=1:length(index)
 subplot(2,3,i)
-plot(t,q(index(i),:))
+plot(t,q(:,index(i)))
 title(joint{i})
 end
 
@@ -67,7 +67,7 @@ index=[1 2 3 6 5 4];
 joint={'x velocity' 'y velocity' 'z velocity' 'pitch velocity' 'roll velocity' 'yaw velocity'};
 for i=1:length(index)
 subplot(2,3,i)
-plot(t,dq(index(i),:))
+plot(t,dq(:,index(i)))
 title(joint{i})
 end
 
@@ -221,11 +221,24 @@ title('StanceLeg')
 %% plot velocity
 
 figure
-subplot(2,1,1)
-plot(t,V_measured)
-title('V measured')
-legend('x','y','z')
-subplot(2,1,2)
-plot(t,V_filtered)
-title('V filtered')
-legend('x','y','z')
+subplot(3,1,1)
+plot(t,V_measured(1,:))
+hold on
+plot(t,V_filtered(1,:))
+hold off
+title('Vx')
+legend('measured','filtered')
+subplot(3,1,2)
+plot(t,V_measured(2,:))
+hold on
+plot(t,V_filtered(2,:))
+hold off
+title('Vy')
+legend('measured','filtered')
+subplot(3,1,3)
+plot(t,V_measured(3,:))
+hold on
+plot(t,V_filtered(3,:))
+hold off
+title('Vz')
+legend('measured','filtered')

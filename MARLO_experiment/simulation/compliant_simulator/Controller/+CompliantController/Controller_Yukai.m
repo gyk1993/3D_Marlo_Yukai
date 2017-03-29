@@ -34,6 +34,8 @@ classdef Controller_Yukai < Controller_MARLO
         temp_switch;
         v1_offset;
         v2_offset;
+        knee_stretch;
+        nonlinear_foot_placement;
     end % properties
 	properties (Access = private) 
         tf=1;
@@ -51,6 +53,8 @@ classdef Controller_Yukai < Controller_MARLO
         du_max=15;
         hip_gravity_compensation = 1;
         hip_hit_prevention = 10*pi/180;
+        max_roll_tune = 0.25;
+        max_pitch_tune = 0.3;
 	end % properties
 	
 	% PUBLIC METHODS ========================================================
@@ -139,6 +143,15 @@ classdef Controller_Yukai < Controller_MARLO
             end
             [switch_flag fz_st fz_sw fz_R fz_L s_R s_L]=decide_phase(obj,q,ControlState.StanceLeg,s);
             ground_force=[fz_R; fz_L];
+            
+            % Add offset in Bazier Params. ControlParams remain unchanged,
+            % set new local variable for the Bazaier curve
+
+%             ControlState.RightStance_HAlpha_q([1,2],:)=ControlParams.RightStance.HAlpha_q([1,2],:)-obj.v2_offset;
+%             ControlState.RightStance_HAlpha_q([5,6],:)=ControlParams.RightStance.HAlpha_q([5,6],:)+obj.v1_offset;
+%             ControlState.LeftStance_HAlpha_q([1,2],:)=ControlParams.LeftStance.HAlpha_q([1,2],:)-obj.v2_offset;
+%             ControlState.LeftStance_HAlpha_q([5,6],:)=ControlParams.LeftStance.HAlpha_q([5,6],:)+obj.v1_offset;
+            
             % Switching leg
             if switch_flag==1
                 ControlState.StanceLeg=-ControlState.StanceLeg;
@@ -148,19 +161,35 @@ classdef Controller_Yukai < Controller_MARLO
                 % Set first two columns of bazier parameters to make hd
                 % smooth
                 if ControlState.StanceLeg==1
+%                     ControlState.d_alpha(:,1)=ControlState.hd-ControlParamsRightStance_HAlpha_q(:,1);
+%                     ControlState.d_alpha(:,2)=ControlState.hd+ControlState.dhd/ControlParams.RightStance.ct/5-ControlParamsRightStance_HAlpha_q(:,2);
                     ControlParams.RightStance.HAlpha_q(:,1)=ControlState.hd;
                     ControlParams.RightStance.HAlpha_q(:,2)=ControlState.hd+ControlState.dhd/ControlParams.RightStance.ct/5;
                 else
                     ControlParams.LeftStance.HAlpha_q(:,1)=ControlState.hd;
                     ControlParams.LeftStance.HAlpha_q(:,2)=ControlState.hd+ControlState.dhd/ControlParams.LeftStance.ct/5;
+%                     ControlState.d_alpha(:,1)=ControlState.hd-ControlParamsLeftStance_HAlpha_q(:,1);
+%                     ControlState.d_alpha(:,2)=ControlState.hd+ControlState.dhd/ControlParams.LeftStance.ct/5-ControlParamsLeftStance_HAlpha_q(:,2);
                 end
             end
+            RightStance_HAlpha_q=ControlParams.RightStance.HAlpha_q;
+            LeftStance_HAlpha_q=ControlParams.LeftStance.HAlpha_q;
+            RightStance_HAlpha_q([1,2],3:6)=ControlParams.RightStance.HAlpha_q([1,2],3:6)-obj.v2_offset;
+            RightStance_HAlpha_q([5,6],3:6)=ControlParams.RightStance.HAlpha_q([5,6],3:6)+obj.v1_offset;
+            LeftStance_HAlpha_q([1,2],3:6)=ControlParams.LeftStance.HAlpha_q([1,2],3:6)-obj.v2_offset;
+            LeftStance_HAlpha_q([5,6],3:6)=ControlParams.LeftStance.HAlpha_q([5,6],3:6)+obj.v1_offset;
             
 
-
-            
-            
             [st_leg_i,st_knee_i,st_hip_i,sw_leg_i,sw_knee_i,sw_hip_i,ControlParams_choice]=get_index(ControlState,ControlParams);
+            
+            if ControlState.StanceLeg==1
+                ControlParams_choice.HAlpha_q=RightStance_HAlpha_q;
+            else
+                ControlParams_choice.HAlpha_q=LeftStance_HAlpha_q;
+            end
+            
+%             ControlParams_choice.HAlpha_q([1,2],:) = ControlParams_choice.HAlpha_q([1,2],:)-obj.v2_offset;
+%             ControlParams_choice.HAlpha_q([1,2],:) = ControlParams_choice.HAlpha_q([1,2],:)-obj.v2_offset;
             
             [ V_measured V_filtered ] = get_velocity(obj,velEst,s_R,s_L,ControlState);
             
@@ -176,28 +205,33 @@ classdef Controller_Yukai < Controller_MARLO
             
             
             % foot placement
-            pitch_tune=obj.Kfd_p*(V_filtered(2)-obj.v2_offset);
-            pitch_tune=sign(pitch_tune)*min(abs(pitch_tune),0.3);
-            roll_tune=obj.Kfd_r*(V_filtered(1)-obj.v1_offset);
-            
+%             pitch_tune=obj.Kfd_p*V_filtered(2)-obj.v2_offset;
+%             pitch_tune=obj.Kfd_p*(V_filtered(2)-obj.v2_offset);
+            pitch_tune=obj.Kfd_p*V_filtered(2);
+            roll_tune=obj.Kfd_r*V_filtered(1);
+            if obj.nonlinear_foot_placement == 1
+                pitch_tune=obj.Kfd_p*atan(V_filtered(2));
+                roll_tune=obj.Kfd_r*atan(V_filtered(1));
+            end
+%             roll_tune=obj.Kfd_r*V_filtered(1)-obj.v1_offset;
             % Limit the swing hip to inward
             if sw_hip_i == 5
-                if roll_tune+obj.Kfd_r*obj.v1_offset<0
+                if roll_tune<0
                     roll_tune=roll_tune*0.1;
                 end
             else
-                if roll_tune+roll_tune+obj.Kfd_r*obj.v1_offset>0
+                if roll_tune+roll_tune>0
                     roll_tune=roll_tune*0.1;
                 end
             end
             
             %Limit largest hip angle
-            roll_tune=sign(roll_tune)*min(0.3,abs(roll_tune));
-            
+            roll_tune=sign(roll_tune)*min(obj.max_roll_tune,abs(roll_tune));
+            pitch_tune=sign(pitch_tune)*min(abs(pitch_tune),obj.max_pitch_tune);
             if obj.foot_placement_switch == 1
                 hd(sw_leg_i)=hd(sw_leg_i)+pitch_tune*cs;
                 hd(sw_hip_i)=hd(sw_hip_i)-roll_tune*cs;
-                hd(sw_knee_i)= hd(sw_knee_i)-0.5*abs(roll_tune)*cs-0.5*abs(pitch_tune)*cs;
+                hd(sw_knee_i)= hd(sw_knee_i)-obj.knee_stretch*abs(roll_tune)*cs-obj.knee_stretch*abs(pitch_tune)*cs;
             end
             
             
@@ -500,7 +534,7 @@ end
 s_R = scaleFactor(fz_R, obj.grf_z_min, obj.grf_z_max);
 s_L = scaleFactor(fz_L, obj.grf_z_min, obj.grf_z_max);
 
-if (fz_sw>obj.grf_z_max && s>0.5) || s>2
+if (fz_sw>obj.grf_z_max && s>0.5) || s>1.1
 % if s>100
     switch_flag=1;
 else

@@ -63,16 +63,16 @@ function [F] = ExternalForces(t, q, dq)
             F(6)=F(6)+kpboom*(q(6)-0)+kdboom*dq(6);   % pitch
             F(2) = F(2)+kpboom*(q(2))+kdboom*dq(2);   % Side
             F(1) = F(1)+kpboom*(q(1))+kdboom*dq(1);   % Side
-        F(4)=F(4)+kpboom*(q(4)-0)+kdboom*dq(4);   % yaw
+        F(4)=F(4)+kdboom*dq(4);   % yaw
         F(5)=F(5)+kpboom*(q(5)-0)+kdboom*dq(5);   % roll
         end
         
         if t > 6 & t<6.5
-            F(1)= 50;
+            F(1)= 100;
         end
         
         if t > 10 & t<11
-            F(2)=80;
+            F(2)=-100;
         end
         
     end
@@ -118,9 +118,9 @@ function [F] = ExternalForces(t, q, dq)
         end
     end
     
-    if t > 10 && t < 10.35
-        F(2) = F(2) + 100;
-    end
+%     if t > 10 && t < 10.35
+%         F(2) = F(2) + 100;
+%     end
     
     if isTest_dropAndLiftTest
         if t < 3
@@ -140,5 +140,5 @@ function [F] = ExternalForces(t, q, dq)
         end
     end
 % 
-%     F(4) = F(4)+kdboom/10*dq(4);  % Yaw friction constraint
+    F(4) = F(4)+kdboom/10*dq(4);  % Yaw friction constraint
 end
