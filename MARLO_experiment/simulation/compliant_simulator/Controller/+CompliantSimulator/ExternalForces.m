@@ -59,6 +59,10 @@ function [F] = ExternalForces(t, q, dq)
     end
     
     if isTest_hold2walk
+        if t<0.5
+            F(3) = F(3)+kpboom*(q(3)-height)+kdboom*dq(3); % Hang in the air
+        end
+        
         if t<2
             F(6)=F(6)+kpboom*(q(6)-0)+kdboom*dq(6);   % pitch
             F(2) = F(2)+kpboom*(q(2))+kdboom*dq(2);   % Side
@@ -67,14 +71,14 @@ function [F] = ExternalForces(t, q, dq)
         F(5)=F(5)+kpboom*(q(5)-0)+kdboom*dq(5);   % roll
         end
         
-        if t > 6 & t<6.5
-            F(1)= 100;
-        end
-        
-        if t > 10 & t<11
-            F(2)=-100;
-        end
-        
+%         if t > 6 & t<6.5
+%             F(1)= 100;
+%         end
+%         
+%         if t > 10 & t<11
+%             F(2)=-100;
+%         end
+%         
     end
 %     if isTest_dropTest
 %         if t < 0.3

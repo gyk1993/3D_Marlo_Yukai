@@ -1,5 +1,5 @@
 %% Initialize Controller Parameters here
-c_Kp_link=80;
+c_Kp_link=30;
 c_Kd_link=1;
 c_Kp_hip=30;
 c_Kd_hip=1;
@@ -25,7 +25,8 @@ c_v2_offset = -0.03;
 c_knee_stretch=0;
 c_st_knee_offset=5;
 c_Kfp_p=0.7;
-c_Kfp_r=0.6;
+c_Kfp_r=0.65;
+
 c_pitch_fil_para=0.004;
 c_roll_fil_para=0.1;
 c_frequency_test=1;
@@ -39,16 +40,16 @@ c_passivity = 1;
 c_hold_s = 1;
 c_steptime=0.4;
 c_temp_switch=0;
-c_nonlinear_foot_placement=1;
+c_nonlinear_foot_placement=0;
 
 
 %simulation
 if isSim == 1
 c_hold_s = 0;
 c_Kfd_p=0.5;
-c_Kfd_r=0.8;
-c_v1_offset = -0.02;
+c_Kfd_r=0.9;
+c_v1_offset = 0.00;
 c_v2_offset = -0.03;
-c_knee_stretch=0.8;
+c_knee_stretch=0.0;
 c_st_knee_offset=0;
 end

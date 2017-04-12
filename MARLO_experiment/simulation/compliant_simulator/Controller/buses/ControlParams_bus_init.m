@@ -46,18 +46,35 @@ H0_RightStance_controller=H0_RightStance_opt*c2o_transform* link2gear_transform;
 H0_LeftStance_controller=H0_LeftStance_opt*c2o_transform* link2gear_transform;
 
 
-HAlpha_q_RightStance = pi*[ 1 1 1 1 1 1;
-                            1 1 1 1 1 1;
-                            1/3 1/3 1/3 1/3 1/3 1/3;
-                            4/12 4/12 7/12 7/12 1/3 4/12;
+% HAlpha_q_RightStance = pi*[ 1 1 1 1 1 1;
+%                             1 1 1 1 1 1;
+%                             1/3 1/3 1/3 1/3 1/3 1/3;
+%                             4/12 4/12 7/12 7/12 1/3 4/12;
+%                             0 0 0 0 0 0;
+%                             0 0 0 0 0 0];
+% HAlpha_q_LeftStance = pi*[  1 1 1 1 1 1;
+%                             1 1 1 1 1 1;
+%                             4/12 4/12 7/12 7/12 1/3 4/12;
+%                             1/3 1/3 1/3 1/3 1/3 1/3;
+%                             0 0 0 0 0 0;
+%                             0 0 0 0 0 0];  
+
+HAlpha_q_RightStance = pi/180*[ 180 180 180 180 180 180;
+                            180 180 180 180 180 180;
+                            50 50 50 50 50 50;
+                            50 50 80 80 50 50;
                             0 0 0 0 0 0;
                             0 0 0 0 0 0];
-HAlpha_q_LeftStance = pi*[  1 1 1 1 1 1;
-                            1 1 1 1 1 1;
-                            4/12 4/12 7/12 7/12 1/3 4/12;
-                            1/3 1/3 1/3 1/3 1/3 1/3;
+HAlpha_q_LeftStance = pi/180*[  180 180 180 180 180 180;
+                            180 180 180 180 180 180;
+                            50 50 80 80 50 50;
+                            50 50 50 50 50 50;
                             0 0 0 0 0 0;
                             0 0 0 0 0 0];  
+                        
+                        
+                        
+                        
 %  HAlpha_q_RightStance = pi*[ 1 1 1 1 1 1;
 %                             1 1 1 1 1 1;
 %                             1/3 1/3 1/3 1/3 1/3 1/3;

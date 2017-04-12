@@ -55,6 +55,9 @@ classdef Controller_Yukai < Controller_MARLO
         hip_hit_prevention = 10*pi/180;
         max_roll_tune = 0.25;
         max_pitch_tune = 0.3;
+        knee_gravity_compensation =1;
+        mg= 550;
+        gear_ratio=50;
 	end % properties
 	
 	% PUBLIC METHODS ========================================================
@@ -158,18 +161,15 @@ classdef Controller_Yukai < Controller_MARLO
                 ControlState.LastStepTime=t;
                 cs=0;
                 s=0;
+                ControlState.prev_step_x_vel=ControlState.prev_V_filtered(1);
                 % Set first two columns of bazier parameters to make hd
                 % smooth
                 if ControlState.StanceLeg==1
-%                     ControlState.d_alpha(:,1)=ControlState.hd-ControlParamsRightStance_HAlpha_q(:,1);
-%                     ControlState.d_alpha(:,2)=ControlState.hd+ControlState.dhd/ControlParams.RightStance.ct/5-ControlParamsRightStance_HAlpha_q(:,2);
                     ControlParams.RightStance.HAlpha_q(:,1)=ControlState.hd;
                     ControlParams.RightStance.HAlpha_q(:,2)=ControlState.hd+ControlState.dhd/ControlParams.RightStance.ct/5;
                 else
                     ControlParams.LeftStance.HAlpha_q(:,1)=ControlState.hd;
                     ControlParams.LeftStance.HAlpha_q(:,2)=ControlState.hd+ControlState.dhd/ControlParams.LeftStance.ct/5;
-%                     ControlState.d_alpha(:,1)=ControlState.hd-ControlParamsLeftStance_HAlpha_q(:,1);
-%                     ControlState.d_alpha(:,2)=ControlState.hd+ControlState.dhd/ControlParams.LeftStance.ct/5-ControlParamsLeftStance_HAlpha_q(:,2);
                 end
             end
             RightStance_HAlpha_q=ControlParams.RightStance.HAlpha_q;
@@ -197,18 +197,23 @@ classdef Controller_Yukai < Controller_MARLO
             H0=ControlParams_choice.H0;
             dh0=H0*dq;
             h0=H0*q;
-            hd=bezier(ControlParams_choice.HAlpha_q,cs);
-            dhd=bezierd(ControlParams_choice.HAlpha_q,cs)*dcs;
+            hd_o=bezier(ControlParams_choice.HAlpha_q,cs);
+            dhd_o=bezierd(ControlParams_choice.HAlpha_q,cs)*dcs;
+            
+            hd=hd_o;
+            dhd=dhd_o;
             
             % offset for stance knee
             hd(st_knee_i)=hd(st_knee_i)-min(1,cs/0.1)*pi/180*obj.st_knee_offset;
-            
+%             hd(st_knee_i)=hd(st_knee_i)-max(s_R,s_L)*min(1,2*s)*(obj.mg*sin(1/2*hd(st_knee_i)))/obj.gear_ratio/obj.Kp_link;
+            hd(st_knee_i)=hd(st_knee_i)-min(1,2*s)*(obj.mg*sin(1/2*hd_o(st_knee_i)))/obj.gear_ratio/obj.Kp_link;
             
             % foot placement
 %             pitch_tune=obj.Kfd_p*V_filtered(2)-obj.v2_offset;
 %             pitch_tune=obj.Kfd_p*(V_filtered(2)-obj.v2_offset);
             pitch_tune=obj.Kfd_p*V_filtered(2);
-            roll_tune=obj.Kfd_r*V_filtered(1);
+            roll_tune=obj.Kfd_r*1/2*(V_filtered(1)+ControlState.prev_step_x_vel);
+%             roll_tune=obj.Kfd_r*V_filtered(1);
             if obj.nonlinear_foot_placement == 1
                 pitch_tune=obj.Kfd_p*atan(V_filtered(2));
                 roll_tune=obj.Kfd_r*atan(V_filtered(1));
@@ -323,11 +328,23 @@ classdef Controller_Yukai < Controller_MARLO
 %             u=-Kd*ControlParams_choice.M^-1*dy-Kp*ControlParams_choice.M^-1*y;
             u=-Kp*y_j-Kd*dy_j;
             
-            % compensation for hip
+            % compensation for hip ( the gravity is the leg gravity)
             if obj.hip_gravity_compensation == 1
                 u(1)=u(1)-0.8;
                 u(4)=u(4)+0.8;
             end
+            
+            % Compensation for knee ( the gravity is the robot gravity)
+%             if obj.knee_gravity_compensation == 1
+%                 if ControlState.StanceLeg==1
+%                     u(2)=u(2)+s_R*min(1,2*s)*(-obj.mg*sin(q(5)+q(1)))/obj.gear_ratio;
+%                     u(3)=u(3)+s_R*min(1,2*s)*obj.mg*sin(q(6)+q(1))/obj.gear_ratio;
+%                 else
+%                     u(5)=u(2)+s_L*min(1,2*s)*(-obj.mg*sin(q(12)+q(1)))/obj.gear_ratio;
+%                     u(6)=u(3)+s_L*min(1,2*s)*obj.mg*sin(q(13)+q(1))/obj.gear_ratio;
+%                 end
+%             end
+               
             
             
             
@@ -346,6 +363,8 @@ classdef Controller_Yukai < Controller_MARLO
             ControlState.prev_V_filtered=V_filtered;
             ControlState.prev_hold_s=obj.hold_s;
             ControlState.prev_s=s;
+            ControlState.prev_q=q;
+            ControlState.prev_dq=dq;
             
             % Store Data
             
@@ -376,6 +395,8 @@ classdef Controller_Yukai < Controller_MARLO
             Data.V_measured=V_measured;
             Data.V_filtered=V_filtered;
             Data.StanceLeg=ControlState.StanceLeg;
+            Data.hd_o=hd_o;
+            Data.dhd_o=dhd_o;
             % -----------------------------------
             
             % Store outputs
@@ -534,7 +555,7 @@ end
 s_R = scaleFactor(fz_R, obj.grf_z_min, obj.grf_z_max);
 s_L = scaleFactor(fz_L, obj.grf_z_min, obj.grf_z_max);
 
-if (fz_sw>obj.grf_z_max && s>0.5) || s>1.1
+if (fz_sw>obj.grf_z_max && s>0.5) || s>2
 % if s>100
     switch_flag=1;
 else

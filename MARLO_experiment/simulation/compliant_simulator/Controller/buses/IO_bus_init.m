@@ -42,6 +42,8 @@ Data.s_force=zeros(2,1);
 Data.V_measured=zeros(3,1);
 Data.V_filtered=zeros(3,1);
 Data.StanceLeg=0;
+Data.hd_o=zeros(6,1);
+Data.dhd_o=zeros(6,1);
 createBusObject(Data, 'Data_bus');
 
 %% Output Bus

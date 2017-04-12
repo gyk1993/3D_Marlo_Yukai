@@ -3,6 +3,8 @@
 DataVec=log.DataVec';
 t=log.t;
 % u=log.u_current;
+q=DataVec(1:17,:);
+dq=DataVec(18:34,:);
 %%
 % q=DataVec(1:17,:);
 % dq=DataVec(18:34,:);
@@ -31,6 +33,8 @@ s_force=DataVec(125:126,:);
 V_measured=DataVec(127:129,:);
 V_filtered=DataVec(130:132,:);
 StanceLeg=DataVec(133,:);
+hd_o=DataVec(134:139,:);
+dhd_o=DataVec(140:145,:);
 
 
 M_J2L=[1/2 1/2 0 0 0 0;
@@ -74,7 +78,7 @@ end
 %% plot torque
 figure
 index=[1 2 3 4 5 6];
-joint={'uAR','uBR','uHR','uAL','uBL','uHL'};
+joint={'uHR','uAR','uBR','uHL','uAL','uBL'};
 for i=1:6
     subplot(2,3,i)
     plot(t,u(i,:));
@@ -242,3 +246,32 @@ plot(t,V_filtered(3,:))
 hold off
 title('Vz')
 legend('measured','filtered')
+%% plot orignal bazier
+figure
+index=[1,3,5,2,4,6];
+name={'hd_o Right Leg','hd_o Right Knee','hd_o Right Hip','hd_o Left Leg','hd_o Left Knee','hd_o Left Hip'};
+for i=1:length(index)
+subplot(2,3,i)
+plot(t,180/pi*hd_o(index(i),:))
+title(name{i})
+end
+
+figure
+index=[1,3,5,2,4,6];
+name={'dhd_o Right Leg','dhd_o Right Knee','dhd_o Right Hip','dhd_o Left Leg','dhd_o Left Knee','dhd_o Left Hip'};
+for i=1:length(index)
+subplot(2,3,i)
+plot(t,180/pi*dhd_o(index(i),:))
+title(name{i})
+end
+%% plot error for orginal bazier and actual outputs
+figure
+index=[1,3,5,2,4,6];
+name={'yo Right Leg','yo Right Knee','yo Right Hip','yo Left Leg','yo Left Knee','yo Left Hip'};
+for i=1:length(index)
+subplot(2,3,i)
+plot(t,180/pi*(h0(index(i),:)-hd_o(index(i),:)))
+title(name{i})
+end
+
+
